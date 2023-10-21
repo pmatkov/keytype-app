@@ -1,0 +1,11 @@
+# Compiled files
+*.exe
+*.obj
+*.lib
+*.dll
+
+# Build directories
+Debug/
+Release/
+__history/
+__astcache/

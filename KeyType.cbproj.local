@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.450,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\TextManager.h=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\TextUtils.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.102,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.h=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.970,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.052,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.081,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\KeyTypePCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.559,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.102,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.cpp=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.121,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\Project1.cbproj=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\KeyType.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.450,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\TextManager.cpp=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\TextUtils.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.221,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\TextManager.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.572,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\CustomRichEdit.h=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\PracticeTextDisplay.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.503,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\CustomRichEdit.h=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.102,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.559,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\MainWindow.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.476,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.572,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\CustomRichEdit.cpp=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\PracticeTextDisplay.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.503,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\CustomRichEdit.cpp=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Unit1.cpp</Transaction>
+    <Transaction>2023.10.21 13:09:47.582,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\MainForm.h=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\MainWindow.h</Transaction>
+    <Transaction>2023.10.21 13:09:47.582,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\MainForm.dfm=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\MainWindow.dfm</Transaction>
+    <Transaction>2023.10.21 13:09:47.582,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\MainForm.cpp=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\MainWindow.cpp</Transaction>
+    <Transaction>2023.10.21 13:19:09.738,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\TCustomRichLabel.cpp=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\PracticeTextDisplay.cpp</Transaction>
+    <Transaction>2023.10.21 13:19:09.738,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\TCustomRichLabel.h=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\PracticeTextDisplay.h</Transaction>
+  </Transactions>
+</BorlandProject>
