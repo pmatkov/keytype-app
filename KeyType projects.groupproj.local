@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023.10.27 15:23:08.920,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Projects.groupproj=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\ProjectGroup1.groupproj</Transaction>
+    <Transaction>2023.10.27 15:23:22.665,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\KeyType projects.groupproj=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Projects.groupproj</Transaction>
+  </Transactions>
+	<Default.Personality>
+		<Projects ActiveProject="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\KeyType.cbproj"/>
+	</Default.Personality>
+</BorlandProject>

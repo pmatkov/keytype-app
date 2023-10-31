@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{D3441677-770D-42E1-AF58-85CA860678D2}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="KeyType.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Test\KeyTypeTests.cbproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="KeyType">
+        <MSBuild Projects="KeyType.cbproj"/>
+    </Target>
+    <Target Name="KeyType:Clean">
+        <MSBuild Projects="KeyType.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="KeyType:Make">
+        <MSBuild Projects="KeyType.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="KeyTypeTests">
+        <MSBuild Projects="Test\KeyTypeTests.cbproj"/>
+    </Target>
+    <Target Name="KeyTypeTests:Clean">
+        <MSBuild Projects="Test\KeyTypeTests.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="KeyTypeTests:Make">
+        <MSBuild Projects="Test\KeyTypeTests.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="KeyType;KeyTypeTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="KeyType:Clean;KeyTypeTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="KeyType:Make;KeyTypeTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

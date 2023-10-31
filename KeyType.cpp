@@ -1,10 +1,11 @@
 //---------------------------------------------------------------------------
 
 #include <vcl.h>
-#pragma hdrstop
 #include <tchar.h>
+#pragma hdrstop
+
 //---------------------------------------------------------------------------
-USEFORM("MainForm.cpp", Form1);
+USEFORM("MForm.cpp", FMain);
 //---------------------------------------------------------------------------
 int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 {
@@ -12,7 +13,11 @@ int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 	{
 		Application->Initialize();
 		Application->MainFormOnTaskBar = true;
-		Application->CreateForm(__classid(TForm1), &Form1);
+
+//		TFMain* FMain = new TFMain(NULL);
+//		PracticeController* controller = new PracticeController(FMain);
+
+		Application->CreateForm(__classid(TFMain), &FMain);
 		Application->Run();
 	}
 	catch (Exception &exception)

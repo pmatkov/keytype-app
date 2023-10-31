@@ -1,4 +1,4 @@
-object Form1: TForm1
+object FMain: TFMain
   Left = 0
   Top = 0
   BorderStyle = bsSingle
@@ -13,7 +13,22 @@ object Form1: TForm1
   Font.Style = []
   KeyPreview = True
   TextHeight = 15
-  object PracticeText: TRichEdit
+  object Label1: TLabel
+    Left = 153
+    Top = 328
+    Width = 3
+    Height = 15
+    WordWrap = True
+  end
+  object StartInfo: TLabel
+    Left = 240
+    Top = 280
+    Width = 131
+    Height = 15
+    Caption = 'Click to start the practice'
+    OnClick = StartInfoClick
+  end
+  object TextBox: TRichEdit
     Left = 216
     Top = 144
     Width = 185
@@ -23,10 +38,11 @@ object Form1: TForm1
     Enabled = False
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -12
+    Font.Height = -16
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    Transparent = True
   end
 end

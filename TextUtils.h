@@ -4,12 +4,18 @@
 #define TextUtilsH
 
 #include <vcl.h>
-#include <windows.h>
+#include <cwctype>
 
 class TextUtils
 {
-public:
-	static char getDisplayableChar(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
+	public:
+		static int countSentences(const UnicodeString &text);
+		static int countWords(const UnicodeString &text);
+		static int countChars(const UnicodeString &text);
+
+		static bool isUnicodeString(const UnicodeString &text);
+		static bool isEndChar(const wchar_t wchar);
+        static UnicodeString trimSpaces(const UnicodeString &text);
 };
 //---------------------------------------------------------------------------
 #endif
