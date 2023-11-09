@@ -99,7 +99,6 @@
         <BCC_DisableFramePtrElimOpt>true</BCC_DisableFramePtrElimOpt>
         <BCC_DisableSpellChecking>true</BCC_DisableSpellChecking>
         <CLANG_UnwindTables>true</CLANG_UnwindTables>
-        <ILINK_LibraryPath>$(BDSLIB)\$(PLATFORM)\debug;$(ILINK_LibraryPath)</ILINK_LibraryPath>
         <ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\debug\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
@@ -114,8 +113,20 @@
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
     </PropertyGroup>
     <ItemGroup>
+        <CppCompile Include="..\Generator.cpp">
+            <DependentOn>..\Generator.h</DependentOn>
+            <BuildOrder>3</BuildOrder>
+        </CppCompile>
         <CppCompile Include="KeyTypeTests.cpp">
             <BuildOrder>0</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Logger.cpp">
+            <DependentOn>Logger.h</DependentOn>
+            <BuildOrder>5</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="TestGenerator.cpp">
+            <DependentOn>TestGenerator.h</DependentOn>
+            <BuildOrder>4</BuildOrder>
         </CppCompile>
         <CppCompile Include="TestTextUtils.cpp">
             <DependentOn>TestTextUtils.h</DependentOn>
@@ -1042,6 +1053,7 @@
                 <TestFramework>DUnit / C++ Win32</TestFramework>
                 <TestRunner>GUI</TestRunner>
                 <SourceProjectName>C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\KeyType.cbproj</SourceProjectName>
+                <TestProjectName/>
             </UnitTesting>
             <Platforms>
                 <Platform value="Win32">True</Platform>

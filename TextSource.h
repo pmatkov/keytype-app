@@ -4,7 +4,7 @@
 #define TextSourceH
 
 #include <vcl.h>
-#include <string>
+
 #include "LanguageProfile.h"
 //---------------------------------------------------------------------------
 
@@ -24,10 +24,11 @@ class TextSource
 
 	public:
 		TextSource();
+		TextSource(UnicodeString _text);
 		const UnicodeString& getText() const;
-		const UnicodeString getCurrentWord() const;
+		const UnicodeString& getCurrentWord() const;
 		const wchar_t getCurrentChar() const;
-		const int getCurrentCharIndex() const;
+		const int& getCurrentCharIndex() const;
 
 		void increaseCurrentCharIndex();
 		void decreaseCurrentCharIndex();

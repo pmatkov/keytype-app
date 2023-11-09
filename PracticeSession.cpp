@@ -7,14 +7,14 @@
 #pragma package(smart_init)
 
 
-const User &PracticeSession::getUser() const {
+const User& PracticeSession::getUser() const {
 	return user;
 }
 void PracticeSession::setUser(const User& _user) {
    user = _user;
 }
 
-const TextSource &PracticeSession::getTextsource() const {
+const TextSource& PracticeSession::getTextsource() const {
 	return textsource;
 }
 void PracticeSession::setTextsource(const TextSource& _textsource) {
@@ -22,17 +22,35 @@ void PracticeSession::setTextsource(const TextSource& _textsource) {
 }
 
 void PracticeSession::increaseCurrentCharIndex() {
-     textsource.increaseCurrentCharIndex();
+	 textsource.increaseCurrentCharIndex();
 }
 
 void PracticeSession::decreaseCurrentCharIndex() {
 	 textsource.decreaseCurrentCharIndex();
 }
 
-const int PracticeSession::getMistakes() const {
-	return mistakes;
+const bool& PracticeSession::isMistake() const {
+	return mistake;
 }
-void PracticeSession::setMisttakes(int _mistakes) {
 
-     mistakes = _mistakes;
+void PracticeSession::setMistake(bool _mistake) {
+    mistake = _mistake;
 }
+
+const int& PracticeSession::getMistakesCount() const {
+	return mistakesCount;
+}
+void PracticeSession::setMistakesCount(int _mistakesCount) {
+
+	 mistakesCount = _mistakesCount;
+}
+
+const bool PracticeSession::isPaused() const {
+	return paused;
+}
+
+void PracticeSession::setPaused(bool _paused) {
+	paused = _paused;
+}
+
+

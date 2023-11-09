@@ -5,7 +5,11 @@
 #pragma hdrstop
 
 //---------------------------------------------------------------------------
-USEFORM("MForm.cpp", FMain);
+#include <Vcl.Styles.hpp>
+#include <Vcl.Themes.hpp>
+USEFORM("PracticeForm.cpp", FPractice);
+USEFORM("OptionsFrame.cpp", FrOptions); /* TFrame: File Type */
+USEFORM("MainForm.cpp", FMain);
 //---------------------------------------------------------------------------
 int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 {
@@ -14,10 +18,8 @@ int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 		Application->Initialize();
 		Application->MainFormOnTaskBar = true;
 
-//		TFMain* FMain = new TFMain(NULL);
-//		PracticeController* controller = new PracticeController(FMain);
-
 		Application->CreateForm(__classid(TFMain), &FMain);
+		Application->CreateForm(__classid(TFPractice), &FPractice);
 		Application->Run();
 	}
 	catch (Exception &exception)

@@ -1,45 +1,65 @@
 //---------------------------------------------------------------------------
 
-#ifndef MFormH
-#define MFormH
+#ifndef MainFormH
+#define MainFormH
 //---------------------------------------------------------------------------
 #include <System.Classes.hpp>
 #include <Vcl.ComCtrls.hpp>
 #include <Vcl.Controls.hpp>
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.ExtCtrls.hpp>
-#include "IOControl.h"
-#include "PracticeController.h"
-#include "OptionsFrame.h"
 #include <Vcl.Forms.hpp>
+
+#include <Vcl.ToolWin.hpp>
+#include <System.Actions.hpp>
+#include <Vcl.PlatformDefaultStyleActnCtrls.hpp>
+#include "OptionsFrame.h"
+#include <memory>
+#include <vector>
+
+#include "IOControl.h"
+#include "OptionsFrame.h"
+#include "PracticeSession.h"
 
 //---------------------------------------------------------------------------
 
 class PracticeController;
+
+enum StartControl {
+	Initial,
+	Start,
+	Restart,
+	Resume,
+    Pause
+};
 
 class TFMain : public TForm
 {
 __published:	// IDE-managed Components
 	TRichEdit *TextBox;
 	TLabel *StartLabel;
-	TFrame1 *Frame11;
-
-//	void __fastcall StartLabelClick(TObject *Sender);
+	TFrOptions *FrOptions;
+	void __fastcall FrOptionsButtonClick(TObject *Sender);
 
 private:	// User declarations
-	IOControl *iocontrol;
-	PracticeSession *session;
-	PracticeController* controller;
+
+	std::unique_ptr<IOControl> iocontrol;
+	std::unique_ptr<PracticeSession> session;
+
 public:		// User declarations
 	__fastcall TFMain(TComponent* Owner);
-	 virtual void __fastcall WndProc(TMessage &Message);
 
-	 void SetCharUnderline(TRichEdit* richEdit, int charIndex);
-	 void RemoveCharUnderline(TRichEdit* richEdit, int charIndex);
-	 void SetCharColor(TRichEdit* richEdit, int charIndex, TColor textColor);
-	 void SetTextColor(TRichEdit* richEdit, TColor textColor);
+
+	void setCharStyle(TRichEdit* richEdit, int charIndex, TFontStyle style, bool status);
+	void setCharColor(TRichEdit* richEdit, int charIndex, TColor textColor);
+	void setTextColor(TRichEdit* richEdit, TColor textColor);
+	void setStatusInfo(StartControl status);
+
+	virtual void __fastcall WndProc(TMessage &Message);
 
 };
+
+
 //---------------------------------------------------------------------------
 extern PACKAGE TFMain *FMain;
 //---------------------------------------------------------------------------

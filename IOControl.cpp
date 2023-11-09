@@ -5,18 +5,17 @@
 #include "IOControl.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
-#define MAX_LENGTH 1024
 
 
- const UnicodeString& IOControl::getCharBuffer() const {
-	 return charBuffer;
+ const UnicodeString& IOControl::getBuffer() const {
+	 return buffer;
  }
 
- void IOControl::setCharBuffer(const UnicodeString& string) {
-	charBuffer = string;
+ void IOControl::setBuffer(const UnicodeString& string) {
+	buffer = string;
 }
 
-const bool IOControl::isBufferingEnabled() const {
+const bool& IOControl::isBufferingEnabled() const {
 	return bufferingEnabled;
 }
 
@@ -25,7 +24,7 @@ void IOControl::setBufferingEnabled(bool _bufferingEnabled) {
 }
 
 
-wchar_t IOControl::getChar(WPARAM wParam){
+wchar_t IOControl::getKeyStroke(WPARAM wParam){
 
 	wchar_t wch = static_cast<wchar_t>(wParam);
 
@@ -39,10 +38,10 @@ wchar_t IOControl::getChar(WPARAM wParam){
 		case VK_BACK:{
 			if (bufferingEnabled) {
 
-				int length = charBuffer.Length();
+				int length = buffer.Length();
 
 				if (length > 0) {
-					charBuffer.Delete(length, 1);
+					buffer.Delete(length, 1);
 				}
 			}
 			return wch;
@@ -50,7 +49,7 @@ wchar_t IOControl::getChar(WPARAM wParam){
 
 		default: {
 			if (bufferingEnabled)
-				charBuffer += UnicodeString(wch);
+				buffer += UnicodeString(wch);
 			return wch;
 		}
 
@@ -61,65 +60,16 @@ wchar_t IOControl::getChar(WPARAM wParam){
 }
 
 
-/*
-wchar_t IOControl::getChar(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam){
-
-	if (msg == WM_CHAR){
-
-		wchar_t wch = static_cast<wchar_t>(wParam);
-
-		switch (wParam) {
-
-			case VK_RETURN:
-			case VK_TAB:
-			case VK_ESCAPE:
-				break;
-
-			case VK_BACK:{
-				if (bufferingEnabled) {
-
-					int length = charBuffer.Length();
-
-					if (length > 0) {
-						charBuffer.Delete(length, 1);
-					}
-				}
-				break;
-			}
-
-//			case VK_SPACE: {
-//				if (!bufferingEnabled)
-//					bufferingEnabled = true;
-//				break;
-//
-//			}
-
-
-			default: {
-				if (bufferingEnabled)
-					charBuffer += UnicodeString(wch);
-				return wch;
-			}
-
-
-		}
-	}
-
-	return L'\0';
-}
-
- */
-
 void IOControl::appendChar(wchar_t &wch) {
 
-	charBuffer += UnicodeString(wch);
+	buffer += UnicodeString(wch);
 }
 
 void IOControl::deleteLastChar() {
 
-	int stringLength = charBuffer.Length();
+	int stringLength = buffer.Length();
 
 	if (stringLength > 0) {
-		charBuffer.Delete(stringLength, 1);
+		buffer.Delete(stringLength, 1);
 	}
 }

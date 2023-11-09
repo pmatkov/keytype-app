@@ -11,20 +11,29 @@ class PracticeSession {
 	private:
 		User user;
 		TextSource textsource;
-		int mistakes;
+		bool mistake;
+		int mistakesCount;
+		bool paused;
 
 	public:
-		const User &getUser() const;
+		const User& getUser() const;
 		void setUser(const User& _user);
 
-		const TextSource &getTextsource() const;
+		const TextSource& getTextsource() const;
 		void setTextsource(const TextSource& _textsource);
 
 		void increaseCurrentCharIndex();
-        void decreaseCurrentCharIndex();
+		void decreaseCurrentCharIndex();
 
-		const int getMistakes() const;
-		void setMisttakes(int _mistakes);
+		const bool& isMistake() const;
+		void setMistake(bool _mistake);
+
+		const int& getMistakesCount() const;
+		void setMistakesCount(int _mistakesCount);
+
+		const bool isPaused() const;
+		void setPaused(bool _paused);
+
 
 };
 
