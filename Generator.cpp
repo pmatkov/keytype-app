@@ -90,8 +90,6 @@ UnicodeString Generator::generateWord(UnicodeString letters, bool uppercase, boo
 }
 
 
-
-
 int Generator::getRandomInt(int minRange, int maxRange) {
 
 	InitializeRandomSeed();

@@ -125,7 +125,18 @@
         <LinkPackageImports>rtl.bpi;vcl.bpi</LinkPackageImports>
     </PropertyGroup>
     <ItemGroup>
+        <CppCompile Include="Dictionary.cpp">
+            <VirtualFolder>{7768C739-C0A8-4E79-9ADB-D642C5711366}</VirtualFolder>
+            <DependentOn>Dictionary.h</DependentOn>
+            <BuildOrder>15</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="FileUtils.cpp">
+            <VirtualFolder>{2EF5EDF7-758A-4890-8930-5C8BB531E05C}</VirtualFolder>
+            <DependentOn>FileUtils.h</DependentOn>
+            <BuildOrder>16</BuildOrder>
+        </CppCompile>
         <CppCompile Include="Generator.cpp">
+            <VirtualFolder>{7768C739-C0A8-4E79-9ADB-D642C5711366}</VirtualFolder>
             <DependentOn>Generator.h</DependentOn>
             <BuildOrder>13</BuildOrder>
         </CppCompile>
@@ -178,12 +189,23 @@
             <BuildOrder>4</BuildOrder>
         </CppCompile>
         <CppCompile Include="TextUtils.cpp">
+            <VirtualFolder>{7768C739-C0A8-4E79-9ADB-D642C5711366}</VirtualFolder>
             <DependentOn>TextUtils.h</DependentOn>
             <BuildOrder>3</BuildOrder>
         </CppCompile>
         <CppCompile Include="User.cpp">
             <DependentOn>User.h</DependentOn>
             <BuildOrder>10</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="WordInfo.cpp">
+            <VirtualFolder>{7768C739-C0A8-4E79-9ADB-D642C5711366}</VirtualFolder>
+            <DependentOn>WordInfo.h</DependentOn>
+            <BuildOrder>14</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="WordList.cpp">
+            <VirtualFolder>{7768C739-C0A8-4E79-9ADB-D642C5711366}</VirtualFolder>
+            <DependentOn>WordList.h</DependentOn>
+            <BuildOrder>13</BuildOrder>
         </CppCompile>
         <FormResources Include="PracticeForm.dfm"/>
         <FormResources Include="OptionsFrame.dfm"/>
@@ -216,8 +238,10 @@
                 </Source>
                 <Folders/>
                 <VFOLDERS>
-                    <VFOLDER ID="{E8DD405D-5871-4098-BE73-2A4F48743690}" name="Forms"/>
                     <VFOLDER ID="{C9B9CF94-D644-46A8-AFE2-4CDDCCC37F87}" name="Exceptions"/>
+                    <VFOLDER ID="{2EF5EDF7-758A-4890-8930-5C8BB531E05C}" name="Files"/>
+                    <VFOLDER ID="{E8DD405D-5871-4098-BE73-2A4F48743690}" name="Forms"/>
+                    <VFOLDER ID="{7768C739-C0A8-4E79-9ADB-D642C5711366}" name="Words"/>
                 </VFOLDERS>
                 <Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\bcboffice2k280.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>

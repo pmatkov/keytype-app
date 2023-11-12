@@ -15,9 +15,6 @@
 #pragma hdrstop
 #pragma package(smart_init)
 #pragma link "OptionsFrame"
-#pragma link "OptionsFrame"
-#pragma link "OptionsFrame"
-#pragma link "OptionsFrame"
 #pragma resource "*.dfm"
 
 TFMain *FMain;
@@ -137,24 +134,24 @@ void __fastcall TFMain::WndProc(Messages::TMessage &message) {
 
 			if (capturedKeyStroke == session->getTextsource().getCurrentChar()) {
 
-				setCharStyle(TextBox, session->getTextsource().getCurrentCharIndex()-1, fsUnderline, false);
+				setCharStyle(TextBox, session->getTextsource().getCharIndex()-1, fsUnderline, false);
 
 				if (session->isMistake()) {
-					setCharColor(TextBox, session->getTextsource().getCurrentCharIndex()-1, clRed);
+					setCharColor(TextBox, session->getTextsource().getCharIndex()-1, clRed);
 					session->setMistake(false);
 				}
 				else  {
-					setCharColor(TextBox, session->getTextsource().getCurrentCharIndex()-1, clSilver);
+					setCharColor(TextBox, session->getTextsource().getCharIndex()-1, clSilver);
 				}
 
-				session->increaseCurrentCharIndex();
+				session->increaseCharIndex();
 
-				setCharStyle(TextBox, session->getTextsource().getCurrentCharIndex()-1, fsUnderline, true);
+				setCharStyle(TextBox, session->getTextsource().getCharIndex()-1, fsUnderline, true);
 			}
 			else {
 				session->setMistake(true);
-				setCharStyle(TextBox, session->getTextsource().getCurrentCharIndex()-1, fsUnderline, false);
-				setCharColor(TextBox, session->getTextsource().getCurrentCharIndex()-1, clRed);
+				setCharStyle(TextBox, session->getTextsource().getCharIndex()-1, fsUnderline, false);
+				setCharColor(TextBox, session->getTextsource().getCharIndex()-1, clRed);
 
 			}
 

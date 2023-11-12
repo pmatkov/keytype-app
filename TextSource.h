@@ -16,7 +16,7 @@ class TextSource
 		LanguageProfile *language;
 		UnicodeString currentWord;
 		wchar_t currentChar;
-		int currentCharIndex;
+		int charIndex;
 
 		bool numbers;
 		bool punctuation;
@@ -28,10 +28,10 @@ class TextSource
 		const UnicodeString& getText() const;
 		const UnicodeString& getCurrentWord() const;
 		const wchar_t getCurrentChar() const;
-		const int& getCurrentCharIndex() const;
+		const int& getCharIndex() const;
 
-		void increaseCurrentCharIndex();
-		void decreaseCurrentCharIndex();
+		void increaseCharIndex();
+		void decreaseCharIndex();
 
 };
 #endif

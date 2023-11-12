@@ -10,11 +10,11 @@
 TextSource::TextSource() {
 	text = "The quick brown fox jumps over the lazy dog";
 	language = new LanguageProfile("English", "EN",  "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-	currentCharIndex = 1;
+	charIndex = 1;
 }
 
 TextSource::TextSource(UnicodeString _text) : text(_text)  {
-     currentCharIndex = 1;
+     charIndex = 1;
 }
 
 const UnicodeString& TextSource::getText() const {
@@ -27,19 +27,19 @@ const UnicodeString& TextSource::getCurrentWord() const {
 
 const wchar_t TextSource::getCurrentChar() const {
 
-	 return text[currentCharIndex];
+	 return text[charIndex];
 }
 
-const int& TextSource::getCurrentCharIndex() const {
+const int& TextSource::getCharIndex() const {
 
-	 return currentCharIndex;
+	 return charIndex;
 }
 
 
-void TextSource::increaseCurrentCharIndex() {
-	currentCharIndex++;
+void TextSource::increaseCharIndex() {
+	charIndex++;
 }
 
-void TextSource::decreaseCurrentCharIndex() {
-	currentCharIndex--;
+void TextSource::decreaseCharIndex() {
+	charIndex--;
 }

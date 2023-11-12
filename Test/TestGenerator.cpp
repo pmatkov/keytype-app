@@ -113,8 +113,6 @@ void __fastcall TTestGenerator::TestgenerateWord()
 
 void __fastcall TTestGenerator::TestgetRandomInt()
 {
-
-
 	for (int i = 0; i < testCount; i++) {
 
 			int result = Generator::getRandomInt(minInt, maxInt);
@@ -127,12 +125,11 @@ void __fastcall TTestGenerator::TestgetRandomInt()
 void __fastcall TTestGenerator::TestshuffleChars()
 {
 
-
 	for (int i = 0; i < testCount; i++) {
 
 			UnicodeString result = Generator::shuffleChars(inputText);
 			logger->log("Test " + IntToStr(i + 1) + ": " + result);
-			CheckTrue(inputText.Compare(result) != 0, L"Words are the same");
+			CheckNotEquals(inputText, result, L"Words are the same");
 	}
 
 }

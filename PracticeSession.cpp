@@ -21,12 +21,12 @@ void PracticeSession::setTextsource(const TextSource& _textsource) {
 	textsource = _textsource;
 }
 
-void PracticeSession::increaseCurrentCharIndex() {
-	 textsource.increaseCurrentCharIndex();
+void PracticeSession::increaseCharIndex() {
+	 textsource.increaseCharIndex();
 }
 
-void PracticeSession::decreaseCurrentCharIndex() {
-	 textsource.decreaseCurrentCharIndex();
+void PracticeSession::decreaseCharIndex() {
+	 textsource.decreaseCharIndex();
 }
 
 const bool& PracticeSession::isMistake() const {

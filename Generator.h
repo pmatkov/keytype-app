@@ -4,7 +4,6 @@
 #define GeneratorH
 //---------------------------------------------------------------------------
 #include <vcl.h>
-#define SIZE 26
 
 class Generator {
 

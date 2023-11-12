@@ -113,6 +113,10 @@
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
     </PropertyGroup>
     <ItemGroup>
+        <CppCompile Include="..\FileUtils.cpp">
+            <DependentOn>..\FileUtils.h</DependentOn>
+            <BuildOrder>7</BuildOrder>
+        </CppCompile>
         <CppCompile Include="..\Generator.cpp">
             <DependentOn>..\Generator.h</DependentOn>
             <BuildOrder>3</BuildOrder>
@@ -123,6 +127,10 @@
         <CppCompile Include="Logger.cpp">
             <DependentOn>Logger.h</DependentOn>
             <BuildOrder>5</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="TestFileUtils.cpp">
+            <DependentOn>TestFileUtils.h</DependentOn>
+            <BuildOrder>6</BuildOrder>
         </CppCompile>
         <CppCompile Include="TestGenerator.cpp">
             <DependentOn>TestGenerator.h</DependentOn>

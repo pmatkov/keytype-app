@@ -3,8 +3,7 @@
 #ifndef LanguageProfileH
 #define LanguageProfileH
 //---------------------------------------------------------------------------
-#include <vcl.h>
-#include<vector>
+#include<vcl.h>
 
 class LanguageProfile
 {
@@ -18,6 +17,7 @@ class LanguageProfile
 
 	public:
 		LanguageProfile(UnicodeString _languageName, UnicodeString _languageCode, UnicodeString _alphabet);
+        LanguageProfile(UnicodeString _languageName, UnicodeString _languageCode);
 		//std::vector<std::string>& getAllowedLanguages() const;
 
 

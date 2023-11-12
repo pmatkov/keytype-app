@@ -22,8 +22,8 @@ class PracticeSession {
 		const TextSource& getTextsource() const;
 		void setTextsource(const TextSource& _textsource);
 
-		void increaseCurrentCharIndex();
-		void decreaseCurrentCharIndex();
+		void increaseCharIndex();
+		void decreaseCharIndex();
 
 		const bool& isMistake() const;
 		void setMistake(bool _mistake);
