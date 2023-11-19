@@ -1,0 +1,30 @@
+﻿{
+    "dictionary": [
+        {
+            "word": "home",
+            "category": "noun",
+            "definition": "a place where people or animals live",
+            "synonyms": [
+                "residence",
+                "house"
+            ]
+        },
+        {
+            "word": "test",
+            "category": "adverb",
+            "definition": "sdfdsf",
+            "synonyms": [
+                "sdfdsf"
+            ]
+        },
+        {
+            "word": "work",
+            "category": "noun",
+            "definition": "an activity, such as a job",
+            "synonyms": [
+                "operate",
+                "function"
+            ]
+        }
+    ]
+}

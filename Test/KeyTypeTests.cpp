@@ -16,7 +16,7 @@ int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 	 Application->Initialize();
 	 Guitestrunner::RunRegisteredTests();
   }
-  catch (Exception &exception)
+  catch (const Exception &exception)
   {
 	 Application->ShowException(&exception);
   }
@@ -26,7 +26,7 @@ int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 	 {
 	   throw Exception("");
 	 }
-	 catch (Exception &exception)
+	 catch (const Exception &exception)
 	 {
 	   Application->ShowException(&exception);
 	 }

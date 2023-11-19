@@ -6,6 +6,12 @@
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 
+WordList::WordList(UnicodeString _listName, std::vector<UnicodeString> _wordList) : listName (_listName), wordList(_wordList) {}
+
+const UnicodeString& WordList::getWordListName() const {
+	return listName;
+}
+
 const std::vector<UnicodeString>& WordList::getWordList() const {
 	return wordList;
 }

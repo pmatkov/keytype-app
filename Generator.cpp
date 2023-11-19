@@ -38,47 +38,42 @@ UnicodeString Generator::generateText(UnicodeString letters, bool uppercase, boo
 
 }
 
-UnicodeString Generator::generateWord(UnicodeString letters, bool uppercase, bool numbers, bool punctuation) {
+UnicodeString Generator::generateWord(UnicodeString letters, bool useuppercase, bool usenumbers, bool usepunctuation) {
 
-		UnicodeString numChars = "0123456789";
-		UnicodeString punctChars = "!?/\\\"#$%&*=+',.:;-<>@^_()[]{}|";
+		UnicodeString numbers = "0123456789";
+		UnicodeString punctuation = "!?/\\\"#$%&*=+',.:;-<>@^_()[]{}|";
+		UnicodeString characters = "";
 
 		const int MIN_CHARS = 1;
 		const int MAX_CHARS = 12;
-		const float MODIFIERS_RATIO = 0.2;
 
-		if (letters.Length() > 0 || numbers || punctuation) {
+		if (letters.Length() || usenumbers || usepunctuation) {
 
 			UnicodeString word;
 			int wordLength = getRandomInt(MIN_CHARS, MAX_CHARS);
-			int maxModififers = wordLength * MODIFIERS_RATIO;
 
-			for (int i = 0, modifier = 0; i < wordLength; i++) {
+			for (int i = 0; i < wordLength; i++) {
 
-				int index;
+				if (letters.Length()) {
+					characters += letters;
+				}
+				if (usenumbers) {
+					numbers = shuffleChars(numbers);
+					characters += numbers.SubString(1, letters.Length() || usepunctuation ? 0.3 * numbers.Length() : numbers.Length());
+				}
+				if (usepunctuation) {
+					numbers = shuffleChars(characters);
+					characters += punctuation.SubString(1, letters.Length() || usenumbers ? 0.2 * punctuation.Length() : punctuation.Length());
+				}
 
-				if ((numbers || punctuation) && modifier < maxModififers && getRandomInt(0, 1)) {
+				characters = shuffleChars(characters);
+				int index = getRandomInt(1, characters.Length());
 
-					int modifierType = getRandomInt(0, 2);
-
-					if (numbers && modifierType == 1) {
-						index = getRandomInt(1, numChars.Length());
-						word += numChars[index];
-					}
-					else if (punctuation && modifierType == 2) {
-						index = getRandomInt(1, punctChars.Length());
-						word += punctChars[index];
-					}
-					modifier++;
+				if (useuppercase && getRandomInt(0, 10) < 1) {
+					word += characters[index];
 				}
 				else {
-					index = getRandomInt(1, letters.Length());
-					if (uppercase && getRandomInt(0, 10) < 1) {
-						 word += letters[index];
-					}
-					else {
-						word += towlower(letters[index]);
-					}
+					word += towlower(characters[index]);
 				}
 			}
 
@@ -107,7 +102,6 @@ UnicodeString Generator::shuffleChars(UnicodeString input) {
 
 		std::swap(input[i], input[j]);
 	}
-
 
 	return input;
 }

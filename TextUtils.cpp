@@ -70,31 +70,123 @@ bool TextUtils::isEndChar(const wchar_t wch) {
 		return false;
 }
 
+ UnicodeString TextUtils::trimCharacters(const UnicodeString &text, wchar_t wch) {
 
- UnicodeString TextUtils::trimSpaces(const UnicodeString &text) {
-
-	bool consecutiveSpace = false;
+    int start = 0;
+	int end = text.Length() - 1;
 
 	UnicodeString trimmedText;
 	const wchar_t* wstr = text.c_str();
 
-	int i = 0;
+	while (start <= end && wstr[start] == wch) {
+        start++;
+	}
 
-	while (wstr[i])  {
-		if (std::iswspace(wstr[i])) {
-			if (!consecutiveSpace) {
-				trimmedText += ' ';
-				consecutiveSpace = true;
+	while (end >= start && wstr[end] == wch) {
+        end--;
+	}
+
+    if (start <= end) {
+		trimmedText = text.SubString(start + 1, end - start + 1);
+	}
+
+	return trimmedText;
+ }
+
+std::vector<UnicodeString> TextUtils::splitLineIntoWords(const UnicodeString& line)
+{
+	if (line.Length()) {
+
+       	TStringList* list = new TStringList;
+		std::vector<UnicodeString> tokenList;
+		UnicodeString token;
+
+		list->DelimitedText = line;
+		list->Delimiter = ' ';
+
+		for (int i = 0; i < list->Count; i++)	{
+
+			token = list->Strings[i];
+			tokenList.push_back(token);
+		}
+
+		delete list;
+
+		return tokenList;
+	}
+	else {
+		return std::vector<UnicodeString>();
+    }
+
+}
+
+
+UnicodeString TextUtils::formatJson(const UnicodeString& string) {
+
+	int i = 0, level = 1;
+	UnicodeString result = "";
+	UnicodeString addfront, addback;
+	bool insidequote = false, openingbracket = false, leveldown = false;
+
+	const wchar_t* wstr = string.c_str();
+
+
+	while (wstr[i]) {
+
+		addfront = addback = "";
+
+		if (wstr[i] == '{' || wstr[i] == '[') {
+
+			addback = "\n" + repeatChar(' ', level * 4);
+			level++;
+			leveldown = false;
+		}
+		else if (wstr[i] == ']' || wstr[i] == '}') {
+
+			if (wstr[i] == ']' && openingbracket) {
+				 level = level - 2;
+				 openingbracket = false;
 			}
+			else {
+			   level--;
+			}
+			addfront = "\n" + repeatChar(' ', level * 4);
+			leveldown = true;
+
 		}
-		else {
-			trimmedText += wstr[i];
-			consecutiveSpace = false;
+		else if (wstr[i] == ',' && !insidequote) {
+
+		   addback = + "\n" + repeatChar(' ', (leveldown ? level : level - 1) * 4);
+		   level = leveldown ? level + 1 : level;
+
 		}
+		else if (wstr[i] == ':') {
+		   addback = " ";
+		}
+
+		if (wstr[i] == '[') {
+			openingbracket = true;
+		}
+		if (wstr[i] == '\"') {
+			insidequote = !insidequote;
+		}
+
+		result += addfront + UnicodeString(wstr[i]) + addback;
 		i++;
 	}
 
-	return trimmedText.Trim();
+	return result;
 
- }
 
+
+}
+
+UnicodeString TextUtils::repeatChar(wchar_t wch, int count) {
+
+	UnicodeString result = "";
+
+	for (int i = 0; i < count; i++) {
+		result += wch;
+	}
+	return result;
+}

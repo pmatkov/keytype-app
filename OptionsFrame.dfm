@@ -1,12 +1,12 @@
 object FrOptions: TFrOptions
   Left = 0
   Top = 0
-  Width = 100
+  Width = 102
   Height = 168
   TabOrder = 0
-  object FrButtonOptions: TButton
+  object BtOptions: TButton
     Left = 10
-    Top = 0
+    Top = 4
     Width = 78
     Height = 30
     Margins.Left = 10
@@ -23,8 +23,8 @@ object FrOptions: TFrOptions
     TabStop = False
   end
   object ImageList1: TImageList
-    Left = 16
-    Top = 136
+    Left = 32
+    Top = 52
     Bitmap = {
       494C010102000800040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000001000000001002000000000000010

@@ -13,8 +13,8 @@ object FMain: TFMain
   Font.Name = 'Segoe UI'
   Font.Style = []
   TextHeight = 15
-  object StartLabel: TLabel
-    Left = 216
+  object LStart: TLabel
+    Left = 184
     Top = 232
     Width = 4
     Height = 17
@@ -25,7 +25,7 @@ object FMain: TFMain
     Font.Style = []
     ParentFont = False
   end
-  object TextBox: TRichEdit
+  object RETextBox: TRichEdit
     Left = 128
     Top = 144
     Width = 360
@@ -43,16 +43,17 @@ object FMain: TFMain
   end
   inline FrOptions: TFrOptions
     Left = 505
-    Top = 144
-    Width = 100
+    Top = 140
+    Width = 102
     Height = 168
     TabOrder = 1
     ExplicitLeft = 505
-    ExplicitTop = 144
-    inherited FrButtonOptions: TButton
-      OnClick = FrOptionsButtonClick
+    ExplicitTop = 140
+    inherited BtOptions: TButton
+      OnClick = BtOptionsButtonClick
     end
     inherited ImageList1: TImageList
+      Top = 56
       Bitmap = {
         494C010101000800040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
         0000000000003600000028000000400000001000000001002000000000000010

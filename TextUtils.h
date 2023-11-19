@@ -5,6 +5,7 @@
 
 #include <vcl.h>
 #include <cwctype>
+#include <vector>
 
 class TextUtils
 {
@@ -15,7 +16,10 @@ class TextUtils
 
 		static bool isUnicodeString(const UnicodeString &text);
 		static bool isEndChar(const wchar_t wchar);
-        static UnicodeString trimSpaces(const UnicodeString &text);
+		static UnicodeString trimCharacters(const UnicodeString &text, wchar_t wch);
+		static std::vector<UnicodeString> splitLineIntoWords(const UnicodeString& line);
+		static UnicodeString formatJson(const UnicodeString& string);
+		static UnicodeString repeatChar(wchar_t wch, int count);
 };
 //---------------------------------------------------------------------------
 #endif

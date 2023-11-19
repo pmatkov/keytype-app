@@ -15,7 +15,7 @@ public:
   
 __published:
 	  void __fastcall TestcreateFilePath();
-	  void __fastcall TestmoveUpDirTree();
+	  void __fastcall TesttraverseUpDirTree();
 
   private:
 		Logger* logger;
@@ -43,27 +43,24 @@ void __fastcall TTestFileUtils::TearDown()
 
 void __fastcall TTestFileUtils::TestcreateFilePath()
 {
-	UnicodeString path = "WordList";
-	UnicodeString expectedResult = "C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\WordList";
+	UnicodeString dirName = "Data";
+	UnicodeString reference = "C:\\Users\\surf3r\\OneDrive\\Documents\\Embarcadero\\Studio\\Projects\\KeyType\\Data\\";
+	UnicodeString result = "";
 
-	logger->log("Starting path: " + path);
-	path = FileUtils::createFilePath(path);
-	logger->log("New path: " + path);
+	logger->log("Expected path: " + reference);
+	result = FileUtils::createFilePath(dirName);
+	logger->log("New path: " + result);
 
-	UnicodeString substring = path.SubString(1, path.Length()/ 2);
-	UnicodeString remainingSubstring = path.SubString(path.Length()/ 2 + 1, path.Length() - path.Length()/ 2 + 2);
-	logger->log("First part: " + substring);
-	logger->log("Remaining part: " + remainingSubstring);
-	CheckTrue(path.Compare(expectedResult) == 0 , "Not correct path");
+	CheckEquals(reference, result, "Not the same path");
 }
     
-void __fastcall TTestFileUtils::TestmoveUpDirTree()
+void __fastcall TTestFileUtils::TesttraverseUpDirTree()
 {
 	UnicodeString path = "C:\\Program Files\\Test\\.";
 	int level = 2;
 
 	logger->log("Starting path: " + path);
-	path = FileUtils::moveUpDirTree(path, level);
+	path = FileUtils::traverseUpDirTree(path, level);
 	logger->log("New path (-" + IntToStr(level) + "): " + path);
 
 }

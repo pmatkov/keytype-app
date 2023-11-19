@@ -13,7 +13,7 @@ class TextSource
 	// langauge detection, translator api?
 	private:
 		UnicodeString text;
-		LanguageProfile *language;
+		LanguageProfile language;
 		UnicodeString currentWord;
 		wchar_t currentChar;
 		int charIndex;

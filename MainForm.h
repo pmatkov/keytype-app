@@ -36,20 +36,18 @@ enum StartControl {
 class TFMain : public TForm
 {
 __published:	// IDE-managed Components
-	TRichEdit *TextBox;
-	TLabel *StartLabel;
+	TRichEdit *RETextBox;
+	TLabel *LStart;
 	TFrOptions *FrOptions;
-	void __fastcall FrOptionsButtonClick(TObject *Sender);
+	void __fastcall BtOptionsButtonClick(TObject *Sender);
 
 private:	// User declarations
-
 	std::unique_ptr<IOControl> iocontrol;
 	std::unique_ptr<PracticeSession> session;
 
 public:		// User declarations
 	__fastcall TFMain(TComponent* Owner);
-
-
+    void __fastcall AppException(TObject *Sender, Exception *ex);
 	void setCharStyle(TRichEdit* richEdit, int charIndex, TFontStyle style, bool status);
 	void setCharColor(TRichEdit* richEdit, int charIndex, TColor textColor);
 	void setTextColor(TRichEdit* richEdit, TColor textColor);

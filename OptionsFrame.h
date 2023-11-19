@@ -17,7 +17,7 @@ class TFrOptions : public TFrame
 {
 __published:	// IDE-managed Components
 	TImageList *ImageList1;
-	TButton *FrButtonOptions;
+	TButton *BtOptions;
 private:	// User declarations
 public:		// User declarations
 	__fastcall TFrOptions(TComponent* Owner);

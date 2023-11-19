@@ -9,7 +9,7 @@
 
 TextSource::TextSource() {
 	text = "The quick brown fox jumps over the lazy dog";
-	language = new LanguageProfile("English", "EN",  "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+	language = LanguageProfile("English", "EN",  "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
 	charIndex = 1;
 }
 

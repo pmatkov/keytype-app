@@ -6,29 +6,37 @@
 #include <vcl.h>
 #include <vector>
 
-enum WordType {
+enum WordCategory {
 	Noun,
 	Verb,
 	Adverb,
 	Adjective,
 	Pronoun,
-	Conjunction,
-	Preposition
+	Count,
+	Unknown
 };
 
 class WordInfo {
 
 	private:
 		UnicodeString word;
-		WordType wordType;
+		WordCategory category;
 		UnicodeString definition;
 		std::vector<UnicodeString> synonyms;
-		std::vector<UnicodeString> antonyms;
-		std::vector<UnicodeString> examples;
+
+		static std::vector<UnicodeString> enumStrings;
 
 	public:
+    	WordInfo();
+		WordInfo(UnicodeString _word, WordCategory _category, UnicodeString _definition, std::vector<UnicodeString> _synonyms);
 		const UnicodeString& getWord() const;
-		const WordType& getWordType() const;
+		const WordCategory& getWordCategory() const;
+		const UnicodeString& getDefinition() const;
+		const std::vector<UnicodeString>& getSynonyms() const;
+		UnicodeString getSynonymsAsString() const;
+
+		static WordCategory stringToWordCategory(const UnicodeString &word);
+        static UnicodeString wordCategoryToString(WordCategory category);
 
 };
 //---------------------------------------------------------------------------

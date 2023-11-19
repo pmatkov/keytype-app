@@ -15,6 +15,7 @@
 #pragma hdrstop
 #pragma package(smart_init)
 #pragma link "OptionsFrame"
+#pragma link "OptionsFrame"
 #pragma resource "*.dfm"
 
 TFMain *FMain;
@@ -26,7 +27,16 @@ __fastcall TFMain::TFMain(TComponent* Owner) : TForm(Owner) {
 
 	this->setStatusInfo(Initial);
 
+	Application->OnException = AppException;
+
 }
+
+void __fastcall TFMain::AppException(TObject *Sender, Exception *ex)
+{
+  Application->ShowException(ex);
+  Application->Terminate();
+}
+
 
 
 void TFMain::setCharStyle(TRichEdit* richEdit, int charIndex, TFontStyle style, bool status) {
@@ -65,39 +75,39 @@ void TFMain::setStatusInfo(StartControl status)  {
 
 	switch (status) {
 		case Initial: {
-			TextBox->Lines->Add(session->getTextsource().getText());
-			TextBox->Paragraph->Alignment = taCenter;
-			setTextColor(TextBox, clSilver);
-			StartLabel->Caption = "Press space bar to start the practice";
+			RETextBox->Lines->Add(session->getTextsource().getText());
+			RETextBox->Paragraph->Alignment = taCenter;
+			setTextColor(RETextBox, clSilver);
+			LStart->Caption = "Press space bar to start the practice";
 			break;
 
 		}
 		case Start: {
-			StartLabel->Visible = false;
-			setTextColor(TextBox, clBlack);
-			setCharStyle(TextBox, 0, fsUnderline, true);
+			LStart->Visible = false;
+			setTextColor(RETextBox, clBlack);
+			setCharStyle(RETextBox, 0, fsUnderline, true);
 			break;
 
 		}
 		case Restart: {
-			TextBox->Lines->Clear();
-			TextBox->Lines->Add(session->getTextsource().getText());
-			StartLabel->Visible = true;
-			setTextColor(TextBox, clSilver);
-			StartLabel->Caption = "Press space bar to start the practice";
+			RETextBox->Lines->Clear();
+			RETextBox->Lines->Add(session->getTextsource().getText());
+			LStart->Visible = true;
+			setTextColor(RETextBox, clSilver);
+			LStart->Caption = "Press space bar to start the practice";
 			break;
 
 		}
 		case Resume: {
-			StartLabel->Visible = false;
-			setTextColor(TextBox, clBlack);
+			LStart->Visible = false;
+			setTextColor(RETextBox, clBlack);
 			break;
 
 		}
 		case Pause: {
-			StartLabel->Visible = true;
-			setTextColor(TextBox, clSilver);
-			StartLabel->Caption = "Press space bar to resume the practice";
+			LStart->Visible = true;
+			setTextColor(RETextBox, clSilver);
+			LStart->Caption = "Press space bar to resume the practice";
 			break;
 
 		}
@@ -108,10 +118,7 @@ void TFMain::setStatusInfo(StartControl status)  {
 
 }
 
-
-
 //---------------------------------------------------------------------------
-
 
 void __fastcall TFMain::WndProc(Messages::TMessage &message) {
 
@@ -134,24 +141,24 @@ void __fastcall TFMain::WndProc(Messages::TMessage &message) {
 
 			if (capturedKeyStroke == session->getTextsource().getCurrentChar()) {
 
-				setCharStyle(TextBox, session->getTextsource().getCharIndex()-1, fsUnderline, false);
+				setCharStyle(RETextBox, session->getTextsource().getCharIndex()-1, fsUnderline, false);
 
 				if (session->isMistake()) {
-					setCharColor(TextBox, session->getTextsource().getCharIndex()-1, clRed);
+					setCharColor(RETextBox, session->getTextsource().getCharIndex()-1, clRed);
 					session->setMistake(false);
 				}
 				else  {
-					setCharColor(TextBox, session->getTextsource().getCharIndex()-1, clSilver);
+					setCharColor(RETextBox, session->getTextsource().getCharIndex()-1, clSilver);
 				}
 
 				session->increaseCharIndex();
 
-				setCharStyle(TextBox, session->getTextsource().getCharIndex()-1, fsUnderline, true);
+				setCharStyle(RETextBox, session->getTextsource().getCharIndex()-1, fsUnderline, true);
 			}
 			else {
 				session->setMistake(true);
-				setCharStyle(TextBox, session->getTextsource().getCharIndex()-1, fsUnderline, false);
-				setCharColor(TextBox, session->getTextsource().getCharIndex()-1, clRed);
+				setCharStyle(RETextBox, session->getTextsource().getCharIndex()-1, fsUnderline, false);
+				setCharColor(RETextBox, session->getTextsource().getCharIndex()-1, clRed);
 
 			}
 
@@ -164,7 +171,7 @@ void __fastcall TFMain::WndProc(Messages::TMessage &message) {
 
 }
 
-void __fastcall TFMain::FrOptionsButtonClick(TObject *Sender)
+void __fastcall TFMain::BtOptionsButtonClick(TObject *Sender)
 {
 	TFPractice *practiceform = new TFPractice(this);
 
@@ -186,7 +193,7 @@ void __fastcall TFMain::FrOptionsButtonClick(TObject *Sender)
 
 						UnicodeString letters = L"";
 
-						TGroupBox* groupbox = practiceform->GBCharacters;
+//						TGroupBox* groupbox = practiceform->GBCharacters;
 
 //						const std::vector<std::unique_ptr<TToolButton>>& buttons = practiceform->getButtons();
 						std::vector<TToolButton*> buttons = practiceform->getButtons();
@@ -225,7 +232,6 @@ void __fastcall TFMain::FrOptionsButtonClick(TObject *Sender)
 			}
 
 		}
-
 	}
 	else {
 		session->setPaused(true);
