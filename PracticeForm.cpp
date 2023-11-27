@@ -17,23 +17,20 @@ TFPractice *FPractice;
 //---------------------------------------------------------------------------
 __fastcall TFPractice::TFPractice(TComponent* Owner) : TForm(Owner) {
 
-
-	TBLetters->ShowCaptions = true;
-
 	for (int i = 0; i < LETTERS; i++) {
 
-//		buttons.push_back(std::make_unique<TToolButton>(TBLetters));
-
 		buttons.push_back(new TToolButton(TBLetters));
+
 		buttons[i]->Parent = TBLetters;
+		buttons[i]->AutoSize = false;
 		buttons[i]->Caption = Char('Z' - i);
 		buttons[i]->Style = tbsCheck;
-		buttons[i]->Width =  TBLetters->ButtonWidth / LETTERS/ 2;
 
-		if (i == LETTERS/ 2) {
+		if (i % (LETTERS/ 2) == 0) {
 			buttons[i]->Wrap = true;
 		}
 	}
+	SendMessage(TBLetters->Handle, TB_SETBUTTONWIDTH, 0, MAKELPARAM(18, 18));
 
 	RGGeneratedText->ItemIndex = 0;
 	updateGroupBoxState();
@@ -41,8 +38,27 @@ __fastcall TFPractice::TFPractice(TComponent* Owner) : TForm(Owner) {
 	// stavit u FormShow?
 	dictionary.parseJsontoWordInfo("Data\\dictionary.json");
 
-	BtDelete->Enabled = false;
+	BtDelete1->Enabled = false;
 	listChanged = false;
+
+	_di_IXMLlibraryType library = Getlibrary(XMLDocument1);
+
+	for (int i = 0; i < library->Count; i++) {
+
+		_di_IXMLcategoryType bookCategory = library->category[i];
+
+		for (int j = 0; j < bookCategory->Count; j++) {
+
+			_di_IXMLgenreType bookGenre =  bookCategory->genre[j];
+
+			for (int k = 0; k < bookGenre->Count; k++) {
+
+				mapOfBooks[bookGenre->Get_name()].push_back(bookGenre->book[k]);
+
+			}
+
+		}
+	}
 
 }
 
@@ -54,20 +70,19 @@ __fastcall TFPractice::~TFPractice() {
 
 }
 
-//const std::vector<std::unique_ptr<TToolButton>>& TFPractice::getButtons() const {
-//	return buttons;
-//}
+void TFPractice::setSessionModule(SessionModule *_sessionModule) {
+
+	if (_sessionModule) {
+	   sessionModule = _sessionModule;
+	}
+
+}
 
 
 const std::vector<TToolButton*>& TFPractice::getButtons() const {
 	return buttons;
 }
 
-
-//void __fastcall TFPractice::BtCancelClick(TObject *Sender)
-//{
-//	  ModalResult = mrCancel;
-//}
 
 void TFPractice::updateGroupBoxState()
 {
@@ -110,49 +125,29 @@ void __fastcall TFPractice::CBSelectAllClick(TObject *Sender)
 	}
 }
 
-// prebaciti u FileUtils - vraca sadrzaj direktorija *.txt
+// konstruktor?
 void __fastcall TFPractice::FormShow(TObject *Sender)
 {
-	CBTextFiles->Items->Add("");
+	// obrisati?
+//	CBTextFiles->Items->Add("");
 
 	UnicodeString path = FileUtils::createAbsolutePath(DIR_NAME, false);
 
-	if (TDirectory::Exists(path)) {
+	std::optional<std::vector<UnicodeString>> fileNames = FileUtils::getFileNamesInDir(path);
 
-		TSearchRec searchRec;
+	if (fileNames.has_value()) {
 
-		if (FindFirst(path + "*.txt", faAnyFile, searchRec) == 0) {
+		CBTextFiles->Items->Clear();
 
-			CBTextFiles->Items->Clear();
+		for (const UnicodeString &fname : *fileNames) {
 
-			std::vector<UnicodeString> filenames;
-
-			do {
-				UnicodeString filename = searchRec.Name;
-
-				try {
-					FileUtils::checkFileSize(path + filename);
-					filenames.push_back(filename);
-					CBTextFiles->Items->Add(filename);
-				}
-				catch (EFileSizeExceededException &ex) {
-					continue;
-				}
-
-			} while (FindNext(searchRec) == 0);
-
-			FindClose(searchRec);
-
-			for (const UnicodeString &fname : filenames) {
-				loadWordListFromFile(path + fname);
-			}
-
-			CBTextFiles->ItemIndex = 0;
+			loadWordListFromFile(path + fname);
+			CBTextFiles->Items->Add(fname);
 		}
-	}
 
-	DFileOpen->InitialDir = path;
-	cbTextFilesPrevIndex = CBTextFiles->ItemIndex;
+		CBTextFiles->ItemIndex = 0;
+		cbTextFilesPrevIndex = CBTextFiles->ItemIndex;
+    }
 
 	loadListViewItems();
 
@@ -163,6 +158,8 @@ void __fastcall TFPractice::FormShow(TObject *Sender)
 	}
 
 	CBCategory->ItemIndex = -1;
+
+	DFileOpen->InitialDir = path;
 }
 
 void __fastcall TFPractice::BtBrowseClick(TObject *Sender)
@@ -196,63 +193,40 @@ void __fastcall TFPractice::BtBrowseClick(TObject *Sender)
 	}
 }
 
-
-// prebaciti u WordList backend dio
 void TFPractice::loadWordListFromFile(const UnicodeString &path) {
 
-	if (FileExists(path))  {
+	std::optional<UnicodeString> fileContents = FileUtils::readFromTextFile(path);
 
-		TFileStream *fileStream = new TFileStream(path, fmOpenRead);
+	if (fileContents.has_value()) {
 
-		try
-		{
-			TStreamReader *streamReader = new TStreamReader(fileStream);
+		std::vector<UnicodeString> wordList;
 
-			try
-			{
-				std::vector<UnicodeString> wordList;
+		if (TextUtils::countWords(*fileContents) > 1) {
 
-				while (!streamReader->EndOfStream) {
+			std::vector<UnicodeString> words = TextUtils::splitTextIntoWords(*fileContents);
+			wordList.insert(wordList.end(), words.begin(), words.end());
 
-
-					UnicodeString line = streamReader->ReadLine();
-
-					if (TextUtils::countWords(line) > 1) {
-
-						std::vector<UnicodeString> words = TextUtils::splitLineIntoWords(line);
-						wordList.insert(wordList.end(), words.begin(), words.end());
-
-					}
-					else {
-						 wordList.push_back(line);
-					}
-
-				}
-
-				UnicodeString filename = ExtractFileName(path);
-
-				wordListCollection.push_back(WordList(filename, wordList));
-			}
-			__finally
-			{
-				delete streamReader;
-			}
 		}
-		__finally
-		{
-			delete fileStream;
+		else {
+			wordList.push_back(*fileContents);
 		}
+
+		UnicodeString filename = ExtractFileName(path);
+
+		wordListCollection.push_back(WordList(filename, wordList));
+
 	}
 }
+
 
 //---------------------------------------------------------------------------
 void TFPractice::loadListViewItems() {
 
-	if (LVWords->Items->Count > 0) {
+	if (LVWords->Items->Count) {
 		LVWords->Items->Clear();
 	}
 
-	if (CBTextFiles->ItemIndex != -1 && CBTextFiles->ItemIndex < wordListCollection.size()) {
+	if (CBTextFiles->ItemIndex != -1) {
 
 
 		if (wordListCollection[CBTextFiles->ItemIndex].getWordListName().Compare(CBTextFiles->Items->Strings[CBTextFiles->ItemIndex]) == 0) {
@@ -268,7 +242,6 @@ void TFPractice::loadListViewItems() {
 			LVWords->Items->EndUpdate();
 
 		}
-
 	}
 }
  //---------------------------------------------------------------------------
@@ -335,8 +308,8 @@ void __fastcall TFPractice::LVWordsChange(TObject *Sender, TListItem *Item, TIte
 {
 	if (LVWords->SelCount == 1) {
 
-		BtAddSave->Caption = "Save";
-		BtDelete->Enabled = true;
+		BtAddSave1->Caption = "Save";
+		BtDelete1->Enabled = true;
 	}
 	else if (LVWords->SelCount > 1) {
 
@@ -359,14 +332,14 @@ void __fastcall TFPractice::LVWordsChange(TObject *Sender, TListItem *Item, TIte
 			clearInputFields();
 			wordInDictionary = false;
 		}
-		BtAddSave->Caption = "Add";
-		BtDelete->Enabled = false;
+		BtAddSave1->Caption = "Add";
+		BtDelete1->Enabled = false;
 	}
 
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TFPractice::BtDeleteClick(TObject *Sender)
+void __fastcall TFPractice::BtDelete1Click(TObject *Sender)
 {
 	 dictionary.deleteWordInfo(LVWords->Selected->Caption);
 
@@ -374,24 +347,25 @@ void __fastcall TFPractice::BtDeleteClick(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TFPractice::BtAddSaveClick(TObject *Sender)
+void __fastcall TFPractice::BtAddSave1Click(TObject *Sender)
 {
-	 if (BtAddSave->Caption.Compare("Add") == 0) {
+	 if (BtAddSave1->Caption.Compare("Add") == 0) {
 
 		 if (!EWord->Text.IsEmpty() && !EDefinition->Text.IsEmpty() && !ESynonyms->Text.IsEmpty() && CBCategory->ItemIndex != -1) {
-			dictionary.setWordInfo(EWord->Text, WordInfo(EWord->Text, WordInfo::stringToWordCategory(CBCategory->Text), EDefinition->Text, TextUtils::splitLineIntoWords(ESynonyms->Text)));
+
+			dictionary.setWordInfo(EWord->Text, WordInfo(EWord->Text, WordInfo::stringToWordCategory(CBCategory->Text), EDefinition->Text, TextUtils::splitTextIntoWords(ESynonyms->Text)));
 
 		 }
 		 else {
 			 ShowMessage("Fields are empty");
 		 }
 	 }
-	 else if (BtAddSave->Caption.Compare("Save") == 0 && wordInDictionary) {
+	 else if (BtAddSave1->Caption.Compare("Save") == 0 && wordInDictionary) {
 
 		WordInfo wordinfo = *(dictionary.getWordInfo(LVWords->Selected->Caption));
 
 		if (EWord->Text.Compare(wordinfo.getWord()) == 0 && CBCategory->Text.Compare(WordInfo::wordCategoryToString(wordinfo.getWordCategory())) == 0 && EDefinition->Text.Compare(wordinfo.getDefinition()) == 0 \
-			&& TextUtils::splitLineIntoWords(ESynonyms->Text) == wordinfo.getSynonyms()) {
+			&& TextUtils::splitTextIntoWords(ESynonyms->Text) == wordinfo.getSynonyms()) {
 
 			ShowMessage("Nothing was changed");
 		}
@@ -399,7 +373,7 @@ void __fastcall TFPractice::BtAddSaveClick(TObject *Sender)
 			  ShowMessage("Fields are empty");
 		}
 		else {
-			dictionary.setWordInfo(LVWords->Selected->Caption, WordInfo(EWord->Text, WordInfo::stringToWordCategory(CBCategory->Text), EDefinition->Text, TextUtils::splitLineIntoWords(ESynonyms->Text)));
+			dictionary.setWordInfo(LVWords->Selected->Caption, WordInfo(EWord->Text, WordInfo::stringToWordCategory(CBCategory->Text), EDefinition->Text, TextUtils::splitTextIntoWords(ESynonyms->Text)));
 		}
 
 	 }
@@ -415,9 +389,50 @@ void __fastcall TFPractice::BtAcceptClick(TObject *Sender)
 
 	if (strOptional.has_value()) {
 
-		FileUtils::saveJsonToFile("Data\\dictionary2.json", *strOptional);
+		FileUtils::saveToJsonFile("Data\\dictionary2.json", *strOptional);
 	}
   }
 }
 //---------------------------------------------------------------------------
+
+
+void __fastcall TFPractice::TVLiteratureCategoriesChange(TObject *Sender, TTreeNode *Node)
+{
+
+	if (Node) {
+
+		updateListView(Node);
+	}
+}
+//---------------------------------------------------------------------------
+
+void TFPractice::updateListView(TTreeNode* selectedNode)
+{
+	LVLiteratureDetails->Items->Clear();
+	MParagraph->Clear();
+
+	if (selectedNode->Parent) {
+
+		UnicodeString genre = selectedNode->Text.LowerCase();
+
+		std::map<UnicodeString, std::vector<_di_IXMLbookType>>::iterator it = mapOfBooks.find(genre);
+
+		if (it != mapOfBooks.end()) {
+
+			std::vector<_di_IXMLbookType> books = it->second;
+
+			for (const _di_IXMLbookType& book : books)
+			{
+				TListItem* item = LVLiteratureDetails->Items->Add();
+				item->Caption = book->Get_author();
+				item->SubItems->Add(book->Get_title());
+				item->SubItems->Add(IntToStr(book->Get_year()));
+
+				MParagraph->Lines->Add(book->Get_paragraph());
+			}
+
+		}
+
+	}
+}
 

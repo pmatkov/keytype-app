@@ -12,8 +12,8 @@ class Generator {
 
 	public:
 		static void InitializeRandomSeed();
-		static UnicodeString generateText(UnicodeString letters, bool uppercase, bool numbers, bool punctuation, int maxChars);
-		static UnicodeString generateWord(UnicodeString letters, bool uppercase, bool numbers, bool punctuation);
+		static UnicodeString generateText(UnicodeString letters, bool useUppercase, bool useNumbers, bool usePunctuation, int maxChars);
+		static UnicodeString generateWord(UnicodeString letters, bool useUppercase, bool useNumbers, bool usePunctuation);
 		static int getRandomInt(int minRange, int maxRange);
 		static UnicodeString shuffleChars(UnicodeString input);
 

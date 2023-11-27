@@ -35,6 +35,7 @@ int TextUtils::countWords(const UnicodeString &text) {
 	const wchar_t* wstr = text.c_str();
 
 	while (wstr[i])  {
+
 		if (iswalpha(wstr[i]) && !inWord) {
 			inWord = true;
 			count++;
@@ -93,7 +94,7 @@ bool TextUtils::isEndChar(const wchar_t wch) {
 	return trimmedText;
  }
 
-std::vector<UnicodeString> TextUtils::splitLineIntoWords(const UnicodeString& line)
+std::vector<UnicodeString> TextUtils::splitTextIntoWords(const UnicodeString& line)
 {
 	if (line.Length()) {
 
@@ -124,9 +125,9 @@ std::vector<UnicodeString> TextUtils::splitLineIntoWords(const UnicodeString& li
 UnicodeString TextUtils::formatJson(const UnicodeString& string) {
 
 	int i = 0, level = 1;
+	bool insidequote = false, openingbracket = false, leveldown = false;
 	UnicodeString result = "";
 	UnicodeString addfront, addback;
-	bool insidequote = false, openingbracket = false, leveldown = false;
 
 	const wchar_t* wstr = string.c_str();
 
@@ -135,11 +136,16 @@ UnicodeString TextUtils::formatJson(const UnicodeString& string) {
 
 		addfront = addback = "";
 
-		if (wstr[i] == '{' || wstr[i] == '[') {
+		if (wstr[i] == '[' || wstr[i] == '{') {
+
+			if (wstr[i] == '[') {
+				openingbracket = true;
+			}
 
 			addback = "\n" + repeatChar(' ', level * 4);
 			level++;
 			leveldown = false;
+
 		}
 		else if (wstr[i] == ']' || wstr[i] == '}') {
 
@@ -152,7 +158,6 @@ UnicodeString TextUtils::formatJson(const UnicodeString& string) {
 			}
 			addfront = "\n" + repeatChar(' ', level * 4);
 			leveldown = true;
-
 		}
 		else if (wstr[i] == ',' && !insidequote) {
 
@@ -163,11 +168,7 @@ UnicodeString TextUtils::formatJson(const UnicodeString& string) {
 		else if (wstr[i] == ':') {
 		   addback = " ";
 		}
-
-		if (wstr[i] == '[') {
-			openingbracket = true;
-		}
-		if (wstr[i] == '\"') {
+		else if (wstr[i] == '\"') {
 			insidequote = !insidequote;
 		}
 

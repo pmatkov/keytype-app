@@ -14,19 +14,19 @@ void PracticeSession::setUser(const User& _user) {
    user = _user;
 }
 
-const TextSource& PracticeSession::getTextsource() const {
-	return textsource;
+const TextSource& PracticeSession::getTextSource() const {
+	return textSource;
 }
-void PracticeSession::setTextsource(const TextSource& _textsource) {
-	textsource = _textsource;
+void PracticeSession::setTextSource(const TextSource& _textSource) {
+	textSource = _textSource;
 }
 
 void PracticeSession::increaseCharIndex() {
-	 textsource.increaseCharIndex();
+	 textSource.increaseCharIndex();
 }
 
 void PracticeSession::decreaseCharIndex() {
-	 textsource.decreaseCharIndex();
+	 textSource.decreaseCharIndex();
 }
 
 const bool& PracticeSession::isMistake() const {

@@ -20,7 +20,7 @@ class IOControl
 		const bool& isBufferingEnabled() const;
 		void setBufferingEnabled(bool _bufferingEnabled);
 
-		wchar_t getKeyStroke(WPARAM wParam);
+		wchar_t getChar(WPARAM wParam);
 
 		void appendChar(wchar_t &wch);
 		void deleteLastChar();

@@ -52,7 +52,7 @@ void Dictionary::parseJsontoWordInfo(const UnicodeString &relPath) {
 
 	try {
 
-		mainObject = (TJSONObject*) FileUtils::readJsonFromFile(relPath);
+		mainObject = (TJSONObject*) FileUtils::readFromJsonFile(relPath);
 		try {
 
 			if (mainObject) {
@@ -142,7 +142,6 @@ std::optional<UnicodeString> Dictionary::generateJsonFromWordInfo(const std::map
 					wordObject->AddPair(new TJSONPair("synonyms", synonymsObject));
 
 					dictionaryObject->AddElement(wordObject);
-
 				}
 
 				result += TextUtils::formatJson(mainObject->ToString());
@@ -155,7 +154,7 @@ std::optional<UnicodeString> Dictionary::generateJsonFromWordInfo(const std::map
 		}
 
 	}
-	if (result.Length()) {
+	if (!result.IsEmpty()) {
 		 return result;
 	}
 	else

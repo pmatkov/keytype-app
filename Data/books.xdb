@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xdb="http://www.borland.com/schemas/delphi/10.0/XMLDataBinding">
+  <xs:element name="library" type="libraryType"/>
+  <xs:complexType name="libraryType"><xs:annotation>
+      <xs:appinfo xdb:docElement="library"/>
+    </xs:annotation>
+    <sequence xmlns="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="category" type="categoryType" maxOccurs="unbounded"/>
+    </sequence>
+  </xs:complexType>
+  <xs:complexType name="categoryType">
+    <sequence xmlns="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="genre" type="genreType" maxOccurs="unbounded"/>
+    </sequence>
+    <xs:attribute name="name" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="genreType">
+    <sequence xmlns="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="book" type="bookType" maxOccurs="unbounded"/>
+    </sequence>
+    <xs:attribute name="name" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="bookType">
+    <sequence xmlns="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="author" type="xs:string"/>
+      <xs:element name="title" type="xs:string"/>
+      <xs:element name="year" type="xs:integer"/>
+      <xs:element name="paragraph" type="xs:string"/>
+    </sequence>
+  </xs:complexType>
+</xs:schema>

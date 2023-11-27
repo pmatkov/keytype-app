@@ -24,7 +24,7 @@ void IOControl::setBufferingEnabled(bool _bufferingEnabled) {
 }
 
 
-wchar_t IOControl::getKeyStroke(WPARAM wParam){
+wchar_t IOControl::getChar(WPARAM wParam){
 
 	wchar_t wch = static_cast<wchar_t>(wParam);
 
@@ -36,6 +36,7 @@ wchar_t IOControl::getKeyStroke(WPARAM wParam){
 			break;
 
 		case VK_BACK:{
+
 			if (bufferingEnabled) {
 
 				int length = buffer.Length();
@@ -48,11 +49,11 @@ wchar_t IOControl::getKeyStroke(WPARAM wParam){
 		}
 
 		default: {
-			if (bufferingEnabled)
+			if (bufferingEnabled) {
 				buffer += UnicodeString(wch);
+            }
 			return wch;
 		}
-
 
 	}
 

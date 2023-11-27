@@ -13,18 +13,20 @@
 
 UnicodeString FileUtils::createAbsolutePath(const UnicodeString& relPath, bool isfile) {
 
-	UnicodeString projectDir = PROJECT_DIR;
+	UnicodeString path = "";
 	UnicodeString exePath = ExtractFilePath(Application->ExeName);
-	int dirPosition = exePath.Pos(projectDir);
+	int dirPosition = exePath.Pos(PROJECT_DIR);
+	int len = sizeof(PROJECT_DIR) - 1;
 
-	UnicodeString projectPath = exePath.Delete(dirPosition + projectDir.Length() + 1, exePath.Length() - dirPosition + 1);
+	UnicodeString projectPath = exePath.Delete(dirPosition + len + 1, exePath.Length() - dirPosition + 1);
 
-	if (isfile) {
-		return projectPath + relPath;
+	path += projectPath + relPath;
+
+	if (!isfile) {
+		path += "\\";
 	}
-	else {
-		return projectPath + relPath + "\\";
-	}
+
+	return path;
 }
 
 UnicodeString FileUtils::traverseUpDirTree(const UnicodeString& path, int level) {
@@ -56,6 +58,38 @@ UnicodeString FileUtils::traverseUpDirTree(const UnicodeString& path, int level)
 
 }
 
+
+std::optional<std::vector<UnicodeString>> FileUtils::getFileNamesInDir(const UnicodeString &path) {
+
+	if (TDirectory::Exists(path)) {
+
+		std::vector<UnicodeString> filenames;
+		TSearchRec searchRec;
+
+		if (FindFirst(path + "*.txt", faAnyFile, searchRec) == 0) {
+
+			do {
+				UnicodeString filename = searchRec.Name;
+
+				if (TFile::GetSize(path + filename) < MAX_FILE_SIZE)
+					filenames.push_back(filename);
+				else
+					continue;
+
+			} while (FindNext(searchRec) == 0);
+
+			FindClose(searchRec);
+
+			return filenames;
+
+		}
+	}
+
+	return std::nullopt;
+
+}
+
+// izbaciti?
 void FileUtils::checkFileSize(const UnicodeString& path) {
 
 	 if (FileExists(path)) {
@@ -69,65 +103,99 @@ void FileUtils::checkFileSize(const UnicodeString& path) {
 
 }
 
-bool FileUtils::createFile(const UnicodeString &relPath) {
+
+ TJSONObject* FileUtils::readFromJsonFile(const UnicodeString &relPath) {
 
 	UnicodeString path = createAbsolutePath(relPath, true);
 
-	if (!FileExists(path))  {
+	TStreamReader *reader = NULL;
 
-		TFileStream* fileStream = new TFileStream(path, fmCreate);
+	try {
 
-		delete fileStream;
+		if (ExtractFileExt(path).Compare(".json") == 0 && FileExists(path))  {
 
-		return true;
+			try {
+
+				reader = new TStreamReader(path, TEncoding::UTF8);
+				UnicodeString jsonString = reader->ReadToEnd();
+
+				TJSONObject *jsonObject = (TJSONObject*) (TJSONObject::ParseJSONValue(jsonString));
+
+				if (jsonObject) {
+					return jsonObject;
+				}
+
+			} catch (const Exception &ex) {
+				ShowMessage("Error reading from file: " + path);
+			}
+		}
 	}
-	else {
-		return false;
-    }
+	__finally {
+		delete reader;
+	}
+
+	return nullptr;
 }
 
-
- TJSONObject* FileUtils::readJsonFromFile(const UnicodeString &relPath) {
+ void FileUtils::saveToJsonFile(const UnicodeString &relPath, const UnicodeString &jsonString) {
 
 	UnicodeString path = createAbsolutePath(relPath, true);
 
-	if (ExtractFileExt(path).Compare(".json") == 0 && FileExists(path))  {
+	TStreamWriter *writer = NULL;
+
+	try {
 
 		try {
 
-			TStreamReader *reader = new TStreamReader(path, TEncoding::UTF8);
+			writer = new TStreamWriter(path, false, TEncoding::UTF8, 1024);
+			writer->WriteLine(jsonString);
 
-			UnicodeString jsonString = reader->ReadToEnd();
-			delete reader;
+		}
+		catch (const Exception &ex)	{
 
-			TJSONObject *jsonObject = (TJSONObject*) (TJSONObject::ParseJSONValue(jsonString));
-
-			if (jsonObject) {
-				return jsonObject;
-			}
-
-		} catch (const Exception &ex) {
-			ShowMessage("Error reading file: " + path);
+			ShowMessage("Error writing to file: " + path);
 		}
 	}
+	__finally {
+		delete writer;
+	}
 
-	return NULL;
 }
 
- void FileUtils::saveJsonToFile(const UnicodeString &relPath, const UnicodeString &jsonString) {
 
-	UnicodeString path = createAbsolutePath(relPath, true);
+std::optional<UnicodeString> FileUtils::readFromTextFile(const UnicodeString &path) {
 
-	try {
-		TStreamWriter *writer = new TStreamWriter(path, false, TEncoding::UTF8, 1024);
+	UnicodeString fileContents;
 
-		writer->WriteLine(jsonString);
-		delete writer;
+	TStreamReader *reader = NULL;
 
-	}
-	catch (const Exception &ex)	{
+	if (FileExists(path))  {
 
-		ShowMessage("Error writing to file: " + path);
-	}
+		try {
+
+			try {
+
+				TStreamReader *reader = new TStreamReader(path, TEncoding::UTF8);
+				fileContents = reader->ReadToEnd();
+
+			}
+			catch (const Exception &ex)	{
+
+				ShowMessage("Error reading from file: " + path);
+			}
+		}
+		__finally
+		{
+			delete reader;
+		}
+
+   }
+
+   if (!fileContents.IsEmpty())  {
+        return fileContents;
+   }
+   else {
+		return std::nullopt;
+   }
 
 }

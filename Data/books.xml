@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+	<category name="fiction">
+		<genre name="drama">
+			<book>
+				<author>William Shakespeare</author>
+				<title>Romeo and Juliet</title>
+ 				<year>1597</year>
+				<paragraph>Tut, man, one fire burns out another's burning, One pain is lessen'd by another's anguish; Turn giddy, and be holp by backward turning; One desperate grief cures with another's languish: Take thou some new infection to thy eye, And the rank poison of the old will die.
+				</paragraph>
+			</book>
+		</genre>
+		<genre name="classic">
+			<book>
+				<author>George Orwell</author>
+				<title>1984</title>
+				<year>1949</year>
+				<paragraph>It was a bright cold day in April, and the clocks were striking thirteen. Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him.</paragraph>
+			</book>
+			<book>
+				<author>Harper Lee</author>
+				<title>To Kill a Mockingbird</title>
+				<year>1960</year>
+				<paragraph>We lived on the main residential street in town— Atticus, Jem and I, plus Calpurnia our cook. Jem and I found our father satisfactory: he played with us, read to us, and treated us with courteous detachment.</paragraph>
+			</book>
+		</genre>
+		<genre name="fantasy">
+			<book>
+				<author>J.R.R. Tolkien</author>
+				<title>The Hobbit</title>
+				<year>1937</year>
+				<paragraph>In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to eat: it was a hobbit-hole, and that means comfort.
+				</paragraph>
+			</book>
+		</genre>
+    	</category>
+	<category name="non-fiction">
+		<genre name="science">
+			<book>
+				<author>Stephen Hawking</author>
+				<title>A Brief History of Time</title>
+ 				<year>1988</year>
+				<paragraph>Most people would find the picture of our universe as an infinite tower of tortoises rather ridiculous, but why do we think we know better? What do we know about the universe, and how do we know it? Where did the universe come from, and where is it going? </paragraph>
+			</book>
+		</genre>
+		<genre name="philosophy">
+			<book>
+				<author>Martin Heidegger</author>
+				<title>Being and Time</title>
+				<year>1927</year>
+				<paragraph>Things at hand are always already understood in terms of a totality of relevance. This totality need not be explicitly grasped by a thematic interpretation. Even if it has undergone such an interpretation, it recedes again into an undifferentiated understanding.
+				</paragraph>
+			</book>
+		</genre>
+    </category>
+</library>

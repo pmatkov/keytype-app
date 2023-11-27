@@ -17,7 +17,7 @@ class TextUtils
 		static bool isUnicodeString(const UnicodeString &text);
 		static bool isEndChar(const wchar_t wchar);
 		static UnicodeString trimCharacters(const UnicodeString &text, wchar_t wch);
-		static std::vector<UnicodeString> splitLineIntoWords(const UnicodeString& line);
+		static std::vector<UnicodeString> splitTextIntoWords(const UnicodeString& line);
 		static UnicodeString formatJson(const UnicodeString& string);
 		static UnicodeString repeatChar(wchar_t wch, int count);
 };

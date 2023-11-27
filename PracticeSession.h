@@ -10,7 +10,7 @@ class PracticeSession {
 
 	private:
 		User user;
-		TextSource textsource;
+		TextSource textSource;
 		bool mistake;
 		int mistakesCount;
 		bool paused;
@@ -19,8 +19,8 @@ class PracticeSession {
 		const User& getUser() const;
 		void setUser(const User& _user);
 
-		const TextSource& getTextsource() const;
-		void setTextsource(const TextSource& _textsource);
+		const TextSource& getTextSource() const;
+		void setTextSource(const TextSource& _textSource);
 
 		void increaseCharIndex();
 		void decreaseCharIndex();

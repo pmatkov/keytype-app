@@ -14,19 +14,19 @@ bool Generator::seedInitialized = false;
 void Generator::InitializeRandomSeed() {
 
         if (!seedInitialized) {
-            srand(static_cast<unsigned>(time(NULL)));
+            srand(static_cast<unsigned>(time(nullptr)));
             seedInitialized = true;
         }
 	}
 
-UnicodeString Generator::generateText(UnicodeString letters, bool uppercase, bool numbers, bool punctuation, int maxChars) {
+UnicodeString Generator::generateText(UnicodeString letters, bool useUppercase, bool useNumbers, bool usePunctuation, int maxChars) {
 
 		int charCount = 0;
 		UnicodeString text;
 
 		while (charCount < maxChars) {
 
-			UnicodeString word = generateWord(letters, uppercase, numbers, punctuation) + ' ';
+			UnicodeString word = generateWord(letters, useUppercase, useNumbers, usePunctuation) + ' ';
 
 			charCount += word.Length();
 			text += word;
@@ -38,7 +38,7 @@ UnicodeString Generator::generateText(UnicodeString letters, bool uppercase, boo
 
 }
 
-UnicodeString Generator::generateWord(UnicodeString letters, bool useuppercase, bool usenumbers, bool usepunctuation) {
+UnicodeString Generator::generateWord(UnicodeString letters, bool useUppercase, bool useNumbers, bool usePunctuation) {
 
 		UnicodeString numbers = "0123456789";
 		UnicodeString punctuation = "!?/\\\"#$%&*=+',.:;-<>@^_()[]{}|";
@@ -47,7 +47,7 @@ UnicodeString Generator::generateWord(UnicodeString letters, bool useuppercase, 
 		const int MIN_CHARS = 1;
 		const int MAX_CHARS = 12;
 
-		if (letters.Length() || usenumbers || usepunctuation) {
+		if (letters.Length() || useNumbers || usePunctuation) {
 
 			UnicodeString word;
 			int wordLength = getRandomInt(MIN_CHARS, MAX_CHARS);
@@ -57,19 +57,19 @@ UnicodeString Generator::generateWord(UnicodeString letters, bool useuppercase, 
 				if (letters.Length()) {
 					characters += letters;
 				}
-				if (usenumbers) {
+				if (useNumbers) {
 					numbers = shuffleChars(numbers);
-					characters += numbers.SubString(1, letters.Length() || usepunctuation ? 0.3 * numbers.Length() : numbers.Length());
+					characters += numbers.SubString(1, letters.Length() || usePunctuation ? 0.3 * numbers.Length() : numbers.Length());
 				}
-				if (usepunctuation) {
+				if (usePunctuation) {
 					numbers = shuffleChars(characters);
-					characters += punctuation.SubString(1, letters.Length() || usenumbers ? 0.2 * punctuation.Length() : punctuation.Length());
+					characters += punctuation.SubString(1, letters.Length() || useNumbers ? 0.2 * punctuation.Length() : punctuation.Length());
 				}
 
 				characters = shuffleChars(characters);
 				int index = getRandomInt(1, characters.Length());
 
-				if (useuppercase && getRandomInt(0, 10) < 1) {
+				if (useUppercase && getRandomInt(0, 10) < 1) {
 					word += characters[index];
 				}
 				else {

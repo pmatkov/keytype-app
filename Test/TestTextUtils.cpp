@@ -20,7 +20,7 @@ class TTestTextUtils : public TTestCase
 		void __fastcall TestcountChars();
 		void __fastcall TestisEndChar();
 		void __fastcall TesttrimCharacters();
-		void __fastcall TestsplitLineIntoWords();
+		void __fastcall TestsplitTextIntoWords();
 		void __fastcall TestformatJson();
 		void __fastcall TestrepeatChar();
 
@@ -96,8 +96,8 @@ void __fastcall TTestTextUtils::TesttrimCharacters()
 	CheckEquals(UnicodeString("Fast & Furious"), result);
 }
 
-void __fastcall TTestTextUtils::TestsplitLineIntoWords() {
-	 std::vector<UnicodeString> result = TextUtils::splitLineIntoWords("Back to the future");
+void __fastcall TTestTextUtils::TestsplitTextIntoWords() {
+	 std::vector<UnicodeString> result = TextUtils::splitTextIntoWords("Back to the future");
 	 UnicodeString reference[] = {"Back", "to", "the", "future"};
 
 	 for (size_t i = 0; i < result.size();  i++) {
