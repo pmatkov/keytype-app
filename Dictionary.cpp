@@ -8,22 +8,20 @@
 #include "Dictionary.h"
 #include "FileUtils.h"
 #include "TextUtils.h"
-#include "WordInfo.h"
-
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 
-const std::map<UnicodeString, WordInfo>& Dictionary::getWords() const {
+const std::map<UnicodeString, DcWord>& Dictionary::getDictionary() const {
 
-    return words;
+    return dictionary;
 }
 
-std::optional<WordInfo> Dictionary::getWordInfo(const UnicodeString &key) {
+std::optional<DcWord> Dictionary::getWord(const UnicodeString &key) {
 
-   std::map<UnicodeString, WordInfo>::iterator it = words.find(key);
+   std::map<UnicodeString, DcWord>::iterator it = dictionary.find(key);
 
-	if (it != words.end()) {
+	if (it != dictionary.end()) {
 		return it->second;
 	} else {
 		return std::nullopt;
@@ -31,28 +29,28 @@ std::optional<WordInfo> Dictionary::getWordInfo(const UnicodeString &key) {
 
 }
 
-void Dictionary::setWordInfo(UnicodeString key, WordInfo value) {
-	words[key] = value;
+void Dictionary::setWord(UnicodeString key, DcWord value) {
+	dictionary[key] = value;
 }
 
-void Dictionary::deleteWordInfo(const UnicodeString &key) {
+void Dictionary::deleteWord(const UnicodeString &key) {
 
-	std::map<UnicodeString, WordInfo>::iterator it = words.find(key);
+	std::map<UnicodeString, DcWord>::iterator it = dictionary.find(key);
 
-	if (it != words.end()) {
-		words.erase(it);
+	if (it != dictionary.end()) {
+		dictionary.erase(it);
 	}
 }
 
 
-void Dictionary::parseJsontoWordInfo(const UnicodeString &relPath) {
+void Dictionary::parseJsonToDictionary(const UnicodeString &path) {
 
 	TJSONObject *mainObject, *wordObject;
 	TJSONArray *dictionaryObject, *synonymsObject;
 
 	try {
 
-		mainObject = (TJSONObject*) FileUtils::readFromJsonFile(relPath);
+		mainObject = (TJSONObject*) FileUtils::readFromJsonFile(path);
 		try {
 
 			if (mainObject) {
@@ -86,7 +84,7 @@ void Dictionary::parseJsontoWordInfo(const UnicodeString &relPath) {
 								}
 							}
 
-							words[word] = WordInfo(word, WordInfo::stringToWordCategory(category), definition, synonyms);
+							dictionary[word] = DcWord(word, DcWord::stringToWordCategory(category), definition, synonyms);
 
 						}
 					}
@@ -105,11 +103,11 @@ void Dictionary::parseJsontoWordInfo(const UnicodeString &relPath) {
 }
 
 
-std::optional<UnicodeString> Dictionary::generateJsonFromWordInfo(const std::map<UnicodeString, WordInfo> &words) {
+std::optional<UnicodeString> Dictionary::generateJsonFromDictionary(const std::map<UnicodeString, DcWord> &dictionary) {
 
 	UnicodeString result = "";
 
-	if (words.size() > 0) {
+	if (dictionary.size() > 0) {
 
 		TJSONObject *mainObject, *wordObject;
 		TJSONArray *dictionaryObject, *synonymsObject;
@@ -123,10 +121,10 @@ std::optional<UnicodeString> Dictionary::generateJsonFromWordInfo(const std::map
 
 				mainObject->AddPair("dictionary", dictionaryObject);
 
-				for (const std::pair<const UnicodeString, WordInfo>& keyValue : words) {
+				for (const std::pair<const UnicodeString, DcWord>& keyValue : dictionary) {
 
 					UnicodeString word = keyValue.second.getWord();
-					UnicodeString category = WordInfo::wordCategoryToString(keyValue.second.getWordCategory());
+					UnicodeString category = DcWord::wordCategoryToString(keyValue.second.getWordCategory());
 					UnicodeString definition = keyValue.second.getDefinition();
 
 					wordObject = new TJSONObject();

@@ -3,6 +3,8 @@ object FrOptions: TFrOptions
   Top = 0
   Width = 102
   Height = 168
+  DoubleBuffered = False
+  ParentDoubleBuffered = False
   TabOrder = 0
   object BtOptions: TButton
     Left = 10

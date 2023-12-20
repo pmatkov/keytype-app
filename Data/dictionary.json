@@ -1,4 +1,4 @@
-{
+﻿{
     "dictionary": [
         {
             "word": "home",
@@ -7,6 +7,14 @@
             "synonyms": [
                 "residence",
                 "house"
+            ]
+        },
+        {
+            "word": "one",
+            "category": "noun",
+            "definition": "first number",
+            "synonyms": [
+                "uno"
             ]
         },
         {

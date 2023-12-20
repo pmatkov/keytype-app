@@ -129,6 +129,19 @@
             <DependentOn>Books.h</DependentOn>
             <BuildOrder>18</BuildOrder>
         </CppCompile>
+        <CppCompile Include="CustomTextFrame.cpp">
+            <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
+            <Form>FrCustomText</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+            <DependentOn>CustomTextFrame.h</DependentOn>
+            <BuildOrder>29</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="DcWord.cpp">
+            <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
+            <DependentOn>DcWord.h</DependentOn>
+            <BuildOrder>14</BuildOrder>
+        </CppCompile>
         <CppCompile Include="Dictionary.cpp">
             <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
             <DependentOn>Dictionary.h</DependentOn>
@@ -139,10 +152,26 @@
             <DependentOn>EFileSizeExceededException.h</DependentOn>
             <BuildOrder>17</BuildOrder>
         </CppCompile>
+        <CppCompile Include="ExternalSourcesFrame.cpp">
+            <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
+            <Form>FrExternalSources</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+            <DependentOn>ExternalSourcesFrame.h</DependentOn>
+            <BuildOrder>28</BuildOrder>
+        </CppCompile>
         <CppCompile Include="FileUtils.cpp">
             <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
             <DependentOn>FileUtils.h</DependentOn>
             <BuildOrder>16</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="GeneratedTextFrame.cpp">
+            <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
+            <Form>FrGeneratedText</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+            <DependentOn>GeneratedTextFrame.h</DependentOn>
+            <BuildOrder>27</BuildOrder>
         </CppCompile>
         <CppCompile Include="Generator.cpp">
             <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
@@ -182,25 +211,47 @@
             <BuildOrder>21</BuildOrder>
         </CppCompile>
         <CppCompile Include="MainForm.cpp">
-            <VirtualFolder>{E8DD405D-5871-4098-BE73-2A4F48743690}</VirtualFolder>
+            <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
             <Form>FMain</Form>
             <FormType>dfm</FormType>
             <DependentOn>MainForm.h</DependentOn>
             <BuildOrder>2</BuildOrder>
         </CppCompile>
+        <CppCompile Include="MainFrame.cpp">
+            <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
+            <Form>FrMain</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+            <DependentOn>MainFrame.h</DependentOn>
+            <BuildOrder>26</BuildOrder>
+        </CppCompile>
         <CppCompile Include="OptionsFrame.cpp">
+            <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
             <Form>FrOptions</Form>
             <FormType>dfm</FormType>
             <DesignClass>TFrame</DesignClass>
             <DependentOn>OptionsFrame.h</DependentOn>
             <BuildOrder>11</BuildOrder>
         </CppCompile>
+        <CppCompile Include="PracticeController.cpp">
+            <VirtualFolder>{115C58ED-C312-4616-8029-4DD0683F7389}</VirtualFolder>
+            <DependentOn>PracticeController.h</DependentOn>
+            <BuildOrder>24</BuildOrder>
+        </CppCompile>
         <CppCompile Include="PracticeForm.cpp">
-            <VirtualFolder>{E8DD405D-5871-4098-BE73-2A4F48743690}</VirtualFolder>
+            <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
             <Form>FPractice</Form>
             <FormType>dfm</FormType>
             <DependentOn>PracticeForm.h</DependentOn>
             <BuildOrder>12</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="PracticeFrame.cpp">
+            <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
+            <Form>FrPractice</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+            <DependentOn>PracticeFrame.h</DependentOn>
+            <BuildOrder>25</BuildOrder>
         </CppCompile>
         <CppCompile Include="PracticeSession.cpp">
             <VirtualFolder>{893884F7-72F0-483F-8A49-6A63980DD6D7}</VirtualFolder>
@@ -222,6 +273,11 @@
             <DependentOn>TextUtils.h</DependentOn>
             <BuildOrder>3</BuildOrder>
         </CppCompile>
+        <CppCompile Include="UIUtils.cpp">
+            <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
+            <DependentOn>UIUtils.h</DependentOn>
+            <BuildOrder>24</BuildOrder>
+        </CppCompile>
         <CppCompile Include="User.cpp">
             <VirtualFolder>{8A6B665F-CE5E-4CF4-AB4C-BBAA85BE5583}</VirtualFolder>
             <DependentOn>User.h</DependentOn>
@@ -232,19 +288,19 @@
             <DependentOn>UserStatistics.h</DependentOn>
             <BuildOrder>19</BuildOrder>
         </CppCompile>
-        <CppCompile Include="WordInfo.cpp">
-            <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
-            <DependentOn>WordInfo.h</DependentOn>
-            <BuildOrder>14</BuildOrder>
-        </CppCompile>
         <CppCompile Include="WordList.cpp">
             <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
             <DependentOn>WordList.h</DependentOn>
             <BuildOrder>13</BuildOrder>
         </CppCompile>
         <FormResources Include="PracticeForm.dfm"/>
+        <FormResources Include="PracticeFrame.dfm"/>
         <FormResources Include="OptionsFrame.dfm"/>
         <FormResources Include="MainForm.dfm"/>
+        <FormResources Include="MainFrame.dfm"/>
+        <FormResources Include="ExternalSourcesFrame.dfm"/>
+        <FormResources Include="CustomTextFrame.dfm"/>
+        <FormResources Include="GeneratedTextFrame.dfm"/>
         <FormResources Include="LoginForm.dfm"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
@@ -274,12 +330,18 @@
                 </Source>
                 <Folders/>
                 <VFOLDERS>
+                    <VFOLDER ID="{115C58ED-C312-4616-8029-4DD0683F7389}" name="Controller"/>
                     <VFOLDER ID="{C9B9CF94-D644-46A8-AFE2-4CDDCCC37F87}" name="Exceptions"/>
-                    <VFOLDER ID="{E8DD405D-5871-4098-BE73-2A4F48743690}" name="Forms"/>
+                    <VFOLDER ID="{E8DD405D-5871-4098-BE73-2A4F48743690}" name="Forms">
+                        <VFOLDER ID="{84360D3D-4874-46E9-88EE-445E3FC0314D}" name="MainForm"/>
+                        <VFOLDER ID="{78CB0057-7BC4-4B83-9609-C573EB0EAF04}" name="PracticeForm"/>
+                    </VFOLDER>
+                    <VFOLDER ID="{644326D8-FF3A-4F14-A710-3BE627353D14}" name="Model"/>
                     <VFOLDER ID="{893884F7-72F0-483F-8A49-6A63980DD6D7}" name="Session"/>
                     <VFOLDER ID="{4BAA1710-5749-48D2-B3F3-197353059E4E}" name="Sources"/>
                     <VFOLDER ID="{8A6B665F-CE5E-4CF4-AB4C-BBAA85BE5583}" name="User"/>
                     <VFOLDER ID="{CE54C44E-A3BA-434A-8509-1E40452898D3}" name="Utils"/>
+                    <VFOLDER ID="{BC1B8C4E-423A-4C53-AF96-070775427DB8}" name="View"/>
                 </VFOLDERS>
                 <Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\bcboffice2k280.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>

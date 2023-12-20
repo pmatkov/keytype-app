@@ -191,3 +191,18 @@ UnicodeString TextUtils::repeatChar(wchar_t wch, int count) {
 	}
 	return result;
 }
+
+
+int TextUtils::findString(const std::vector<UnicodeString> &vec, const UnicodeString &string) {
+
+    std::vector<UnicodeString>::const_iterator it = std::find(vec.begin(), vec.end(), string);
+
+
+    if (it != vec.end())  {
+        return it - vec.begin();
+    }
+    else {
+        return -1;
+    }
+}
+

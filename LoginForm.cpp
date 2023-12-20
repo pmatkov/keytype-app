@@ -10,11 +10,7 @@
 #pragma resource "*.dfm"
 TFLogin *FLogin;
 //---------------------------------------------------------------------------
-__fastcall TFLogin::TFLogin(TComponent* Owner)
-	: TForm(Owner)
-{
-
-}
+__fastcall TFLogin::TFLogin(TComponent* Owner) : TForm(Owner)  {}
 
 //
 //__fastcall TFLogin::TFLogin(SessionModule *_sessionModule): loginManager(_sessionModule) {}
@@ -22,8 +18,8 @@ __fastcall TFLogin::TFLogin(TComponent* Owner)
 void TFLogin::setSessionModule(SessionModule *_sessionModule) {
 
 	if (_sessionModule) {
-	   sessionModule = _sessionModule;
 
+	   sessionModule = _sessionModule;
 	   loginManager.setSessionModule(sessionModule);
 	}
 

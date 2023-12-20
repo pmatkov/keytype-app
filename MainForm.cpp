@@ -1,142 +1,67 @@
 //---------------------------------------------------------------------------
 
-#include <vcl.h>
 #include <System.UITypes.hpp>
 
 #include "MainForm.h"
-#include "PracticeForm.h"
-#include "Generator.h"
+#include "UIUtils.h"
 
-#define LETTERS 26
 #define SPACE 0x20
 
 //---------------------------------------------------------------------------
 #pragma hdrstop
 #pragma package(smart_init)
 #pragma link "OptionsFrame"
-#pragma link "OptionsFrame"
+#pragma link "MainFrame"
+#pragma link "PracticeFrame"
 #pragma resource "*.dfm"
 
 TFMain *FMain;
 
 __fastcall TFMain::TFMain(TComponent* Owner) : TForm(Owner) {
 
-//	iocontrol = std::make_unique<IOControl>();
-//	session = std::make_unique<PracticeSession>();
+	UIUtils::createFrame<TFrMain>(FrMain, this);
+	UIUtils::createFrame<TFrPractice>(FrPractice, this);
 
-	RichEditHandle = RETextBox->Handle;
-	SetWindowSubclass(RichEditHandle, &RichEditSubclass, 1, reinterpret_cast<DWORD_PTR>(this));
+	UIUtils::setFrameVisibility<TFrMain>(FrMain, true);
+	UIUtils::setFrameVisibility<TFrPractice>(FrPractice, false);
+
+	REHandle = FrPractice->RETextBox->Handle;
+	SetWindowSubclass(REHandle, &RESubclass, 1, reinterpret_cast<DWORD_PTR>(this));
 
 }
-
 
 void TFMain::setSessionModule(SessionModule *_sessionModule) {
 
 	if (_sessionModule) {
 	   sessionModule = _sessionModule;
-       	this->setStatusInfo(Initial);
+       FrPractice->setStatusInfo(Initial);
 	}
 
 }
 
+SessionModule * TFMain::getSessionModule() {
 
-void TFMain::setCharStyle(TRichEdit* richEdit, int charIndex, TFontStyle style, bool status) {
-
-	if (charIndex >= 0 && charIndex < richEdit->Text.Length()) {
-
-		richEdit->SelStart = charIndex;
-		richEdit->SelLength = 1;
-
-		if (status) 
-			richEdit->SelAttributes->Style = richEdit->SelAttributes->Style << style;
-		else
-		  richEdit->SelAttributes->Style = richEdit->SelAttributes->Style >> style;
-	}
-}
-
-void TFMain::setCharColor(TRichEdit* richEdit, int charIndex, TColor textColor) {
-
-	if (charIndex >= 0 && charIndex < richEdit->Text.Length()) {
-
-		richEdit->SelStart = charIndex;
-		richEdit->SelLength = 1;
-		richEdit->SelAttributes->Color = textColor;
-	}
-}
-
-void TFMain::setTextColor(TRichEdit* richEdit, TColor textColor) {
-
-	richEdit->SelStart = 0;
-	richEdit->SelLength = richEdit->Text.Length();
-	richEdit->SelAttributes->Color = textColor;
+    return sessionModule;
 }
 
 
-void TFMain::setStatusInfo(StartControl status)  {
+void __fastcall TFMain::WndProc(Messages::TMessage &Message) {
 
-	switch (status) {
-
-		case Initial: {
-			RETextBox->Lines->Add(sessionModule->getSession()->getTextSource().getText());
-			RETextBox->Paragraph->Alignment = taCenter;
-			setTextColor(RETextBox, clSilver);
-			LStart->Caption = "Press space bar to start the practice";
-			break;
-
-		}
-		case Start: {
-			LStart->Visible = false;
-			setTextColor(RETextBox, clBlack);
-			setCharStyle(RETextBox, 0, fsUnderline, true);
-			break;
-
-		}
-		case Restart: {
-			RETextBox->Lines->Clear();
-			RETextBox->Lines->Add(sessionModule->getSession()->getTextSource().getText());
-			LStart->Visible = true;
-			setTextColor(RETextBox, clSilver);
-			LStart->Caption = "Press space bar to start the practice";
-			break;
-
-		}
-		case Resume: {
-			LStart->Visible = false;
-			setTextColor(RETextBox, clBlack);
-			break;
-
-		}
-		case Pause: {
-			LStart->Visible = true;
-			setTextColor(RETextBox, clSilver);
-			LStart->Caption = "Press space bar to resume the practice";
-			break;
-
-		}
-
-	}
-
-}
-
-//---------------------------------------------------------------------------
-
-void __fastcall TFMain::WndProc(Messages::TMessage &message) {
-
-	switch (message.Msg) {
+	switch (Message.Msg) {
 
 		case WM_CHAR: {
 
-			wchar_t wch = sessionModule->getIOControl()->getChar(message.WParam);
+			wchar_t wch = sessionModule->getIOControl()->getChar(Message.WParam);
 
 			if (wch == SPACE && !sessionModule->getIOControl()->isBufferingEnabled()) {
 
 				if (sessionModule->getSession()->isPaused()) {
 
 					sessionModule->getSession()->setPaused(false);
-					this->setStatusInfo(Resume);
+					FrPractice->setStatusInfo(Resume);
 				}
 				else {
-					this->setStatusInfo(Start);
+					FrPractice->setStatusInfo(Start);
 				}
 
 				sessionModule->getIOControl()->setBufferingEnabled(true);
@@ -145,24 +70,24 @@ void __fastcall TFMain::WndProc(Messages::TMessage &message) {
 
 				if (wch == sessionModule->getSession()->getTextSource().getCurrentChar()) {
 
-					setCharStyle(RETextBox, sessionModule->getSession()->getTextSource().getCharIndex()-1, fsUnderline, false);
+					UIUtils::setCharStyle(FrPractice->RETextBox, sessionModule->getSession()->getTextSource().getCharIndex()-1, fsUnderline, false);
 
 					if (sessionModule->getSession()->isMistake()) {
-						setCharColor(RETextBox, sessionModule->getSession()->getTextSource().getCharIndex()-1, clRed);
+						UIUtils::setCharColor(FrPractice->RETextBox, sessionModule->getSession()->getTextSource().getCharIndex()-1, clRed);
 						sessionModule->getSession()->setMistake(false);
 					}
 					else  {
-						setCharColor(RETextBox, sessionModule->getSession()->getTextSource().getCharIndex()-1, clSilver);
+						UIUtils::setCharColor(FrPractice->RETextBox, sessionModule->getSession()->getTextSource().getCharIndex()-1, clSilver);
 					}
 
 					sessionModule->getSession()->increaseCharIndex();
 
-					setCharStyle(RETextBox, sessionModule->getSession()->getTextSource().getCharIndex()-1, fsUnderline, true);
+					UIUtils::setCharStyle(FrPractice->RETextBox, sessionModule->getSession()->getTextSource().getCharIndex()-1, fsUnderline, true);
 				}
 				else {
 					sessionModule->getSession()->setMistake(true);
-					setCharStyle(RETextBox, sessionModule->getSession()->getTextSource().getCharIndex()-1, fsUnderline, false);
-					setCharColor(RETextBox, sessionModule->getSession()->getTextSource().getCharIndex()-1, clRed);
+					UIUtils::setCharStyle(FrPractice->RETextBox, sessionModule->getSession()->getTextSource().getCharIndex()-1, fsUnderline, false);
+					UIUtils::setCharColor(FrPractice->RETextBox, sessionModule->getSession()->getTextSource().getCharIndex()-1, clRed);
 
 				}
 
@@ -171,86 +96,16 @@ void __fastcall TFMain::WndProc(Messages::TMessage &message) {
 		break;
 
 		default: {
-			TForm::WndProc(message);
+			TForm::WndProc(Message);
 		}
 	}
 
 }
 
 
-void __fastcall TFMain::BtOptionsButtonClick(TObject *Sender)
-{
-//	TFPractice *practiceform = new TFPractice(this);
+// prebaciti u frame???
 
-	sessionModule->getIOControl()->setBufferingEnabled(false);
-
-	if (FPractice->ShowModal() == mrOk) {
-
-		int index = FPractice->PCSourceText->ActivePageIndex;
-		TTabSheet* activeTab = FPractice->PCSourceText->Pages[index];
-
-		if (activeTab) {
-
-			switch (index) {
-
-				case 0: {
-
-					TRadioGroup* radiogroup = FPractice->RGGeneratedText;
-
-					if (radiogroup && radiogroup->ItemIndex == 0) {
-
-						UnicodeString letters = L"";
-
-						std::vector<TToolButton*> buttons = FPractice->getButtons();
-
-						for (int i = 0; i < buttons.size(); i++) {
-
-							TToolButton* button = buttons[i];
-
-							if (button && button->Down) {
-								 letters += UnicodeString(button->Caption);
-							}
-						}
-
-						bool uppercase = FPractice->CBCapitalLetters->Checked;
-						bool numbers = FPractice->CBNumbers->Checked;
-						bool punctuation = FPractice->CBPunctuation->Checked;
-
-						if (letters.Length() > 0 || numbers || punctuation) {
-
-							 UnicodeString newText = Generator::generateText(letters, uppercase, numbers, punctuation, 128);
-							 sessionModule->getSession()->setTextSource(TextSource(newText));
-							 this->setStatusInfo(Restart);
-
-						}
-
-					}
-					else {
-
-
-					}
-
-                }
-
-			default:
-				;
-			}
-
-		}
-	}
-	else {
-		sessionModule->getSession()->setPaused(true);
-		this->setStatusInfo(Pause);
-    }
-
-//	delete practiceform;
-
-	this->ActiveControl = nullptr;
-
-}
-//---------------------------------------------------------------------------
-
-LRESULT CALLBACK TFMain::RichEditSubclass(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam, UINT_PTR uIdSubclass, DWORD_PTR dwRefData)
+LRESULT CALLBACK TFMain::RESubclass(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam, UINT_PTR uIdSubclass, DWORD_PTR dwRefData)
 {
 
 	switch (msg) {
@@ -277,3 +132,11 @@ LRESULT CALLBACK TFMain::RichEditSubclass(HWND hwnd, UINT msg, WPARAM wParam, LP
 
 	return 0;
 }
+
+void __fastcall TFMain::MenuSubitemPracticeNewClick(TObject *Sender)
+{
+	UIUtils::switchFrames<TFrMain, TFrPractice>(FrMain, FrPractice);
+
+}
+//---------------------------------------------------------------------------
+

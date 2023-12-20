@@ -23,7 +23,7 @@ class IOControl
 		wchar_t getChar(WPARAM wParam);
 
 		void appendChar(wchar_t &wch);
-		void deleteLastChar();
+		void deleteChar();
 
 
 };

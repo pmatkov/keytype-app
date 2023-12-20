@@ -11,55 +11,49 @@
 #pragma hdrstop
 #pragma package(smart_init)
 
-UnicodeString FileUtils::createAbsolutePath(const UnicodeString& relPath, bool isfile) {
+UnicodeString FileUtils::getAbsolutePath(const UnicodeString& relPath, bool isFile) {
 
-	UnicodeString path = "";
 	UnicodeString exePath = ExtractFilePath(Application->ExeName);
-	int dirPosition = exePath.Pos(PROJECT_DIR);
+	int pos = exePath.Pos(PROJECT_DIR);
 	int len = sizeof(PROJECT_DIR) - 1;
 
-	UnicodeString projectPath = exePath.Delete(dirPosition + len + 1, exePath.Length() - dirPosition + 1);
+	UnicodeString projectDirPath = exePath.Delete(pos + len + 1, exePath.Length() - pos + 1);
+	UnicodeString absPath = projectDirPath + relPath;
 
-	path += projectPath + relPath;
-
-	if (!isfile) {
-		path += "\\";
-	}
-
-	return path;
+    return isFile ? absPath : absPath + "\\";
 }
 
 UnicodeString FileUtils::traverseUpDirTree(const UnicodeString& path, int level) {
 
-	UnicodeString pathCopy = path;
-
-	wchar_t delimiter = L'\\';
-	int i = pathCopy.Length();
+	int pos = path.Length();
 	bool active = false;
 
-	while (i > 1 && level) {
+	while (pos > 1 && level) {
 
-		if (!active && isalpha(pathCopy[i])) {
+		if (!active && isalpha(path[pos])) {
 			active = true;
 		}
-		if (active && pathCopy[i] == delimiter) {
+		if (active && path[pos] == L'\\') {
 			level--;
 		}
 		if (level) {
-			i--;
+			pos--;
 		}
 	}
 
+    UnicodeString newPath = path;
+
 	if (!level) {
-		  pathCopy.Delete(i + 1, pathCopy.Length() - i);
+    	newPath.Delete(pos + 1, path.Length() - pos);
 	}
 
-	return pathCopy;
+	return newPath;
 
 }
 
 
-std::optional<std::vector<UnicodeString>> FileUtils::getFileNamesInDir(const UnicodeString &path) {
+std::optional<std::vector<UnicodeString>> FileUtils::getFileNames(const UnicodeString &path) {
+
 
 	if (TDirectory::Exists(path)) {
 
@@ -86,116 +80,95 @@ std::optional<std::vector<UnicodeString>> FileUtils::getFileNamesInDir(const Uni
 	}
 
 	return std::nullopt;
-
 }
 
-// izbaciti?
-void FileUtils::checkFileSize(const UnicodeString& path) {
 
-	 if (FileExists(path)) {
+ TJSONObject* FileUtils::readFromJsonFile(const UnicodeString &path) {
 
-		int size = TFile::GetSize(path);
+    std::unique_ptr<TStreamReader> reader;
 
-		if (size > MAX_FILE_SIZE) {
-			throw EFileSizeExceededException(size, MAX_FILE_SIZE);
-		}
+    if (ExtractFileExt(path).Compare(".json") == 0 && FileExists(path))  {
+
+        try {
+
+            reader = std::make_unique<TStreamReader>(path, TEncoding::UTF8);
+            UnicodeString jsonString = reader->ReadToEnd();
+
+            TJSONObject *jsonObject = (TJSONObject*) (TJSONObject::ParseJSONValue(jsonString));
+
+            if (jsonObject) {
+                return jsonObject;
+            }
+
+        } catch (const Exception &ex) {
+            ShowMessage("Error reading from file: " + path);
+        }
     }
-
-}
-
-
- TJSONObject* FileUtils::readFromJsonFile(const UnicodeString &relPath) {
-
-	UnicodeString path = createAbsolutePath(relPath, true);
-
-	TStreamReader *reader = NULL;
-
-	try {
-
-		if (ExtractFileExt(path).Compare(".json") == 0 && FileExists(path))  {
-
-			try {
-
-				reader = new TStreamReader(path, TEncoding::UTF8);
-				UnicodeString jsonString = reader->ReadToEnd();
-
-				TJSONObject *jsonObject = (TJSONObject*) (TJSONObject::ParseJSONValue(jsonString));
-
-				if (jsonObject) {
-					return jsonObject;
-				}
-
-			} catch (const Exception &ex) {
-				ShowMessage("Error reading from file: " + path);
-			}
-		}
-	}
-	__finally {
-		delete reader;
-	}
 
 	return nullptr;
 }
 
- void FileUtils::saveToJsonFile(const UnicodeString &relPath, const UnicodeString &jsonString) {
+ void FileUtils::saveToJsonFile(const UnicodeString &path, const UnicodeString &string) {
 
-	UnicodeString path = createAbsolutePath(relPath, true);
+	std::unique_ptr<TStreamWriter> writer;
 
-	TStreamWriter *writer = NULL;
+    try {
 
-	try {
+        writer = std::make_unique<TStreamWriter>(path, false, TEncoding::UTF8, 1024);
+        writer->WriteLine(string);
 
-		try {
-
-			writer = new TStreamWriter(path, false, TEncoding::UTF8, 1024);
-			writer->WriteLine(jsonString);
-
-		}
-		catch (const Exception &ex)	{
-
-			ShowMessage("Error writing to file: " + path);
-		}
-	}
-	__finally {
-		delete writer;
-	}
+    }
+    catch (const Exception &ex)	{
+        ShowMessage("Error writing to file: " + path);
+    }
 
 }
 
 
 std::optional<UnicodeString> FileUtils::readFromTextFile(const UnicodeString &path) {
 
-	UnicodeString fileContents;
+	UnicodeString filecontents;
 
-	TStreamReader *reader = NULL;
+	std::unique_ptr<TStreamReader> reader;
 
 	if (FileExists(path))  {
 
-		try {
+        try {
 
-			try {
+            reader = std::make_unique<TStreamReader>(path, TEncoding::UTF8);
+            filecontents = reader->ReadToEnd();
 
-				TStreamReader *reader = new TStreamReader(path, TEncoding::UTF8);
-				fileContents = reader->ReadToEnd();
+        }
+        catch (const Exception &ex)	{
 
-			}
-			catch (const Exception &ex)	{
-
-				ShowMessage("Error reading from file: " + path);
-			}
-		}
-		__finally
-		{
-			delete reader;
-		}
-
+            ShowMessage("Error reading from file: " + path);
+        }
    }
 
-   if (!fileContents.IsEmpty())  {
-        return fileContents;
+   if (!filecontents.IsEmpty())  {
+        return filecontents;
    }
    else {
 		return std::nullopt;
    }
+
+}
+
+void FileUtils::saveToTextFile(const UnicodeString &path, const std::vector<UnicodeString> &list) {
+
+	std::unique_ptr<TStreamWriter> writer;
+
+    try {
+
+        writer = std::make_unique<TStreamWriter>(path, false, TEncoding::UTF8, 1024);
+
+        for (const UnicodeString &string: list){
+            writer->WriteLine(string);
+        }
+    }
+    catch (const Exception &ex)	{
+
+        ShowMessage("Error writing to file: " + path);
+    }
 
 }

@@ -10,24 +10,24 @@
 #include<map>
 
 #include "LanguageProfile.h"
-#include "WordInfo.h"
+#include "DcWord.h"
 
 //---------------------------------------------------------------------------
 
 class Dictionary {
 
 	private:
-		std::map<UnicodeString, WordInfo> words;
+		std::map<UnicodeString, DcWord> dictionary;
 		LanguageProfile language;
 		int wordCount;
 
 	public:
-		const std::map<UnicodeString, WordInfo>& getWords() const;
-		std::optional<WordInfo> getWordInfo(const UnicodeString &key);
-		void setWordInfo(UnicodeString key, WordInfo value);
-        void deleteWordInfo(const UnicodeString &key);
-		void parseJsontoWordInfo(const UnicodeString &relPath);
+		const std::map<UnicodeString, DcWord>& getDictionary() const;
+		std::optional<DcWord> getWord(const UnicodeString &key);
+		void setWord(UnicodeString key, DcWord value);
+        void deleteWord(const UnicodeString &key);
 
-		static std::optional<UnicodeString> generateJsonFromWordInfo(const std::map<UnicodeString, WordInfo> &words);
+		void parseJsonToDictionary(const UnicodeString &path);
+		static std::optional<UnicodeString> generateJsonFromDictionary(const std::map<UnicodeString, DcWord> &dictionary);
 };
 #endif

@@ -12,54 +12,46 @@
 #include <Vcl.ToolWin.hpp>
 #include <System.Actions.hpp>
 #include <Vcl.PlatformDefaultStyleActnCtrls.hpp>
-#include "OptionsFrame.h"
+#include <Vcl.Menus.hpp>
+#include <vcl.h>
+
 #include <memory>
 #include <vector>
 #include <windows.h>
 
-//#include "IOControl.h"
-//#include "PracticeSession.h"
 #include "SessionModule.h"
 #include "OptionsFrame.h"
+#include "PracticeFrame.h"
+#include "MainFrame.h"
 
 //---------------------------------------------------------------------------
 
-//class PracticeController;
-
-enum StartControl {
-	Initial,
-	Start,
-	Restart,
-	Resume,
-    Pause
-};
 
 class TFMain : public TForm
 {
 __published:	// IDE-managed Components
-	TRichEdit *RETextBox;
-	TLabel *LStart;
-	TFrOptions *FrOptions;
-	void __fastcall BtOptionsButtonClick(TObject *Sender);
+	TMainMenu *MainMenu;
+	TMenuItem *MenuSubitemPracticeNew;
+	void __fastcall MenuSubitemPracticeNewClick(TObject *Sender);
 
 private:	// User declarations
 //	std::unique_ptr<IOControl> iocontrol;
 //	std::unique_ptr<PracticeSession> session;
-	HWND RichEditHandle;
+
+	std::unique_ptr<TFrMain> FrMain;
+	std::unique_ptr<TFrPractice> FrPractice;
+	HWND REHandle;
 	SessionModule *sessionModule;
 
 public:		// User declarations
+
 	__fastcall TFMain(TComponent* Owner);
 
 	void setSessionModule(SessionModule *_sessionModule);
-
-	void setCharStyle(TRichEdit* richEdit, int charIndex, TFontStyle style, bool status);
-	void setCharColor(TRichEdit* richEdit, int charIndex, TColor textColor);
-	void setTextColor(TRichEdit* richEdit, TColor textColor);
-	void setStatusInfo(StartControl status);
+    SessionModule* getSessionModule();
 
 	virtual void __fastcall WndProc(TMessage &Message);
-	static LRESULT CALLBACK RichEditSubclass(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam, UINT_PTR uIdSubclass, DWORD_PTR dwRefData);
+	static LRESULT CALLBACK RESubclass(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam, UINT_PTR uIdSubclass, DWORD_PTR dwRefData);
 
 };
 

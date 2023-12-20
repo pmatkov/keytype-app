@@ -2,31 +2,31 @@
 
 #pragma hdrstop
 
-#include "WordInfo.h"
+#include "Word.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 
-WordInfo::WordInfo(){}
-WordInfo::WordInfo(UnicodeString _word, WordCategory _category, UnicodeString _definition, std::vector<UnicodeString> _synonyms)
+Word::Word(){}
+Word::Word(UnicodeString _word, WordCategory _category, UnicodeString _definition, std::vector<UnicodeString> _synonyms)
 		: word(_word), category(_category), definition(_definition), synonyms(_synonyms) {}
 
-const UnicodeString& WordInfo::getWord() const {
+const UnicodeString& Word::getWord() const {
 	   return word;
 }
 
-const WordCategory& WordInfo::getWordCategory() const {
+const WordCategory& Word::getWordCategory() const {
 	   return category;
 }
 
-const UnicodeString& WordInfo::getDefinition() const {
+const UnicodeString& Word::getDefinition() const {
 	   return definition;
 }
 
-const std::vector<UnicodeString>& WordInfo::getSynonyms() const {
+const std::vector<UnicodeString>& Word::getSynonyms() const {
       return synonyms;
 }
 
-UnicodeString WordInfo::getSynonymsAsString() const {
+UnicodeString Word::getSynonymsAsString() const {
 
 	UnicodeString synonymsString = "";
 
@@ -40,7 +40,7 @@ UnicodeString WordInfo::getSynonymsAsString() const {
 }
 
 
-WordCategory WordInfo::stringToWordCategory(const UnicodeString &word) {
+WordCategory Word::stringToWordCategory(const UnicodeString &word) {
 
 	std::vector<UnicodeString>::iterator it = std::find(enumStrings.begin(), enumStrings.end(), word);
 
@@ -51,7 +51,7 @@ WordCategory WordInfo::stringToWordCategory(const UnicodeString &word) {
 		return Unknown;
 }
 
-UnicodeString WordInfo::wordCategoryToString(WordCategory category) {
+UnicodeString Word::wordCategoryToString(WordCategory category) {
 
 	if (static_cast<int>(category) < enumStrings.size()	) {
 		return enumStrings[static_cast<int>(category)];
@@ -60,4 +60,17 @@ UnicodeString WordInfo::wordCategoryToString(WordCategory category) {
 		return "unkown";
 }
 
- std::vector<UnicodeString> WordInfo::enumStrings = {"noun", "verb", "adverb", "adjective", "pronoun"};
+std::vector<UnicodeString> Word::getWordCategoriesAsStrings() {
+
+	std::vector<UnicodeString> categories;
+
+	int count = static_cast<int> (WordCategory::Count);
+
+    for (int i = 0; i < count; i++) {
+    	categories.push_back(wordCategoryToString(static_cast<WordCategory>(i)));
+    }
+
+    return categories;
+}
+
+std::vector<UnicodeString> Word::enumStrings = {"noun", "verb", "adverb", "adjective", "pronoun"};

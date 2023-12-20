@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------
 
-#ifndef WordInfoH
-#define WordInfoH
+#ifndef WordH
+#define WordH
 
 #include <vcl.h>
 #include <vector>
@@ -16,7 +16,7 @@ enum WordCategory {
 	Unknown
 };
 
-class WordInfo {
+class Word {
 
 	private:
 		UnicodeString word;
@@ -27,8 +27,8 @@ class WordInfo {
 		static std::vector<UnicodeString> enumStrings;
 
 	public:
-    	WordInfo();
-		WordInfo(UnicodeString _word, WordCategory _category, UnicodeString _definition, std::vector<UnicodeString> _synonyms);
+    	Word();
+		Word(UnicodeString _word, WordCategory _category, UnicodeString _definition, std::vector<UnicodeString> _synonyms);
 		const UnicodeString& getWord() const;
 		const WordCategory& getWordCategory() const;
 		const UnicodeString& getDefinition() const;
@@ -37,6 +37,7 @@ class WordInfo {
 
 		static WordCategory stringToWordCategory(const UnicodeString &word);
         static UnicodeString wordCategoryToString(WordCategory category);
+        static std::vector<UnicodeString> getWordCategoriesAsStrings();
 
 };
 //---------------------------------------------------------------------------

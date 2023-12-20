@@ -60,17 +60,16 @@ wchar_t IOControl::getChar(WPARAM wParam){
 	return L'\0';
 }
 
-
 void IOControl::appendChar(wchar_t &wch) {
 
 	buffer += UnicodeString(wch);
 }
 
-void IOControl::deleteLastChar() {
+void IOControl::deleteChar() {
 
-	int stringLength = buffer.Length();
+	int len = buffer.Length();
 
-	if (stringLength > 0) {
-		buffer.Delete(stringLength, 1);
+	if (len > 0) {
+		buffer.Delete(len, 1);
 	}
 }

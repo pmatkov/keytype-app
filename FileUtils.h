@@ -17,14 +17,14 @@
 class FileUtils {
 
 	public:
-		static UnicodeString createAbsolutePath(const UnicodeString& filename, bool isfile);
+		static UnicodeString getAbsolutePath(const UnicodeString& filename, bool isfile);
 		static UnicodeString traverseUpDirTree(const UnicodeString& path, int level);
-		static std::optional<std::vector<UnicodeString>> getFileNamesInDir(const UnicodeString &path);
-		static void checkFileSize(const UnicodeString& path);
+		static std::optional<std::vector<UnicodeString>> getFileNames(const UnicodeString &path);
 
 		static TJSONObject* readFromJsonFile(const UnicodeString &path);
 		static void saveToJsonFile(const UnicodeString &path, const UnicodeString &string);
 		static std::optional<UnicodeString> readFromTextFile(const UnicodeString &path);
+        static void saveToTextFile(const UnicodeString &path, const std::vector<UnicodeString> &list);
 
 };
 #endif
