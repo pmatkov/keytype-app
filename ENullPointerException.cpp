@@ -2,6 +2,8 @@
 
 #pragma hdrstop
 
-#include "PracticeController.h"
+#include "ENullPointerException.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
+
+ENullPointerException ::ENullPointerException() : Exception("Nullptr exception") {}

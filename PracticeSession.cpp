@@ -3,15 +3,13 @@
 #pragma hdrstop
 
 #include "PracticeSession.h"
+#include "Logger.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 
+PracticeSession::PracticeSession() {
 
-const User& PracticeSession::getUser() const {
-	return user;
-}
-void PracticeSession::setUser(const User& _user) {
-   user = _user;
+	LOGGER(LogLevel::Debug, "Practice session created");
 }
 
 const TextSource& PracticeSession::getTextSource() const {
@@ -29,7 +27,6 @@ void PracticeSession::decreaseCharIndex() {
 	 textSource.decreaseCharIndex();
 }
 
-
 const bool& PracticeSession::isMistake() const {
 	return mistake;
 }
@@ -39,43 +36,42 @@ void PracticeSession::setMistake(bool _mistake) {
 }
 
 const int& PracticeSession::getTotalCount() const {
-	return totalCount;
+	return keyStatistics.getTotalCount();
 }
 
 void PracticeSession::setTotalCount(int _totalCount) {
-	totalCount =_totalCount;
+	keyStatistics.setTotalCount(_totalCount);
 }
 
 void PracticeSession::incTotalCount() {
-	totalCount++;
+	keyStatistics.incTotalCount();
 }
 
-const int& PracticeSession::getValidCount() const {
-	  return validCount;
+const int& PracticeSession::getCorrectCount() const {
+	return keyStatistics.getCorrectCount();
 }
 
-void PracticeSession::setValidCount(int _validCount) {
-   validCount = _validCount;
+void PracticeSession::setCorrectCount(int _correctCount) {
+  keyStatistics.setCorrectCount(_correctCount);
 }
 
-void PracticeSession::incValidCount() {
-	validCount++;
+void PracticeSession::incCorrectCount() {
+	keyStatistics.incCorrectCount();
 }
 
 const int& PracticeSession::getMistakesCount() const {
-	return mistakesCount;
+	return keyStatistics.getMistakesCount();
 }
 
 void PracticeSession::setMistakesCount(int _mistakesCount) {
-
-	 mistakesCount = _mistakesCount;
+	keyStatistics.setMistakesCount(_mistakesCount);
 }
 
 void PracticeSession::incMistakesCount() {
-	mistakesCount++;
+	keyStatistics.incMistakesCount();
 }
 
-const bool PracticeSession::isIgnoreSeqMistakes() const{
+const bool PracticeSession::doIgnoreSeqMistakes() const{
 	return ignoreSeqMistakes;
 }
 

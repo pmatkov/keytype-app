@@ -2,9 +2,11 @@
 #pragma hdrstop
 
 #include <TestFramework.hpp>
+#include <memory>
 
 #include "FileUtils.h"
-#include "Logger.h"
+#include "UnitTestLogger.h"
+
 
 class TTestFileUtils : public TTestCase
 {
@@ -14,17 +16,17 @@ public:
 	  virtual void __fastcall TearDown();
   
 __published:
-	  void __fastcall TestcreateFilePath();
+	  void __fastcall TestcreateAbsolutePath();
 	  void __fastcall TesttraverseUpDirTree();
 
   private:
-		Logger* logger;
+	  	std::unique_ptr<UnitTestLogger> logger;
 };
 
 
 void __fastcall TTestFileUtils::SetUp()
 {
-	logger = new Logger;
+	logger = std::make_unique<UnitTestLogger>();
 	logger->log("Starting test...");
 }
 
@@ -34,21 +36,21 @@ void __fastcall TTestFileUtils::TearDown()
 
 	if (logger)
 	{
-		if(logger->getLogStringList()->Count > 0)
+		if(logger->getLogStringList()->Count > 0) {
 			ShowMessage(logger->getLogStringList()->Text);
+        }
 
-	  	delete logger;
 	}
 }
 
-void __fastcall TTestFileUtils::TestcreateFilePath()
+void __fastcall TTestFileUtils::TestcreateAbsolutePath()
 {
 	UnicodeString dirName = "Data";
 	UnicodeString reference = "C:\\Users\\surf3r\\OneDrive\\Documents\\Embarcadero\\Studio\\Projects\\KeyType\\Data\\";
 	UnicodeString result = "";
 
 	logger->log("Expected path: " + reference);
-	result = FileUtils::createFilePath(dirName);
+	result = FileUtils::createAbsolutePath(dirName, false);
 	logger->log("New path: " + result);
 
 	CheckEquals(reference, result, "Not the same path");
@@ -64,8 +66,6 @@ void __fastcall TTestFileUtils::TesttraverseUpDirTree()
 	logger->log("New path (-" + IntToStr(level) + "): " + path);
 
 }
-    
-
 
 static void registerTests()
 {

@@ -8,6 +8,8 @@
 #include "PracticeFrame.h"
 #include "Generator.h"
 #include "UIUtils.h"
+#include "ENullPointerException.h"
+#include "Logger.h"
 
 #pragma hdrstop
 
@@ -17,50 +19,70 @@
 #pragma resource "*.dfm"
 TFrPractice *FrPractice;
 //---------------------------------------------------------------------------
-__fastcall TFrPractice::TFrPractice(TComponent* Owner)
+__fastcall TFrPractice::TFrPractice(TComponent* Owner) : TFrame(Owner) {}
+
+__fastcall TFrPractice::TFrPractice(TComponent* Owner, Parser* _parser, PracticeSession *_practiceSession)
 	: TFrame(Owner)
 {
-}
-//---------------------------------------------------------------------------
+	if (_parser && _practiceSession) {
+	   parser = _parser;
+       practiceSession = _practiceSession;
 
-void TFrPractice::setStatusInfo(StartControl status)  {
+       setPracticeStatus(Initialized);
+
+       LOGGER(LogLevel::Debug, "Assign parser and practice session");
+	}
+    else {
+        throw ENullPointerException();
+    }
+}
+
+void TFrPractice::setPracticeForm(TFPractice *_FPractice) {
+	FPractice = _FPractice;
+}
+
+// change frame appearance based on practice status
+
+void TFrPractice::setPracticeStatus(PracticeStatus status)  {
 
 	switch (status) {
 
-        case Initial: {
-            RETextBox->Lines->Add(FMain->getSessionModule()->getSession()->getTextSource().getText());
+        LOGGER(LogLevel::Debug, "Change practice status");
+
+        case Initialized: {
+            RETextBox->Lines->Add(FMain->getPracticeSession()->getTextSource().getText());
             RETextBox->Paragraph->Alignment = taCenter;
             UIUtils::setTextColor(RETextBox, clSilver);
-            LStart->Caption = "Press space to start the practice";
+            LStart->Caption = "Press space bar to start the practice";
             break;
 
         }
-        case Start: {
+        case Started: {
             LStart->Visible = false;
             UIUtils::setTextColor(RETextBox, clBlack);
             UIUtils::setCharStyle(RETextBox, 0, fsUnderline, true);
             break;
 
         }
-        case Restart: {
+        case Restarted: {
             RETextBox->Lines->Clear();
-            RETextBox->Lines->Add(FMain->getSessionModule()->getSession()->getTextSource().getText());
+            RETextBox->Lines->Add(FMain->getPracticeSession()->getTextSource().getText());
             LStart->Visible = true;
             UIUtils::setTextColor(RETextBox, clSilver);
-            LStart->Caption = "Press space to start the practice";
+            LStart->Caption = "Press space bar to start the practice";
             break;
 
         }
-        case Resume: {
+        case Resumed: {
             LStart->Visible = false;
             UIUtils::setTextColor(RETextBox, clBlack);
             break;
 
         }
-        case Pause: {
+        case Paused: {
             LStart->Visible = true;
             UIUtils::setTextColor(RETextBox, clSilver);
-            LStart->Caption = "Press any key to resume the practice";
+            LStart->Caption = "Press space bar to resume the practice";
             break;
 
         }
@@ -69,12 +91,16 @@ void TFrPractice::setStatusInfo(StartControl status)  {
 
 }
 
+// change practice options
+
 void __fastcall TFrPractice::FrOptionsBtOptionsClick(TObject *Sender)
 {
 
-	FMain->getSessionModule()->getIOControl()->setBufferingEnabled(false);
+	parser->setBufferingEnabled(false);
 
 	if (FPractice->ShowModal() == mrOk) {
+
+    LOGGER(LogLevel::Debug, "Options form");
 
 		int index = FPractice->PCSourceText->ActivePageIndex;
 		TTabSheet* activeTab = FPractice->PCSourceText->Pages[index];
@@ -89,7 +115,7 @@ void __fastcall TFrPractice::FrOptionsBtOptionsClick(TObject *Sender)
 
 					if (radiogroup && radiogroup->ItemIndex == 0) {
 
-						UnicodeString letters = L"";
+						UnicodeString letters = "";
 
 						std::vector<TToolButton*> buttons = FPractice->GetFrGeneratedText()->getButtons();
 
@@ -109,46 +135,38 @@ void __fastcall TFrPractice::FrOptionsBtOptionsClick(TObject *Sender)
 						if (letters.Length() > 0 || numbers || punctuation) {
 
 							 UnicodeString newText = Generator::generateText(letters, uppercase, numbers, punctuation, 128);
-							 FMain->getSessionModule()->getSession()->setTextSource(TextSource(newText));
-							 setStatusInfo(Restart);
-
+                             practiceSession->setTextSource(TextSource(newText));
+							 setPracticeStatus(Restarted);
 						}
-
 					}
 					else {
 
 
 					}
-
                 }
-
 			default:
 				;
 			}
-
 		}
 	}
 	else {
-		FMain->getSessionModule()->getSession()->setPaused(true);
-		setStatusInfo(Pause);
+		practiceSession->setPaused(true);
+		setPracticeStatus(Paused);
 	}
 
 	this->SetFocus();
 }
 
+// forward all char messages to main form
 void __fastcall TFrPractice::WndProc(TMessage &Message)
 {
-	switch (Message.Msg)
-    {
+	switch (Message.Msg) {
         case WM_CHAR:
-        	SendMessage(FMain->Handle, WM_CHAR, Message.WParam, 0);
+//        	SendMessage(FMain->Handle, WM_CHAR, Message.WParam, 0);
+			PostMessage(FMain->Handle, WM_CHAR, Message.WParam, 0);
             break;
 
         default:
             TFrame::WndProc(Message);
     }
 }
-
-
-//---------------------------------------------------------------------------
-

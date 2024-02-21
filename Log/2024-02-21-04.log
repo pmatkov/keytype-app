@@ -1,0 +1,14 @@
+﻿2024-02-21 01:16:13 [INFO] wWinMain:43 - App started
+2024-02-21 01:16:13 [DEBUG] MainSession:13 - Main session created
+2024-02-21 01:16:13 [DEBUG] AuthenticationService:17 - Authentication service created
+2024-02-21 01:16:13 [DEBUG] TFLogin:23 - Login form created
+2024-02-21 01:16:14 [INFO] loginUser:28 - User logged in
+2024-02-21 01:16:14 [DEBUG] Parser:13 - Parser created
+2024-02-21 01:16:14 [DEBUG] PracticeSession:12 - Practice session created
+2024-02-21 01:16:14 [DEBUG] TFrPractice:33 - Assign parser and practice session
+2024-02-21 01:16:14 [DEBUG] TFMain:37 - Created main form
+2024-02-21 01:16:15 [DEBUG] TFPractice:39 - Created practice form
+2024-02-21 01:16:15 [DEBUG] setMainSession:54 - Main session moved
+2024-02-21 01:16:16 [DEBUG] MenuSubitemPracticeNewClick:205 - Switch control to practice frame
+2024-02-21 01:16:35 [DEBUG] FrOptionsBtOptionsClick:103 - Options form
+2024-02-21 01:16:36 [INFO] WndProc:119 - Practice session started

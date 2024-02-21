@@ -16,35 +16,34 @@ enum UserType {
 class User {
 
 	private:
-		UnicodeString name;
-		UnicodeString surname;
-		int age;
-		UnicodeString username;
-		UnicodeString email;
-		UserStatistics userStats;
+        UnicodeString id = "";
+    	UnicodeString username = "";
+		UnicodeString name = "";
+		UnicodeString surname = "";
+        UnicodeString email = "";
+		int age = 0;
 
-		UserType userType;
-		bool isLoggedIn;
+		UserStatistics userStats;
+		UserType userType = Guest;
 
 	public:
 
 		User();
-		User(const UnicodeString &_username, bool _isLoggedIn);
-		User(const UnicodeString &_name, const UnicodeString &_surname, int _age, const UnicodeString &_username, const UnicodeString &_email);
+		User(const UnicodeString &_id, const UnicodeString &_username, const UnicodeString &_name, const UnicodeString &_surname, int _age,  const UnicodeString &_email);
+
+        const UnicodeString & getUsername() const;
+		void setUsername(const UnicodeString &_username);
 
 		const UnicodeString & getName() const;
 		void setName(const UnicodeString &_name);
 		const UnicodeString & getSurname() const;
 		void setSurname(const UnicodeString &_surname);
+
 		int getAge() const;
 		void setAge(int _age);
-		const UnicodeString & getUsername() const;
-		void setUsername(const UnicodeString &_username);
 
 		const UserType& getUserType() const;
 		void setUserType(const UserType &_userType);
-		bool getIsLoggedIn() const;
-		void setIsLoggedIn(bool _isLoggedIn);
 
 };
 

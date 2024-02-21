@@ -4,8 +4,11 @@
 #include <TestFramework.hpp>
 #include <SysUtils.hpp>
 #include <vector>
+#include <memory>
+
+
 #include "TextUtils.h"
-#include "Logger.h"
+#include "UnitTestLogger.h"
 
 class TTestTextUtils : public TTestCase
 {
@@ -25,13 +28,13 @@ class TTestTextUtils : public TTestCase
 		void __fastcall TestrepeatChar();
 
 	private:
-				Logger* logger;
+    	std::unique_ptr<UnitTestLogger> logger;
 };
 
 
 void __fastcall TTestTextUtils::SetUp() {
 
-	logger = new Logger;
+	logger = std::make_unique<UnitTestLogger>();
 
 	logger->log("Starting test...");
 
@@ -43,10 +46,10 @@ void __fastcall TTestTextUtils::TearDown() {
 
 	if (logger)
 	{
-		if(logger->getLogStringList()->Count > 0)
+		if(logger->getLogStringList()->Count > 0) {
 			ShowMessage(logger->getLogStringList()->Text);
+        }
 
-	  	delete logger;
 	}
 }
 

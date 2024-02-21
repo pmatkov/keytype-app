@@ -1,21 +1,21 @@
 //---------------------------------------------------------------------------
 
-#ifndef LoggerH
-#define LoggerH
+#ifndef UnitTestLoggerH
+#define UnitTestLoggerH
 
 #include <vcl.h>
 #include <System.hpp>
 #include <TestFramework.hpp>
 #include <SysUtils.hpp>
 
-class Logger
+class UnitTestLogger
 {
 	private:
-		TStringList* logStringList;
+		TStringList* logList;
 
 	public:
-		Logger();
-		~Logger();
+		UnitTestLogger();
+		~UnitTestLogger();
 
 		TStringList* getLogStringList() const;
 		void log(const UnicodeString& text);

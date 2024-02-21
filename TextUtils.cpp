@@ -178,8 +178,6 @@ UnicodeString TextUtils::formatJson(const UnicodeString& string) {
 
 	return result;
 
-
-
 }
 
 UnicodeString TextUtils::repeatChar(wchar_t wch, int count) {

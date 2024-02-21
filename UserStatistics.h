@@ -7,7 +7,7 @@
 #include<vector>
 #include<map>
 
-#include "KeyPerformance.h"
+#include "KeyStatistics.h"
 
 class UserStatistics {
 
@@ -16,9 +16,10 @@ class UserStatistics {
 		int speed;
 		int accuracy;
 		int coverage;
+
 		TDateTime practiceTime;
 		std::vector<TDateTime> practiceDays;
-		std::map<wchar_t, KeyPerformance> keyPerformance;
+		std::map<wchar_t, KeyStatistics> keyStatistics;
 };
 
 #endif

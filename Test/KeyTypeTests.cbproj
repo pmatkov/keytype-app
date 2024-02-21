@@ -9,6 +9,7 @@
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
+        <CC_Suffix Condition="'$(CC_Suffix)'==''">c</CC_Suffix>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
         <Base>true</Base>
@@ -100,10 +101,14 @@
         <BCC_DisableSpellChecking>true</BCC_DisableSpellChecking>
         <CLANG_UnwindTables>true</CLANG_UnwindTables>
         <ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\debug\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+        <VerInfo_Locale>1050</VerInfo_Locale>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <LinkPackageStatics>rtl.lib;vcl.lib</LinkPackageStatics>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <Defines>NDEBUG;$(Defines)</Defines>
@@ -121,28 +126,45 @@
             <DependentOn>..\Generator.h</DependentOn>
             <BuildOrder>3</BuildOrder>
         </CppCompile>
+        <CppCompile Include="..\Logger.cpp">
+            <DependentOn>..\Logger.h</DependentOn>
+            <BuildOrder>9</BuildOrder>
+        </CppCompile>
         <CppCompile Include="KeyTypeTests.cpp">
             <BuildOrder>0</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="Logger.cpp">
-            <DependentOn>Logger.h</DependentOn>
-            <BuildOrder>5</BuildOrder>
+            <OptionOverrides>true</OptionOverrides>
         </CppCompile>
         <CppCompile Include="TestFileUtils.cpp">
             <DependentOn>TestFileUtils.h</DependentOn>
             <BuildOrder>6</BuildOrder>
+            <OptionOverrides>true</OptionOverrides>
         </CppCompile>
         <CppCompile Include="TestGenerator.cpp">
             <DependentOn>TestGenerator.h</DependentOn>
             <BuildOrder>4</BuildOrder>
+            <OptionOverrides>true</OptionOverrides>
+        </CppCompile>
+        <CppCompile Include="TestLogger.cpp">
+            <DependentOn>TestLogger.h</DependentOn>
+            <BuildOrder>8</BuildOrder>
         </CppCompile>
         <CppCompile Include="TestTextUtils.cpp">
             <DependentOn>TestTextUtils.h</DependentOn>
             <BuildOrder>2</BuildOrder>
+            <OptionOverrides>true</OptionOverrides>
+        </CppCompile>
+        <CppCompile Include="UnitTestLogger.cpp">
+            <DependentOn>UnitTestLogger.h</DependentOn>
+            <BuildOrder>7</BuildOrder>
+            <OptionOverrides>true</OptionOverrides>
         </CppCompile>
         <CppCompile Include="..\TextUtils.cpp">
             <DependentOn>..\TextUtils.h</DependentOn>
             <BuildOrder>1</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\TimeManager.cpp">
+            <DependentOn>..\TimeManager.h</DependentOn>
+            <BuildOrder>10</BuildOrder>
         </CppCompile>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
@@ -170,6 +192,13 @@
                 <Source>
                     <Source Name="MainSource">KeyTypeTests.cpp</Source>
                 </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcboffice2k280.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcbofficexp280.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k280.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp280.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\FastReports\LibD28\dclfrxtee28.bpl">FastReport VCL Tee Components</Excluded_Packages>
+                </Excluded_Packages>
             </CPlusPlusBuilder.Personality>
             <Deployment Version="4">
                 <DeployFile Condition="'$(DynamicRTL)'=='true'" LocalName="$(BDS)\Redist\osx32\libcgcrtl.dylib" Class="DependencyModule">

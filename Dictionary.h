@@ -4,10 +4,10 @@
 #define DictionaryH
 
 
-#include<vector>
+#include <vector>
 #include <optional>
-#include<vcl.h>
-#include<map>
+#include <vcl.h>
+#include <map>
 
 #include "LanguageProfile.h"
 #include "DcWord.h"

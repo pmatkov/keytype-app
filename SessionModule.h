@@ -21,7 +21,6 @@ class SessionModule {
 		IOControl* getIOControl() const;
 		PracticeSession* getSession() const;
 
-
 };
 
 #endif

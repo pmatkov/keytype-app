@@ -5,19 +5,20 @@
 
 #define PROJECT_DIR "KeyType"
 #define KB 1024
-#define MAX_FILE_SIZE 100 * KB
 
 //---------------------------------------------------------------------------
 #pragma hdrstop
 #pragma package(smart_init)
 
-UnicodeString FileUtils::getAbsolutePath(const UnicodeString& relPath, bool isFile) {
+// create absolute file or dir path (relative path starts at <project folder root>, for example '//Data
 
-	UnicodeString exePath = ExtractFilePath(Application->ExeName);
-	int pos = exePath.Pos(PROJECT_DIR);
-	int len = sizeof(PROJECT_DIR) - 1;
+UnicodeString FileUtils::createAbsolutePath(const UnicodeString& relPath, bool isFile) {
 
-	UnicodeString projectDirPath = exePath.Delete(pos + len + 1, exePath.Length() - pos + 1);
+	UnicodeString projectExePath = ExtractFilePath(Application->ExeName);
+	int projectDirStartIndex = projectExePath.Pos(PROJECT_DIR);
+	int projectDirLength = sizeof(PROJECT_DIR);
+
+	UnicodeString projectDirPath = projectExePath.Delete(projectDirStartIndex + projectDirLength, projectExePath.Length() - projectDirStartIndex - projectDirLength + 1);
 	UnicodeString absPath = projectDirPath + relPath;
 
     return isFile ? absPath : absPath + "\\";
@@ -52,20 +53,19 @@ UnicodeString FileUtils::traverseUpDirTree(const UnicodeString& path, int level)
 }
 
 
-std::optional<std::vector<UnicodeString>> FileUtils::getFileNames(const UnicodeString &path) {
-
+std::optional<std::vector<UnicodeString>> FileUtils::getFileNames(const UnicodeString &path, const UnicodeString &fileType) {
 
 	if (TDirectory::Exists(path)) {
 
 		std::vector<UnicodeString> filenames;
 		TSearchRec searchRec;
 
-		if (FindFirst(path + "*.txt", faAnyFile, searchRec) == 0) {
+		if (FindFirst(path + "*." + fileType, faAnyFile, searchRec) == 0) {
 
 			do {
 				UnicodeString filename = searchRec.Name;
 
-				if (TFile::GetSize(path + filename) < MAX_FILE_SIZE)
+				if (TFile::GetSize(path + filename))
 					filenames.push_back(filename);
 				else
 					continue;

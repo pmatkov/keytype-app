@@ -3,8 +3,10 @@
 
 #include <TestFramework.hpp>
 #include <SysUtils.hpp>
+#include <memory>
+
 #include "Generator.h"
-#include "Logger.h"
+#include "UnitTestLogger.h"
 
 class TTestGenerator : public TTestCase
 {
@@ -20,7 +22,7 @@ class TTestGenerator : public TTestCase
 		void __fastcall TestshuffleChars();
 
 	private:
-		Logger* logger;
+		std::unique_ptr<UnitTestLogger> logger;
 		int testCount;
 
 		int maxChars;
@@ -40,7 +42,7 @@ class TTestGenerator : public TTestCase
 
 void __fastcall TTestGenerator::SetUp()
 {
-	logger = new Logger;
+	logger = std::make_unique<UnitTestLogger>();
 	testCount = 10;
 
 	maxChars = 50;
@@ -64,16 +66,15 @@ void __fastcall TTestGenerator::TearDown()
 
 	if (logger)
 	{
-		if(logger->getLogStringList()->Count > 0)
+		if(logger->getLogStringList()->Count > 0) {
 			ShowMessage(logger->getLogStringList()->Text);
+        }
 
-	  	delete logger;
 	}
 }
 
 void __fastcall TTestGenerator::TestgenerateText()
 {
-
 
 	for (int i = 0; i < testCount; i++) {
 
@@ -82,7 +83,6 @@ void __fastcall TTestGenerator::TestgenerateText()
 		logger->log("Test " + IntToStr(i + 1) + ": " + result);
 
 	}
-
 
 }
     
@@ -101,7 +101,7 @@ void __fastcall TTestGenerator::TestgenerateWord()
 			{
 				if (letters.Pos(result[i]) == 0)
 				{
-					logger->log("Invalid char: " + result[i]);
+					logger->log("Invalid char: " + UnicodeString(result[i]));
 					return;
 				}
 			}

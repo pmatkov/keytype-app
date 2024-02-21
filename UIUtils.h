@@ -9,6 +9,9 @@
 #include <vcl.h>
 #include <memory>
 
+#include "Parser.h"
+#include "PracticeSession.h"
+
 class UIUtils {
 
 	public:
@@ -16,28 +19,39 @@ class UIUtils {
 		static void setCharColor(TRichEdit* richedit, int charIndex, TColor textColor);
 		static void setTextColor(TRichEdit* richedit, TColor textColor);
 
+
     template<typename T>
-    static void createFrame(std::unique_ptr<T>& frame, TWinControl* parent) {
-        frame = std::make_unique<T>(parent);
+    static std::unique_ptr<T> createFrame(TWinControl* parent) {
+        std::unique_ptr<T> frame = std::make_unique<T>(parent);
         frame->Parent = parent;
         frame->Align = alClient;
+        return frame;
     }
+
+
+    template<typename T>
+    static std::unique_ptr<T> createFrame(TWinControl* parent, Parser *parser, PracticeSession *practiceSession) {
+        std::unique_ptr<T> frame = std::make_unique<T>(parent, parser, practiceSession);
+        frame->Parent = parent;
+        frame->Align = alClient;
+        return frame;
+    }
+
     template<typename T>
     static void setFrameVisibility(std::unique_ptr<T>& frame, bool visibility){
         frame->Visible = visibility;
     }
 
     template<typename T1, typename T2>
-    static void switchFrames(std::unique_ptr<T1>& frameToSwitchOff, std::unique_ptr<T2>& frameToSwitchOn) {
-        setFrameVisibility(frameToSwitchOff, false);
-        setFrameVisibility(frameToSwitchOn, true);
+    static void switchFrames(std::unique_ptr<T1>& firstFrame, std::unique_ptr<T2>& secondFrame) {
+        setFrameVisibility(firstFrame, false);
+        setFrameVisibility(secondFrame, true);
     }
 
-    static void switchActiveControl(TWinControl* controlToEnable, TWinControl* controlToDisable) {
-        controlToEnable->Enabled = true;
-        controlToDisable->Enabled = false;
+    static void switchControl(TWinControl* firstControl, TWinControl* secondControl) {
+        firstControl->Enabled = false;
+        secondControl->Enabled = true;
     }
-
 
     static void enableChildControls(TWinControl* parent);
     static void disableChildControls(TWinControl* parent);

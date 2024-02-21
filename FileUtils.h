@@ -17,9 +17,9 @@
 class FileUtils {
 
 	public:
-		static UnicodeString getAbsolutePath(const UnicodeString& filename, bool isfile);
+		static UnicodeString createAbsolutePath(const UnicodeString& filename, bool isfile);
 		static UnicodeString traverseUpDirTree(const UnicodeString& path, int level);
-		static std::optional<std::vector<UnicodeString>> getFileNames(const UnicodeString &path);
+		static std::optional<std::vector<UnicodeString>> getFileNames(const UnicodeString &path, const UnicodeString &fileType);
 
 		static TJSONObject* readFromJsonFile(const UnicodeString &path);
 		static void saveToJsonFile(const UnicodeString &path, const UnicodeString &string);

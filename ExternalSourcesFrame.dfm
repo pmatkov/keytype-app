@@ -37,7 +37,9 @@ object FrExternalSources: TFrExternalSources
     Top = 3
     Width = 148
     Height = 337
+    HideSelection = False
     Indent = 19
+    ReadOnly = True
     TabOrder = 0
     OnChange = TVLiteratureCategoriesChange
     Items.NodeData = {
@@ -73,8 +75,13 @@ object FrExternalSources: TFrExternalSources
         Caption = 'Year'
         Width = 55
       end>
+    MultiSelect = True
+    ReadOnly = True
+    RowSelect = True
     TabOrder = 1
     ViewStyle = vsReport
+    OnMouseDown = LVLiteratureDetailsMouseDown
+    OnSelectItem = LVLiteratureDetailsSelectItem
   end
   object MParagraph: TMemo
     Left = 163
@@ -121,27 +128,31 @@ object FrExternalSources: TFrExternalSources
     Width = 58
     Height = 23
     Caption = 'Delete'
+    Enabled = False
     TabOrder = 7
+    OnClick = BtDelete2Click
   end
   object BtAddSave2: TButton
     Left = 456
     Top = 317
     Width = 58
     Height = 23
-    Caption = 'Edit'
+    Caption = 'Add'
     TabOrder = 8
+    OnClick = BtAddSave2Click
   end
-  object XMLTransform1: TXMLTransform
+  object XMLTransform: TXMLTransform
     Left = 282
     Top = 138
   end
-  object XMLDocument1: TXMLDocument
+  object XMLDocument: TXMLDocument
     Active = True
     FileName = 
       'C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\K' +
       'eyType\Data\books.xml'
+    NodeIndentStr = #9
     Options = [doNodeAutoCreate, doNodeAutoIndent, doAttrNull, doAutoPrefix, doNamespaceDecl]
-    Left = 348
-    Top = 136
+    Left = 378
+    Top = 142
   end
 end

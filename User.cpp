@@ -7,13 +7,22 @@
 #pragma package(smart_init)
 
 
-User::User() {}
+User::User() {
+    userType = Guest;
+}
 
-User::User(const UnicodeString &_username, bool _isLoggedIn) : username(_username), isLoggedIn(_isLoggedIn) {}
+User::User(const UnicodeString &_id, const UnicodeString &_username, const UnicodeString &_name, const UnicodeString &_surname, int _age,  const UnicodeString &_email) :
+id (_id), username(_username), name(_name), surname(_surname), age(_age), email(_email) {
+	userType = Registered;
+}
 
-User::User(const UnicodeString &_name, const UnicodeString &_surname, int _age, const UnicodeString &_username, const UnicodeString &_email) :
-			 name(_name), surname(_surname), age(_age), username(_username), email(_email) {}
+const UnicodeString & User::getUsername() const {
+	return username;
+}
 
+void User::setUsername(const UnicodeString &_username) {
+	username = _username;
+}
 
 const UnicodeString& User::getName() const {
 	return name;
@@ -39,28 +48,12 @@ void User::setAge(int _age) {
 	age = _age;
 }
 
-const UnicodeString & User::getUsername() const {
-	return username;
-}
-
-void User::setUsername(const UnicodeString &_username) {
-	username = _username;
-}
-
-
 const UserType& User::getUserType() const {
 	   return userType;
 }
 
 void User::setUserType(const UserType &_userType) {
 	userType = _userType;
-}
-
-bool User::getIsLoggedIn() const {
-   return  isLoggedIn;
-}
-void User::setIsLoggedIn(bool _isLoggedIn) {
-	 isLoggedIn = _isLoggedIn;
 }
 
 

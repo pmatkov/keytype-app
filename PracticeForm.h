@@ -17,9 +17,9 @@
 #include <vcl.h>
 #include <memory>
 
-
 #include "Dictionary.h"
-#include "SessionModule.h"
+#include "MainSession.h"
+
 #include "GeneratedTextFrame.h"
 #include "ExternalSourcesFrame.h"
 #include "CustomTextFrame.h"
@@ -41,17 +41,19 @@ private:	// User declarations
 	std::unique_ptr<TFrExternalSources> FrExternalSources;
 	std::unique_ptr<TFrCustomText> FrCustomText;
 
-	SessionModule *sessionModule;
+	MainSession  *mainSession;
 
 public:		// User declarations
 	__fastcall TFPractice(TComponent* Owner);
+    __fastcall TFPractice(TComponent* Owner, MainSession *mainSession);
 
     TFrGeneratedText* GetFrGeneratedText() const;
     TFrExternalSources* GetFrExternalSources() const;
     TFrCustomText* GetFrCustomText() const;
 
-	void setSessionModule(SessionModule *_sessionModule);
-    SessionModule* getSessionModule();
+
+//    void setMainSession(MainSession *_mainSession);
+//    MainSession * getMainSession();
 
 };
 

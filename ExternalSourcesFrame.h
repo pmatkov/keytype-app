@@ -38,15 +38,25 @@ __published:	// IDE-managed Components
 	TEdit *EParagraph;
 	TButton *BtDelete2;
 	TButton *BtAddSave2;
-	TXMLTransform *XMLTransform1;
-	TXMLDocument *XMLDocument1;
+	TXMLTransform *XMLTransform;
+	TXMLDocument *XMLDocument;
 	void __fastcall TVLiteratureCategoriesChange(TObject *Sender, TTreeNode *Node);
+	void __fastcall LVLiteratureDetailsSelectItem(TObject *Sender, TListItem *Item, bool Selected);
+	void __fastcall BtAddSave2Click(TObject *Sender);
+	void __fastcall LVLiteratureDetailsMouseDown(TObject *Sender, TMouseButton Button, TShiftState Shift, int X, int Y);
+	void __fastcall BtDelete2Click(TObject *Sender);
 
 private:	// User declarations
         std::map<UnicodeString, std::vector<_di_IXMLbookType>> mapOfBooks;
+        std::vector<_di_IXMLbookType> booksInGenre;
+
 public:		// User declarations
 	__fastcall TFrExternalSources(TComponent* Owner);
+    void updateParagraph(int index);
+    void updateFields(int index);
     void updateListView(TTreeNode* selectedNode);
+    void resetFrameFields();
+
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TFrExternalSources *FrExternalSources;

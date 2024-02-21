@@ -1,30 +1,30 @@
 //---------------------------------------------------------------------------
 
-#ifndef IOControlH
-#define IOControlH
+#ifndef ParserH
+#define ParserH
 //---------------------------------------------------------------------------
 #include <vcl.h>
 #include <windows.h>
 
-class IOControl
-{
 
+class Parser
+{
 	private:
 		UnicodeString buffer;
-		bool bufferingEnabled;
+		bool bufferingEnabled = false;
 
 	public:
+        Parser();
 		const UnicodeString& getBuffer() const;
-		void setBuffer(const UnicodeString& string);
+		void setBuffer(const UnicodeString& text);
 
 		const bool& isBufferingEnabled() const;
-		void setBufferingEnabled(bool _bufferingEnabled);
+		void setBufferingEnabled(bool _buffered);
 
 		wchar_t getChar(WPARAM wParam);
 
-		void appendChar(wchar_t &wch);
+		void addChar(wchar_t &wch);
 		void deleteChar();
-
 
 };
 #endif

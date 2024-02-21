@@ -1,6 +1,6 @@
 //---------------------------------------------------------------------------
 
-#ifndef PracticeControllerH
-#define PracticeControllerH
+#ifndef TestLoggerH
+#define TestLoggerH
 //---------------------------------------------------------------------------
 #endif

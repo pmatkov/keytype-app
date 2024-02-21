@@ -9,14 +9,18 @@
 #include <Vcl.Forms.hpp>
 #include "OptionsFrame.h"
 #include <Vcl.ComCtrls.hpp>
+
+#include "Parser.h"
+#include "PracticeSession.h"
+#include "PracticeForm.h"
 //---------------------------------------------------------------------------
 
-enum StartControl {
-	Initial,
-	Start,
-	Restart,
-	Resume,
-    Pause
+enum PracticeStatus {
+	Initialized,
+	Started,
+	Restarted,
+	Resumed,
+    Paused
 };
 
 class TFrPractice : public TFrame
@@ -28,12 +32,18 @@ __published:	// IDE-managed Components
 	void __fastcall FrOptionsBtOptionsClick(TObject *Sender);
 
 private:	// User declarations
+	Parser* parser;
+    MainSession* mainSession;
+    PracticeSession* practiceSession;
+    TFPractice *FPractice;
 
 	HWND REHandle;
 public:		// User declarations
 	__fastcall TFrPractice(TComponent* Owner);
-    void setStatusInfo(StartControl status);
-     virtual void __fastcall WndProc(TMessage &Message);
+    __fastcall TFrPractice(TComponent* Owner, Parser *parser, PracticeSession *practiceSession);
+    void setPracticeForm(TFPractice *_FPractice);
+    void setPracticeStatus(PracticeStatus status);
+    virtual void __fastcall WndProc(TMessage &Message);
 
 };
 //---------------------------------------------------------------------------

@@ -85,7 +85,7 @@ public:		// User declarations
     void setListViewItems(TListView *listview, const std::vector<UnicodeString> &items);
 
     void resetFrameFields(bool all);
-    bool fieldsAreEmpty();
+    bool areFieldsEmpty();
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TFrGeneratedText *FrGeneratedText;

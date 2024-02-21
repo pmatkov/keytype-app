@@ -3,26 +3,26 @@
 #ifndef PracticeSessionH
 #define PracticeSessionH
 //---------------------------------------------------------------------------
-#include "User.h"
+#include "Session.h"
 #include "TextSource.h"
+#include "KeyStatistics.h"
 
-class PracticeSession {
+class PracticeSession : public Session {
 
 	private:
-		User user;
 		TextSource textSource;
-		bool mistake;
-		int totalCount = 0;
-		int validCount = 0;
-		int mistakesCount = 0;
+
+		bool mistake = false;
+        KeyStatistics keyStatistics;
+
 		bool ignoreSeqMistakes;
 		bool stopOnMistake;
+
 		bool active;
 		bool paused;
 
 	public:
-		const User& getUser() const;
-		void setUser(const User& _user);
+    	PracticeSession();
 
 		const TextSource& getTextSource() const;
 		void setTextSource(const TextSource& _textSource);
@@ -36,14 +36,16 @@ class PracticeSession {
 		const int& getTotalCount() const;
 		void setTotalCount(int _totalCount);
 		void incTotalCount();
-		const int& getValidCount() const;
-		void setValidCount(int _validCount);
-		void incValidCount();
+
+		const int& getCorrectCount() const;
+		void setCorrectCount(int _correctCount);
+		void incCorrectCount();
+
 		const int& getMistakesCount() const;
 		void setMistakesCount(int _mistakesCount);
 		void incMistakesCount();
 
-		const bool isIgnoreSeqMistakes() const;
+		const bool doIgnoreSeqMistakes() const;
 		void setIgnoreSeqMistakes(bool _ignoreSeqMistakes);
 		const bool isStopOnMistake() const;
 		void setStopOnmistake(bool _stopOnMistake);

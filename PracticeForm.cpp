@@ -4,6 +4,8 @@
 #include "FileUtils.h"
 #include "UIUtils.h"
 #include "DcWord.h"
+#include "ENullPointerException.h"
+#include "Logger.h"
 
 #pragma hdrstop
 #pragma package(smart_init)
@@ -14,29 +16,28 @@
 
 TFPractice *FPractice;
 //---------------------------------------------------------------------------
-__fastcall TFPractice::TFPractice(TComponent* Owner) : TForm(Owner) {
 
-    UIUtils::createFrame<TFrGeneratedText>(FrGeneratedText, TSGeneratedText);
-    UIUtils::createFrame<TFrExternalSources>(FrExternalSources, TSExternalSources);
-    UIUtils::createFrame<TFrCustomText>(FrCustomText, TSCustomText);
+__fastcall TFPractice::TFPractice(TComponent* Owner) : TForm(Owner) {}
+
+__fastcall TFPractice::TFPractice(TComponent* Owner, MainSession *_mainSession) : TForm(Owner) {
+
+	if (_mainSession) {
+	   mainSession = _mainSession;
+	}
+    else {
+        throw ENullPointerException();
+    }
+
+    FrGeneratedText = UIUtils::createFrame<TFrGeneratedText>(TSGeneratedText);
+	FrExternalSources = UIUtils::createFrame<TFrExternalSources>(TSExternalSources);
+    FrCustomText = UIUtils::createFrame<TFrCustomText>(TSCustomText);
 
     UIUtils::setFrameVisibility<TFrGeneratedText>(FrGeneratedText, true);
     UIUtils::setFrameVisibility<TFrExternalSources>(FrExternalSources, true);
     UIUtils::setFrameVisibility<TFrCustomText>(FrCustomText, true);
-}
 
+    LOGGER(LogLevel::Debug, "Created practice form");
 
-void TFPractice::setSessionModule(SessionModule *_sessionModule) {
-
-    if (_sessionModule) {
-       sessionModule = _sessionModule;
-    }
-
-}
-
-SessionModule * TFPractice::getSessionModule() {
-
-    return sessionModule;
 }
 
 TFrGeneratedText* TFPractice::GetFrGeneratedText() const {

@@ -30,8 +30,8 @@ __fastcall TFrGeneratedText::TFrGeneratedText(TComponent* Owner) : TFrame(Owner)
 
     setComboBoxItems(CBCategory, DcWord::getWordCategoriesAsStrings(), -1);
 
-    DFileOpen->InitialDir = FileUtils::getAbsolutePath("WordList", false);
-    dictionary.parseJsonToDictionary(FileUtils::getAbsolutePath("Data\\dictionary.json", true));
+    DFileOpen->InitialDir = FileUtils::createAbsolutePath("WordList", false);
+    dictionary.parseJsonToDictionary(FileUtils::createAbsolutePath("Data\\dictionary.json", true));
 
 }
 
@@ -74,8 +74,8 @@ void TFrGeneratedText::createTBButtons(TToolBar* toolbar, int count) {
 
    void TFrGeneratedText::loadWordLists(const UnicodeString &path, TComboBox *comboBox, TListView *listview, std::vector<WordList> &wordListCollection) {
 
- 	UnicodeString dirPath = FileUtils::getAbsolutePath(path, false);
-    std::optional<std::vector<UnicodeString>> filenames = FileUtils::getFileNames(dirPath);
+ 	UnicodeString dirPath = FileUtils::createAbsolutePath(path, false);
+    std::optional<std::vector<UnicodeString>> filenames = FileUtils::getFileNames(dirPath, "txt");
 
     if (filenames.has_value()) {
 
@@ -124,13 +124,13 @@ void TFrGeneratedText::createTBButtons(TToolBar* toolbar, int count) {
  void TFrGeneratedText::setGroupBoxState(TRadioGroup* radioGroup, TGroupBox *primary, TGroupBox *secondary) {
     if (radioGroup->ItemIndex == 0) {
 
-    	UIUtils::switchActiveControl(primary, secondary);
+    	UIUtils::switchControl(secondary, primary);
         UIUtils::disableChildControls(secondary);
         UIUtils::enableChildControls(primary);
 
     } else {
 
-      	UIUtils::switchActiveControl(secondary, primary);
+      	UIUtils::switchControl(primary, secondary);
         UIUtils::disableChildControls(primary);
         UIUtils::enableChildControls(secondary);
     }
@@ -213,6 +213,7 @@ void __fastcall TFrGeneratedText::LVWordsSelectItem(TObject *Sender, TListItem *
 }
 
 void __fastcall TFrGeneratedText::LVWordsMouseDown(TObject *Sender, TMouseButton Button, TShiftState Shift, int X, int Y) {
+
 	if (LVWords->SelCount == 1) {
 		BtAddSave1->Caption = "Save";
 		BtDelete1->Enabled = true;
@@ -249,7 +250,7 @@ void TFrGeneratedText::resetFrameFields(bool all) {
 }
 
 
-bool TFrGeneratedText::fieldsAreEmpty() {
+bool TFrGeneratedText::areFieldsEmpty() {
    return (EWord->Text.IsEmpty() || EDefinition->Text.IsEmpty() || ESynonyms->Text.IsEmpty() || CBCategory->ItemIndex == -1);
 }
 
@@ -259,7 +260,7 @@ void __fastcall TFrGeneratedText::BtDelete1Click(TObject *Sender) {
     wordlist.erase(std::remove(wordlist.begin(), wordlist.end(), EWord->Text), wordlist.end());
     wordListCollection[CBTextFiles->ItemIndex].setWordList(wordlist);
 
-    UnicodeString filepath = FileUtils::getAbsolutePath("WordList\\" + wordListCollection[CBTextFiles->ItemIndex].getWordListName(), true);
+    UnicodeString filepath = FileUtils::createAbsolutePath("WordList\\" + wordListCollection[CBTextFiles->ItemIndex].getWordListName(), true);
     FileUtils::saveToTextFile(filepath, wordlist);
 
     dictionary.deleteWord(LVWords->Selected->Caption);
@@ -267,7 +268,7 @@ void __fastcall TFrGeneratedText::BtDelete1Click(TObject *Sender) {
     std::optional<UnicodeString> json = Dictionary::generateJsonFromDictionary(dictionary.getDictionary());
 
     if (json.has_value()) {
-        FileUtils::saveToJsonFile(FileUtils::getAbsolutePath("Data\\dictionary.json", true), *json);
+        FileUtils::saveToJsonFile(FileUtils::createAbsolutePath("Data\\dictionary.json", true), *json);
     }
 
     setListViewItems(LVWords, wordListCollection[CBTextFiles->ItemIndex].getWordList());
@@ -278,7 +279,7 @@ void __fastcall TFrGeneratedText::BtDelete1Click(TObject *Sender) {
 
 
 void __fastcall TFrGeneratedText::BtAddSave1Click(TObject *Sender) {
-	if (fieldsAreEmpty()) {
+	if (areFieldsEmpty()) {
      	ShowMessage("Input fields should not be empty.");
         return;
      }
@@ -289,11 +290,11 @@ void __fastcall TFrGeneratedText::BtAddSave1Click(TObject *Sender) {
 
     if (BtAddSave1->Caption.Compare("Add") == 0) {
         if (!newWord) {
-            ShowMessage("Word is already in the list.");
+            ShowMessage("The word is already in the list.");
             return;
         }
     }
-    else {
+    else if (BtAddSave1->Caption.Compare("Save") == 0) {
 
     	DcWord word;
     	if (dictionary.getWord(LVWords->Selected->Caption).has_value()) {
@@ -310,7 +311,7 @@ void __fastcall TFrGeneratedText::BtAddSave1Click(TObject *Sender) {
      if (newWord) {
      	wordlist.push_back(EWord->Text);
      	wordListCollection[CBTextFiles->ItemIndex].setWordList(wordlist);
-        UnicodeString filepath = FileUtils::getAbsolutePath("WordList\\" + wordListCollection[CBTextFiles->ItemIndex].getWordListName(), true);
+        UnicodeString filepath = FileUtils::createAbsolutePath("WordList\\" + wordListCollection[CBTextFiles->ItemIndex].getWordListName(), true);
      	FileUtils::saveToTextFile(filepath, wordlist);
      }
 
@@ -319,7 +320,7 @@ void __fastcall TFrGeneratedText::BtAddSave1Click(TObject *Sender) {
      std::optional<UnicodeString> json = Dictionary::generateJsonFromDictionary(dictionary.getDictionary());
 
     if (json.has_value()) {
-        FileUtils::saveToJsonFile(FileUtils::getAbsolutePath("Data\\dictionary.json", true), *json);
+        FileUtils::saveToJsonFile(FileUtils::createAbsolutePath("Data\\dictionary.json", true), *json);
     }
 
     setListViewItems(LVWords, wordListCollection[CBTextFiles->ItemIndex].getWordList());

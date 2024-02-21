@@ -1,15 +1,6 @@
 //---------------------------------------------------------------------------
 
-#ifndef KeyPerformanceH
-#define KeyPerformanceH
+#ifndef NullPointerExceptionH
+#define NullPointerExceptionH
 //---------------------------------------------------------------------------
-class KeyPerformance {
-
-	private:
-		int speed;
-		int correct;
-		int error;
-		int accuracy;
-};
-
 #endif
