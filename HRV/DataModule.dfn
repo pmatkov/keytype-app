@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DataModule.dfm" source-language="hr-HR" target-language="hr-HR" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DataModule.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">45346.9495833333</prop>
+        <prop prop-type="OrigDateTime">45344.8424305556</prop>
+        <prop prop-type="XlatDateTime">45344.8424305556</prop>
+        <prop prop-type="Translated">0</prop>
+        <prop prop-type="UnTranslated">9</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:DataModule1.Height" resname="O:DataModule1.Height">
+        <source>480</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495844907</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TDataModule1</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.Width" resname="O:DataModule1.Width">
+        <source>640</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495844907</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TDataModule1</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:MySQLDBConnection.Params.Strings[0]" resname="O:DataModule1.O:MySQLDBConnection.Params.Strings[0]">
+        <source>'Database=keytype'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495844907</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:MySQLDBConnection.Params.Strings[1]" resname="O:DataModule1.O:MySQLDBConnection.Params.Strings[1]">
+        <source>'User_Name=root'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495844907</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:MySQLDBConnection.Params.Strings[2]" resname="O:DataModule1.O:MySQLDBConnection.Params.Strings[2]">
+        <source>'Password=12345'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495844907</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:MySQLDBConnection.Params.Strings[3]" resname="O:DataModule1.O:MySQLDBConnection.Params.Strings[3]">
+        <source>'Server=127.0.0.1'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495844907</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:MySQLDBConnection.Params.Strings[4]" resname="O:DataModule1.O:MySQLDBConnection.Params.Strings[4]">
+        <source>'DriverID=MySQL'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495844907</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:MySQLDBConnection.Left" resname="O:DataModule1.O:MySQLDBConnection.Left">
+        <source>270</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495844907</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:MySQLDBConnection.Top" resname="O:DataModule1.O:MySQLDBConnection.Top">
+        <source>171</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495844907</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

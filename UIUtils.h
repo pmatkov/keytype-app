@@ -8,9 +8,11 @@
 #include <System.SysUtils.hpp>
 #include <vcl.h>
 #include <memory>
+#include <utility>
 
 #include "Parser.h"
 #include "PracticeSession.h"
+#include "AuthenticationService.h"
 
 class UIUtils {
 
@@ -28,10 +30,9 @@ class UIUtils {
         return frame;
     }
 
-
-    template<typename T>
-    static std::unique_ptr<T> createFrame(TWinControl* parent, Parser *parser, PracticeSession *practiceSession) {
-        std::unique_ptr<T> frame = std::make_unique<T>(parent, parser, practiceSession);
+    template<typename T,  typename... Args>
+    static std::unique_ptr<T> createFrame(TWinControl* parent, Args&&... args) {
+        std::unique_ptr<T> frame = std::make_unique<T>(parent, std::forward<Args>(args)...);
         frame->Parent = parent;
         frame->Align = alClient;
         return frame;
@@ -47,6 +48,18 @@ class UIUtils {
         setFrameVisibility(firstFrame, false);
         setFrameVisibility(secondFrame, true);
     }
+
+    template<typename T>
+    static void setFrameVisibility(T *frame, bool visibility){
+        frame->Visible = visibility;
+    }
+
+    template<typename T1, typename T2>
+    static void switchFrames(T1 *firstFrame, T2 *secondFrame) {
+        setFrameVisibility(firstFrame, false);
+        setFrameVisibility(secondFrame, true);
+    }
+
 
     static void switchControl(TWinControl* firstControl, TWinControl* secondControl) {
         firstControl->Enabled = false;

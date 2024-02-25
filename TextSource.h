@@ -11,7 +11,8 @@
 class TextSource
 {
 	private:
-		UnicodeString text = "The quick brown fox jumps over the lazy dog";
+    	// The quick brown fox jumps over the lazy dog
+		UnicodeString text = "The quick brown fox jumps over the lazy";
 		UnicodeString currentWord;
 		wchar_t currentChar;
 		int charIndex = 1;

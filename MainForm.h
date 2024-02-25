@@ -23,9 +23,11 @@
 #include "PracticeSession.h"
 #include "Parser.h"
 
-#include "OptionsFrame.h"
-#include "PracticeFrame.h"
 #include "MainFrame.h"
+#include "PracticeFrame.h"
+#include "OptionsFrame.h"
+
+#include "PreferencesForm.h"
 
 //---------------------------------------------------------------------------
 
@@ -35,10 +37,14 @@ class TFMain : public TForm
 __published:	// IDE-managed Components
 	TMainMenu *MainMenu;
 	TMenuItem *MenuSubitemPracticeNew;
+	TMenuItem *MenuItemSettings;
+	TMenuItem *MenuSubitemPreferences;
 	void __fastcall MenuSubitemPracticeNewClick(TObject *Sender);
+	void __fastcall MenuSubitemPreferencesClick(TObject *Sender);
 
 private:	// User declarations
 
+    TFPreferences *FPreferences;
 	std::unique_ptr<TFrMain> FrMain;
 	std::unique_ptr<TFrPractice> FrPractice;
 
@@ -55,13 +61,9 @@ public:		// User declarations
 
 	void setMainSession(std::unique_ptr<MainSession> _mainSession);
     const MainSession * getMainSession() const;
-
-    void setPracticeSession(std::unique_ptr<PracticeSession> _practiceSession);
     const PracticeSession * getPracticeSession() const;
 
-	void setParser(std::unique_ptr<Parser> parser);
-    const Parser * getParser() const;
-
+    void setPreferencesForm(TFPreferences *_FPreferences);
     void setPracticeForm(TFPractice *FPractice);
 
 	virtual void __fastcall WndProc(TMessage &Message);

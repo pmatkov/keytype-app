@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\PreferencesForm.dfm" source-language="hr-HR" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\PreferencesForm.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">45346.9495833333</prop>
+        <prop prop-type="OrigDateTime">45346.8758333333</prop>
+        <prop prop-type="XlatDateTime">45346.8758333333</prop>
+        <prop prop-type="Translated">0</prop>
+        <prop prop-type="UnTranslated">151</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:FPreferences.Left" resname="O:FPreferences.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TFPreferences</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.Top" resname="O:FPreferences.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TFPreferences</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.Caption" resname="O:FPreferences.Caption">
+        <source>'Preferences'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TFPreferences</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.ClientHeight" resname="O:FPreferences.ClientHeight">
+        <source>446</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TFPreferences</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.ClientWidth" resname="O:FPreferences.ClientWidth">
+        <source>542</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFPreferences</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.Color" resname="O:FPreferences.Color">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TFPreferences</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.Font.Charset" resname="O:FPreferences.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TFPreferences</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.Font.Color" resname="O:FPreferences.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TFPreferences</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.Font.Height" resname="O:FPreferences.Font.Height">
+        <source>-12</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TFPreferences</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.Font.Name" resname="O:FPreferences.Font.Name">
+        <source>'Segoe UI'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TFPreferences</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.Font.Style" resname="O:FPreferences.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TFPreferences</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.TextHeight" resname="O:FPreferences.TextHeight">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TFPreferences</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.Left" resname="O:FPreferences.O:GroupBox1.Left">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.Top" resname="O:FPreferences.O:GroupBox1.Top">
+        <source>27</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.Width" resname="O:FPreferences.O:GroupBox1.Width">
+        <source>254</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.Height" resname="O:FPreferences.O:GroupBox1.Height">
+        <source>343</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.Caption" resname="O:FPreferences.O:GroupBox1.Caption">
+        <source>'Application settings'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.TabOrder" resname="O:FPreferences.O:GroupBox1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:LLanguage.Left" resname="O:FPreferences.O:GroupBox1.O:LLanguage.Left">
+        <source>12</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:LLanguage.Top" resname="O:FPreferences.O:GroupBox1.O:LLanguage.Top">
+        <source>45</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:LLanguage.Width" resname="O:FPreferences.O:GroupBox1.O:LLanguage.Width">
+        <source>55</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:LLanguage.Height" resname="O:FPreferences.O:GroupBox1.O:LLanguage.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:LLanguage.Caption" resname="O:FPreferences.O:GroupBox1.O:LLanguage.Caption">
+        <source>'Language:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:LLogging.Left" resname="O:FPreferences.O:GroupBox1.O:LLogging.Left">
+        <source>12</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:LLogging.Top" resname="O:FPreferences.O:GroupBox1.O:LLogging.Top">
+        <source>147</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:LLogging.Width" resname="O:FPreferences.O:GroupBox1.O:LLogging.Width">
+        <source>47</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:LLogging.Height" resname="O:FPreferences.O:GroupBox1.O:LLogging.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495896991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:LLogging.Caption" resname="O:FPreferences.O:GroupBox1.O:LLogging.Caption">
+        <source>'Logging:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:LFont1.Left" resname="O:FPreferences.O:GroupBox1.O:LFont1.Left">
+        <source>12</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:LFont1.Top" resname="O:FPreferences.O:GroupBox1.O:LFont1.Top">
+        <source>81</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:LFont1.Width" resname="O:FPreferences.O:GroupBox1.O:LFont1.Width">
+        <source>63</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:LFont1.Height" resname="O:FPreferences.O:GroupBox1.O:LFont1.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:LFont1.Caption" resname="O:FPreferences.O:GroupBox1.O:LFont1.Caption">
+        <source>'Font family:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBLanguage.Left" resname="O:FPreferences.O:GroupBox1.O:CBLanguage.Left">
+        <source>126</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBLanguage.Top" resname="O:FPreferences.O:GroupBox1.O:CBLanguage.Top">
+        <source>42</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBLanguage.Width" resname="O:FPreferences.O:GroupBox1.O:CBLanguage.Width">
+        <source>115</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBLanguage.Height" resname="O:FPreferences.O:GroupBox1.O:CBLanguage.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBLanguage.TabOrder" resname="O:FPreferences.O:GroupBox1.O:CBLanguage.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBLanguage.Items.Strings[0]" resname="O:FPreferences.O:GroupBox1.O:CBLanguage.Items.Strings[0]">
+        <source>'English'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBLanguage.Items.Strings[1]" resname="O:FPreferences.O:GroupBox1.O:CBLanguage.Items.Strings[1]">
+        <source>'Croatian'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBLogging.Left" resname="O:FPreferences.O:GroupBox1.O:CBLogging.Left">
+        <source>126</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBLogging.Top" resname="O:FPreferences.O:GroupBox1.O:CBLogging.Top">
+        <source>144</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBLogging.Width" resname="O:FPreferences.O:GroupBox1.O:CBLogging.Width">
+        <source>115</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBLogging.Height" resname="O:FPreferences.O:GroupBox1.O:CBLogging.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBLogging.TabOrder" resname="O:FPreferences.O:GroupBox1.O:CBLogging.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBLoggingEnable.Left" resname="O:FPreferences.O:GroupBox1.O:CBLoggingEnable.Left">
+        <source>93</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBLoggingEnable.Top" resname="O:FPreferences.O:GroupBox1.O:CBLoggingEnable.Top">
+        <source>147</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBLoggingEnable.Width" resname="O:FPreferences.O:GroupBox1.O:CBLoggingEnable.Width">
+        <source>16</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBLoggingEnable.Height" resname="O:FPreferences.O:GroupBox1.O:CBLoggingEnable.Height">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBLoggingEnable.TabOrder" resname="O:FPreferences.O:GroupBox1.O:CBLoggingEnable.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBFont1.Left" resname="O:FPreferences.O:GroupBox1.O:CBFont1.Left">
+        <source>126</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBFont1.Top" resname="O:FPreferences.O:GroupBox1.O:CBFont1.Top">
+        <source>78</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBFont1.Width" resname="O:FPreferences.O:GroupBox1.O:CBFont1.Width">
+        <source>115</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBFont1.Height" resname="O:FPreferences.O:GroupBox1.O:CBFont1.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBFont1.TabOrder" resname="O:FPreferences.O:GroupBox1.O:CBFont1.TabOrder">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:BtReset1.Left" resname="O:FPreferences.O:GroupBox1.O:BtReset1.Left">
+        <source>166</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:BtReset1.Top" resname="O:FPreferences.O:GroupBox1.O:BtReset1.Top">
+        <source>297</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:BtReset1.Width" resname="O:FPreferences.O:GroupBox1.O:BtReset1.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:BtReset1.Height" resname="O:FPreferences.O:GroupBox1.O:BtReset1.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:BtReset1.Caption" resname="O:FPreferences.O:GroupBox1.O:BtReset1.Caption">
+        <source>'Reset'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:BtReset1.TabOrder" resname="O:FPreferences.O:GroupBox1.O:BtReset1.TabOrder">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.Left" resname="O:FPreferences.O:GroupBox2.Left">
+        <source>280</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.Top" resname="O:FPreferences.O:GroupBox2.Top">
+        <source>27</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.Width" resname="O:FPreferences.O:GroupBox2.Width">
+        <source>254</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.Height" resname="O:FPreferences.O:GroupBox2.Height">
+        <source>343</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.Caption" resname="O:FPreferences.O:GroupBox2.Caption">
+        <source>'Typing settings'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.TabOrder" resname="O:FPreferences.O:GroupBox2.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:LCaret.Left" resname="O:FPreferences.O:GroupBox2.O:LCaret.Left">
+        <source>12</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:LCaret.Top" resname="O:FPreferences.O:GroupBox2.O:LCaret.Top">
+        <source>45</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">68</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:LCaret.Width" resname="O:FPreferences.O:GroupBox2.O:LCaret.Width">
+        <source>57</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:LCaret.Height" resname="O:FPreferences.O:GroupBox2.O:LCaret.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">70</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:LCaret.Caption" resname="O:FPreferences.O:GroupBox2.O:LCaret.Caption">
+        <source>'Caret type:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:LFont2.Left" resname="O:FPreferences.O:GroupBox2.O:LFont2.Left">
+        <source>12</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:LFont2.Top" resname="O:FPreferences.O:GroupBox2.O:LFont2.Top">
+        <source>81</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:LFont2.Width" resname="O:FPreferences.O:GroupBox2.O:LFont2.Width">
+        <source>63</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:LFont2.Height" resname="O:FPreferences.O:GroupBox2.O:LFont2.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">75</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:LFont2.Caption" resname="O:FPreferences.O:GroupBox2.O:LFont2.Caption">
+        <source>'Font family:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">76</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:LFontSize.Left" resname="O:FPreferences.O:GroupBox2.O:LFontSize.Left">
+        <source>12</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">77</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:LFontSize.Top" resname="O:FPreferences.O:GroupBox2.O:LFontSize.Top">
+        <source>121</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">78</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:LFontSize.Width" resname="O:FPreferences.O:GroupBox2.O:LFontSize.Width">
+        <source>49</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">79</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:LFontSize.Height" resname="O:FPreferences.O:GroupBox2.O:LFontSize.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:LFontSize.Caption" resname="O:FPreferences.O:GroupBox2.O:LFontSize.Caption">
+        <source>'Font size:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBCaret.Left" resname="O:FPreferences.O:GroupBox2.O:CBCaret.Left">
+        <source>126</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBCaret.Top" resname="O:FPreferences.O:GroupBox2.O:CBCaret.Top">
+        <source>42</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBCaret.Width" resname="O:FPreferences.O:GroupBox2.O:CBCaret.Width">
+        <source>115</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">84</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBCaret.Height" resname="O:FPreferences.O:GroupBox2.O:CBCaret.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBCaret.TabOrder" resname="O:FPreferences.O:GroupBox2.O:CBCaret.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">86</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBCaret.Items.Strings[0]" resname="O:FPreferences.O:GroupBox2.O:CBCaret.Items.Strings[0]">
+        <source>'Bar'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">87</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBCaret.Items.Strings[1]" resname="O:FPreferences.O:GroupBox2.O:CBCaret.Items.Strings[1]">
+        <source>'Underline'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">88</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBMistake.Left" resname="O:FPreferences.O:GroupBox2.O:CBMistake.Left">
+        <source>12</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">89</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBMistake.Top" resname="O:FPreferences.O:GroupBox2.O:CBMistake.Top">
+        <source>159</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">90</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBMistake.Width" resname="O:FPreferences.O:GroupBox2.O:CBMistake.Width">
+        <source>229</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">91</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBMistake.Height" resname="O:FPreferences.O:GroupBox2.O:CBMistake.Height">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">92</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBMistake.Alignment" resname="O:FPreferences.O:GroupBox2.O:CBMistake.Alignment">
+        <source>taLeftJustify</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">93</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBMistake.Caption" resname="O:FPreferences.O:GroupBox2.O:CBMistake.Caption">
+        <source>'Stop on mistake:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">94</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBMistake.TabOrder" resname="O:FPreferences.O:GroupBox2.O:CBMistake.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">95</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBSeqMistakes.Left" resname="O:FPreferences.O:GroupBox2.O:CBSeqMistakes.Left">
+        <source>12</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">96</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBSeqMistakes.Top" resname="O:FPreferences.O:GroupBox2.O:CBSeqMistakes.Top">
+        <source>192</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">97</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBSeqMistakes.Width" resname="O:FPreferences.O:GroupBox2.O:CBSeqMistakes.Width">
+        <source>229</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">98</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBSeqMistakes.Height" resname="O:FPreferences.O:GroupBox2.O:CBSeqMistakes.Height">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">99</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBSeqMistakes.Alignment" resname="O:FPreferences.O:GroupBox2.O:CBSeqMistakes.Alignment">
+        <source>taLeftJustify</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">100</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBSeqMistakes.Caption" resname="O:FPreferences.O:GroupBox2.O:CBSeqMistakes.Caption">
+        <source>'Count sequential mistakes:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">101</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBSeqMistakes.TabOrder" resname="O:FPreferences.O:GroupBox2.O:CBSeqMistakes.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">102</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBSpeed.Left" resname="O:FPreferences.O:GroupBox2.O:CBSpeed.Left">
+        <source>12</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">103</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBSpeed.Top" resname="O:FPreferences.O:GroupBox2.O:CBSpeed.Top">
+        <source>225</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">104</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBSpeed.Width" resname="O:FPreferences.O:GroupBox2.O:CBSpeed.Width">
+        <source>229</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">105</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBSpeed.Height" resname="O:FPreferences.O:GroupBox2.O:CBSpeed.Height">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">106</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBSpeed.Alignment" resname="O:FPreferences.O:GroupBox2.O:CBSpeed.Alignment">
+        <source>taLeftJustify</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">107</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBSpeed.Caption" resname="O:FPreferences.O:GroupBox2.O:CBSpeed.Caption">
+        <source>'Display speed:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">108</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBSpeed.TabOrder" resname="O:FPreferences.O:GroupBox2.O:CBSpeed.TabOrder">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">109</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBFont2.Left" resname="O:FPreferences.O:GroupBox2.O:CBFont2.Left">
+        <source>126</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">110</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBFont2.Top" resname="O:FPreferences.O:GroupBox2.O:CBFont2.Top">
+        <source>78</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">111</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBFont2.Width" resname="O:FPreferences.O:GroupBox2.O:CBFont2.Width">
+        <source>115</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">112</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBFont2.Height" resname="O:FPreferences.O:GroupBox2.O:CBFont2.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">113</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBFont2.TabOrder" resname="O:FPreferences.O:GroupBox2.O:CBFont2.TabOrder">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">114</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBAccuracy.Left" resname="O:FPreferences.O:GroupBox2.O:CBAccuracy.Left">
+        <source>12</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">115</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBAccuracy.Top" resname="O:FPreferences.O:GroupBox2.O:CBAccuracy.Top">
+        <source>258</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">116</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBAccuracy.Width" resname="O:FPreferences.O:GroupBox2.O:CBAccuracy.Width">
+        <source>229</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">117</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBAccuracy.Height" resname="O:FPreferences.O:GroupBox2.O:CBAccuracy.Height">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">118</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBAccuracy.Alignment" resname="O:FPreferences.O:GroupBox2.O:CBAccuracy.Alignment">
+        <source>taLeftJustify</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">119</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBAccuracy.Caption" resname="O:FPreferences.O:GroupBox2.O:CBAccuracy.Caption">
+        <source>'Display accuracy:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">120</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:CBAccuracy.TabOrder" resname="O:FPreferences.O:GroupBox2.O:CBAccuracy.TabOrder">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">121</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:ComboBox1.Left" resname="O:FPreferences.O:GroupBox2.O:ComboBox1.Left">
+        <source>126</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">122</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:ComboBox1.Top" resname="O:FPreferences.O:GroupBox2.O:ComboBox1.Top">
+        <source>118</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">123</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:ComboBox1.Width" resname="O:FPreferences.O:GroupBox2.O:ComboBox1.Width">
+        <source>115</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">124</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:ComboBox1.Height" resname="O:FPreferences.O:GroupBox2.O:ComboBox1.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">125</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:ComboBox1.TabOrder" resname="O:FPreferences.O:GroupBox2.O:ComboBox1.TabOrder">
+        <source>6</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">126</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:ComboBox1.Items.Strings[0]" resname="O:FPreferences.O:GroupBox2.O:ComboBox1.Items.Strings[0]">
+        <source>'9'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">127</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:ComboBox1.Items.Strings[1]" resname="O:FPreferences.O:GroupBox2.O:ComboBox1.Items.Strings[1]">
+        <source>'10'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">128</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:ComboBox1.Items.Strings[2]" resname="O:FPreferences.O:GroupBox2.O:ComboBox1.Items.Strings[2]">
+        <source>'12'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">129</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:ComboBox1.Items.Strings[3]" resname="O:FPreferences.O:GroupBox2.O:ComboBox1.Items.Strings[3]">
+        <source>'14'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">130</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:BtReset2.Left" resname="O:FPreferences.O:GroupBox2.O:BtReset2.Left">
+        <source>165</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">131</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:BtReset2.Top" resname="O:FPreferences.O:GroupBox2.O:BtReset2.Top">
+        <source>297</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">132</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:BtReset2.Width" resname="O:FPreferences.O:GroupBox2.O:BtReset2.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">133</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:BtReset2.Height" resname="O:FPreferences.O:GroupBox2.O:BtReset2.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">134</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:BtReset2.Caption" resname="O:FPreferences.O:GroupBox2.O:BtReset2.Caption">
+        <source>'Reset'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">135</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:GroupBox2.O:BtReset2.TabOrder" resname="O:FPreferences.O:GroupBox2.O:BtReset2.TabOrder">
+        <source>7</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">136</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:BtCancel.Left" resname="O:FPreferences.O:BtCancel.Left">
+        <source>449</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">137</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:BtCancel.Top" resname="O:FPreferences.O:BtCancel.Top">
+        <source>408</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">138</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:BtCancel.Width" resname="O:FPreferences.O:BtCancel.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">139</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:BtCancel.Height" resname="O:FPreferences.O:BtCancel.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">140</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:BtCancel.Caption" resname="O:FPreferences.O:BtCancel.Caption">
+        <source>'Cancel'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">141</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:BtCancel.ModalResult" resname="O:FPreferences.O:BtCancel.ModalResult">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">142</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:BtCancel.TabOrder" resname="O:FPreferences.O:BtCancel.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">143</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:BtAccept.Left" resname="O:FPreferences.O:BtAccept.Left">
+        <source>352</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">144</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:BtAccept.Top" resname="O:FPreferences.O:BtAccept.Top">
+        <source>408</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">145</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:BtAccept.Width" resname="O:FPreferences.O:BtAccept.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">146</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:BtAccept.Height" resname="O:FPreferences.O:BtAccept.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">147</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:BtAccept.Caption" resname="O:FPreferences.O:BtAccept.Caption">
+        <source>'Accept'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">148</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:BtAccept.ModalResult" resname="O:FPreferences.O:BtAccept.ModalResult">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">149</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPreferences.O:BtAccept.TabOrder" resname="O:FPreferences.O:BtAccept.TabOrder">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">150</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

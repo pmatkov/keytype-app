@@ -58,7 +58,7 @@
         <ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\release\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
         <ProjectType>CppVCLApplication</ProjectType>
         <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
-        <AllPackageLibs>rtl.lib;vcl.lib;vclimg.lib;vclactnband.lib;vclx.lib;xmlrtl.lib</AllPackageLibs>
+        <AllPackageLibs>rtl.lib;vcl.lib;vclimg.lib;vclactnband.lib;vclx.lib;xmlrtl.lib;dbrtl.lib;FireDAC.lib;FireDACCommonDriver.lib;FireDACCommon.lib;vclFireDAC.lib;vcldb.lib;vclwinx.lib;bindengine.lib;FireDACMySQLDriver.lib;soaprtl.lib;inet.lib;vclie.lib;vcledge.lib</AllPackageLibs>
         <_TCHARMapping>wchar_t</_TCHARMapping>
         <Multithreaded>true</Multithreaded>
         <Icon_MainIcon>$(BDS)\bin\cbuilder_PROJECTICON.ico</Icon_MainIcon>
@@ -68,6 +68,7 @@
         <IncludePath>Tests\;$(IncludePath)</IncludePath>
         <ILINK_LibraryPath>Tests\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
         <Custom_Styles>Diamond|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Diamond.vsf;&quot;Windows11 Modern Dark|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Windows11_Modern_Dark.vsf&quot;;&quot;Windows11 Modern Light|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Windows11_Modern_Light.vsf&quot;</Custom_Styles>
+        <ILINK_GenerateDRC>True</ILINK_GenerateDRC>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <PackageImports>adortl;appanalytics;bcbie;bcbsmp;bindcomp;bindcompdbx;bindcompfmx;bindcompvcl;bindcompvclsmp;bindcompvclwinx;bindengine;CloudService;CustomIPTransport;DataSnapClient;DataSnapCommon;DataSnapConnectors;DatasnapConnectorsFreePascal;DataSnapFireDAC;DataSnapIndy10ServerTransport;DataSnapNativeClient;DataSnapProviderClient;DataSnapServer;DataSnapServerMidas;dbexpress;dbrtl;dbxcds;DbxClientDriver;DbxCommonDriver;DBXDb2Driver;DBXFirebirdDriver;DBXInformixDriver;DBXInterBaseDriver;DBXMSSQLDriver;DBXMySQLDriver;DBXOdbcDriver;DBXOracleDriver;DBXSqliteDriver;DBXSybaseASADriver;DBXSybaseASEDriver;dsnap;dsnapcon;dsnapxml;emsclient;emsclientfiredac;emsedge;emshosting;emsserverresource;FireDAC;FireDACADSDriver;FireDACASADriver;FireDACCommon;FireDACCommonDriver;FireDACCommonODBC;FireDACDb2Driver;FireDACDBXDriver;FireDACDSDriver;FireDACIBDriver;FireDACInfxDriver;FireDACMongoDBDriver;FireDACMSAccDriver;FireDACMSSQLDriver;FireDACMySQLDriver;FireDACODBCDriver;FireDACOracleDriver;FireDACPgDriver;FireDACSqliteDriver;FireDACTDataDriver;fmx;fmxase;fmxdae;fmxFireDAC;fmxobj;frx28;frxDB28;frxe28;IndyCore;IndyIPClient;IndyIPCommon;IndyIPServer;IndyProtocols;IndySystem;inet;inetdb;inetdbxpress;RESTBackendComponents;RESTComponents;rtl;soapmidas;soaprtl;soapserver;tethering;vcl;vclactnband;vcldb;vcldsnap;vcledge;vclFireDAC;vclie;vclimg;VCLRESTComponents;VclSmp;vcltouch;vclwinx;vclx;xmlrtl;$(PackageImports)</PackageImports>
@@ -113,7 +114,7 @@
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
         <ILINK_LibraryPath>$(BDSLIB)\$(PLATFORM)$(CC_SUFFIX)\debug;$(ILINK_LibraryPath)</ILINK_LibraryPath>
-        <LinkPackageImports>rtl.bpi;vcl.bpi;vclimg.bpi;vclactnband.bpi;vclx.bpi;xmlrtl.bpi</LinkPackageImports>
+        <LinkPackageImports>rtl.bpi;vcl.bpi;vclimg.bpi;vclactnband.bpi;vclx.bpi;xmlrtl.bpi;dbrtl.bpi;FireDAC.bpi;FireDACCommonDriver.bpi;FireDACCommon.bpi;vclFireDAC.bpi;vcldb.bpi;vclwinx.bpi;bindengine.bpi;FireDACMySQLDriver.bpi;soaprtl.bpi;inet.bpi;vclie.bpi;vcledge.bpi</LinkPackageImports>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
@@ -127,6 +128,13 @@
         <LinkPackageImports>rtl.bpi;vcl.bpi</LinkPackageImports>
     </PropertyGroup>
     <ItemGroup>
+        <CppCompile Include="AuthenticationForm.cpp">
+            <VirtualFolder>{F6B7C7E8-2F86-4A67-B4A3-6E99C1D2C773}</VirtualFolder>
+            <Form>FAuthentication</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>AuthenticationForm.h</DependentOn>
+            <BuildOrder>21</BuildOrder>
+        </CppCompile>
         <CppCompile Include="AuthenticationService.cpp">
             <VirtualFolder>{26BC7E46-ECBD-4AA7-B03E-17DAA77318AD}</VirtualFolder>
             <DependentOn>AuthenticationService.h</DependentOn>
@@ -144,6 +152,14 @@
             <DesignClass>TFrame</DesignClass>
             <DependentOn>CustomTextFrame.h</DependentOn>
             <BuildOrder>29</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="DataModule.cpp">
+            <VirtualFolder>{8FB63F96-DB9B-44EE-BA3E-3A48525DE697}</VirtualFolder>
+            <Form>DataModule1</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+            <DependentOn>DataModule.h</DependentOn>
+            <BuildOrder>38</BuildOrder>
         </CppCompile>
         <CppCompile Include="DcWord.cpp">
             <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
@@ -209,16 +225,17 @@
             <BuildOrder>5</BuildOrder>
         </CppCompile>
         <CppCompile Include="Logger.cpp">
-            <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
+            <VirtualFolder>{26BC7E46-ECBD-4AA7-B03E-17DAA77318AD}</VirtualFolder>
             <DependentOn>Logger.h</DependentOn>
             <BuildOrder>35</BuildOrder>
         </CppCompile>
-        <CppCompile Include="LoginForm.cpp">
-            <VirtualFolder>{E8DD405D-5871-4098-BE73-2A4F48743690}</VirtualFolder>
-            <Form>FLogin</Form>
+        <CppCompile Include="LoginFrame.cpp">
+            <VirtualFolder>{F6B7C7E8-2F86-4A67-B4A3-6E99C1D2C773}</VirtualFolder>
+            <Form>FrLogin</Form>
             <FormType>dfm</FormType>
-            <DependentOn>LoginForm.h</DependentOn>
-            <BuildOrder>21</BuildOrder>
+            <DesignClass>TFrame</DesignClass>
+            <DependentOn>LoginFrame.h</DependentOn>
+            <BuildOrder>37</BuildOrder>
         </CppCompile>
         <CppCompile Include="MainForm.cpp">
             <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
@@ -272,6 +289,21 @@
             <VirtualFolder>{893884F7-72F0-483F-8A49-6A63980DD6D7}</VirtualFolder>
             <DependentOn>PracticeSession.h</DependentOn>
             <BuildOrder>9</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="PreferencesForm.cpp">
+            <VirtualFolder>{B49A349D-1438-45E5-B4FD-36C3DF2C665B}</VirtualFolder>
+            <Form>FPreferences</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>PreferencesForm.h</DependentOn>
+            <BuildOrder>39</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="RegisterFrame.cpp">
+            <VirtualFolder>{F6B7C7E8-2F86-4A67-B4A3-6E99C1D2C773}</VirtualFolder>
+            <Form>FrRegister</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+            <DependentOn>RegisterFrame.h</DependentOn>
+            <BuildOrder>38</BuildOrder>
         </CppCompile>
         <CppCompile Include="Session.cpp">
             <VirtualFolder>{893884F7-72F0-483F-8A49-6A63980DD6D7}</VirtualFolder>
@@ -329,12 +361,16 @@
             <BuildOrder>13</BuildOrder>
         </CppCompile>
         <FormResources Include="PracticeFrame.dfm"/>
-        <FormResources Include="PracticeForm.dfm"/>
+        <FormResources Include="PreferencesForm.dfm"/>
+        <FormResources Include="RegisterFrame.dfm"/>
         <FormResources Include="MainFrame.dfm"/>
         <FormResources Include="OptionsFrame.dfm"/>
+        <FormResources Include="PracticeForm.dfm"/>
         <FormResources Include="ExternalSourcesFrame.dfm"/>
+        <FormResources Include="AuthenticationForm.dfm"/>
         <FormResources Include="CustomTextFrame.dfm"/>
-        <FormResources Include="LoginForm.dfm"/>
+        <FormResources Include="DataModule.dfm"/>
+        <FormResources Include="LoginFrame.dfm"/>
         <FormResources Include="MainForm.dfm"/>
         <FormResources Include="GeneratedTextFrame.dfm"/>
         <BuildConfiguration Include="Base">
@@ -365,10 +401,13 @@
                 </Source>
                 <Folders/>
                 <VFOLDERS>
+                    <VFOLDER ID="{8FB63F96-DB9B-44EE-BA3E-3A48525DE697}" name="Data"/>
                     <VFOLDER ID="{C9B9CF94-D644-46A8-AFE2-4CDDCCC37F87}" name="Exceptions"/>
                     <VFOLDER ID="{E8DD405D-5871-4098-BE73-2A4F48743690}" name="Forms">
+                        <VFOLDER ID="{F6B7C7E8-2F86-4A67-B4A3-6E99C1D2C773}" name="Authentication"/>
                         <VFOLDER ID="{84360D3D-4874-46E9-88EE-445E3FC0314D}" name="MainForm"/>
                         <VFOLDER ID="{78CB0057-7BC4-4B83-9609-C573EB0EAF04}" name="OptionsForm"/>
+                        <VFOLDER ID="{B49A349D-1438-45E5-B4FD-36C3DF2C665B}" name="PreferencesForm"/>
                     </VFOLDER>
                     <VFOLDER ID="{B5D24A8B-BE9F-49B1-8089-0D8EBAD58A08}" name="Input"/>
                     <VFOLDER ID="{23B73507-EEA9-420C-B3B7-961C43A1A22D}" name="Other"/>
@@ -386,6 +425,30 @@
                     <Excluded_Packages Name="$(BDSBIN)\dclofficexp280.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
                     <Excluded_Packages Name="C:\Program Files (x86)\FastReports\LibD28\dclfrxtee28.bpl">FastReport VCL Tee Components</Excluded_Packages>
                 </Excluded_Packages>
+                <Language>
+                    <Language Name="ProjectLang">$0000041A</Language>
+                    <Language Name="ActiveLang">HRV</Language>
+                </Language>
+                <Resource_DLL_Projects>
+                    <Resource_DLL_Projects Name="Item0">Croatian (Croatia)*$0000041A*HRV*HRV</Resource_DLL_Projects>
+                    <Resource_DLL_Projects Name="Item1">English (United Kingdom)*$00000809*ENG*ENG</Resource_DLL_Projects>
+                </Resource_DLL_Projects>
+                <RDP_Source_Files>
+                    <RDP_Source_Files Name="Item0">PracticeFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item1">PreferencesForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item2">RegisterFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item3">MainFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item4">OptionsFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item5">PracticeForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item6">ExternalSourcesFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item7">AuthenticationForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item8">CustomTextFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item9">DataModule.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item10">LoginFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item11">MainForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item12">GeneratedTextFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item13">Win32\Debug\KeyType.drc</RDP_Source_Files>
+                </RDP_Source_Files>
             </CPlusPlusBuilder.Personality>
             <Deployment Version="4">
                 <DeployFile Condition="'$(DynamicRTL)'=='true'" LocalName="$(BDS)\Redist\osx32\libcgcrtl.dylib" Class="DependencyModule">

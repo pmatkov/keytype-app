@@ -5,7 +5,12 @@
 *.dll
 
 # Build directories
+
 Debug/
 Release/
 __history/
 __astcache/
+
+# Other
+Log/
+__recovery/

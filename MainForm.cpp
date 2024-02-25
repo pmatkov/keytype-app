@@ -24,30 +24,21 @@ __fastcall TFMain::TFMain(TComponent* Owner) : TForm(Owner) {
     parser = std::make_unique<Parser>();
 	practiceSession = std::make_unique<PracticeSession>();
 
+    // create frames
 	FrMain = UIUtils::createFrame<TFrMain>(this);
 	FrPractice = UIUtils::createFrame<TFrPractice>(this, parser.get(), practiceSession.get());
 
 	UIUtils::setFrameVisibility<TFrMain>(FrMain, true);
 	UIUtils::setFrameVisibility<TFrPractice>(FrPractice, false);
 
-//  retrieve handle to Rich Edit control (practice text) and set subclass procedure
+//  set subclass procedure for Rich Edit control (practice text)
 	REHandle = FrPractice->RETextBox->Handle;
 	SetWindowSubclass(REHandle, &RESubclass, 1, reinterpret_cast<DWORD_PTR>(this));
 
     LOGGER(LogLevel::Debug, "Created main form");
 }
 
-
-void TFMain::setPracticeForm(TFPractice *FPractice) {
-
-    if (FrPractice) {
-    	FrPractice->setPracticeForm(FPractice);
-    }
-
-}
-
 void TFMain::setMainSession(std::unique_ptr<MainSession> _mainSession) {
-
 
     if (_mainSession) {
        mainSession = std::move(_mainSession);
@@ -63,37 +54,25 @@ const MainSession * TFMain::getMainSession() const {
     return mainSession.get();
 }
 
-
-void TFMain::setPracticeSession(std::unique_ptr<PracticeSession> _practiceSession) {
-
-    if (_practiceSession) {
-       practiceSession = std::move(_practiceSession);
-       LOGGER(LogLevel::Debug, "Practice session moved");
-    }
-    else {
-        throw ENullPointerException();
-    }
-}
-
 const PracticeSession * TFMain::getPracticeSession() const {
 
     return practiceSession.get();
 }
 
-void TFMain::setParser(std::unique_ptr<Parser> _parser) {
+void TFMain::setPreferencesForm(TFPreferences *_FPreferences) {
 
-	if (_parser) {
-	   parser = std::move(_parser);
-       LOGGER(LogLevel::Debug, "Parser moved");
-	}
-      else {
-        throw ENullPointerException();
+    if (_FPreferences) {
+    	FPreferences =_FPreferences;
     }
+}
 
+void TFMain::setPracticeForm(TFPractice *FPractice) {
+
+    if (FrPractice) {
+    	FrPractice->setPracticeForm(FPractice);
+    }
 }
-const Parser * TFMain::getParser() const {
-    return parser.get();
-}
+
 
 // process char messages
 
@@ -116,12 +95,17 @@ void __fastcall TFMain::WndProc(Messages::TMessage &Message) {
                 }
                 else {
                     FrPractice->setPracticeStatus(Started);
+
+                    FrPractice->RETextBox->SetFocus();
+                    FrPractice->RETextBox->SelStart = 0;
+                    FrPractice->RETextBox->SelLength = 0;
+
                     LOGGER(LogLevel::Info, "Practice session started");
                 }
 
                 parser->setBufferingEnabled(true);
             }
-            else if (key  && parser->isBufferingEnabled()) {
+            else if (key && parser->isBufferingEnabled()) {
 
                 // check if the correct key was pressed
 
@@ -132,10 +116,9 @@ void __fastcall TFMain::WndProc(Messages::TMessage &Message) {
 
                 if (key == currentChar) {
 
-                	// if the correct key was pressed remove underline and set silver color
+                	// if the correct key was pressed remove underline and set color
 
                     if (practiceSession->isMistake()) {
-//                        UIUtils::setCharColor(FrPractice->RETextBox, currCharIndex, clRed);
                         practiceSession->setMistake(false);
                     }
                     else  {
@@ -147,10 +130,12 @@ void __fastcall TFMain::WndProc(Messages::TMessage &Message) {
                     UIUtils::setCharStyle(FrPractice->RETextBox, currCharIndex + 1, fsUnderline, true);
                 }
                 else {
-                    // if the wrong key was pressed remove underline and set red color
+                    // if the wrong key was pressed remove underline and set color
+
                     practiceSession->setMistake(true);
                     UIUtils::setCharColor(FrPractice->RETextBox, currCharIndex, clRed);
                 }
+                 FrPractice->RETextBox->SelStart = currCharIndex + 1;
             }
         }
         break;
@@ -159,9 +144,7 @@ void __fastcall TFMain::WndProc(Messages::TMessage &Message) {
             TForm::WndProc(Message);
         }
     }
-
 }
-
 
 /* 	intercept messages intended for Rich Edit control
  	hide caret when typing and display arrow cursor on hover
@@ -171,6 +154,7 @@ LRESULT CALLBACK TFMain::RESubclass(HWND hwnd, UINT msg, WPARAM wParam, LPARAM l
 {
 
 	switch (msg) {
+
 
 		case WM_SETFOCUS:
 			HideCaret(hwnd);
@@ -188,6 +172,11 @@ LRESULT CALLBACK TFMain::RESubclass(HWND hwnd, UINT msg, WPARAM wParam, LPARAM l
 			PostMessage(GetParent(hwnd), WM_CHAR, wParam, lParam);
 			break;
 
+        case WM_LBUTTONDOWN:
+        case WM_LBUTTONUP:
+        case WM_MOUSEMOVE:
+            return 0;
+
 		default:
             return DefSubclassProc(hwnd, msg, wParam, lParam);
 	}
@@ -203,6 +192,17 @@ void __fastcall TFMain::MenuSubitemPracticeNewClick(TObject *Sender)
 
 	UIUtils::switchFrames<TFrMain, TFrPractice>(FrMain, FrPractice);
     LOGGER(LogLevel::Debug, "Switch control to practice frame");
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFMain::MenuSubitemPreferencesClick(TObject *Sender)
+{
+
+    if (FPreferences->ShowModal() == mrOk) {
+    	LOGGER(LogLevel::Debug, "Preferences displayed");
+    }
+
 
 }
 //---------------------------------------------------------------------------

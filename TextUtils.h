@@ -18,10 +18,11 @@ class TextUtils
         static bool isEndChar(const wchar_t wchar);
         static UnicodeString trimCharacters(const UnicodeString &text, wchar_t wch);
         static std::vector<UnicodeString> splitTextIntoWords(const UnicodeString& line);
+        static bool isWordBreak(const UnicodeString& line, int index);
         static UnicodeString formatJson(const UnicodeString& string);
         static UnicodeString repeatChar(wchar_t wch, int count);
-
         static int findString(const std::vector<UnicodeString> &vec, const UnicodeString &string);
+
 };
 //---------------------------------------------------------------------------
 #endif

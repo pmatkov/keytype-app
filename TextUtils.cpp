@@ -1,9 +1,9 @@
 //---------------------------------------------------------------------------
 
 #include "TextUtils.h"
-#pragma hdrstop
 
 //---------------------------------------------------------------------------
+#pragma hdrstop
 #pragma package(smart_init)
 
 
@@ -119,6 +119,11 @@ std::vector<UnicodeString> TextUtils::splitTextIntoWords(const UnicodeString& li
 		return std::vector<UnicodeString>();
     }
 
+}
+
+bool TextUtils::isWordBreak(const UnicodeString& line, int index) {
+
+	return (iswgraph(line[index]) && iswspace(line[index+1])) || iswspace(line[index]) ? true  : false;
 }
 
 

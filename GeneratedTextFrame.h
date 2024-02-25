@@ -14,6 +14,7 @@
 #include <Vcl.ExtDlgs.hpp>
 #include <Vcl.AppEvnts.hpp>
 #include <vector>
+#include <memory>
 #include <optional>
 
 #include "WordList.h"
@@ -63,19 +64,18 @@ __published:	// IDE-managed Components
 	void __fastcall LVWordsMouseDown(TObject *Sender, TMouseButton Button, TShiftState Shift, int X, int Y);
 
 private:	// User declarations
-   std::vector<TToolButton*> buttons;
-   std::vector<WordList> wordListCollection;
-   Dictionary dictionary;
+
+	std::vector<std::unique_ptr<TToolButton>> buttons;
+   	std::vector<WordList> wordListCollection;
+   	Dictionary dictionary;
 
 public:		// User declarations
 	__fastcall TFrGeneratedText(TComponent* Owner);
-	__fastcall ~TFrGeneratedText();
 
      void displayTimedMessage(TTimer *timer, TLabel *label, const UnicodeString &msg);
 
     void createTBButtons(TToolBar* toolbar, int count);
-    void deleteTBButtons(std::vector<TToolButton*> buttons);
-    const std::vector<TToolButton*>& getButtons() const;
+	std::vector<TToolButton *> getButtons() const;
 
     void setGroupBoxState(TRadioGroup* radiogroup, TGroupBox *primary, TGroupBox *secondary);
 

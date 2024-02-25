@@ -35,11 +35,6 @@ __fastcall TFrGeneratedText::TFrGeneratedText(TComponent* Owner) : TFrame(Owner)
 
 }
 
- __fastcall TFrGeneratedText::~TFrGeneratedText() {
-
-    deleteTBButtons(buttons);
- }
-
  void TFrGeneratedText::displayTimedMessage(TTimer *timer, TLabel *label, const UnicodeString &msg) {
     label->Font->Color = clBlue;
     label->Caption = msg;
@@ -52,7 +47,7 @@ void TFrGeneratedText::createTBButtons(TToolBar* toolbar, int count) {
 
 	for (int i = 0; i < count; i++) {
 
-		buttons.push_back(new TToolButton(toolbar));
+		buttons.push_back(std::unique_ptr<TToolButton>(std::make_unique<TToolButton>(toolbar)));
 
         buttons[i]->Parent = TBLetters;
         buttons[i]->AutoSize = false;
@@ -65,12 +60,6 @@ void TFrGeneratedText::createTBButtons(TToolBar* toolbar, int count) {
     }
 }
 
- void TFrGeneratedText::deleteTBButtons(std::vector<TToolButton*> buttons) {
-
- 	for (int i = 0; i < buttons.size(); i++)  {
-    	delete buttons[i];
-    }
- }
 
    void TFrGeneratedText::loadWordLists(const UnicodeString &path, TComboBox *comboBox, TListView *listview, std::vector<WordList> &wordListCollection) {
 
@@ -91,9 +80,7 @@ void TFrGeneratedText::createTBButtons(TToolBar* toolbar, int count) {
         setComboBoxItems(comboBox, *filenames, 0);
         setListViewItems(listview, wordListCollection[comboBox->ItemIndex].getWordList());
     }
-
  }
-
 
  void  TFrGeneratedText::setComboBoxItems(TComboBox *comboBox, const std::vector<UnicodeString> &items, int defaultIndex) {
 
@@ -122,13 +109,14 @@ void TFrGeneratedText::createTBButtons(TToolBar* toolbar, int count) {
 
 
  void TFrGeneratedText::setGroupBoxState(TRadioGroup* radioGroup, TGroupBox *primary, TGroupBox *secondary) {
-    if (radioGroup->ItemIndex == 0) {
+    if (radioGroup->ItemIndex == -1 && radioGroup->ItemIndex == 0) {
 
     	UIUtils::switchControl(secondary, primary);
         UIUtils::disableChildControls(secondary);
         UIUtils::enableChildControls(primary);
 
-    } else {
+    }
+    else if (radioGroup->ItemIndex == 1) {
 
       	UIUtils::switchControl(primary, secondary);
         UIUtils::disableChildControls(primary);
@@ -163,21 +151,25 @@ void __fastcall TFrGeneratedText::BtBrowseClick(TObject *Sender) {
                 }
 
                 setListViewItems(LVWords, wordListCollection[CBTextFiles->ItemIndex].getWordList());
-
              }
 		 }
 	}
 }
 
 
- const std::vector<TToolButton*>& TFrGeneratedText::getButtons() const {
-	return buttons;
+std::vector<TToolButton *> TFrGeneratedText::getButtons() const {
+    std::vector<TToolButton *> btns;
+    for (const std::unique_ptr<TToolButton>& button : buttons) {
+        btns.push_back(button.get());
+    }
+    return btns;
 }
 
 
 void __fastcall TFrGeneratedText::CBSelectAllClick(TObject *Sender)
 {
-	for (TToolButton *button : buttons) {
+
+	for (const std::unique_ptr<TToolButton>& button : buttons) {
 		button->Down = CBSelectAll->Checked ? true : false;
 	}
 }

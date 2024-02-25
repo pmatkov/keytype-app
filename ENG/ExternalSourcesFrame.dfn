@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\ExternalSourcesFrame.dfm" source-language="hr-HR" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\ExternalSourcesFrame.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">45346.9495833333</prop>
+        <prop prop-type="OrigDateTime">45280.7263657407</prop>
+        <prop prop-type="XlatDateTime">45280.7263657407</prop>
+        <prop prop-type="Translated">0</prop>
+        <prop prop-type="UnTranslated">102</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:FrExternalSources.Left" resname="O:FrExternalSources.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TFrExternalSources</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.Top" resname="O:FrExternalSources.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TFrExternalSources</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.Width" resname="O:FrExternalSources.Width">
+        <source>517</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TFrExternalSources</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.Height" resname="O:FrExternalSources.Height">
+        <source>370</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TFrExternalSources</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.TabOrder" resname="O:FrExternalSources.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFrExternalSources</prop><prop prop-type="Localize">0</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LAuthor.Left" resname="O:FrExternalSources.O:LAuthor.Left">
+        <source>163</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LAuthor.Top" resname="O:FrExternalSources.O:LAuthor.Top">
+        <source>207</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LAuthor.Width" resname="O:FrExternalSources.O:LAuthor.Width">
+        <source>40</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LAuthor.Height" resname="O:FrExternalSources.O:LAuthor.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LAuthor.Caption" resname="O:FrExternalSources.O:LAuthor.Caption">
+        <source>'Author:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LTitle.Left" resname="O:FrExternalSources.O:LTitle.Left">
+        <source>283</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LTitle.Top" resname="O:FrExternalSources.O:LTitle.Top">
+        <source>207</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LTitle.Width" resname="O:FrExternalSources.O:LTitle.Width">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LTitle.Height" resname="O:FrExternalSources.O:LTitle.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LTitle.Caption" resname="O:FrExternalSources.O:LTitle.Caption">
+        <source>'Title:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LYear.Left" resname="O:FrExternalSources.O:LYear.Left">
+        <source>403</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LYear.Top" resname="O:FrExternalSources.O:LYear.Top">
+        <source>207</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LYear.Width" resname="O:FrExternalSources.O:LYear.Width">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LYear.Height" resname="O:FrExternalSources.O:LYear.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LYear.Caption" resname="O:FrExternalSources.O:LYear.Caption">
+        <source>'Year:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LParagraph.Left" resname="O:FrExternalSources.O:LParagraph.Left">
+        <source>163</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LParagraph.Top" resname="O:FrExternalSources.O:LParagraph.Top">
+        <source>260</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LParagraph.Width" resname="O:FrExternalSources.O:LParagraph.Width">
+        <source>57</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LParagraph.Height" resname="O:FrExternalSources.O:LParagraph.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LParagraph.Caption" resname="O:FrExternalSources.O:LParagraph.Caption">
+        <source>'Paragraph:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:TVLiteratureCategories.Left" resname="O:FrExternalSources.O:TVLiteratureCategories.Left">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TTreeView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:TVLiteratureCategories.Top" resname="O:FrExternalSources.O:TVLiteratureCategories.Top">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TTreeView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:TVLiteratureCategories.Width" resname="O:FrExternalSources.O:TVLiteratureCategories.Width">
+        <source>148</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TTreeView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:TVLiteratureCategories.Height" resname="O:FrExternalSources.O:TVLiteratureCategories.Height">
+        <source>337</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TTreeView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:TVLiteratureCategories.HideSelection" resname="O:FrExternalSources.O:TVLiteratureCategories.HideSelection">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TTreeView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:TVLiteratureCategories.Indent" resname="O:FrExternalSources.O:TVLiteratureCategories.Indent">
+        <source>19</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TTreeView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:TVLiteratureCategories.ReadOnly" resname="O:FrExternalSources.O:TVLiteratureCategories.ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TTreeView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:TVLiteratureCategories.TabOrder" resname="O:FrExternalSources.O:TVLiteratureCategories.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TTreeView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:TVLiteratureCategories.OnChange" resname="O:FrExternalSources.O:TVLiteratureCategories.OnChange">
+        <source>TVLiteratureCategoriesChange</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TTreeView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:TVLiteratureCategories.Items.NodeData" resname="O:FrExternalSources.O:TVLiteratureCategories.Items.NodeData">
+        <source>0301000000280000000000000000000000FFFFFFFFFFFFFFFF000000000000000002000000010542006F006F006B0073002C0000000000000000000000FFFFFFFFFFFFFFFF0000000000000000030000000107460069006300740069006F006E00280000000000000000000000FFFFFFFFFFFFFFFF00000000000000000000000001054400720061006D0061002C0000000000000000000000FFFFFFFFFFFFFFFF000000000000000000000000010743006C00610073007300690063002C0000000000000000000000FFFFFFFFFFFFFFFF0000000000000000000000000107460061006E007400610073007900340000000000000000000000FFFFFFFFFFFFFFFF000000000000000002000000010B4E006F006E002D00460069006300740069006F006E002C0000000000000000000000FFFFFFFFFFFFFFFF000000000000000000000000010753006300690065006E0063006500320000000000000000000000FFFFFFFFFFFFFFFF000000000000000000000000010A5000680069006C006F0073006F00700068007900</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TTreeView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">{</prop><prop prop-type="Close">}</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LVLiteratureDetails.Left" resname="O:FrExternalSources.O:LVLiteratureDetails.Left">
+        <source>163</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LVLiteratureDetails.Top" resname="O:FrExternalSources.O:LVLiteratureDetails.Top">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LVLiteratureDetails.Width" resname="O:FrExternalSources.O:LVLiteratureDetails.Width">
+        <source>351</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LVLiteratureDetails.Height" resname="O:FrExternalSources.O:LVLiteratureDetails.Height">
+        <source>94</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LVLiteratureDetails.Columns[0].Caption" resname="O:FrExternalSources.O:LVLiteratureDetails.Columns[0].Caption">
+        <source>'Author'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LVLiteratureDetails.Columns[0].Width" resname="O:FrExternalSources.O:LVLiteratureDetails.Columns[0].Width">
+        <source>110</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LVLiteratureDetails.Columns[1].Caption" resname="O:FrExternalSources.O:LVLiteratureDetails.Columns[1].Caption">
+        <source>'Title'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LVLiteratureDetails.Columns[1].Width" resname="O:FrExternalSources.O:LVLiteratureDetails.Columns[1].Width">
+        <source>180</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LVLiteratureDetails.Columns[2].Caption" resname="O:FrExternalSources.O:LVLiteratureDetails.Columns[2].Caption">
+        <source>'Year'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LVLiteratureDetails.Columns[2].Width" resname="O:FrExternalSources.O:LVLiteratureDetails.Columns[2].Width">
+        <source>55</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LVLiteratureDetails.MultiSelect" resname="O:FrExternalSources.O:LVLiteratureDetails.MultiSelect">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LVLiteratureDetails.ReadOnly" resname="O:FrExternalSources.O:LVLiteratureDetails.ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LVLiteratureDetails.RowSelect" resname="O:FrExternalSources.O:LVLiteratureDetails.RowSelect">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LVLiteratureDetails.TabOrder" resname="O:FrExternalSources.O:LVLiteratureDetails.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LVLiteratureDetails.ViewStyle" resname="O:FrExternalSources.O:LVLiteratureDetails.ViewStyle">
+        <source>vsReport</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LVLiteratureDetails.OnMouseDown" resname="O:FrExternalSources.O:LVLiteratureDetails.OnMouseDown">
+        <source>LVLiteratureDetailsMouseDown</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:LVLiteratureDetails.OnSelectItem" resname="O:FrExternalSources.O:LVLiteratureDetails.OnSelectItem">
+        <source>LVLiteratureDetailsSelectItem</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:MParagraph.Left" resname="O:FrExternalSources.O:MParagraph.Left">
+        <source>163</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:MParagraph.Top" resname="O:FrExternalSources.O:MParagraph.Top">
+        <source>109</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:MParagraph.Width" resname="O:FrExternalSources.O:MParagraph.Width">
+        <source>351</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:MParagraph.Height" resname="O:FrExternalSources.O:MParagraph.Height">
+        <source>84</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:MParagraph.Lines.Strings[0]" resname="O:FrExternalSources.O:MParagraph.Lines.Strings[0]">
+        <source>''</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:MParagraph.ReadOnly" resname="O:FrExternalSources.O:MParagraph.ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:MParagraph.ScrollBars" resname="O:FrExternalSources.O:MParagraph.ScrollBars">
+        <source>ssVertical</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:MParagraph.TabOrder" resname="O:FrExternalSources.O:MParagraph.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:EAuthor.Left" resname="O:FrExternalSources.O:EAuthor.Left">
+        <source>163</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:EAuthor.Top" resname="O:FrExternalSources.O:EAuthor.Top">
+        <source>228</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:EAuthor.Width" resname="O:FrExternalSources.O:EAuthor.Width">
+        <source>108</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:EAuthor.Height" resname="O:FrExternalSources.O:EAuthor.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:EAuthor.TabOrder" resname="O:FrExternalSources.O:EAuthor.TabOrder">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:ETitle.Left" resname="O:FrExternalSources.O:ETitle.Left">
+        <source>283</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:ETitle.Top" resname="O:FrExternalSources.O:ETitle.Top">
+        <source>228</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:ETitle.Width" resname="O:FrExternalSources.O:ETitle.Width">
+        <source>111</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:ETitle.Height" resname="O:FrExternalSources.O:ETitle.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.94958875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">68</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:ETitle.TabOrder" resname="O:FrExternalSources.O:ETitle.TabOrder">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:EYear.Left" resname="O:FrExternalSources.O:EYear.Left">
+        <source>406</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">70</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:EYear.Top" resname="O:FrExternalSources.O:EYear.Top">
+        <source>228</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:EYear.Width" resname="O:FrExternalSources.O:EYear.Width">
+        <source>108</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:EYear.Height" resname="O:FrExternalSources.O:EYear.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:EYear.TabOrder" resname="O:FrExternalSources.O:EYear.TabOrder">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:EParagraph.Left" resname="O:FrExternalSources.O:EParagraph.Left">
+        <source>163</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">75</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:EParagraph.Top" resname="O:FrExternalSources.O:EParagraph.Top">
+        <source>281</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">76</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:EParagraph.Width" resname="O:FrExternalSources.O:EParagraph.Width">
+        <source>351</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">77</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:EParagraph.Height" resname="O:FrExternalSources.O:EParagraph.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">78</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:EParagraph.TabOrder" resname="O:FrExternalSources.O:EParagraph.TabOrder">
+        <source>6</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">79</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:BtDelete2.Left" resname="O:FrExternalSources.O:BtDelete2.Left">
+        <source>387</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:BtDelete2.Top" resname="O:FrExternalSources.O:BtDelete2.Top">
+        <source>317</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:BtDelete2.Width" resname="O:FrExternalSources.O:BtDelete2.Width">
+        <source>58</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:BtDelete2.Height" resname="O:FrExternalSources.O:BtDelete2.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:BtDelete2.Caption" resname="O:FrExternalSources.O:BtDelete2.Caption">
+        <source>'Delete'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">84</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:BtDelete2.Enabled" resname="O:FrExternalSources.O:BtDelete2.Enabled">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:BtDelete2.TabOrder" resname="O:FrExternalSources.O:BtDelete2.TabOrder">
+        <source>7</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">86</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:BtDelete2.OnClick" resname="O:FrExternalSources.O:BtDelete2.OnClick">
+        <source>BtDelete2Click</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">87</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:BtAddSave2.Left" resname="O:FrExternalSources.O:BtAddSave2.Left">
+        <source>456</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">88</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:BtAddSave2.Top" resname="O:FrExternalSources.O:BtAddSave2.Top">
+        <source>317</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">89</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:BtAddSave2.Width" resname="O:FrExternalSources.O:BtAddSave2.Width">
+        <source>58</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">90</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:BtAddSave2.Height" resname="O:FrExternalSources.O:BtAddSave2.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">91</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:BtAddSave2.Caption" resname="O:FrExternalSources.O:BtAddSave2.Caption">
+        <source>'Add'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">92</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:BtAddSave2.TabOrder" resname="O:FrExternalSources.O:BtAddSave2.TabOrder">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">93</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:BtAddSave2.OnClick" resname="O:FrExternalSources.O:BtAddSave2.OnClick">
+        <source>BtAddSave2Click</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">94</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:XMLTransform.Left" resname="O:FrExternalSources.O:XMLTransform.Left">
+        <source>282</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">95</prop><prop prop-type="Type">TXMLTransform</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:XMLTransform.Top" resname="O:FrExternalSources.O:XMLTransform.Top">
+        <source>138</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">96</prop><prop prop-type="Type">TXMLTransform</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:XMLDocument.Active" resname="O:FrExternalSources.O:XMLDocument.Active">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">97</prop><prop prop-type="Type">TXMLDocument</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:XMLDocument.FileName" resname="O:FrExternalSources.O:XMLDocument.FileName">
+        <source>'C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Data\books.xml'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">98</prop><prop prop-type="Type">TXMLDocument</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:XMLDocument.NodeIndentStr" resname="O:FrExternalSources.O:XMLDocument.NodeIndentStr">
+        <source>#9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">99</prop><prop prop-type="Type">TXMLDocument</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:XMLDocument.Options" resname="O:FrExternalSources.O:XMLDocument.Options">
+        <source>[doNodeAutoCreate, doNodeAutoIndent, doAttrNull, doAutoPrefix, doNamespaceDecl]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">100</prop><prop prop-type="Type">TXMLDocument</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:XMLDocument.Left" resname="O:FrExternalSources.O:XMLDocument.Left">
+        <source>378</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">101</prop><prop prop-type="Type">TXMLDocument</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrExternalSources.O:XMLDocument.Top" resname="O:FrExternalSources.O:XMLDocument.Top">
+        <source>142</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495887616</prop><prop prop-type="Status">0</prop><prop prop-type="Order">102</prop><prop prop-type="Type">TXMLDocument</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

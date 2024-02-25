@@ -9,6 +9,12 @@
         <Projects Include="Test\KeyTypeTests.cbproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="HRV\KeyType_HRV.bdsproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ENG\KeyType_ENG.bdsproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -35,14 +41,32 @@
     <Target Name="KeyTypeTests:Make">
         <MSBuild Projects="Test\KeyTypeTests.cbproj" Targets="Make"/>
     </Target>
+    <Target Name="KeyType_HRV">
+        <MSBuild Projects="HRV\KeyType_HRV.bdsproj"/>
+    </Target>
+    <Target Name="KeyType_HRV:Clean">
+        <MSBuild Projects="HRV\KeyType_HRV.bdsproj" Targets="Clean"/>
+    </Target>
+    <Target Name="KeyType_HRV:Make">
+        <MSBuild Projects="HRV\KeyType_HRV.bdsproj" Targets="Make"/>
+    </Target>
+    <Target Name="KeyType_ENG">
+        <MSBuild Projects="ENG\KeyType_ENG.bdsproj"/>
+    </Target>
+    <Target Name="KeyType_ENG:Clean">
+        <MSBuild Projects="ENG\KeyType_ENG.bdsproj" Targets="Clean"/>
+    </Target>
+    <Target Name="KeyType_ENG:Make">
+        <MSBuild Projects="ENG\KeyType_ENG.bdsproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="KeyType;KeyTypeTests"/>
+        <CallTarget Targets="KeyType;KeyTypeTests;KeyType_HRV;KeyType_ENG"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="KeyType:Clean;KeyTypeTests:Clean"/>
+        <CallTarget Targets="KeyType:Clean;KeyTypeTests:Clean;KeyType_HRV:Clean;KeyType_ENG:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="KeyType:Make;KeyTypeTests:Make"/>
+        <CallTarget Targets="KeyType:Make;KeyTypeTests:Make;KeyType_HRV:Make;KeyType_ENG:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
