@@ -2,20 +2,21 @@ object FPreferences: TFPreferences
   Left = 0
   Top = 0
   Caption = 'Preferences'
-  ClientHeight = 446
-  ClientWidth = 542
+  ClientHeight = 445
+  ClientWidth = 538
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poMainFormCenter
   TextHeight = 15
   object GroupBox1: TGroupBox
     Left = 8
     Top = 27
     Width = 254
-    Height = 343
+    Height = 370
     Caption = 'Application settings'
     TabOrder = 0
     object LLanguage: TLabel
@@ -44,17 +45,18 @@ object FPreferences: TFPreferences
       Top = 42
       Width = 115
       Height = 23
+      Style = csDropDownList
       TabOrder = 0
-      Items.Strings = (
-        'English'
-        'Croatian')
+      OnChange = CBLanguageChange
     end
     object CBLogging: TComboBox
       Left = 126
       Top = 144
       Width = 115
       Height = 23
+      Style = csDropDownList
       TabOrder = 1
+      OnChange = CBLoggingChange
     end
     object CBLoggingEnable: TCheckBox
       Left = 93
@@ -62,28 +64,32 @@ object FPreferences: TFPreferences
       Width = 16
       Height = 17
       TabOrder = 2
+      OnClick = CBLoggingEnableClick
     end
     object CBFont1: TComboBox
       Left = 126
       Top = 78
       Width = 115
       Height = 23
+      Style = csDropDownList
       TabOrder = 3
+      OnChange = CBFont1Change
     end
     object BtReset1: TButton
       Left = 166
-      Top = 297
+      Top = 330
       Width = 75
       Height = 25
       Caption = 'Reset'
       TabOrder = 4
+      OnClick = BtReset1Click
     end
   end
   object GroupBox2: TGroupBox
-    Left = 280
+    Left = 276
     Top = 27
     Width = 254
-    Height = 343
+    Height = 370
     Caption = 'Typing settings'
     TabOrder = 1
     object LCaret: TLabel
@@ -95,90 +101,109 @@ object FPreferences: TFPreferences
     end
     object LFont2: TLabel
       Left = 12
-      Top = 81
+      Top = 117
       Width = 63
       Height = 15
       Caption = 'Font family:'
     end
     object LFontSize: TLabel
       Left = 12
-      Top = 121
+      Top = 157
       Width = 49
       Height = 15
       Caption = 'Font size:'
+    end
+    object LSeparator: TLabel
+      Left = 12
+      Top = 81
+      Width = 79
+      Height = 15
+      Caption = 'Separator type:'
     end
     object CBCaret: TComboBox
       Left = 126
       Top = 42
       Width = 115
       Height = 23
+      Style = csDropDownList
       TabOrder = 0
-      Items.Strings = (
-        'Bar'
-        'Underline')
+      OnChange = CBCaretChange
     end
     object CBMistake: TCheckBox
       Left = 12
-      Top = 159
+      Top = 195
       Width = 229
       Height = 17
       Alignment = taLeftJustify
       Caption = 'Stop on mistake:'
       TabOrder = 1
+      OnClick = CBMistakeClick
     end
-    object CBSeqMistakes: TCheckBox
+    object CBConsecutiveMistakes: TCheckBox
       Left = 12
-      Top = 192
+      Top = 228
       Width = 229
       Height = 17
       Alignment = taLeftJustify
-      Caption = 'Count sequential mistakes:'
+      Caption = 'Count consecutive mistakes:'
       TabOrder = 2
+      OnClick = CBConsecutiveMistakesClick
     end
     object CBSpeed: TCheckBox
       Left = 12
-      Top = 225
+      Top = 261
       Width = 229
       Height = 17
       Alignment = taLeftJustify
       Caption = 'Display speed:'
       TabOrder = 3
+      OnClick = CBSpeedClick
     end
     object CBFont2: TComboBox
       Left = 126
-      Top = 78
+      Top = 114
       Width = 115
       Height = 23
+      Style = csDropDownList
       TabOrder = 4
+      OnChange = CBFont2Change
     end
     object CBAccuracy: TCheckBox
       Left = 12
-      Top = 258
+      Top = 294
       Width = 229
       Height = 17
       Alignment = taLeftJustify
       Caption = 'Display accuracy:'
       TabOrder = 5
+      OnClick = CBAccuracyClick
     end
-    object ComboBox1: TComboBox
+    object CBFontSize: TComboBox
       Left = 126
-      Top = 118
+      Top = 154
       Width = 115
       Height = 23
+      Style = csDropDownList
       TabOrder = 6
-      Items.Strings = (
-        '9'
-        '10'
-        '12'
-        '14')
+      OnChange = CBFontSizeChange
     end
     object BtReset2: TButton
-      Left = 165
-      Top = 297
+      Left = 162
+      Top = 330
       Width = 75
       Height = 25
       Caption = 'Reset'
       TabOrder = 7
+      OnClick = BtReset2Click
+    end
+    object CBSeparator: TComboBox
+      Left = 126
+      Top = 78
+      Width = 115
+      Height = 23
+      Style = csDropDownList
+      TabOrder = 8
+      OnChange = CBSeparatorChange
     end
   end
   object BtCancel: TButton
@@ -198,5 +223,6 @@ object FPreferences: TFPreferences
     Caption = 'Accept'
     ModalResult = 1
     TabOrder = 3
+    OnClick = BtAcceptClick
   end
 end

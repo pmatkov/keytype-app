@@ -5,11 +5,11 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45346.9495833333</prop>
-        <prop prop-type="OrigDateTime">45346.7709259259</prop>
-        <prop prop-type="XlatDateTime">45346.7709259259</prop>
+        <prop prop-type="SelfDateTime">45360.9856481481</prop>
+        <prop prop-type="OrigDateTime">45360.8461574074</prop>
+        <prop prop-type="XlatDateTime">45360.8461342593</prop>
         <prop prop-type="Translated">0</prop>
-        <prop prop-type="UnTranslated">40</prop>
+        <prop prop-type="UnTranslated">71</prop>
       </prop-group>
     </header>
     <body>
@@ -39,12 +39,12 @@
         <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFrPractice</prop><prop prop-type="Localize">0</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:LStart.Left" resname="O:FrPractice.O:LStart.Left">
-        <source>184</source>
+        <source>190</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:LStart.Top" resname="O:FrPractice.O:LStart.Top">
-        <source>232</source>
+        <source>247</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -88,135 +88,290 @@
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
+      <trans-unit id="O:FrPractice.O:LTime.Left" resname="O:FrPractice.O:LTime.Left">
+        <source>128</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0424851389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LTime.Top" resname="O:FrPractice.O:LTime.Top">
+        <source>72</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0424851389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LTime.Width" resname="O:FrPractice.O:LTime.Width">
+        <source>29</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0424851389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LTime.Height" resname="O:FrPractice.O:LTime.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0424851389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LTime.Caption" resname="O:FrPractice.O:LTime.Caption">
+        <source>'Time:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0424851389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LDisplayTime.Left" resname="O:FrPractice.O:LDisplayTime.Left">
+        <source>163</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0273529282</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LDisplayTime.Top" resname="O:FrPractice.O:LDisplayTime.Top">
+        <source>72</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0273529282</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LDisplayTime.Width" resname="O:FrPractice.O:LDisplayTime.Width">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0273529282</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LDisplayTime.Height" resname="O:FrPractice.O:LDisplayTime.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0273529282</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LSpeed.Left" resname="O:FrPractice.O:LSpeed.Left">
+        <source>258</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0136640972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LSpeed.Top" resname="O:FrPractice.O:LSpeed.Top">
+        <source>72</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0136640972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LSpeed.Width" resname="O:FrPractice.O:LSpeed.Width">
+        <source>35</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0136640972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LSpeed.Height" resname="O:FrPractice.O:LSpeed.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0136640972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LSpeed.Caption" resname="O:FrPractice.O:LSpeed.Caption">
+        <source>'Speed:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0136640972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LDisplaySpeed.Left" resname="O:FrPractice.O:LDisplaySpeed.Left">
+        <source>299</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0136640972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LDisplaySpeed.Top" resname="O:FrPractice.O:LDisplaySpeed.Top">
+        <source>72</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0136640972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LDisplaySpeed.Width" resname="O:FrPractice.O:LDisplaySpeed.Width">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0136640972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LDisplaySpeed.Height" resname="O:FrPractice.O:LDisplaySpeed.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0136640972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LAccuracy.Left" resname="O:FrPractice.O:LAccuracy.Left">
+        <source>372</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0136640972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LAccuracy.Top" resname="O:FrPractice.O:LAccuracy.Top">
+        <source>72</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0136640972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LAccuracy.Width" resname="O:FrPractice.O:LAccuracy.Width">
+        <source>52</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0136640972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LAccuracy.Height" resname="O:FrPractice.O:LAccuracy.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0136640972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LAccuracy.Caption" resname="O:FrPractice.O:LAccuracy.Caption">
+        <source>'Accuracy:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0136640972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LDisplayAccuracy.Left" resname="O:FrPractice.O:LDisplayAccuracy.Left">
+        <source>430</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0136640972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LDisplayAccuracy.Top" resname="O:FrPractice.O:LDisplayAccuracy.Top">
+        <source>72</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0136640972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LDisplayAccuracy.Width" resname="O:FrPractice.O:LDisplayAccuracy.Width">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0136640972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LDisplayAccuracy.Height" resname="O:FrPractice.O:LDisplayAccuracy.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45356.0136640972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
       <trans-unit id="O:FrPractice.O:RETextBox.Left" resname="O:FrPractice.O:RETextBox.Left">
         <source>128</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:RETextBox.Top" resname="O:FrPractice.O:RETextBox.Top">
         <source>144</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:RETextBox.Width" resname="O:FrPractice.O:RETextBox.Width">
         <source>360</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:RETextBox.Height" resname="O:FrPractice.O:RETextBox.Height">
         <source>65</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:RETextBox.BorderStyle" resname="O:FrPractice.O:RETextBox.BorderStyle">
         <source>bsNone</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:RETextBox.Color" resname="O:FrPractice.O:RETextBox.Color">
         <source>clBtnFace</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:RETextBox.Font.Charset" resname="O:FrPractice.O:RETextBox.Font.Charset">
         <source>ANSI_CHARSET</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:RETextBox.Font.Color" resname="O:FrPractice.O:RETextBox.Font.Color">
         <source>clWindowText</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:RETextBox.Font.Height" resname="O:FrPractice.O:RETextBox.Font.Height">
         <source>-16</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:RETextBox.Font.Name" resname="O:FrPractice.O:RETextBox.Font.Name">
         <source>'Segoe UI'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:RETextBox.Font.Style" resname="O:FrPractice.O:RETextBox.Font.Style">
         <source>[]</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:RETextBox.ParentFont" resname="O:FrPractice.O:RETextBox.ParentFont">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:RETextBox.ReadOnly" resname="O:FrPractice.O:RETextBox.ReadOnly">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:RETextBox.TabOrder" resname="O:FrPractice.O:RETextBox.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.L:FrOptions.Left" resname="O:FrPractice.L:FrOptions.Left">
         <source>505</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TFrOptions</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TFrOptions</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.L:FrOptions.Top" resname="O:FrPractice.L:FrOptions.Top">
         <source>140</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TFrOptions</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TFrOptions</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.L:FrOptions.Width" resname="O:FrPractice.L:FrOptions.Width">
         <source>102</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TFrOptions</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TFrOptions</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.L:FrOptions.Height" resname="O:FrPractice.L:FrOptions.Height">
         <source>168</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TFrOptions</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TFrOptions</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.L:FrOptions.DoubleBuffered" resname="O:FrPractice.L:FrOptions.DoubleBuffered">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TFrOptions</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TFrOptions</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.L:FrOptions.ParentDoubleBuffered" resname="O:FrPractice.L:FrOptions.ParentDoubleBuffered">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TFrOptions</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TFrOptions</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.L:FrOptions.TabOrder" resname="O:FrPractice.L:FrOptions.TabOrder">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TFrOptions</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TFrOptions</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.L:FrOptions.ExplicitLeft" resname="O:FrPractice.L:FrOptions.ExplicitLeft">
         <source>505</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TFrOptions</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TFrOptions</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.L:FrOptions.ExplicitTop" resname="O:FrPractice.L:FrOptions.ExplicitTop">
         <source>140</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TFrOptions</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TFrOptions</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.L:FrOptions.I:BtOptions.OnClick" resname="O:FrPractice.L:FrOptions.I:BtOptions.OnClick">
         <source>FrOptionsBtOptionsClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.L:FrOptions.I:ImageList1.Top" resname="O:FrPractice.L:FrOptions.I:ImageList1.Top">
         <source>56</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TImageList</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TImageList</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.L:FrOptions.I:ImageList1.Bitmap" resname="O:FrPractice.L:FrOptions.I:ImageList1.Bitmap">
         <source>494C010101000800040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D360000000000000036000000280000004000000010000000010020000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000032000000E1000000DE000000DE000000DE000000DE000000DE000000DE000000DE000000DE000000DE000000DE000000E100000032000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000032000000E1000000DE000000DE000000DE000000DE000000DE000000DE000000DE000000DE000000DE000000DE000000E1000000320000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000032000000E1000000DE000000DE000000DE000000DE000000DE000000DE000000DE000000DE000000DE000000DE000000E100000032000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000032000000E1000000DE000000DE000000DE000000DE000000DE000000DE000000DE000000DE000000DE000000DE000000E1000000320000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000032000000E1000000DE000000DE000000DE000000DE000000DE000000DE000000DE000000DE000000DE000000DE000000E100000032000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000032000000E1000000DE000000DE000000DE000000DE000000DE000000DE000000DE000000DE000000DE000000DE000000E10000003200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000424D3E000000000000003E0000002800000040000000100000000100010000000000800000000000000000000000000000000000000000000000FFFFFF00FFFF000000000000FFFF000000000000FFFF00000000000080010000000000008001000000000000FFFF000000000000FFFF00000000000080010000000000008001000000000000FFFF000000000000FFFF00000000000080010000000000008001000000000000FFFF000000000000FFFF000000000000FFFF00000000000000000000000000000000000000000000000000000000</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TImageList</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">{</prop><prop prop-type="Close">}</prop></prop-group>
+        <prop prop-type="Created">45346.9495896296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TImageList</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">{</prop><prop prop-type="Close">}</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:Timer1.Enabled" resname="O:FrPractice.O:Timer1.Enabled">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45355.9375629861</prop><prop prop-type="Status">0</prop><prop prop-type="Order">68</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:Timer1.OnTimer" resname="O:FrPractice.O:Timer1.OnTimer">
+        <source>Timer1Timer</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45355.9274497454</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:Timer1.Left" resname="O:FrPractice.O:Timer1.Left">
+        <source>537</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45355.9274497454</prop><prop prop-type="Status">0</prop><prop prop-type="Order">70</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:Timer1.Top" resname="O:FrPractice.O:Timer1.Top">
+        <source>387</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45355.9274497454</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
     </body>
   </file>

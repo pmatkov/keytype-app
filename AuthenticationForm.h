@@ -28,7 +28,8 @@ class TFAuthentication : public TForm
 
     public:		// User declarations
         __fastcall TFAuthentication(TComponent* Owner);
-       	__fastcall TFAuthentication(TComponent* Owner, AuthenticationService *_authenticationService, TDataModule1 *dataModule);
+       	__fastcall TFAuthentication(TComponent* Owner, AuthenticationService *_authenticationService);
+
         void __fastcall FrLoginRegisterSelect(TObject *Sender);
       	void __fastcall FrLoginSignInComplete(TObject *Sender, TModalResult result);
 

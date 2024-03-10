@@ -11,11 +11,12 @@
 class TextSource
 {
 	private:
-    	// The quick brown fox jumps over the lazy dog
-		UnicodeString text = "The quick brown fox jumps over the lazy";
+		UnicodeString text = "The quick brown fox jumps over the lazy dog";
 		UnicodeString currentWord;
 		wchar_t currentChar;
 		int charIndex = 1;
+
+        int maxChars;
 
 		bool numbers;
 		bool punctuation;
@@ -24,12 +25,15 @@ class TextSource
 	public:
     	TextSource();
 		TextSource(UnicodeString _text);
+
 		const UnicodeString& getText() const;
 		UnicodeString& getText();
-		const UnicodeString& getCurrentWord() const;
-		const wchar_t getCurrentChar() const;
-		const int& getCharIndex() const;
 
+		const UnicodeString& getCurrentWord() const;
+
+        wchar_t operator[](int index) const;
+
+		int getCharIndex() const;
 		void increaseCharIndex();
 		void decreaseCharIndex();
 

@@ -67,7 +67,7 @@
         <SanitizedProjectName>KeyType</SanitizedProjectName>
         <IncludePath>Tests\;$(IncludePath)</IncludePath>
         <ILINK_LibraryPath>Tests\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
-        <Custom_Styles>Diamond|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Diamond.vsf;&quot;Windows11 Modern Dark|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Windows11_Modern_Dark.vsf&quot;;&quot;Windows11 Modern Light|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Windows11_Modern_Light.vsf&quot;</Custom_Styles>
+        <Custom_Styles>Glow|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Glow.vsf;&quot;Windows11 Modern Dark|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Windows11_Modern_Dark.vsf&quot;;&quot;Windows11 Modern Light|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Windows11_Modern_Light.vsf&quot;</Custom_Styles>
         <ILINK_GenerateDRC>True</ILINK_GenerateDRC>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
@@ -128,6 +128,11 @@
         <LinkPackageImports>rtl.bpi;vcl.bpi</LinkPackageImports>
     </PropertyGroup>
     <ItemGroup>
+        <CppCompile Include="AppSettings.cpp">
+            <VirtualFolder>{6D6A1B94-904B-4CFC-BA2B-E48D16DDAD0E}</VirtualFolder>
+            <DependentOn>AppSettings.h</DependentOn>
+            <BuildOrder>42</BuildOrder>
+        </CppCompile>
         <CppCompile Include="AuthenticationForm.cpp">
             <VirtualFolder>{F6B7C7E8-2F86-4A67-B4A3-6E99C1D2C773}</VirtualFolder>
             <Form>FAuthentication</Form>
@@ -181,6 +186,11 @@
             <DependentOn>ENullPointerException.h</DependentOn>
             <BuildOrder>34</BuildOrder>
         </CppCompile>
+        <CppCompile Include="EnumUtils.cpp">
+            <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
+            <DependentOn>EnumUtils.h</DependentOn>
+            <BuildOrder>44</BuildOrder>
+        </CppCompile>
         <CppCompile Include="ExternalSourcesFrame.cpp">
             <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
             <Form>FrExternalSources</Form>
@@ -207,6 +217,11 @@
             <DependentOn>Generator.h</DependentOn>
             <BuildOrder>13</BuildOrder>
         </CppCompile>
+        <CppCompile Include="ISettings.cpp">
+            <VirtualFolder>{6D6A1B94-904B-4CFC-BA2B-E48D16DDAD0E}</VirtualFolder>
+            <DependentOn>ISettings.h</DependentOn>
+            <BuildOrder>33</BuildOrder>
+        </CppCompile>
         <CppCompile Include="KeyStatistics.cpp">
             <VirtualFolder>{4AADD3FA-CB81-45BA-96EF-7958F7960233}</VirtualFolder>
             <DependentOn>KeyStatistics.h</DependentOn>
@@ -215,6 +230,7 @@
         <CppCompile Include="KeyType.cpp">
             <BuildOrder>0</BuildOrder>
         </CppCompile>
+        <None Include="KeyType.todo"/>
         <PCHCompile Include="KeyTypePCH1.h">
             <BuildOrder>1</BuildOrder>
             <PCH>true</PCH>
@@ -266,16 +282,9 @@
             <BuildOrder>11</BuildOrder>
         </CppCompile>
         <CppCompile Include="Parser.cpp">
-            <VirtualFolder>{B5D24A8B-BE9F-49B1-8089-0D8EBAD58A08}</VirtualFolder>
+            <VirtualFolder>{26BC7E46-ECBD-4AA7-B03E-17DAA77318AD}</VirtualFolder>
             <DependentOn>Parser.h</DependentOn>
             <BuildOrder>34</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="PracticeForm.cpp">
-            <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
-            <Form>FPractice</Form>
-            <FormType>dfm</FormType>
-            <DependentOn>PracticeForm.h</DependentOn>
-            <BuildOrder>12</BuildOrder>
         </CppCompile>
         <CppCompile Include="PracticeFrame.cpp">
             <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
@@ -285,10 +294,12 @@
             <DependentOn>PracticeFrame.h</DependentOn>
             <BuildOrder>25</BuildOrder>
         </CppCompile>
-        <CppCompile Include="PracticeSession.cpp">
-            <VirtualFolder>{893884F7-72F0-483F-8A49-6A63980DD6D7}</VirtualFolder>
-            <DependentOn>PracticeSession.h</DependentOn>
-            <BuildOrder>9</BuildOrder>
+        <CppCompile Include="PracticeOptionsForm.cpp">
+            <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
+            <Form>FPractice</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>PracticeOptionsForm.h</DependentOn>
+            <BuildOrder>12</BuildOrder>
         </CppCompile>
         <CppCompile Include="PreferencesForm.cpp">
             <VirtualFolder>{B49A349D-1438-45E5-B4FD-36C3DF2C665B}</VirtualFolder>
@@ -305,15 +316,13 @@
             <DependentOn>RegisterFrame.h</DependentOn>
             <BuildOrder>38</BuildOrder>
         </CppCompile>
+        <DelphiCompile Include="reinit.pas">
+            <BuildOrder>40</BuildOrder>
+        </DelphiCompile>
         <CppCompile Include="Session.cpp">
             <VirtualFolder>{893884F7-72F0-483F-8A49-6A63980DD6D7}</VirtualFolder>
             <DependentOn>Session.h</DependentOn>
             <BuildOrder>31</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="Settings.cpp">
-            <VirtualFolder>{893884F7-72F0-483F-8A49-6A63980DD6D7}</VirtualFolder>
-            <DependentOn>Settings.h</DependentOn>
-            <BuildOrder>33</BuildOrder>
         </CppCompile>
         <CppCompile Include="StackTrace.cpp">
             <VirtualFolder>{C9B9CF94-D644-46A8-AFE2-4CDDCCC37F87}</VirtualFolder>
@@ -334,6 +343,16 @@
             <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
             <DependentOn>TimeManager.h</DependentOn>
             <BuildOrder>34</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="TypingSession.cpp">
+            <VirtualFolder>{893884F7-72F0-483F-8A49-6A63980DD6D7}</VirtualFolder>
+            <DependentOn>TypingSession.h</DependentOn>
+            <BuildOrder>9</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="TypingSettings.cpp">
+            <VirtualFolder>{6D6A1B94-904B-4CFC-BA2B-E48D16DDAD0E}</VirtualFolder>
+            <DependentOn>TypingSettings.h</DependentOn>
+            <BuildOrder>41</BuildOrder>
         </CppCompile>
         <CppCompile Include="UIUtils.cpp">
             <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
@@ -360,18 +379,18 @@
             <DependentOn>WordList.h</DependentOn>
             <BuildOrder>13</BuildOrder>
         </CppCompile>
-        <FormResources Include="PracticeFrame.dfm"/>
+        <FormResources Include="PracticeOptionsForm.dfm"/>
         <FormResources Include="PreferencesForm.dfm"/>
         <FormResources Include="RegisterFrame.dfm"/>
+        <FormResources Include="PracticeFrame.dfm"/>
+        <FormResources Include="MainForm.dfm"/>
         <FormResources Include="MainFrame.dfm"/>
         <FormResources Include="OptionsFrame.dfm"/>
-        <FormResources Include="PracticeForm.dfm"/>
-        <FormResources Include="ExternalSourcesFrame.dfm"/>
+        <FormResources Include="LoginFrame.dfm"/>
+        <FormResources Include="DataModule.dfm"/>
         <FormResources Include="AuthenticationForm.dfm"/>
         <FormResources Include="CustomTextFrame.dfm"/>
-        <FormResources Include="DataModule.dfm"/>
-        <FormResources Include="LoginFrame.dfm"/>
-        <FormResources Include="MainForm.dfm"/>
+        <FormResources Include="ExternalSourcesFrame.dfm"/>
         <FormResources Include="GeneratedTextFrame.dfm"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
@@ -406,13 +425,13 @@
                     <VFOLDER ID="{E8DD405D-5871-4098-BE73-2A4F48743690}" name="Forms">
                         <VFOLDER ID="{F6B7C7E8-2F86-4A67-B4A3-6E99C1D2C773}" name="Authentication"/>
                         <VFOLDER ID="{84360D3D-4874-46E9-88EE-445E3FC0314D}" name="MainForm"/>
-                        <VFOLDER ID="{78CB0057-7BC4-4B83-9609-C573EB0EAF04}" name="OptionsForm"/>
+                        <VFOLDER ID="{78CB0057-7BC4-4B83-9609-C573EB0EAF04}" name="PracticeOptionsForm"/>
                         <VFOLDER ID="{B49A349D-1438-45E5-B4FD-36C3DF2C665B}" name="PreferencesForm"/>
                     </VFOLDER>
-                    <VFOLDER ID="{B5D24A8B-BE9F-49B1-8089-0D8EBAD58A08}" name="Input"/>
                     <VFOLDER ID="{23B73507-EEA9-420C-B3B7-961C43A1A22D}" name="Other"/>
                     <VFOLDER ID="{26BC7E46-ECBD-4AA7-B03E-17DAA77318AD}" name="Services"/>
                     <VFOLDER ID="{893884F7-72F0-483F-8A49-6A63980DD6D7}" name="Session"/>
+                    <VFOLDER ID="{6D6A1B94-904B-4CFC-BA2B-E48D16DDAD0E}" name="Settings"/>
                     <VFOLDER ID="{4BAA1710-5749-48D2-B3F3-197353059E4E}" name="Sources"/>
                     <VFOLDER ID="{4AADD3FA-CB81-45BA-96EF-7958F7960233}" name="Statistics"/>
                     <VFOLDER ID="{8A6B665F-CE5E-4CF4-AB4C-BBAA85BE5583}" name="User"/>
@@ -427,30 +446,342 @@
                 </Excluded_Packages>
                 <Language>
                     <Language Name="ProjectLang">$0000041A</Language>
-                    <Language Name="ActiveLang">HRV</Language>
+                    <Language Name="ActiveLang">ENG</Language>
                 </Language>
                 <Resource_DLL_Projects>
                     <Resource_DLL_Projects Name="Item0">Croatian (Croatia)*$0000041A*HRV*HRV</Resource_DLL_Projects>
                     <Resource_DLL_Projects Name="Item1">English (United Kingdom)*$00000809*ENG*ENG</Resource_DLL_Projects>
                 </Resource_DLL_Projects>
                 <RDP_Source_Files>
-                    <RDP_Source_Files Name="Item0">PracticeFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item1">PreferencesForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item2">RegisterFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item3">MainFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item4">OptionsFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item5">PracticeForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item6">ExternalSourcesFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item7">AuthenticationForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item8">CustomTextFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item0">PracticeForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item1">PracticeOptionsForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item2">PreferencesForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item3">RegisterFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item4">PracticeFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item5">MainForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item6">MainFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item7">OptionsFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item8">LoginFrame.dfm</RDP_Source_Files>
                     <RDP_Source_Files Name="Item9">DataModule.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item10">LoginFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item11">MainForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item12">GeneratedTextFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item13">Win32\Debug\KeyType.drc</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item10">AuthenticationForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item11">CustomTextFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item12">ExternalSourcesFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item13">GeneratedTextFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item14">Win32\Debug\KeyType.drc</RDP_Source_Files>
                 </RDP_Source_Files>
             </CPlusPlusBuilder.Personality>
             <Deployment Version="4">
+                <DeployFile LocalName="$(BDS)\Redist\Win32\FireDAC280.bpl" Configuration="Debug" Class="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\FireDACCommon280.bpl" Configuration="Debug" Class="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\FireDACCommonDriver280.bpl" Configuration="Debug" Class="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\FireDACMySQLDriver280.bpl" Configuration="Debug" Class="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\bindengine280.bpl" Configuration="Debug" Class="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\bindengine280.de" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>bindengine280.de</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\bindengine280.fr" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>bindengine280.fr</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\bindengine280.ja" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>bindengine280.ja</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\dbrtl280.bpl" Configuration="Debug" Class="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\dbrtl280.de" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>dbrtl280.de</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\dbrtl280.fr" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>dbrtl280.fr</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\dbrtl280.ja" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>dbrtl280.ja</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\inet280.bpl" Configuration="Debug" Class="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\inet280.de" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>inet280.de</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\inet280.fr" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>inet280.fr</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\inet280.ja" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>inet280.ja</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\rtl280.bpl" Configuration="Debug" Class="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\rtl280.de" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>rtl280.de</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\rtl280.fr" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>rtl280.fr</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\rtl280.ja" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>rtl280.ja</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\soaprtl280.bpl" Configuration="Debug" Class="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\soaprtl280.de" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>soaprtl280.de</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\soaprtl280.fr" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>soaprtl280.fr</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\soaprtl280.ja" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>soaprtl280.ja</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vcl280.bpl" Configuration="Debug" Class="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vcl280.de" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>vcl280.de</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vcl280.fr" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>vcl280.fr</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vcl280.ja" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>vcl280.ja</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vclFireDAC280.bpl" Configuration="Debug" Class="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vclactnband280.bpl" Configuration="Debug" Class="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vclactnband280.de" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>vclactnband280.de</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vclactnband280.fr" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>vclactnband280.fr</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vclactnband280.ja" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>vclactnband280.ja</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vcldb280.bpl" Configuration="Debug" Class="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vcledge280.bpl" Configuration="Debug" Class="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vcledge280.de" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>vcledge280.de</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vcledge280.fr" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>vcledge280.fr</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vcledge280.ja" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>vcledge280.ja</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vclie280.bpl" Configuration="Debug" Class="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vclie280.de" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>vclie280.de</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vclie280.fr" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>vclie280.fr</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vclie280.ja" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>vclie280.ja</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vclimg280.bpl" Configuration="Debug" Class="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vclimg280.de" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>vclimg280.de</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vclimg280.fr" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>vclimg280.fr</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vclimg280.ja" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>vclimg280.ja</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vclwinx280.bpl" Configuration="Debug" Class="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vclx280.bpl" Configuration="Debug" Class="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vclx280.de" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>vclx280.de</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vclx280.fr" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>vclx280.fr</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vclx280.ja" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>vclx280.ja</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\xmlrtl280.bpl" Configuration="Debug" Class="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\xmlrtl280.de" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>xmlrtl280.de</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\xmlrtl280.fr" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>xmlrtl280.fr</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\xmlrtl280.ja" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>xmlrtl280.ja</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile Condition="'$(DynamicRTL)'=='true'" LocalName="$(BDS)\Redist\osx32\libcgcrtl.dylib" Class="DependencyModule">
                     <Platform Name="OSX32">
                         <Overwrite>true</Overwrite>

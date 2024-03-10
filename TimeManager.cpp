@@ -23,11 +23,13 @@ long TimeManager::getElapsedTime() const {
     return std::chrono::duration_cast<std::chrono::seconds>(std::chrono::system_clock::now() - startTime).count();
 }
 
+UnicodeString TimeManager::getCurrentTime() {
+    return FormatDateTime(L"hh:nn:ss", Now());
+}
 
 UnicodeString TimeManager::getCurrentDate() {
     return FormatDateTime(L"yyyy-mm-dd", Now());
 }
-
 
 UnicodeString TimeManager::getCurrentDateTime() {
     return FormatDateTime(L"yyyy-mm-dd hh:nn:ss", Now());

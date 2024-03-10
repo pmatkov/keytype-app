@@ -22,6 +22,7 @@ class TimeManager {
     	void endTimer();
         long getElapsedTime() const;
 
+        static UnicodeString getCurrentTime();
         static UnicodeString getCurrentDate();
         static UnicodeString getCurrentDateTime();
 

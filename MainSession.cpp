@@ -12,22 +12,28 @@
 MainSession::MainSession() {
 	LOGGER(LogLevel::Debug, "Main session created");
 }
-MainSession::MainSession(User _user, Settings _settings) : user(_user), settings(_settings) {
-	LOGGER(LogLevel::Debug, "Main session created");
-}
 
 const User& MainSession::getUser() const {
 	return user;
 }
 void MainSession::setUser(User _user) {
    user = _user;
+   appSettings = AppSettings(user);
+   typingSettings = TypingSettings(user);
 }
 
- const Settings& MainSession::getSettings() const {
-	return settings;
+AppSettings& MainSession::getAppSettings() {
+	return appSettings;
 }
-void MainSession::setSettings(Settings _settings) {
-   settings = _settings;
+void MainSession::setAppSettings(AppSettings _appSettings) {
+   appSettings = _appSettings;
+}
+
+TypingSettings& MainSession::getTypingSettings() {
+	return typingSettings;
+}
+void MainSession::setTypingSettings(TypingSettings _typingSettings) {
+   typingSettings = _typingSettings;
 }
 
 const bool MainSession::isAuthenticated() const {

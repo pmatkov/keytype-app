@@ -9,7 +9,7 @@
 #include <Vcl.Forms.hpp>
 
 #include "AuthenticationService.h"
-#include "DataModule.h"
+//#include "DataModule.h"
 
 //---------------------------------------------------------------------------
 class TFrLogin : public TFrame
@@ -31,10 +31,9 @@ __published:	// IDE-managed Components
 	void __fastcall BtSignInClick(TObject *Sender);
 private:	// User declarations
 	AuthenticationService *authenticationService;
-   	TDataModule1 *dataModule;
 public:		// User declarations
 	__fastcall TFrLogin(TComponent* Owner);
-    __fastcall TFrLogin(TComponent* Owner, AuthenticationService *_authenticationService, TDataModule1 *_dataModule);
+    __fastcall TFrLogin(TComponent* Owner, AuthenticationService *_authenticationService);
     void UpdateSignInButtonState();
 
     void __fastcall (__closure *OnLogin)(TObject *Sender, TModalResult result);

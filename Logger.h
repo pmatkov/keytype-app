@@ -17,7 +17,9 @@ enum LogLevel {
     Info = 2,
     Error = 4,
     Fatal = 8,
-    All = 15
+    All = Debug | Info | Error | Fatal,
+    Count = 5,
+    Unknown
 };
 
 LogLevel operator|(LogLevel a, LogLevel b);
@@ -28,26 +30,29 @@ class Logger {
     private:
     	static std::vector<UnicodeString> buffer;
         static UnicodeString logFilename;
+        static bool firstFlush;
         static LogLevel logLevel;
 
         static std::chrono::steady_clock::time_point lastFlushTime;
         static const std::chrono::seconds flushInterval;
         static std::mutex bufferMutex;
 
+        static std::vector<UnicodeString> logLevelStrings;
+
         Logger() {}
 
     public:
-//        Logger();
-//        ~Logger();
-
     	static void setLogLevel(LogLevel level);
-
         static UnicodeString getLogLevelAsString(LogLevel level);
+        static LogLevel getStringAsLogLevel(const UnicodeString &level);
+
         static UnicodeString createLogFileName(const UnicodeString& dirName);
 
         static void log(LogLevel level, const UnicodeString& message, const char* functionName, int lineNumber);
         static void flushBuffer();
         static void registerFlushOnExit();
+
+        static std::vector<UnicodeString>& getLogLevelStrings();
 };
 
 #endif

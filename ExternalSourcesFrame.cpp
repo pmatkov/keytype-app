@@ -32,8 +32,6 @@ __fastcall TFrExternalSources::TFrExternalSources(TComponent* Owner) : TFrame(Ow
 	}
 }
 
-//---------------------------------------------------------------------------
-
 void __fastcall TFrExternalSources::TVLiteratureCategoriesChange(TObject *Sender, TTreeNode *Node)
 {
 
@@ -49,7 +47,6 @@ void __fastcall TFrExternalSources::TVLiteratureCategoriesChange(TObject *Sender
         }
 	}
 }
-//---------------------------------------------------------------------------
 
 void TFrExternalSources::updateListView(TTreeNode* Node)
 {
@@ -148,7 +145,6 @@ void TFrExternalSources::resetFrameFields() {
 	EYear->Text = "";
 	EParagraph->Text = "";
 }
-
 
 
 void __fastcall TFrExternalSources::BtAddSave2Click(TObject *Sender)  {

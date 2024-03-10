@@ -12,3 +12,7 @@ Session::Session() {
 
 Session::~Session() {}
 
+TimeManager& Session::getTimeManager() {
+	return timeManager;
+}
+

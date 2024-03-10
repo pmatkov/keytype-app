@@ -1,9 +1,9 @@
-object FPractice: TFPractice
+object FPracticeOptions: TFPracticeOptions
   Left = 0
   Top = 0
-  Caption = 'Odaberi izvor teksta'
-  ClientHeight = 446
-  ClientWidth = 542
+  Caption = 'Select a text source'
+  ClientHeight = 443
+  ClientWidth = 530
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,7 +17,7 @@ object FPractice: TFPractice
     Top = 409
     Width = 75
     Height = 25
-    Caption = 'Otka'#382'i'
+    Caption = 'Cancel'
     ModalResult = 2
     TabOrder = 0
   end
@@ -26,7 +26,7 @@ object FPractice: TFPractice
     Top = 409
     Width = 75
     Height = 25
-    Caption = 'Prihvati'
+    Caption = 'Accept'
     ModalResult = 1
     TabOrder = 1
   end
@@ -38,14 +38,14 @@ object FPractice: TFPractice
     ActivePage = TSGeneratedText
     TabOrder = 2
     object TSGeneratedText: TTabSheet
-      Caption = 'Generiran tekst'
+      Caption = 'Generated Text'
     end
     object TSExternalSources: TTabSheet
-      Caption = 'Vanjski izvor'
+      Caption = 'External Sources'
       ImageIndex = 2
     end
     object TSCustomText: TTabSheet
-      Caption = 'Vlastiti tekst'
+      Caption = 'Custom Text'
       ImageIndex = 1
     end
   end

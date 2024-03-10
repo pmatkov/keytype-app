@@ -5,24 +5,29 @@
 //---------------------------------------------------------------------------
 #include "User.h"
 #include "Session.h"
-#include "Settings.h"
+#include "AppSettings.h"
+#include "TypingSettings.h"
+//---------------------------------------------------------------------------
 
 class MainSession : public Session {
 
 	private:
 		User user;
-        Settings settings;
+        AppSettings appSettings;
+        TypingSettings typingSettings;
         bool authenticated = false;
 
 	public:
         MainSession();
-        MainSession(User _user, Settings _settings);
 
     	const User& getUser() const;
 		void setUser(User _user);
 
-        const Settings& getSettings() const;
-		void setSettings(Settings settings);
+        AppSettings& getAppSettings();
+		void setAppSettings(AppSettings _appSettings);
+
+        TypingSettings& getTypingSettings();
+		void setTypingSettings(TypingSettings _typingSettings);
 
         const bool isAuthenticated() const;
         void setAuthenticated(bool _authenticated);

@@ -10,13 +10,9 @@
 
 class EFileSizeExceededException : public Exception {
 
-	private:
-		int size;
-		int limit;
-
 	public:
 		EFileSizeExceededException(int _size, int _limit);
-		void displayMessage();
+
 
 };
 

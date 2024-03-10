@@ -10,6 +10,7 @@ object FrGeneratedText: TFrGeneratedText
     Width = 511
     Height = 41
     Columns = 2
+    ItemIndex = 0
     Items.Strings = (
       'Znakovi'
       'Rije'#269'i')

@@ -4,6 +4,7 @@
 #define MainFormH
 //---------------------------------------------------------------------------
 #include <System.Classes.hpp>
+#include <System.UITypes.hpp>
 #include <Vcl.ComCtrls.hpp>
 #include <Vcl.Controls.hpp>
 #include <Vcl.StdCtrls.hpp>
@@ -20,14 +21,13 @@
 #include <windows.h>
 
 #include "MainSession.h"
-#include "PracticeSession.h"
+#include "TypingSession.h"
 #include "Parser.h"
 
+#include "PreferencesForm.h"
 #include "MainFrame.h"
 #include "PracticeFrame.h"
-#include "OptionsFrame.h"
 
-#include "PreferencesForm.h"
 
 //---------------------------------------------------------------------------
 
@@ -45,11 +45,12 @@ __published:	// IDE-managed Components
 private:	// User declarations
 
     TFPreferences *FPreferences;
+    TFPracticeOptions *FPracticeOptions;
 	std::unique_ptr<TFrMain> FrMain;
 	std::unique_ptr<TFrPractice> FrPractice;
 
 	std::unique_ptr<MainSession> mainSession;
-    std::unique_ptr<PracticeSession> practiceSession;
+    std::unique_ptr<TypingSession> typingSession;
 
     std::unique_ptr<Parser> parser;
 
@@ -59,12 +60,9 @@ public:		// User declarations
 
 	__fastcall TFMain(TComponent* Owner);
 
-	void setMainSession(std::unique_ptr<MainSession> _mainSession);
-    const MainSession * getMainSession() const;
-    const PracticeSession * getPracticeSession() const;
-
     void setPreferencesForm(TFPreferences *_FPreferences);
-    void setPracticeForm(TFPractice *FPractice);
+    void setPracticeOptionsForm(TFPracticeOptions *_FPracticeOptions);
+    void setMainSession(std::unique_ptr<MainSession> _mainSession);
 
 	virtual void __fastcall WndProc(TMessage &Message);
 	static LRESULT CALLBACK RESubclass(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam, UINT_PTR uIdSubclass, DWORD_PTR dwRefData);

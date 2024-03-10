@@ -8,9 +8,6 @@
 
 
 class ENullPointerException : public Exception {
-    private:
-        UnicodeString stackTrace;
-
     public:
         ENullPointerException();
 };

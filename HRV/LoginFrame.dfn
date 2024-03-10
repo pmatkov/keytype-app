@@ -5,9 +5,9 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45347.0180555556</prop>
-        <prop prop-type="OrigDateTime">45344.8301388889</prop>
-        <prop prop-type="XlatDateTime">45344.8301388889</prop>
+        <prop prop-type="SelfDateTime">45360.9856481481</prop>
+        <prop prop-type="OrigDateTime">45360.8432638889</prop>
+        <prop prop-type="XlatDateTime">45360.8432407407</prop>
         <prop prop-type="Translated">6</prop>
         <prop prop-type="UnTranslated">58</prop>
       </prop-group>
@@ -16,658 +16,333 @@
       <trans-unit id="O:FrLogin.Left" resname="O:FrLogin.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850694</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">0</prop>
-          <prop prop-type="Type">TFrLogin</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850694</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TFrLogin</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.Top" resname="O:FrLogin.Top">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850694</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">1</prop>
-          <prop prop-type="Type">TFrLogin</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850694</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TFrLogin</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.Width" resname="O:FrLogin.Width">
         <source>262</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850694</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">2</prop>
-          <prop prop-type="Type">TFrLogin</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850694</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TFrLogin</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.Height" resname="O:FrLogin.Height">
         <source>343</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850694</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">3</prop>
-          <prop prop-type="Type">TFrLogin</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850694</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TFrLogin</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.TabOrder" resname="O:FrLogin.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850694</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">4</prop>
-          <prop prop-type="Type">TFrLogin</prop>
-          <prop prop-type="Localize">0</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850694</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFrLogin</prop><prop prop-type="Localize">0</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:LPassword.Left" resname="O:FrLogin.O:LPassword.Left">
         <source>72</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850694</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">5</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850694</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:LPassword.Top" resname="O:FrLogin.O:LPassword.Top">
         <source>96</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850694</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">6</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850694</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:LPassword.Width" resname="O:FrLogin.O:LPassword.Width">
         <source>53</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">7</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:LPassword.Height" resname="O:FrLogin.O:LPassword.Height">
         <source>15</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">8</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:LPassword.Caption" resname="O:FrLogin.O:LPassword.Caption">
         <source>'Password:'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">9</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Lozinka:'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">1</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:LUsername.Left" resname="O:FrLogin.O:LUsername.Left">
         <source>72</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">10</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:LUsername.Top" resname="O:FrLogin.O:LUsername.Top">
         <source>36</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">11</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:LUsername.Width" resname="O:FrLogin.O:LUsername.Width">
         <source>56</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">12</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:LUsername.Height" resname="O:FrLogin.O:LUsername.Height">
         <source>15</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">13</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:LUsername.Caption" resname="O:FrLogin.O:LUsername.Caption">
         <source>'Username:'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">14</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Korisničko ime:'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">1</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:LNotRegistered.Left" resname="O:FrLogin.O:LNotRegistered.Left">
         <source>72</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">15</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:LNotRegistered.Top" resname="O:FrLogin.O:LNotRegistered.Top">
         <source>261</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">16</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:LNotRegistered.Width" resname="O:FrLogin.O:LNotRegistered.Width">
         <source>80</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">17</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:LNotRegistered.Height" resname="O:FrLogin.O:LNotRegistered.Height">
         <source>15</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">18</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:LNotRegistered.Caption" resname="O:FrLogin.O:LNotRegistered.Caption">
         <source>'Not registered?'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">19</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Nisi registriran?'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">1</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:LResponse.Left" resname="O:FrLogin.O:LResponse.Left">
         <source>72</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">20</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:LResponse.Top" resname="O:FrLogin.O:LResponse.Top">
         <source>156</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">21</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:LResponse.Width" resname="O:FrLogin.O:LResponse.Width">
         <source>3</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">22</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:LResponse.Height" resname="O:FrLogin.O:LResponse.Height">
         <source>15</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">23</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:LResponse.Font.Charset" resname="O:FrLogin.O:LResponse.Font.Charset">
         <source>DEFAULT_CHARSET</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">24</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:LResponse.Font.Color" resname="O:FrLogin.O:LResponse.Font.Color">
         <source>clRed</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">25</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:LResponse.Font.Height" resname="O:FrLogin.O:LResponse.Font.Height">
         <source>-12</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">26</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:LResponse.Font.Name" resname="O:FrLogin.O:LResponse.Font.Name">
         <source>'Segoe UI'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">27</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:LResponse.Font.Style" resname="O:FrLogin.O:LResponse.Font.Style">
         <source>[]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">28</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:LResponse.ParentFont" resname="O:FrLogin.O:LResponse.ParentFont">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">29</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:BtRegister.Left" resname="O:FrLogin.O:BtRegister.Left">
         <source>72</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">30</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:BtRegister.Top" resname="O:FrLogin.O:BtRegister.Top">
         <source>282</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">31</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:BtRegister.Width" resname="O:FrLogin.O:BtRegister.Width">
         <source>118</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">32</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:BtRegister.Height" resname="O:FrLogin.O:BtRegister.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">33</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:BtRegister.Caption" resname="O:FrLogin.O:BtRegister.Caption">
         <source>'Register'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">34</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Registriraj se'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">1</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:BtRegister.TabOrder" resname="O:FrLogin.O:BtRegister.TabOrder">
         <source>4</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">35</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:BtRegister.OnClick" resname="O:FrLogin.O:BtRegister.OnClick">
         <source>BtRegisterClick</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">36</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:BtGuest.Left" resname="O:FrLogin.O:BtGuest.Left">
         <source>72</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">37</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:BtGuest.Top" resname="O:FrLogin.O:BtGuest.Top">
         <source>213</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">38</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:BtGuest.Width" resname="O:FrLogin.O:BtGuest.Width">
         <source>118</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">39</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:BtGuest.Height" resname="O:FrLogin.O:BtGuest.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">40</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:BtGuest.Caption" resname="O:FrLogin.O:BtGuest.Caption">
         <source>'Continue as guest'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">41</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Nastavi kao gost'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">1</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:BtGuest.TabOrder" resname="O:FrLogin.O:BtGuest.TabOrder">
         <source>3</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">42</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:BtGuest.OnClick" resname="O:FrLogin.O:BtGuest.OnClick">
         <source>BtGuestClick</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">43</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:BtSignIn.Left" resname="O:FrLogin.O:BtSignIn.Left">
         <source>72</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.949585081</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">44</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.949585081</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:BtSignIn.Top" resname="O:FrLogin.O:BtSignIn.Top">
         <source>177</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850926</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">45</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850926</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:BtSignIn.Width" resname="O:FrLogin.O:BtSignIn.Width">
         <source>118</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850926</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">46</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850926</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:BtSignIn.Height" resname="O:FrLogin.O:BtSignIn.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850926</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">47</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850926</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:BtSignIn.Caption" resname="O:FrLogin.O:BtSignIn.Caption">
         <source>'Sign in'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850926</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">48</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Prijavi se'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45346.9495850926</prop><prop prop-type="Status">1</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:BtSignIn.Enabled" resname="O:FrLogin.O:BtSignIn.Enabled">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850926</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">49</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850926</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:BtSignIn.TabOrder" resname="O:FrLogin.O:BtSignIn.TabOrder">
         <source>2</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850926</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">50</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850926</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:BtSignIn.OnClick" resname="O:FrLogin.O:BtSignIn.OnClick">
         <source>BtSignInClick</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850926</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">51</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850926</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:EPassword.Left" resname="O:FrLogin.O:EPassword.Left">
         <source>72</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850926</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">52</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850926</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:EPassword.Top" resname="O:FrLogin.O:EPassword.Top">
         <source>117</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850926</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">53</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850926</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:EPassword.Width" resname="O:FrLogin.O:EPassword.Width">
         <source>118</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850926</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">54</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850926</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:EPassword.Height" resname="O:FrLogin.O:EPassword.Height">
         <source>23</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850926</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">55</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850926</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:EPassword.PasswordChar" resname="O:FrLogin.O:EPassword.PasswordChar">
         <source>'*'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850926</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">56</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850926</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:EPassword.TabOrder" resname="O:FrLogin.O:EPassword.TabOrder">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850926</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">57</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850926</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:EPassword.OnChange" resname="O:FrLogin.O:EPassword.OnChange">
         <source>EPasswordChange</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850926</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">58</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850926</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:EUsername.Left" resname="O:FrLogin.O:EUsername.Left">
         <source>72</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850926</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">59</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850926</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:EUsername.Top" resname="O:FrLogin.O:EUsername.Top">
         <source>57</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850926</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">60</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850926</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:EUsername.Width" resname="O:FrLogin.O:EUsername.Width">
         <source>118</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850926</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">61</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850926</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:EUsername.Height" resname="O:FrLogin.O:EUsername.Height">
         <source>23</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850926</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">62</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850926</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:EUsername.TabOrder" resname="O:FrLogin.O:EUsername.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850926</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">63</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850926</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLogin.O:EUsername.OnChange" resname="O:FrLogin.O:EUsername.OnChange">
         <source>EUsernameChange</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45346.9495850926</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">64</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45346.9495850926</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
     </body>
   </file>

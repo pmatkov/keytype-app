@@ -1,18 +1,16 @@
 //---------------------------------------------------------------------------
 
-#include <vcl.h>
 #include <windows.h>
 #include <memory>
 #include <algorithm>
 
 #include "MainForm.h"
-#include "PracticeForm.h"
 #include "PracticeFrame.h"
 #include "Generator.h"
 #include "UIUtils.h"
 #include "TextUtils.h"
-#include "ENullPointerException.h"
 #include "Logger.h"
+#include "ENullPointerException.h"
 
 #pragma hdrstop
 
@@ -24,14 +22,17 @@ TFrPractice *FrPractice;
 //---------------------------------------------------------------------------
 __fastcall TFrPractice::TFrPractice(TComponent* Owner) : TFrame(Owner) {}
 
-__fastcall TFrPractice::TFrPractice(TComponent* Owner, Parser* _parser, PracticeSession *_practiceSession) : TFrame(Owner) {
-	if (_parser && _practiceSession) {
+__fastcall TFrPractice::TFrPractice(TComponent* Owner, Parser* _parser, MainSession *_mainSession, TypingSession *_typingSession, TFPracticeOptions *_FPracticeOptions) : TFrame(Owner) {
+	if (_parser && _mainSession && _typingSession) {
 
        parser = _parser;
-       practiceSession = _practiceSession;
+       mainSession = _mainSession;
+       typingSession = _typingSession;
+       FPracticeOptions = _FPracticeOptions;
 
-       maxChars = countMaxChars(RETextBox, FMain->getPracticeSession()->getTextSource().getText());
+       maxChars = TextUtils::countCharsUntilWordBreak(typingSession->getTextSource().getText(), UIUtils::estimateMaxChars(RETextBox));
        setPracticeStatus(Initialized);
+       typingSession->setSessionStatus(SessionStatus::Initialized);
 
        LOGGER(LogLevel::Debug, "Practice frame created");
 
@@ -41,36 +42,53 @@ __fastcall TFrPractice::TFrPractice(TComponent* Owner, Parser* _parser, Practice
     }
 }
 
-void TFrPractice::setPracticeForm(TFPractice *_FPractice) {
-	FPractice = _FPractice;
-}
 
 // change frame appearance based on practice status
 
-void TFrPractice::setPracticeStatus(PracticeStatus status)  {
+void TFrPractice::setPracticeStatus(SessionStatus status)  {
 
 	switch (status) {
 
-        LOGGER(LogLevel::Debug, "Change practice status");
-
         case Initialized: {
 
-           	RETextBox->Text = FMain->getPracticeSession()->getTextSource().getText().SubString(1, maxChars);
+            hideStatsItems();
+
+			RETextBox->Font->Name = mainSession->getTypingSettings().getFontFamily();
+            RETextBox->Font->Size = mainSession->getTypingSettings().getFontSize();
+
+            if (mainSession->getTypingSettings().getSeparatorType() == SeparatorType::Space) {
+            	RETextBox->Text = typingSession->getTextSource().getText().SubString(1, maxChars);
+            }
+            else if (mainSession->getTypingSettings().getSeparatorType() == SeparatorType::Dot) {
+            	RETextBox->Text = TextUtils::replaceChar(typingSession->getTextSource().getText().SubString(1, maxChars), ' ', L'\u25E6');
+            }
+
             UIUtils::setTextColor(RETextBox, clSilver);
+
             LStart->Caption = "Press space bar to start the practice";
             break;
-
         }
         case Started: {
             UIUtils::setTextColor(RETextBox, clBlack);
-            UIUtils::setCharStyle(RETextBox, 0, fsUnderline, true);
+
+            if (mainSession->getTypingSettings().getCaretType() == CaretType::Block) {
+            	UIUtils::setCharBgColor(RETextBox, 0, clSilver);
+            }
+            else if (mainSession->getTypingSettings().getCaretType() == CaretType::Underline) {
+            	UIUtils::setCharStyle(RETextBox, 0, fsUnderline, true);
+            }
+
+            // activate the timer
+            typingSession->getTimeManager().startTimer();
+            Timer1->Enabled = true;
+
+            displayStatsItems();
+
             LStart->Visible = false;
             break;
-
         }
         case Restarted: {
-            RETextBox->Lines->Clear();
-    		RETextBox->Text = FMain->getPracticeSession()->getTextSource().getText().SubString(1, maxChars);
+			RETextBox->Text = typingSession->getTextSource().getText().SubString(1, maxChars);
             UIUtils::setTextColor(RETextBox, clSilver);
             LStart->Caption = "Press space bar to start the practice";
             LStart->Visible = true;
@@ -78,19 +96,26 @@ void TFrPractice::setPracticeStatus(PracticeStatus status)  {
 
         }
         case Resumed: {
-            UIUtils::setTextColor(RETextBox, clBlack);
+
+        	UIUtils::setTextColor(RETextBox, clBlack);
+            int index = typingSession->getTextSource().getCharIndex()-1;
+            UIUtils::setCharColor(RETextBox, parser->getBuffer(), index, index + parser->getInsertedChars().Length(), clRed);
             LStart->Visible = false;
             break;
 
         }
         case Paused: {
+
+          	hideStatsItems();
             UIUtils::setTextColor(RETextBox, clSilver);
             LStart->Caption = "Press space bar to resume the practice";
             LStart->Visible = true;
             break;
-
         }
+        default:
+        ;
 
+        LOGGER(LogLevel::Debug, "Practice status set");
 	}
 
 }
@@ -100,14 +125,16 @@ void TFrPractice::setPracticeStatus(PracticeStatus status)  {
 void __fastcall TFrPractice::FrOptionsBtOptionsClick(TObject *Sender)
 {
 
-	parser->setBufferingEnabled(false);
+	typingSession->setSessionStatus(SessionStatus::Paused);
+    setPracticeStatus(SessionStatus::Paused);
+    parser->setInputEnabled(false);
 
-	if (FPractice->ShowModal() == mrOk) {
+	if (FPracticeOptions->ShowModal() == mrOk) {
 
     	LOGGER(LogLevel::Debug, "Practice options displayed");
 
-		int index = FPractice->PCSourceText->ActivePageIndex;
-		TTabSheet* activeTab = FPractice->PCSourceText->Pages[index];
+		int index = FPracticeOptions->PCSourceText->ActivePageIndex;
+		TTabSheet* activeTab = FPracticeOptions->PCSourceText->Pages[index];
 
 		if (activeTab) {
 
@@ -115,30 +142,31 @@ void __fastcall TFrPractice::FrOptionsBtOptionsClick(TObject *Sender)
 
 				case 0: {
 
-					TRadioGroup* radiogroup = FPractice->GetFrGeneratedText()->RGGeneratedText;
+					TRadioGroup* radiogroup = FPracticeOptions->GetFrGeneratedText()->RGGeneratedText;
 
 					if (radiogroup && radiogroup->ItemIndex == 0) {
 
 						UnicodeString letters = "";
 
-						std::vector<TToolButton *> buttons = FPractice->GetFrGeneratedText()->getButtons();
+						std::vector<TToolButton *> buttons = FPracticeOptions->GetFrGeneratedText()->getButtons();
 
-						for (int i = 0; i < buttons.size(); i++) {
+                        for (int i = 0; i < buttons.size(); i++) {
+                            if (buttons[i] && buttons[i]->Down) {
+                                 letters += UnicodeString(buttons[i]->Caption);
+                            }
+                        }
 
-							if (buttons[i] && buttons[i]->Down) {
-								 letters += UnicodeString(buttons[i]->Caption);
-							}
-						}
-
-						bool uppercase = FPractice->GetFrGeneratedText()->CBCapitalLetters->Checked;
-						bool numbers = FPractice->GetFrGeneratedText()->CBNumbers->Checked;
-						bool punctuation = FPractice->GetFrGeneratedText()->CBPunctuation->Checked;
+						bool uppercase = FPracticeOptions->GetFrGeneratedText()->CBCapitalLetters->Checked;
+						bool numbers = FPracticeOptions->GetFrGeneratedText()->CBNumbers->Checked;
+						bool punctuation = FPracticeOptions->GetFrGeneratedText()->CBPunctuation->Checked;
 
 						if (letters.Length() > 0 || numbers || punctuation) {
 
 							 UnicodeString newText = Generator::generateText(letters, uppercase, numbers, punctuation, 128);
-                             practiceSession->setTextSource(TextSource(newText));
-							 setPracticeStatus(Restarted);
+                             typingSession->setTextSource(TextSource(newText));
+
+                             typingSession->setSessionStatus(SessionStatus::Restarted);
+							 setPracticeStatus(SessionStatus::Restarted);
 						}
 					}
 					else {
@@ -151,92 +179,43 @@ void __fastcall TFrPractice::FrOptionsBtOptionsClick(TObject *Sender)
 			}
 		}
 	}
-	else {
-		practiceSession->setPaused(true);
-		setPracticeStatus(Paused);
-	}
 
 	this->SetFocus();
 }
 
+void TFrPractice::displayStatsItems() {
 
-// determine max chars for RichEdit control
+	LTime->Visible = true;
+    LDisplayTime->Visible = true;
+    LTime->Font->Color = clGray;
+	LDisplayTime->Font->Color = clSilver;
 
-int TFrPractice::countMaxChars(TRichEdit *RETextBox, const UnicodeString &string) {
-
-    std::unique_ptr<TBitmap> bitmap = std::make_unique<TBitmap>();
-    std::unique_ptr<TCanvas> canvas = std::make_unique<TCanvas>();
-    canvas->Handle = bitmap->Canvas->Handle;
-
-    canvas->Font = RETextBox->Font;
-
-    int textWidth = canvas->TextWidth(string);
-    int textHeight = canvas->TextHeight(string);
-    UnicodeString cpString = string;
-
-    int maxChars = 0;
-    bool oversized;
-
-    for (int i = 0; i < RETextBox->ClientHeight/ textHeight; i++) {
-
-        oversized = false;
-
-        while ((float)(RETextBox->ClientWidth/ textWidth) < 1.0f || ((float)(RETextBox->ClientWidth/ textWidth) >= 1.0f && TextUtils::isWordBreak(string, cpString.Length()-1))) {
-            oversized = true;
-            cpString.Delete(cpString.Length(), 1);
-            textWidth = canvas->TextWidth(cpString);
-        }
-        maxChars += cpString.Length();
-
-        if (oversized) {
-        	cpString = string;
-            cpString.Delete(1, maxChars);
-            textWidth = canvas->TextWidth(cpString);
-        }
-        else {
-            break;
-        }
-
+    if (mainSession->getTypingSettings().getDisplaySpeed()) {
+        LSpeed->Visible = true;
+        LDisplaySpeed->Visible = true;
+        LSpeed->Font->Color = clGray;
+        LDisplaySpeed->Font->Color = clSilver;
     }
 
-    return maxChars;
+    if (mainSession->getTypingSettings().getDisplayAccuracy()) {
+        LAccuracy->Visible = true;
+        LDisplayAccuracy->Visible = true;
+        LAccuracy->Font->Color = clGray;
+        LDisplayAccuracy->Font->Color = clSilver;
+    }
 
 }
 
-// estimate max chars for RichEdit control (for random text)
+void TFrPractice::hideStatsItems() {
+	LTime->Visible = false;
+    LDisplayTime->Visible = false;
 
-int TFrPractice::estimateMaxChars(TRichEdit *RETextBox) {
+    LSpeed->Visible = false;
+    LDisplaySpeed->Visible = false;
 
-    std::unique_ptr<TBitmap> bitmap = std::make_unique<TBitmap>();
-    std::unique_ptr<TCanvas> canvas = std::make_unique<TCanvas>();
-    canvas->Handle = bitmap->Canvas->Handle;
-
-    canvas->Font = RETextBox->Font;
-    int chartWidth = canvas->TextWidth("o");
-    int charHeight = canvas->TextHeight("o");
-
-    int initialEstimate = (RETextBox->ClientWidth/ chartWidth) * (RETextBox->ClientHeight/ charHeight);
-    int finalEstimate[3];
-
-    for (int i = 0; i < 3; i++) {
-
-    	UnicodeString generatedText = Generator::generateText("abcdefghijklmnopqrstuvwxyz", true, false, false, initialEstimate * 2);
-
-        int textWidth = canvas->TextWidth(generatedText);
-        int textHeight = canvas->TextHeight(generatedText);
-
-        while ((float)(RETextBox->ClientWidth * (RETextBox->ClientHeight/ textHeight))/ textWidth > 1.0f)  {
-            generatedText.Delete(generatedText.Length(), 1);
-        }
-        finalEstimate[i] = generatedText.Length();
-    }
-
-    std::sort(std::begin(finalEstimate), std::end(finalEstimate));
-
-    return finalEstimate[1];
-
+    LAccuracy->Visible = false;
+    LDisplayAccuracy->Visible = false;
 }
-
 
 // forward all char messages to main form
 void __fastcall TFrPractice::WndProc(TMessage &Message)
@@ -250,4 +229,23 @@ void __fastcall TFrPractice::WndProc(TMessage &Message)
             TFrame::WndProc(Message);
     }
 }
+
+void __fastcall TFrPractice::Timer1Timer(TObject *Sender)
+{
+        if (typingSession->getSessionStatus() == SessionStatus::Started) {
+
+        	int min = typingSession->getTimeManager().getElapsedTime()/ 60;
+        	int sec = typingSession->getTimeManager().getElapsedTime()% 60;
+            TDateTime elapsedTime = System::Sysutils::EncodeTime(0, min, sec, 0);
+            LDisplayTime->Caption = FormatDateTime("hh:nn:ss", elapsedTime);
+
+            if (mainSession->getTypingSettings().getDisplaySpeed()) {
+               LDisplaySpeed->Caption = FormatFloat("0.00", typingSession->getSpeed()) + " WPM";
+            }
+            if (mainSession->getTypingSettings().getDisplayAccuracy()) {
+               LDisplayAccuracy->Caption = FormatFloat("0.00", typingSession->getAccuracy()) + " %";
+            }
+    	}
+}
+//---------------------------------------------------------------------------
 

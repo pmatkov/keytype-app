@@ -39,38 +39,42 @@ UnicodeString DcWord::getSynonymsAsString() const {
 	return synonymsString;
 }
 
-
-WordCategory DcWord::stringToWordCategory(const UnicodeString &word) {
-
-	std::vector<UnicodeString>::iterator it = std::find(enumStrings.begin(), enumStrings.end(), word);
-
-	if (it != enumStrings.end()) {
-		 return static_cast<WordCategory> (it - enumStrings.begin());
-	}
-	else
-		return Unknown;
+std::vector<UnicodeString>& DcWord::getEnumStrings() {
+    return enumStrings;
 }
 
-UnicodeString DcWord::wordCategoryToString(WordCategory category) {
 
-	if (static_cast<int>(category) < enumStrings.size()	) {
-		return enumStrings[static_cast<int>(category)];
-	}
-	else
-		return "unkown";
-}
-
-std::vector<UnicodeString> DcWord::getWordCategoriesAsStrings() {
-
-	std::vector<UnicodeString> categories;
-
-	int count = static_cast<int> (WordCategory::Count);
-
-    for (int i = 0; i < count; i++) {
-    	categories.push_back(wordCategoryToString(static_cast<WordCategory>(i)));
-    }
-
-    return categories;
-}
+//WordCategory DcWord::stringToWordCategory(const UnicodeString &word) {
+//
+//	std::vector<UnicodeString>::iterator it = std::find(enumStrings.begin(), enumStrings.end(), word);
+//
+//	if (it != enumStrings.end()) {
+//		 return static_cast<WordCategory> (it - enumStrings.begin());
+//	}
+//	else
+//		return Unknown;
+//}
+//
+//UnicodeString DcWord::wordCategoryToString(WordCategory category) {
+//
+//	if (static_cast<int>(category) < enumStrings.size()	) {
+//		return enumStrings[static_cast<int>(category)];
+//	}
+//	else
+//		return "unkown";
+//}
+//
+//std::vector<UnicodeString> DcWord::getWordCategoriesAsStrings() {
+//
+//	std::vector<UnicodeString> categories;
+//
+//	int count = static_cast<int> (WordCategory::Count);
+//
+//    for (int i = 0; i < count; i++) {
+//    	categories.push_back(wordCategoryToString(static_cast<WordCategory>(i)));
+//    }
+//
+//    return categories;
+//}
 
 std::vector<UnicodeString> DcWord::enumStrings = {"noun", "verb", "adverb", "adjective", "pronoun"};

@@ -7,21 +7,24 @@
 #include <cwctype>
 #include <vector>
 
-class TextUtils
+namespace TextUtils
 {
-	public:
-        static int countSentences(const UnicodeString &text);
-        static int countWords(const UnicodeString &text);
-        static int countChars(const UnicodeString &text);
 
-        static bool isUnicodeString(const UnicodeString &text);
-        static bool isEndChar(const wchar_t wchar);
-        static UnicodeString trimCharacters(const UnicodeString &text, wchar_t wch);
-        static std::vector<UnicodeString> splitTextIntoWords(const UnicodeString& line);
-        static bool isWordBreak(const UnicodeString& line, int index);
-        static UnicodeString formatJson(const UnicodeString& string);
-        static UnicodeString repeatChar(wchar_t wch, int count);
-        static int findString(const std::vector<UnicodeString> &vec, const UnicodeString &string);
+        int countSentences(const UnicodeString &text);
+        int countWords(const UnicodeString &text);
+        int countChars(const UnicodeString &text);
+
+        bool isUnicodeString(const UnicodeString &text);
+        bool isEndChar(const wchar_t wchar);
+        UnicodeString trimCharacters(const UnicodeString &text, wchar_t wch);
+        std::vector<UnicodeString> splitTextIntoWords(const UnicodeString& text);
+        UnicodeString replaceChar(const UnicodeString& text, wchar_t original, wchar_t replacement);
+        bool isWordBreak(const UnicodeString& line, int index);
+        int countCharsUntilWordBreak(const UnicodeString& line, int index);
+
+        UnicodeString formatJson(const UnicodeString& string);
+        UnicodeString repeatChar(wchar_t wch, int count);
+        int findString(const std::vector<UnicodeString> &vec, const UnicodeString &string);
 
 };
 //---------------------------------------------------------------------------

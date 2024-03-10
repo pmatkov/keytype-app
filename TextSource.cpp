@@ -1,7 +1,4 @@
 //---------------------------------------------------------------------------
-
-
-
 #include "TextSource.h"
 //---------------------------------------------------------------------------
 #pragma hdrstop
@@ -23,11 +20,16 @@ const UnicodeString& TextSource::getCurrentWord() const {
 	return currentWord;
 }
 
-const wchar_t TextSource::getCurrentChar() const {
-	 return text[charIndex];
+
+wchar_t TextSource::operator[](int index) const {
+   if (index >= 1 && index <= text.Length()) {
+        return text[index];
+    } else {
+        throw std::out_of_range("Index out of bounds");
+    }
 }
 
-const int& TextSource::getCharIndex() const {
+int TextSource::getCharIndex() const {
 	 return charIndex;
 }
 

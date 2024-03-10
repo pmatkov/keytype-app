@@ -4,29 +4,64 @@
 
 #include "Parser.h"
 #include "Logger.h"
+#include "ENullPointerException.h"
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 
-Parser::Parser() {
+Parser::Parser(MainSession *_mainSession, TypingSession *_typingSession) {
 
-	LOGGER(LogLevel::Debug, "Parser created");
+	if (_mainSession && _typingSession) {
+        mainSession = _mainSession;
+        typingSession = _typingSession;
+
+        LOGGER(LogLevel::Debug, "Parser created");
+
+    } else {
+        throw ENullPointerException();
+    }
 }
 
- const UnicodeString& Parser::getBuffer() const {
+ const std::vector<std::pair<UnicodeString, bool>>& Parser::getLog() const {
+	 return log;
+ }
+
+ void Parser::setLog(const std::vector<std::pair<UnicodeString, bool>>& text) {
+	log = text;
+}
+
+ const std::vector<std::pair<UnicodeString, bool>>& Parser::getBuffer() const {
 	 return buffer;
  }
 
- void Parser::setBuffer(const UnicodeString& text) {
+ void Parser::setBuffer(const std::vector<std::pair<UnicodeString, bool>>& text) {
 	buffer = text;
 }
 
-const bool& Parser::isBufferingEnabled() const {
-	return bufferingEnabled;
+const UnicodeString &Parser::getInsertedChars() const {
+    return insertedChars;
 }
 
-void Parser::setBufferingEnabled(bool _bufferingEnabled) {
-	bufferingEnabled = _bufferingEnabled;
+const bool Parser::isLastCharMistake() const {
+    if (buffer.size() > 1) {
+    	return buffer[buffer.size()-2].second;
+    }
+    return false;
+}
+
+bool Parser::isStopOnMistake() {
+    return stopOnMistake;
+}
+void Parser::setStopOnMistake(bool _stopOnMistake){
+    stopOnMistake = _stopOnMistake;
+}
+
+const bool& Parser::isInputEnabled() const {
+	return inputEnabled;
+}
+
+void Parser::setInputEnabled(bool _inputEnabled) {
+	inputEnabled = _inputEnabled;
 }
 
 
@@ -36,37 +71,94 @@ wchar_t Parser::getChar(WPARAM wParam){
 
 	switch (wParam) {
 
+        // ignore enter, tab and escape
 		case VK_RETURN:
 		case VK_TAB:
 		case VK_ESCAPE:
 			break;
 
+
+        /* correct typing mistakes (these mistakes are inserted in practice text
+        only if 'stop on mistake' isn't active)*/
+
 		case VK_BACK:{
-			if (bufferingEnabled && buffer.Length() > 0) {
-            	buffer.Delete(buffer.Length(), 1);
+
+            if (inputEnabled && !insertedChars.IsEmpty()) {
+            	insertedChars.Delete(insertedChars.Length(), 1);
+                return wch;
             }
-            return wch;
+            break;
         }
 
 		default: {
-			if (bufferingEnabled) {
-				buffer += UnicodeString(wch);
+            if (inputEnabled) {
+                try {
+
+                	if (insertedChars.IsEmpty()) {
+
+                        // change word separator to \u25E6
+                        if (mainSession->getTypingSettings().getSeparatorType() == SeparatorType::Dot && typingSession->getTextSource()[typingSession->getTextSource().getCharIndex()] == L'\u25E6') {
+                          wch = L'\u25E6';
+                        }
+
+                        // input is valid
+
+                        if (wch == typingSession->getTextSource()[typingSession->getTextSource().getCharIndex()]) {
+
+                            log.push_back(std::make_pair(UnicodeString(wch), false));
+
+                            // flag mistakes in buffer
+                            if (!mistake) {
+                            	buffer.push_back(std::make_pair(UnicodeString(wch), false));
+                            }
+                            else {
+                              	buffer.push_back(std::make_pair(UnicodeString(wch), true));
+                                mistake = false;
+                            }
+
+                            // count typed words
+                            if (wParam == VK_SPACE || typingSession->getTextSource().getCharIndex() == typingSession->getTextSource().getText().Length()) {
+                                typingSession->increaseTypedWords();
+                            }
+
+                            typingSession->increaseCharIndex();
+                            return wch;
+
+                            // input is invalid
+                        } else {
+                        	log.push_back(std::make_pair(UnicodeString(wch), true));
+
+                            if (mainSession->getTypingSettings().getCountConsecutiveMistakes()) {
+                            	typingSession->increaseMistakes();
+                            }
+                            else {
+                                // flag mistake but don't add to buffer yet (only add after input is valid)
+                            	if (!mistake) {
+                       				typingSession->increaseMistakes();
+                               		mistake = true;
+                            	}
+                            }
+
+                            // insert invalid chars (only if 'stop on mistake' isn't active)
+                            if (!mainSession->getTypingSettings().getStopOnMistake()) {
+                                insertedChars += UnicodeString(wch);
+                            	return wch;
+                            }
+                        }
+                    }else {
+                    	insertedChars += UnicodeString(wch);
+                        return wch;
+                    }
+
+                } catch (Exception &ex) {
+                	LOGGER(LogLevel::Fatal, ex.Message);
+                }
             }
-			return wch;
+            else {
+            	return wch;
+            }
 		}
 	}
-
-	return L'\0';
+    return L'\0';
 }
 
-void Parser::addChar(wchar_t &wch) {
-
-	buffer += UnicodeString(wch);
-}
-
-void Parser::deleteChar() {
-
-	if (buffer.Length() > 0) {
-		buffer.Delete(buffer.Length(), 1);
-	}
-}

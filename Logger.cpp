@@ -6,6 +6,7 @@
 #include "Logger.h"
 #include "FileUtils.h"
 #include "TimeManager.h"
+#include "EnumUtils.h"
 
 #define MAX_BUFFER_SIZE 20
 
@@ -20,7 +21,6 @@ LogLevel operator&(LogLevel a, LogLevel b) {
     return static_cast<LogLevel>(static_cast<int>(a) & static_cast<int>(b));
 }
 
-
 std::vector<UnicodeString> Logger::buffer;
 UnicodeString Logger::logFilename = "";
 LogLevel Logger::logLevel = LogLevel::All;
@@ -29,11 +29,7 @@ std::chrono::steady_clock::time_point Logger::lastFlushTime = std::chrono::stead
 const std::chrono::seconds Logger::flushInterval = std::chrono::seconds(SECONDS);
 std::mutex Logger::bufferMutex;
 
-//Logger::Logger() : lastFlushTime(std::chrono::steady_clock::now()) {}
-//
-//Logger::~Logger() {
-//	flushBuffer();
-//}
+bool Logger::firstFlush = true;
 
 void Logger::setLogLevel(LogLevel level) {
     logLevel = level;
@@ -43,9 +39,6 @@ void Logger::setLogLevel(LogLevel level) {
 UnicodeString Logger::getLogLevelAsString(LogLevel level) {
 
     switch(level) {
-        case LogLevel::All:
-            return "ALL";
-            break;
         case LogLevel::Debug:
             return  "DEBUG";
             break;
@@ -58,17 +51,35 @@ UnicodeString Logger::getLogLevelAsString(LogLevel level) {
         case LogLevel::Fatal:
             return  "FATAL";
             break;
+        case LogLevel::All:
+            return "ALL";
+            break;
         default:
         	return  "Unknown";
+    }
+}
 
+LogLevel Logger::getStringAsLogLevel(const UnicodeString &level) {
+
+   if (level.UpperCase() == "DEBUG") {
+        return LogLevel::Debug;
+    } else if (level.UpperCase() == "INFO") {
+        return LogLevel::Info;
+    } else if (level.UpperCase() == "ERROR") {
+        return LogLevel::Error;
+    } else if (level.UpperCase() == "FATAL") {
+        return LogLevel::Fatal;
+    } else if (level.UpperCase() == "ALL") {
+        return LogLevel::All;
+    } else {
+    	return LogLevel::Unknown;
     }
 
-//    return (level == LogLevel::Info) ? L"INFO" : L"ERROR";
 }
 
 // creates log file name of the format yyyy-mm-dd-ab.log where ab
 // is numerical index (e.g. "2024-01-20-00.log")
-UnicodeString Logger::createLogFileName(const UnicodeString& dirName) {
+UnicodeString Logger::createLogFileName(const UnicodeString &dirName) {
 
 	UnicodeString dirPath = FileUtils::createAbsolutePath("Log", false);
     std::optional<std::vector<UnicodeString>> filenames = FileUtils::getFileNames(dirPath, "log");
@@ -96,6 +107,7 @@ UnicodeString Logger::createLogFileName(const UnicodeString& dirName) {
                     max = current;
                 }
            }
+
            if ((max == 0 || max == 99) && noMatch) {
               next = 0;
            }
@@ -110,14 +122,18 @@ UnicodeString Logger::createLogFileName(const UnicodeString& dirName) {
     return TimeManager::getCurrentDate() + '-' + indexA + indexB;
 }
 
+
+// add log to buffer
 void Logger::log(LogLevel level, const UnicodeString& message, const char* functionName, int lineNumber) {
+
+
 
     if (logLevel & level) {
 
     	UnicodeString logLine;
         logLine = TimeManager::getCurrentDateTime() + " ";
-        logLine += "[" + getLogLevelAsString(level) + "] ";
-        logLine += UnicodeString(functionName) + ":" + IntToStr(lineNumber) + " - " + message;
+          logLine += "[" + Logger::getLogLevelAsString(level) + "] ";
+          logLine += UnicodeString(functionName) + ":" + IntToStr(lineNumber) + " - " + message;
 
         {
             std::lock_guard<std::mutex> lock(bufferMutex);
@@ -126,26 +142,28 @@ void Logger::log(LogLevel level, const UnicodeString& message, const char* funct
 
         if (buffer.size() >= MAX_BUFFER_SIZE || std::chrono::steady_clock::now() - lastFlushTime >= flushInterval) {
             flushBuffer();
+            firstFlush = false;
         }
     }
 }
 
+// write log to file
 
 void Logger::flushBuffer() {
 
     std::lock_guard<std::mutex> lock(bufferMutex);
 
-    if (!logFilename.Length()) {
-    	logFilename = createLogFileName("Log");
-    }
-
-    UnicodeString path = FileUtils::createAbsolutePath("Log\\" + logFilename + ".log", true);
+    UnicodeString path = FileUtils::createAbsolutePath("Log\\" + TimeManager::getCurrentDate() + ".log", true);
 
     std::unique_ptr<TStreamWriter> writer;
 
     try {
 
         writer = std::make_unique<TStreamWriter>(path, true, TEncoding::UTF8, 1024);
+
+        if (firstFlush) {
+        	writer->WriteLine(UnicodeString("***"));
+        }
 
         for (const UnicodeString &string: buffer){
             writer->WriteLine(string);
@@ -161,6 +179,15 @@ void Logger::flushBuffer() {
 
 }
 
+// write log on app close
+
 void Logger::registerFlushOnExit() {
+
 	atexit(flushBuffer);
 }
+
+std::vector<UnicodeString>& Logger::getLogLevelStrings() {
+    return logLevelStrings;
+}
+
+std::vector<UnicodeString> Logger::logLevelStrings = {"Debug", "Info", "Error", "Fatal", "All"};

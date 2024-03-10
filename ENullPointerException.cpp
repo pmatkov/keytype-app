@@ -7,8 +7,4 @@
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 
-ENullPointerException ::ENullPointerException() : Exception("Nullptr exception") {
-
-     LOGGER(LogLevel::Fatal, "Nullptr exception");
-
-}
+ENullPointerException ::ENullPointerException() : Exception("Nullptr exception") {}

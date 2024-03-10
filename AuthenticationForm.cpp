@@ -18,14 +18,14 @@ TFAuthentication *FAuthentication;
 //---------------------------------------------------------------------------
 __fastcall TFAuthentication::TFAuthentication(TComponent* Owner) : TForm(Owner)  {}
 
-__fastcall TFAuthentication::TFAuthentication(TComponent* Owner, AuthenticationService *_authenticationService, TDataModule1 *dataModule) : TForm(Owner)  {
+__fastcall TFAuthentication::TFAuthentication(TComponent* Owner, AuthenticationService *_authenticationService) : TForm(Owner)  {
 
 	if (_authenticationService) {
 	   	authenticationService = _authenticationService;
 
         // create frames
-        FrLogin = UIUtils::createFrame<TFrLogin>(this, authenticationService, dataModule);
-        FrRegister = UIUtils::createFrame<TFrRegister>(this, authenticationService, dataModule);
+        FrLogin = UIUtils::createFrame<TFrLogin>(this, authenticationService);
+        FrRegister = UIUtils::createFrame<TFrRegister>(this, authenticationService);
 
         UIUtils::setFrameVisibility<TFrLogin>(FrLogin, true);
         UIUtils::setFrameVisibility<TFrRegister>(FrRegister, false);
@@ -38,6 +38,7 @@ __fastcall TFAuthentication::TFAuthentication(TComponent* Owner, AuthenticationS
         FrRegister->OnRegister = FrRegisterRegisterComplete;
 
   		LOGGER(LogLevel::Debug, "Created authentication form");
+
 	}
     else {
         throw ENullPointerException();
@@ -45,6 +46,7 @@ __fastcall TFAuthentication::TFAuthentication(TComponent* Owner, AuthenticationS
 }
 
 
+//  event handlers
 void __fastcall TFAuthentication::FrLoginRegisterSelect(TObject *Sender)
 {
 	UIUtils::switchFrames<TFrLogin, TFrRegister>(FrLogin, FrRegister);
@@ -62,13 +64,12 @@ void __fastcall TFAuthentication::FrRegisterSignInSelect(TObject *Sender)
     Caption = "Login";
 }
 
-
 void __fastcall TFAuthentication::FrRegisterRegisterComplete(TObject *Sender, TModalResult result)
 {
     ModalResult = result;
 }
 
-
+// add authentication form to the taskbar
 void __fastcall TFAuthentication::CreateParams(TCreateParams &Params)
 {
     TForm::CreateParams(Params);

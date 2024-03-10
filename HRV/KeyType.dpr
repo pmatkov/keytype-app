@@ -11,8 +11,8 @@ library KeyType;
 {ITE} {DFMFileType} {MainForm.dfm}
 {ITE} {DFMFileType} {MainFrame.dfm}
 {ITE} {DFMFileType} {OptionsFrame.dfm}
-{ITE} {DFMFileType} {PracticeForm.dfm}
 {ITE} {DFMFileType} {PracticeFrame.dfm}
+{ITE} {DFMFileType} {PracticeOptionsForm.dfm}
 {ITE} {DFMFileType} {PreferencesForm.dfm}
 {ITE} {DFMFileType} {RegisterFrame.dfm}
 {ITE} {RCFileType} {Win32\Debug\KeyType_DRC.rc}
@@ -26,8 +26,8 @@ library KeyType;
 {$R 'MainForm.dfm' 'FMain:TForm'}
 {$R 'MainFrame.dfm' 'FrMain:TForm'}
 {$R 'OptionsFrame.dfm' 'FrOptions:TForm'}
-{$R 'PracticeForm.dfm' 'FPractice:TForm'}
 {$R 'PracticeFrame.dfm' 'FrPractice:TForm'}
+{$R 'PracticeOptionsForm.dfm' 'FPracticeOptions:TForm'}
 {$R 'PreferencesForm.dfm' 'FPreferences:TForm'}
 {$R 'RegisterFrame.dfm' 'FrRegister:TForm'}
 {$R 'Win32\Debug\KeyType_DRC.res' 'Win32\Debug\KeyType_DRC.rc'}

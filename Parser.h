@@ -3,28 +3,49 @@
 #ifndef ParserH
 #define ParserH
 //---------------------------------------------------------------------------
+#include <vector>
 #include <vcl.h>
 #include <windows.h>
 
+#include "MainSession.h"
+#include "TypingSession.h"
 
-class Parser
-{
+class TFMain;
+
+class Parser {
 	private:
-		UnicodeString buffer;
-		bool bufferingEnabled = false;
+     	MainSession *mainSession;
+		TypingSession *typingSession;
+
+        std::vector<std::pair<UnicodeString, bool>> log;
+		std::vector<std::pair<UnicodeString, bool>> buffer;
+        UnicodeString insertedChars = "";
+
+        bool mistake = false;
+        bool stopOnMistake = false;
+		bool inputEnabled = false;
 
 	public:
-        Parser();
-		const UnicodeString& getBuffer() const;
-		void setBuffer(const UnicodeString& text);
+        Parser(MainSession *_mainSession, TypingSession *_typingSession);
 
-		const bool& isBufferingEnabled() const;
-		void setBufferingEnabled(bool _buffered);
+        const std::vector<std::pair<UnicodeString, bool>>& getLog() const;
+		void setLog(const std::vector<std::pair<UnicodeString, bool>>& text);
+
+        const std::vector<std::pair<UnicodeString, bool>>& getBuffer() const;
+		void setBuffer(const std::vector<std::pair<UnicodeString, bool>>& text);
+
+        const UnicodeString &getInsertedChars() const;
+
+        const bool isLastCharMistake() const;
+
+        bool isStopOnMistake();
+        void setStopOnMistake(bool _stopOnMistake);
+
+		const bool& isInputEnabled() const;
+		void setInputEnabled(bool _inputEnabled);
 
 		wchar_t getChar(WPARAM wParam);
 
-		void addChar(wchar_t &wch);
-		void deleteChar();
 
 };
 #endif

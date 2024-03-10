@@ -26,23 +26,43 @@ __published:	// IDE-managed Components
 	TCheckBox *CBMistake;
 	TLabel *LFont1;
 	TComboBox *CBFont1;
-	TCheckBox *CBSeqMistakes;
+	TCheckBox *CBConsecutiveMistakes;
 	TCheckBox *CBSpeed;
 	TLabel *LFont2;
 	TLabel *LFontSize;
 	TComboBox *CBFont2;
 	TCheckBox *CBAccuracy;
-	TComboBox *ComboBox1;
+	TComboBox *CBFontSize;
 	TButton *BtReset2;
 	TButton *BtCancel;
 	TButton *BtReset1;
 	TButton *BtAccept;
+	TLabel *LSeparator;
+	TComboBox *CBSeparator;
+	void __fastcall CBLanguageChange(TObject *Sender);
+	void __fastcall CBLoggingEnableClick(TObject *Sender);
+	void __fastcall BtReset1Click(TObject *Sender);
+	void __fastcall BtReset2Click(TObject *Sender);
+	void __fastcall BtAcceptClick(TObject *Sender);
+	void __fastcall CBMistakeClick(TObject *Sender);
+	void __fastcall CBConsecutiveMistakesClick(TObject *Sender);
+	void __fastcall CBSpeedClick(TObject *Sender);
+	void __fastcall CBAccuracyClick(TObject *Sender);
+	void __fastcall CBCaretChange(TObject *Sender);
+	void __fastcall CBSeparatorChange(TObject *Sender);
+	void __fastcall CBFont2Change(TObject *Sender);
+	void __fastcall CBFontSizeChange(TObject *Sender);
+	void __fastcall CBLoggingChange(TObject *Sender);
+	void __fastcall CBFont1Change(TObject *Sender);
 private:	// User declarations
 	MainSession *mainSession;
 
 public:		// User declarations
 	__fastcall TFPreferences(TComponent* Owner);
     __fastcall TFPreferences(TComponent* Owner, MainSession *_mainSession);
+	void setAppSettingsItems();
+    void setTypingSettingsItems();
+
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TFPreferences *FPreferences;

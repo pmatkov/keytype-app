@@ -18,11 +18,10 @@ TFrLogin *FrLogin;
 //---------------------------------------------------------------------------
 __fastcall TFrLogin::TFrLogin(TComponent* Owner) : TFrame(Owner){}
 
-__fastcall TFrLogin::TFrLogin(TComponent* Owner, AuthenticationService *_authenticationService, TDataModule1 *_dataModule) : TFrame(Owner)  {
+__fastcall TFrLogin::TFrLogin(TComponent* Owner, AuthenticationService *_authenticationService) : TFrame(Owner)  {
 
-	if (_authenticationService && _dataModule) {
+	if (_authenticationService) {
 	   	authenticationService = _authenticationService;
-        dataModule = _dataModule;
     	LOGGER(LogLevel::Debug, "Login frame created");
 	}
     else {
@@ -32,41 +31,32 @@ __fastcall TFrLogin::TFrLogin(TComponent* Owner, AuthenticationService *_authent
 
 void __fastcall TFrLogin::BtSignInClick(TObject *Sender)
 {
-    UnicodeString username = EUsername->Text;
-    UnicodeString password = EPassword->Text;
 
-    std::unique_ptr<TFDQuery> query = std::make_unique<TFDQuery>(nullptr);
-    try {
-        query->Connection = dataModule->MySQLDBConnection;
-        query->SQL->Text = "SELECT * FROM users WHERE username = :username AND password = :password";
-        query->Params->ParamByName("username")->AsString = username;
-        query->Params->ParamByName("password")->AsString = password;
-        query->Open();
+    if (authenticationService->loginUser(EUsername->Text, EPassword->Text)) {
 
-        if (!query->IsEmpty()) {
-        	if (OnLogin) {
-            	LOGGER(LogLevel::Info, "User signed in as <" + username + ">");
-         		OnLogin(this, mrOk);
-         	}
-        } else {
-        	LResponse->Caption = "Invalid credentials";
-            LOGGER(LogLevel::Debug, "Invalid credentials");
+        if (OnLogin) {
+            LOGGER(LogLevel::Info, "User signed in as <" + EUsername->Text + ">");
+            OnLogin(this, mrOk);
         }
-        query->Close();
-    } catch (Exception &ex) {
-    	LOGGER(LogLevel::Fatal, ex.Message);
+
+    } else {
+        LResponse->Caption = "Invalid credentials";
+        LOGGER(LogLevel::Debug, "Invalid credentials");
     }
+
 }
 
 void __fastcall TFrLogin::BtGuestClick(TObject *Sender)
 {
 
-    if (authenticationService->loginUser("guest")) {
+	if (authenticationService->loginUser("guest", "")) {
+
          if (OnLogin) {
-         	LOGGER(LogLevel::Info, "User signed in as <guest>");
-         	OnLogin(this, mrOk);
+            LOGGER(LogLevel::Info, "User signed in as <guest>");
+            OnLogin(this, mrOk);
          }
-   }
+     }
+
 }
 
 void __fastcall TFrLogin::BtRegisterClick(TObject *Sender)
@@ -97,6 +87,4 @@ void TFrLogin::UpdateSignInButtonState()
         LResponse->Caption = "";
     }
 }
-
-//---------------------------------------------------------------------------
 

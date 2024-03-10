@@ -3,19 +3,15 @@
 #ifndef UUIDGeneratorH
 #define UUIDGeneratorH
 //---------------------------------------------------------------------------
-
+#include <vcl.h>
 #include <boost/uuid/uuid.hpp>
 #include <boost/uuid/uuid_generators.hpp>
 #include <boost/uuid/uuid_io.hpp>
 
-class UUIDGenerator {
+namespace UUIDGenerator {
 
-    private:
-        static boost::uuids::random_generator generator;
-
-    public:
-    	static boost::uuids::uuid generateUUID();
-        static UnicodeString generateUUIDasString();
+    boost::uuids::uuid generateUUID();
+    UnicodeString generateUUIDasString();
 
 };
 

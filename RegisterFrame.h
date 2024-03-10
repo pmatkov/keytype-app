@@ -32,10 +32,13 @@ __published:	// IDE-managed Components
 private:	// User declarations
     AuthenticationService *authenticationService;
     TDataModule1 *dataModule;
+    bool usernameAvailable = true;
 public:		// User declarations
 	__fastcall TFrRegister(TComponent* Owner);
-    __fastcall TFrRegister(TComponent* Owner, AuthenticationService *_authenticationService, TDataModule1 *_dataModule);
+    __fastcall TFrRegister(TComponent* Owner, AuthenticationService *_authenticationService);
     void UpdateRegisterButtonState();
+
+    void __fastcall FrUsernameUnavailable();
 
     void __fastcall (__closure *OnRegister)(TObject *Sender, TModalResult result);
     void __fastcall (__closure *OnSignInSelect)(TObject *Sender);

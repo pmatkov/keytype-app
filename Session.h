@@ -9,7 +9,6 @@
 
 class Session
 {
-
     protected:;
         boost::uuids::uuid sessionUuid;
         TimeManager timeManager;
@@ -17,6 +16,8 @@ class Session
 	public:
         Session();
         virtual ~Session() = 0;
+
+        TimeManager& getTimeManager();
 
 };
 

@@ -29,6 +29,7 @@ class User {
 	public:
 
 		User();
+        User(const UnicodeString &_username);
 		User(const UnicodeString &_id, const UnicodeString &_username, const UnicodeString &_name, const UnicodeString &_surname, int _age,  const UnicodeString &_email);
 
         const UnicodeString & getUsername() const;
@@ -36,11 +37,15 @@ class User {
 
 		const UnicodeString & getName() const;
 		void setName(const UnicodeString &_name);
+
 		const UnicodeString & getSurname() const;
 		void setSurname(const UnicodeString &_surname);
 
 		int getAge() const;
 		void setAge(int _age);
+
+        const UnicodeString & getEmail();
+       	void setEmail(const UnicodeString &_email);
 
 		const UserType& getUserType() const;
 		void setUserType(const UserType &_userType);

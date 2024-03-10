@@ -8,6 +8,7 @@
 #include "Dictionary.h"
 #include "FileUtils.h"
 #include "TextUtils.h"
+#include "EnumUtils.h"
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -84,7 +85,8 @@ void Dictionary::parseJsonToDictionary(const UnicodeString &path) {
 								}
 							}
 
-							dictionary[word] = DcWord(word, DcWord::stringToWordCategory(category), definition, synonyms);
+//							dictionary[word] = DcWord(word, DcWord::stringToWordCategory(category), definition, synonyms);
+							dictionary[word] = DcWord(word, EnumUtils::stringToEnum<WordCategory>(DcWord::getEnumStrings(), category), definition, synonyms);
 
 						}
 					}
@@ -124,7 +126,9 @@ std::optional<UnicodeString> Dictionary::generateJsonFromDictionary(const std::m
 				for (const std::pair<const UnicodeString, DcWord>& keyValue : dictionary) {
 
 					UnicodeString word = keyValue.second.getWord();
-					UnicodeString category = DcWord::wordCategoryToString(keyValue.second.getWordCategory());
+//					UnicodeString category = DcWord::wordCategoryToString(keyValue.second.getWordCategory());
+					UnicodeString category = EnumUtils::enumToString<WordCategory>(DcWord::getEnumStrings(), keyValue.second.getWordCategory());
+
 					UnicodeString definition = keyValue.second.getDefinition();
 
 					wordObject = new TJSONObject();

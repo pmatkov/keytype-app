@@ -1,4 +1,3 @@
-//---------------------------------------------------------------------------
 
 #pragma hdrstop
 
@@ -6,19 +5,23 @@
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 
-boost::uuids::random_generator UUIDGenerator::generator;
 
-boost::uuids::uuid UUIDGenerator::generateUUID()  {
+namespace UUIDGenerator {
 
-	boost::uuids::uuid uuid = generator();
+    boost::uuids::random_generator generator;
 
-   	return uuid;
-}
+    boost::uuids::uuid generateUUID()  {
 
-UnicodeString UUIDGenerator::generateUUIDasString()  {
+        boost::uuids::uuid uuid = generator();
 
-	boost::uuids::uuid uuid = generator();
-    std::string uuidString = boost::uuids::to_string(uuid);
+        return uuid;
+    }
 
-   	return UnicodeString(uuidString.c_str());
+    UnicodeString generateUUIDasString()  {
+
+        boost::uuids::uuid uuid = generator();
+        std::string uuidString = boost::uuids::to_string(uuid);
+
+        return UnicodeString(uuidString.c_str());
+    }
 }
