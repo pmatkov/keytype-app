@@ -14,7 +14,6 @@ TypingSession::TypingSession() {
     totalChars = textSource.getText().Length();
 
 	LOGGER(LogLevel::Debug, "Practice session created");
-
 }
 
 const TextSource& TypingSession::getTextSource() const {
@@ -73,7 +72,7 @@ double TypingSession::calculateSpeed() const {
 	if (!typedWords) {
         return 0;
     }
-    return typedWords/ (timeManager.getElapsedTime()/ 60.0);
+    return typedWords/ (getElapsedTime()/ 60.0);
 }
 
 double TypingSession::getAccuracy() const {

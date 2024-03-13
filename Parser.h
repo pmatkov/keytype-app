@@ -17,7 +17,7 @@ class Parser {
      	MainSession *mainSession;
 		TypingSession *typingSession;
 
-        std::vector<std::pair<UnicodeString, bool>> log;
+        std::vector<std::pair<UnicodeString, bool>> inputLog;
 		std::vector<std::pair<UnicodeString, bool>> buffer;
         UnicodeString insertedChars = "";
 
@@ -28,8 +28,8 @@ class Parser {
 	public:
         Parser(MainSession *_mainSession, TypingSession *_typingSession);
 
-        const std::vector<std::pair<UnicodeString, bool>>& getLog() const;
-		void setLog(const std::vector<std::pair<UnicodeString, bool>>& text);
+        const std::vector<std::pair<UnicodeString, bool>>& getInputLog() const;
+		void setInputLog(const std::vector<std::pair<UnicodeString, bool>>& text);
 
         const std::vector<std::pair<UnicodeString, bool>>& getBuffer() const;
 		void setBuffer(const std::vector<std::pair<UnicodeString, bool>>& text);

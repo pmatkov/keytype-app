@@ -36,6 +36,8 @@ namespace UIUtils {
     void setComboBoxItems(TComboBox *comboBox, const std::vector<UnicodeString> &items, const UnicodeString &selectedItem);
     int findItemIndex(const std::vector<UnicodeString> &items, const UnicodeString &selectedItem);
 
+    void changeLanguage(Language language);
+
     template<typename T>
     std::unique_ptr<T> createFrame(TWinControl* parent) {
         std::unique_ptr<T> frame = std::make_unique<T>(parent);

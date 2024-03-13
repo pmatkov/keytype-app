@@ -10,10 +10,9 @@
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 
-AuthenticationService::AuthenticationService(MainSession *_mainSession, TDataModule1 *_dataModule) {
+AuthenticationService::AuthenticationService(TDataModule1 *_dataModule) {
 
-    if (_mainSession) {
-       mainSession = _mainSession;
+    if (_dataModule) {
        dataModule = _dataModule;
        LOGGER(LogLevel::Debug, "Authentication service created");
     }
@@ -26,8 +25,9 @@ bool AuthenticationService::loginUser(const UnicodeString& username, const Unico
 
 	if (username.Compare("guest") == 0) {
 
-        mainSession->setUser(User());
-		mainSession->setAuthenticated(true);
+        user = User();
+		authenticated = true;
+
 		return true;
 	}
 
@@ -41,8 +41,9 @@ bool AuthenticationService::loginUser(const UnicodeString& username, const Unico
 
         if (!query->IsEmpty()) {
 
-        	mainSession->setUser(User(username));
-			mainSession->setAuthenticated(true);
+        	user = User(username);
+			authenticated = true;
+
         	query->Close();
         	return true;
         }
@@ -59,12 +60,13 @@ bool AuthenticationService::loginUser(const UnicodeString& username, const Unico
 
 bool  AuthenticationService::logoutUser() {
 
-	if (mainSession->isAuthenticated()) {
+	if (authenticated) {
 
     	LOGGER(LogLevel::Info, "User logged out");
 
-        mainSession->setUser(User());
-		mainSession->setAuthenticated(false);
+        user = User();
+		authenticated = false;
+
 		return true;
 	}
 
@@ -91,8 +93,8 @@ bool AuthenticationService::registerUser(const UnicodeString& username, const Un
 
             if (query->RowsAffected > 0) {
 
-            	mainSession->setUser(User(username));
-                mainSession->setAuthenticated(true);
+            	user = User(username);
+				authenticated = true;
                 query->Close();
                 return true;
             }
@@ -116,4 +118,8 @@ bool AuthenticationService::registerUser(const UnicodeString& username, const Un
 
     return false;
 
+}
+
+const User& AuthenticationService::getUser() const {
+	return user;
 }

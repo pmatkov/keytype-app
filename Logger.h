@@ -6,11 +6,9 @@
 
 #include <vector>
 #include <chrono>
-#include <mutex>
 #include <vcl.h>
 
-#define SECONDS 60
-#define LOGGER(level, message) Logger::log(level, message, __FUNCTION__, __LINE__)
+#define LOGGER(level, message) Logger::getLogger().log(level, message, __FUNCTION__, __LINE__)
 
 enum LogLevel {
     Debug = 1,
@@ -28,31 +26,34 @@ LogLevel operator&(LogLevel a, LogLevel b);
 class Logger {
 
     private:
-    	static std::vector<UnicodeString> buffer;
-        static UnicodeString logFilename;
-        static bool firstFlush;
-        static LogLevel logLevel;
+    	std::vector<UnicodeString> buffer;
+        UnicodeString logFilename = "";
+        bool firstFlush = true;
+        LogLevel logLevel = LogLevel::All;
 
-        static std::chrono::steady_clock::time_point lastFlushTime;
-        static const std::chrono::seconds flushInterval;
-        static std::mutex bufferMutex;
+        std::chrono::steady_clock::time_point intervalStart;
+        const std::chrono::seconds flushInterval = std::chrono::seconds(60);
 
         static std::vector<UnicodeString> logLevelStrings;
 
-        Logger() {}
+        Logger();
+        Logger(const Logger&)=delete;
+   		Logger& operator=(const Logger&)=delete;
 
     public:
-    	static void setLogLevel(LogLevel level);
+
+    	static Logger& getLogger();
+    	void setLogLevel(LogLevel level);
+
         static UnicodeString getLogLevelAsString(LogLevel level);
         static LogLevel getStringAsLogLevel(const UnicodeString &level);
 
-        static UnicodeString createLogFileName(const UnicodeString& dirName);
+        UnicodeString createLogFileName(const UnicodeString& dirName);
 
-        static void log(LogLevel level, const UnicodeString& message, const char* functionName, int lineNumber);
-        static void flushBuffer();
-        static void registerFlushOnExit();
+        void log(LogLevel level, const UnicodeString& message, const char* functionName, int lineNumber);
+        void flushBuffer();
 
-        static std::vector<UnicodeString>& getLogLevelStrings();
+       	static std::vector<UnicodeString>& getLogLevelStrings();
 };
 
 #endif

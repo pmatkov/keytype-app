@@ -96,10 +96,30 @@ void AppSettings::saveSettings() {
         iniFile->WriteString(section, "FontFamily", fontFamily);
         iniFile->WriteBool(section, "EnableLogging", enableLogging);
         iniFile->WriteString(section, "LogLevel",  Logger::getLogLevelAsString(logLevel));
+
+        iniFile->WriteString("df_settings", "Language", EnumUtils::enumToString<Language>(languageStrings, language));
     }
     catch (Exception &exception)	{
          LOGGER(LogLevel::Fatal, exception.Message);
 	}
+}
+
+const Language AppSettings::getDefLanguage() {
+
+    std::unique_ptr<TIniFile> iniFile = std::make_unique<TIniFile>(FileUtils::createAbsolutePath("Data\\settings.ini", true));
+
+    try
+	{
+    	if (iniFile->SectionExists("df_settings"))  {
+        	return EnumUtils::stringToEnum<Language>(languageStrings, iniFile->ReadString("df_settings", "Language", "English"));
+        }
+
+    }
+    catch (Exception &exception)	{
+         LOGGER(LogLevel::Fatal, exception.Message);
+	}
+
+    return Language::Unknown;
 }
 
 const std::vector<UnicodeString>& AppSettings::getLanguageStrings() {

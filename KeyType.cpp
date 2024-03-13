@@ -43,55 +43,37 @@ int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 		Application->MainFormOnTaskBar = true;
 
         // set up logging
-        Logger::registerFlushOnExit();
        	LOGGER(LogLevel::Info, "App started");
 
-        // create main session
-        std::unique_ptr<MainSession> mainSession = std::make_unique<MainSession>();
-
-        // data module and auth service
         std::unique_ptr<TDataModule1> DataModule1 = std::make_unique<TDataModule1>(nullptr);
-        std::unique_ptr<AuthenticationService> authService;
-        try {
-        	authService = std::make_unique<AuthenticationService>(mainSession.get(), DataModule1.get());
-        }
-        catch (ENullPointerException &ex) {
-        	LOGGER(LogLevel::Fatal, ex.Message);
-        }
+        std::unique_ptr<AuthenticationService> authService = std::make_unique<AuthenticationService>(DataModule1.get());
 
         // create auth form
-//        std::unique_ptr<TDataModule1> DataModule1 = std::make_unique<TDataModule1>(nullptr);
-        std::unique_ptr<TFAuthentication> FAuthentication;
-        try {
-        	FAuthentication = std::make_unique<TFAuthentication>(nullptr, authService.get());
-        }
-        catch (ENullPointerException &ex) {
-        	LOGGER(LogLevel::Fatal, ex.Message);
-        }
-
+        std::unique_ptr<TFAuthentication> FAuthentication = std::make_unique<TFAuthentication>(nullptr, authService.get());
         FAuthentication->Position = poScreenCenter;
 
 		if (FAuthentication->ShowModal() == mrOk) {
+
+        	User user = authService->getUser();
+            AppSettings appSettings(user);
+            TypingSettings typingSettings(user);
+
+            std::unique_ptr<MainSession> mainSession = std::make_unique<MainSession>(appSettings, typingSettings);
 
             //  create main form, options form and preferences forms
 			Application->CreateForm(__classid(TFMain), &FMain);
 			FMain->Position = poScreenCenter;
 
-			std::unique_ptr<TFPreferences> FPreferences = std::make_unique<TFPreferences>(nullptr, mainSession.get());
+			std::unique_ptr<TFPreferences> FPreferences = std::make_unique<TFPreferences>(nullptr, mainSession.get(), authService.get());
             FPreferences->Position = poMainFormCenter;
 
             std::unique_ptr<TFPracticeOptions> FPracticeOptions = std::make_unique<TFPracticeOptions>(nullptr, mainSession.get());
             FPracticeOptions->Position = poMainFormCenter;
 
-            try {
-                FMain->setPreferencesForm(FPreferences.get());
-                FMain->setPracticeOptionsForm(FPracticeOptions.get());
-                FMain->setMainSession(std::move(mainSession));
-            }
-            catch (ENullPointerException &ex) {
-            	LOGGER(LogLevel::Fatal, ex.Message);
-
-        	}
+            FMain->setPreferencesForm(FPreferences.get());
+            FMain->setPracticeOptionsForm(FPracticeOptions.get());
+            FMain->setMainSession(std::move(mainSession));
+            FMain->setAuthenticationService(std::move(authService));
 
 			Application->Run();
 		}

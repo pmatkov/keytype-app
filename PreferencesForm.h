@@ -9,6 +9,7 @@
 #include <Vcl.Forms.hpp>
 
 #include "MainSession.h"
+#include "AuthenticationService.h"
 
 //---------------------------------------------------------------------------
 class TFPreferences : public TForm
@@ -56,10 +57,11 @@ __published:	// IDE-managed Components
 	void __fastcall CBFont1Change(TObject *Sender);
 private:	// User declarations
 	MainSession *mainSession;
+    AuthenticationService *authService;
 
 public:		// User declarations
 	__fastcall TFPreferences(TComponent* Owner);
-    __fastcall TFPreferences(TComponent* Owner, MainSession *_mainSession);
+    __fastcall TFPreferences(TComponent* Owner, MainSession *_mainSession, AuthenticationService *_authService);
 	void setAppSettingsItems();
     void setTypingSettingsItems();
 

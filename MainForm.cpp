@@ -4,7 +4,6 @@
 #include "UIUtils.h"
 #include "TextUtils.h"
 #include "ENullPointerException.h"
-#include "Logger.h"
 
 #define SPACE 0x20
 #define BACKSPACE 0x8
@@ -19,7 +18,7 @@
 
 TFMain *FMain;
 
-__fastcall TFMain::TFMain(TComponent* Owner) : TForm(Owner) {
+__fastcall TFMain::TFMain(TComponent* Owner) : TForm(Owner), logger(Logger::getLogger())  {
 
     // create frames
 	FrMain = UIUtils::createFrame<TFrMain>(this);
@@ -27,6 +26,13 @@ __fastcall TFMain::TFMain(TComponent* Owner) : TForm(Owner) {
 	UIUtils::setFrameVisibility<TFrMain>(FrMain, true);
 
     LOGGER(LogLevel::Debug, "Created main form");
+
+
+//    logger.log(LogLevel::Debug, "Created main form",  __FUNCTION__, __LINE__);
+}
+
+__fastcall TFMain::~TFMain() {
+    logger.flushBuffer();
 }
 
 void TFMain::setMainSession(std::unique_ptr<MainSession> _mainSession) {
@@ -35,6 +41,18 @@ void TFMain::setMainSession(std::unique_ptr<MainSession> _mainSession) {
       	mainSession = std::move(_mainSession);
 
 		UIUtils::changeFontFamily(this, mainSession->getAppSettings().getFontFamily());
+
+       	LOGGER(LogLevel::Debug, "Main session moved");
+    }
+    else {
+        throw ENullPointerException();
+    }
+}
+
+void TFMain::setAuthenticationService(std::unique_ptr<AuthenticationService> _authService) {
+
+    if (_authService) {
+      	authService = std::move(_authService);
 
        	LOGGER(LogLevel::Debug, "Main session moved");
     }

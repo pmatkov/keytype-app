@@ -8,10 +8,20 @@
 #include "TimeManager.h"
 #include "EnumUtils.h"
 
-#define MAX_BUFFER_SIZE 20
+#define MAX_LOGS 20
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
+
+Logger::Logger() {
+	intervalStart = std::chrono::steady_clock::now();
+}
+
+Logger& Logger::getLogger() {
+
+    static Logger logger;
+    return logger;
+}
 
 LogLevel operator|(LogLevel a, LogLevel b) {
     return static_cast<LogLevel>(static_cast<int>(a) | static_cast<int>(b));
@@ -21,20 +31,9 @@ LogLevel operator&(LogLevel a, LogLevel b) {
     return static_cast<LogLevel>(static_cast<int>(a) & static_cast<int>(b));
 }
 
-std::vector<UnicodeString> Logger::buffer;
-UnicodeString Logger::logFilename = "";
-LogLevel Logger::logLevel = LogLevel::All;
-
-std::chrono::steady_clock::time_point Logger::lastFlushTime = std::chrono::steady_clock::now();
-const std::chrono::seconds Logger::flushInterval = std::chrono::seconds(SECONDS);
-std::mutex Logger::bufferMutex;
-
-bool Logger::firstFlush = true;
-
 void Logger::setLogLevel(LogLevel level) {
     logLevel = level;
 }
-
 
 UnicodeString Logger::getLogLevelAsString(LogLevel level) {
 
@@ -127,20 +126,17 @@ UnicodeString Logger::createLogFileName(const UnicodeString &dirName) {
 void Logger::log(LogLevel level, const UnicodeString& message, const char* functionName, int lineNumber) {
 
 
-
     if (logLevel & level) {
 
     	UnicodeString logLine;
         logLine = TimeManager::getCurrentDateTime() + " ";
-          logLine += "[" + Logger::getLogLevelAsString(level) + "] ";
-          logLine += UnicodeString(functionName) + ":" + IntToStr(lineNumber) + " - " + message;
+        logLine += "[" + Logger::getLogLevelAsString(level) + "] ";
+        logLine += UnicodeString(functionName) + ":" + IntToStr(lineNumber) + " - " + message;
 
-        {
-            std::lock_guard<std::mutex> lock(bufferMutex);
-            buffer.push_back(logLine);
-        }
+        buffer.push_back(logLine);
 
-        if (buffer.size() >= MAX_BUFFER_SIZE || std::chrono::steady_clock::now() - lastFlushTime >= flushInterval) {
+
+        if (buffer.size() >= MAX_LOGS || std::chrono::steady_clock::now() - intervalStart >= flushInterval) {
             flushBuffer();
             firstFlush = false;
         }
@@ -151,9 +147,7 @@ void Logger::log(LogLevel level, const UnicodeString& message, const char* funct
 
 void Logger::flushBuffer() {
 
-    std::lock_guard<std::mutex> lock(bufferMutex);
-
-    UnicodeString path = FileUtils::createAbsolutePath("Log\\" + TimeManager::getCurrentDate() + ".log", true);
+    UnicodeString path = FileUtils::createAbsolutePath("Log\\ktype_log_" + TimeManager::getCurrentDate() + ".log", true);
 
     std::unique_ptr<TStreamWriter> writer;
 
@@ -162,7 +156,7 @@ void Logger::flushBuffer() {
         writer = std::make_unique<TStreamWriter>(path, true, TEncoding::UTF8, 1024);
 
         if (firstFlush) {
-        	writer->WriteLine(UnicodeString("***"));
+        	writer->WriteLine(UnicodeString("*** Logging started ***"));
         }
 
         for (const UnicodeString &string: buffer){
@@ -170,6 +164,8 @@ void Logger::flushBuffer() {
         }
 
         buffer.clear();
+
+        intervalStart = std::chrono::steady_clock::now();
 
     }
     catch (const Exception &ex)	{
@@ -179,15 +175,10 @@ void Logger::flushBuffer() {
 
 }
 
-// write log on app close
-
-void Logger::registerFlushOnExit() {
-
-	atexit(flushBuffer);
-}
+std::vector<UnicodeString> Logger::logLevelStrings = {"Debug", "Info", "Error", "Fatal", "All"};
 
 std::vector<UnicodeString>& Logger::getLogLevelStrings() {
     return logLevelStrings;
 }
 
-std::vector<UnicodeString> Logger::logLevelStrings = {"Debug", "Info", "Error", "Fatal", "All"};
+

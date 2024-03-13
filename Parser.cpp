@@ -22,12 +22,12 @@ Parser::Parser(MainSession *_mainSession, TypingSession *_typingSession) {
     }
 }
 
- const std::vector<std::pair<UnicodeString, bool>>& Parser::getLog() const {
-	 return log;
+ const std::vector<std::pair<UnicodeString, bool>>& Parser::getInputLog() const {
+	 return inputLog;
  }
 
- void Parser::setLog(const std::vector<std::pair<UnicodeString, bool>>& text) {
-	log = text;
+ void Parser::setInputLog(const std::vector<std::pair<UnicodeString, bool>>& text) {
+	inputLog = text;
 }
 
  const std::vector<std::pair<UnicodeString, bool>>& Parser::getBuffer() const {
@@ -105,7 +105,7 @@ wchar_t Parser::getChar(WPARAM wParam){
 
                         if (wch == typingSession->getTextSource()[typingSession->getTextSource().getCharIndex()]) {
 
-                            log.push_back(std::make_pair(UnicodeString(wch), false));
+                            inputLog.push_back(std::make_pair(UnicodeString(wch), false));
 
                             // flag mistakes in buffer
                             if (!mistake) {
@@ -126,7 +126,7 @@ wchar_t Parser::getChar(WPARAM wParam){
 
                             // input is invalid
                         } else {
-                        	log.push_back(std::make_pair(UnicodeString(wch), true));
+                        	inputLog.push_back(std::make_pair(UnicodeString(wch), true));
 
                             if (mainSession->getTypingSettings().getCountConsecutiveMistakes()) {
                             	typingSession->increaseMistakes();

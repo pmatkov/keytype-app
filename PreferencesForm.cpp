@@ -20,10 +20,11 @@ TFPreferences *FPreferences;
 //---------------------------------------------------------------------------
 __fastcall TFPreferences::TFPreferences(TComponent* Owner)	: TForm(Owner)  {}
 
-__fastcall TFPreferences::TFPreferences(TComponent* Owner, MainSession *_mainSession)  : TForm(Owner)
+__fastcall TFPreferences::TFPreferences(TComponent* Owner, MainSession *_mainSession, AuthenticationService *_authService)  : TForm(Owner)
 {
     if (_mainSession) {
-       mainSession = _mainSession;
+        mainSession = _mainSession;
+        authService = _authService;
 
        setAppSettingsItems();
        setTypingSettingsItems();
@@ -92,14 +93,12 @@ void __fastcall TFPreferences::BtReset2Click(TObject *Sender)
 
 void __fastcall TFPreferences::BtAcceptClick(TObject *Sender)
 {
-
-    if (mainSession->getUser().getUserType() == UserType::Registered) {
+    if (authService->getUser().getUserType() == UserType::Registered) {
 
     	mainSession->getAppSettings().saveSettings();
         mainSession->getTypingSettings().saveSettings();
 
         LOGGER(LogLevel::Debug, "Preferences saved");
-
     }
 }
 
@@ -113,22 +112,29 @@ void __fastcall TFPreferences::CBLanguageChange(TObject *Sender)
         mainSession->getAppSettings().setLanguage(EnumUtils::stringToEnum<Language>(mainSession->getAppSettings().getLanguageStrings(), selectedText));
     }
 
+    Language language = CBLanguage->ItemIndex == 0 ? Language::English : Language::Croatian;
+    UIUtils::changeLanguage(language);
 
-	 bool loadedOk = false;
-     if (CBLanguage->ItemIndex == 0) {
-        const int ENGLISH = (SUBLANG_ENGLISH_UK << 10) | LANG_ENGLISH;
-        loadedOk = LoadNewResourceModule(ENGLISH);
-     }
-     else  if (CBLanguage->ItemIndex == 1) {
-     	const int CROATIAN = (SUBLANG_CROATIAN_CROATIA << 10) | LANG_CROATIAN;
-            loadedOk = LoadNewResourceModule(CROATIAN);
-     }
+    setAppSettingsItems();
+    setTypingSettingsItems();
 
-     if (loadedOk) {
-     	ReinitializeForms();
-     	setAppSettingsItems();
-     	setTypingSettingsItems();
-     }
+
+//	 bool loadedOk = false;
+//
+//     if (CBLanguage->ItemIndex == 0) {
+//        const int ENGLISH = (SUBLANG_ENGLISH_UK << 10) | LANG_ENGLISH;
+//        loadedOk = LoadNewResourceModule(ENGLISH);
+//     }
+//     else  if (CBLanguage->ItemIndex == 1) {
+//     	const int CROATIAN = (SUBLANG_CROATIAN_CROATIA << 10) | LANG_CROATIAN;
+//        loadedOk = LoadNewResourceModule(CROATIAN);
+//     }
+//
+//     if (loadedOk) {
+//     	ReinitializeForms();
+//     	setAppSettingsItems();
+//     	setTypingSettingsItems();
+//     }
 
 }
 void __fastcall TFPreferences::CBMistakeClick(TObject *Sender)

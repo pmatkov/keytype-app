@@ -6,32 +6,18 @@
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 
-TimeManager::TimeManager() {
-    startTime = std::chrono::system_clock::now();
-}
+namespace TimeManager {
 
-void TimeManager::startTimer()  {
-	startTime = std::chrono::system_clock::now();
-}
+    UnicodeString getCurrentTime() {
+        return FormatDateTime(L"hh:nn:ss", Now());
+    }
 
-void TimeManager::endTimer() {
-	endTime = std::chrono::system_clock::now();
-}
+    UnicodeString getCurrentDate() {
+        return FormatDateTime(L"yyyy-mm-dd", Now());
+    }
 
-long TimeManager::getElapsedTime() const {
-
-    return std::chrono::duration_cast<std::chrono::seconds>(std::chrono::system_clock::now() - startTime).count();
-}
-
-UnicodeString TimeManager::getCurrentTime() {
-    return FormatDateTime(L"hh:nn:ss", Now());
-}
-
-UnicodeString TimeManager::getCurrentDate() {
-    return FormatDateTime(L"yyyy-mm-dd", Now());
-}
-
-UnicodeString TimeManager::getCurrentDateTime() {
-    return FormatDateTime(L"yyyy-mm-dd hh:nn:ss", Now());
+    UnicodeString getCurrentDateTime() {
+        return FormatDateTime(L"yyyy-mm-dd hh:nn:ss", Now());
+    }
 }
 

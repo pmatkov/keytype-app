@@ -23,6 +23,8 @@
 #include "MainSession.h"
 #include "TypingSession.h"
 #include "Parser.h"
+#include "Logger.h"
+#include "AuthenticationService.h"
 
 #include "PreferencesForm.h"
 #include "MainFrame.h"
@@ -52,17 +54,22 @@ private:	// User declarations
 	std::unique_ptr<MainSession> mainSession;
     std::unique_ptr<TypingSession> typingSession;
 
+    std::unique_ptr<AuthenticationService> authService;
+
     std::unique_ptr<Parser> parser;
+    Logger &logger;
 
     HWND REHandle;
 
 public:		// User declarations
 
 	__fastcall TFMain(TComponent* Owner);
+    __fastcall ~TFMain();
 
     void setPreferencesForm(TFPreferences *_FPreferences);
     void setPracticeOptionsForm(TFPracticeOptions *_FPracticeOptions);
     void setMainSession(std::unique_ptr<MainSession> _mainSession);
+    void setAuthenticationService(std::unique_ptr<AuthenticationService> _authService);
 
 	virtual void __fastcall WndProc(TMessage &Message);
 	static LRESULT CALLBACK RESubclass(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam, UINT_PTR uIdSubclass, DWORD_PTR dwRefData);

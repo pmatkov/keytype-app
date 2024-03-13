@@ -4,6 +4,7 @@
 #include "TextUtils.h"
 #include "Generator.h"
 #include "Logger.h"
+#include "reinit.hpp"
 
 #pragma hdrstop
 
@@ -283,6 +284,23 @@ namespace UIUtils {
         return -1;
     }
 
+    void changeLanguage(Language language) {
+
+    	bool loaded = false;
+
+         if (language == Language::English || language == Language::Unknown) {
+            const int ENGLISH = (SUBLANG_ENGLISH_UK << 10) | LANG_ENGLISH;
+            loaded = LoadNewResourceModule(ENGLISH);
+         }
+         else  if (language == Language::Croatian) {
+            const int CROATIAN = (SUBLANG_CROATIAN_CROATIA << 10) | LANG_CROATIAN;
+            loaded = LoadNewResourceModule(CROATIAN);
+         }
+
+         if (loaded) {
+         	ReinitializeForms();
+         }
+    }
 
 }
 

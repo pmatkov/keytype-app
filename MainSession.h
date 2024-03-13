@@ -12,25 +12,17 @@
 class MainSession : public Session {
 
 	private:
-		User user;
         AppSettings appSettings;
         TypingSettings typingSettings;
-        bool authenticated = false;
 
 	public:
-        MainSession();
-
-    	const User& getUser() const;
-		void setUser(User _user);
+        MainSession(AppSettings _appSettings, TypingSettings _typingSettings);
 
         AppSettings& getAppSettings();
 		void setAppSettings(AppSettings _appSettings);
 
         TypingSettings& getTypingSettings();
 		void setTypingSettings(TypingSettings _typingSettings);
-
-        const bool isAuthenticated() const;
-        void setAuthenticated(bool _authenticated);
 
 };
 #endif

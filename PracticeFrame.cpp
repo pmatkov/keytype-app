@@ -79,7 +79,7 @@ void TFrPractice::setPracticeStatus(SessionStatus status)  {
             }
 
             // activate the timer
-            typingSession->getTimeManager().startTimer();
+            typingSession->setSessionStart();
             Timer1->Enabled = true;
 
             displayStatsItems();
@@ -234,8 +234,8 @@ void __fastcall TFrPractice::Timer1Timer(TObject *Sender)
 {
         if (typingSession->getSessionStatus() == SessionStatus::Started) {
 
-        	int min = typingSession->getTimeManager().getElapsedTime()/ 60;
-        	int sec = typingSession->getTimeManager().getElapsedTime()% 60;
+        	int min = typingSession->getElapsedTime()/ 60;
+        	int sec = typingSession->getElapsedTime()% 60;
             TDateTime elapsedTime = System::Sysutils::EncodeTime(0, min, sec, 0);
             LDisplayTime->Caption = FormatDateTime("hh:nn:ss", elapsedTime);
 

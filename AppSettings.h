@@ -51,6 +51,8 @@ class AppSettings: public ISettings {
         void loadDefaults() override;
         void loadSettings() override;
         void saveSettings() override;
+
+        static const Language getDefLanguage();
 };
 
 

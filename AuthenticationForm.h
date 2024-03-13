@@ -15,6 +15,7 @@
 #include "RegisterFrame.h"
 #include "AuthenticationService.h"
 #include "DataModule.h"
+#include "Logger.h"
 
 //---------------------------------------------------------------------------
 class TFAuthentication : public TForm
@@ -25,10 +26,12 @@ class TFAuthentication : public TForm
     	std::unique_ptr<TFrLogin> FrLogin;
 		std::unique_ptr<TFrRegister> FrRegister;
 		AuthenticationService *authenticationService;
+        Logger &logger;
 
     public:		// User declarations
         __fastcall TFAuthentication(TComponent* Owner);
        	__fastcall TFAuthentication(TComponent* Owner, AuthenticationService *_authenticationService);
+        __fastcall ~TFAuthentication();
 
         void __fastcall FrLoginRegisterSelect(TObject *Sender);
       	void __fastcall FrLoginSignInComplete(TObject *Sender, TModalResult result);

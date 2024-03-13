@@ -6,7 +6,6 @@
 #include "AuthenticationForm.h"
 #include "UIUtils.h"
 #include "ENullPointerException.h"
-#include "Logger.h"
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -16,11 +15,16 @@
 #pragma resource "*.dfm"
 TFAuthentication *FAuthentication;
 //---------------------------------------------------------------------------
-__fastcall TFAuthentication::TFAuthentication(TComponent* Owner) : TForm(Owner)  {}
 
-__fastcall TFAuthentication::TFAuthentication(TComponent* Owner, AuthenticationService *_authenticationService) : TForm(Owner)  {
+__fastcall TFAuthentication::TFAuthentication(TComponent* Owner) : TForm(Owner), logger(Logger::getLogger())  {}
+
+__fastcall TFAuthentication::TFAuthentication(TComponent* Owner, AuthenticationService *_authenticationService) : TForm(Owner), logger(Logger::getLogger())  {
 
 	if (_authenticationService) {
+
+        Language language = AppSettings::getDefLanguage();
+        UIUtils::changeLanguage(language);
+
 	   	authenticationService = _authenticationService;
 
         // create frames
@@ -43,6 +47,11 @@ __fastcall TFAuthentication::TFAuthentication(TComponent* Owner, AuthenticationS
     else {
         throw ENullPointerException();
     }
+}
+
+
+__fastcall TFAuthentication::~TFAuthentication() {
+    logger.flushBuffer();
 }
 
 

@@ -9,28 +9,28 @@ object FrRegister: TFrRegister
     Top = 36
     Width = 56
     Height = 15
-    Caption = 'Username:'
+    Caption = 'Korisni'#269'ko ime'
   end
   object LPassword: TLabel
     Left = 72
     Top = 96
     Width = 53
     Height = 15
-    Caption = 'Password:'
+    Caption = 'Lozinka'
   end
   object LRepeatPassword: TLabel
     Left = 72
     Top = 156
     Width = 92
     Height = 15
-    Caption = 'Repeat password:'
+    Caption = 'Ponovi lozinku'
   end
   object LAlreadyRegistered: TLabel
     Left = 72
     Top = 270
     Width = 100
     Height = 15
-    Caption = 'Already registered?'
+    Caption = 'Ve'#263' registriran?'
   end
   object LResponse: TLabel
     Left = 72
@@ -76,7 +76,7 @@ object FrRegister: TFrRegister
     Top = 231
     Width = 118
     Height = 25
-    Caption = 'Register'
+    Caption = 'Registriraj se'
     Enabled = False
     TabOrder = 3
     OnClick = BtRegisterClick
@@ -86,7 +86,7 @@ object FrRegister: TFrRegister
     Top = 291
     Width = 118
     Height = 25
-    Caption = 'Sign in'
+    Caption = 'Prijavi se'
     TabOrder = 4
     OnClick = BtSignInClick
   end

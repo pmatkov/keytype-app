@@ -2,8 +2,8 @@ object FPreferences: TFPreferences
   Left = 0
   Top = 0
   Caption = 'Preferences'
-  ClientHeight = 445
-  ClientWidth = 538
+  ClientHeight = 444
+  ClientWidth = 534
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
