@@ -1,17 +1,16 @@
 //---------------------------------------------------------------------------
 
-#ifndef ENullPointerExceptionH
-#define ENullPointerExceptionH
+#ifndef EDirNotFoundExceptionH
+#define EDirNotFoundExceptionH
 
-#include <vcl.h>
+#include "EIOException.h"
 //---------------------------------------------------------------------------
 
 namespace CustomExceptions {
 
-    class ENullPointerException : public Exception {
+    class EDirNotFoundException : public EIOException {
         public:
-            ENullPointerException();
+            EDirNotFoundException();
     };
 }
-
 #endif

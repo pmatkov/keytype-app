@@ -2,10 +2,10 @@
 
 #pragma hdrstop
 
-#include "ENullPointerException.h"
+#include "EDirNotFoundException.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 
 namespace CustomExceptions {
-	ENullPointerException::ENullPointerException() : Exception("Null pointer exception") {}
+	EDirNotFoundException::EDirNotFoundException() : EIOException("Directory not found exception") {}
 }

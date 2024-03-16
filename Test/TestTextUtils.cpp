@@ -30,30 +30,19 @@ class TTestTextUtils : public TTestCase
 		void __fastcall TestformatJson();
 		void __fastcall TestrepeatChar();
 
-	private:
-    	std::unique_ptr<UnitTestLogger> logger;
 };
 
 
 void __fastcall TTestTextUtils::SetUp() {
 
-	logger = std::make_unique<UnitTestLogger>();
-
-	logger->log("Starting test...");
+	LOGGER_LOG("Starting test...");
 
 	}
 
 void __fastcall TTestTextUtils::TearDown() {
 
-   	logger->log("Test completed.");
-
-	if (logger)
-	{
-		if(logger->getLogStringList()->Count > 0) {
-			ShowMessage(logger->getLogStringList()->Text);
-        }
-
-	}
+   	LOGGER_LOG("Test completed.");
+    LOGGER_DISPLAY_LOG();
 }
 
 void __fastcall TTestTextUtils::TestcountSentences()
@@ -115,11 +104,11 @@ void __fastcall TTestTextUtils::TestisWordBreak() {
  	UnicodeString testString = "Back to the future";
     int i;
 
-    logger->log("Test string: " + testString);
+    LOGGER_LOG("Test string: " + testString);
 
     for (i = 1; i <= testString.Length(); i++) {
 
-    	logger->log("Index: " + IntToStr(i) + " substring:" + testString.SubString(1, i));
+    	LOGGER_LOG("Index: " + IntToStr(i) + " substring:" + testString.SubString(1, i));
 
         if (!TextUtils::isWordBreak(testString, i)) {
            break;
@@ -133,11 +122,11 @@ void __fastcall TTestTextUtils::TestreplaceChar() {
 
  	UnicodeString testString = "Back to the future";
 
-    logger->log("Test string: " + testString);
+    LOGGER_LOG("Test string: " + testString);
 
     UnicodeString result = TextUtils::replaceChar(testString, ' ', L'\u00B7');
 
-    logger->log("Result: " + result);
+    LOGGER_LOG("Result: " + result);
 
     CheckEquals(result, L"Back\u00B7to\u00B7the\u00B7future");
 }
@@ -149,7 +138,7 @@ void __fastcall TTestTextUtils::TestcountCharsUntilWordBreak() {
 
 	int result = TextUtils::countCharsUntilWordBreak(testString, testString.Length()-1);
 
-    logger->log("Result: " + IntToStr(result) + " " + breakString.Length());
+    LOGGER_LOG("Result: " + IntToStr(result) + " " + breakString.Length());
     CheckEquals(result, breakString.Length());
 }
 
@@ -158,14 +147,14 @@ void __fastcall TTestTextUtils::TestformatJson() {
 
 	UnicodeString input = "{\"animals\":[{\"title\":\"Penguin\",\"origin\":\"Madagascar\",\"age\":\"4\"},{\"title\":\"Penguin\",\"origin\":\"Antarctica\",\"age\":\"5\"}]}";
 	UnicodeString result = TextUtils::formatJson(input);
-	logger->log("Input:" + input);
-	logger->log("Result:" + result);
+	LOGGER_LOG("Input:" + input);
+	LOGGER_LOG("Result:" + result);
 }
 
 
 void __fastcall TTestTextUtils::TestrepeatChar() {
 
-	 UnicodeString result = TextUtils::repeatChar('x', 4);
+	 UnicodeString result = TextUtils::generateStringFromChar('x', 4);
 	 CheckEquals(result, "xxxx");
 }
 

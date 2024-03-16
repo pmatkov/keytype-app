@@ -46,6 +46,14 @@ bool AppSettings::getEnableLogging() const {
 
 void AppSettings::setEnableLogging(bool _enableLogging) {
     enableLogging = _enableLogging;
+    Logger::getLogger().setEnableLogging(enableLogging);
+}
+
+bool AppSettings::getLanguageChanged() const {
+    return languageChanged;
+}
+void AppSettings::setLanguageChanged(bool _languageChanged) {
+    languageChanged = _languageChanged;
 }
 
 const LogLevel& AppSettings::getLogLevel() const {
@@ -54,6 +62,16 @@ const LogLevel& AppSettings::getLogLevel() const {
 
 void AppSettings::setLogLevel(LogLevel _logLevel) {
     logLevel  = _logLevel;
+    Logger::getLogger().setLogLevel(logLevel);
+}
+
+const LogInterval &AppSettings::getLogInterval() const {
+     return logInterval;
+}
+
+void AppSettings::setLogInterval(LogInterval _logInterval) {
+    logInterval = _logInterval;
+    Logger::getLogger().setLogInterval(logInterval);
 }
 
 void AppSettings::loadDefaults() {
@@ -62,6 +80,7 @@ void AppSettings::loadDefaults() {
 
     enableLogging = true;
     logLevel = LogLevel::All;
+    logInterval = LogInterval::Auto;
 }
 
 void AppSettings::loadSettings() {
@@ -75,6 +94,7 @@ void AppSettings::loadSettings() {
             fontFamily = iniFile->ReadString(section, "FontFamily", "Segoe UI");
             enableLogging = iniFile->ReadBool(section, "EnableLogging", true);
 	        logLevel = Logger::getStringAsLogLevel(iniFile->ReadString(section, "LogLevel", "All"));
+            logInterval = EnumUtils::stringToEnum<LogInterval>(Logger::getLogIntervalStrings(), iniFile->ReadString(section, "LogInterval", "Auto"));
         }
         else {
             loadDefaults();
@@ -92,35 +112,21 @@ void AppSettings::saveSettings() {
 
     try
 	{
-        iniFile->WriteString(section, "Language", EnumUtils::enumToString<Language>(languageStrings, language));
-        iniFile->WriteString(section, "FontFamily", fontFamily);
-        iniFile->WriteBool(section, "EnableLogging", enableLogging);
-        iniFile->WriteString(section, "LogLevel",  Logger::getLogLevelAsString(logLevel));
+    	if (!section.IsEmpty()) {
 
-        iniFile->WriteString("df_settings", "Language", EnumUtils::enumToString<Language>(languageStrings, language));
-    }
-    catch (Exception &exception)	{
-         LOGGER(LogLevel::Fatal, exception.Message);
-	}
-}
-
-const Language AppSettings::getDefLanguage() {
-
-    std::unique_ptr<TIniFile> iniFile = std::make_unique<TIniFile>(FileUtils::createAbsolutePath("Data\\settings.ini", true));
-
-    try
-	{
-    	if (iniFile->SectionExists("df_settings"))  {
-        	return EnumUtils::stringToEnum<Language>(languageStrings, iniFile->ReadString("df_settings", "Language", "English"));
+            iniFile->WriteString(section, "Language", EnumUtils::enumToString<Language>(languageStrings, language));
+            iniFile->WriteString(section, "FontFamily", fontFamily);
+            iniFile->WriteBool(section, "EnableLogging", enableLogging);
+            iniFile->WriteString(section, "LogLevel",  Logger::getLogLevelAsString(logLevel));
+            iniFile->WriteString(section, "LogInterval", EnumUtils::enumToString<LogInterval>(Logger::getLogIntervalStrings(), logInterval));
         }
 
     }
     catch (Exception &exception)	{
          LOGGER(LogLevel::Fatal, exception.Message);
 	}
-
-    return Language::Unknown;
 }
+
 
 const std::vector<UnicodeString>& AppSettings::getLanguageStrings() {
     return languageStrings;

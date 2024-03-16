@@ -13,6 +13,7 @@ object FMain: TFMain
   Font.Name = 'Segoe UI'
   Font.Style = []
   Menu = MainMenu
+  Position = poScreenCenter
   TextHeight = 15
   object MainMenu: TMainMenu
     Left = 33

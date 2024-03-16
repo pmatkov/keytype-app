@@ -22,13 +22,12 @@ TFrPractice *FrPractice;
 //---------------------------------------------------------------------------
 __fastcall TFrPractice::TFrPractice(TComponent* Owner) : TFrame(Owner) {}
 
-__fastcall TFrPractice::TFrPractice(TComponent* Owner, Parser* _parser, MainSession *_mainSession, TypingSession *_typingSession, TFPracticeOptions *_FPracticeOptions) : TFrame(Owner) {
+__fastcall TFrPractice::TFrPractice(TComponent* Owner, Parser* _parser, MainSession *_mainSession, TypingSession *_typingSession) : TFrame(Owner) {
 	if (_parser && _mainSession && _typingSession) {
 
        parser = _parser;
        mainSession = _mainSession;
        typingSession = _typingSession;
-       FPracticeOptions = _FPracticeOptions;
 
        maxChars = TextUtils::countCharsUntilWordBreak(typingSession->getTextSource().getText(), UIUtils::estimateMaxChars(RETextBox));
        setPracticeStatus(Initialized);
@@ -38,7 +37,7 @@ __fastcall TFrPractice::TFrPractice(TComponent* Owner, Parser* _parser, MainSess
 
 	}
     else {
-        throw ENullPointerException();
+        throw CustomExceptions::ENullPointerException();
     }
 }
 
@@ -96,7 +95,6 @@ void TFrPractice::setPracticeStatus(SessionStatus status)  {
 
         }
         case Resumed: {
-
         	UIUtils::setTextColor(RETextBox, clBlack);
             int index = typingSession->getTextSource().getCharIndex()-1;
             UIUtils::setCharColor(RETextBox, parser->getBuffer(), index, index + parser->getInsertedChars().Length(), clRed);
@@ -105,7 +103,6 @@ void TFrPractice::setPracticeStatus(SessionStatus status)  {
 
         }
         case Paused: {
-
           	hideStatsItems();
             UIUtils::setTextColor(RETextBox, clSilver);
             LStart->Caption = "Press space bar to resume the practice";
@@ -124,6 +121,8 @@ void TFrPractice::setPracticeStatus(SessionStatus status)  {
 
 void __fastcall TFrPractice::FrOptionsBtOptionsClick(TObject *Sender)
 {
+    FPracticeOptions = std::make_unique<TFPracticeOptions>(nullptr, mainSession);
+    FPracticeOptions->Position = poMainFormCenter;
 
 	typingSession->setSessionStatus(SessionStatus::Paused);
     setPracticeStatus(SessionStatus::Paused);

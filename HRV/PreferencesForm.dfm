@@ -2,8 +2,8 @@ object FPreferences: TFPreferences
   Left = 0
   Top = 0
   Caption = 'Postavke'
-  ClientHeight = 445
-  ClientWidth = 538
+  ClientHeight = 444
+  ClientWidth = 534
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -28,7 +28,7 @@ object FPreferences: TFPreferences
     end
     object LLogging: TLabel
       Left = 12
-      Top = 147
+      Top = 157
       Width = 47
       Height = 15
       Caption = 'Bilje'#382'enje:'
@@ -39,6 +39,13 @@ object FPreferences: TFPreferences
       Width = 63
       Height = 15
       Caption = 'Vrsta fonta:'
+    end
+    object LArchiveLogs: TLabel
+      Left = 12
+      Top = 194
+      Width = 68
+      Height = 15
+      Caption = 'Arhiviraj bilje'#353'ke'
     end
     object CBLanguage: TComboBox
       Left = 126
@@ -51,7 +58,7 @@ object FPreferences: TFPreferences
     end
     object CBLogging: TComboBox
       Left = 126
-      Top = 144
+      Top = 154
       Width = 115
       Height = 23
       Style = csDropDownList
@@ -60,7 +67,7 @@ object FPreferences: TFPreferences
     end
     object CBLoggingEnable: TCheckBox
       Left = 93
-      Top = 147
+      Top = 157
       Width = 16
       Height = 17
       TabOrder = 2
@@ -83,6 +90,15 @@ object FPreferences: TFPreferences
       Caption = 'Resetiraj'
       TabOrder = 4
       OnClick = BtReset1Click
+    end
+    object CBLogInterval: TComboBox
+      Left = 126
+      Top = 191
+      Width = 115
+      Height = 23
+      Style = csDropDownList
+      TabOrder = 5
+      OnChange = CBLogIntervalChange
     end
   end
   object GroupBox2: TGroupBox

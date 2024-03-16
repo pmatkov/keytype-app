@@ -28,7 +28,7 @@ object FPreferences: TFPreferences
     end
     object LLogging: TLabel
       Left = 12
-      Top = 147
+      Top = 157
       Width = 47
       Height = 15
       Caption = 'Logging:'
@@ -39,6 +39,13 @@ object FPreferences: TFPreferences
       Width = 63
       Height = 15
       Caption = 'Font family:'
+    end
+    object LArchiveLogs: TLabel
+      Left = 12
+      Top = 194
+      Width = 68
+      Height = 15
+      Caption = 'Archive logs:'
     end
     object CBLanguage: TComboBox
       Left = 126
@@ -51,7 +58,7 @@ object FPreferences: TFPreferences
     end
     object CBLogging: TComboBox
       Left = 126
-      Top = 144
+      Top = 154
       Width = 115
       Height = 23
       Style = csDropDownList
@@ -60,7 +67,7 @@ object FPreferences: TFPreferences
     end
     object CBLoggingEnable: TCheckBox
       Left = 93
-      Top = 147
+      Top = 157
       Width = 16
       Height = 17
       TabOrder = 2
@@ -83,6 +90,15 @@ object FPreferences: TFPreferences
       Caption = 'Reset'
       TabOrder = 4
       OnClick = BtReset1Click
+    end
+    object CBLogInterval: TComboBox
+      Left = 126
+      Top = 191
+      Width = 115
+      Height = 23
+      Style = csDropDownList
+      TabOrder = 5
+      OnChange = CBLogIntervalChange
     end
   end
   object GroupBox2: TGroupBox

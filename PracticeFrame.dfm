@@ -5,8 +5,8 @@ object FrPractice: TFrPractice
   Height = 480
   TabOrder = 0
   object LStart: TLabel
-    Left = 190
-    Top = 247
+    Left = 172
+    Top = 243
     Width = 4
     Height = 17
     Font.Charset = DEFAULT_CHARSET
@@ -17,47 +17,47 @@ object FrPractice: TFrPractice
     ParentFont = False
   end
   object LTime: TLabel
-    Left = 128
-    Top = 72
+    Left = 110
+    Top = 68
     Width = 29
     Height = 15
     Caption = 'Time:'
   end
   object LDisplayTime: TLabel
-    Left = 163
-    Top = 72
+    Left = 145
+    Top = 68
     Width = 3
     Height = 15
   end
   object LSpeed: TLabel
-    Left = 258
-    Top = 72
+    Left = 240
+    Top = 68
     Width = 35
     Height = 15
     Caption = 'Speed:'
   end
   object LDisplaySpeed: TLabel
-    Left = 299
-    Top = 72
+    Left = 281
+    Top = 68
     Width = 3
     Height = 15
   end
   object LAccuracy: TLabel
-    Left = 372
-    Top = 72
+    Left = 354
+    Top = 68
     Width = 52
     Height = 15
     Caption = 'Accuracy:'
   end
   object LDisplayAccuracy: TLabel
-    Left = 430
-    Top = 72
+    Left = 412
+    Top = 68
     Width = 3
     Height = 15
   end
   object RETextBox: TRichEdit
-    Left = 128
-    Top = 144
+    Left = 110
+    Top = 140
     Width = 360
     Height = 65
     BorderStyle = bsNone

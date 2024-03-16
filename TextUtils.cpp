@@ -1,6 +1,7 @@
 //---------------------------------------------------------------------------
 #include <cstring>
 #include "TextUtils.h"
+#include "Logger.h"
 
 //---------------------------------------------------------------------------
 #pragma hdrstop
@@ -152,6 +153,39 @@ namespace TextUtils {
         return index;
     }
 
+    UnicodeString generateStringFromChar(wchar_t wch, int count) {
+
+        UnicodeString result = "";
+
+        for (int i = 0; i < count; i++) {
+            result += wch;
+        }
+        return result;
+    }
+
+
+    int findIndex(const std::vector<UnicodeString> &vec, const UnicodeString &string) {
+
+        std::vector<UnicodeString>::const_iterator it = std::find(vec.begin(), vec.end(), string);
+
+        if (it != vec.end())  {
+            return it - vec.begin();
+        }
+        else {
+            return -1;
+        }
+    }
+
+    UnicodeString vectorToString(const std::vector<UnicodeString> &list) {
+
+      UnicodeString string = "";
+
+      for (const UnicodeString &item: list) {
+           string += item + " ";
+      }
+      return string;
+    }
+
 
     UnicodeString formatJson(const UnicodeString& string) {
 
@@ -172,7 +206,7 @@ namespace TextUtils {
                     openingbracket = true;
                 }
 
-                addback = "\n" + repeatChar(' ', level * 4);
+                addback = "\n" + generateStringFromChar(' ', level * 4);
                 level++;
                 leveldown = false;
 
@@ -186,12 +220,12 @@ namespace TextUtils {
                 else {
                    level--;
                 }
-                addfront = "\n" + repeatChar(' ', level * 4);
+                addfront = "\n" + generateStringFromChar(' ', level * 4);
                 leveldown = true;
             }
             else if (wstr[i] == ',' && !insidequote) {
 
-               addback = + "\n" + repeatChar(' ', (leveldown ? level : level - 1) * 4);
+               addback = + "\n" + generateStringFromChar(' ', (leveldown ? level : level - 1) * 4);
                level = leveldown ? level + 1 : level;
 
             }
@@ -206,31 +240,31 @@ namespace TextUtils {
             i++;
         }
 
+        LOGGER(LogLevel::Debug, "Formatted string to JSON");
+
         return result;
+	}
 
+    TJSONObject* convertToJSONObject(const UnicodeString &string) {
+
+        try {
+
+            TJSONObject *jsonObject = (TJSONObject*) (TJSONObject::ParseJSONValue(string));
+
+            if (jsonObject) {
+                LOGGER(LogLevel::Debug, "Converted string to JSON object");
+                return jsonObject;
+            }
+
+        } catch (const Exception &ex) {
+            ShowMessage("Error converting to JSON");
+            LOGGER(LogLevel::Error, "Error converting string to JSON object");
+        }
+
+        return nullptr;
     }
 
-    UnicodeString repeatChar(wchar_t wch, int count) {
-
-        UnicodeString result = "";
-
-        for (int i = 0; i < count; i++) {
-            result += wch;
-        }
-        return result;
-    }
-
-
-    int findString(const std::vector<UnicodeString> &vec, const UnicodeString &string) {
-
-        std::vector<UnicodeString>::const_iterator it = std::find(vec.begin(), vec.end(), string);
-
-
-        if (it != vec.end())  {
-            return it - vec.begin();
-        }
-        else {
-            return -1;
-        }
-    }
 }
+
+
+

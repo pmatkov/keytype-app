@@ -1,17 +1,17 @@
 //---------------------------------------------------------------------------
 
-#ifndef ENullPointerExceptionH
-#define ENullPointerExceptionH
+#ifndef EInvalidArgumentExceptionH
+#define EInvalidArgumentExceptionH
 
 #include <vcl.h>
+
 //---------------------------------------------------------------------------
 
 namespace CustomExceptions {
 
-    class ENullPointerException : public Exception {
+    class EInvalidArgumentException : public Exception {
         public:
-            ENullPointerException();
+            EInvalidArgumentException();
     };
 }
-
 #endif

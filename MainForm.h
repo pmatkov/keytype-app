@@ -46,14 +46,12 @@ __published:	// IDE-managed Components
 
 private:	// User declarations
 
-    TFPreferences *FPreferences;
-    TFPracticeOptions *FPracticeOptions;
+	std::unique_ptr<TFPreferences> FPreferences;
 	std::unique_ptr<TFrMain> FrMain;
 	std::unique_ptr<TFrPractice> FrPractice;
 
 	std::unique_ptr<MainSession> mainSession;
     std::unique_ptr<TypingSession> typingSession;
-
     std::unique_ptr<AuthenticationService> authService;
 
     std::unique_ptr<Parser> parser;
@@ -64,12 +62,14 @@ private:	// User declarations
 public:		// User declarations
 
 	__fastcall TFMain(TComponent* Owner);
-    __fastcall ~TFMain();
 
-    void setPreferencesForm(TFPreferences *_FPreferences);
-    void setPracticeOptionsForm(TFPracticeOptions *_FPracticeOptions);
     void setMainSession(std::unique_ptr<MainSession> _mainSession);
     void setAuthenticationService(std::unique_ptr<AuthenticationService> _authService);
+
+    void updateSessionStatus(SessionStatus status);
+    void moveCaret(CaretType caretType, int index);
+    void clearCaret(CaretType caretType, int index);
+    void setCaret(CaretType caretType, int index);
 
 	virtual void __fastcall WndProc(TMessage &Message);
 	static LRESULT CALLBACK RESubclass(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam, UINT_PTR uIdSubclass, DWORD_PTR dwRefData);

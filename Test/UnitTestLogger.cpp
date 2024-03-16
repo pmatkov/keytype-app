@@ -4,28 +4,30 @@
 
 #include "UnitTestLogger.h"
 
-
-UnitTestLogger::UnitTestLogger()
-{
-	logList = new TStringList;
+UnitTestLogger::UnitTestLogger() {
+    log = std::make_unique<TStringList>();
 }
 
-UnitTestLogger::~UnitTestLogger()
-{
-	delete logList;
+
+UnitTestLogger& UnitTestLogger::getLogger() {
+
+    static UnitTestLogger logger;
+    return logger;
 }
 
-TStringList* UnitTestLogger::getLogStringList() const {
 
-	return logList;
+void UnitTestLogger::addToLog(const UnicodeString& text) {
 
-}
-
-void UnitTestLogger::log(const UnicodeString& text) {
-
-	logList->Add(text);
-
+	log->Add(text);
 };
+
+void UnitTestLogger::displayLog() {
+
+    if (log->Count) {
+    	ShowMessage(log->Text);
+    }
+
+}
 
 
 //---------------------------------------------------------------------------

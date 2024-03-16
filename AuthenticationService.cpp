@@ -2,11 +2,13 @@
 
 #pragma hdrstop
 
+#include <FireDAC.DApt.hpp>
+
 #include "AuthenticationService.h"
 #include "ENullPointerException.h"
 #include "User.h"
 #include "Logger.h"
-#include <FireDAC.DApt.hpp>
+
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 
@@ -17,7 +19,7 @@ AuthenticationService::AuthenticationService(TDataModule1 *_dataModule) {
        LOGGER(LogLevel::Debug, "Authentication service created");
     }
     else {
-        throw ENullPointerException();
+        throw CustomExceptions::ENullPointerException();
     }
 }
 

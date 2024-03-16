@@ -19,51 +19,41 @@ __published:
 	  void __fastcall TestcreateAbsolutePath();
 	  void __fastcall TesttraverseUpDirTree();
 
-  private:
-	  	std::unique_ptr<UnitTestLogger> logger;
 };
 
 
 void __fastcall TTestFileUtils::SetUp()
 {
-	logger = std::make_unique<UnitTestLogger>();
-	logger->log("Starting test...");
+	LOGGER_LOG("Starting test...");
 }
 
 void __fastcall TTestFileUtils::TearDown()
 {
-	logger->log("Test completed.");
-
-	if (logger)
-	{
-		if(logger->getLogStringList()->Count > 0) {
-			ShowMessage(logger->getLogStringList()->Text);
-        }
-
-	}
+	LOGGER_LOG("Test completed.");
+    LOGGER_DISPLAY_LOG();
 }
 
 void __fastcall TTestFileUtils::TestcreateAbsolutePath()
 {
 	UnicodeString dirName = "Data";
-	UnicodeString reference = "C:\\Users\\surf3r\\OneDrive\\Documents\\Embarcadero\\Studio\\Projects\\KeyType\\Data\\";
-	UnicodeString result = "";
+	UnicodeString testPath = "C:\\Users\\surf3r\\OneDrive\\Documents\\Embarcadero\\Studio\\Projects\\KeyType\\Data\\";
 
-	logger->log("Expected path: " + reference);
-	result = FileUtils::createAbsolutePath(dirName, false);
-	logger->log("New path: " + result);
-
-	CheckEquals(reference, result, "Not the same path");
+	LOGGER_LOG("Expected: " + testPath + "Result: " + FileUtils::createAbsolutePath(dirName, false));
+	CheckEquals(testPath, FileUtils::createAbsolutePath(dirName, false), "Not the same path");
 }
-    
+
 void __fastcall TTestFileUtils::TesttraverseUpDirTree()
 {
-	UnicodeString path = "C:\\Program Files\\Test\\.";
+	UnicodeString startingPath = "C:\\Program Files\\Test\\.";
 	int level = 2;
 
-	logger->log("Starting path: " + path);
-	path = FileUtils::traverseUpDirTree(path, level);
-	logger->log("New path (-" + IntToStr(level) + "): " + path);
+    LOGGER_LOG("Starting path: " + startingPath + "New path (-" + IntToStr(level) + "): " + startingPath);
+	startingPath = FileUtils::traverseUpDirTree(startingPath, level);
+
+    UnicodeString testPath = "C:\\Users\\surf3r\\OneDrive\\Documents\\Embarcadero\\Studio\\Projects\\KeyType\\Archiver\\Win32\\Debug";
+
+    LOGGER_LOG("Test path: " + testPath + "Result: " + FileUtils::createAbsolutePath("Archiver", false) + "Win32\\Debug");
+    CheckEquals(testPath, FileUtils::createAbsolutePath("Archiver", false) + "Win32\\Debug", "Not the same path");
 
 }
 

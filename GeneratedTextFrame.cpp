@@ -9,6 +9,8 @@
 #include "TextUtils.h"
 #include "DcWord.h"
 #include "EnumUtils.h"
+#include "Logger.h"
+#include "EDirNotFoundException.h"
 
 #define LETTERS 26
 #define BUTTON_SIZE 18
@@ -64,7 +66,14 @@ void TFrGeneratedText::createTBButtons(TToolBar* toolbar, int count) {
    void TFrGeneratedText::loadWordLists(const UnicodeString &path, TComboBox *comboBox, TListView *listview, std::vector<WordList> &wordListCollection) {
 
  	UnicodeString dirPath = FileUtils::createAbsolutePath(path, false);
-    std::optional<std::vector<UnicodeString>> filenames = FileUtils::getFileNames(dirPath, "txt");
+
+    std::optional<std::vector<UnicodeString>> filenames;
+
+    try {
+    	filenames = FileUtils::getFiles(dirPath, "txt");
+    } catch (CustomExceptions::EDirNotFoundException &ex) {
+        LOGGER(LogLevel::Fatal, ex.getMessage());
+    }
 
     if (filenames.has_value()) {
 
@@ -234,6 +243,7 @@ bool TFrGeneratedText::areFieldsEmpty() {
 
 
 void __fastcall TFrGeneratedText::BtDelete1Click(TObject *Sender) {
+
     std::vector<UnicodeString> wordlist = wordListCollection[CBTextFiles->ItemIndex].getWordList();
     wordlist.erase(std::remove(wordlist.begin(), wordlist.end(), EWord->Text), wordlist.end());
     wordListCollection[CBTextFiles->ItemIndex].setWordList(wordlist);
@@ -245,10 +255,11 @@ void __fastcall TFrGeneratedText::BtDelete1Click(TObject *Sender) {
         dictionary.deleteWord(LVWords->Selected->Caption);
     }
 
-    std::optional<UnicodeString> json = Dictionary::generateJsonFromDictionary(dictionary.getDictionary());
+    std::optional<UnicodeString> jsonString = Dictionary::generateJsonFromDictionary(dictionary.getDictionary());
 
-    if (json.has_value()) {
-        FileUtils::saveToJsonFile(FileUtils::createAbsolutePath("Data\\dictionary.json", true), *json);
+    if (jsonString.has_value()) {
+
+        FileUtils::saveToTextFile(FileUtils::createAbsolutePath("Data\\dictionary.json", true), std::vector<UnicodeString>{*jsonString});
     }
 
     setListViewItems(LVWords, wordListCollection[CBTextFiles->ItemIndex].getWordList());
@@ -265,7 +276,7 @@ void __fastcall TFrGeneratedText::BtAddSave1Click(TObject *Sender) {
      }
 
     std::vector<UnicodeString> wordlist = wordListCollection[CBTextFiles->ItemIndex].getWordList();
-    int index = TextUtils::findString(wordlist, EWord->Text);
+    int index = TextUtils::findIndex(wordlist, EWord->Text);
     bool newWord = index == -1 ? true : false;
 
     if (BtAddSave1->Caption.Compare("Add") == 0) {
@@ -298,10 +309,11 @@ void __fastcall TFrGeneratedText::BtAddSave1Click(TObject *Sender) {
     dictionary.setWord(EWord->Text, DcWord(EWord->Text, EnumUtils::stringToEnum<WordCategory>(DcWord::getEnumStrings(), CBCategory->Text), \
     EDefinition->Text, TextUtils::splitTextIntoWords(ESynonyms->Text)));
 
-     std::optional<UnicodeString> json = Dictionary::generateJsonFromDictionary(dictionary.getDictionary());
+     std::optional<UnicodeString> jsonString = Dictionary::generateJsonFromDictionary(dictionary.getDictionary());
 
-    if (json.has_value()) {
-        FileUtils::saveToJsonFile(FileUtils::createAbsolutePath("Data\\dictionary.json", true), *json);
+    if (jsonString.has_value()) {
+
+        FileUtils::saveToTextFile(FileUtils::createAbsolutePath("Data\\dictionary.json", true), std::vector<UnicodeString>{*jsonString});
     }
 
     setListViewItems(LVWords, wordListCollection[CBTextFiles->ItemIndex].getWordList());

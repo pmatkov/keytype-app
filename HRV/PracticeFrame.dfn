@@ -5,8 +5,8 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45360.9856481481</prop>
-        <prop prop-type="OrigDateTime">45360.8461574074</prop>
+        <prop prop-type="SelfDateTime">45364.7340509259</prop>
+        <prop prop-type="OrigDateTime">45364.7222916667</prop>
         <prop prop-type="XlatDateTime">45360.8461342593</prop>
         <prop prop-type="Translated">0</prop>
         <prop prop-type="UnTranslated">71</prop>
@@ -39,12 +39,12 @@
         <prop prop-type="Created">45346.9495854282</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFrPractice</prop><prop prop-type="Localize">0</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:LStart.Left" resname="O:FrPractice.O:LStart.Left">
-        <source>190</source>
+        <source>172</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495854282</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:LStart.Top" resname="O:FrPractice.O:LStart.Top">
-        <source>247</source>
+        <source>243</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495854282</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -89,12 +89,12 @@
         <prop prop-type="Created">45346.9495854282</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:LTime.Left" resname="O:FrPractice.O:LTime.Left">
-        <source>128</source>
+        <source>110</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45356.0424835069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:LTime.Top" resname="O:FrPractice.O:LTime.Top">
-        <source>72</source>
+        <source>68</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45356.0424835069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -114,12 +114,12 @@
         <prop prop-type="Created">45356.0424835069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:LDisplayTime.Left" resname="O:FrPractice.O:LDisplayTime.Left">
-        <source>163</source>
+        <source>145</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45356.0273508333</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:LDisplayTime.Top" resname="O:FrPractice.O:LDisplayTime.Top">
-        <source>72</source>
+        <source>68</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45356.0273508333</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -134,12 +134,12 @@
         <prop prop-type="Created">45356.0273508333</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:LSpeed.Left" resname="O:FrPractice.O:LSpeed.Left">
-        <source>258</source>
+        <source>240</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45356.0136628819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:LSpeed.Top" resname="O:FrPractice.O:LSpeed.Top">
-        <source>72</source>
+        <source>68</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45356.0136628819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -159,12 +159,12 @@
         <prop prop-type="Created">45356.0136628819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:LDisplaySpeed.Left" resname="O:FrPractice.O:LDisplaySpeed.Left">
-        <source>299</source>
+        <source>281</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45356.0136628819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:LDisplaySpeed.Top" resname="O:FrPractice.O:LDisplaySpeed.Top">
-        <source>72</source>
+        <source>68</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45356.0136628819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -179,12 +179,12 @@
         <prop prop-type="Created">45356.0136628819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:LAccuracy.Left" resname="O:FrPractice.O:LAccuracy.Left">
-        <source>372</source>
+        <source>354</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45356.0136628935</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:LAccuracy.Top" resname="O:FrPractice.O:LAccuracy.Top">
-        <source>72</source>
+        <source>68</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45356.0136628935</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -204,12 +204,12 @@
         <prop prop-type="Created">45356.0136628935</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:LDisplayAccuracy.Left" resname="O:FrPractice.O:LDisplayAccuracy.Left">
-        <source>430</source>
+        <source>412</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45356.0136628935</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:LDisplayAccuracy.Top" resname="O:FrPractice.O:LDisplayAccuracy.Top">
-        <source>72</source>
+        <source>68</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45356.0136628935</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -224,12 +224,12 @@
         <prop prop-type="Created">45356.0136628935</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:RETextBox.Left" resname="O:FrPractice.O:RETextBox.Left">
-        <source>128</source>
+        <source>110</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495854282</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrPractice.O:RETextBox.Top" resname="O:FrPractice.O:RETextBox.Top">
-        <source>144</source>
+        <source>140</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495854282</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>

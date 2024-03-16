@@ -18,7 +18,7 @@ Parser::Parser(MainSession *_mainSession, TypingSession *_typingSession) {
         LOGGER(LogLevel::Debug, "Parser created");
 
     } else {
-        throw ENullPointerException();
+        throw CustomExceptions::ENullPointerException();
     }
 }
 
@@ -64,7 +64,6 @@ void Parser::setInputEnabled(bool _inputEnabled) {
 	inputEnabled = _inputEnabled;
 }
 
-
 wchar_t Parser::getChar(WPARAM wParam){
 
 	wchar_t wch = static_cast<wchar_t>(wParam);
@@ -77,9 +76,8 @@ wchar_t Parser::getChar(WPARAM wParam){
 		case VK_ESCAPE:
 			break;
 
-
         /* correct typing mistakes (these mistakes are inserted in practice text
-        only if 'stop on mistake' isn't active)*/
+        only if 'stop on mistake' isn't checked)*/
 
 		case VK_BACK:{
 
@@ -96,12 +94,10 @@ wchar_t Parser::getChar(WPARAM wParam){
 
                 	if (insertedChars.IsEmpty()) {
 
-                        // change word separator to \u25E6
+                        // change word separator
                         if (mainSession->getTypingSettings().getSeparatorType() == SeparatorType::Dot && typingSession->getTextSource()[typingSession->getTextSource().getCharIndex()] == L'\u25E6') {
                           wch = L'\u25E6';
                         }
-
-                        // input is valid
 
                         if (wch == typingSession->getTextSource()[typingSession->getTextSource().getCharIndex()]) {
 
@@ -124,7 +120,6 @@ wchar_t Parser::getChar(WPARAM wParam){
                             typingSession->increaseCharIndex();
                             return wch;
 
-                            // input is invalid
                         } else {
                         	inputLog.push_back(std::make_pair(UnicodeString(wch), true));
 
@@ -139,7 +134,7 @@ wchar_t Parser::getChar(WPARAM wParam){
                             	}
                             }
 
-                            // insert invalid chars (only if 'stop on mistake' isn't active)
+                            // insert invalid chars (only if 'stop on mistake' isn't checked)
                             if (!mainSession->getTypingSettings().getStopOnMistake()) {
                                 insertedChars += UnicodeString(wch);
                             	return wch;

@@ -2,8 +2,8 @@ object FPracticeOptions: TFPracticeOptions
   Left = 0
   Top = 0
   Caption = 'Select a text source'
-  ClientHeight = 443
-  ClientWidth = 530
+  ClientHeight = 441
+  ClientWidth = 522
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

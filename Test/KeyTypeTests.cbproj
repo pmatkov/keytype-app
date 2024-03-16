@@ -118,6 +118,18 @@
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
     </PropertyGroup>
     <ItemGroup>
+        <CppCompile Include="..\EDirNotFoundException.cpp">
+            <DependentOn>..\EDirNotFoundException.h</DependentOn>
+            <BuildOrder>12</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\EInvalidArgumentException.cpp">
+            <DependentOn>..\EInvalidArgumentException.h</DependentOn>
+            <BuildOrder>11</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\EIOException.cpp">
+            <DependentOn>..\EIOException.h</DependentOn>
+            <BuildOrder>13</BuildOrder>
+        </CppCompile>
         <CppCompile Include="..\FileUtils.cpp">
             <DependentOn>..\FileUtils.h</DependentOn>
             <BuildOrder>7</BuildOrder>
@@ -132,17 +144,14 @@
         </CppCompile>
         <CppCompile Include="KeyTypeTests.cpp">
             <BuildOrder>0</BuildOrder>
-            <OptionOverrides>true</OptionOverrides>
         </CppCompile>
         <CppCompile Include="TestFileUtils.cpp">
             <DependentOn>TestFileUtils.h</DependentOn>
             <BuildOrder>6</BuildOrder>
-            <OptionOverrides>true</OptionOverrides>
         </CppCompile>
         <CppCompile Include="TestGenerator.cpp">
             <DependentOn>TestGenerator.h</DependentOn>
             <BuildOrder>4</BuildOrder>
-            <OptionOverrides>true</OptionOverrides>
         </CppCompile>
         <CppCompile Include="TestLogger.cpp">
             <DependentOn>TestLogger.h</DependentOn>
@@ -151,12 +160,10 @@
         <CppCompile Include="TestTextUtils.cpp">
             <DependentOn>TestTextUtils.h</DependentOn>
             <BuildOrder>2</BuildOrder>
-            <OptionOverrides>true</OptionOverrides>
         </CppCompile>
         <CppCompile Include="UnitTestLogger.cpp">
             <DependentOn>UnitTestLogger.h</DependentOn>
             <BuildOrder>7</BuildOrder>
-            <OptionOverrides>true</OptionOverrides>
         </CppCompile>
         <CppCompile Include="..\TextUtils.cpp">
             <DependentOn>..\TextUtils.h</DependentOn>

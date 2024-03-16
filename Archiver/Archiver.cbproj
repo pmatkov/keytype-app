@@ -1,15 +1,14 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{DF683635-49D5-4879-BB49-E3DCF10C96D2}</ProjectGuid>
+        <ProjectGuid>{DD6A024C-5D5D-40E0-9CCE-72822C781176}</ProjectGuid>
         <ProjectVersion>19.5</ProjectVersion>
-        <FrameworkType>VCL</FrameworkType>
-        <AppType>Application</AppType>
-        <MainSource>KeyType.cpp</MainSource>
+        <FrameworkType>None</FrameworkType>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
         <CC_Suffix Condition="'$(CC_Suffix)'==''">c</CC_Suffix>
         <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Console</AppType>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
         <Base>true</Base>
@@ -48,43 +47,35 @@
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
         <DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
-        <DynamicRTL>true</DynamicRTL>
-        <UsePackages>true</UsePackages>
         <IntermediateOutputDir>.\$(Platform)\$(Config)</IntermediateOutputDir>
         <FinalOutputDir>.\$(Platform)\$(Config)</FinalOutputDir>
         <BCC_wpar>false</BCC_wpar>
         <BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
         <BCC_ExtendedErrorInfo>true</BCC_ExtendedErrorInfo>
         <ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\release\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
-        <ProjectType>CppVCLApplication</ProjectType>
-        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
-        <AllPackageLibs>rtl.lib;vcl.lib;vclimg.lib;vclactnband.lib;vclx.lib;xmlrtl.lib;dbrtl.lib;FireDAC.lib;FireDACCommonDriver.lib;FireDACCommon.lib;vclFireDAC.lib;vcldb.lib;vclwinx.lib;bindengine.lib;FireDACMySQLDriver.lib;soaprtl.lib;inet.lib;vclie.lib;vcledge.lib</AllPackageLibs>
-        <_TCHARMapping>wchar_t</_TCHARMapping>
+        <ProjectType>CppConsoleApplication</ProjectType>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
         <Multithreaded>true</Multithreaded>
-        <Icon_MainIcon>$(BDS)\bin\cbuilder_PROJECTICON.ico</Icon_MainIcon>
-        <UWP_CppLogo44>$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_44.png</UWP_CppLogo44>
-        <UWP_CppLogo150>$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_150.png</UWP_CppLogo150>
-        <SanitizedProjectName>KeyType</SanitizedProjectName>
-        <IncludePath>Tests\;$(IncludePath)</IncludePath>
-        <ILINK_LibraryPath>Tests\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
-        <Custom_Styles>Glow|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Glow.vsf;&quot;Windows11 Modern Dark|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Windows11_Modern_Dark.vsf&quot;;&quot;Windows11 Modern Light|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Windows11_Modern_Light.vsf&quot;</Custom_Styles>
-        <ILINK_GenerateDRC>True</ILINK_GenerateDRC>
+        <SanitizedProjectName>Archiver</SanitizedProjectName>
+        <_TCHARMapping>char</_TCHARMapping>
+        <IncludePath>KeyType\Archiver\;$(IncludePath)</IncludePath>
+        <ILINK_LibraryPath>KeyType\Archiver\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <PackageImports>adortl;appanalytics;bcbie;bcbsmp;bindcomp;bindcompdbx;bindcompfmx;bindcompvcl;bindcompvclsmp;bindcompvclwinx;bindengine;CloudService;CustomIPTransport;DataSnapClient;DataSnapCommon;DataSnapConnectors;DatasnapConnectorsFreePascal;DataSnapFireDAC;DataSnapIndy10ServerTransport;DataSnapNativeClient;DataSnapProviderClient;DataSnapServer;DataSnapServerMidas;dbexpress;dbrtl;dbxcds;DbxClientDriver;DbxCommonDriver;DBXDb2Driver;DBXFirebirdDriver;DBXInformixDriver;DBXInterBaseDriver;DBXMSSQLDriver;DBXMySQLDriver;DBXOdbcDriver;DBXOracleDriver;DBXSqliteDriver;DBXSybaseASADriver;DBXSybaseASEDriver;dsnap;dsnapcon;dsnapxml;emsclient;emsclientfiredac;emsedge;emshosting;emsserverresource;FireDAC;FireDACADSDriver;FireDACASADriver;FireDACCommon;FireDACCommonDriver;FireDACCommonODBC;FireDACDb2Driver;FireDACDBXDriver;FireDACDSDriver;FireDACIBDriver;FireDACInfxDriver;FireDACMongoDBDriver;FireDACMSAccDriver;FireDACMSSQLDriver;FireDACMySQLDriver;FireDACODBCDriver;FireDACOracleDriver;FireDACPgDriver;FireDACSqliteDriver;FireDACTDataDriver;fmx;fmxase;fmxdae;fmxFireDAC;fmxobj;frx28;frxDB28;frxe28;IndyCore;IndyIPClient;IndyIPCommon;IndyIPServer;IndyProtocols;IndySystem;inet;inetdb;inetdbxpress;RESTBackendComponents;RESTComponents;rtl;soapmidas;soaprtl;soapserver;tethering;vcl;vclactnband;vcldb;vcldsnap;vcledge;vclFireDAC;vclie;vclimg;VCLRESTComponents;VclSmp;vcltouch;vclwinx;vclx;xmlrtl;$(PackageImports)</PackageImports>
-        <IncludePath>$(BDSINCLUDE)\windows\vcl;$(IncludePath)</IncludePath>
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
         <BT_BuildType>Debug</BT_BuildType>
-        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
-        <BCC_PCHName_Clang>KeyTypePCH1.h</BCC_PCHName_Clang>
+        <UWP_CppLogo44>$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_44.png</UWP_CppLogo44>
+        <UWP_CppLogo150>$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_150.png</UWP_CppLogo150>
+        <BCC_PCHName_Clang>ArchiverPCH2.h</BCC_PCHName_Clang>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
         <PackageImports>adortl;appanalytics;bcbie;bcbsmp;bindcomp;bindcompdbx;bindcompfmx;bindcompvcl;bindcompvclsmp;bindcompvclwinx;bindengine;CloudService;CustomIPTransport;DataSnapClient;DataSnapCommon;DataSnapConnectors;DatasnapConnectorsFreePascal;DataSnapFireDAC;DataSnapIndy10ServerTransport;DataSnapNativeClient;DataSnapProviderClient;DataSnapServer;DataSnapServerMidas;dbexpress;dbrtl;dbxcds;DbxClientDriver;DbxCommonDriver;DBXDb2Driver;DBXFirebirdDriver;DBXInformixDriver;DBXInterBaseDriver;DBXMSSQLDriver;DBXMySQLDriver;DBXOdbcDriver;DBXOracleDriver;DBXSqliteDriver;DBXSybaseASADriver;DBXSybaseASEDriver;dsnap;dsnapcon;dsnapxml;emsclient;emsclientfiredac;emsedge;emshosting;emsserverresource;FireDAC;FireDACADSDriver;FireDACASADriver;FireDACCommon;FireDACCommonDriver;FireDACCommonODBC;FireDACDb2Driver;FireDACDBXDriver;FireDACDSDriver;FireDACIBDriver;FireDACInfxDriver;FireDACMongoDBDriver;FireDACMSAccDriver;FireDACMSSQLDriver;FireDACMySQLDriver;FireDACODBCDriver;FireDACOracleDriver;FireDACPgDriver;FireDACSqliteDriver;FireDACTDataDriver;fmx;fmxase;fmxdae;fmxFireDAC;fmxobj;IndyCore;IndyIPClient;IndyIPCommon;IndyIPServer;IndyProtocols;IndySystem;inet;inetdb;inetdbxpress;RESTBackendComponents;RESTComponents;rtl;soapmidas;soaprtl;soapserver;tethering;vcl;vclactnband;vcldb;vcldsnap;vcledge;vclFireDAC;vclie;vclimg;VCLRESTComponents;VclSmp;vcltouch;vclwinx;vclx;xmlrtl;$(PackageImports)</PackageImports>
-        <IncludePath>$(BDSINCLUDE)\windows\vcl;$(IncludePath)</IncludePath>
-        <BCC_PCHName_Clang>KeyTypePCH1.h</BCC_PCHName_Clang>
+        <UWP_CppLogo44>$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_44.png</UWP_CppLogo44>
+        <UWP_CppLogo150>$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_150.png</UWP_CppLogo150>
+        <BCC_PCHName_Clang>ArchiverPCH2.h</BCC_PCHName_Clang>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
         <BCC_OptimizeForSpeed>false</BCC_OptimizeForSpeed>
@@ -107,306 +98,29 @@
         <CLANG_UnwindTables>true</CLANG_UnwindTables>
         <ILINK_LibraryPath>$(BDSLIB)\$(PLATFORM)\debug;$(ILINK_LibraryPath)</ILINK_LibraryPath>
         <ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\debug\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
-        <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
-        <VerInfo_Locale>1050</VerInfo_Locale>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
-        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
         <ILINK_LibraryPath>$(BDSLIB)\$(PLATFORM)$(CC_SUFFIX)\debug;$(ILINK_LibraryPath)</ILINK_LibraryPath>
-        <LinkPackageImports>rtl.bpi;vcl.bpi;vclimg.bpi;vclactnband.bpi;vclx.bpi;xmlrtl.bpi;dbrtl.bpi;FireDAC.bpi;FireDACCommonDriver.bpi;FireDACCommon.bpi;vclFireDAC.bpi;vcldb.bpi;vclwinx.bpi;bindengine.bpi;FireDACMySQLDriver.bpi;soaprtl.bpi;inet.bpi;vclie.bpi;vcledge.bpi</LinkPackageImports>
-        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
+        <Manifest_File>..\..\(None)</Manifest_File>
+        <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <Defines>NDEBUG;$(Defines)</Defines>
         <TASM_Debugging>None</TASM_Debugging>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
-        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
-        <LinkPackageImports>rtl.bpi;vcl.bpi</LinkPackageImports>
     </PropertyGroup>
     <ItemGroup>
-        <CppCompile Include="AppSettings.cpp">
-            <VirtualFolder>{6D6A1B94-904B-4CFC-BA2B-E48D16DDAD0E}</VirtualFolder>
-            <DependentOn>AppSettings.h</DependentOn>
-            <BuildOrder>42</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="AuthenticationForm.cpp">
-            <VirtualFolder>{F6B7C7E8-2F86-4A67-B4A3-6E99C1D2C773}</VirtualFolder>
-            <Form>FAuthentication</Form>
-            <FormType>dfm</FormType>
-            <DependentOn>AuthenticationForm.h</DependentOn>
-            <BuildOrder>21</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="AuthenticationService.cpp">
-            <VirtualFolder>{26BC7E46-ECBD-4AA7-B03E-17DAA77318AD}</VirtualFolder>
-            <DependentOn>AuthenticationService.h</DependentOn>
-            <BuildOrder>21</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="Books.cpp">
-            <VirtualFolder>{23B73507-EEA9-420C-B3B7-961C43A1A22D}</VirtualFolder>
-            <DependentOn>Books.h</DependentOn>
-            <BuildOrder>18</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="CustomTextFrame.cpp">
-            <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
-            <Form>FrCustomText</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TFrame</DesignClass>
-            <DependentOn>CustomTextFrame.h</DependentOn>
-            <BuildOrder>29</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="DataModule.cpp">
-            <VirtualFolder>{8FB63F96-DB9B-44EE-BA3E-3A48525DE697}</VirtualFolder>
-            <Form>DataModule1</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TDataModule</DesignClass>
-            <DependentOn>DataModule.h</DependentOn>
-            <BuildOrder>38</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="DcWord.cpp">
-            <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
-            <DependentOn>DcWord.h</DependentOn>
-            <BuildOrder>14</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="Dictionary.cpp">
-            <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
-            <DependentOn>Dictionary.h</DependentOn>
-            <BuildOrder>15</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="EDirNotFoundException.cpp">
-            <VirtualFolder>{C9B9CF94-D644-46A8-AFE2-4CDDCCC37F87}</VirtualFolder>
-            <DependentOn>EDirNotFoundException.h</DependentOn>
-            <BuildOrder>44</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="EFileNotFoundException.cpp">
-            <VirtualFolder>{C9B9CF94-D644-46A8-AFE2-4CDDCCC37F87}</VirtualFolder>
-            <DependentOn>EFileNotFoundException.h</DependentOn>
-            <BuildOrder>46</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="EInvalidArgumentException.cpp">
-            <VirtualFolder>{C9B9CF94-D644-46A8-AFE2-4CDDCCC37F87}</VirtualFolder>
-            <DependentOn>EInvalidArgumentException.h</DependentOn>
-            <BuildOrder>47</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="EIOException.cpp">
-            <VirtualFolder>{C9B9CF94-D644-46A8-AFE2-4CDDCCC37F87}</VirtualFolder>
-            <DependentOn>EIOException.h</DependentOn>
-            <BuildOrder>45</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="ENullPointerException.cpp">
-            <VirtualFolder>{C9B9CF94-D644-46A8-AFE2-4CDDCCC37F87}</VirtualFolder>
-            <DependentOn>ENullPointerException.h</DependentOn>
-            <BuildOrder>34</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="EnumUtils.cpp">
-            <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
-            <DependentOn>EnumUtils.h</DependentOn>
-            <BuildOrder>44</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="ExternalSourcesFrame.cpp">
-            <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
-            <Form>FrExternalSources</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TFrame</DesignClass>
-            <DependentOn>ExternalSourcesFrame.h</DependentOn>
-            <BuildOrder>28</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="FileUtils.cpp">
-            <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
-            <DependentOn>FileUtils.h</DependentOn>
-            <BuildOrder>16</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="GeneratedTextFrame.cpp">
-            <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
-            <Form>FrGeneratedText</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TFrame</DesignClass>
-            <DependentOn>GeneratedTextFrame.h</DependentOn>
-            <BuildOrder>27</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="Generator.cpp">
-            <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
-            <DependentOn>Generator.h</DependentOn>
-            <BuildOrder>13</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="ISettings.cpp">
-            <VirtualFolder>{6D6A1B94-904B-4CFC-BA2B-E48D16DDAD0E}</VirtualFolder>
-            <DependentOn>ISettings.h</DependentOn>
-            <BuildOrder>33</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="KeyStatistics.cpp">
-            <VirtualFolder>{4AADD3FA-CB81-45BA-96EF-7958F7960233}</VirtualFolder>
-            <DependentOn>KeyStatistics.h</DependentOn>
-            <BuildOrder>34</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="KeyType.cpp">
-            <BuildOrder>0</BuildOrder>
-        </CppCompile>
-        <None Include="KeyType.todo"/>
-        <PCHCompile Include="KeyTypePCH1.h">
+        <CppCompile Include="Archiver.cpp">
             <BuildOrder>1</BuildOrder>
+        </CppCompile>
+        <PCHCompile Include="ArchiverPCH2.h">
+            <BuildOrder>0</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>
-        <CppCompile Include="LanguageProfile.cpp">
-            <VirtualFolder>{23B73507-EEA9-420C-B3B7-961C43A1A22D}</VirtualFolder>
-            <DependentOn>LanguageProfile.h</DependentOn>
-            <BuildOrder>5</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="Logger.cpp">
-            <VirtualFolder>{26BC7E46-ECBD-4AA7-B03E-17DAA77318AD}</VirtualFolder>
-            <DependentOn>Logger.h</DependentOn>
-            <BuildOrder>35</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="LoginFrame.cpp">
-            <VirtualFolder>{F6B7C7E8-2F86-4A67-B4A3-6E99C1D2C773}</VirtualFolder>
-            <Form>FrLogin</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TFrame</DesignClass>
-            <DependentOn>LoginFrame.h</DependentOn>
-            <BuildOrder>37</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="MainForm.cpp">
-            <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
-            <Form>FMain</Form>
-            <FormType>dfm</FormType>
-            <DependentOn>MainForm.h</DependentOn>
-            <BuildOrder>2</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="MainFrame.cpp">
-            <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
-            <Form>FrMain</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TFrame</DesignClass>
-            <DependentOn>MainFrame.h</DependentOn>
-            <BuildOrder>26</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="MainSession.cpp">
-            <VirtualFolder>{893884F7-72F0-483F-8A49-6A63980DD6D7}</VirtualFolder>
-            <DependentOn>MainSession.h</DependentOn>
-            <BuildOrder>30</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="OptionsFrame.cpp">
-            <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
-            <Form>FrOptions</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TFrame</DesignClass>
-            <DependentOn>OptionsFrame.h</DependentOn>
-            <BuildOrder>11</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="Parser.cpp">
-            <VirtualFolder>{26BC7E46-ECBD-4AA7-B03E-17DAA77318AD}</VirtualFolder>
-            <DependentOn>Parser.h</DependentOn>
-            <BuildOrder>34</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="PracticeFrame.cpp">
-            <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
-            <Form>FrPractice</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TFrame</DesignClass>
-            <DependentOn>PracticeFrame.h</DependentOn>
-            <BuildOrder>25</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="PracticeOptionsForm.cpp">
-            <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
-            <Form>FPractice</Form>
-            <FormType>dfm</FormType>
-            <DependentOn>PracticeOptionsForm.h</DependentOn>
-            <BuildOrder>12</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="PreferencesForm.cpp">
-            <VirtualFolder>{B49A349D-1438-45E5-B4FD-36C3DF2C665B}</VirtualFolder>
-            <Form>FPreferences</Form>
-            <FormType>dfm</FormType>
-            <DependentOn>PreferencesForm.h</DependentOn>
-            <BuildOrder>39</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="RegisterFrame.cpp">
-            <VirtualFolder>{F6B7C7E8-2F86-4A67-B4A3-6E99C1D2C773}</VirtualFolder>
-            <Form>FrRegister</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TFrame</DesignClass>
-            <DependentOn>RegisterFrame.h</DependentOn>
-            <BuildOrder>38</BuildOrder>
-        </CppCompile>
-        <DelphiCompile Include="reinit.pas">
-            <BuildOrder>40</BuildOrder>
-        </DelphiCompile>
-        <CppCompile Include="Session.cpp">
-            <VirtualFolder>{893884F7-72F0-483F-8A49-6A63980DD6D7}</VirtualFolder>
-            <DependentOn>Session.h</DependentOn>
-            <BuildOrder>31</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="StackTrace.cpp">
-            <VirtualFolder>{C9B9CF94-D644-46A8-AFE2-4CDDCCC37F87}</VirtualFolder>
-            <DependentOn>StackTrace.h</DependentOn>
-            <BuildOrder>34</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="TextSource.cpp">
-            <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
-            <DependentOn>TextSource.h</DependentOn>
-            <BuildOrder>4</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="TextUtils.cpp">
-            <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
-            <DependentOn>TextUtils.h</DependentOn>
-            <BuildOrder>3</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="TimeManager.cpp">
-            <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
-            <DependentOn>TimeManager.h</DependentOn>
-            <BuildOrder>34</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="TypingSession.cpp">
-            <VirtualFolder>{893884F7-72F0-483F-8A49-6A63980DD6D7}</VirtualFolder>
-            <DependentOn>TypingSession.h</DependentOn>
-            <BuildOrder>9</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="TypingSettings.cpp">
-            <VirtualFolder>{6D6A1B94-904B-4CFC-BA2B-E48D16DDAD0E}</VirtualFolder>
-            <DependentOn>TypingSettings.h</DependentOn>
-            <BuildOrder>41</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="UIUtils.cpp">
-            <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
-            <DependentOn>UIUtils.h</DependentOn>
-            <BuildOrder>24</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="User.cpp">
-            <VirtualFolder>{8A6B665F-CE5E-4CF4-AB4C-BBAA85BE5583}</VirtualFolder>
-            <DependentOn>User.h</DependentOn>
-            <BuildOrder>10</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="UserStatistics.cpp">
-            <VirtualFolder>{4AADD3FA-CB81-45BA-96EF-7958F7960233}</VirtualFolder>
-            <DependentOn>UserStatistics.h</DependentOn>
-            <BuildOrder>19</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="UUIDGenerator.cpp">
-            <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
-            <DependentOn>UUIDGenerator.h</DependentOn>
-            <BuildOrder>32</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="WordList.cpp">
-            <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
-            <DependentOn>WordList.h</DependentOn>
-            <BuildOrder>13</BuildOrder>
-        </CppCompile>
-        <FormResources Include="PracticeOptionsForm.dfm"/>
-        <FormResources Include="PracticeFrame.dfm"/>
-        <FormResources Include="RegisterFrame.dfm"/>
-        <FormResources Include="PreferencesForm.dfm"/>
-        <FormResources Include="MainForm.dfm"/>
-        <FormResources Include="LoginFrame.dfm"/>
-        <FormResources Include="OptionsFrame.dfm"/>
-        <FormResources Include="MainFrame.dfm"/>
-        <FormResources Include="AuthenticationForm.dfm"/>
-        <FormResources Include="DataModule.dfm"/>
-        <FormResources Include="CustomTextFrame.dfm"/>
-        <FormResources Include="ExternalSourcesFrame.dfm"/>
-        <FormResources Include="GeneratedTextFrame.dfm"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -421,7 +135,7 @@
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
-        <Borland.ProjectType>CppVCLApplication</Borland.ProjectType>
+        <Borland.ProjectType>CppConsoleApplication</Borland.ProjectType>
         <BorlandProject>
             <CPlusPlusBuilder.Personality>
                 <ProjectProperties>
@@ -430,28 +144,6 @@
                     <ProjectProperties Name="VerifyPackages">True</ProjectProperties>
                     <ProjectProperties Name="IndexFiles">False</ProjectProperties>
                 </ProjectProperties>
-                <Source>
-                    <Source Name="MainSource">KeyType.cpp</Source>
-                </Source>
-                <Folders/>
-                <VFOLDERS>
-                    <VFOLDER ID="{8FB63F96-DB9B-44EE-BA3E-3A48525DE697}" name="Data"/>
-                    <VFOLDER ID="{C9B9CF94-D644-46A8-AFE2-4CDDCCC37F87}" name="Exceptions"/>
-                    <VFOLDER ID="{E8DD405D-5871-4098-BE73-2A4F48743690}" name="Forms">
-                        <VFOLDER ID="{F6B7C7E8-2F86-4A67-B4A3-6E99C1D2C773}" name="Authentication"/>
-                        <VFOLDER ID="{84360D3D-4874-46E9-88EE-445E3FC0314D}" name="MainForm"/>
-                        <VFOLDER ID="{78CB0057-7BC4-4B83-9609-C573EB0EAF04}" name="PracticeOptionsForm"/>
-                        <VFOLDER ID="{B49A349D-1438-45E5-B4FD-36C3DF2C665B}" name="PreferencesForm"/>
-                    </VFOLDER>
-                    <VFOLDER ID="{23B73507-EEA9-420C-B3B7-961C43A1A22D}" name="Other"/>
-                    <VFOLDER ID="{26BC7E46-ECBD-4AA7-B03E-17DAA77318AD}" name="Services"/>
-                    <VFOLDER ID="{893884F7-72F0-483F-8A49-6A63980DD6D7}" name="Session"/>
-                    <VFOLDER ID="{6D6A1B94-904B-4CFC-BA2B-E48D16DDAD0E}" name="Settings"/>
-                    <VFOLDER ID="{4BAA1710-5749-48D2-B3F3-197353059E4E}" name="Sources"/>
-                    <VFOLDER ID="{4AADD3FA-CB81-45BA-96EF-7958F7960233}" name="Statistics"/>
-                    <VFOLDER ID="{8A6B665F-CE5E-4CF4-AB4C-BBAA85BE5583}" name="User"/>
-                    <VFOLDER ID="{CE54C44E-A3BA-434A-8509-1E40452898D3}" name="Utils"/>
-                </VFOLDERS>
                 <Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\bcboffice2k280.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\bcbofficexp280.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
@@ -459,39 +151,29 @@
                     <Excluded_Packages Name="$(BDSBIN)\dclofficexp280.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
                     <Excluded_Packages Name="C:\Program Files (x86)\FastReports\LibD28\dclfrxtee28.bpl">FastReport VCL Tee Components</Excluded_Packages>
                 </Excluded_Packages>
-                <Language>
-                    <Language Name="ProjectLang">$0000041A</Language>
-                    <Language Name="ActiveLang">ENG</Language>
-                </Language>
-                <Resource_DLL_Projects>
-                    <Resource_DLL_Projects Name="Item0">Croatian (Croatia)*$0000041A*HRV*HRV</Resource_DLL_Projects>
-                    <Resource_DLL_Projects Name="Item1">English (United Kingdom)*$00000809*ENG*ENG</Resource_DLL_Projects>
-                </Resource_DLL_Projects>
-                <RDP_Source_Files>
-                    <RDP_Source_Files Name="Item0">PracticeForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item1">PracticeOptionsForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item2">PracticeFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item3">RegisterFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item4">PreferencesForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item5">MainForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item6">LoginFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item7">OptionsFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item8">MainFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item9">AuthenticationForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item10">DataModule.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item11">CustomTextFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item12">ExternalSourcesFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item13">GeneratedTextFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item14">Win32\Debug\KeyType.drc</RDP_Source_Files>
-                </RDP_Source_Files>
             </CPlusPlusBuilder.Personality>
             <Deployment Version="4">
+                <DeployFile LocalName="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib" Class="DependencyModule">
+                    <Platform Name="iOSSimulator">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\iossimulator\libpcre.dylib" Class="DependencyModule">
+                    <Platform Name="iOSSimulator">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile Condition="'$(DynamicRTL)'=='true'" LocalName="$(BDS)\Redist\osx32\libcgcrtl.dylib" Class="DependencyModule">
                     <Platform Name="OSX32">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
                 <DeployFile Condition="'$(DynamicRTL)'=='true'" LocalName="$(BDS)\Redist\osx32\libcgstl.dylib" Class="DependencyModule">
+                    <Platform Name="OSX32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule">
                     <Platform Name="OSX32">
                         <Overwrite>true</Overwrite>
                     </Platform>
@@ -536,24 +218,20 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName=".\Win32\Debug\KeyType.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName=".\Win32\Debug\Archiver.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
-                        <RemoteName>KeyType.exe</RemoteName>
+                        <RemoteName>Archiver.exe</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName=".\Win32\Debug\KeyType.tds" Configuration="Debug" Class="DebugSymbols">
+                <DeployFile LocalName=".\Win32\Debug\Archiver.tds" Configuration="Debug" Class="DebugSymbols">
                     <Platform Name="Win32">
-                        <RemoteName>KeyType.tds</RemoteName>
+                        <RemoteName>Archiver.tds</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
                 <DeployClass Name="AdditionalDebugSymbols">
-                    <Platform Name="iOSSimulator">
-                        <Operation>1</Operation>
-                    </Platform>
                     <Platform Name="OSX32">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
                     <Platform Name="Win32">
@@ -843,7 +521,6 @@
                         <Operation>1</Operation>
                     </Platform>
                     <Platform Name="OSX32">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
                     <Platform Name="Win32">
@@ -852,17 +529,14 @@
                 </DeployClass>
                 <DeployClass Name="DependencyFramework">
                     <Platform Name="OSX32">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
                         <Operation>1</Operation>
                         <Extensions>.framework</Extensions>
                     </Platform>
                     <Platform Name="OSX64">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
                         <Operation>1</Operation>
                         <Extensions>.framework</Extensions>
                     </Platform>
                     <Platform Name="OSXARM64">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
                         <Operation>1</Operation>
                         <Extensions>.framework</Extensions>
                     </Platform>
@@ -871,30 +545,15 @@
                     </Platform>
                 </DeployClass>
                 <DeployClass Name="DependencyModule">
-                    <Platform Name="iOSDevice32">
-                        <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
-                    </Platform>
-                    <Platform Name="iOSDevice64">
-                        <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
-                    </Platform>
-                    <Platform Name="iOSSimARM64">
-                        <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
-                    </Platform>
                     <Platform Name="OSX32">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
                         <Operation>1</Operation>
                         <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="OSX64">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
                         <Operation>1</Operation>
                         <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="OSXARM64">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
                         <Operation>1</Operation>
                         <Extensions>.dylib</Extensions>
                     </Platform>
@@ -917,17 +576,14 @@
                         <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="OSX32">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
                         <Operation>1</Operation>
                         <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="OSX64">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
                         <Operation>1</Operation>
                         <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="OSXARM64">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
                         <Operation>1</Operation>
                         <Extensions>.dylib</Extensions>
                     </Platform>
@@ -953,15 +609,12 @@
                         <Operation>0</Operation>
                     </Platform>
                     <Platform Name="OSX32">
-                        <RemoteDir>Contents\Resources\StartUp\</RemoteDir>
                         <Operation>0</Operation>
                     </Platform>
                     <Platform Name="OSX64">
-                        <RemoteDir>Contents\Resources\StartUp\</RemoteDir>
                         <Operation>0</Operation>
                     </Platform>
                     <Platform Name="OSXARM64">
-                        <RemoteDir>Contents\Resources\StartUp\</RemoteDir>
                         <Operation>0</Operation>
                     </Platform>
                     <Platform Name="Win32">
@@ -976,44 +629,9 @@
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
-                <DeployClass Name="ProjectOSXDebug">
-                    <Platform Name="OSX64">
-                        <RemoteDir>..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF</RemoteDir>
-                        <Operation>1</Operation>
-                    </Platform>
-                    <Platform Name="OSXARM64">
-                        <RemoteDir>..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF</RemoteDir>
-                        <Operation>1</Operation>
-                    </Platform>
-                </DeployClass>
-                <DeployClass Name="ProjectOSXEntitlements">
-                    <Platform Name="OSX32">
-                        <RemoteDir>..\</RemoteDir>
-                        <Operation>1</Operation>
-                    </Platform>
-                    <Platform Name="OSX64">
-                        <RemoteDir>..\</RemoteDir>
-                        <Operation>1</Operation>
-                    </Platform>
-                    <Platform Name="OSXARM64">
-                        <RemoteDir>..\</RemoteDir>
-                        <Operation>1</Operation>
-                    </Platform>
-                </DeployClass>
-                <DeployClass Name="ProjectOSXInfoPList">
-                    <Platform Name="OSX32">
-                        <RemoteDir>Contents</RemoteDir>
-                        <Operation>1</Operation>
-                    </Platform>
-                    <Platform Name="OSX64">
-                        <RemoteDir>Contents</RemoteDir>
-                        <Operation>1</Operation>
-                    </Platform>
-                    <Platform Name="OSXARM64">
-                        <RemoteDir>Contents</RemoteDir>
-                        <Operation>1</Operation>
-                    </Platform>
-                </DeployClass>
+                <DeployClass Name="ProjectOSXDebug"/>
+                <DeployClass Name="ProjectOSXEntitlements"/>
+                <DeployClass Name="ProjectOSXInfoPList"/>
                 <DeployClass Name="ProjectOSXResource">
                     <Platform Name="OSX32">
                         <RemoteDir>Contents\Resources</RemoteDir>
@@ -1050,15 +668,12 @@
                         <Operation>1</Operation>
                     </Platform>
                     <Platform Name="OSX32">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
                     <Platform Name="OSX64">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
                     <Platform Name="OSXARM64">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
                     <Platform Name="Win32">
@@ -1093,41 +708,9 @@
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
-                <DeployClass Name="ProjectiOSEntitlements">
-                    <Platform Name="iOSDevice32">
-                        <RemoteDir>..\</RemoteDir>
-                        <Operation>1</Operation>
-                    </Platform>
-                    <Platform Name="iOSDevice64">
-                        <RemoteDir>..\</RemoteDir>
-                        <Operation>1</Operation>
-                    </Platform>
-                    <Platform Name="iOSSimARM64">
-                        <RemoteDir>..\</RemoteDir>
-                        <Operation>1</Operation>
-                    </Platform>
-                </DeployClass>
-                <DeployClass Name="ProjectiOSInfoPList">
-                    <Platform Name="iOSDevice32">
-                        <Operation>1</Operation>
-                    </Platform>
-                    <Platform Name="iOSDevice64">
-                        <Operation>1</Operation>
-                    </Platform>
-                    <Platform Name="iOSSimARM64">
-                        <Operation>1</Operation>
-                    </Platform>
-                </DeployClass>
-                <DeployClass Name="ProjectiOSLaunchScreen">
-                    <Platform Name="iOSDevice64">
-                        <RemoteDir>..\$(PROJECTNAME).launchscreen</RemoteDir>
-                        <Operation>64</Operation>
-                    </Platform>
-                    <Platform Name="iOSSimARM64">
-                        <RemoteDir>..\$(PROJECTNAME).launchscreen</RemoteDir>
-                        <Operation>64</Operation>
-                    </Platform>
-                </DeployClass>
+                <DeployClass Name="ProjectiOSEntitlements"/>
+                <DeployClass Name="ProjectiOSInfoPList"/>
+                <DeployClass Name="ProjectiOSLaunchScreen"/>
                 <DeployClass Name="ProjectiOSResource">
                     <Platform Name="iOSDevice32">
                         <Operation>1</Operation>
@@ -1365,9 +948,9 @@
                 <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="iOSSimARM64" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Linux64" Name="$(PROJECTNAME)"/>
-                <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME).app"/>
-                <ProjectRoot Platform="OSX64" Name="$(PROJECTNAME).app"/>
-                <ProjectRoot Platform="OSXARM64" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="OSX64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="OSXARM64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
             </Deployment>
@@ -1375,9 +958,6 @@
                 <Platform value="Win32">True</Platform>
                 <Platform value="Win64">False</Platform>
             </Platforms>
-            <UnitTesting>
-                <TestProjectName>C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Test\KeyTypeTests.cbproj</TestProjectName>
-            </UnitTesting>
         </BorlandProject>
         <ProjectFileVersion>12</ProjectFileVersion>
     </ProjectExtensions>

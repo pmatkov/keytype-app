@@ -41,13 +41,13 @@ private:	// User declarations
     MainSession *mainSession;
     TypingSession *typingSession;
 
-    TFPracticeOptions *FPracticeOptions;
+    std::unique_ptr<TFPracticeOptions> FPracticeOptions;
 	HWND REHandle;
 
     int maxChars;
 public:		// User declarations
 	__fastcall TFrPractice(TComponent* Owner);
-    __fastcall TFrPractice(TComponent* Owner, Parser *_parser, MainSession *_mainSession, TypingSession *_typingSession, TFPracticeOptions *_FPracticeOptions);
+    __fastcall TFrPractice(TComponent* Owner, Parser *_parser, MainSession *_mainSession, TypingSession *_typingSession);
 
     void setPracticeStatus(SessionStatus status);
     void displayStatsItems();

@@ -9,6 +9,8 @@
 #include "FileUtils.h"
 #include "TextUtils.h"
 #include "EnumUtils.h"
+#include "Logger.h"
+#include "EFileNotFoundException.h"
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -50,8 +52,12 @@ void Dictionary::parseJsonToDictionary(const UnicodeString &path) {
 	TJSONArray *dictionaryObject, *synonymsObject;
 
 	try {
+        std::optional<UnicodeString> string = FileUtils::readFromTextFile(path);
 
-		mainObject = (TJSONObject*) FileUtils::readFromJsonFile(path);
+        if (string.has_value()) {
+        	mainObject = (TJSONObject*) TextUtils::convertToJSONObject(*string);
+        }
+
 		try {
 
 			if (mainObject) {
@@ -85,7 +91,6 @@ void Dictionary::parseJsonToDictionary(const UnicodeString &path) {
 								}
 							}
 
-//							dictionary[word] = DcWord(word, DcWord::stringToWordCategory(category), definition, synonyms);
 							dictionary[word] = DcWord(word, EnumUtils::stringToEnum<WordCategory>(DcWord::getEnumStrings(), category), definition, synonyms);
 
 						}
@@ -98,8 +103,13 @@ void Dictionary::parseJsonToDictionary(const UnicodeString &path) {
 			mainObject->Free();
 		}
 
-	} catch (const Exception &ex) {
+	}
+    catch (CustomExceptions::EFileNotFoundException &ex) {
+        LOGGER(LogLevel::Fatal, ex.getMessage());
+    }
+    catch (const Exception &ex) {
 		ShowMessage("Unable to parse JSON");
+        LOGGER(LogLevel::Error, "Error parsing JSON file: " + path);
 	}
 
 }
@@ -126,7 +136,6 @@ std::optional<UnicodeString> Dictionary::generateJsonFromDictionary(const std::m
 				for (const std::pair<const UnicodeString, DcWord>& keyValue : dictionary) {
 
 					UnicodeString word = keyValue.second.getWord();
-//					UnicodeString category = DcWord::wordCategoryToString(keyValue.second.getWordCategory());
 					UnicodeString category = EnumUtils::enumToString<WordCategory>(DcWord::getEnumStrings(), keyValue.second.getWordCategory());
 
 					UnicodeString definition = keyValue.second.getDefinition();
@@ -153,6 +162,7 @@ std::optional<UnicodeString> Dictionary::generateJsonFromDictionary(const std::m
 				}
 		} catch (const Exception &ex) {
 			ShowMessage("Unable to generate JSON");
+            LOGGER(LogLevel::Error, "Error stringifying to JSON file");
 		}
 
 	}

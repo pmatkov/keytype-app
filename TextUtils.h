@@ -6,6 +6,7 @@
 #include <vcl.h>
 #include <cwctype>
 #include <vector>
+#include <System.JSON.hpp>
 
 namespace TextUtils
 {
@@ -22,10 +23,12 @@ namespace TextUtils
     bool isWordBreak(const UnicodeString& line, int index);
     int countCharsUntilWordBreak(const UnicodeString& line, int index);
 
-    UnicodeString formatJson(const UnicodeString& string);
-    UnicodeString repeatChar(wchar_t wch, int count);
-    int findString(const std::vector<UnicodeString> &vec, const UnicodeString &string);
+    UnicodeString generateStringFromChar(wchar_t wch, int count);
+    int findIndex(const std::vector<UnicodeString> &vec, const UnicodeString &string);
+    UnicodeString vectorToString(const std::vector<UnicodeString> &list);
 
+    UnicodeString formatJson(const UnicodeString& string);
+    TJSONObject* convertToJSONObject(const UnicodeString &string);
 };
 //---------------------------------------------------------------------------
 #endif

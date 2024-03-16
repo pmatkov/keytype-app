@@ -27,6 +27,9 @@ class AppSettings: public ISettings {
 
         bool enableLogging;
         LogLevel logLevel;
+        LogInterval logInterval;
+
+        bool languageChanged = false;
 
         UnicodeString section = "";
         static std::vector<UnicodeString> languageStrings;
@@ -46,13 +49,18 @@ class AppSettings: public ISettings {
         const LogLevel &getLogLevel() const;
         void setLogLevel(LogLevel _logLevel);
 
+        const LogInterval &getLogInterval() const;
+		void setLogInterval(LogInterval _logInterval);
+
+        bool getLanguageChanged() const;
+        void setLanguageChanged(bool _languageChanged);
+
         static const std::vector<UnicodeString>& getLanguageStrings();
 
         void loadDefaults() override;
         void loadSettings() override;
         void saveSettings() override;
 
-        static const Language getDefLanguage();
 };
 
 

@@ -271,6 +271,17 @@ namespace UIUtils {
         comboBox->ItemIndex = index;
     }
 
+    void changeComboBoxSelection(TComboBox *comboBox, const std::vector<UnicodeString> &items, int defaultIndex) {
+
+        comboBox->Items->Clear();
+
+        for (const UnicodeString &item : items) {
+            comboBox->Items->Add(item);
+        }
+
+        comboBox->ItemIndex = defaultIndex;
+    }
+
 
     int findItemIndex(const std::vector<UnicodeString> &items, const UnicodeString &selectedItem) {
           for (int i= 0; i < items.size(); i++) {
@@ -292,7 +303,7 @@ namespace UIUtils {
             const int ENGLISH = (SUBLANG_ENGLISH_UK << 10) | LANG_ENGLISH;
             loaded = LoadNewResourceModule(ENGLISH);
          }
-         else  if (language == Language::Croatian) {
+         else if (language == Language::Croatian) {
             const int CROATIAN = (SUBLANG_CROATIAN_CROATIA << 10) | LANG_CROATIAN;
             loaded = LoadNewResourceModule(CROATIAN);
          }

@@ -25,7 +25,7 @@ __fastcall TFPracticeOptions::TFPracticeOptions(TComponent* Owner, MainSession *
 	   mainSession = _mainSession;
 	}
     else {
-        throw ENullPointerException();
+        throw CustomExceptions::ENullPointerException();
     }
 
     FrGeneratedText = UIUtils::createFrame<TFrGeneratedText>(TSGeneratedText);

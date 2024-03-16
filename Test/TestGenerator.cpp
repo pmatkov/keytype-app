@@ -22,7 +22,6 @@ class TTestGenerator : public TTestCase
 		void __fastcall TestshuffleChars();
 
 	private:
-		std::unique_ptr<UnitTestLogger> logger;
 		int testCount;
 
 		int maxChars;
@@ -42,7 +41,6 @@ class TTestGenerator : public TTestCase
 
 void __fastcall TTestGenerator::SetUp()
 {
-	logger = std::make_unique<UnitTestLogger>();
 	testCount = 10;
 
 	maxChars = 50;
@@ -56,21 +54,14 @@ void __fastcall TTestGenerator::SetUp()
 	maxInt = 10;
 	inputText = "Sunny Hvar";
 
-	logger->log("Starting test...");
+	LOGGER_LOG("Starting test...");
 
 }
 
 void __fastcall TTestGenerator::TearDown()
 {
-	logger->log("Test completed.");
-
-	if (logger)
-	{
-		if(logger->getLogStringList()->Count > 0) {
-			ShowMessage(logger->getLogStringList()->Text);
-        }
-
-	}
+	LOGGER_LOG("Test completed.");
+    LOGGER_DISPLAY_LOG();
 }
 
 void __fastcall TTestGenerator::TestgenerateText()
@@ -80,7 +71,7 @@ void __fastcall TTestGenerator::TestgenerateText()
 
 		UnicodeString result = Generator::generateText(letters, uppercase, numbers, punctuation, maxChars);
 
-		logger->log("Test " + IntToStr(i + 1) + ": " + result);
+		LOGGER_LOG("Test " + IntToStr(i + 1) + ": " + result);
 
 	}
 
@@ -93,7 +84,7 @@ void __fastcall TTestGenerator::TestgenerateWord()
 
 		UnicodeString result = Generator::generateWord(letters, uppercase, numbers, punctuation);
 
-		logger->log("Test " + IntToStr(i + 1) + ": " + result);
+		LOGGER_LOG("Test " + IntToStr(i + 1) + ": " + result);
 
 		if (!uppercase && !numbers && !punctuation) {
 
@@ -101,7 +92,7 @@ void __fastcall TTestGenerator::TestgenerateWord()
 			{
 				if (letters.Pos(result[i]) == 0)
 				{
-					logger->log("Invalid char: " + UnicodeString(result[i]));
+					LOGGER_LOG("Invalid char: " + UnicodeString(result[i]));
 					return;
 				}
 			}
@@ -115,9 +106,9 @@ void __fastcall TTestGenerator::TestgetRandomInt()
 {
 	for (int i = 0; i < testCount; i++) {
 
-			int result = Generator::getRandomInt(minInt, maxInt);
-			logger->log("Test " + IntToStr(i + 1) + ": " + IntToStr(result));
-			CheckTrue(result >= minInt && result <= maxInt, L"Outside of range");
+        int result = Generator::getRandomInt(minInt, maxInt);
+        LOGGER_LOG("Test " + IntToStr(i + 1) + ": " + IntToStr(result));
+        CheckTrue(result >= minInt && result <= maxInt, L"Outside of range");
 	}
 
 }
@@ -127,9 +118,9 @@ void __fastcall TTestGenerator::TestshuffleChars()
 
 	for (int i = 0; i < testCount; i++) {
 
-			UnicodeString result = Generator::shuffleChars(inputText);
-			logger->log("Test " + IntToStr(i + 1) + ": " + result);
-			CheckNotEquals(inputText, result, L"Words are the same");
+        UnicodeString result = Generator::shuffleChars(inputText);
+        LOGGER_LOG("Test " + IntToStr(i + 1) + ": " + result);
+        CheckNotEquals(inputText, result, L"Words are the same");
 	}
 
 }

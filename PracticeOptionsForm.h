@@ -51,10 +51,6 @@ public:		// User declarations
     TFrExternalSources* GetFrExternalSources() const;
     TFrCustomText* GetFrCustomText() const;
 
-
-//    void setMainSession(MainSession *_mainSession);
-//    MainSession * getMainSession();
-
 };
 
 //---------------------------------------------------------------------------

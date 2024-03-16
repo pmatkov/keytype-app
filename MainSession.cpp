@@ -4,7 +4,10 @@
 
 #include <chrono>
 #include "MainSession.h"
+
+#ifndef LoggerH
 #include "Logger.h"
+#endif
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)

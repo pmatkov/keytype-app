@@ -40,6 +40,8 @@ __published:	// IDE-managed Components
 	TButton *BtAccept;
 	TLabel *LSeparator;
 	TComboBox *CBSeparator;
+	TLabel *LArchiveLogs;
+	TComboBox *CBLogInterval;
 	void __fastcall CBLanguageChange(TObject *Sender);
 	void __fastcall CBLoggingEnableClick(TObject *Sender);
 	void __fastcall BtReset1Click(TObject *Sender);
@@ -55,6 +57,7 @@ __published:	// IDE-managed Components
 	void __fastcall CBFontSizeChange(TObject *Sender);
 	void __fastcall CBLoggingChange(TObject *Sender);
 	void __fastcall CBFont1Change(TObject *Sender);
+	void __fastcall CBLogIntervalChange(TObject *Sender);
 private:	// User declarations
 	MainSession *mainSession;
     AuthenticationService *authService;

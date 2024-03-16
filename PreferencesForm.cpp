@@ -1,7 +1,6 @@
 //---------------------------------------------------------------------------
 
 #include <vcl.h>
-#pragma hdrstop
 
 #include "PreferencesForm.h"
 #include "ENullPointerException.h"
@@ -13,6 +12,7 @@
 #include "reinit.hpp"
 
 //---------------------------------------------------------------------------
+#pragma hdrstop
 #pragma package(smart_init)
 #pragma resource "*.dfm"
 
@@ -23,18 +23,19 @@ __fastcall TFPreferences::TFPreferences(TComponent* Owner)	: TForm(Owner)  {}
 __fastcall TFPreferences::TFPreferences(TComponent* Owner, MainSession *_mainSession, AuthenticationService *_authService)  : TForm(Owner)
 {
     if (_mainSession) {
-        mainSession = _mainSession;
+
+    	mainSession = _mainSession;
         authService = _authService;
 
-       setAppSettingsItems();
-       setTypingSettingsItems();
+        UIUtils::changeFontFamily(this, mainSession->getAppSettings().getFontFamily());
 
-       UIUtils::changeFontFamily(this, mainSession->getAppSettings().getFontFamily());
+        setAppSettingsItems();
+        setTypingSettingsItems();
 
-       LOGGER(LogLevel::Debug, "Preferences created");
+       	LOGGER(LogLevel::Debug, "Preferences created");
     }
     else {
-        throw ENullPointerException();
+        throw CustomExceptions::ENullPointerException();
     }
 }
 
@@ -54,9 +55,11 @@ void TFPreferences::setAppSettingsItems() {
 
    if  (CBLoggingEnable->Checked) {
         UIUtils::setComboBoxItems(CBLogging, Logger::getLogLevelStrings(), Logger::getLogLevelAsString(mainSession->getAppSettings().getLogLevel()));
+        UIUtils::setComboBoxItems(CBLogInterval, Logger::getLogIntervalStrings(), EnumUtils::enumToString<LogInterval>(Logger::getLogIntervalStrings(), mainSession->getAppSettings().getLogInterval()));
    }
    else {
        CBLogging->Enabled = false;
+       CBLogInterval->Enabled = false;
    }
 }
 
@@ -110,31 +113,8 @@ void __fastcall TFPreferences::CBLanguageChange(TObject *Sender)
     if (selectedIndex != -1) {
     	UnicodeString selectedText = CBLanguage->Items->Strings[selectedIndex];
         mainSession->getAppSettings().setLanguage(EnumUtils::stringToEnum<Language>(mainSession->getAppSettings().getLanguageStrings(), selectedText));
+        mainSession->getAppSettings().setLanguageChanged(true);
     }
-
-    Language language = CBLanguage->ItemIndex == 0 ? Language::English : Language::Croatian;
-    UIUtils::changeLanguage(language);
-
-    setAppSettingsItems();
-    setTypingSettingsItems();
-
-
-//	 bool loadedOk = false;
-//
-//     if (CBLanguage->ItemIndex == 0) {
-//        const int ENGLISH = (SUBLANG_ENGLISH_UK << 10) | LANG_ENGLISH;
-//        loadedOk = LoadNewResourceModule(ENGLISH);
-//     }
-//     else  if (CBLanguage->ItemIndex == 1) {
-//     	const int CROATIAN = (SUBLANG_CROATIAN_CROATIA << 10) | LANG_CROATIAN;
-//        loadedOk = LoadNewResourceModule(CROATIAN);
-//     }
-//
-//     if (loadedOk) {
-//     	ReinitializeForms();
-//     	setAppSettingsItems();
-//     	setTypingSettingsItems();
-//     }
 
 }
 void __fastcall TFPreferences::CBMistakeClick(TObject *Sender)
@@ -209,6 +189,15 @@ void __fastcall TFPreferences::CBFontSizeChange(TObject *Sender)
 void __fastcall TFPreferences::CBLoggingEnableClick(TObject *Sender)
 {
 	mainSession->getAppSettings().setEnableLogging(CBLoggingEnable->Checked);
+
+    if  (!CBLoggingEnable->Checked) {
+    	CBLogging->Enabled = false;
+       	CBLogInterval->Enabled = false;
+    }
+    else {
+    	CBLogging->Enabled = true;
+       	CBLogInterval->Enabled = true;
+    }
 }
 
 void __fastcall TFPreferences::CBLoggingChange(TObject *Sender)
@@ -232,4 +221,14 @@ void __fastcall TFPreferences::CBFont1Change(TObject *Sender)
     }
 }
 //---------------------------------------------------------------------------
+
+void __fastcall TFPreferences::CBLogIntervalChange(TObject *Sender)
+{
+	int selectedIndex = CBLogInterval->ItemIndex;
+
+    if (selectedIndex != -1) {
+    	UnicodeString selectedText = CBLogInterval->Items->Strings[selectedIndex];
+        mainSession->getAppSettings().setLogInterval(EnumUtils::stringToEnum<LogInterval>(Logger::getLogIntervalStrings(), selectedText));
+    }
+}
 

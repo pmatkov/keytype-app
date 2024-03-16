@@ -2,10 +2,10 @@
 
 #pragma hdrstop
 
-#include "ENullPointerException.h"
+#include "EInvalidArgumentException.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 
 namespace CustomExceptions {
-	ENullPointerException::ENullPointerException() : Exception("Null pointer exception") {}
+	EInvalidArgumentException::EInvalidArgumentException() : Exception("Invalid argument exception") {}
 }

@@ -15,6 +15,9 @@
         <Projects Include="ENG\KeyType_ENG.bdsproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="Archiver\Archiver.cbproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -59,14 +62,23 @@
     <Target Name="KeyType_ENG:Make">
         <MSBuild Projects="ENG\KeyType_ENG.bdsproj" Targets="Make"/>
     </Target>
+    <Target Name="Archiver">
+        <MSBuild Projects="Archiver\Archiver.cbproj"/>
+    </Target>
+    <Target Name="Archiver:Clean">
+        <MSBuild Projects="Archiver\Archiver.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Archiver:Make">
+        <MSBuild Projects="Archiver\Archiver.cbproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="KeyType;KeyTypeTests;KeyType_HRV;KeyType_ENG"/>
+        <CallTarget Targets="KeyType;KeyTypeTests;KeyType_HRV;KeyType_ENG;Archiver"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="KeyType:Clean;KeyTypeTests:Clean;KeyType_HRV:Clean;KeyType_ENG:Clean"/>
+        <CallTarget Targets="KeyType:Clean;KeyTypeTests:Clean;KeyType_HRV:Clean;KeyType_ENG:Clean;Archiver:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="KeyType:Make;KeyTypeTests:Make;KeyType_HRV:Make;KeyType_ENG:Make"/>
+        <CallTarget Targets="KeyType:Make;KeyTypeTests:Make;KeyType_HRV:Make;KeyType_ENG:Make;Archiver:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

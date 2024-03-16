@@ -23,7 +23,7 @@ __fastcall TFrRegister::TFrRegister(TComponent* Owner, AuthenticationService *_a
     	LOGGER(LogLevel::Debug, "Register frame created");
 	}
     else {
-        throw ENullPointerException();
+        throw CustomExceptions::ENullPointerException();
     }
 }
 

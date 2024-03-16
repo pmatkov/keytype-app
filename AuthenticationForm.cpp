@@ -22,9 +22,6 @@ __fastcall TFAuthentication::TFAuthentication(TComponent* Owner, AuthenticationS
 
 	if (_authenticationService) {
 
-        Language language = AppSettings::getDefLanguage();
-        UIUtils::changeLanguage(language);
-
 	   	authenticationService = _authenticationService;
 
         // create frames
@@ -45,15 +42,9 @@ __fastcall TFAuthentication::TFAuthentication(TComponent* Owner, AuthenticationS
 
 	}
     else {
-        throw ENullPointerException();
+        throw CustomExceptions::ENullPointerException();
     }
 }
-
-
-__fastcall TFAuthentication::~TFAuthentication() {
-    logger.flushBuffer();
-}
-
 
 //  event handlers
 void __fastcall TFAuthentication::FrLoginRegisterSelect(TObject *Sender)

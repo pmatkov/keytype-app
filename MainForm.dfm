@@ -4,8 +4,8 @@ object FMain: TFMain
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'KeyType'
-  ClientHeight = 422
-  ClientWidth = 628
+  ClientHeight = 421
+  ClientWidth = 624
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,6 +13,7 @@ object FMain: TFMain
   Font.Name = 'Segoe UI'
   Font.Style = []
   Menu = MainMenu
+  Position = poScreenCenter
   TextHeight = 15
   object MainMenu: TMainMenu
     Left = 33

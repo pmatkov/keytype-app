@@ -9,17 +9,17 @@
 #pragma hdrstop
 
 //---------------------------------------------------------------------------
+USEFORM("PracticeFrame.cpp", FrPractice); /* TFrame: File Type */
 USEFORM("PracticeOptionsForm.cpp", FPractice);
 USEFORM("PreferencesForm.cpp", FPreferences);
 USEFORM("RegisterFrame.cpp", FrRegister); /* TFrame: File Type */
-USEFORM("PracticeFrame.cpp", FrPractice); /* TFrame: File Type */
+USEFORM("LoginFrame.cpp", FrLogin); /* TFrame: File Type */
 USEFORM("MainForm.cpp", FMain);
 USEFORM("MainFrame.cpp", FrMain); /* TFrame: File Type */
 USEFORM("OptionsFrame.cpp", FrOptions); /* TFrame: File Type */
 USEFORM("DataModule.cpp", DataModule1); /* TDataModule: File Type */
 USEFORM("AuthenticationForm.cpp", FAuthentication);
 USEFORM("CustomTextFrame.cpp", FrCustomText); /* TFrame: File Type */
-USEFORM("LoginFrame.cpp", FrLogin); /* TFrame: File Type */
 USEFORM("ExternalSourcesFrame.cpp", FrExternalSources); /* TFrame: File Type */
 USEFORM("GeneratedTextFrame.cpp", FrGeneratedText); /* TFrame: File Type */
 //---------------------------------------------------------------------------
@@ -32,7 +32,6 @@ USEFORM("GeneratedTextFrame.cpp", FrGeneratedText); /* TFrame: File Type */
 #include "MainSession.h"
 #include "AuthenticationService.h"
 #include "DataModule.h"
-#include "ENullPointerException.h"
 
 //---------------------------------------------------------------------------
 int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
@@ -54,28 +53,21 @@ int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 
 		if (FAuthentication->ShowModal() == mrOk) {
 
-        	User user = authService->getUser();
-            AppSettings appSettings(user);
-            TypingSettings typingSettings(user);
+            // pointeri?
+            AppSettings appSettings(authService->getUser());
+            TypingSettings typingSettings(authService->getUser());
 
             std::unique_ptr<MainSession> mainSession = std::make_unique<MainSession>(appSettings, typingSettings);
 
-            //  create main form, options form and preferences forms
+            //  create main form
 			Application->CreateForm(__classid(TFMain), &FMain);
 			FMain->Position = poScreenCenter;
 
-			std::unique_ptr<TFPreferences> FPreferences = std::make_unique<TFPreferences>(nullptr, mainSession.get(), authService.get());
-            FPreferences->Position = poMainFormCenter;
-
-            std::unique_ptr<TFPracticeOptions> FPracticeOptions = std::make_unique<TFPracticeOptions>(nullptr, mainSession.get());
-            FPracticeOptions->Position = poMainFormCenter;
-
-            FMain->setPreferencesForm(FPreferences.get());
-            FMain->setPracticeOptionsForm(FPracticeOptions.get());
             FMain->setMainSession(std::move(mainSession));
             FMain->setAuthenticationService(std::move(authService));
 
 			Application->Run();
+
 		}
 
 	}
@@ -96,6 +88,11 @@ int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
             LOGGER(LogLevel::Fatal, ex.Message);
 		}
 	}
+
+    Logger &logger = Logger::getLogger();
+    logger.flushBuffer();
+    logger.archiveLogFiles(logger.getLogInterval());
+
 	return 0;
 }
 //---------------------------------------------------------------------------

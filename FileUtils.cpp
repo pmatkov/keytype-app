@@ -1,11 +1,13 @@
 //---------------------------------------------------------------------------
+#include <cwctype>
 
 #include "FileUtils.h"
 #include "Logger.h"
-#include <cwctype>
+#include "EDirNotFoundException.h"
+#include "EFileNotFoundException.h"
 
+//#define TEST_GET_FILES
 #define PROJECT_DIR "KeyType"
-#define KB 1024
 
 //---------------------------------------------------------------------------
 #pragma hdrstop
@@ -13,7 +15,7 @@
 
 namespace FileUtils {
 
-    // create absolute file or dir path (relative path starts at <project root>)
+    // convert relative to absolute path (relative path starts at <project root>)
 
     UnicodeString createAbsolutePath(const UnicodeString& relPath, bool isFile) {
 
@@ -55,81 +57,42 @@ namespace FileUtils {
 
     }
 
+    // fetch list of files in a directory
 
-    // get directory contents
+    std::optional<std::vector<UnicodeString>> getFiles(const UnicodeString &path, const UnicodeString &fileType) {
 
-    std::optional<std::vector<UnicodeString>> getFileNames(const UnicodeString &path, const UnicodeString &fileType) {
+        #ifdef TEST_GET_FILES
+        return std::make_optional(std::vector<UnicodeString>{"archive_2024-03-11_02.zip", "archive_2024-03-14_02.zip", "archive_2024-03-10_03.zip"});
+
+        #else
 
         if (TDirectory::Exists(path)) {
 
-            std::vector<UnicodeString> filenames;
-            TSearchRec searchRec;
+                std::vector<UnicodeString> filenames;
+                TSearchRec searchRec;
 
-            if (FindFirst(path + "*." + fileType, faAnyFile, searchRec) == 0) {
+                if (FindFirst(path + "*." + fileType, faAnyFile, searchRec) == 0) {
 
-                do {
-                    UnicodeString filename = searchRec.Name;
+                    do {
+                        UnicodeString filename = searchRec.Name;
 
-                    if (TFile::GetSize(path + filename))
-                        filenames.push_back(filename);
-                    else
-                        continue;
+                        if (TFile::GetSize(path + filename))
+                            filenames.push_back(filename);
+                        else
+                            continue;
 
-                } while (FindNext(searchRec) == 0);
+                    } while (FindNext(searchRec) == 0);
 
-                FindClose(searchRec);
+                    FindClose(searchRec);
 
-                return filenames;
-            }
-        }
-
-        return std::nullopt;
-    }
-
-
-     TJSONObject* readFromJsonFile(const UnicodeString &path) {
-
-        std::unique_ptr<TStreamReader> reader;
-
-        if (ExtractFileExt(path).Compare(".json") == 0 && FileExists(path))  {
-
-            try {
-
-                reader = std::make_unique<TStreamReader>(path, TEncoding::UTF8);
-                UnicodeString jsonString = reader->ReadToEnd();
-
-                TJSONObject *jsonObject = (TJSONObject*) (TJSONObject::ParseJSONValue(jsonString));
-
-                if (jsonObject) {
-                	LOGGER(LogLevel::Debug, "Read from file: " + path);
-                    return jsonObject;
+                    return filenames;
                 }
-
-            } catch (const Exception &ex) {
-                ShowMessage("Error reading from file");
-                LOGGER(LogLevel::Error, "Error reading from file: " + path);
             }
-        }
-
-        return nullptr;
-    }
-
-     void saveToJsonFile(const UnicodeString &path, const UnicodeString &string) {
-
-        std::unique_ptr<TStreamWriter> writer;
-
-        try {
-
-            writer = std::make_unique<TStreamWriter>(path, false, TEncoding::UTF8, 1024);
-            writer->WriteLine(string);
-            LOGGER(LogLevel::Debug, "Saved to file: " + path);
-
-        }
-        catch (const Exception &ex)	{
-            ShowMessage("Error writing to file");
-            LOGGER(LogLevel::Error, "Error writing to file: " + path);
-        }
-
+         else {
+            throw CustomExceptions::EDirNotFoundException();
+         }
+         return std::nullopt;
+         #endif
     }
 
 
@@ -145,13 +108,15 @@ namespace FileUtils {
 
                 reader = std::make_unique<TStreamReader>(path, TEncoding::UTF8);
                 filecontents = reader->ReadToEnd();
-
             }
             catch (const Exception &ex)	{
 
                 ShowMessage("Error reading from file");
                 LOGGER(LogLevel::Error, "Error reading from file: " + path);
             }
+       }
+       else {
+           throw CustomExceptions::EFileNotFoundException();
        }
 
        if (!filecontents.IsEmpty())  {

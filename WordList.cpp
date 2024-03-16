@@ -5,6 +5,8 @@
 #include "WordList.h"
 #include "TextUtils.h"
 #include "FileUtils.h"
+#include "Logger.h"
+#include "EFileNotFoundException.h"
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -25,7 +27,13 @@ void WordList::setWordList(const std::vector<UnicodeString>& _wordList) {
 
 std::optional<std::vector<UnicodeString>> WordList::parseTextToWordList(const UnicodeString &path) {
 
-	std::optional<UnicodeString> wordlist = FileUtils::readFromTextFile(path);
+	std::optional<UnicodeString> wordlist;
+
+    try {
+    	wordlist = FileUtils::readFromTextFile(path);
+    } catch (CustomExceptions::EFileNotFoundException &ex) {
+        LOGGER(LogLevel::Fatal, ex.getMessage());
+    }
 
     if (wordlist.has_value()) {
 

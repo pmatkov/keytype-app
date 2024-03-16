@@ -25,7 +25,7 @@ __fastcall TFrLogin::TFrLogin(TComponent* Owner, AuthenticationService *_authent
     	LOGGER(LogLevel::Debug, "Login frame created");
 	}
     else {
-        throw ENullPointerException();
+        throw CustomExceptions::ENullPointerException();
     }
 }
 
