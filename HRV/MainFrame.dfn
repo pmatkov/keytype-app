@@ -5,8 +5,8 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45360.9856481481</prop>
-        <prop prop-type="OrigDateTime">45347.0512268519</prop>
+        <prop prop-type="SelfDateTime">45376.8045601852</prop>
+        <prop prop-type="OrigDateTime">45368.8866666667</prop>
         <prop prop-type="XlatDateTime">45360.8432638889</prop>
         <prop prop-type="Translated">0</prop>
         <prop prop-type="UnTranslated">4</prop>
@@ -24,12 +24,12 @@
         <prop prop-type="Created">45346.9495852662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TFrMain</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrMain.Width" resname="O:FrMain.Width">
-        <source>640</source>
+        <source>628</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495852662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TFrMain</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrMain.Height" resname="O:FrMain.Height">
-        <source>480</source>
+        <source>422</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495852662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TFrMain</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>

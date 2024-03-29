@@ -3,9 +3,11 @@
 library KeyType;
 
 {ITE} {DFMFileType} {AuthenticationForm.dfm}
+{ITE} {DFMFileType} {ConverterForm.dfm}
 {ITE} {DFMFileType} {CustomTextFrame.dfm}
 {ITE} {DFMFileType} {DataModule.dfm}
 {ITE} {DFMFileType} {ExternalSourcesFrame.dfm}
+{ITE} {DFMFileType} {FlyingWordsFrame.dfm}
 {ITE} {DFMFileType} {GeneratedTextFrame.dfm}
 {ITE} {DFMFileType} {LoginFrame.dfm}
 {ITE} {DFMFileType} {MainForm.dfm}
@@ -18,9 +20,11 @@ library KeyType;
 {ITE} {RCFileType} {Win32\Debug\KeyType_DRC.rc}
 
 {$R 'AuthenticationForm.dfm' 'FAuthentication:TForm'}
+{$R 'ConverterForm.dfm' 'FConverter:TForm'}
 {$R 'CustomTextFrame.dfm' 'FrCustomText:TForm'}
 {$R 'DataModule.dfm' 'DataModule1:TForm'}
 {$R 'ExternalSourcesFrame.dfm' 'FrExternalSources:TForm'}
+{$R 'FlyingWordsFrame.dfm' 'FrFlyingWords:TForm'}
 {$R 'GeneratedTextFrame.dfm' 'FrGeneratedText:TForm'}
 {$R 'LoginFrame.dfm' 'FrLogin:TForm'}
 {$R 'MainForm.dfm' 'FMain:TForm'}

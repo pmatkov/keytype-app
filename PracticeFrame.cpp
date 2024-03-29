@@ -52,8 +52,11 @@ void TFrPractice::setPracticeStatus(SessionStatus status)  {
 
             hideStatsItems();
 
-			RETextBox->Font->Name = mainSession->getTypingSettings().getFontFamily();
+            // fix font change at runtime
+            RETextBox->Font->Name = mainSession->getTypingSettings().getFontFamily();
             RETextBox->Font->Size = mainSession->getTypingSettings().getFontSize();
+
+//            ShowMessage(StrToInt( RETextBox->Font->Size));
 
             if (mainSession->getTypingSettings().getSeparatorType() == SeparatorType::Space) {
             	RETextBox->Text = typingSession->getTextSource().getText().SubString(1, maxChars);
@@ -141,37 +144,37 @@ void __fastcall TFrPractice::FrOptionsBtOptionsClick(TObject *Sender)
 
 				case 0: {
 
-					TRadioGroup* radiogroup = FPracticeOptions->GetFrGeneratedText()->RGGeneratedText;
-
-					if (radiogroup && radiogroup->ItemIndex == 0) {
-
-						UnicodeString letters = "";
-
-						std::vector<TToolButton *> buttons = FPracticeOptions->GetFrGeneratedText()->getButtons();
-
-                        for (int i = 0; i < buttons.size(); i++) {
-                            if (buttons[i] && buttons[i]->Down) {
-                                 letters += UnicodeString(buttons[i]->Caption);
-                            }
-                        }
-
-						bool uppercase = FPracticeOptions->GetFrGeneratedText()->CBCapitalLetters->Checked;
-						bool numbers = FPracticeOptions->GetFrGeneratedText()->CBNumbers->Checked;
-						bool punctuation = FPracticeOptions->GetFrGeneratedText()->CBPunctuation->Checked;
-
-						if (letters.Length() > 0 || numbers || punctuation) {
-
-							 UnicodeString newText = Generator::generateText(letters, uppercase, numbers, punctuation, 128);
-                             typingSession->setTextSource(TextSource(newText));
-
-                             typingSession->setSessionStatus(SessionStatus::Restarted);
-							 setPracticeStatus(SessionStatus::Restarted);
-						}
-					}
-					else {
-
-
-					}
+//					TRadioGroup* radiogroup = FPracticeOptions->GetFrGeneratedText()->RGGeneratedText;
+//
+//					if (radiogroup && radiogroup->ItemIndex == 0) {
+//
+//						UnicodeString letters = "";
+//
+//						std::vector<TToolButton *> buttons = FPracticeOptions->GetFrGeneratedText()->getButtons();
+//
+//                        for (int i = 0; i < buttons.size(); i++) {
+//                            if (buttons[i] && buttons[i]->Down) {
+//                                 letters += UnicodeString(buttons[i]->Caption);
+//                            }
+//                        }
+//
+//						bool uppercase = FPracticeOptions->GetFrGeneratedText()->CBCapitalLetters->Checked;
+//						bool numbers = FPracticeOptions->GetFrGeneratedText()->CBNumbers->Checked;
+//						bool punctuation = FPracticeOptions->GetFrGeneratedText()->CBPunctuation->Checked;
+//
+//						if (letters.Length() > 0 || numbers || punctuation) {
+//
+//							 UnicodeString newText = Generator::generateText(letters, uppercase, numbers, punctuation, 128);
+//                             typingSession->setTextSource(TextSource(newText));
+//
+//                             typingSession->setSessionStatus(SessionStatus::Restarted);
+//							 setPracticeStatus(SessionStatus::Restarted);
+//						}
+//					}
+//					else {
+//
+//
+//					}
                 }
 			default:
 				;

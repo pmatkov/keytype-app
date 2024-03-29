@@ -1,12 +1,17 @@
 //---------------------------------------------------------------------------
 #include "TextSource.h"
+#include "TextUtils.h"
 //---------------------------------------------------------------------------
 #pragma hdrstop
 #pragma package(smart_init)
 
 TextSource::TextSource() {}
 
-TextSource::TextSource(UnicodeString _text) : text(_text) {}
+TextSource::TextSource(UnicodeString _text) : text(_text) {
+
+    wordCount = TextUtils::countWords(text);
+    charCount = text.Length();
+}
 
 const UnicodeString& TextSource::getText() const {
 	return text;
@@ -14,6 +19,20 @@ const UnicodeString& TextSource::getText() const {
 
 UnicodeString& TextSource::getText() {
 	return text;
+}
+
+void TextSource::setText(const UnicodeString& _text) {
+    text = _text;
+    wordCount = TextUtils::countWords(text);
+    charCount = text.Length();
+}
+
+int TextSource::getWordCount() const {
+	return wordCount;
+}
+
+int TextSource::getCharCount() const {
+	return charCount;
 }
 
 const UnicodeString& TextSource::getCurrentWord() const {

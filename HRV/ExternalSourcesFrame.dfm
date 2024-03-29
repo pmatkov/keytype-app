@@ -1,32 +1,32 @@
 object FrExternalSources: TFrExternalSources
   Left = 0
   Top = 0
-  Width = 538
-  Height = 403
+  Width = 504
+  Height = 360
   TabOrder = 0
   object LAuthor: TLabel
-    Left = 163
+    Left = 148
     Top = 207
     Width = 40
     Height = 15
     Caption = 'Autor:'
   end
   object LTitle: TLabel
-    Left = 283
+    Left = 271
     Top = 207
     Width = 25
     Height = 15
     Caption = 'Naslov:'
   end
   object LYear: TLabel
-    Left = 403
+    Left = 394
     Top = 207
     Width = 25
     Height = 15
     Caption = 'Godina:'
   end
   object LParagraph: TLabel
-    Left = 163
+    Left = 148
     Top = 260
     Width = 57
     Height = 15
@@ -35,7 +35,7 @@ object FrExternalSources: TFrExternalSources
   object TVLiteratureCategories: TTreeView
     Left = 3
     Top = 3
-    Width = 148
+    Width = 136
     Height = 337
     HideSelection = False
     Indent = 19
@@ -58,7 +58,7 @@ object FrExternalSources: TFrExternalSources
       0073006F00700068007900}
   end
   object LVLiteratureDetails: TListView
-    Left = 160
+    Left = 145
     Top = 8
     Width = 351
     Height = 94
@@ -84,8 +84,8 @@ object FrExternalSources: TFrExternalSources
     OnSelectItem = LVLiteratureDetailsSelectItem
   end
   object MParagraph: TMemo
-    Left = 163
-    Top = 109
+    Left = 145
+    Top = 106
     Width = 351
     Height = 84
     Lines.Strings = (
@@ -95,35 +95,35 @@ object FrExternalSources: TFrExternalSources
     TabOrder = 2
   end
   object EAuthor: TEdit
-    Left = 160
+    Left = 145
     Top = 232
     Width = 108
     Height = 23
     TabOrder = 3
   end
   object ETitle: TEdit
-    Left = 283
+    Left = 265
     Top = 228
     Width = 111
     Height = 23
     TabOrder = 4
   end
   object EYear: TEdit
-    Left = 406
+    Left = 388
     Top = 228
     Width = 108
     Height = 23
     TabOrder = 5
   end
   object EParagraph: TEdit
-    Left = 163
+    Left = 145
     Top = 281
     Width = 351
     Height = 23
     TabOrder = 6
   end
   object BtDelete2: TButton
-    Left = 387
+    Left = 364
     Top = 317
     Width = 58
     Height = 23
@@ -133,7 +133,7 @@ object FrExternalSources: TFrExternalSources
     OnClick = BtDelete2Click
   end
   object BtAddSave2: TButton
-    Left = 456
+    Left = 438
     Top = 317
     Width = 58
     Height = 23

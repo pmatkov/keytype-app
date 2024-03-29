@@ -15,10 +15,9 @@ namespace FileUtils {
     UnicodeString createAbsolutePath(const UnicodeString& filename, bool isfile);
     UnicodeString traverseUpDirTree(const UnicodeString& path, int level);
 
-    std::optional<std::vector<UnicodeString>> getFiles(const UnicodeString &path, const UnicodeString &fileType);
+    std::optional<std::vector<UnicodeString>> getFileNames(const UnicodeString &path, const UnicodeString &fileType);
 
     std::optional<UnicodeString> readFromTextFile(const UnicodeString &path);
     void saveToTextFile(const UnicodeString &path, const std::vector<UnicodeString> &list);
-
 };
 #endif

@@ -9,19 +9,21 @@
 #pragma hdrstop
 
 //---------------------------------------------------------------------------
-USEFORM("PracticeFrame.cpp", FrPractice); /* TFrame: File Type */
-USEFORM("PracticeOptionsForm.cpp", FPractice);
-USEFORM("PreferencesForm.cpp", FPreferences);
-USEFORM("RegisterFrame.cpp", FrRegister); /* TFrame: File Type */
-USEFORM("LoginFrame.cpp", FrLogin); /* TFrame: File Type */
-USEFORM("MainForm.cpp", FMain);
-USEFORM("MainFrame.cpp", FrMain); /* TFrame: File Type */
 USEFORM("OptionsFrame.cpp", FrOptions); /* TFrame: File Type */
+USEFORM("PreferencesForm.cpp", FPreferences);
+USEFORM("PracticeOptionsForm.cpp", FPractice);
+USEFORM("PracticeFrame.cpp", FrPractice); /* TFrame: File Type */
+USEFORM("MainFrame.cpp", FrMain); /* TFrame: File Type */
+USEFORM("MainForm.cpp", FMain);
+USEFORM("LoginFrame.cpp", FrLogin); /* TFrame: File Type */
+USEFORM("RegisterFrame.cpp", FrRegister); /* TFrame: File Type */
 USEFORM("DataModule.cpp", DataModule1); /* TDataModule: File Type */
 USEFORM("AuthenticationForm.cpp", FAuthentication);
 USEFORM("CustomTextFrame.cpp", FrCustomText); /* TFrame: File Type */
-USEFORM("ExternalSourcesFrame.cpp", FrExternalSources); /* TFrame: File Type */
+USEFORM("ConverterForm.cpp", FConverter);
 USEFORM("GeneratedTextFrame.cpp", FrGeneratedText); /* TFrame: File Type */
+USEFORM("ExternalSourcesFrame.cpp", FrExternalSources); /* TFrame: File Type */
+USEFORM("FlyingWordsFrame.cpp", FrFlyingWords); /* TFrame: File Type */
 //---------------------------------------------------------------------------
 #include "MainForm.h"
 #include "PracticeOptionsForm.h"
@@ -32,6 +34,7 @@ USEFORM("GeneratedTextFrame.cpp", FrGeneratedText); /* TFrame: File Type */
 #include "MainSession.h"
 #include "AuthenticationService.h"
 #include "DataModule.h"
+#include "Dictionary.h"
 
 //---------------------------------------------------------------------------
 int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
@@ -57,19 +60,20 @@ int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
             AppSettings appSettings(authService->getUser());
             TypingSettings typingSettings(authService->getUser());
 
+//           std::unique_ptr<AppSettings> appSettings = std::make_unique<AppSettings>();
+//           std::unique_ptr<TypingSettings> typingSettings = std::make_unique<TypingSettings>();
+
             std::unique_ptr<MainSession> mainSession = std::make_unique<MainSession>(appSettings, typingSettings);
 
             //  create main form
 			Application->CreateForm(__classid(TFMain), &FMain);
-			FMain->Position = poScreenCenter;
+		FMain->Position = poScreenCenter;
 
             FMain->setMainSession(std::move(mainSession));
             FMain->setAuthenticationService(std::move(authService));
 
 			Application->Run();
-
 		}
-
 	}
 	catch (Exception &ex)
 	{

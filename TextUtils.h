@@ -29,6 +29,7 @@ namespace TextUtils
 
     UnicodeString formatJson(const UnicodeString& string);
     TJSONObject* convertToJSONObject(const UnicodeString &string);
+
 };
 //---------------------------------------------------------------------------
 #endif

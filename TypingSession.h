@@ -26,8 +26,8 @@ class TypingSession : public Session {
 
         std::map<wchar_t, KeyStatistics> keyStatistics;
 
-        int totalWords = 0;
-        int totalChars = 0;
+//        int totalWords = 0;
+//        int totalChars = 0;
 
         int typedWords = 0;
 		int mistakes = 0;
@@ -42,11 +42,11 @@ class TypingSession : public Session {
 
 		void increaseCharIndex();
 		void decreaseCharIndex();
-
-        int getTotalWords() const;
-		int getTotalChars() const;
-		void setTotalChars(int _totalChars);
-		void incTotalChars();
+//
+//        int getTotalWords() const;
+//		int getTotalChars() const;
+//		void setTotalChars(int _totalChars);
+//		void incTotalChars();
 
         void increaseTypedWords();
 

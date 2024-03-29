@@ -1,14 +1,15 @@
 object FrPractice: TFrPractice
   Left = 0
   Top = 0
-  Width = 640
-  Height = 480
+  Width = 628
+  Height = 422
   TabOrder = 0
   object LStart: TLabel
-    Left = 172
+    Left = 130
     Top = 243
-    Width = 4
+    Width = 288
     Height = 17
+    AutoSize = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -17,46 +18,49 @@ object FrPractice: TFrPractice
     ParentFont = False
   end
   object LTime: TLabel
-    Left = 110
+    Left = 95
     Top = 68
     Width = 29
     Height = 15
     Caption = 'Time:'
   end
   object LDisplayTime: TLabel
-    Left = 145
+    Left = 130
     Top = 68
-    Width = 3
+    Width = 50
     Height = 15
+    AutoSize = False
   end
   object LSpeed: TLabel
-    Left = 240
+    Left = 225
     Top = 68
     Width = 35
     Height = 15
     Caption = 'Speed:'
   end
   object LDisplaySpeed: TLabel
-    Left = 281
+    Left = 266
     Top = 68
-    Width = 3
+    Width = 50
     Height = 15
+    AutoSize = False
   end
   object LAccuracy: TLabel
-    Left = 354
+    Left = 339
     Top = 68
     Width = 52
     Height = 15
     Caption = 'Accuracy:'
   end
   object LDisplayAccuracy: TLabel
-    Left = 412
+    Left = 397
     Top = 68
-    Width = 3
+    Width = 50
     Height = 15
+    AutoSize = False
   end
   object RETextBox: TRichEdit
-    Left = 110
+    Left = 95
     Top = 140
     Width = 360
     Height = 65
@@ -72,14 +76,14 @@ object FrPractice: TFrPractice
     TabOrder = 0
   end
   inline FrOptions: TFrOptions
-    Left = 505
+    Left = 490
     Top = 140
     Width = 102
     Height = 168
     DoubleBuffered = False
     ParentDoubleBuffered = False
     TabOrder = 1
-    ExplicitLeft = 505
+    ExplicitLeft = 490
     ExplicitTop = 140
     inherited BtOptions: TButton
       OnClick = FrOptionsBtOptionsClick
@@ -230,7 +234,7 @@ object FrPractice: TFrPractice
   object Timer1: TTimer
     Enabled = False
     OnTimer = Timer1Timer
-    Left = 537
-    Top = 387
+    Left = 531
+    Top = 348
   end
 end

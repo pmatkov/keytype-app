@@ -1,190 +1,151 @@
 object FrGeneratedText: TFrGeneratedText
   Left = 0
   Top = 0
-  Width = 613
-  Height = 480
+  Width = 504
+  Height = 360
   TabOrder = 0
-  object RGGeneratedText: TRadioGroup
-    Left = 0
-    Top = 0
-    Width = 511
-    Height = 41
-    Columns = 2
-    ItemIndex = 0
-    Items.Strings = (
-      'Znakovi'
-      'Rije'#269'i')
-    TabOrder = 0
-    TabStop = True
-    OnClick = RGGeneratedTextClick
-  end
-  object GBCharacters: TGroupBox
-    Left = 0
-    Top = 56
-    Width = 250
-    Height = 314
-    TabOrder = 1
-    object BvCharSource: TBevel
-      Left = 11
-      Top = 104
-      Width = 227
-      Height = 2
-      Shape = bsBottomLine
-    end
-    object TBLetters: TToolBar
-      Left = 6
-      Top = 12
-      Width = 238
-      Height = 80
-      Align = alNone
-      Caption = 'TBLetters'
-      ShowCaptions = True
-      TabOrder = 0
-    end
-    object CBSelectAll: TCheckBox
-      Left = 8
-      Top = 120
-      Width = 104
-      Height = 17
-      Caption = 'Odaberi sve'
-      TabOrder = 1
-      OnClick = CBSelectAllClick
-    end
-    object CBNumbers: TCheckBox
-      Left = 8
-      Top = 152
-      Width = 97
-      Height = 17
-      Caption = 'Brojevi'
-      TabOrder = 2
-    end
-    object CBPunctuation: TCheckBox
-      Left = 138
-      Top = 149
-      Width = 97
-      Height = 17
-      Caption = 'Interpunkcija'
-      TabOrder = 4
-    end
-    object CBCapitalLetters: TCheckBox
-      Left = 138
-      Top = 120
-      Width = 97
-      Height = 17
-      Caption = 'Velika slova'
-      TabOrder = 3
-    end
-  end
   object GBWords: TGroupBox
-    Left = 264
-    Top = 47
-    Width = 250
-    Height = 314
-    TabOrder = 2
-    object LWordList: TLabel
-      Left = 12
-      Top = 12
-      Width = 50
+    Left = 3
+    Top = 3
+    Width = 489
+    Height = 348
+    TabOrder = 0
+    object LDictionary: TLabel
+      Left = 15
+      Top = 15
+      Width = 76
       Height = 15
-      Caption = 'Lista rije'#269'i:'
+      Caption = 'Rje'#269'nik:'
     end
     object LDefinition: TLabel
       Left = 12
-      Top = 196
+      Top = 237
       Width = 55
       Height = 15
       Caption = 'Definicija:'
     end
     object LSynonym: TLabel
       Left = 12
-      Top = 225
+      Top = 268
       Width = 58
       Height = 15
       Caption = 'Sinonimi:'
     end
     object LCategory: TLabel
-      Left = 13
-      Top = 166
+      Left = 12
+      Top = 202
       Width = 51
       Height = 15
       Caption = 'Kategorija:'
     end
     object LWord: TLabel
-      Left = 12
-      Top = 137
+      Left = 15
+      Top = 170
       Width = 32
       Height = 15
       Caption = 'Riije'#269':'
     end
     object LInfo: TLabel
-      Left = 12
-      Top = 285
-      Width = 3
+      Left = 15
+      Top = 314
+      Width = 65
       Height = 15
+      AutoSize = False
+    end
+    object LWordsMin: TLabel
+      Left = 270
+      Top = 170
+      Width = 61
+      Height = 15
+      Caption = 'Rije'#269'i min:'
+    end
+    object LWordsMax: TLabel
+      Left = 397
+      Top = 170
+      Width = 26
+      Height = 15
+      Caption = 'max:'
     end
     object BtBrowse: TButton
-      Left = 166
-      Top = 8
+      Left = 235
+      Top = 11
       Width = 71
       Height = 25
       Caption = 'Pretra'#382'i:'
       TabOrder = 0
       OnClick = BtBrowseClick
     end
-    object CBTextFiles: TComboBox
-      Left = 68
-      Top = 9
-      Width = 92
+    object CBDictionaryFiles: TComboBox
+      Left = 102
+      Top = 12
+      Width = 121
       Height = 23
       Style = csDropDownList
       TabOrder = 1
-      OnChange = CBTextFilesChange
+      OnChange = CBDictionaryFilesChange
     end
-    object LVWords: TListView
+    object LVDictionary: TListView
       Left = 12
-      Top = 38
-      Width = 225
-      Height = 90
-      Columns = <>
+      Top = 45
+      Width = 466
+      Height = 106
+      Columns = <
+        item
+          Caption = 'Rije'#269
+          Width = 80
+        end
+        item
+          Caption = 'Category'
+          Width = 100
+        end
+        item
+          Caption = 'Definition'
+          Width = 160
+        end
+        item
+          Caption = 'Sinonimi'
+          Width = 120
+        end>
       MultiSelect = True
       ReadOnly = True
+      RowSelect = True
       TabOrder = 2
-      ViewStyle = vsList
-      OnMouseDown = LVWordsMouseDown
-      OnSelectItem = LVWordsSelectItem
+      ViewStyle = vsReport
+      OnMouseDown = LVDictionaryMouseDown
+      OnSelectItem = LVDictionarySelectItem
     end
     object EWord: TEdit
-      Left = 88
-      Top = 134
-      Width = 149
+      Left = 90
+      Top = 167
+      Width = 133
       Height = 23
       TabOrder = 3
     end
     object EDefinition: TEdit
-      Left = 88
-      Top = 192
-      Width = 149
+      Left = 90
+      Top = 234
+      Width = 133
       Height = 23
       TabOrder = 4
     end
     object ESynonyms: TEdit
-      Left = 88
-      Top = 221
-      Width = 149
+      Left = 90
+      Top = 265
+      Width = 133
       Height = 23
       TabOrder = 5
     end
     object CBCategory: TComboBox
-      Left = 88
-      Top = 163
-      Width = 149
+      Left = 90
+      Top = 199
+      Width = 133
       Height = 23
       Style = csDropDownList
       TabOrder = 6
     end
     object BtAddSave1: TButton
-      Left = 180
-      Top = 280
+      Left = 166
+      Top = 311
       Width = 57
       Height = 23
       Caption = 'Dodaj'
@@ -192,8 +153,8 @@ object FrGeneratedText: TFrGeneratedText
       OnClick = BtAddSave1Click
     end
     object BtDelete1: TButton
-      Left = 104
-      Top = 280
+      Left = 90
+      Top = 311
       Width = 56
       Height = 23
       Caption = 'Obri'#353'i'
@@ -201,17 +162,87 @@ object FrGeneratedText: TFrGeneratedText
       TabOrder = 8
       OnClick = BtDelete1Click
     end
+    object CBWordsMin: TComboBox
+      Left = 337
+      Top = 167
+      Width = 45
+      Height = 23
+      Style = csDropDownList
+      TabOrder = 9
+    end
+    object CBWordsMax: TComboBox
+      Left = 433
+      Top = 167
+      Width = 45
+      Height = 23
+      Style = csDropDownList
+      TabOrder = 10
+    end
+    object CBNumbers: TCheckBox
+      Left = 270
+      Top = 202
+      Width = 88
+      Height = 17
+      BiDiMode = bdRightToLeft
+      Caption = 'Brojevi'
+      ParentBiDiMode = False
+      TabOrder = 11
+    end
+    object CBPunctuation: TCheckBox
+      Left = 367
+      Top = 202
+      Width = 111
+      Height = 17
+      BiDiMode = bdRightToLeft
+      Caption = 'Interpunkcija'
+      ParentBiDiMode = False
+      TabOrder = 12
+    end
+    object MPreview: TMemo
+      Left = 270
+      Top = 231
+      Width = 208
+      Height = 52
+      Lines.Strings = (
+        '')
+      TabOrder = 13
+    end
+    object BtTest: TButton
+      Left = 403
+      Top = 310
+      Width = 75
+      Height = 25
+      Caption = 'Test'
+      TabOrder = 14
+    end
+    object BtTestThreads: TButton
+      Left = 316
+      Top = 310
+      Width = 75
+      Height = 25
+      Caption = 'Test [T]'
+      TabOrder = 15
+    end
+    object BtConvert: TButton
+      Left = 403
+      Top = 11
+      Width = 75
+      Height = 25
+      Caption = 'Konverter'
+      TabOrder = 16
+      OnClick = BtConvertClick
+    end
   end
   object DFileOpen: TOpenTextFileDialog
     Filter = '284'
-    Left = 336
-    Top = 113
+    Left = 243
+    Top = 302
   end
   object msgDisplayTimer: TTimer
     Enabled = False
     Interval = 3000
     OnTimer = msgDisplayTimerTimer
-    Left = 192
-    Top = 284
+    Left = 246
+    Top = 215
   end
 end

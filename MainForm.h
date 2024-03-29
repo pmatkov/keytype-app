@@ -41,6 +41,8 @@ __published:	// IDE-managed Components
 	TMenuItem *MenuSubitemPracticeNew;
 	TMenuItem *MenuItemSettings;
 	TMenuItem *MenuSubitemPreferences;
+	TMenuItem *Games1;
+	TMenuItem *Flyingwords1;
 	void __fastcall MenuSubitemPracticeNewClick(TObject *Sender);
 	void __fastcall MenuSubitemPreferencesClick(TObject *Sender);
 

@@ -1,107 +1,117 @@
 //---------------------------------------------------------------------------
-
-
-#include<cstdlib>
 #include "Generator.h"
+#include "Random.h"
 #include <cwctype>
 
 //---------------------------------------------------------------------------
 #pragma hdrstop
 #pragma package(smart_init)
 
-bool Generator::seedInitialized = false;
 
-void Generator::InitializeRandomSeed() {
+GeneratorOptions::GeneratorOptions(bool _useNumbers, bool _useUppercase,  bool _usePunctuation, int _min, int _max) : useNumbers(_useNumbers), useUppercase(_useUppercase), \
+usePunctuation(_usePunctuation), min(_min), max(_max) {}
 
-        if (!seedInitialized) {
-            srand(static_cast<unsigned>(time(nullptr)));
-            seedInitialized = true;
+bool GeneratorOptions::getUseNumbers() const {
+     return useNumbers;
+}
+bool GeneratorOptions::getUseUppercase() const {
+    return useUppercase;
+}
+bool GeneratorOptions::getUsePunctuation() const {
+     return usePunctuation;
+}
+int GeneratorOptions::getMin() const {
+     return min;
+}
+int GeneratorOptions::getMax() const  {
+     return max;
+}
+
+
+namespace Generator {
+
+
+    UnicodeString generateChars(UnicodeString letters, int maxChars) {
+
+        UnicodeString text = "";
+
+        for (int i = 0; i < maxChars; i++) {
+            text += letters[Random::getRandom(1, letters.Length())];
         }
-	}
+  	    return text;
+    }
 
-UnicodeString Generator::generateText(UnicodeString letters, bool useUppercase, bool useNumbers, bool usePunctuation, int maxChars) {
+    UnicodeString generateText(UnicodeString letters, GeneratorOptions options) {
 
-		int charCount = 0;
-		UnicodeString text;
+        int maxWords = Random::getRandom(options.getMin(), options.getMax());
+        UnicodeString text = "";
 
-		while (charCount < maxChars) {
+         for (int i = 0; i < maxWords; i++) {
+            text += generateWord(letters, options);
+            if (i < maxWords - 1) {
+               text += " ";
+            }
+        }
 
-			UnicodeString word = generateWord(letters, useUppercase, useNumbers, usePunctuation) + ' ';
+        return text;
+    }
 
-			charCount += word.Length();
-			text += word;
-		}
+    UnicodeString generateWord(UnicodeString letters, GeneratorOptions options) {
 
-		text.Delete(text.Length(), 1);
+        UnicodeString numbers = "0123456789";
+        UnicodeString punctuation = "!?/\\\"#$%&*=+',.:;-<>@^_()[]{}|";
+        UnicodeString characters = "";
 
-		return text;
+        if (letters.Length() || options.getUseNumbers() || options.getUsePunctuation()) {
 
+            UnicodeString word;
+            int wordLength = Random::getRandom(3, 12);
+
+            for (int i = 0; i < wordLength; i++) {
+
+                if (letters.Length()) {
+                    characters += letters;
+                }
+                if (options.getUseNumbers()) {
+                    numbers = shuffleChars(numbers);
+                    characters += numbers.SubString(1, letters.Length() || options.getUsePunctuation() ? 0.3 * numbers.Length() : numbers.Length());
+                }
+                if (options.getUsePunctuation()) {
+                    numbers = shuffleChars(characters);
+                    characters += punctuation.SubString(1, letters.Length() || options.getUseNumbers() ? 0.2 * punctuation.Length() : punctuation.Length());
+                }
+
+                characters = shuffleChars(characters);
+                int index = Random::getRandom(1, characters.Length());
+
+                if (options.getUseUppercase() && Random::getRandom(0, 10) < 1) {
+                    word += characters[index];
+                }
+                else {
+                    word += towlower(characters[index]);
+                }
+            }
+
+            return word;
+        }
+
+        else
+            return L"";
+    }
+
+    UnicodeString shuffleChars(UnicodeString input) {
+
+        int len = input.Length();
+
+        for (int i = 1; i < len; i++) {
+
+            int j = i + Random::getRandom(0, len - i);
+
+            std::swap(input[i], input[j]);
+        }
+
+        return input;
+    }
 }
 
-UnicodeString Generator::generateWord(UnicodeString letters, bool useUppercase, bool useNumbers, bool usePunctuation) {
 
-		UnicodeString numbers = "0123456789";
-		UnicodeString punctuation = "!?/\\\"#$%&*=+',.:;-<>@^_()[]{}|";
-		UnicodeString characters = "";
-
-		const int MIN_CHARS = 1;
-		const int MAX_CHARS = 12;
-
-		if (letters.Length() || useNumbers || usePunctuation) {
-
-			UnicodeString word;
-			int wordLength = getRandomInt(MIN_CHARS, MAX_CHARS);
-
-			for (int i = 0; i < wordLength; i++) {
-
-				if (letters.Length()) {
-					characters += letters;
-				}
-				if (useNumbers) {
-					numbers = shuffleChars(numbers);
-					characters += numbers.SubString(1, letters.Length() || usePunctuation ? 0.3 * numbers.Length() : numbers.Length());
-				}
-				if (usePunctuation) {
-					numbers = shuffleChars(characters);
-					characters += punctuation.SubString(1, letters.Length() || useNumbers ? 0.2 * punctuation.Length() : punctuation.Length());
-				}
-
-				characters = shuffleChars(characters);
-				int index = getRandomInt(1, characters.Length());
-
-				if (useUppercase && getRandomInt(0, 10) < 1) {
-					word += characters[index];
-				}
-				else {
-					word += towlower(characters[index]);
-				}
-			}
-
-			return word;
-		}
-
-		else
-			return L"";
-}
-
-
-int Generator::getRandomInt(int minRange, int maxRange) {
-
-	InitializeRandomSeed();
-
-	return rand() % (maxRange + 1 - minRange) + minRange;
-}
-
-UnicodeString Generator::shuffleChars(UnicodeString input) {
-
-	int len = input.Length();
-
-	for (int i = 1; i < len; i++) {
-
-		int j = i + getRandomInt(0, len - i);
-
-		std::swap(input[i], input[j]);
-	}
-
-	return input;
-}

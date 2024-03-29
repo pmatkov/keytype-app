@@ -10,8 +10,8 @@
 
 TypingSession::TypingSession() {
 
-    totalWords = TextUtils::countWords(textSource.getText());
-    totalChars = textSource.getText().Length();
+//    totalWords = TextUtils::countWords(textSource.getText());
+//    totalChars = textSource.getText().Length();
 
 	LOGGER(LogLevel::Debug, "Practice session created");
 }
@@ -31,21 +31,14 @@ void TypingSession::decreaseCharIndex() {
 	 textSource.decreaseCharIndex();
 }
 
-int TypingSession::getTotalWords() const {
-	return totalWords;
-}
+//int TypingSession::getWordCount() const {
+//	return textSource.getWordCount();
+//}
+//
+//int TypingSession::getTotalChars() const {
+//	return texttotalChars;
+//}
 
-int TypingSession::getTotalChars() const {
-	return totalChars;
-}
-
-void TypingSession::setTotalChars(int _totalChars) {
-	totalChars = _totalChars;
-}
-
-void TypingSession::incTotalChars() {
-	totalChars++;
-}
 
 void TypingSession::increaseTypedWords() {
   typedWords++;
@@ -81,10 +74,10 @@ double TypingSession::getAccuracy() const {
 
 double TypingSession::calculateAccuracy() const {
 
-    if (!totalChars) {
+    if (!textSource.getCharCount()) {
         return 100;
     }
-    return ((double)(totalChars - mistakes) / totalChars) * 100.0;
+    return ((double)(textSource.getCharCount() - mistakes) / textSource.getCharCount()) * 100.0;
 }
 
 const SessionStatus& TypingSession::getSessionStatus() const {

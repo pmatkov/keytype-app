@@ -2,9 +2,11 @@
 
 #include "UIUtils.h"
 #include "TextUtils.h"
+#include "FileUtils.h"
 #include "Generator.h"
 #include "Logger.h"
 #include "reinit.hpp"
+#include "EFileNotFoundException.h"
 
 #pragma hdrstop
 
@@ -22,6 +24,8 @@ class TInterposerControl : public TControl
 };
 
 namespace UIUtils {
+
+    // RichEdit style
 
     void setCharStyle(TRichEdit* richedit, int charIndex, TFontStyle style, bool enabled) {
 
@@ -103,22 +107,8 @@ namespace UIUtils {
         richedit->SelAttributes->Color = textColor;
     }
 
-     std::vector<UnicodeString> getScreenFonts() {
 
-        std::vector<UnicodeString> list;
-
-        for (int i = 0; i < Screen->Fonts->Count; i++) {
-
-            if (Screen->Fonts->Strings[i].SubString1(1, 2).Compare("Ar") >= 0 && Screen->Fonts->Strings[i].SubString1(1, 2).Compare("Vi") <= 0) {
-
-                list.push_back(Screen->Fonts->Strings[i]);
-            }
-        }
-        return list;
-    }
-
-
-    // determine max chars for RichEdit control
+   // determine max chars for RichEdit control
 
     int countMaxChars(TRichEdit *RETextBox, const UnicodeString &string) {
 
@@ -139,7 +129,6 @@ namespace UIUtils {
             for (int i = 0; i < RETextBox->ClientHeight/ textHeight; i++) {
 
                 oversized = false;
-//                                while ((float)(RETextBox->ClientWidth/ textWidth) < 1.0f || ((float)(RETextBox->ClientWidth/ textWidth) >= 1.0f && TextUtils::isWordBreak(string, cpString.Length()-1)))
 
                 while ((float)(RETextBox->ClientWidth/ textWidth) < 1.0f || ((float)(RETextBox->ClientWidth/ textWidth) >= 1.0f && TextUtils::isWordBreak(string, cpString.Length()))) {
                     oversized = true;
@@ -184,7 +173,7 @@ namespace UIUtils {
         int finalEstimate[3];
 
         for (int i = 0; i < 3; i++) {
-            UnicodeString generatedText = Generator::generateText("abcdefghijklmnopqrstuvwxyz", true, false, false, initialEstimate * 2);
+            UnicodeString generatedText = Generator::generateChars("abcdefghijklmnopqrstuvwxyz", initialEstimate * 2);
 
             int textWidth = canvas->TextWidth(generatedText);
             int textHeight = canvas->TextHeight(generatedText);
@@ -200,6 +189,8 @@ namespace UIUtils {
         return finalEstimate[1];
 
     }
+
+   // child controls
 
     void enableChildControls(TWinControl* parent)
     {
@@ -225,7 +216,7 @@ namespace UIUtils {
     }
 
 
-    // change font family for child controls
+    // font family for child controls
 
     void changeFontFamily(TWinControl *Control, const UnicodeString fontFamily) {
 
@@ -242,7 +233,37 @@ namespace UIUtils {
     }
 
 
-    void setComboBoxItems(TComboBox *comboBox, const std::vector<UnicodeString> &items, int defaultIndex) {
+    // Fonts
+
+     std::vector<UnicodeString> getScreenFonts() {
+
+        std::vector<UnicodeString> list;
+
+        for (int i = 0; i < Screen->Fonts->Count; i++) {
+
+            if (Screen->Fonts->Strings[i].SubString1(1, 2).Compare("Ar") >= 0 && Screen->Fonts->Strings[i].SubString1(1, 2).Compare("Vi") <= 0) {
+
+                list.push_back(Screen->Fonts->Strings[i]);
+            }
+        }
+        return list;
+    }
+
+    // ComboBox
+
+    void addComboBoxItem(TComboBox *comboBox, const UnicodeString &item, int selectedIndex) {
+
+        comboBox->Items->Clear();
+        comboBox->Items->Add(item);
+        comboBox->ItemIndex = selectedIndex;
+    }
+
+    void selectComboBoxItem(TComboBox *comboBox, int selectedIndex) {
+
+        comboBox->ItemIndex = selectedIndex;
+    }
+
+    void setComboBoxItems(TComboBox *comboBox, const std::vector<UnicodeString> &items, int selectedIndex) {
 
         comboBox->Items->Clear();
 
@@ -250,7 +271,7 @@ namespace UIUtils {
             comboBox->Items->Add(item);
         }
 
-        comboBox->ItemIndex = defaultIndex;
+        comboBox->ItemIndex = selectedIndex;
     }
 
     void setComboBoxItems(TComboBox *comboBox, const std::vector<UnicodeString> &items, const UnicodeString &selectedItem) {
@@ -271,22 +292,55 @@ namespace UIUtils {
         comboBox->ItemIndex = index;
     }
 
-    void changeComboBoxSelection(TComboBox *comboBox, const std::vector<UnicodeString> &items, int defaultIndex) {
 
-        comboBox->Items->Clear();
+    // ListView items
+
+    void setListViewItems(TListView *listview, const std::vector<UnicodeString> &items) {
+
+        listview->Items->Clear();
+        listview->Items->BeginUpdate();
 
         for (const UnicodeString &item : items) {
-            comboBox->Items->Add(item);
-        }
 
-        comboBox->ItemIndex = defaultIndex;
+            TListItem *listItem = listview->Items->Add();
+            listItem->Caption = item;
+        }
+        listview->Items->EndUpdate();
+	}
+
+    void setListViewItems(TListView *listview, const std::vector<UnicodeString> &items, int index) {
+
+        listview->Items->Clear();
+        listview->Items->BeginUpdate();
+
+        for (int i = 0; i < items.size(); i += index) {
+
+        	TListItem* listItem = listview->Items->Add();
+            listItem->Caption = items[i];
+            for (int j = i + 1; j < i + index; j++) {
+
+                if (items[j] == "Unknown") {
+                     continue;
+                }
+                listItem->SubItems->Add(items[j]);
+            }
+        }
+        listview->Items->EndUpdate();
+	}
+
+
+    // Edit
+
+    void setEditText(TEdit *edit, const UnicodeString &text) {
+
+        edit->Text = text;
     }
 
 
-    int findItemIndex(const std::vector<UnicodeString> &items, const UnicodeString &selectedItem) {
+    int findItemIndex(const std::vector<UnicodeString> &items, const UnicodeString &itemToSearch) {
           for (int i= 0; i < items.size(); i++) {
 
-            if (items[i].LowerCase() == selectedItem.LowerCase()) {
+            if (items[i].LowerCase() == itemToSearch.LowerCase()) {
 
              return i;
 
@@ -294,6 +348,9 @@ namespace UIUtils {
         }
         return -1;
     }
+
+
+    // language
 
     void changeLanguage(Language language) {
 
@@ -313,5 +370,22 @@ namespace UIUtils {
          }
     }
 
+    void setFileDialogProperties(TOpenTextFileDialog *FileDialog, const UnicodeString &dir, const UnicodeString &filter) {
+
+        FileDialog->InitialDir = FileUtils::createAbsolutePath(dir, false);
+        FileDialog->Filter = "Text files|*." + filter.UpperCase();
+    }
+
+
+    void displayTimedMessage(TTimer *timer, TLabel *label, const UnicodeString &msg) {
+    	label->Font->Color = clBlue;
+        label->Caption = msg;
+        timer->Enabled = true;
+    }
+
+    void removeTimedMessage(TTimer *timer, TLabel *label) {
+        label->Caption = "";
+        timer->Enabled = false;
+    }
 }
 

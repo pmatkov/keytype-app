@@ -9,25 +9,44 @@
 #include <vcl.h>
 #include <map>
 
-#include "LanguageProfile.h"
-#include "DcWord.h"
+#include "DictionaryEntry.h"
+#include "IDisplay.h"
 
 //---------------------------------------------------------------------------
 
 class Dictionary {
 
 	private:
-		std::map<UnicodeString, DcWord> dictionary;
-		LanguageProfile language;
-		int wordCount;
+        IDisplay &uiDisplay;
+		std::map<UnicodeString, DictionaryEntry> dictionary;
+
+        UnicodeString dictionaryFileName;
+
+        std::optional<DictionaryEntry> internalGetDictionaryEntry(const UnicodeString &word);
+        void internalSetDictionaryEntry(UnicodeString key, DictionaryEntry value);
+        void internalDeleteDictionaryEntry(const UnicodeString &key);
 
 	public:
-		const std::map<UnicodeString, DcWord>& getDictionary() const;
-		std::optional<DcWord> getWord(const UnicodeString &key);
-		void setWord(UnicodeString key, DcWord value);
-        void deleteWord(const UnicodeString &key);
+        Dictionary(IDisplay &_uiDisplay);
+
+		const std::map<UnicodeString, DictionaryEntry>& getDictionary() const;
+        std::vector<UnicodeString> getDictionaryKeys();
+        std::vector<DictionaryEntry> getDictionaryValues();
+        std::vector<UnicodeString> getDictionaryValuesAsStrings();
 
 		void parseJsonToDictionary(const UnicodeString &path);
-		static std::optional<UnicodeString> generateJsonFromDictionary(const std::map<UnicodeString, DcWord> &dictionary);
+		std::optional<UnicodeString> generateJsonFromDictionary(const std::map<UnicodeString, DictionaryEntry> &dictionary);
+        static std::optional<UnicodeString> generateJsonFromWordList(const std::vector<UnicodeString> &wordList);
+
+        bool isInDictionary(const UnicodeString &word);
+        bool isEqualToDictionaryItem(const DictionaryEntry &dictionaryEntry);
+
+        void getDictionaryEntry(const UnicodeString &word);
+        void addDictionaryEntry(const UnicodeString &word, const DictionaryEntry &dictionaryEntry);
+        void deleteDictionaryEntry(const UnicodeString &word);
+
+        std::optional<std::vector<UnicodeString>> findDictionaryFiles();
+        void setDictionary(const UnicodeString &path);
+        void saveDictionaryToFile();
 };
 #endif

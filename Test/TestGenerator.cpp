@@ -18,7 +18,6 @@ class TTestGenerator : public TTestCase
 	__published:
 		void __fastcall TestgenerateText();
 		void __fastcall TestgenerateWord();
-		void __fastcall TestgetRandomInt();
 		void __fastcall TestshuffleChars();
 
 	private:
@@ -30,9 +29,6 @@ class TTestGenerator : public TTestCase
 		bool uppercase;
 		bool numbers;
 		bool punctuation;
-
-		int minInt;
-		int maxInt;
 
 		UnicodeString inputText;
 
@@ -50,8 +46,6 @@ void __fastcall TTestGenerator::SetUp()
 	numbers = false;
 	punctuation = false;
 
-	minInt = 0;
-	maxInt = 10;
 	inputText = "Sunny Hvar";
 
 	LOGGER_LOG("Starting test...");
@@ -69,7 +63,7 @@ void __fastcall TTestGenerator::TestgenerateText()
 
 	for (int i = 0; i < testCount; i++) {
 
-		UnicodeString result = Generator::generateText(letters, uppercase, numbers, punctuation, maxChars);
+		UnicodeString result = Generator::generateText(letters, GeneratorOptions(uppercase, numbers, punctuation, 5, 10));
 
 		LOGGER_LOG("Test " + IntToStr(i + 1) + ": " + result);
 
@@ -82,7 +76,7 @@ void __fastcall TTestGenerator::TestgenerateWord()
 
 	for (int i = 0; i < testCount; i++) {
 
-		UnicodeString result = Generator::generateWord(letters, uppercase, numbers, punctuation);
+		UnicodeString result = Generator::generateWord(letters, GeneratorOptions(uppercase, numbers, punctuation, 5, 10));
 
 		LOGGER_LOG("Test " + IntToStr(i + 1) + ": " + result);
 
@@ -98,17 +92,6 @@ void __fastcall TTestGenerator::TestgenerateWord()
 			}
 		}
 
-	}
-
-}
-
-void __fastcall TTestGenerator::TestgetRandomInt()
-{
-	for (int i = 0; i < testCount; i++) {
-
-        int result = Generator::getRandomInt(minInt, maxInt);
-        LOGGER_LOG("Test " + IntToStr(i + 1) + ": " + IntToStr(result));
-        CheckTrue(result >= minInt && result <= maxInt, L"Outside of range");
 	}
 
 }

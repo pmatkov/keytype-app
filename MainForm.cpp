@@ -200,36 +200,38 @@ LRESULT CALLBACK TFMain::RESubclass(HWND hwnd, UINT msg, WPARAM wParam, LPARAM l
 	return 0;
 }
 
-
 //  create practice session
 
 void __fastcall TFMain::MenuSubitemPracticeNewClick(TObject *Sender)
 {
 
-	typingSession = std::make_unique<TypingSession>();
-    parser = std::make_unique<Parser>(mainSession.get(), typingSession.get());
+    if (!typingSession && !parser && !FrPractice) {
+        typingSession = std::make_unique<TypingSession>();
+        parser = std::make_unique<Parser>(mainSession.get(), typingSession.get());
 
-    FrPractice = UIUtils::createFrame<TFrPractice>(this, parser.get(), mainSession.get(), typingSession.get());
+        FrPractice = UIUtils::createFrame<TFrPractice>(this, parser.get(), mainSession.get(), typingSession.get());
 
-    //  set subclass procedure for RETextBox
+        //  set subclass procedure for RETextBox
 
-    REHandle = FrPractice->RETextBox->Handle;
-    SetWindowSubclass(REHandle, &RESubclass, 1, reinterpret_cast<DWORD_PTR>(this));
-
-	UIUtils::switchFrames<TFrMain, TFrPractice>(FrMain, FrPractice);
+        REHandle = FrPractice->RETextBox->Handle;
+        SetWindowSubclass(REHandle, &RESubclass, 1, reinterpret_cast<DWORD_PTR>(this));
+    }
+    UIUtils::switchFrames<TFrMain, TFrPractice>(FrMain, FrPractice);
     LOGGER(LogLevel::Debug, "Switch control to practice frame");
 
 }
-//---------------------------------------------------------------------------
 
 void __fastcall TFMain::MenuSubitemPreferencesClick(TObject *Sender)
 {
-    FPreferences = std::make_unique<TFPreferences>(nullptr, mainSession.get(), authService.get());
-    FPreferences->Position = poMainFormCenter;
+
+    if (!FPreferences) {
+        FPreferences = std::make_unique<TFPreferences>(nullptr, mainSession.get(), authService.get());
+        FPreferences->Position = poMainFormCenter;
+    }
 
     if (typingSession) {
-      	typingSession->setSessionStatus(SessionStatus::Paused);
-    	FrPractice->setPracticeStatus(SessionStatus::Paused);
+    typingSession->setSessionStatus(SessionStatus::Paused);
+    FrPractice->setPracticeStatus(SessionStatus::Paused);
 
         clearCaret(mainSession->getTypingSettings().getCaretType(), typingSession->getTextSource().getCharIndex()-1);
         parser->setInputEnabled(false);
@@ -249,6 +251,6 @@ void __fastcall TFMain::MenuSubitemPreferencesClick(TObject *Sender)
     }
 
     LOGGER(LogLevel::Debug, "Preferences displayed");
+
 }
-//---------------------------------------------------------------------------
 

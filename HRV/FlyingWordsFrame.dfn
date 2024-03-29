@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\FlyingWordsFrame.dfm" source-language="hr-HR" target-language="hr-HR" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\FlyingWordsFrame.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">45378.0788425926</prop>
+        <prop prop-type="OrigDateTime">45377.7361111111</prop>
+        <prop prop-type="XlatDateTime">45368.8884027778</prop>
+        <prop prop-type="Translated">0</prop>
+        <prop prop-type="UnTranslated">15</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:FrFlyingWords.Left" resname="O:FrFlyingWords.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45376.8045705903</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TFrFlyingWords</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrFlyingWords.Top" resname="O:FrFlyingWords.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45376.8045705903</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TFrFlyingWords</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrFlyingWords.Width" resname="O:FrFlyingWords.Width">
+        <source>628</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45376.8045705903</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TFrFlyingWords</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrFlyingWords.Height" resname="O:FrFlyingWords.Height">
+        <source>422</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45376.8045705903</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TFrFlyingWords</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrFlyingWords.TabOrder" resname="O:FrFlyingWords.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45376.8045705903</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFrFlyingWords</prop><prop prop-type="Localize">0</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrFlyingWords.O:LStart.Left" resname="O:FrFlyingWords.O:LStart.Left">
+        <source>258</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45378.0788562847</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrFlyingWords.O:LStart.Top" resname="O:FrFlyingWords.O:LStart.Top">
+        <source>330</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45378.0788562847</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrFlyingWords.O:LStart.Width" resname="O:FrFlyingWords.O:LStart.Width">
+        <source>120</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45378.0788562847</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrFlyingWords.O:LStart.Height" resname="O:FrFlyingWords.O:LStart.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45378.0788562847</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrFlyingWords.O:LStart.AutoSize" resname="O:FrFlyingWords.O:LStart.AutoSize">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45378.0788562847</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrFlyingWords.O:LStart.Caption" resname="O:FrFlyingWords.O:LStart.Caption">
+        <source>'Click to start the game'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45378.0788562847</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrFlyingWords.O:LStart.OnClick" resname="O:FrFlyingWords.O:LStart.OnClick">
+        <source>LStartClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45378.0788562847</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrFlyingWords.O:Timer1.Enabled" resname="O:FrFlyingWords.O:Timer1.Enabled">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45378.0788562847</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrFlyingWords.O:Timer1.Interval" resname="O:FrFlyingWords.O:Timer1.Interval">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45378.0788562847</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrFlyingWords.O:Timer1.Left" resname="O:FrFlyingWords.O:Timer1.Left">
+        <source>432</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45378.0788562847</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrFlyingWords.O:Timer1.Top" resname="O:FrFlyingWords.O:Timer1.Top">
+        <source>318</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45378.0788562847</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

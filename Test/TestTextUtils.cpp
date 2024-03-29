@@ -47,55 +47,51 @@ void __fastcall TTestTextUtils::TearDown() {
 
 void __fastcall TTestTextUtils::TestcountSentences()
 {
-	int result = TextUtils::countSentences("Coding in C++ is  challenging! My favorite song is \"Smells Like Teen Spirit\" by Nirvana. \
+	int testValue = TextUtils::countSentences("Coding in C++ is  challenging! My favorite song is \"Smells Like Teen Spirit\" by Nirvana. \
 	The password must contain at least 8 characters, including !, #, or @.");
-	CheckEquals(3, result);
+	CheckEquals(3, testValue);
 }
     
 void __fastcall TTestTextUtils::TestcountWords()
 {
-
-	int result = TextUtils::countWords("The password must contain at least 8 characters, including !, #, or @.");
-	CheckEquals(9, result);
+	CheckEquals(9, TextUtils::countWords("The password must contain at least 8 characters, including !, #, or @."));
 }
 
 void __fastcall TTestTextUtils::TestcountChars()
 {
-
-	int result = TextUtils::countChars("Hello, 123!");
-	CheckEquals(10, result);
-
-	int result2 = TextUtils::countChars("   Example	string.");
-	CheckEquals(14, result2);
-
+	CheckEquals(10, TextUtils::countChars("Hello, 123!"));
+	CheckEquals(14, TextUtils::countChars("   Example	string."));
 }
 
 void __fastcall TTestTextUtils::TestisEndChar()
 {
-	int result = TextUtils::isEndChar(L'!');
-	CheckTrue(result);
 
-	int result2 = TextUtils::isEndChar(L'-');
-	CheckFalse(result2);
+	CheckTrue(TextUtils::isEndChar(L'!'));
+	CheckFalse(TextUtils::isEndChar(L'-'));
 }
     
 void __fastcall TTestTextUtils::TesttrimCharacters()
 {
+//
+//    LOGGER_LOG("Expected: Ferrari Result: " + TextUtils::trimCharacters("\"Ferrari\"", L'\"'));
+//	CheckEquals(UnicodeString("Ferrari"), TextUtils::trimCharacters("\"Ferrari\"", L'\"'));
 
-	UnicodeString result = TextUtils::trimCharacters("\"Ferrari\"", L'\"');
-	CheckEquals(UnicodeString("Ferrari"), result);
+        LOGGER_LOG("Expected: Result: " + TextUtils::trimCharacters("\"\"", L'\"'));
+	CheckEquals(UnicodeString(""), TextUtils::trimCharacters("\"\"", L'\"'));
 
-	result = TextUtils::trimCharacters("   Fast & Furious  ", L' ');
-	CheckEquals(UnicodeString("Fast & Furious"), result);
+	LOGGER_LOG("Expected: Fast & Furious Result: " + TextUtils::trimCharacters("   Fast & Furious  ", L' '));
+	CheckEquals(UnicodeString("Fast & Furious"), TextUtils::trimCharacters("   Fast & Furious  ", L' '));
 }
 
 void __fastcall TTestTextUtils::TestsplitTextIntoWords() {
-	 std::vector<UnicodeString> result = TextUtils::splitTextIntoWords("Back to the future");
-	 UnicodeString reference[] = {"Back", "to", "the", "future"};
 
-	 for (size_t i = 0; i < result.size();  i++) {
+   std::vector<UnicodeString> testValue = TextUtils::splitTextIntoWords("Back to the future");
+   UnicodeString expectedValue[] = {"Back", "to", "the", "future"};
 
-		CheckEquals(result[i], reference[i]);
+	 for (int i = 0; i < testValue.size();  i++) {
+
+     	LOGGER_LOG(IntToStr((int)i+1) + "/ Expected: " + expectedValue[i] + " Result:" + testValue[i]);
+		CheckEquals(testValue[i], expectedValue[i]);
 	 }
 }
 
@@ -123,11 +119,9 @@ void __fastcall TTestTextUtils::TestreplaceChar() {
  	UnicodeString testString = "Back to the future";
 
     LOGGER_LOG("Test string: " + testString);
-
     UnicodeString result = TextUtils::replaceChar(testString, ' ', L'\u00B7');
 
     LOGGER_LOG("Result: " + result);
-
     CheckEquals(result, L"Back\u00B7to\u00B7the\u00B7future");
 }
 

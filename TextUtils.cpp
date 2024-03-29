@@ -78,48 +78,42 @@ namespace TextUtils {
         int start = 0;
         int end = text.Length() - 1;
 
-        UnicodeString trimmedText;
-        const wchar_t* wstr = text.c_str();
+        const wchar_t* textPtr = text.c_str();
 
-        while (start <= end && wstr[start] == wch) {
-            start++;
-        }
+       	while (start <= end && textPtr[start] == wch) {
+        	start++;
+    	}
 
-        while (end >= start && wstr[end] == wch) {
+        while (end >= start && textPtr[end] == wch) {
             end--;
         }
 
-        if (start <= end) {
-            trimmedText = text.SubString(start + 1, end - start + 1);
+        if (start > end) {
+            return L"";
         }
 
-        return trimmedText;
+        return text.SubString(start + 1, end - start + 1);
+
      }
 
     std::vector<UnicodeString> splitTextIntoWords(const UnicodeString& text)
     {
+
+    	std::vector<UnicodeString> tokens = {};
+
         if (text.Length()) {
 
-            TStringList* list = new TStringList;
-            std::vector<UnicodeString> tokenList;
-            UnicodeString token;
+            std::unique_ptr<TStringList> list = std::make_unique<TStringList>();
 
             list->DelimitedText = text;
             list->Delimiter = ' ';
 
             for (int i = 0; i < list->Count; i++)	{
-
-                token = list->Strings[i];
-                tokenList.push_back(token);
+                tokens.push_back(list->Strings[i]);
             }
 
-            delete list;
-
-            return tokenList;
         }
-        else {
-            return std::vector<UnicodeString>();
-        }
+        return tokens;
     }
 
     UnicodeString replaceChar(const UnicodeString& text, wchar_t original, wchar_t replacement) {
@@ -263,6 +257,7 @@ namespace TextUtils {
 
         return nullptr;
     }
+
 
 }
 

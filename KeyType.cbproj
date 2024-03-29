@@ -146,9 +146,16 @@
             <BuildOrder>21</BuildOrder>
         </CppCompile>
         <CppCompile Include="Books.cpp">
-            <VirtualFolder>{23B73507-EEA9-420C-B3B7-961C43A1A22D}</VirtualFolder>
+            <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
             <DependentOn>Books.h</DependentOn>
             <BuildOrder>18</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="ConverterForm.cpp">
+            <VirtualFolder>{D1032E3D-EA49-42CE-95C2-FF399AA004CF}</VirtualFolder>
+            <Form>FConverter</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>ConverterForm.h</DependentOn>
+            <BuildOrder>52</BuildOrder>
         </CppCompile>
         <CppCompile Include="CustomTextFrame.cpp">
             <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
@@ -166,15 +173,15 @@
             <DependentOn>DataModule.h</DependentOn>
             <BuildOrder>38</BuildOrder>
         </CppCompile>
-        <CppCompile Include="DcWord.cpp">
-            <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
-            <DependentOn>DcWord.h</DependentOn>
-            <BuildOrder>14</BuildOrder>
-        </CppCompile>
         <CppCompile Include="Dictionary.cpp">
             <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
             <DependentOn>Dictionary.h</DependentOn>
             <BuildOrder>15</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="DictionaryEntry.cpp">
+            <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
+            <DependentOn>DictionaryEntry.h</DependentOn>
+            <BuildOrder>53</BuildOrder>
         </CppCompile>
         <CppCompile Include="EDirNotFoundException.cpp">
             <VirtualFolder>{C9B9CF94-D644-46A8-AFE2-4CDDCCC37F87}</VirtualFolder>
@@ -214,10 +221,43 @@
             <DependentOn>ExternalSourcesFrame.h</DependentOn>
             <BuildOrder>28</BuildOrder>
         </CppCompile>
+        <CppCompile Include="Factory.cpp">
+            <VirtualFolder>{4BFADF1C-F038-4685-8422-706F34C58511}</VirtualFolder>
+            <DependentOn>Factory.h</DependentOn>
+            <BuildOrder>54</BuildOrder>
+        </CppCompile>
         <CppCompile Include="FileUtils.cpp">
             <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
             <DependentOn>FileUtils.h</DependentOn>
             <BuildOrder>16</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="FlyingWord.cpp">
+            <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
+            <DependentOn>FlyingWord.h</DependentOn>
+            <BuildOrder>49</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="FlyingWordsFrame.cpp">
+            <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
+            <Form>FrFlyingWords</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+            <DependentOn>FlyingWordsFrame.h</DependentOn>
+            <BuildOrder>50</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="GameArea.cpp">
+            <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
+            <DependentOn>GameArea.h</DependentOn>
+            <BuildOrder>52</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="GameEngine.cpp">
+            <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
+            <DependentOn>GameEngine.h</DependentOn>
+            <BuildOrder>51</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="GameThread.cpp">
+            <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
+            <DependentOn>GameThread.h</DependentOn>
+            <BuildOrder>55</BuildOrder>
         </CppCompile>
         <CppCompile Include="GeneratedTextFrame.cpp">
             <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
@@ -228,9 +268,19 @@
             <BuildOrder>27</BuildOrder>
         </CppCompile>
         <CppCompile Include="Generator.cpp">
-            <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
+            <VirtualFolder>{26BC7E46-ECBD-4AA7-B03E-17DAA77318AD}</VirtualFolder>
             <DependentOn>Generator.h</DependentOn>
             <BuildOrder>13</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="IDisplay.cpp">
+            <VirtualFolder>{4BFADF1C-F038-4685-8422-706F34C58511}</VirtualFolder>
+            <DependentOn>IDisplay.h</DependentOn>
+            <BuildOrder>53</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="IGameDisplay.cpp">
+            <VirtualFolder>{4BFADF1C-F038-4685-8422-706F34C58511}</VirtualFolder>
+            <DependentOn>IGameDisplay.h</DependentOn>
+            <BuildOrder>56</BuildOrder>
         </CppCompile>
         <CppCompile Include="ISettings.cpp">
             <VirtualFolder>{6D6A1B94-904B-4CFC-BA2B-E48D16DDAD0E}</VirtualFolder>
@@ -250,11 +300,6 @@
             <BuildOrder>1</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>
-        <CppCompile Include="LanguageProfile.cpp">
-            <VirtualFolder>{23B73507-EEA9-420C-B3B7-961C43A1A22D}</VirtualFolder>
-            <DependentOn>LanguageProfile.h</DependentOn>
-            <BuildOrder>5</BuildOrder>
-        </CppCompile>
         <CppCompile Include="Logger.cpp">
             <VirtualFolder>{26BC7E46-ECBD-4AA7-B03E-17DAA77318AD}</VirtualFolder>
             <DependentOn>Logger.h</DependentOn>
@@ -301,6 +346,11 @@
             <DependentOn>Parser.h</DependentOn>
             <BuildOrder>34</BuildOrder>
         </CppCompile>
+        <CppCompile Include="Position.cpp">
+            <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
+            <DependentOn>Position.h</DependentOn>
+            <BuildOrder>50</BuildOrder>
+        </CppCompile>
         <CppCompile Include="PracticeFrame.cpp">
             <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
             <Form>FrPractice</Form>
@@ -322,6 +372,11 @@
             <FormType>dfm</FormType>
             <DependentOn>PreferencesForm.h</DependentOn>
             <BuildOrder>39</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Random.cpp">
+            <VirtualFolder>{26BC7E46-ECBD-4AA7-B03E-17DAA77318AD}</VirtualFolder>
+            <DependentOn>Random.h</DependentOn>
+            <BuildOrder>54</BuildOrder>
         </CppCompile>
         <CppCompile Include="RegisterFrame.cpp">
             <VirtualFolder>{F6B7C7E8-2F86-4A67-B4A3-6E99C1D2C773}</VirtualFolder>
@@ -389,24 +444,21 @@
             <DependentOn>UUIDGenerator.h</DependentOn>
             <BuildOrder>32</BuildOrder>
         </CppCompile>
-        <CppCompile Include="WordList.cpp">
-            <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
-            <DependentOn>WordList.h</DependentOn>
-            <BuildOrder>13</BuildOrder>
-        </CppCompile>
+        <FormResources Include="OptionsFrame.dfm"/>
+        <FormResources Include="PreferencesForm.dfm"/>
         <FormResources Include="PracticeOptionsForm.dfm"/>
         <FormResources Include="PracticeFrame.dfm"/>
-        <FormResources Include="RegisterFrame.dfm"/>
-        <FormResources Include="PreferencesForm.dfm"/>
+        <FormResources Include="MainFrame.dfm"/>
         <FormResources Include="MainForm.dfm"/>
         <FormResources Include="LoginFrame.dfm"/>
-        <FormResources Include="OptionsFrame.dfm"/>
-        <FormResources Include="MainFrame.dfm"/>
-        <FormResources Include="AuthenticationForm.dfm"/>
+        <FormResources Include="RegisterFrame.dfm"/>
         <FormResources Include="DataModule.dfm"/>
+        <FormResources Include="AuthenticationForm.dfm"/>
         <FormResources Include="CustomTextFrame.dfm"/>
-        <FormResources Include="ExternalSourcesFrame.dfm"/>
+        <FormResources Include="ConverterForm.dfm"/>
         <FormResources Include="GeneratedTextFrame.dfm"/>
+        <FormResources Include="ExternalSourcesFrame.dfm"/>
+        <FormResources Include="FlyingWordsFrame.dfm"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -437,18 +489,20 @@
                 <VFOLDERS>
                     <VFOLDER ID="{8FB63F96-DB9B-44EE-BA3E-3A48525DE697}" name="Data"/>
                     <VFOLDER ID="{C9B9CF94-D644-46A8-AFE2-4CDDCCC37F87}" name="Exceptions"/>
+                    <VFOLDER ID="{8FD859FE-69F3-4938-8F63-0FFC19E975BE}" name="FlyingWords Game"/>
                     <VFOLDER ID="{E8DD405D-5871-4098-BE73-2A4F48743690}" name="Forms">
                         <VFOLDER ID="{F6B7C7E8-2F86-4A67-B4A3-6E99C1D2C773}" name="Authentication"/>
+                        <VFOLDER ID="{D1032E3D-EA49-42CE-95C2-FF399AA004CF}" name="ConverterForm"/>
                         <VFOLDER ID="{84360D3D-4874-46E9-88EE-445E3FC0314D}" name="MainForm"/>
                         <VFOLDER ID="{78CB0057-7BC4-4B83-9609-C573EB0EAF04}" name="PracticeOptionsForm"/>
                         <VFOLDER ID="{B49A349D-1438-45E5-B4FD-36C3DF2C665B}" name="PreferencesForm"/>
                     </VFOLDER>
-                    <VFOLDER ID="{23B73507-EEA9-420C-B3B7-961C43A1A22D}" name="Other"/>
                     <VFOLDER ID="{26BC7E46-ECBD-4AA7-B03E-17DAA77318AD}" name="Services"/>
                     <VFOLDER ID="{893884F7-72F0-483F-8A49-6A63980DD6D7}" name="Session"/>
                     <VFOLDER ID="{6D6A1B94-904B-4CFC-BA2B-E48D16DDAD0E}" name="Settings"/>
                     <VFOLDER ID="{4BAA1710-5749-48D2-B3F3-197353059E4E}" name="Sources"/>
                     <VFOLDER ID="{4AADD3FA-CB81-45BA-96EF-7958F7960233}" name="Statistics"/>
+                    <VFOLDER ID="{4BFADF1C-F038-4685-8422-706F34C58511}" name="UIDisplay"/>
                     <VFOLDER ID="{8A6B665F-CE5E-4CF4-AB4C-BBAA85BE5583}" name="User"/>
                     <VFOLDER ID="{CE54C44E-A3BA-434A-8509-1E40452898D3}" name="Utils"/>
                 </VFOLDERS>
@@ -469,20 +523,22 @@
                 </Resource_DLL_Projects>
                 <RDP_Source_Files>
                     <RDP_Source_Files Name="Item0">PracticeForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item1">PracticeOptionsForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item2">PracticeFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item3">RegisterFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item4">PreferencesForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item1">OptionsFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item2">PracticeOptionsForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item3">PracticeFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item4">MainFrame.dfm</RDP_Source_Files>
                     <RDP_Source_Files Name="Item5">MainForm.dfm</RDP_Source_Files>
                     <RDP_Source_Files Name="Item6">LoginFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item7">OptionsFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item8">MainFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item9">AuthenticationForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item10">DataModule.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item7">PreferencesForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item8">RegisterFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item9">DataModule.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item10">AuthenticationForm.dfm</RDP_Source_Files>
                     <RDP_Source_Files Name="Item11">CustomTextFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item12">ExternalSourcesFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item12">ConverterForm.dfm</RDP_Source_Files>
                     <RDP_Source_Files Name="Item13">GeneratedTextFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item14">Win32\Debug\KeyType.drc</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item14">ExternalSourcesFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item15">FlyingWordsFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item16">Win32\Debug\KeyType.drc</RDP_Source_Files>
                 </RDP_Source_Files>
             </CPlusPlusBuilder.Personality>
             <Deployment Version="4">

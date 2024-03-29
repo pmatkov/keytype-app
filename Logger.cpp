@@ -182,7 +182,7 @@ UnicodeString Logger::findNextFileIndex(const UnicodeString &dirName, const Unic
     UnicodeString dirPath = FileUtils::createAbsolutePath(dirName, false);
 
     try {
-        files = FileUtils::getFiles(dirPath, fileType);
+        files = FileUtils::getFileNames(dirPath, fileType);
     } catch (CustomExceptions::EDirNotFoundException &ex) {
          throw Exception("Dir not found");
     }
@@ -342,7 +342,7 @@ bool Logger::archiveLogFiles(LogInterval interval)
 	UnicodeString dirPath = FileUtils::createAbsolutePath("Log", false);
 
     try {
-        logs = FileUtils::getFiles(dirPath, "log");
+        logs = FileUtils::getFileNames(dirPath, "log");
     } catch (CustomExceptions::EDirNotFoundException &ex) {
          throw Exception("Log dir not found");
     }

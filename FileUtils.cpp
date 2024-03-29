@@ -1,7 +1,9 @@
 //---------------------------------------------------------------------------
 #include <cwctype>
+#include <map>
 
 #include "FileUtils.h"
+#include "TextUtils.h"
 #include "Logger.h"
 #include "EDirNotFoundException.h"
 #include "EFileNotFoundException.h"
@@ -54,12 +56,11 @@ namespace FileUtils {
         }
 
         return newPath;
-
     }
 
     // fetch list of files in a directory
 
-    std::optional<std::vector<UnicodeString>> getFiles(const UnicodeString &path, const UnicodeString &fileType) {
+    std::optional<std::vector<UnicodeString>> getFileNames(const UnicodeString &path, const UnicodeString &fileType) {
 
         #ifdef TEST_GET_FILES
         return std::make_optional(std::vector<UnicodeString>{"archive_2024-03-11_02.zip", "archive_2024-03-14_02.zip", "archive_2024-03-10_03.zip"});
@@ -91,6 +92,7 @@ namespace FileUtils {
          else {
             throw CustomExceptions::EDirNotFoundException();
          }
+         LOGGER(LogLevel::Debug, "Retrieved list of files");
          return std::nullopt;
          #endif
     }
@@ -129,6 +131,7 @@ namespace FileUtils {
 
     }
 
+
     void saveToTextFile(const UnicodeString &path, const std::vector<UnicodeString> &list) {
 
         std::unique_ptr<TStreamWriter> writer;
@@ -150,5 +153,6 @@ namespace FileUtils {
         }
 
     }
+
 }
 

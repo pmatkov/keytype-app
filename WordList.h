@@ -7,22 +7,22 @@
 #include <optional>
 #include <vcl.h>
 
-#include "LanguageProfile.h"
 
 class WordList {
+
 	private:
-    	std::vector<UnicodeString> wordList;
-		UnicodeString listName;
-		UnicodeString description;
-		LanguageProfile language;
+    	std::vector<UnicodeString> words;
+		UnicodeString name;
 
 	public:
-		WordList(UnicodeString _listName, std::vector<UnicodeString> _wordList);
-        const UnicodeString& getWordListName() const;
-		const std::vector<UnicodeString>& getWordList() const;
-		void setWordList(const std::vector<UnicodeString>& _wordList);
+   		WordList();
+		WordList(std::vector<UnicodeString> _words, UnicodeString _name);
 
-        static std::optional<std::vector<UnicodeString>> parseTextToWordList(const UnicodeString &path);
+        const std::vector<UnicodeString>& getWords() const;
+		void setWords(const std::vector<UnicodeString>& _words);
+        const UnicodeString& getName() const;
+
+        void parseTextToWordList(const UnicodeString &path);
 };
 
 //---------------------------------------------------------------------------

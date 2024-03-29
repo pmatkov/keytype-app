@@ -5,11 +5,11 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45360.9856481481</prop>
-        <prop prop-type="OrigDateTime">45360.8461574074</prop>
+        <prop prop-type="SelfDateTime">45376.8045601852</prop>
+        <prop prop-type="OrigDateTime">45370.7538657407</prop>
         <prop prop-type="XlatDateTime">45347.0512268519</prop>
         <prop prop-type="Translated">0</prop>
-        <prop prop-type="UnTranslated">38</prop>
+        <prop prop-type="UnTranslated">39</prop>
       </prop-group>
     </header>
     <body>
@@ -23,185 +23,190 @@
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TFPracticeOptions</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
+      <trans-unit id="O:FPracticeOptions.BorderIcons" resname="O:FPracticeOptions.BorderIcons">
+        <source>[biSystemMenu, biMinimize]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45376.8045762037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TFPracticeOptions</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
       <trans-unit id="O:FPracticeOptions.Caption" resname="O:FPracticeOptions.Caption">
         <source>'Select a text source'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TFPracticeOptions</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TFPracticeOptions</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.ClientHeight" resname="O:FPracticeOptions.ClientHeight">
-        <source>443</source>
+        <source>444</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TFPracticeOptions</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFPracticeOptions</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.ClientWidth" resname="O:FPracticeOptions.ClientWidth">
         <source>530</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFPracticeOptions</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TFPracticeOptions</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.Color" resname="O:FPracticeOptions.Color">
         <source>clBtnFace</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TFPracticeOptions</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TFPracticeOptions</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.Font.Charset" resname="O:FPracticeOptions.Font.Charset">
         <source>DEFAULT_CHARSET</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TFPracticeOptions</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TFPracticeOptions</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.Font.Color" resname="O:FPracticeOptions.Font.Color">
         <source>clWindowText</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TFPracticeOptions</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TFPracticeOptions</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.Font.Height" resname="O:FPracticeOptions.Font.Height">
         <source>-12</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TFPracticeOptions</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TFPracticeOptions</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.Font.Name" resname="O:FPracticeOptions.Font.Name">
         <source>'Segoe UI'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TFPracticeOptions</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TFPracticeOptions</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.Font.Style" resname="O:FPracticeOptions.Font.Style">
         <source>[]</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TFPracticeOptions</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TFPracticeOptions</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.Position" resname="O:FPracticeOptions.Position">
         <source>poMainFormCenter</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TFPracticeOptions</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TFPracticeOptions</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.TextHeight" resname="O:FPracticeOptions.TextHeight">
         <source>15</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TFPracticeOptions</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TFPracticeOptions</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.O:BtCancel.Left" resname="O:FPracticeOptions.O:BtCancel.Left">
-        <source>442</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FPracticeOptions.O:BtCancel.Top" resname="O:FPracticeOptions.O:BtCancel.Top">
-        <source>409</source>
+        <source>441</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPracticeOptions.O:BtCancel.Top" resname="O:FPracticeOptions.O:BtCancel.Top">
+        <source>411</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.O:BtCancel.Width" resname="O:FPracticeOptions.O:BtCancel.Width">
         <source>75</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.O:BtCancel.Height" resname="O:FPracticeOptions.O:BtCancel.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.O:BtCancel.Caption" resname="O:FPracticeOptions.O:BtCancel.Caption">
         <source>'Cancel'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.O:BtCancel.ModalResult" resname="O:FPracticeOptions.O:BtCancel.ModalResult">
         <source>2</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.O:BtCancel.TabOrder" resname="O:FPracticeOptions.O:BtCancel.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FPracticeOptions.O:BtAccept.Left" resname="O:FPracticeOptions.O:BtAccept.Left">
-        <source>347</source>
-        <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FPracticeOptions.O:BtAccept.Top" resname="O:FPracticeOptions.O:BtAccept.Top">
-        <source>409</source>
+      <trans-unit id="O:FPracticeOptions.O:BtAccept.Left" resname="O:FPracticeOptions.O:BtAccept.Left">
+        <source>344</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FPracticeOptions.O:BtAccept.Top" resname="O:FPracticeOptions.O:BtAccept.Top">
+        <source>411</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.O:BtAccept.Width" resname="O:FPracticeOptions.O:BtAccept.Width">
         <source>75</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.O:BtAccept.Height" resname="O:FPracticeOptions.O:BtAccept.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.O:BtAccept.Caption" resname="O:FPracticeOptions.O:BtAccept.Caption">
         <source>'Accept'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.O:BtAccept.ModalResult" resname="O:FPracticeOptions.O:BtAccept.ModalResult">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.O:BtAccept.TabOrder" resname="O:FPracticeOptions.O:BtAccept.TabOrder">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.O:PCSourceText.Left" resname="O:FPracticeOptions.O:PCSourceText.Left">
         <source>8</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.O:PCSourceText.Top" resname="O:FPracticeOptions.O:PCSourceText.Top">
         <source>8</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.O:PCSourceText.Width" resname="O:FPracticeOptions.O:PCSourceText.Width">
-        <source>525</source>
+        <source>512</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.O:PCSourceText.Height" resname="O:FPracticeOptions.O:PCSourceText.Height">
         <source>390</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.O:PCSourceText.ActivePage" resname="O:FPracticeOptions.O:PCSourceText.ActivePage">
         <source>TSGeneratedText</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.O:PCSourceText.TabOrder" resname="O:FPracticeOptions.O:PCSourceText.TabOrder">
         <source>2</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.O:PCSourceText.O:TSGeneratedText.Caption" resname="O:FPracticeOptions.O:PCSourceText.O:TSGeneratedText.Caption">
         <source>'Generated Text'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.O:PCSourceText.O:TSExternalSources.Caption" resname="O:FPracticeOptions.O:PCSourceText.O:TSExternalSources.Caption">
         <source>'External Sources'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.O:PCSourceText.O:TSExternalSources.ImageIndex" resname="O:FPracticeOptions.O:PCSourceText.O:TSExternalSources.ImageIndex">
         <source>2</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.O:PCSourceText.O:TSCustomText.Caption" resname="O:FPracticeOptions.O:PCSourceText.O:TSCustomText.Caption">
         <source>'Custom Text'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPracticeOptions.O:PCSourceText.O:TSCustomText.ImageIndex" resname="O:FPracticeOptions.O:PCSourceText.O:TSCustomText.ImageIndex">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45355.0897942361</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
     </body>
   </file>

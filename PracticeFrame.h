@@ -40,6 +40,7 @@ private:	// User declarations
 	Parser *parser;
     MainSession *mainSession;
     TypingSession *typingSession;
+    Dictionary *dictionary;
 
     std::unique_ptr<TFPracticeOptions> FPracticeOptions;
 	HWND REHandle;

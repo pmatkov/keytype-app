@@ -7,6 +7,8 @@
 #include <System.Classes.hpp>
 #include <System.SysUtils.hpp>
 #include <vcl.h>
+#include <Vcl.Dialogs.hpp>
+#include <Vcl.ExtDlgs.hpp>
 #include <memory>
 #include <utility>
 
@@ -32,19 +34,32 @@ namespace UIUtils {
 
     void changeFontFamily(TWinControl *Control, const UnicodeString fontFamily);
 
-    void setComboBoxItems(TComboBox *comboBox, const std::vector<UnicodeString> &items, int defaultIndex);
+    void addComboBoxItem(TComboBox *comboBox, const UnicodeString &item, int selectedIndex);
+    void selectComboBoxItem(TComboBox *comboBox, int selectedIndex);
+    void setComboBoxItems(TComboBox *comboBox, const std::vector<UnicodeString> &items, int selectedIndex);
     void setComboBoxItems(TComboBox *comboBox, const std::vector<UnicodeString> &items, const UnicodeString &selectedItem);
-    int findItemIndex(const std::vector<UnicodeString> &items, const UnicodeString &selectedItem);
+    int findItemIndex(const std::vector<UnicodeString> &items, const UnicodeString &itemToSearch);
+
+    void setListViewItems(TListView *listview, const std::vector<UnicodeString> &items);
+    void setListViewItems(TListView *listview, const std::vector<UnicodeString> &items, int index);
+
+    void setEditText(TEdit *edit, const UnicodeString &text);
 
     void changeLanguage(Language language);
 
-    template<typename T>
-    std::unique_ptr<T> createFrame(TWinControl* parent) {
-        std::unique_ptr<T> frame = std::make_unique<T>(parent);
-        frame->Parent = parent;
-        frame->Align = alClient;
-        return frame;
-    }
+    void setFileDialogProperties(TOpenTextFileDialog *FileDialog, const UnicodeString &dir, const UnicodeString &filter);
+
+    void displayTimedMessage(TTimer *timer, TLabel *label, const UnicodeString &msg);
+    void removeTimedMessage(TTimer *timer, TLabel *label);
+
+
+//    template<typename T>
+//    std::unique_ptr<T> createFrame(TWinControl* parent) {
+//        std::unique_ptr<T> frame = std::make_unique<T>(parent);
+//        frame->Parent = parent;
+//        frame->Align = alClient;
+//        return frame;
+//    }
 
     template<typename T,  typename... Args>
     std::unique_ptr<T> createFrame(TWinControl* parent, Args&&... args) {
@@ -69,13 +84,6 @@ namespace UIUtils {
     void setFrameVisibility(T *frame, bool visibility){
         frame->Visible = visibility;
     }
-
-    template<typename T1, typename T2>
-    void switchFrames(T1 *firstFrame, T2 *secondFrame) {
-        setFrameVisibility(firstFrame, false);
-        setFrameVisibility(secondFrame, true);
-    }
-
 
 };
 

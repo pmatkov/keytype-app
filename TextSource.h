@@ -5,22 +5,19 @@
 
 #include <vcl.h>
 
-#include "LanguageProfile.h"
 //---------------------------------------------------------------------------
 
 class TextSource
 {
 	private:
 		UnicodeString text = "The quick brown fox jumps over the lazy dog";
+
+        int wordCount = 0;
+        int charCount = 0;
+
 		UnicodeString currentWord;
 		wchar_t currentChar;
 		int charIndex = 1;
-
-        int maxChars;
-
-		bool numbers;
-		bool punctuation;
-		bool special;
 
 	public:
     	TextSource();
@@ -28,6 +25,10 @@ class TextSource
 
 		const UnicodeString& getText() const;
 		UnicodeString& getText();
+        void setText(const UnicodeString& _text);
+
+        int getWordCount() const;
+        int getCharCount() const;
 
 		const UnicodeString& getCurrentWord() const;
 
