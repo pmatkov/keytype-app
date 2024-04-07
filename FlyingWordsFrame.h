@@ -8,12 +8,16 @@
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.Forms.hpp>
 #include <Vcl.ExtCtrls.hpp>
+#include <Vcl.Buttons.hpp>
+#include "FlyingWordsStatsFrame.h"
+#include <Vcl.Dialogs.hpp>
+#include <Vcl.ExtDlgs.hpp>
 
 #include <vector>
+#include <queue>
 #include <memory>
 
-#include "GameEngine.h"
-#include "IDisplay.h"
+#include "ISingleItemDisplay.h"
 #include "IGameDisplay.h"
 
 #if !defined(INTFOBJECT_IMPL_IUNKNOWN)
@@ -23,31 +27,60 @@
     HRESULT __stdcall QueryInterface(REFIID iid, void** p){ return BASE::QueryInterface(iid, p);}
 #endif
 
-class TFrFlyingWords : public TFrame, public IDisplay, public IGameDisplay
+class GameEngine;
+
+class TFrFlyingWords : public TFrame, public ISingleItemDisplay, public IGameDisplay
 {
+
+	INTFOBJECT_IMPL_IUNKNOWN(TFrame)
+
 __published:	// IDE-managed Components
-	TLabel *LStart;
-	TTimer *Timer1;
-	void __fastcall LStartClick(TObject *Sender);
-	void __fastcall Timer1Timer(TObject *Sender);
+	TFrFlyingWordsStatsFrame *FrFlyingWordsStatsFrame;
+	TComboBox *CBWordList;
+	TLabel *LWordList;
+	TLabel *LTimeLimit;
+	TComboBox *CBTime;
+	TOpenTextFileDialog *DFileOpen;
+	TButton *BtBrowse;
+	TButton *BtStartQuit;
+	void __fastcall BtStartQuitClick(TObject *Sender);
+	void __fastcall BtBrowseClick(TObject *Sender);
+	void __fastcall CBWordListChange(TObject *Sender);
+	void __fastcall FrFlyingWordsStatsFramemsgDisplayTimerTimer(TObject *Sender);
+
 private:	// User declarations
 	std::unique_ptr<GameEngine> gameEngine;
-    std::vector<std::unique_ptr<TLabel>> LflyingWords;
+    std::vector<std::unique_ptr<TLabel>> LFlyingWords;
+    std::unique_ptr<std::queue<wchar_t>> keyStrokeQueue;
+    std::unique_ptr<TCriticalSection> criticalSection;
+    std::unique_ptr<TEvent> keyStrokeEvent;
+    std::unique_ptr<TEvent> wordMatchEvent;
+    std::unique_ptr<TEvent> terminateEvent;
 
 public:		// User declarations
 	__fastcall TFrFlyingWords(TComponent* Owner);
+	~TFrFlyingWords();
 
-    void setItemSingleItemControl(const UnicodeString& componentName, const UnicodeString& item);
-    void selectItemMultiItemControl(const UnicodeString& componentName, const UnicodeString& item);
-    void setItemsMultiItemControl(const UnicodeString& componentName, const std::vector<UnicodeString>& items, int selectedIndex);
-    void addItemMultiItemControl(const UnicodeString& componentName, const UnicodeString& item, int selectedIndex);
+	 GameEngine &getGameEngine();
+     std::queue<wchar_t> &getKeyStrokeQueue();
+     TCriticalSection &getCriticalSection();
+     TEvent &getKeyStrokeEvent();
+     TEvent &getWordMatchEvent();
+     TEvent &getTerminateEvent();
 
-    bool createTextControl(const UnicodeString& text, const UnicodeString& color) = 0;
-    bool removeTextControl(int index) = 0;
-    bool moveTextControl(int index, int x, int y) = 0;
+	void createTextControl(const UnicodeString& text, const UnicodeString& color);
+	void removeTextControl(int index);
+    void removeAllTextControls();
+	void moveTextControl(int index, int x, int y);
 
 	int getTextHeight(int index);
-    int getTextWidth(int index);
+	int getTextWidth(int index);
+
+
+    void setItemSingleItemControl(const UnicodeString& componentName, const UnicodeString& item);
+
+    void processCharMessages(WPARAM wParam);
+    virtual void __fastcall WndProc(TMessage &Message);
 
 };
 //---------------------------------------------------------------------------

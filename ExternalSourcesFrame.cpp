@@ -1,15 +1,17 @@
 //---------------------------------------------------------------------------
-
 #include <vcl.h>
-#pragma hdrstop
 
 #include "ExternalSourcesFrame.h"
+#include "FileUtils.h"
 //---------------------------------------------------------------------------
+#pragma hdrstop
 #pragma package(smart_init)
 #pragma resource "*.dfm"
 TFrExternalSources *FrExternalSources;
 //---------------------------------------------------------------------------
 __fastcall TFrExternalSources::TFrExternalSources(TComponent* Owner) : TFrame(Owner) {
+
+	XMLDocument->FileName = FileUtils::createAbsolutePath("Data\\books.xml", true);
 
    	_di_IXMLlibraryType library = Getlibrary(XMLDocument);
 
@@ -21,7 +23,7 @@ __fastcall TFrExternalSources::TFrExternalSources(TComponent* Owner) : TFrame(Ow
 
 			_di_IXMLgenreType bookGenre =  bookCategory->genre[j];
 
-            	mapOfBooks[bookGenre->Get_name()] = std::vector<_di_IXMLbookType>();
+			mapOfBooks[bookGenre->Get_name()] = std::vector<_di_IXMLbookType>();
 
 			for (int k = 0; k < bookGenre->Count; k++) {
 

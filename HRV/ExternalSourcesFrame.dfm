@@ -146,10 +146,6 @@ object FrExternalSources: TFrExternalSources
     Top = 138
   end
   object XMLDocument: TXMLDocument
-    Active = True
-    FileName = 
-      'C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\K' +
-      'eyType\Data\books.xml'
     NodeIndentStr = #9
     Options = [doNodeAutoCreate, doNodeAutoIndent, doAttrNull, doAutoPrefix, doNamespaceDecl]
     Left = 378

@@ -192,23 +192,24 @@ namespace UIUtils {
 
    // child controls
 
-    void enableChildControls(TWinControl* parent)
+    void enableChildControls(TWinControl* parent, bool enable)
     {
         for (int i = 0; i < parent->ControlCount; i++) {
 
             TControl* child = parent->Controls[i];
-            child->Enabled = true;
+            child->Enabled = enable;
         }
     }
 
-    void disableChildControls(TWinControl* parent)
+    void showChildControls(TWinControl* parent, bool show)
     {
         for (int i = 0; i < parent->ControlCount; i++) {
 
             TControl* child = parent->Controls[i];
-            child->Enabled = false;
+            child->Visible = show;
         }
     }
+
 
     void switchControl(TWinControl* firstControl, TWinControl* secondControl) {
         firstControl->Enabled = false;
@@ -370,6 +371,8 @@ namespace UIUtils {
          }
     }
 
+    // file dialog
+
     void setFileDialogProperties(TOpenTextFileDialog *FileDialog, const UnicodeString &dir, const UnicodeString &filter) {
 
         FileDialog->InitialDir = FileUtils::createAbsolutePath(dir, false);
@@ -385,6 +388,16 @@ namespace UIUtils {
 
     void removeTimedMessage(TTimer *timer, TLabel *label) {
         label->Caption = "";
+        timer->Enabled = false;
+    }
+
+    void higlightMessage(TTimer *timer, TLabel *label, TColor color) {
+    	label->Font->Color = color;
+        timer->Enabled = true;
+    }
+
+    void removeHiglightMessage(TTimer *timer, TLabel *label) {
+        label->Font->Color = clBlack;
         timer->Enabled = false;
     }
 }

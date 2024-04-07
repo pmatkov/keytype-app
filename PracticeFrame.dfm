@@ -32,16 +32,16 @@ object FrPractice: TFrPractice
     AutoSize = False
   end
   object LSpeed: TLabel
-    Left = 225
+    Left = 210
     Top = 68
     Width = 35
     Height = 15
     Caption = 'Speed:'
   end
   object LDisplaySpeed: TLabel
-    Left = 266
+    Left = 251
     Top = 68
-    Width = 50
+    Width = 60
     Height = 15
     AutoSize = False
   end
@@ -64,6 +64,8 @@ object FrPractice: TFrPractice
     Top = 140
     Width = 360
     Height = 65
+    TabStop = False
+    Alignment = taCenter
     BorderStyle = bsNone
     Color = clBtnFace
     Font.Charset = ANSI_CHARSET

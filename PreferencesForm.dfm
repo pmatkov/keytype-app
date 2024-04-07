@@ -1,9 +1,11 @@
 object FPreferences: TFPreferences
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
   Caption = 'Preferences'
-  ClientHeight = 444
-  ClientWidth = 534
+  ClientHeight = 443
+  ClientWidth = 530
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

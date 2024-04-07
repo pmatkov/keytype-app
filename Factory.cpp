@@ -9,12 +9,12 @@
 
  namespace ModelFactory {
 
-    std::unique_ptr<Dictionary> createDictionary(IDisplay &uiDisplay) {
-        return std::make_unique<Dictionary>(uiDisplay);
+    std::unique_ptr<Dictionary> createDictionary(ISingleItemDisplay &singleItemDisplay, IMultiItemDisplay &multiItemDisplay) {
+        return std::make_unique<Dictionary>(singleItemDisplay, multiItemDisplay);
     }
 
-    std::unique_ptr<GameEngine> createGameEngine(IDisplay &uiDisplay, IGameDisplay &gameDisplay) {
-        return std::make_unique<GameEngine>(uiDisplay, gameDisplay);
+	std::unique_ptr<GameEngine> createGameEngine(ISingleItemDisplay &singleItemDisplay, IGameDisplay &gameDisplay) {
+        return std::make_unique<GameEngine>(singleItemDisplay, gameDisplay);
     }
 
  }

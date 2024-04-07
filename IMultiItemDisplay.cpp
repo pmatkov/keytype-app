@@ -2,7 +2,7 @@
 
 #pragma hdrstop
 
-#include "IDisplay.h"
+#include "IMultiItemDisplay.h"
 #include "UIUtils.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)

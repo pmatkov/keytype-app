@@ -67,43 +67,42 @@ void Logger::setLogInterval(LogInterval _logInterval) {
 
 UnicodeString Logger::getLogLevelAsString(LogLevel level) {
 
-    switch(level) {
+	switch (level) {
         case LogLevel::Debug:
-            return  "DEBUG";
+			return  "DEBUG";
             break;
-        case LogLevel::Info:
-            return "INFO";
-            break;
+		case LogLevel::Info:
+			return "INFO";
+			break;
         case LogLevel::Error:
-            return  "ERROR";
+			return  "ERROR";
             break;
-        case LogLevel::Fatal:
-            return  "FATAL";
-            break;
-        case LogLevel::All:
-            return "ALL";
-            break;
-        default:
-        	return  "UNKNOWN";
-    }
+		case LogLevel::Fatal:
+			return  "FATAL";
+			break;
+		case LogLevel::All:
+			return "ALL";
+			break;
+		default:
+			return  "UNKNOWN";
+	}
 }
 
 LogLevel Logger::getStringAsLogLevel(const UnicodeString &level) {
 
    if (level.UpperCase() == "DEBUG") {
-        return LogLevel::Debug;
-    } else if (level.UpperCase() == "INFO") {
-        return LogLevel::Info;
-    } else if (level.UpperCase() == "ERROR") {
-        return LogLevel::Error;
-    } else if (level.UpperCase() == "FATAL") {
-        return LogLevel::Fatal;
-    } else if (level.UpperCase() == "ALL") {
-        return LogLevel::All;
-    } else {
-    	return LogLevel::Unknown;
-    }
-
+		return LogLevel::Debug;
+	} else if (level.UpperCase() == "INFO") {
+		return LogLevel::Info;
+	} else if (level.UpperCase() == "ERROR") {
+		return LogLevel::Error;
+	} else if (level.UpperCase() == "FATAL") {
+		return LogLevel::Fatal;
+	} else if (level.UpperCase() == "ALL") {
+		return LogLevel::All;
+	} else {
+		return LogLevel::Unknown;
+	}
 }
 
 

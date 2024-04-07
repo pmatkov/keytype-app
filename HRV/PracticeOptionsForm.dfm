@@ -2,6 +2,7 @@ object FPracticeOptions: TFPracticeOptions
   Left = 0
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
   Caption = 'Odaberi izvor teksta:'
   ClientHeight = 444
   ClientWidth = 530

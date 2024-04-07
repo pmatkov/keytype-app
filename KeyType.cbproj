@@ -67,7 +67,7 @@
         <SanitizedProjectName>KeyType</SanitizedProjectName>
         <IncludePath>Tests\;$(IncludePath)</IncludePath>
         <ILINK_LibraryPath>Tests\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
-        <Custom_Styles>Glow|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Glow.vsf;&quot;Windows11 Modern Dark|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Windows11_Modern_Dark.vsf&quot;;&quot;Windows11 Modern Light|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Windows11_Modern_Light.vsf&quot;</Custom_Styles>
+        <Custom_Styles>&quot;Windows11 Modern Dark|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Windows11_Modern_Dark.vsf&quot;;&quot;Windows11 Modern Light|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Windows11_Modern_Light.vsf&quot;</Custom_Styles>
         <ILINK_GenerateDRC>True</ILINK_GenerateDRC>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
@@ -219,7 +219,7 @@
             <FormType>dfm</FormType>
             <DesignClass>TFrame</DesignClass>
             <DependentOn>ExternalSourcesFrame.h</DependentOn>
-            <BuildOrder>28</BuildOrder>
+            <BuildOrder>57</BuildOrder>
         </CppCompile>
         <CppCompile Include="Factory.cpp">
             <VirtualFolder>{4BFADF1C-F038-4685-8422-706F34C58511}</VirtualFolder>
@@ -244,15 +244,28 @@
             <DependentOn>FlyingWordsFrame.h</DependentOn>
             <BuildOrder>50</BuildOrder>
         </CppCompile>
-        <CppCompile Include="GameArea.cpp">
-            <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
-            <DependentOn>GameArea.h</DependentOn>
-            <BuildOrder>52</BuildOrder>
+        <CppCompile Include="FlyingWordsStatsFrame.cpp">
+            <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
+            <Form>FrFlyingWordsStatsFrame</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+            <DependentOn>FlyingWordsStatsFrame.h</DependentOn>
+            <BuildOrder>57</BuildOrder>
         </CppCompile>
         <CppCompile Include="GameEngine.cpp">
             <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
             <DependentOn>GameEngine.h</DependentOn>
             <BuildOrder>51</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="GameScoreThread.cpp">
+            <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
+            <DependentOn>GameScoreThread.h</DependentOn>
+            <BuildOrder>59</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="GameStatistics.cpp">
+            <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
+            <DependentOn>GameStatistics.h</DependentOn>
+            <BuildOrder>60</BuildOrder>
         </CppCompile>
         <CppCompile Include="GameThread.cpp">
             <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
@@ -272,25 +285,35 @@
             <DependentOn>Generator.h</DependentOn>
             <BuildOrder>13</BuildOrder>
         </CppCompile>
-        <CppCompile Include="IDisplay.cpp">
-            <VirtualFolder>{4BFADF1C-F038-4685-8422-706F34C58511}</VirtualFolder>
-            <DependentOn>IDisplay.h</DependentOn>
-            <BuildOrder>53</BuildOrder>
-        </CppCompile>
         <CppCompile Include="IGameDisplay.cpp">
             <VirtualFolder>{4BFADF1C-F038-4685-8422-706F34C58511}</VirtualFolder>
             <DependentOn>IGameDisplay.h</DependentOn>
             <BuildOrder>56</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="IMultiItemDisplay.cpp">
+            <VirtualFolder>{4BFADF1C-F038-4685-8422-706F34C58511}</VirtualFolder>
+            <DependentOn>IMultiItemDisplay.h</DependentOn>
+            <BuildOrder>53</BuildOrder>
         </CppCompile>
         <CppCompile Include="ISettings.cpp">
             <VirtualFolder>{6D6A1B94-904B-4CFC-BA2B-E48D16DDAD0E}</VirtualFolder>
             <DependentOn>ISettings.h</DependentOn>
             <BuildOrder>33</BuildOrder>
         </CppCompile>
+        <CppCompile Include="ISingleItemDisplay.cpp">
+            <VirtualFolder>{4BFADF1C-F038-4685-8422-706F34C58511}</VirtualFolder>
+            <DependentOn>ISingleItemDisplay.h</DependentOn>
+            <BuildOrder>61</BuildOrder>
+        </CppCompile>
         <CppCompile Include="KeyStatistics.cpp">
             <VirtualFolder>{4AADD3FA-CB81-45BA-96EF-7958F7960233}</VirtualFolder>
             <DependentOn>KeyStatistics.h</DependentOn>
             <BuildOrder>34</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="KeystrokeProcessorThread.cpp">
+            <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
+            <DependentOn>KeystrokeProcessorThread.h</DependentOn>
+            <BuildOrder>58</BuildOrder>
         </CppCompile>
         <CppCompile Include="KeyType.cpp">
             <BuildOrder>0</BuildOrder>
@@ -300,6 +323,11 @@
             <BuildOrder>1</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>
+        <CppCompile Include="Limit.cpp">
+            <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
+            <DependentOn>Limit.h</DependentOn>
+            <BuildOrder>57</BuildOrder>
+        </CppCompile>
         <CppCompile Include="Logger.cpp">
             <VirtualFolder>{26BC7E46-ECBD-4AA7-B03E-17DAA77318AD}</VirtualFolder>
             <DependentOn>Logger.h</DependentOn>
@@ -445,19 +473,20 @@
             <BuildOrder>32</BuildOrder>
         </CppCompile>
         <FormResources Include="OptionsFrame.dfm"/>
-        <FormResources Include="PreferencesForm.dfm"/>
+        <FormResources Include="MainFrame.dfm"/>
         <FormResources Include="PracticeOptionsForm.dfm"/>
         <FormResources Include="PracticeFrame.dfm"/>
-        <FormResources Include="MainFrame.dfm"/>
         <FormResources Include="MainForm.dfm"/>
         <FormResources Include="LoginFrame.dfm"/>
         <FormResources Include="RegisterFrame.dfm"/>
-        <FormResources Include="DataModule.dfm"/>
+        <FormResources Include="PreferencesForm.dfm"/>
         <FormResources Include="AuthenticationForm.dfm"/>
+        <FormResources Include="DataModule.dfm"/>
         <FormResources Include="CustomTextFrame.dfm"/>
         <FormResources Include="ConverterForm.dfm"/>
         <FormResources Include="GeneratedTextFrame.dfm"/>
         <FormResources Include="ExternalSourcesFrame.dfm"/>
+        <FormResources Include="FlyingWordsStatsFrame.dfm"/>
         <FormResources Include="FlyingWordsFrame.dfm"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
@@ -502,7 +531,7 @@
                     <VFOLDER ID="{6D6A1B94-904B-4CFC-BA2B-E48D16DDAD0E}" name="Settings"/>
                     <VFOLDER ID="{4BAA1710-5749-48D2-B3F3-197353059E4E}" name="Sources"/>
                     <VFOLDER ID="{4AADD3FA-CB81-45BA-96EF-7958F7960233}" name="Statistics"/>
-                    <VFOLDER ID="{4BFADF1C-F038-4685-8422-706F34C58511}" name="UIDisplay"/>
+                    <VFOLDER ID="{4BFADF1C-F038-4685-8422-706F34C58511}" name="Display"/>
                     <VFOLDER ID="{8A6B665F-CE5E-4CF4-AB4C-BBAA85BE5583}" name="User"/>
                     <VFOLDER ID="{CE54C44E-A3BA-434A-8509-1E40452898D3}" name="Utils"/>
                 </VFOLDERS>
@@ -524,21 +553,22 @@
                 <RDP_Source_Files>
                     <RDP_Source_Files Name="Item0">PracticeForm.dfm</RDP_Source_Files>
                     <RDP_Source_Files Name="Item1">OptionsFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item2">PracticeOptionsForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item3">PracticeFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item4">MainFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item2">MainFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item3">PracticeOptionsForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item4">PracticeFrame.dfm</RDP_Source_Files>
                     <RDP_Source_Files Name="Item5">MainForm.dfm</RDP_Source_Files>
                     <RDP_Source_Files Name="Item6">LoginFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item7">PreferencesForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item8">RegisterFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item9">DataModule.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item10">AuthenticationForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item7">RegisterFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item8">PreferencesForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item9">AuthenticationForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item10">DataModule.dfm</RDP_Source_Files>
                     <RDP_Source_Files Name="Item11">CustomTextFrame.dfm</RDP_Source_Files>
                     <RDP_Source_Files Name="Item12">ConverterForm.dfm</RDP_Source_Files>
                     <RDP_Source_Files Name="Item13">GeneratedTextFrame.dfm</RDP_Source_Files>
                     <RDP_Source_Files Name="Item14">ExternalSourcesFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item15">FlyingWordsFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item16">Win32\Debug\KeyType.drc</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item15">FlyingWordsStatsFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item16">FlyingWordsFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item17">Win32\Debug\KeyType.drc</RDP_Source_Files>
                 </RDP_Source_Files>
             </CPlusPlusBuilder.Personality>
             <Deployment Version="4">

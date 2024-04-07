@@ -32,7 +32,7 @@ __fastcall TFPreferences::TFPreferences(TComponent* Owner, MainSession *_mainSes
         setAppSettingsItems();
         setTypingSettingsItems();
 
-       	LOGGER(LogLevel::Debug, "Preferences created");
+       	LOGGER(LogLevel::Debug, "Preferences displayed");
     }
     else {
         throw CustomExceptions::ENullPointerException();

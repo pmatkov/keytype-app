@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
 <xliff version="1.0">
-  <file original="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\ConverterForm.dfm" source-language="hr-HR" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\ConverterForm.dfm">
+  <file original="C:\Users\prosp\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\ConverterForm.dfm" source-language="hr-HR" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\prosp\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\ConverterForm.dfm">
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45376.9715046296</prop>
-        <prop prop-type="OrigDateTime">45376.9712962963</prop>
-        <prop prop-type="XlatDateTime">45375.5910416667</prop>
+        <prop prop-type="SelfDateTime">45382.8108101852</prop>
+        <prop prop-type="OrigDateTime">45377.012962963</prop>
+        <prop prop-type="XlatDateTime">45375.6327083333</prop>
         <prop prop-type="Translated">0</prop>
         <prop prop-type="UnTranslated">62</prop>
       </prop-group>

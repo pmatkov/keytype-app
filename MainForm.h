@@ -29,6 +29,7 @@
 #include "PreferencesForm.h"
 #include "MainFrame.h"
 #include "PracticeFrame.h"
+#include "FlyingWordsFrame.h"
 
 
 //---------------------------------------------------------------------------
@@ -41,16 +42,18 @@ __published:	// IDE-managed Components
 	TMenuItem *MenuSubitemPracticeNew;
 	TMenuItem *MenuItemSettings;
 	TMenuItem *MenuSubitemPreferences;
-	TMenuItem *Games1;
-	TMenuItem *Flyingwords1;
+	TMenuItem *MenuItemGames;
+	TMenuItem *MenuSubitemFlyingWords;
 	void __fastcall MenuSubitemPracticeNewClick(TObject *Sender);
 	void __fastcall MenuSubitemPreferencesClick(TObject *Sender);
+	void __fastcall MenuSubitemFlyingWordsClick(TObject *Sender);
 
 private:	// User declarations
 
 	std::unique_ptr<TFPreferences> FPreferences;
 	std::unique_ptr<TFrMain> FrMain;
 	std::unique_ptr<TFrPractice> FrPractice;
+	std::unique_ptr<TFrFlyingWords> FrFlyingWords;
 
 	std::unique_ptr<MainSession> mainSession;
     std::unique_ptr<TypingSession> typingSession;
@@ -59,8 +62,6 @@ private:	// User declarations
     std::unique_ptr<Parser> parser;
     Logger &logger;
 
-    HWND REHandle;
-
 public:		// User declarations
 
 	__fastcall TFMain(TComponent* Owner);
@@ -68,13 +69,12 @@ public:		// User declarations
     void setMainSession(std::unique_ptr<MainSession> _mainSession);
     void setAuthenticationService(std::unique_ptr<AuthenticationService> _authService);
 
-    void updateSessionStatus(SessionStatus status);
-    void moveCaret(CaretType caretType, int index);
-    void clearCaret(CaretType caretType, int index);
-    void setCaret(CaretType caretType, int index);
+//    void updateSessionStatus(SessionStatus status);
+//    void moveCaret(CaretType caretType, int index);
+//    void clearCaret(CaretType caretType, int index);
+//    void setCaret(CaretType caretType, int index);
 
 	virtual void __fastcall WndProc(TMessage &Message);
-	static LRESULT CALLBACK RESubclass(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam, UINT_PTR uIdSubclass, DWORD_PTR dwRefData);
 
 };
 

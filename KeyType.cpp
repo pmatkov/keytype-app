@@ -10,19 +10,20 @@
 
 //---------------------------------------------------------------------------
 USEFORM("OptionsFrame.cpp", FrOptions); /* TFrame: File Type */
-USEFORM("PreferencesForm.cpp", FPreferences);
+USEFORM("MainFrame.cpp", FrMain); /* TFrame: File Type */
 USEFORM("PracticeOptionsForm.cpp", FPractice);
 USEFORM("PracticeFrame.cpp", FrPractice); /* TFrame: File Type */
-USEFORM("MainFrame.cpp", FrMain); /* TFrame: File Type */
 USEFORM("MainForm.cpp", FMain);
 USEFORM("LoginFrame.cpp", FrLogin); /* TFrame: File Type */
 USEFORM("RegisterFrame.cpp", FrRegister); /* TFrame: File Type */
-USEFORM("DataModule.cpp", DataModule1); /* TDataModule: File Type */
+USEFORM("PreferencesForm.cpp", FPreferences);
 USEFORM("AuthenticationForm.cpp", FAuthentication);
+USEFORM("DataModule.cpp", DataModule1); /* TDataModule: File Type */
 USEFORM("CustomTextFrame.cpp", FrCustomText); /* TFrame: File Type */
 USEFORM("ConverterForm.cpp", FConverter);
 USEFORM("GeneratedTextFrame.cpp", FrGeneratedText); /* TFrame: File Type */
 USEFORM("ExternalSourcesFrame.cpp", FrExternalSources); /* TFrame: File Type */
+USEFORM("FlyingWordsStatsFrame.cpp", FrFlyingWordsStatsFrame); /* TFrame: File Type */
 USEFORM("FlyingWordsFrame.cpp", FrFlyingWords); /* TFrame: File Type */
 //---------------------------------------------------------------------------
 #include "MainForm.h"
@@ -44,28 +45,25 @@ int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 		Application->Initialize();
 		Application->MainFormOnTaskBar = true;
 
-        // set up logging
+		// set up logging
        	LOGGER(LogLevel::Info, "App started");
 
-        std::unique_ptr<TDataModule1> DataModule1 = std::make_unique<TDataModule1>(nullptr);
-        std::unique_ptr<AuthenticationService> authService = std::make_unique<AuthenticationService>(DataModule1.get());
+		std::unique_ptr<TDataModule1> DataModule1 = std::make_unique<TDataModule1>(nullptr);
+		std::unique_ptr<AuthenticationService> authService = std::make_unique<AuthenticationService>(DataModule1.get());
 
-        // create auth form
+		// create auth form
         std::unique_ptr<TFAuthentication> FAuthentication = std::make_unique<TFAuthentication>(nullptr, authService.get());
-        FAuthentication->Position = poScreenCenter;
+		FAuthentication->Position = poScreenCenter;
 
 		if (FAuthentication->ShowModal() == mrOk) {
 
-            // pointeri?
-            AppSettings appSettings(authService->getUser());
+			// pointeri?
+			AppSettings appSettings(authService->getUser());
             TypingSettings typingSettings(authService->getUser());
-
-//           std::unique_ptr<AppSettings> appSettings = std::make_unique<AppSettings>();
-//           std::unique_ptr<TypingSettings> typingSettings = std::make_unique<TypingSettings>();
 
             std::unique_ptr<MainSession> mainSession = std::make_unique<MainSession>(appSettings, typingSettings);
 
-            //  create main form
+			//  create main form
 			Application->CreateForm(__classid(TFMain), &FMain);
 		FMain->Position = poScreenCenter;
 

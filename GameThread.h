@@ -4,6 +4,7 @@
 #define GameThreadH
 //---------------------------------------------------------------------------
 
+#include <vcl.h>
 #include "IGameDisplay.h"
 #include "GameEngine.h"
 
@@ -11,16 +12,14 @@ class GameThread : public TThread
 {
 private:
     IGameDisplay &gameDisplay;
-    GameEngine &gameEngine;
+	GameEngine &gameEngine;
+    TMutex &mutexWords;
 
 protected:
-    void __fastcall Execute();
-    void __fastcall UpdateLabel();
+	void __fastcall Execute();
 
 public:
-    __fastcall GameThread(bool CreateSuspended, IGameDisplay &_gameDisplay, GameEngine &_gameEngine);
-    void __fastcall Execute();
-
+    __fastcall GameThread(bool CreateSuspended, IGameDisplay &_gameDisplay, GameEngine &_gameEngine, TMutex &_mutexWords);
 };
 
 

@@ -7,11 +7,20 @@
 #include <vector>
 #include <vcl.h>
 #include "Position.h"
+#include "Limit.h"
 
 enum class Speed {
-	Fast,
-    Normal,
-	Slow,
+	Slow = 1,
+	Normal = 2,
+	Fast = 3,
+	Count = 4,
+	Unknown
+};
+
+enum class Direction {
+	Up,
+	Down,
+	Neutral,
 	Count,
 	Unknown
 };
@@ -22,20 +31,42 @@ class FlyingWord {
     private:
         UnicodeString text;
 
-        Limit limit;
-        Position position;
-        Speed speed;
-        UnicodeString color;
+		Limit outerLimit;
+		Limit innerLimit;
 
-        bool visible = true;
+		Position position;
+		Speed speed;
+		Direction direction;
+		UnicodeString color;
 
-        static std::vector<UnicodeString> enumStrings;
+		int maxHDistance;
+
+		static std::vector<UnicodeString> enumSpeed;
+		static std::vector<UnicodeString> enumDirection;
 
     public:
-        FlyingWord(const UnicodeString &text, Limit _limit, Position _position, Speed _speed, const UnicodeString &_color);
+		FlyingWord(const UnicodeString &text, Limit _outerLimit, Position _position, Speed _speed, Direction _direction, \
+		const UnicodeString &_color, int _maxHDistance);
 
-        void move(Position position);
-        static std::vector<UnicodeString>& getEnumStrings();
+		const UnicodeString &getText() const;
+		const Limit &getOuterLimit() const;
+		const Limit &getInnerLimit() const;
+
+		const Position &getPosition() const;
+		void setPosition(Position _position);
+		const Speed &getSpeed() const;
+		const Direction &getDirection() const;
+		void setDirection(Direction _direction);
+		const UnicodeString &getColor() const;
+
+		const int getMaxHDistance() const;
+		void setMaxHDistance(int _maxHDistance);
+
+		void setOuterLimit(int bottom, int right);
+		void setInnerLimit(int top, int bottom);
+
+		static std::vector<UnicodeString>& getEnumSpeed();
+		static std::vector<UnicodeString>& getEnumDirection();
 };
 
 

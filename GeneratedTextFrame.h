@@ -17,7 +17,8 @@
 #include <memory>
 
 #include "Dictionary.h"
-#include "IDisplay.h"
+#include "ISingleItemDisplay.h"
+#include "IMultiItemDisplay.h"
 #include "ConverterForm.h"
 
 #if !defined(INTFOBJECT_IMPL_IUNKNOWN)
@@ -28,7 +29,7 @@
 #endif
 
 //---------------------------------------------------------------------------
-class TFrGeneratedText : public TFrame, public IDisplay
+class TFrGeneratedText : public TFrame, public ISingleItemDisplay, public IMultiItemDisplay
 {
 
 	INTFOBJECT_IMPL_IUNKNOWN(TFrame)

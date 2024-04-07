@@ -17,17 +17,17 @@
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 
-Dictionary::Dictionary(IDisplay &_uiDisplay) : uiDisplay(_uiDisplay) {
+Dictionary::Dictionary(ISingleItemDisplay &_singleItemDisplay, IMultiItemDisplay &_multiItemDisplay) : singleItemDisplay(_singleItemDisplay), multiItemDisplay(_multiItemDisplay) {
 
      std::optional<std::vector<UnicodeString>> fileNames = findDictionaryFiles();
      if (fileNames.has_value()) {
 
-     	uiDisplay.setItemsMultiItemControl("DictionaryFiles", *fileNames, 0);
+     	multiItemDisplay.setItemsMultiItemControl("DictionaryFiles", *fileNames, 0);
         setDictionary((*fileNames)[0]);
     }
 
-    uiDisplay.setItemsMultiItemControl("Category", DictionaryEntry::getEnumStrings(), -1);
-    uiDisplay.setItemSingleItemControl("FileDialog", "Data");
+    multiItemDisplay.setItemsMultiItemControl("Category", DictionaryEntry::getEnumStrings(), -1);
+    singleItemDisplay.setItemSingleItemControl("FileDialog", "Data");
 
 }
 
@@ -303,12 +303,12 @@ void Dictionary::getDictionaryEntry(const UnicodeString &word) {
        	UnicodeString category = EnumUtils::enumToString<WordCategory>(DictionaryEntry::getEnumStrings(), (*dictionaryEntry).getWordCategory());
 
         if (category != "Unknown") {
-        	uiDisplay.selectItemMultiItemControl("Category", category);
+        	multiItemDisplay.selectItemMultiItemControl("Category", category);
         }
 
-        uiDisplay.setItemSingleItemControl("Word", word);
-        uiDisplay.setItemSingleItemControl("Definition", (*dictionaryEntry).getDefinition());
-        uiDisplay.setItemSingleItemControl("Synonyms", (*dictionaryEntry).getSynonymsAsString());
+        singleItemDisplay.setItemSingleItemControl("Word", word);
+        singleItemDisplay.setItemSingleItemControl("Definition", (*dictionaryEntry).getDefinition());
+        singleItemDisplay.setItemSingleItemControl("Synonyms", (*dictionaryEntry).getSynonymsAsString());
     }
 }
 
@@ -345,7 +345,7 @@ std::optional<std::vector<UnicodeString>> Dictionary::findDictionaryFiles() {
 void Dictionary::setDictionary(const UnicodeString &fileName) {
 
     parseJsonToDictionary(FileUtils::createAbsolutePath("Data", false) + fileName);
-    uiDisplay.setItemsMultiItemControl("Dictionary", getDictionaryValuesAsStrings(), 4);
+    multiItemDisplay.setItemsMultiItemControl("Dictionary", getDictionaryValuesAsStrings(), 4);
 
     dictionaryFileName = fileName;
 }
@@ -357,7 +357,7 @@ void Dictionary::saveDictionaryToFile() {
     if (jsonString.has_value()) {
 
         FileUtils::saveToTextFile(FileUtils::createAbsolutePath("Data", false) + dictionaryFileName, std::vector<UnicodeString>{*jsonString});
-        uiDisplay.setItemsMultiItemControl("Dictionary", getDictionaryValuesAsStrings(), 4);
+        multiItemDisplay.setItemsMultiItemControl("Dictionary", getDictionaryValuesAsStrings(), 4);
 
     }
 

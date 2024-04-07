@@ -10,14 +10,16 @@
 #include <map>
 
 #include "DictionaryEntry.h"
-#include "IDisplay.h"
+#include "ISingleItemDisplay.h"
+#include "IMultiItemDisplay.h"
 
 //---------------------------------------------------------------------------
 
 class Dictionary {
 
 	private:
-        IDisplay &uiDisplay;
+        ISingleItemDisplay &singleItemDisplay;
+        IMultiItemDisplay &multiItemDisplay;
 		std::map<UnicodeString, DictionaryEntry> dictionary;
 
         UnicodeString dictionaryFileName;
@@ -27,7 +29,7 @@ class Dictionary {
         void internalDeleteDictionaryEntry(const UnicodeString &key);
 
 	public:
-        Dictionary(IDisplay &_uiDisplay);
+        Dictionary(ISingleItemDisplay &_singleItemDisplay, IMultiItemDisplay &_multiItemDisplay);
 
 		const std::map<UnicodeString, DictionaryEntry>& getDictionary() const;
         std::vector<UnicodeString> getDictionaryKeys();

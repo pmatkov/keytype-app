@@ -4,8 +4,8 @@ object FMain: TFMain
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'KeyType'
-  ClientHeight = 421
-  ClientWidth = 624
+  ClientHeight = 422
+  ClientWidth = 628
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,6 +14,7 @@ object FMain: TFMain
   Font.Style = []
   Menu = MainMenu
   Position = poScreenCenter
+  Scaled = False
   TextHeight = 15
   object MainMenu: TMainMenu
     Left = 39
@@ -25,10 +26,11 @@ object FMain: TFMain
         OnClick = MenuSubitemPracticeNewClick
       end
     end
-    object Games1: TMenuItem
+    object MenuItemGames: TMenuItem
       Caption = 'Games'
-      object Flyingwords1: TMenuItem
+      object MenuSubitemFlyingWords: TMenuItem
         Caption = 'Flying words'
+        OnClick = MenuSubitemFlyingWordsClick
       end
     end
     object MenuItemSettings: TMenuItem

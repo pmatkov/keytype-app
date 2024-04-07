@@ -28,6 +28,24 @@
 			<Options Name="Evidence"></Options>
 			<Options Name="KeyFile"></Options>
 			<Options Name="KeyName"></Options>
-		</Options>
-		<FileList><File FileName="AuthenticationForm.dfm" ContainerId="W32Form" ModuleName="AuthenticationForm.dfm"/><File FileName="CustomTextFrame.dfm" ContainerId="W32Form" ModuleName="CustomTextFrame.dfm"/><File FileName="DataModule.dfm" ContainerId="W32Form" ModuleName="DataModule.dfm"/><File FileName="ExternalSourcesFrame.dfm" ContainerId="W32Form" ModuleName="ExternalSourcesFrame.dfm"/><File FileName="GeneratedTextFrame.dfm" ContainerId="W32Form" ModuleName="GeneratedTextFrame.dfm"/><File FileName="LoginFrame.dfm" ContainerId="W32Form" ModuleName="LoginFrame.dfm"/><File FileName="MainForm.dfm" ContainerId="W32Form" ModuleName="MainForm.dfm"/><File FileName="MainFrame.dfm" ContainerId="W32Form" ModuleName="MainFrame.dfm"/><File FileName="OptionsFrame.dfm" ContainerId="W32Form" ModuleName="OptionsFrame.dfm"/><File FileName="PracticeFrame.dfm" ContainerId="W32Form" ModuleName="PracticeFrame.dfm"/><File FileName="PreferencesForm.dfm" ContainerId="W32Form" ModuleName="PreferencesForm.dfm"/><File FileName="RegisterFrame.dfm" ContainerId="W32Form" ModuleName="RegisterFrame.dfm"/><File FileName="Win32\Debug\KeyType_DRC.rc" ContainerId="W32RC" ModuleName="KeyType_DRC.rc"/><File FileName="PracticeOptionsForm.dfm" ContainerId="W32Form" ModuleName="PracticeOptionsForm.dfm"/><File FileName="ConverterForm.dfm" ContainerId="W32Form" ModuleName="ConverterForm.dfm"/><File FileName="FlyingWordsFrame.dfm" ContainerId="W32Form" ModuleName="FlyingWordsFrame.dfm"/></FileList></W32ResourceDLL.Personality>
+		</Options>  <FileList>
+      <File FileName="AuthenticationForm.dfm" ContainerId="W32Form" ModuleName="AuthenticationForm.dfm"/>
+      <File FileName="CustomTextFrame.dfm" ContainerId="W32Form" ModuleName="CustomTextFrame.dfm"/>
+      <File FileName="DataModule.dfm" ContainerId="W32Form" ModuleName="DataModule.dfm"/>
+      <File FileName="ExternalSourcesFrame.dfm" ContainerId="W32Form" ModuleName="ExternalSourcesFrame.dfm"/>
+      <File FileName="GeneratedTextFrame.dfm" ContainerId="W32Form" ModuleName="GeneratedTextFrame.dfm"/>
+      <File FileName="LoginFrame.dfm" ContainerId="W32Form" ModuleName="LoginFrame.dfm"/>
+      <File FileName="MainForm.dfm" ContainerId="W32Form" ModuleName="MainForm.dfm"/>
+      <File FileName="MainFrame.dfm" ContainerId="W32Form" ModuleName="MainFrame.dfm"/>
+      <File FileName="OptionsFrame.dfm" ContainerId="W32Form" ModuleName="OptionsFrame.dfm"/>
+      <File FileName="PracticeFrame.dfm" ContainerId="W32Form" ModuleName="PracticeFrame.dfm"/>
+      <File FileName="PreferencesForm.dfm" ContainerId="W32Form" ModuleName="PreferencesForm.dfm"/>
+      <File FileName="RegisterFrame.dfm" ContainerId="W32Form" ModuleName="RegisterFrame.dfm"/>
+      <File FileName="Win32\Debug\KeyType_DRC.rc" ContainerId="W32RC" ModuleName="KeyType_DRC.rc"/>
+      <File FileName="PracticeOptionsForm.dfm" ContainerId="W32Form" ModuleName="PracticeOptionsForm.dfm"/>
+      <File FileName="ConverterForm.dfm" ContainerId="W32Form" ModuleName="ConverterForm.dfm"/>
+      <File FileName="FlyingWordsFrame.dfm" ContainerId="W32Form" ModuleName="FlyingWordsFrame.dfm"/>
+      <File FileName="FlyingWordsStatsFrame.dfm" ContainerId="W32Form" ModuleName="FlyingWordsStatsFrame.dfm"/>
+    </FileList>
+  </W32ResourceDLL.Personality>
 </BorlandProject>

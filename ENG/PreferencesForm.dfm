@@ -1,6 +1,8 @@
 object FPreferences: TFPreferences
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
   Caption = 'Preferences'
   ClientHeight = 444
   ClientWidth = 534

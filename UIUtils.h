@@ -28,8 +28,8 @@ namespace UIUtils {
     int countMaxChars(TRichEdit *RETextBox, const UnicodeString &string);
     int estimateMaxChars(TRichEdit *RETextBox);
 
-    void enableChildControls(TWinControl* parent);
-    void disableChildControls(TWinControl* parent);
+    void enableChildControls(TWinControl* parent, bool enable);
+    void showChildControls(TWinControl* parent, bool show);
     void switchControl(TWinControl* firstControl, TWinControl* secondControl);
 
     void changeFontFamily(TWinControl *Control, const UnicodeString fontFamily);
@@ -52,14 +52,17 @@ namespace UIUtils {
     void displayTimedMessage(TTimer *timer, TLabel *label, const UnicodeString &msg);
     void removeTimedMessage(TTimer *timer, TLabel *label);
 
+    void higlightMessage(TTimer *timer, TLabel *label, TColor color);
+    void removeHiglightMessage(TTimer *timer, TLabel *label);
 
-//    template<typename T>
-//    std::unique_ptr<T> createFrame(TWinControl* parent) {
-//        std::unique_ptr<T> frame = std::make_unique<T>(parent);
-//        frame->Parent = parent;
-//        frame->Align = alClient;
-//        return frame;
-//    }
+
+    template<typename T>
+    std::unique_ptr<T> createFrame(TWinControl* parent) {
+        std::unique_ptr<T> frame = std::make_unique<T>(parent);
+        frame->Parent = parent;
+        frame->Align = alClient;
+        return frame;
+    }
 
     template<typename T,  typename... Args>
     std::unique_ptr<T> createFrame(TWinControl* parent, Args&&... args) {

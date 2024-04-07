@@ -52,10 +52,15 @@ public:		// User declarations
 
     void setPracticeStatus(SessionStatus status);
     void displayStatsItems();
-    void hideStatsItems();
+	void hideStatsItems();
 
-    virtual void __fastcall WndProc(TMessage &Message);
+	void updateSessionStatus(SessionStatus status);
+    void moveCaret(CaretType caretType, int index);
+    void clearCaret(CaretType caretType, int index);
+	void setCaret(CaretType caretType, int index);
 
+    void processCharMessages(WPARAM wParam);
+	static LRESULT CALLBACK RESubclass(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam, UINT_PTR uIdSubclass, DWORD_PTR dwRefData);
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TFrPractice *FrPractice;

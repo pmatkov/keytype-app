@@ -25,16 +25,18 @@
 TFrGeneratedText *FrGeneratedText;
 
 //---------------------------------------------------------------------------
-__fastcall TFrGeneratedText::TFrGeneratedText(TComponent* Owner) : TFrame(Owner), dictionary(ModelFactory::createDictionary(*this)) {}
+__fastcall TFrGeneratedText::TFrGeneratedText(TComponent* Owner) : TFrame(Owner), dictionary(ModelFactory::createDictionary(*this, *this)) {}
 
 void __fastcall TFrGeneratedText::BtBrowseClick(TObject *Sender) {
+
+  UIUtils::setFileDialogProperties(DFileOpen, "Data", "json");
 
 	if (DFileOpen->Execute()) {
 
 		 if (FileExists(DFileOpen->FileName)) {
 
-             UnicodeString path = DFileOpen->FileName;
-             UnicodeString filename = ExtractFileName(path);
+             // extracts filename and extension from path
+             UnicodeString filename = ExtractFileName(DFileOpen->FileName);
 
              if (CBDictionaryFiles->Items->IndexOf(filename) == -1) {
 
@@ -172,9 +174,12 @@ void __fastcall TFrGeneratedText::msgDisplayTimerTimer(TObject *Sender) {
 }
 
 void __fastcall TFrGeneratedText::BtConvertClick(TObject *Sender) {
-    FConverter = std::make_unique<TFConverter>(nullptr);
-    FConverter->Position = poMainFormCenter;
-    FConverter->Show();
+
+	if (!FConverter) {
+		FConverter = std::make_unique<TFConverter>(nullptr);
+		FConverter->Position = poMainFormCenter;
+	}
+	FConverter->Show();
 }
 
 

@@ -6,10 +6,16 @@
 
 #include <memory>
 #include <vector>
-#include "GameArea.h"
+#include <queue>
 #include "FlyingWord.h"
-#include "IDisplay.h"
+#include "Limit.h"
+#include "GameStatistics.h"
+#include "ISingleItemDisplay.h"
 #include "IGameDisplay.h"
+
+class GameThread;
+class KeystrokeProcessorThread;
+class GameScoreThread;
 
 enum class GameStatus {
 	Started,
@@ -20,37 +26,74 @@ enum class GameStatus {
 
 class GameEngine {
 
-    private:
-        IDisplay &uiDisplay;
+	private:
+    	ISingleItemDisplay &singleItemDisplay;
         IGameDisplay &gameDisplay;
 
-        std::vector<FlyingWord> flyingWords;
-        GameArea gameArea;
-        GameStatus gameStatus;
-        std::vector<UnicodeString> colors;
+        std::vector<UnicodeString> wordList;
 
-        int wordsDisplayed = 0;
+		std::queue<FlyingWord> words;
+        std::vector<FlyingWord> wordsOnDisplay;
+		Limit gameArea;
 
-        static std::vector<UnicodeString> enumStrings;
+		GameStatus gameStatus;
+        GameStatistics gameStatistics;
+        UnicodeString lastMatch;
 
-    public:
-      	GameEngine(IDisplay &_uiDisplay, IGameDisplay &_gameDisplay);
+		GameThread *gameThread = nullptr;
+        KeystrokeProcessorThread *keystrokeProcessorThread = nullptr;
+        GameScoreThread *gameScoreThread = nullptr;
 
-        void initializeGame(int top, int bottom, int left, int right);
-        Limit getLimit(int count, int index);
+        std::unique_ptr<TMutex> mutexWords;
+        std::unique_ptr<TMutex> mutexScore;
 
-        void createWords(int count);
+		static std::vector<UnicodeString> enumStrings;
 
-        int getNumberOfWords(int min, int max);
-        UnicodeString getColor();
-        Speed getSpeed();
-        int getStartDelay(int min, int max);
+        template <typename T>
+		void thTerminate(T *&thread);
 
-        int getWordsDisplayed(
+	public:
+		GameEngine(ISingleItemDisplay &_singleItemDisplay, IGameDisplay &_gameDisplay);
 
-//        void setGameStatus(GameStatus status);
+        void loadWordList(const UnicodeString &fileName);
+        bool isWordListLoaded();
 
-        static std::vector<UnicodeString>& getEnumStrings();
+		void initializeGame(Limit _gameArea);
+
+		void createWords(int count);
+        void removeWord();
+        void clearWords();
+        const std::queue<FlyingWord> &getWords() const;
+        FlyingWord getFirstWord() const;
+
+        void addWordOnDisplay(const FlyingWord &word);
+        void replaceWordOnDisplay(int index, const FlyingWord &word);
+		void removeWordOnDisplay(int index);
+		void clearWordsOnDisplay();
+        const std::vector<FlyingWord> &getWordsOnDisplay() const;
+
+		const GameStatus &getGameStatus() const;
+		void setGameStatus(GameStatus _gameStatus);
+        const GameStatistics &getGameStatistics() const;
+		void setGameStatistics(GameStatistics _gameStatistics);
+
+        void setLastMatch(const UnicodeString &_lastMatch);
+        const UnicodeString &getLastMatch() const;
+
+		Limit calculateLimit(int index, int count);
+
+        UnicodeString getRndWord();
+		int getRndWordCount(int min, int max);
+		UnicodeString getRndColor();
+		Speed getRndSpeed();
+        Direction getRndDirection();
+
+		int getDelay(int min, int max);
+
+		void threadTerminate();
+        void gameCleanup();
+
+		static std::vector<UnicodeString>& getEnumStrings();
 
 };
 

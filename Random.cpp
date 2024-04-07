@@ -8,15 +8,16 @@
 
 
 namespace Random {
+	bool initialized = false;
+    std::mt19937 gen;
 
     int getRandom(int min, int max) {
+        if (!initialized) {
+			gen = std::mt19937(static_cast<unsigned int>(time(nullptr)));
+            initialized = true;
+		}
 
-        static std::random_device rd;
-    	static std::mt19937 gen(rd());
-
-		std::uniform_int_distribution<> dist(min, max);
-
+        std::uniform_int_distribution<> dist(min, max);
         return dist(gen);
     }
-
 }

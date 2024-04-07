@@ -234,7 +234,6 @@ object FrGeneratedText: TFrGeneratedText
     end
   end
   object DFileOpen: TOpenTextFileDialog
-    Filter = 'Text files (*.txt)'
     Left = 243
     Top = 302
   end

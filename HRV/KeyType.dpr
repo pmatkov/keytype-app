@@ -8,6 +8,7 @@ library KeyType;
 {ITE} {DFMFileType} {DataModule.dfm}
 {ITE} {DFMFileType} {ExternalSourcesFrame.dfm}
 {ITE} {DFMFileType} {FlyingWordsFrame.dfm}
+{ITE} {DFMFileType} {FlyingWordsStatsFrame.dfm}
 {ITE} {DFMFileType} {GeneratedTextFrame.dfm}
 {ITE} {DFMFileType} {LoginFrame.dfm}
 {ITE} {DFMFileType} {MainForm.dfm}
@@ -25,6 +26,7 @@ library KeyType;
 {$R 'DataModule.dfm' 'DataModule1:TForm'}
 {$R 'ExternalSourcesFrame.dfm' 'FrExternalSources:TForm'}
 {$R 'FlyingWordsFrame.dfm' 'FrFlyingWords:TForm'}
+{$R 'FlyingWordsStatsFrame.dfm' 'FrFlyingWordsStatsFrame:TForm'}
 {$R 'GeneratedTextFrame.dfm' 'FrGeneratedText:TForm'}
 {$R 'LoginFrame.dfm' 'FrLogin:TForm'}
 {$R 'MainForm.dfm' 'FMain:TForm'}
