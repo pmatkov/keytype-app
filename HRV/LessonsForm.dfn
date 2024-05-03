@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\LessonsForm.dfm" source-language="hr-HR" target-language="hr-HR" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\LessonsForm.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">45397.9975694444</prop>
+        <prop prop-type="OrigDateTime">45395.7046990741</prop>
+        <prop prop-type="XlatDateTime">45395.1052777778</prop>
+        <prop prop-type="Translated">4</prop>
+        <prop prop-type="UnTranslated">24</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:FLessons.Left" resname="O:FLessons.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">0</prop>
+          <prop prop-type="Type">TFLessons</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FLessons.Top" resname="O:FLessons.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">1</prop>
+          <prop prop-type="Type">TFLessons</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FLessons.Caption" resname="O:FLessons.Caption">
+        <source>'Configuration'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">2</prop>
+          <prop prop-type="Type">TFLessons</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Konfiguracija'</target>
+      </trans-unit>
+      <trans-unit id="O:FLessons.ClientHeight" resname="O:FLessons.ClientHeight">
+        <source>444</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">3</prop>
+          <prop prop-type="Type">TFLessons</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FLessons.ClientWidth" resname="O:FLessons.ClientWidth">
+        <source>530</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">4</prop>
+          <prop prop-type="Type">TFLessons</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FLessons.Color" resname="O:FLessons.Color">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">5</prop>
+          <prop prop-type="Type">TFLessons</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FLessons.Font.Charset" resname="O:FLessons.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">6</prop>
+          <prop prop-type="Type">TFLessons</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FLessons.Font.Color" resname="O:FLessons.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">7</prop>
+          <prop prop-type="Type">TFLessons</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FLessons.Font.Height" resname="O:FLessons.Font.Height">
+        <source>-12</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">8</prop>
+          <prop prop-type="Type">TFLessons</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FLessons.Font.Name" resname="O:FLessons.Font.Name">
+        <source>'Segoe UI'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">9</prop>
+          <prop prop-type="Type">TFLessons</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FLessons.Font.Style" resname="O:FLessons.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">10</prop>
+          <prop prop-type="Type">TFLessons</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FLessons.TextHeight" resname="O:FLessons.TextHeight">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">11</prop>
+          <prop prop-type="Type">TFLessons</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FLessons.O:BtAccept.Left" resname="O:FLessons.O:BtAccept.Left">
+        <source>447</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">12</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FLessons.O:BtAccept.Top" resname="O:FLessons.O:BtAccept.Top">
+        <source>411</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">13</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FLessons.O:BtAccept.Width" resname="O:FLessons.O:BtAccept.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">14</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FLessons.O:BtAccept.Height" resname="O:FLessons.O:BtAccept.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">15</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FLessons.O:BtAccept.Caption" resname="O:FLessons.O:BtAccept.Caption">
+        <source>'Accept'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">16</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Prihvati'</target>
+      </trans-unit>
+      <trans-unit id="O:FLessons.O:BtAccept.ModalResult" resname="O:FLessons.O:BtAccept.ModalResult">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">17</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FLessons.O:BtAccept.TabOrder" resname="O:FLessons.O:BtAccept.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">18</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FLessons.O:PCLessons.Left" resname="O:FLessons.O:PCLessons.Left">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">19</prop>
+          <prop prop-type="Type">TPageControl</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FLessons.O:PCLessons.Top" resname="O:FLessons.O:PCLessons.Top">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">20</prop>
+          <prop prop-type="Type">TPageControl</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FLessons.O:PCLessons.Width" resname="O:FLessons.O:PCLessons.Width">
+        <source>514</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">21</prop>
+          <prop prop-type="Type">TPageControl</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FLessons.O:PCLessons.Height" resname="O:FLessons.O:PCLessons.Height">
+        <source>395</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">22</prop>
+          <prop prop-type="Type">TPageControl</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FLessons.O:PCLessons.ActivePage" resname="O:FLessons.O:PCLessons.ActivePage">
+        <source>TSCourses</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">23</prop>
+          <prop prop-type="Type">TPageControl</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FLessons.O:PCLessons.TabOrder" resname="O:FLessons.O:PCLessons.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">24</prop>
+          <prop prop-type="Type">TPageControl</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FLessons.O:PCLessons.O:TSCourses.Caption" resname="O:FLessons.O:PCLessons.O:TSCourses.Caption">
+        <source>'Courses'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">25</prop>
+          <prop prop-type="Type">TTabSheet</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Kursevi'</target>
+      </trans-unit>
+      <trans-unit id="O:FLessons.O:PCLessons.O:TSLessons.Caption" resname="O:FLessons.O:PCLessons.O:TSLessons.Caption">
+        <source>'Lessons'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">26</prop>
+          <prop prop-type="Type">TTabSheet</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Lekcije'</target>
+      </trans-unit>
+      <trans-unit id="O:FLessons.O:PCLessons.O:TSLessons.ImageIndex" resname="O:FLessons.O:PCLessons.O:TSLessons.ImageIndex">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45395.1060940856</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">27</prop>
+          <prop prop-type="Type">TTabSheet</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

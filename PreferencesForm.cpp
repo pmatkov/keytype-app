@@ -22,7 +22,7 @@ __fastcall TFPreferences::TFPreferences(TComponent* Owner)	: TForm(Owner)  {}
 
 __fastcall TFPreferences::TFPreferences(TComponent* Owner, MainSession *_mainSession, AuthenticationService *_authService)  : TForm(Owner)
 {
-    if (_mainSession) {
+    if (_mainSession && _authService) {
 
     	mainSession = _mainSession;
         authService = _authService;
@@ -73,7 +73,7 @@ void TFPreferences::setTypingSettingsItems() {
    else {
    	CBFont2->ItemIndex = UIUtils::findItemIndex(UIUtils::getScreenFonts(), mainSession->getTypingSettings().getFontFamily());
    }
-   UIUtils::setComboBoxItems(CBFontSize, {"9", "10", "11", "12"}, IntToStr(mainSession->getTypingSettings().getFontSize()));
+   UIUtils::setComboBoxItems(CBFontSize, {"9", "10", "11", "12", "14"}, IntToStr(mainSession->getTypingSettings().getFontSize()));
 
    CBMistake->Checked = mainSession->getTypingSettings().getStopOnMistake();
    CBConsecutiveMistakes->Checked = mainSession->getTypingSettings().getCountConsecutiveMistakes();

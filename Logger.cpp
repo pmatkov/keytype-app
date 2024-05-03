@@ -21,10 +21,8 @@
 #include "EInvalidArgumentException.h"
 #include "ENullPointerException.h"
 
-
 #define LOG_PREFIX "keytype_"
 #define DATE_FORMAT "yyyy-mm-dd"
-
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -144,7 +142,7 @@ void Logger::flushBuffer() {
         writer = std::make_unique<TStreamWriter>(path, true, TEncoding::UTF8, 1024);
 
         if (firstFlush) {
-        	writer->WriteLine(UnicodeString("!--Session started--!"));
+        	writer->WriteLine(UnicodeString("--Session started--"));
             firstFlush = false;
         }
 

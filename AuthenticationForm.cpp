@@ -28,10 +28,6 @@ __fastcall TFAuthentication::TFAuthentication(TComponent* Owner, AuthenticationS
         FrLogin = UIUtils::createFrame<TFrLogin>(this, authenticationService);
         FrRegister = UIUtils::createFrame<TFrRegister>(this, authenticationService);
 
-        UIUtils::setFrameVisibility<TFrLogin>(FrLogin, true);
-        UIUtils::setFrameVisibility<TFrRegister>(FrRegister, false);
-        Caption = "Login";
-
   		FrLogin->OnRegisterSelect = FrLoginRegisterSelect;
         FrLogin->OnLogin = FrLoginSignInComplete;
 
@@ -77,4 +73,12 @@ void __fastcall TFAuthentication::CreateParams(TCreateParams &Params)
     Params.WndParent = GetDesktopWindow();
 }
 
+
+void __fastcall TFAuthentication::FormActivate(TObject *Sender)
+{
+	UIUtils::setFrameVisibility<TFrLogin>(FrLogin, true);
+    UIUtils::setFrameVisibility<TFrRegister>(FrRegister, false);
+    Caption = "Login";
+}
+//---------------------------------------------------------------------------
 

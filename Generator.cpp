@@ -30,7 +30,6 @@ int GeneratorOptions::getMax() const  {
 
 namespace Generator {
 
-
     UnicodeString generateChars(UnicodeString letters, int maxChars) {
 
         UnicodeString text = "";

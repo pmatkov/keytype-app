@@ -21,6 +21,7 @@
 class TFAuthentication : public TForm
 {
     __published:	// IDE-managed Components
+	void __fastcall FormActivate(TObject *Sender);
 
     private:	// User declarations
     	std::unique_ptr<TFrLogin> FrLogin;

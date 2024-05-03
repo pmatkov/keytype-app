@@ -9,7 +9,7 @@
 #include <Vcl.Forms.hpp>
 #include <Vcl.ExtCtrls.hpp>
 //---------------------------------------------------------------------------
-class TFrFlyingWordsStatsFrame : public TFrame
+class TFrFlyingWordsStats : public TFrame
 {
 __published:	// IDE-managed Components
 	TLabel *LLastWord;
@@ -20,12 +20,12 @@ __published:	// IDE-managed Components
 	TLabel *LPointsDisplay;
 	TLabel *LPoints;
 	TLabel *LMatchCountDisplay;
-	TTimer *msgDisplayTimer;
+	TTimer *TMsgDisplayTimer;
 private:	// User declarations
 public:		// User declarations
-	__fastcall TFrFlyingWordsStatsFrame(TComponent* Owner);
+	__fastcall TFrFlyingWordsStats(TComponent* Owner);
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TFrFlyingWordsStatsFrame *FrFlyingWordsStatsFrame;
+extern PACKAGE TFrFlyingWordsStats *FrFlyingWordsStats;
 //---------------------------------------------------------------------------
 #endif

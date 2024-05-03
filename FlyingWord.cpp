@@ -6,7 +6,7 @@
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 
-FlyingWord::FlyingWord(const UnicodeString &_text, Limit _outerLimit, Position _position, Speed _speed, \
+FlyingWord::FlyingWord(const UnicodeString &_text, FWLimit::Limit _outerLimit, Position _position, Speed _speed, \
 Direction _direction, const UnicodeString &_color, int _maxHDistance) : text(_text), outerLimit(_outerLimit), \
  position(_position), speed(_speed), direction(_direction), color(_color), maxHDistance(_maxHDistance) {}
 
@@ -14,11 +14,11 @@ const UnicodeString &FlyingWord::getText() const {
 	return text;
 }
 
-const Limit &FlyingWord::getOuterLimit() const {
+const FWLimit::Limit &FlyingWord::getOuterLimit() const {
    return outerLimit;
 }
 
-const Limit &FlyingWord::getInnerLimit() const {
+const FWLimit::Limit &FlyingWord::getInnerLimit() const {
    return innerLimit;
 }
 

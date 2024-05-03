@@ -12,7 +12,7 @@
 __fastcall GameThread::GameThread(bool CreateSuspended, IGameDisplay &_gameDisplay, GameEngine &_gameEngine, TMutex &_mutexWords)
 		: TThread(CreateSuspended), gameDisplay(_gameDisplay), gameEngine(_gameEngine), mutexWords(_mutexWords) {
 		 FreeOnTerminate = false;
-		}
+}
 
 void __fastcall GameThread::Execute()
 {

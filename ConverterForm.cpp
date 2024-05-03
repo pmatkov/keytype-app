@@ -50,7 +50,7 @@ void __fastcall TFConverter::BtConvertClick(TObject *Sender)
     }
 
     if (buffer.has_value()) {
-    	std::vector<UnicodeString> wordList = TextUtils::splitTextIntoWords(*buffer);
+    	std::vector<UnicodeString> wordList = TextUtils::splitToTokens(*buffer);
     	std::optional<UnicodeString> jsonString = Dictionary::generateJsonFromWordList(wordList);
 
     	if (jsonString.has_value()) {

@@ -10,7 +10,7 @@
 class TextSource
 {
 	private:
-		UnicodeString text = "The quick brown fox jumps over the lazy dog";
+		UnicodeString text = "";
 
         int wordCount = 0;
         int charCount = 0;

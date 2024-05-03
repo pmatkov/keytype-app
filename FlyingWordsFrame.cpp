@@ -14,6 +14,7 @@
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma link "FlyingWordsStatsFrame"
+#pragma link "FlyingWordsStatsFrame"
 #pragma resource "*.dfm"
 
 TFrFlyingWords *FrFlyingWords;
@@ -25,7 +26,6 @@ __fastcall TFrFlyingWords::TFrFlyingWords(TComponent* Owner) : TFrame(Owner), ga
     keyStrokeEvent = std::make_unique<TEvent>(nullptr, false, false, "KsEvent", false);
     wordMatchEvent = std::make_unique<TEvent>(nullptr, false, false, "WmEvent", false);
     terminateEvent = std::make_unique<TEvent>(nullptr, true, false, "TeEvent", false);
-
 
     LOGGER(LogLevel::Debug, "Flying words frame displayed");
 }
@@ -75,17 +75,17 @@ void __fastcall TFrFlyingWords::BtStartQuitClick(TObject *Sender)
         else{
         	BtStartQuit->Caption = "Quit game";
             this->SetFocus();
-            UIUtils::showChildControls(FrFlyingWordsStatsFrame, true);
+            UIUtils::showChildControls(FrFlyingWordsStats, true);
             CBWordList->Enabled = false;
             BtBrowse->Enabled = false;
             CBTime->Enabled = false;
 
-            gameEngine->initializeGame(Limit(FrFlyingWordsStatsFrame->Height + 10, BtStartQuit->Top - 10, 0, this->ClientWidth));
+            gameEngine->initializeGame(FWLimit::Limit(FrFlyingWordsStats->Height + 10, BtStartQuit->Top - 10, 0, this->ClientWidth));
         }
 	}
     else if (BtStartQuit->Caption == "Quit game") {
         BtStartQuit->Caption = "Start game";
-        UIUtils::showChildControls(FrFlyingWordsStatsFrame, false);
+        UIUtils::showChildControls(FrFlyingWordsStats, false);
         CBWordList->Enabled = true;
         BtBrowse->Enabled = true;
         CBTime->Enabled = true;
@@ -167,6 +167,24 @@ void __fastcall TFrFlyingWords::CBWordListChange(TObject *Sender)
 	gameEngine->loadWordList(CBWordList->Text);
 }
 
+void TFrFlyingWords::setItemSingleItemControl(const UnicodeString& componentName, const UnicodeString& item) {
+
+    if (componentName == "LastWord") {
+    	FrFlyingWordsStats->LLastWordDisplay->Caption = item;
+    	UIUtils::higlightMessage(FrFlyingWordsStats->TMsgDisplayTimer, FrFlyingWordsStats->LLastWordDisplay, clRed);
+    }
+    else if (componentName == "MatchCount") {
+    	FrFlyingWordsStats->LMatchCountDisplay->Caption = item;
+    }
+    else if (componentName == "TimeRemaining") {
+    	FrFlyingWordsStats->LTimeRemainingDisplay->Caption = item;
+    }
+    else if (componentName == "Points") {
+    	FrFlyingWordsStats->LPointsDisplay->Caption = item;
+    }
+}
+
+
 void TFrFlyingWords::processCharMessages(WPARAM wParam) {
 
     if (gameEngine->getGameStatus() == GameStatus::Started) {
@@ -187,29 +205,11 @@ void TFrFlyingWords::processCharMessages(WPARAM wParam) {
 }
 
 
-void TFrFlyingWords::setItemSingleItemControl(const UnicodeString& componentName, const UnicodeString& item) {
-
-    if (componentName == "LastWord") {
-    	FrFlyingWordsStatsFrame->LLastWordDisplay->Caption = item;
-    	UIUtils::higlightMessage(FrFlyingWordsStatsFrame->msgDisplayTimer, FrFlyingWordsStatsFrame->LLastWordDisplay, clRed);
-    }
-    else if (componentName == "MatchCount") {
-    	FrFlyingWordsStatsFrame->LMatchCountDisplay->Caption = item;
-    }
-    else if (componentName == "TimeRemaining") {
-    	FrFlyingWordsStatsFrame->LTimeRemainingDisplay->Caption = item;
-    }
-    else if (componentName == "Points") {
-    	FrFlyingWordsStatsFrame->LPointsDisplay->Caption = item;
-    }
-}
-
 void __fastcall TFrFlyingWords::WndProc(Messages::TMessage &Message) {
 
     switch (Message.Msg) {
 
         case WM_CHAR: {
-
             processCharMessages(Message.WParam);
             break;
         }
@@ -220,10 +220,10 @@ void __fastcall TFrFlyingWords::WndProc(Messages::TMessage &Message) {
 }
 
 
-void __fastcall TFrFlyingWords::FrFlyingWordsStatsFramemsgDisplayTimerTimer(TObject *Sender)
+void __fastcall TFrFlyingWords::FrFlyingWordsStatsFrameTMsgDisplayTimerTimer(TObject *Sender)
 
 {
-  	UIUtils::removeHiglightMessage(FrFlyingWordsStatsFrame->msgDisplayTimer, FrFlyingWordsStatsFrame->LLastWordDisplay);
+  	UIUtils::removeHiglightMessage(FrFlyingWordsStats->TMsgDisplayTimer, FrFlyingWordsStats->LLastWordDisplay);
 }
 //---------------------------------------------------------------------------
 

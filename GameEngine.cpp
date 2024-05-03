@@ -32,7 +32,7 @@ void GameEngine::loadWordList(const UnicodeString &fileName) {
     }
 
     if (buffer.has_value()) {
-        wordList = TextUtils::splitTextIntoWords(*buffer);
+        wordList = TextUtils::splitToTokens(*buffer);
     }
 }
 
@@ -40,7 +40,7 @@ bool GameEngine::isWordListLoaded() {
     return  wordList.size();
 }
 
-void GameEngine::initializeGame(Limit _gameArea) {
+void GameEngine::initializeGame(FWLimit::Limit _gameArea) {
 
 	if (!gameThread && !keystrokeProcessorThread && !gameScoreThread) {
 
@@ -61,7 +61,7 @@ void GameEngine::createWords(int count) {
 
    for (int i = 0; i < count; i++) {
 
-        Limit limit = calculateLimit(i, count);
+        FWLimit::Limit limit = calculateLimit(i, count);
         words.push(FlyingWord(getRndWord(), limit, Position(0, (limit.getBottom() - limit.getTop())/ 2), getRndSpeed(), getRndDirection(), getRndColor(), 0));
    }
 }
@@ -127,10 +127,10 @@ const UnicodeString &GameEngine::getLastMatch() const {
     return lastMatch;
 }
 
-Limit GameEngine::calculateLimit(int index, int count) {
+FWLimit::Limit GameEngine::calculateLimit(int index, int count) {
 	 int areaHeight = gameArea.getBottom() - gameArea.getTop();
 	 int rowHeight = areaHeight/ count;
-	 return Limit(gameArea.getTop() + index * rowHeight, gameArea.getTop() + index * rowHeight + rowHeight, gameArea.getLeft(), gameArea.getRight());
+	 return FWLimit::Limit(gameArea.getTop() + index * rowHeight, gameArea.getTop() + index * rowHeight + rowHeight, gameArea.getLeft(), gameArea.getRight());
 }
 
 UnicodeString GameEngine::getRndWord() {

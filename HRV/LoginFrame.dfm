@@ -28,8 +28,9 @@ object FrLogin: TFrLogin
   object LResponse: TLabel
     Left = 72
     Top = 156
-    Width = 3
+    Width = 118
     Height = 15
+    AutoSize = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clRed
     Font.Height = -12
@@ -51,7 +52,7 @@ object FrLogin: TFrLogin
     Top = 213
     Width = 118
     Height = 25
-    Caption = 'Nastavi kao gost'
+    Caption = 'Sign in as guest'
     TabOrder = 3
     OnClick = BtGuestClick
   end

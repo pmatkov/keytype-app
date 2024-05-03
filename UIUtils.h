@@ -36,6 +36,7 @@ namespace UIUtils {
 
     void addComboBoxItem(TComboBox *comboBox, const UnicodeString &item, int selectedIndex);
     void selectComboBoxItem(TComboBox *comboBox, int selectedIndex);
+   	void selectComboBoxItem(TComboBox *comboBox, const UnicodeString &item);
     void setComboBoxItems(TComboBox *comboBox, const std::vector<UnicodeString> &items, int selectedIndex);
     void setComboBoxItems(TComboBox *comboBox, const std::vector<UnicodeString> &items, const UnicodeString &selectedItem);
     int findItemIndex(const std::vector<UnicodeString> &items, const UnicodeString &itemToSearch);

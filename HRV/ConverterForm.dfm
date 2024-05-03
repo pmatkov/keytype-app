@@ -3,8 +3,8 @@ object FConverter: TFConverter
   Top = 0
   BorderIcons = [biSystemMenu]
   Caption = 'Convert word list to JSON'
-  ClientHeight = 125
-  ClientWidth = 305
+  ClientHeight = 124
+  ClientWidth = 301
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -69,8 +69,8 @@ object FConverter: TFConverter
     OnClick = BtBrowseClick
   end
   object DFileOpen: TOpenTextFileDialog
-    Left = 144
-    Top = 69
+    Left = 174
+    Top = 66
   end
   object msgDisplayTimer: TTimer
     Enabled = False

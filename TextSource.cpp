@@ -5,7 +5,12 @@
 #pragma hdrstop
 #pragma package(smart_init)
 
-TextSource::TextSource() {}
+TextSource::TextSource() {
+
+	text = "The quick brown fox jumps over the lazy dog";
+	wordCount = TextUtils::countWords(text);
+    charCount = text.Length();
+}
 
 TextSource::TextSource(UnicodeString _text) : text(_text) {
 

@@ -161,26 +161,27 @@ namespace UIUtils {
 
     int estimateMaxChars(TRichEdit *RETextBox) {
 
-        std::unique_ptr<TBitmap> bitmap = std::make_unique<TBitmap>();
+      	std::unique_ptr<TBitmap> bitmap = std::make_unique<TBitmap>();
         std::unique_ptr<TCanvas> canvas = std::make_unique<TCanvas>();
         canvas->Handle = bitmap->Canvas->Handle;
 
         canvas->Font = RETextBox->Font;
-        int chartWidth = canvas->TextWidth("o");
+        int charWidth = canvas->TextWidth("o");
         int charHeight = canvas->TextHeight("o");
 
-        int initialEstimate = (RETextBox->ClientWidth/ chartWidth) * (RETextBox->ClientHeight/ charHeight);
+        int initialEstimate = (RETextBox->ClientWidth / charWidth) * (RETextBox->ClientHeight / charHeight);
         int finalEstimate[3];
 
+        int splitSize = 100;
+
+        UnicodeString sampleText = Generator::generateChars("abcdefghijklmnopqrstuvwxyz", initialEstimate * 2);
+
         for (int i = 0; i < 3; i++) {
-            UnicodeString generatedText = Generator::generateChars("abcdefghijklmnopqrstuvwxyz", initialEstimate * 2);
+            UnicodeString generatedText = sampleText.SubString(1, splitSize * (i + 1));
 
             int textWidth = canvas->TextWidth(generatedText);
             int textHeight = canvas->TextHeight(generatedText);
 
-            while ((float)(RETextBox->ClientWidth * (RETextBox->ClientHeight/ textHeight))/ textWidth > 1.0f)  {
-                generatedText.Delete(generatedText.Length(), 1);
-            }
             finalEstimate[i] = generatedText.Length() - generatedText.Length() * 0.1;
         }
 
@@ -264,6 +265,15 @@ namespace UIUtils {
         comboBox->ItemIndex = selectedIndex;
     }
 
+    void selectComboBoxItem(TComboBox *comboBox, const UnicodeString &item) {
+
+    	int index = comboBox->Items->IndexOf(item);
+
+    	if (index != -1) {
+        	selectComboBoxItem(comboBox, index);
+        }
+    }
+
     void setComboBoxItems(TComboBox *comboBox, const std::vector<UnicodeString> &items, int selectedIndex) {
 
         comboBox->Items->Clear();
@@ -292,7 +302,6 @@ namespace UIUtils {
 
         comboBox->ItemIndex = index;
     }
-
 
     // ListView items
 
@@ -337,7 +346,6 @@ namespace UIUtils {
         edit->Text = text;
     }
 
-
     int findItemIndex(const std::vector<UnicodeString> &items, const UnicodeString &itemToSearch) {
           for (int i= 0; i < items.size(); i++) {
 
@@ -378,7 +386,6 @@ namespace UIUtils {
         FileDialog->InitialDir = FileUtils::createAbsolutePath(dir, false);
         FileDialog->Filter = "Text files|*." + filter.UpperCase();
     }
-
 
     void displayTimedMessage(TTimer *timer, TLabel *label, const UnicodeString &msg) {
     	label->Font->Color = clBlue;

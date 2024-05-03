@@ -26,6 +26,21 @@ object FMain: TFMain
         OnClick = MenuSubitemPracticeNewClick
       end
     end
+    object MenuItemLessons: TMenuItem
+      Caption = 'Lessons'
+      object MenuSubItemConfiguration: TMenuItem
+        Caption = 'Configuration'
+        OnClick = MenuSubItemConfigurationClick
+      end
+      object MenuSubItemLessonStart: TMenuItem
+        Caption = 'Start'
+        OnClick = MenuSubItemLessonStartClick
+      end
+      object MenuSubItemLessonResults: TMenuItem
+        Caption = 'Results'
+        OnClick = MenuSubItemLessonResultsClick
+      end
+    end
     object MenuItemGames: TMenuItem
       Caption = 'Games'
       object MenuSubitemFlyingWords: TMenuItem

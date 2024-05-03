@@ -7,14 +7,16 @@
 #pragma package(smart_init)
 
 
-User::User() {}
+User::User() {
+	userType = Guest;
+}
 
-User::User(const UnicodeString &_username) : username(_username) {
+User::User(const UnicodeString &_username, const UnicodeString &_password) : username(_username), password(_password)  {
 	userType = Registered;
 };
 
-User::User(const UnicodeString &_id, const UnicodeString &_username, const UnicodeString &_name, const UnicodeString &_surname, int _age,  const UnicodeString &_email) :
-id (_id), username(_username), name(_name), surname(_surname), age(_age), email(_email) {
+User::User(const UnicodeString &_id, const UnicodeString &_username,  const UnicodeString &_password, const UnicodeString &_name, const UnicodeString &_surname, int _age,  const UnicodeString &_email) :
+id (_id), username(_username), password(_password), name(_name), surname(_surname), age(_age), email(_email) {
 	userType = Registered;
 }
 
@@ -24,6 +26,14 @@ const UnicodeString &User::getUsername() const {
 
 void User::setUsername(const UnicodeString &_username) {
 	username = _username;
+}
+
+const UnicodeString &User::getPassword() const {
+   return password;
+}
+
+void User::setPassword(const UnicodeString &_password) {
+    password = _password;
 }
 
 const UnicodeString& User::getName() const {

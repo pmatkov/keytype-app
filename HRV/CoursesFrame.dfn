@@ -1,0 +1,913 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\CoursesFrame.dfm" source-language="hr-HR" target-language="hr-HR" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\CoursesFrame.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">45409.960462963</prop>
+        <prop prop-type="OrigDateTime">45409.9577314815</prop>
+        <prop prop-type="XlatDateTime">45397.0709953704</prop>
+        <prop prop-type="Translated">0</prop>
+        <prop prop-type="UnTranslated">178</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:FrCourses.Left" resname="O:FrCourses.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.1060927083</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TFrCourses</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.Top" resname="O:FrCourses.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.1060927083</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TFrCourses</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.Width" resname="O:FrCourses.Width">
+        <source>506</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.1060927083</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TFrCourses</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.Height" resname="O:FrCourses.Height">
+        <source>365</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.1060927083</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TFrCourses</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.TabOrder" resname="O:FrCourses.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.1060927083</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFrCourses</prop><prop prop-type="Localize">0</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.Left" resname="O:FrCourses.O:GBCourses.Left">
+        <source>6</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7009888194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.Top" resname="O:FrCourses.O:GBCourses.Top">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7009888194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.Width" resname="O:FrCourses.O:GBCourses.Width">
+        <source>491</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7009888194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.Height" resname="O:FrCourses.O:GBCourses.Height">
+        <source>352</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7009888194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.TabOrder" resname="O:FrCourses.O:GBCourses.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7009888194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LName.Left" resname="O:FrCourses.O:GBCourses.O:LName.Left">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LName.Top" resname="O:FrCourses.O:GBCourses.O:LName.Top">
+        <source>243</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LName.Width" resname="O:FrCourses.O:GBCourses.O:LName.Width">
+        <source>30</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LName.Height" resname="O:FrCourses.O:GBCourses.O:LName.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LName.Caption" resname="O:FrCourses.O:GBCourses.O:LName.Caption">
+        <source>'name'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LDescription.Left" resname="O:FrCourses.O:GBCourses.O:LDescription.Left">
+        <source>93</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LDescription.Top" resname="O:FrCourses.O:GBCourses.O:LDescription.Top">
+        <source>243</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LDescription.Width" resname="O:FrCourses.O:GBCourses.O:LDescription.Width">
+        <source>59</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LDescription.Height" resname="O:FrCourses.O:GBCourses.O:LDescription.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LDescription.Caption" resname="O:FrCourses.O:GBCourses.O:LDescription.Caption">
+        <source>'description'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LDifficulty.Left" resname="O:FrCourses.O:GBCourses.O:LDifficulty.Left">
+        <source>216</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LDifficulty.Top" resname="O:FrCourses.O:GBCourses.O:LDifficulty.Top">
+        <source>243</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LDifficulty.Width" resname="O:FrCourses.O:GBCourses.O:LDifficulty.Width">
+        <source>47</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LDifficulty.Height" resname="O:FrCourses.O:GBCourses.O:LDifficulty.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LDifficulty.Caption" resname="O:FrCourses.O:GBCourses.O:LDifficulty.Caption">
+        <source>'difficulty'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LGoal.Left" resname="O:FrCourses.O:GBCourses.O:LGoal.Left">
+        <source>273</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LGoal.Top" resname="O:FrCourses.O:GBCourses.O:LGoal.Top">
+        <source>240</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LGoal.Width" resname="O:FrCourses.O:GBCourses.O:LGoal.Width">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LGoal.Height" resname="O:FrCourses.O:GBCourses.O:LGoal.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LGoal.Caption" resname="O:FrCourses.O:GBCourses.O:LGoal.Caption">
+        <source>'goal'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LLanguage.Left" resname="O:FrCourses.O:GBCourses.O:LLanguage.Left">
+        <source>408</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LLanguage.Top" resname="O:FrCourses.O:GBCourses.O:LLanguage.Top">
+        <source>243</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LLanguage.Width" resname="O:FrCourses.O:GBCourses.O:LLanguage.Width">
+        <source>49</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LLanguage.Height" resname="O:FrCourses.O:GBCourses.O:LLanguage.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LLanguage.Caption" resname="O:FrCourses.O:GBCourses.O:LLanguage.Caption">
+        <source>'language'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LGoalValue.Left" resname="O:FrCourses.O:GBCourses.O:LGoalValue.Left">
+        <source>354</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45408.0166682639</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LGoalValue.Top" resname="O:FrCourses.O:GBCourses.O:LGoalValue.Top">
+        <source>243</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45408.0166682639</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LGoalValue.Width" resname="O:FrCourses.O:GBCourses.O:LGoalValue.Width">
+        <source>41</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45408.0166682639</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LGoalValue.Height" resname="O:FrCourses.O:GBCourses.O:LGoalValue.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45408.0166682639</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:LGoalValue.Caption" resname="O:FrCourses.O:GBCourses.O:LGoalValue.Caption">
+        <source>'goal val'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45408.0166682639</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:BtClearSelection.Left" resname="O:FrCourses.O:GBCourses.O:BtClearSelection.Left">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45396.5176851389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:BtClearSelection.Top" resname="O:FrCourses.O:GBCourses.O:BtClearSelection.Top">
+        <source>303</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45396.5176851389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:BtClearSelection.Width" resname="O:FrCourses.O:GBCourses.O:BtClearSelection.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45396.5176851389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:BtClearSelection.Height" resname="O:FrCourses.O:GBCourses.O:BtClearSelection.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45396.5176851389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:BtClearSelection.Caption" resname="O:FrCourses.O:GBCourses.O:BtClearSelection.Caption">
+        <source>'Clear select'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45396.5176851389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:BtClearSelection.TabOrder" resname="O:FrCourses.O:GBCourses.O:BtClearSelection.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45396.5176851389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:BtClearSelection.OnClick" resname="O:FrCourses.O:GBCourses.O:BtClearSelection.OnClick">
+        <source>BtClearSelectionClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45396.5176851389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:EName.Left" resname="O:FrCourses.O:GBCourses.O:EName.Left">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:EName.Top" resname="O:FrCourses.O:GBCourses.O:EName.Top">
+        <source>261</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:EName.Width" resname="O:FrCourses.O:GBCourses.O:EName.Width">
+        <source>64</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:EName.Height" resname="O:FrCourses.O:GBCourses.O:EName.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:EName.TabOrder" resname="O:FrCourses.O:GBCourses.O:EName.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:EDescription.Left" resname="O:FrCourses.O:GBCourses.O:EDescription.Left">
+        <source>87</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:EDescription.Top" resname="O:FrCourses.O:GBCourses.O:EDescription.Top">
+        <source>261</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:EDescription.Width" resname="O:FrCourses.O:GBCourses.O:EDescription.Width">
+        <source>121</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:EDescription.Height" resname="O:FrCourses.O:GBCourses.O:EDescription.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:EDescription.TabOrder" resname="O:FrCourses.O:GBCourses.O:EDescription.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBDifficulty.Left" resname="O:FrCourses.O:GBCourses.O:CBDifficulty.Left">
+        <source>216</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBDifficulty.Top" resname="O:FrCourses.O:GBCourses.O:CBDifficulty.Top">
+        <source>261</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBDifficulty.Width" resname="O:FrCourses.O:GBCourses.O:CBDifficulty.Width">
+        <source>47</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBDifficulty.Height" resname="O:FrCourses.O:GBCourses.O:CBDifficulty.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7646830556</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBDifficulty.Style" resname="O:FrCourses.O:GBCourses.O:CBDifficulty.Style">
+        <source>csDropDownList</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45397.0783114468</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBDifficulty.TabOrder" resname="O:FrCourses.O:GBCourses.O:CBDifficulty.TabOrder">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7646830556</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBDifficulty.Items.Strings[0]" resname="O:FrCourses.O:GBCourses.O:CBDifficulty.Items.Strings[0]">
+        <source>'1'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7646830556</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBDifficulty.Items.Strings[1]" resname="O:FrCourses.O:GBCourses.O:CBDifficulty.Items.Strings[1]">
+        <source>'2'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7646830556</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBDifficulty.Items.Strings[2]" resname="O:FrCourses.O:GBCourses.O:CBDifficulty.Items.Strings[2]">
+        <source>'3'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7646830556</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBGoal.Left" resname="O:FrCourses.O:GBCourses.O:CBGoal.Left">
+        <source>273</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45397.0693378009</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBGoal.Top" resname="O:FrCourses.O:GBCourses.O:CBGoal.Top">
+        <source>261</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45397.0693378009</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBGoal.Width" resname="O:FrCourses.O:GBCourses.O:CBGoal.Width">
+        <source>70</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45397.0693378009</prop><prop prop-type="Status">0</prop><prop prop-type="Order">68</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBGoal.Height" resname="O:FrCourses.O:GBCourses.O:CBGoal.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45397.0693378009</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBGoal.Style" resname="O:FrCourses.O:GBCourses.O:CBGoal.Style">
+        <source>csDropDownList</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45397.0783114468</prop><prop prop-type="Status">0</prop><prop prop-type="Order">70</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBGoal.TabOrder" resname="O:FrCourses.O:GBCourses.O:CBGoal.TabOrder">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45397.0693378009</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBGoal.Items.Strings[0]" resname="O:FrCourses.O:GBCourses.O:CBGoal.Items.Strings[0]">
+        <source>'accuracy'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45397.0693378009</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBGoal.Items.Strings[1]" resname="O:FrCourses.O:GBCourses.O:CBGoal.Items.Strings[1]">
+        <source>'speed'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45397.0693378125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBLanguage.Left" resname="O:FrCourses.O:GBCourses.O:CBLanguage.Left">
+        <source>408</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBLanguage.Top" resname="O:FrCourses.O:GBCourses.O:CBLanguage.Top">
+        <source>261</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">75</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBLanguage.Width" resname="O:FrCourses.O:GBCourses.O:CBLanguage.Width">
+        <source>72</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">76</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBLanguage.Height" resname="O:FrCourses.O:GBCourses.O:CBLanguage.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">77</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBLanguage.Style" resname="O:FrCourses.O:GBCourses.O:CBLanguage.Style">
+        <source>csDropDownList</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45397.0783114468</prop><prop prop-type="Status">0</prop><prop prop-type="Order">78</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBLanguage.TabOrder" resname="O:FrCourses.O:GBCourses.O:CBLanguage.TabOrder">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">79</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBLanguage.Items.Strings[0]" resname="O:FrCourses.O:GBCourses.O:CBLanguage.Items.Strings[0]">
+        <source>'English'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBLanguage.Items.Strings[1]" resname="O:FrCourses.O:GBCourses.O:CBLanguage.Items.Strings[1]">
+        <source>'Croatian'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.764683044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBFilter.Left" resname="O:FrCourses.O:GBCourses.O:CBFilter.Left">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317477</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBFilter.Top" resname="O:FrCourses.O:GBCourses.O:CBFilter.Top">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317477</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBFilter.Width" resname="O:FrCourses.O:GBCourses.O:CBFilter.Width">
+        <source>85</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">84</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBFilter.Height" resname="O:FrCourses.O:GBCourses.O:CBFilter.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBFilter.Style" resname="O:FrCourses.O:GBCourses.O:CBFilter.Style">
+        <source>csDropDownList</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">86</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:CBFilter.TabOrder" resname="O:FrCourses.O:GBCourses.O:CBFilter.TabOrder">
+        <source>6</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">87</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:EFilter.Left" resname="O:FrCourses.O:GBCourses.O:EFilter.Left">
+        <source>99</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">88</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:EFilter.Top" resname="O:FrCourses.O:GBCourses.O:EFilter.Top">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">89</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:EFilter.Width" resname="O:FrCourses.O:GBCourses.O:EFilter.Width">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">90</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:EFilter.Height" resname="O:FrCourses.O:GBCourses.O:EFilter.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">91</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:EFilter.TabOrder" resname="O:FrCourses.O:GBCourses.O:EFilter.TabOrder">
+        <source>7</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">92</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:BtFilter.Left" resname="O:FrCourses.O:GBCourses.O:BtFilter.Left">
+        <source>155</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">93</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:BtFilter.Top" resname="O:FrCourses.O:GBCourses.O:BtFilter.Top">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">94</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:BtFilter.Width" resname="O:FrCourses.O:GBCourses.O:BtFilter.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">95</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:BtFilter.Height" resname="O:FrCourses.O:GBCourses.O:BtFilter.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">96</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:BtFilter.Caption" resname="O:FrCourses.O:GBCourses.O:BtFilter.Caption">
+        <source>'Filter'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">97</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:BtFilter.TabOrder" resname="O:FrCourses.O:GBCourses.O:BtFilter.TabOrder">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">98</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:BtFilter.OnClick" resname="O:FrCourses.O:GBCourses.O:BtFilter.OnClick">
+        <source>BtFilterClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">99</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:ESort.Left" resname="O:FrCourses.O:GBCourses.O:ESort.Left">
+        <source>277</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">100</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:ESort.Top" resname="O:FrCourses.O:GBCourses.O:ESort.Top">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">101</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:ESort.Width" resname="O:FrCourses.O:GBCourses.O:ESort.Width">
+        <source>121</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">102</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:ESort.Height" resname="O:FrCourses.O:GBCourses.O:ESort.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">103</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:ESort.TabOrder" resname="O:FrCourses.O:GBCourses.O:ESort.TabOrder">
+        <source>9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">104</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:BtSort.Left" resname="O:FrCourses.O:GBCourses.O:BtSort.Left">
+        <source>404</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">105</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:BtSort.Top" resname="O:FrCourses.O:GBCourses.O:BtSort.Top">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">106</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:BtSort.Width" resname="O:FrCourses.O:GBCourses.O:BtSort.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">107</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:BtSort.Height" resname="O:FrCourses.O:GBCourses.O:BtSort.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">108</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:BtSort.Caption" resname="O:FrCourses.O:GBCourses.O:BtSort.Caption">
+        <source>'Sort'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">109</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:BtSort.TabOrder" resname="O:FrCourses.O:GBCourses.O:BtSort.TabOrder">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">110</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:BtSort.OnClick" resname="O:FrCourses.O:GBCourses.O:BtSort.OnClick">
+        <source>BtSortClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45400.9954317593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">111</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:EGoalValue.Left" resname="O:FrCourses.O:GBCourses.O:EGoalValue.Left">
+        <source>354</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45408.0166682639</prop><prop prop-type="Status">0</prop><prop prop-type="Order">112</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:EGoalValue.Top" resname="O:FrCourses.O:GBCourses.O:EGoalValue.Top">
+        <source>261</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45408.0166682639</prop><prop prop-type="Status">0</prop><prop prop-type="Order">113</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:EGoalValue.Width" resname="O:FrCourses.O:GBCourses.O:EGoalValue.Width">
+        <source>48</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45408.0166682639</prop><prop prop-type="Status">0</prop><prop prop-type="Order">114</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:EGoalValue.Height" resname="O:FrCourses.O:GBCourses.O:EGoalValue.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45408.0166682639</prop><prop prop-type="Status">0</prop><prop prop-type="Order">115</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:GBCourses.O:EGoalValue.TabOrder" resname="O:FrCourses.O:GBCourses.O:EGoalValue.TabOrder">
+        <source>11</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45408.0166682639</prop><prop prop-type="Status">0</prop><prop prop-type="Order">116</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Left" resname="O:FrCourses.O:DBGridCourses.Left">
+        <source>6</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.1060927083</prop><prop prop-type="Status">0</prop><prop prop-type="Order">117</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Top" resname="O:FrCourses.O:DBGridCourses.Top">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.1060927083</prop><prop prop-type="Status">0</prop><prop prop-type="Order">118</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Width" resname="O:FrCourses.O:DBGridCourses.Width">
+        <source>491</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.1060927083</prop><prop prop-type="Status">0</prop><prop prop-type="Order">119</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Height" resname="O:FrCourses.O:DBGridCourses.Height">
+        <source>190</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.1060927083</prop><prop prop-type="Status">0</prop><prop prop-type="Order">120</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.DataSource" resname="O:FrCourses.O:DBGridCourses.DataSource">
+        <source>DataModule1.DCourses</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.1060927083</prop><prop prop-type="Status">0</prop><prop prop-type="Order">121</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Options" resname="O:FrCourses.O:DBGridCourses.Options">
+        <source>[dgTitles, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick, dgTitleHotTrack]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7479465625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">122</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.ReadOnly" resname="O:FrCourses.O:DBGridCourses.ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7505306019</prop><prop prop-type="Status">0</prop><prop prop-type="Order">123</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.TabOrder" resname="O:FrCourses.O:DBGridCourses.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.1060927083</prop><prop prop-type="Status">0</prop><prop prop-type="Order">124</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.TitleFont.Charset" resname="O:FrCourses.O:DBGridCourses.TitleFont.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.1060927083</prop><prop prop-type="Status">0</prop><prop prop-type="Order">125</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.TitleFont.Color" resname="O:FrCourses.O:DBGridCourses.TitleFont.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.1060927083</prop><prop prop-type="Status">0</prop><prop prop-type="Order">126</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.TitleFont.Height" resname="O:FrCourses.O:DBGridCourses.TitleFont.Height">
+        <source>-12</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.1060927083</prop><prop prop-type="Status">0</prop><prop prop-type="Order">127</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.TitleFont.Name" resname="O:FrCourses.O:DBGridCourses.TitleFont.Name">
+        <source>'Segoe UI'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.1060927083</prop><prop prop-type="Status">0</prop><prop prop-type="Order">128</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.TitleFont.Style" resname="O:FrCourses.O:DBGridCourses.TitleFont.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.1060927083</prop><prop prop-type="Status">0</prop><prop prop-type="Order">129</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.OnCellClick" resname="O:FrCourses.O:DBGridCourses.OnCellClick">
+        <source>DBGridCoursesCellClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7646830556</prop><prop prop-type="Status">0</prop><prop prop-type="Order">130</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[0].Expanded" resname="O:FrCourses.O:DBGridCourses.Columns[0].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.5365584144</prop><prop prop-type="Status">0</prop><prop prop-type="Order">131</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[0].FieldName" resname="O:FrCourses.O:DBGridCourses.Columns[0].FieldName">
+        <source>'id'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.5365584144</prop><prop prop-type="Status">0</prop><prop prop-type="Order">132</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[0].Width" resname="O:FrCourses.O:DBGridCourses.Columns[0].Width">
+        <source>20</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7191946296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">133</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[0].Visible" resname="O:FrCourses.O:DBGridCourses.Columns[0].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.5365584144</prop><prop prop-type="Status">0</prop><prop prop-type="Order">134</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[1].Expanded" resname="O:FrCourses.O:DBGridCourses.Columns[1].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.5365584144</prop><prop prop-type="Status">0</prop><prop prop-type="Order">135</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[1].FieldName" resname="O:FrCourses.O:DBGridCourses.Columns[1].FieldName">
+        <source>'name'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.5365584144</prop><prop prop-type="Status">0</prop><prop prop-type="Order">136</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[1].Title.Caption" resname="O:FrCourses.O:DBGridCourses.Columns[1].Title.Caption">
+        <source>'Name'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7191946296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">137</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[1].Width" resname="O:FrCourses.O:DBGridCourses.Columns[1].Width">
+        <source>90</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7191946296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">138</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[1].Visible" resname="O:FrCourses.O:DBGridCourses.Columns[1].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.5365584144</prop><prop prop-type="Status">0</prop><prop prop-type="Order">139</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[2].Expanded" resname="O:FrCourses.O:DBGridCourses.Columns[2].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.5365584144</prop><prop prop-type="Status">0</prop><prop prop-type="Order">140</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[2].FieldName" resname="O:FrCourses.O:DBGridCourses.Columns[2].FieldName">
+        <source>'description'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.5365584144</prop><prop prop-type="Status">0</prop><prop prop-type="Order">141</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[2].Title.Caption" resname="O:FrCourses.O:DBGridCourses.Columns[2].Title.Caption">
+        <source>'Description'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7191946296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">142</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[2].Width" resname="O:FrCourses.O:DBGridCourses.Columns[2].Width">
+        <source>120</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7191946296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">143</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[2].Visible" resname="O:FrCourses.O:DBGridCourses.Columns[2].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.5365584144</prop><prop prop-type="Status">0</prop><prop prop-type="Order">144</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[3].Expanded" resname="O:FrCourses.O:DBGridCourses.Columns[3].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.5365584144</prop><prop prop-type="Status">0</prop><prop prop-type="Order">145</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[3].FieldName" resname="O:FrCourses.O:DBGridCourses.Columns[3].FieldName">
+        <source>'difficulty'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.5365584144</prop><prop prop-type="Status">0</prop><prop prop-type="Order">146</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[3].Title.Caption" resname="O:FrCourses.O:DBGridCourses.Columns[3].Title.Caption">
+        <source>'Difficulty'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7191946296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">147</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[3].Width" resname="O:FrCourses.O:DBGridCourses.Columns[3].Width">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7191946296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">148</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[3].Visible" resname="O:FrCourses.O:DBGridCourses.Columns[3].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.5365584144</prop><prop prop-type="Status">0</prop><prop prop-type="Order">149</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[4].Expanded" resname="O:FrCourses.O:DBGridCourses.Columns[4].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.5365584144</prop><prop prop-type="Status">0</prop><prop prop-type="Order">150</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[4].FieldName" resname="O:FrCourses.O:DBGridCourses.Columns[4].FieldName">
+        <source>'goal'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.5365584144</prop><prop prop-type="Status">0</prop><prop prop-type="Order">151</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[4].Title.Caption" resname="O:FrCourses.O:DBGridCourses.Columns[4].Title.Caption">
+        <source>'Goal'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7191946296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">152</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[4].Width" resname="O:FrCourses.O:DBGridCourses.Columns[4].Width">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7191946296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">153</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[4].Visible" resname="O:FrCourses.O:DBGridCourses.Columns[4].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.5365584144</prop><prop prop-type="Status">0</prop><prop prop-type="Order">154</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[5].Expanded" resname="O:FrCourses.O:DBGridCourses.Columns[5].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7191946296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">155</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[5].FieldName" resname="O:FrCourses.O:DBGridCourses.Columns[5].FieldName">
+        <source>'goalValue'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7191946296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">156</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[5].Title.Caption" resname="O:FrCourses.O:DBGridCourses.Columns[5].Title.Caption">
+        <source>'Goal value'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7191946296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">157</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[5].Width" resname="O:FrCourses.O:DBGridCourses.Columns[5].Width">
+        <source>60</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7191946296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">158</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[5].Visible" resname="O:FrCourses.O:DBGridCourses.Columns[5].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7191946296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">159</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[6].Expanded" resname="O:FrCourses.O:DBGridCourses.Columns[6].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45408.0166682639</prop><prop prop-type="Status">0</prop><prop prop-type="Order">160</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[6].FieldName" resname="O:FrCourses.O:DBGridCourses.Columns[6].FieldName">
+        <source>'language'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45408.0166682639</prop><prop prop-type="Status">0</prop><prop prop-type="Order">161</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[6].Title.Caption" resname="O:FrCourses.O:DBGridCourses.Columns[6].Title.Caption">
+        <source>'Language'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45408.0166682639</prop><prop prop-type="Status">0</prop><prop prop-type="Order">162</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[6].Width" resname="O:FrCourses.O:DBGridCourses.Columns[6].Width">
+        <source>80</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45408.0166682639</prop><prop prop-type="Status">0</prop><prop prop-type="Order">163</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:DBGridCourses.Columns[6].Visible" resname="O:FrCourses.O:DBGridCourses.Columns[6].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45408.0166682639</prop><prop prop-type="Status">0</prop><prop prop-type="Order">164</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:BtDelete.Left" resname="O:FrCourses.O:BtDelete.Left">
+        <source>327</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7009888194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">165</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:BtDelete.Top" resname="O:FrCourses.O:BtDelete.Top">
+        <source>306</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7009888194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">166</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:BtDelete.Width" resname="O:FrCourses.O:BtDelete.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7009888194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">167</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:BtDelete.Height" resname="O:FrCourses.O:BtDelete.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7009888194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">168</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:BtDelete.Caption" resname="O:FrCourses.O:BtDelete.Caption">
+        <source>'Delete'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7009888194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">169</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:BtDelete.TabOrder" resname="O:FrCourses.O:BtDelete.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.7009888194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">170</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:BtDelete.OnClick" resname="O:FrCourses.O:BtDelete.OnClick">
+        <source>BtDeleteClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.9814064699</prop><prop prop-type="Status">0</prop><prop prop-type="Order">171</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:BtAddSave.Left" resname="O:FrCourses.O:BtAddSave.Left">
+        <source>408</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45397.0044729977</prop><prop prop-type="Status">0</prop><prop prop-type="Order">172</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:BtAddSave.Top" resname="O:FrCourses.O:BtAddSave.Top">
+        <source>306</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45397.0044729977</prop><prop prop-type="Status">0</prop><prop prop-type="Order">173</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:BtAddSave.Width" resname="O:FrCourses.O:BtAddSave.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45397.0044729977</prop><prop prop-type="Status">0</prop><prop prop-type="Order">174</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:BtAddSave.Height" resname="O:FrCourses.O:BtAddSave.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45397.0044730093</prop><prop prop-type="Status">0</prop><prop prop-type="Order">175</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:BtAddSave.Caption" resname="O:FrCourses.O:BtAddSave.Caption">
+        <source>'Add'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45397.0044730093</prop><prop prop-type="Status">0</prop><prop prop-type="Order">176</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:BtAddSave.TabOrder" resname="O:FrCourses.O:BtAddSave.TabOrder">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45397.0044730093</prop><prop prop-type="Status">0</prop><prop prop-type="Order">177</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCourses.O:BtAddSave.OnClick" resname="O:FrCourses.O:BtAddSave.OnClick">
+        <source>BtAddSaveClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45397.0044730093</prop><prop prop-type="Status">0</prop><prop prop-type="Order">178</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

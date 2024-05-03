@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
 <xliff version="1.0">
-  <file original="C:\Users\prosp\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\PreferencesForm.dfm" source-language="hr-HR" target-language="hr-HR" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\prosp\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\PreferencesForm.dfm">
+  <file original="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\PreferencesForm.dfm" source-language="hr-HR" target-language="hr-HR" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\PreferencesForm.dfm">
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45382.8738657407</prop>
-        <prop prop-type="OrigDateTime">45382.857337963</prop>
-        <prop prop-type="XlatDateTime">45360.8878009259</prop>
+        <prop prop-type="SelfDateTime">45411.7045138889</prop>
+        <prop prop-type="OrigDateTime">45411.4714351852</prop>
+        <prop prop-type="XlatDateTime">45389.5474305556</prop>
         <prop prop-type="Translated">19</prop>
         <prop prop-type="UnTranslated">171</prop>
       </prop-group>
@@ -45,7 +45,7 @@
         <prop prop-type="Created">45346.9495855093</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TFPreferences</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPreferences.ClientWidth" resname="O:FPreferences.ClientWidth">
-        <source>534</source>
+        <source>528</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495855093</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TFPreferences</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -90,7 +90,7 @@
         <prop prop-type="Created">45346.9495855093</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TFPreferences</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPreferences.O:GroupBox1.Left" resname="O:FPreferences.O:GroupBox1.Left">
-        <source>8</source>
+        <source>6</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495855093</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -431,7 +431,7 @@
         <prop prop-type="Created">45367.041958206</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPreferences.O:GroupBox2.Left" resname="O:FPreferences.O:GroupBox2.Left">
-        <source>276</source>
+        <source>266</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495855208</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -906,7 +906,7 @@
         <prop prop-type="Created">45360.985659456</prop><prop prop-type="Status">0</prop><prop prop-type="Order">174</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPreferences.O:BtCancel.Left" resname="O:FPreferences.O:BtCancel.Left">
-        <source>449</source>
+        <source>444</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495855324</prop><prop prop-type="Status">0</prop><prop prop-type="Order">175</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -942,7 +942,7 @@
         <prop prop-type="Created">45346.9495855324</prop><prop prop-type="Status">0</prop><prop prop-type="Order">181</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPreferences.O:BtAccept.Left" resname="O:FPreferences.O:BtAccept.Left">
-        <source>352</source>
+        <source>349</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495855324</prop><prop prop-type="Status">0</prop><prop prop-type="Order">182</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>

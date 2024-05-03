@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
 <xliff version="1.0">
-  <file original="C:\Users\prosp\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\AuthenticationForm.dfm" source-language="hr-HR" target-language="hr-HR" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\prosp\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\AuthenticationForm.dfm">
+  <file original="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\AuthenticationForm.dfm" source-language="hr-HR" target-language="hr-HR" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\AuthenticationForm.dfm">
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45382.8105324074</prop>
-        <prop prop-type="OrigDateTime">45364.1632175926</prop>
+        <prop prop-type="SelfDateTime">45414.9966203704</prop>
+        <prop prop-type="OrigDateTime">45414.9957175926</prop>
         <prop prop-type="XlatDateTime">45360.8849074074</prop>
-        <prop prop-type="Translated">2</prop>
-        <prop prop-type="UnTranslated">11</prop>
+        <prop prop-type="Translated">0</prop>
+        <prop prop-type="UnTranslated">14</prop>
       </prop-group>
     </header>
     <body>
@@ -34,17 +34,23 @@
         <prop prop-type="Created">45346.9495844097</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TFAuthentication</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FAuthentication.ClientHeight" resname="O:FAuthentication.ClientHeight">
-        <source>343</source>
-        <target>339</target>
+        <source>339</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495844097</prop><prop prop-type="Status">1</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFAuthentication</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
+        <prop prop-type="Created">45346.9495844097</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFAuthentication</prop><prop prop-type="Localize">1</prop></prop-group>
+      <alt-trans>  <source>343</source>
+          <target>339</target>
+          <prop-group name="ITEFieldProp">
+          <prop prop-type="Modified">45395.0227540509</prop></prop-group>
+        </alt-trans></trans-unit>
       <trans-unit id="O:FAuthentication.ClientWidth" resname="O:FAuthentication.ClientWidth">
-        <source>262</source>
-        <target>234</target>
+        <source>246</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495844097</prop><prop prop-type="Status">1</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TFAuthentication</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
+        <prop prop-type="Created">45346.9495844097</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TFAuthentication</prop><prop prop-type="Localize">1</prop></prop-group>
+      <alt-trans>  <source>262</source>
+          <target>234</target>
+          <prop-group name="ITEFieldProp">
+          <prop prop-type="Modified">45395.0227590972</prop></prop-group>
+        </alt-trans></trans-unit>
       <trans-unit id="O:FAuthentication.Color" resname="O:FAuthentication.Color">
         <source>clBtnFace</source>
         <prop-group name="ITEFieldProp">
@@ -75,10 +81,15 @@
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495844097</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TFAuthentication</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
+      <trans-unit id="O:FAuthentication.OnActivate" resname="O:FAuthentication.OnActivate">
+        <source>FormActivate</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45414.9966248495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TFAuthentication</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
       <trans-unit id="O:FAuthentication.TextHeight" resname="O:FAuthentication.TextHeight">
         <source>15</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45346.9495844097</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TFAuthentication</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45346.9495844097</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TFAuthentication</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
     </body>
   </file>

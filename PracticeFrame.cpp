@@ -12,13 +12,13 @@
 #include "Logger.h"
 #include "ENullPointerException.h"
 
-#define SPACE 0x20
-#define BACKSPACE 0x8
 
 //---------------------------------------------------------------------------
 #pragma hdrstop
 #pragma package(smart_init)
 #pragma link "OptionsFrame"
+#pragma link "TypingStatsFrame"
+#pragma link "TypingTextFrame"
 #pragma resource "*.dfm"
 
 TFrPractice *FrPractice;
@@ -32,8 +32,15 @@ __fastcall TFrPractice::TFrPractice(TComponent* Owner, Parser* _parser, MainSess
        mainSession = _mainSession;
 	   typingSession = _typingSession;
 
-       maxChars = TextUtils::countCharsUntilWordBreak(typingSession->getTextSource().getText(), UIUtils::estimateMaxChars(RETextBox));
-       setPracticeStatus(Initialized);
+       FrTypingStats->setMainSession(mainSession);
+       FrTypingStats->setTypingSession(typingSession);
+
+       FrTypingText->setMainSession(mainSession);
+       FrTypingText->setTypingSession(typingSession);
+       FrTypingText->setParser(parser);
+       FrTypingText->setFrameTypingStats(FrTypingStats);
+
+       FrTypingText->setTypingStatus(Initialized);
        typingSession->setSessionStatus(SessionStatus::Initialized);
 
        LOGGER(LogLevel::Debug, "Practice frame displayed");
@@ -44,83 +51,7 @@ __fastcall TFrPractice::TFrPractice(TComponent* Owner, Parser* _parser, MainSess
     }
 }
 
-// change frame appearance based on practice status
 
-void TFrPractice::setPracticeStatus(SessionStatus status)  {
-
-	switch (status) {
-
-        case Initialized: {
-
-            hideStatsItems();
-
-			// fix font change at runtime
-            RETextBox->Font->Name = mainSession->getTypingSettings().getFontFamily();
-            RETextBox->Font->Size = mainSession->getTypingSettings().getFontSize();
-
-//            ShowMessage(StrToInt( RETextBox->Font->Size));
-
-			if (mainSession->getTypingSettings().getSeparatorType() == SeparatorType::Space) {
-            	RETextBox->Text = typingSession->getTextSource().getText().SubString(1, maxChars);
-            }
-            else if (mainSession->getTypingSettings().getSeparatorType() == SeparatorType::Dot) {
-				RETextBox->Text = TextUtils::replaceChar(typingSession->getTextSource().getText().SubString(1, maxChars), ' ', L'\u25E6');
-            }
-
-            UIUtils::setTextColor(RETextBox, clSilver);
-
-            LStart->Caption = "Press space bar to start the practice";
-            break;
-        }
-        case Started: {
-            UIUtils::setTextColor(RETextBox, clBlack);
-
-            if (mainSession->getTypingSettings().getCaretType() == CaretType::Block) {
-            	UIUtils::setCharBgColor(RETextBox, 0, clSilver);
-            }
-            else if (mainSession->getTypingSettings().getCaretType() == CaretType::Underline) {
-            	UIUtils::setCharStyle(RETextBox, 0, fsUnderline, true);
-            }
-
-            // activate the timer
-            typingSession->setSessionStart();
-            Timer1->Enabled = true;
-
-            displayStatsItems();
-
-            LStart->Visible = false;
-            break;
-        }
-        case Restarted: {
-			RETextBox->Text = typingSession->getTextSource().getText().SubString(1, maxChars);
-            UIUtils::setTextColor(RETextBox, clSilver);
-            LStart->Caption = "Press space bar to start the practice";
-            LStart->Visible = true;
-            break;
-
-        }
-        case Resumed: {
-        	UIUtils::setTextColor(RETextBox, clBlack);
-            int index = typingSession->getTextSource().getCharIndex()-1;
-            UIUtils::setCharColor(RETextBox, parser->getBuffer(), index, index + parser->getInsertedChars().Length(), clRed);
-            LStart->Visible = false;
-            break;
-
-        }
-        case Paused: {
-          	hideStatsItems();
-            UIUtils::setTextColor(RETextBox, clSilver);
-            LStart->Caption = "Press space bar to resume the practice";
-            LStart->Visible = true;
-            break;
-        }
-        default:
-        ;
-
-        LOGGER(LogLevel::Debug, "Practice status set");
-	}
-
-}
 
 // display practice options
 
@@ -130,7 +61,7 @@ void __fastcall TFrPractice::FrOptionsBtOptionsClick(TObject *Sender)
     FPracticeOptions->Position = poMainFormCenter;
 
 	typingSession->setSessionStatus(SessionStatus::Paused);
-	setPracticeStatus(SessionStatus::Paused);
+	FrTypingText->setTypingStatus(SessionStatus::Paused);
     parser->setInputEnabled(false);
 
 	if (FPracticeOptions->ShowModal() == mrOk) {
@@ -170,7 +101,7 @@ void __fastcall TFrPractice::FrOptionsBtOptionsClick(TObject *Sender)
 //                             typingSession->setTextSource(TextSource(newText));
 //
 //                             typingSession->setSessionStatus(SessionStatus::Restarted);
-//							 setPracticeStatus(SessionStatus::Restarted);
+//							 setTypingStatus(SessionStatus::Restarted);
 //						}
 //					}
 //					else {
@@ -187,261 +118,12 @@ void __fastcall TFrPractice::FrOptionsBtOptionsClick(TObject *Sender)
 	this->SetFocus();
 }
 
-void TFrPractice::displayStatsItems() {
-
-	LTime->Visible = true;
-    LDisplayTime->Visible = true;
-    LTime->Font->Color = clGray;
-	LDisplayTime->Font->Color = clSilver;
-
-    if (mainSession->getTypingSettings().getDisplaySpeed()) {
-        LSpeed->Visible = true;
-        LDisplaySpeed->Visible = true;
-        LSpeed->Font->Color = clGray;
-        LDisplaySpeed->Font->Color = clSilver;
-    }
-
-    if (mainSession->getTypingSettings().getDisplayAccuracy()) {
-        LAccuracy->Visible = true;
-        LDisplayAccuracy->Visible = true;
-        LAccuracy->Font->Color = clGray;
-        LDisplayAccuracy->Font->Color = clSilver;
-    }
-
-}
-
-void TFrPractice::hideStatsItems() {
-	LTime->Visible = false;
-    LDisplayTime->Visible = false;
-
-    LSpeed->Visible = false;
-    LDisplaySpeed->Visible = false;
-
-    LAccuracy->Visible = false;
-	LDisplayAccuracy->Visible = false;
-}
-
-// forward all char messages to main form
-//void __fastcall TFrPractice::WndProc(TMessage &Message)
-//{
-//	switch (Message.Msg) {
-//		case WM_CHAR:
-//			PostMessage(FMain->Handle, WM_CHAR, Message.WParam, 0);
-//			break;
-//
-//		default:
-//			TFrame::WndProc(Message);
-//	}
-//}
-
-
-void __fastcall TFrPractice::Timer1Timer(TObject *Sender)
-{
-        if (typingSession->getSessionStatus() == SessionStatus::Started) {
-
-        	int min = typingSession->getElapsedTime()/ 60;
-        	int sec = typingSession->getElapsedTime()% 60;
-            TDateTime elapsedTime = System::Sysutils::EncodeTime(0, min, sec, 0);
-            LDisplayTime->Caption = FormatDateTime("hh:nn:ss", elapsedTime);
-
-            if (mainSession->getTypingSettings().getDisplaySpeed()) {
-               LDisplaySpeed->Caption = FormatFloat("0.00", typingSession->getSpeed()) + " WPM";
-            }
-            if (mainSession->getTypingSettings().getDisplayAccuracy()) {
-               LDisplayAccuracy->Caption = FormatFloat("0.00", typingSession->getAccuracy()) + " %";
-            }
-    	}
-}
 
 void TFrPractice::processCharMessages(WPARAM wParam) {
 
-    wchar_t key = parser->getChar(wParam);
+ 	FrTypingText->processCharMessages(wParam);
 
-    // start and pause typing session
-
-    if (key == SPACE && !parser->isInputEnabled()) {
-
-        updateSessionStatus(typingSession->getSessionStatus());
-        parser->setInputEnabled(true);
-    }
-    else if (key && parser->isInputEnabled()) {
-
-        int index = typingSession->getTextSource().getCharIndex()-1;
-
-        // highlight mistakes
-
-        if (parser->getInsertedChars().IsEmpty()) {
-            UIUtils::setCharColor(RETextBox, parser->getBuffer(), clRed);
-        }
-
-        // insert chars on mistake (only if 'stop on mistake' isn't checked)
-
-        if (key == BACKSPACE || !parser->getInsertedChars().IsEmpty()) {
-
-            UnicodeString text = "";
-            if (mainSession->getTypingSettings().getSeparatorType() == SeparatorType::Space) {
-                text = typingSession->getTextSource().getText();
-            }
-            else if (mainSession->getTypingSettings().getSeparatorType() == SeparatorType::Dot) {
-                text = TextUtils::replaceChar(typingSession->getTextSource().getText(), ' ', L'\u25E6');
-            }
-
-            // recalculate max chars for RETextBox based on inserted chars
-
-            text.Insert(parser->getInsertedChars(), index+1);
-            int maxChars = TextUtils::countCharsUntilWordBreak(typingSession->getTextSource().getText(), UIUtils::estimateMaxChars(RETextBox));
-            RETextBox->Text = text.SubString(1, maxChars);
-            UIUtils::setCharColor(RETextBox, parser->getBuffer(), index, index + parser->getInsertedChars().Length(), clRed);
-        }
-
-        // move caret to the next char
-        moveCaret(mainSession->getTypingSettings().getCaretType(), index);
-    }
 }
 
-//
-//void __fastcall TFrPractice::WndProc(Messages::TMessage &Message) {
-//
-//	switch (Message.Msg) {
-//
-//		case WM_CHAR: {
-//
-//			wchar_t key = parser->getChar(Message.WParam);
-//
-//			// start and pause typing session
-//
-//			if (key == SPACE && !parser->isInputEnabled()) {
-//
-//            	updateSessionStatus(typingSession->getSessionStatus());
-//                parser->setInputEnabled(true);
-//			}
-//            else if (key && parser->isInputEnabled()) {
-//
-//            	int index = typingSession->getTextSource().getCharIndex()-1;
-//				// highlight mistakes
-//
-//                if (parser->getInsertedChars().IsEmpty()) {
-//       				UIUtils::setCharColor(RETextBox, parser->getBuffer(), clRed);
-//				}
-//
-//                // insert chars on mistake (only if 'stop on mistake' isn't checked)
-//
-//				if (key == BACKSPACE || !parser->getInsertedChars().IsEmpty()) {
-//
-//                 	UnicodeString text = "";
-//					if (mainSession->getTypingSettings().getSeparatorType() == SeparatorType::Space) {
-//						text = typingSession->getTextSource().getText();
-//					}
-//                    else if (mainSession->getTypingSettings().getSeparatorType() == SeparatorType::Dot) {
-//                        text = TextUtils::replaceChar(typingSession->getTextSource().getText(), ' ', L'\u25E6');
-//					}
-//
-//					// recalculate max chars for RETextBox based on inserted chars
-//
-//					text.Insert(parser->getInsertedChars(), index+1);
-//					int maxChars = TextUtils::countCharsUntilWordBreak(typingSession->getTextSource().getText(), UIUtils::estimateMaxChars(RETextBox));
-//					RETextBox->Text = text.SubString(1, maxChars);
-//					UIUtils::setCharColor(RETextBox, parser->getBuffer(), index, index + parser->getInsertedChars().Length(), clRed);
-//				}
-//
-//				// move caret to the next char
-//
-//				moveCaret(mainSession->getTypingSettings().getCaretType(), index);
-//
-//			}
-//		}
-//		break;
-//
-//		default: {
-//			TFrame::WndProc(Message);
-//		}
-//	}
-//}
-//
-//
-
-
-void TFrPractice::updateSessionStatus(SessionStatus status) {
-
-	if (status == SessionStatus::Initialized) {
-        typingSession->setSessionStatus(SessionStatus::Started);
-        setPracticeStatus(SessionStatus::Started);
-
-    	LOGGER(LogLevel::Info, "Practice session started");
-	}
-	else if (status == SessionStatus::Paused) {
-        typingSession->setSessionStatus(SessionStatus::Resumed);
-        setPracticeStatus(SessionStatus::Resumed);
-		setCaret(mainSession->getTypingSettings().getCaretType(), typingSession->getTextSource().getCharIndex()-1);
-    }
-}
-
-void TFrPractice::moveCaret(CaretType caretType, int index) {
-
-	if (mainSession->getTypingSettings().getCaretType() == CaretType::Block) {
-        UIUtils::setCharBgColor(RETextBox, index + parser->getInsertedChars().Length() - 1, clBtnFace);
-        UIUtils::setCharBgColor(RETextBox, index + parser->getInsertedChars().Length(), clSilver);
-	}
-    else if (mainSession->getTypingSettings().getCaretType() == CaretType::Underline) {
-        UIUtils::setCharStyle(RETextBox, index + parser->getInsertedChars().Length() - 1, fsUnderline, false);
-		UIUtils::setCharStyle(RETextBox, index + parser->getInsertedChars().Length(), fsUnderline, true);
-    }
-}
-
-void TFrPractice::clearCaret(CaretType caretType, int index) {
-
-	if (mainSession->getTypingSettings().getCaretType() == CaretType::Block) {
-        UIUtils::setCharBgColor(RETextBox, index + parser->getInsertedChars().Length(), clBtnFace);
-    }
-	else if (mainSession->getTypingSettings().getCaretType() == CaretType::Underline) {
-		UIUtils::setCharStyle(RETextBox, index + parser->getInsertedChars().Length(), fsUnderline, false);
-	}
-}
-
-void TFrPractice::setCaret(CaretType caretType, int index) {
-
-	if (mainSession->getTypingSettings().getCaretType() == CaretType::Block) {
-		UIUtils::setCharBgColor(RETextBox, index + parser->getInsertedChars().Length(), clSilver);
-	}
-	else if (mainSession->getTypingSettings().getCaretType() == CaretType::Underline) {
-		UIUtils::setCharStyle(RETextBox, index + parser->getInsertedChars().Length(), fsUnderline, true);
-	}
-}
-
-
-/* 	intercept RETextBox messages,
- 	hide caret and display cursor,
- 	forward chars to parent */
-
-LRESULT CALLBACK TFrPractice::RESubclass(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam, UINT_PTR uIdSubclass, DWORD_PTR dwRefData)
-{
-
-	switch (msg) {
-
-		case WM_SETFOCUS:
-			HideCaret(hwnd);
-			break;
-
-		case WM_KILLFOCUS:
-			ShowCaret(hwnd);
-			break;
-
-		case WM_SETCURSOR:
-			Screen->Cursor = crArrow;
-			return TRUE;
-
-		case WM_CHAR:
-			PostMessage(GetParent(hwnd), WM_CHAR, wParam, lParam);
-			break;
-
-        case WM_LBUTTONDOWN:
-            break;
-
-		default:
-			return DefSubclassProc(hwnd, msg, wParam, lParam);
-	}
-
-	return 0;
-}
 
 

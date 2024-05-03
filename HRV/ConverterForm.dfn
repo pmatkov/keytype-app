@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
 <xliff version="1.0">
-  <file original="C:\Users\prosp\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\ConverterForm.dfm" source-language="hr-HR" target-language="hr-HR" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\prosp\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\ConverterForm.dfm">
+  <file original="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\ConverterForm.dfm" source-language="hr-HR" target-language="hr-HR" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\ConverterForm.dfm">
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45382.8105555556</prop>
-        <prop prop-type="OrigDateTime">45377.012962963</prop>
-        <prop prop-type="XlatDateTime">45375.6327083333</prop>
+        <prop prop-type="SelfDateTime">45411.9465277778</prop>
+        <prop prop-type="OrigDateTime">45411.7780092593</prop>
+        <prop prop-type="XlatDateTime">45389.5474305556</prop>
         <prop prop-type="Translated">2</prop>
         <prop prop-type="UnTranslated">60</prop>
       </prop-group>
@@ -34,12 +34,12 @@
         <prop prop-type="Created">45376.804569919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.ClientHeight" resname="O:FConverter.ClientHeight">
-        <source>125</source>
+        <source>124</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45376.804569919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.ClientWidth" resname="O:FConverter.ClientWidth">
-        <source>305</source>
+        <source>301</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45376.804569919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -299,12 +299,12 @@
         <prop prop-type="Created">45376.804569919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:DFileOpen.Left" resname="O:FConverter.O:DFileOpen.Left">
-        <source>144</source>
+        <source>174</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45376.804569919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TOpenTextFileDialog</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:DFileOpen.Top" resname="O:FConverter.O:DFileOpen.Top">
-        <source>69</source>
+        <source>66</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45376.804569919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TOpenTextFileDialog</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>

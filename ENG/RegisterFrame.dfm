@@ -35,8 +35,9 @@ object FrRegister: TFrRegister
   object LResponse: TLabel
     Left = 72
     Top = 210
-    Width = 3
+    Width = 118
     Height = 15
+    AutoSize = False
     Color = clBtnFace
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clRed

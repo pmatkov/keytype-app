@@ -26,10 +26,25 @@ object FMain: TFMain
         OnClick = MenuSubitemPracticeNewClick
       end
     end
+    object MenuItemLessons: TMenuItem
+      Caption = 'Lekcije'
+      object MenuSubItemConfiguration: TMenuItem
+        Caption = 'Konfiguracija'
+        OnClick = MenuSubItemConfigurationClick
+      end
+      object MenuSubItemLessonStart: TMenuItem
+        Caption = 'Pokreni'
+        OnClick = MenuSubItemLessonStartClick
+      end
+      object MenuSubItemLessonResults: TMenuItem
+        Caption = 'Rezultati'
+        OnClick = MenuSubItemLessonResultsClick
+      end
+    end
     object MenuItemGames: TMenuItem
-      Caption = 'Games'
+      Caption = 'Igre'
       object MenuSubitemFlyingWords: TMenuItem
-        Caption = 'Flying words'
+        Caption = 'Lete'#263'e rije'#269'i'
         OnClick = MenuSubitemFlyingWordsClick
       end
     end

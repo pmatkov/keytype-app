@@ -35,6 +35,8 @@ bool AuthenticationService::loginUser(const UnicodeString& username, const Unico
 
     std::unique_ptr<TFDQuery> query = std::make_unique<TFDQuery>(nullptr);
     try {
+
+    	// locate?
         query->Connection = dataModule->MySQLDBConnection;
         query->SQL->Text = "SELECT * FROM users WHERE username = :username AND password = :password";
         query->Params->ParamByName("username")->AsString = username;
@@ -43,7 +45,7 @@ bool AuthenticationService::loginUser(const UnicodeString& username, const Unico
 
         if (!query->IsEmpty()) {
 
-        	user = User(username);
+        	user = User(username, password);
 			authenticated = true;
 
         	query->Close();
@@ -95,7 +97,7 @@ bool AuthenticationService::registerUser(const UnicodeString& username, const Un
 
             if (query->RowsAffected > 0) {
 
-            	user = User(username);
+            	user = User(username, password);
 				authenticated = true;
                 query->Close();
                 return true;

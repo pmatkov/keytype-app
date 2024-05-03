@@ -7,9 +7,9 @@
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
-TFrFlyingWordsStatsFrame *FrFlyingWordsStatsFrame;
+TFrFlyingWordsStats *FrFlyingWordsStats;
 //---------------------------------------------------------------------------
-__fastcall TFrFlyingWordsStatsFrame::TFrFlyingWordsStatsFrame(TComponent* Owner)
+__fastcall TFrFlyingWordsStats::TFrFlyingWordsStats(TComponent* Owner)
 	: TFrame(Owner)
 {
 }

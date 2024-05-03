@@ -13,6 +13,8 @@
 #include "ISingleItemDisplay.h"
 #include "IGameDisplay.h"
 
+using namespace FWLimit;
+
 class GameThread;
 class KeystrokeProcessorThread;
 class GameScoreThread;
@@ -34,7 +36,7 @@ class GameEngine {
 
 		std::queue<FlyingWord> words;
         std::vector<FlyingWord> wordsOnDisplay;
-		Limit gameArea;
+		FWLimit::Limit gameArea;
 
 		GameStatus gameStatus;
         GameStatistics gameStatistics;
@@ -58,7 +60,7 @@ class GameEngine {
         void loadWordList(const UnicodeString &fileName);
         bool isWordListLoaded();
 
-		void initializeGame(Limit _gameArea);
+		void initializeGame(FWLimit::Limit _gameArea);
 
 		void createWords(int count);
         void removeWord();
@@ -80,7 +82,7 @@ class GameEngine {
         void setLastMatch(const UnicodeString &_lastMatch);
         const UnicodeString &getLastMatch() const;
 
-		Limit calculateLimit(int index, int count);
+		FWLimit::Limit calculateLimit(int index, int count);
 
         UnicodeString getRndWord();
 		int getRndWordCount(int min, int max);

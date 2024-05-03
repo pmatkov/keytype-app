@@ -4,8 +4,8 @@ object FPreferences: TFPreferences
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Preferences'
-  ClientHeight = 443
-  ClientWidth = 530
+  ClientHeight = 444
+  ClientWidth = 528
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,7 +15,7 @@ object FPreferences: TFPreferences
   Position = poMainFormCenter
   TextHeight = 15
   object GroupBox1: TGroupBox
-    Left = 8
+    Left = 6
     Top = 27
     Width = 254
     Height = 370
@@ -104,7 +104,7 @@ object FPreferences: TFPreferences
     end
   end
   object GroupBox2: TGroupBox
-    Left = 276
+    Left = 266
     Top = 27
     Width = 254
     Height = 370
@@ -225,7 +225,7 @@ object FPreferences: TFPreferences
     end
   end
   object BtCancel: TButton
-    Left = 449
+    Left = 444
     Top = 408
     Width = 75
     Height = 25
@@ -234,7 +234,7 @@ object FPreferences: TFPreferences
     TabOrder = 2
   end
   object BtAccept: TButton
-    Left = 352
+    Left = 349
     Top = 408
     Width = 75
     Height = 25

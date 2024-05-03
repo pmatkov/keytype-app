@@ -153,13 +153,13 @@ bool TFrGeneratedText::isNewItem(const UnicodeString &text) {
 
 bool TFrGeneratedText::isEqualItem(const UnicodeString &word, const UnicodeString &category, const UnicodeString &definition, const UnicodeString &synonyms) {
   	 return dictionary->isEqualToDictionaryItem(DictionaryEntry(word, EnumUtils::stringToEnum<WordCategory>(DictionaryEntry::getEnumStrings(), category), \
-    	definition, TextUtils::splitTextIntoWords(synonyms)));
+    	definition, TextUtils::splitToTokens(synonyms)));
 }
 
 
 void TFrGeneratedText::updateItem(const UnicodeString &word, const UnicodeString &category, const UnicodeString &definition, const UnicodeString &synonyms)  {
    	dictionary->addDictionaryEntry(word, DictionaryEntry(word, EnumUtils::stringToEnum<WordCategory>(DictionaryEntry::getEnumStrings(), category), \
-    	definition, TextUtils::splitTextIntoWords(synonyms)));
+    	definition, TextUtils::splitToTokens(synonyms)));
 }
 
 

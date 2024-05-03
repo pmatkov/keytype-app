@@ -5,9 +5,9 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45386.9379166667</prop>
-        <prop prop-type="OrigDateTime">45386.9370833333</prop>
-        <prop prop-type="XlatDateTime">45360.8878009259</prop>
+        <prop prop-type="SelfDateTime">45395.106087963</prop>
+        <prop prop-type="OrigDateTime">45394.8757638889</prop>
+        <prop prop-type="XlatDateTime">45389.5474305556</prop>
         <prop prop-type="Translated">14</prop>
         <prop prop-type="UnTranslated">164</prop>
       </prop-group>
@@ -47,7 +47,7 @@
         <prop prop-type="Created">45346.9495847222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFrGeneratedText</prop><prop prop-type="Localize">0</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrGeneratedText.O:GBWords.Left" resname="O:FrGeneratedText.O:GBWords.Left">
-        <source>3</source>
+        <source>6</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495847222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -909,7 +909,7 @@
         <prop prop-type="Created">45346.9495847454</prop><prop prop-type="Status">0</prop><prop prop-type="Order">172</prop><prop prop-type="Type">TOpenTextFileDialog</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrGeneratedText.O:DFileOpen.Top" resname="O:FrGeneratedText.O:DFileOpen.Top">
-        <source>302</source>
+        <source>287</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495847454</prop><prop prop-type="Status">0</prop><prop prop-type="Order">173</prop><prop prop-type="Type">TOpenTextFileDialog</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>

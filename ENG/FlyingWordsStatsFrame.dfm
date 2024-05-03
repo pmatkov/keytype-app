@@ -1,4 +1,4 @@
-object FrFlyingWordsStatsFrame: TFrFlyingWordsStatsFrame
+object FrFlyingWordsStats: TFrFlyingWordsStats
   Left = 0
   Top = 0
   Width = 628
@@ -67,9 +67,9 @@ object FrFlyingWordsStatsFrame: TFrFlyingWordsStatsFrame
     Height = 15
     AutoSize = False
   end
-  object msgDisplayTimer: TTimer
+  object TMsgDisplayTimer: TTimer
     Interval = 1500
-    Left = 597
-    Top = 12
+    Left = 582
+    Top = 9
   end
 end

@@ -18,7 +18,8 @@ namespace TextUtils
     bool isUnicodeString(const UnicodeString &text);
     bool isEndChar(const wchar_t wchar);
     UnicodeString trimCharacters(const UnicodeString &text, wchar_t wch);
-    std::vector<UnicodeString> splitTextIntoWords(const UnicodeString& text);
+
+    std::vector<UnicodeString> splitToTokens(const UnicodeString& text, wchar_t delimiter = ' ');
     UnicodeString replaceChar(const UnicodeString& text, wchar_t original, wchar_t replacement);
     bool isWordBreak(const UnicodeString& line, int index);
     int countCharsUntilWordBreak(const UnicodeString& line, int index);

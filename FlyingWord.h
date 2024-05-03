@@ -31,8 +31,8 @@ class FlyingWord {
     private:
         UnicodeString text;
 
-		Limit outerLimit;
-		Limit innerLimit;
+		FWLimit::Limit outerLimit;
+		FWLimit::Limit innerLimit;
 
 		Position position;
 		Speed speed;
@@ -45,12 +45,12 @@ class FlyingWord {
 		static std::vector<UnicodeString> enumDirection;
 
     public:
-		FlyingWord(const UnicodeString &text, Limit _outerLimit, Position _position, Speed _speed, Direction _direction, \
+		FlyingWord(const UnicodeString &text, FWLimit::Limit _outerLimit, Position _position, Speed _speed, Direction _direction, \
 		const UnicodeString &_color, int _maxHDistance);
 
 		const UnicodeString &getText() const;
-		const Limit &getOuterLimit() const;
-		const Limit &getInnerLimit() const;
+		const FWLimit::Limit &getOuterLimit() const;
+		const FWLimit::Limit &getInnerLimit() const;
 
 		const Position &getPosition() const;
 		void setPosition(Position _position);

@@ -9,14 +9,15 @@
 #include <Vcl.Forms.hpp>
 #include <Vcl.ExtCtrls.hpp>
 #include <Vcl.Buttons.hpp>
-#include "FlyingWordsStatsFrame.h"
 #include <Vcl.Dialogs.hpp>
 #include <Vcl.ExtDlgs.hpp>
+#include "FlyingWordsStatsFrame.h"
 
 #include <vector>
 #include <queue>
 #include <memory>
 
+#include "FlyingWordsStatsFrame.h"
 #include "ISingleItemDisplay.h"
 #include "IGameDisplay.h"
 
@@ -35,7 +36,7 @@ class TFrFlyingWords : public TFrame, public ISingleItemDisplay, public IGameDis
 	INTFOBJECT_IMPL_IUNKNOWN(TFrame)
 
 __published:	// IDE-managed Components
-	TFrFlyingWordsStatsFrame *FrFlyingWordsStatsFrame;
+	TFrFlyingWordsStats *FrFlyingWordsStats;
 	TComboBox *CBWordList;
 	TLabel *LWordList;
 	TLabel *LTimeLimit;
@@ -46,7 +47,7 @@ __published:	// IDE-managed Components
 	void __fastcall BtStartQuitClick(TObject *Sender);
 	void __fastcall BtBrowseClick(TObject *Sender);
 	void __fastcall CBWordListChange(TObject *Sender);
-	void __fastcall FrFlyingWordsStatsFramemsgDisplayTimerTimer(TObject *Sender);
+	void __fastcall FrFlyingWordsStatsFrameTMsgDisplayTimerTimer(TObject *Sender);
 
 private:	// User declarations
 	std::unique_ptr<GameEngine> gameEngine;
@@ -75,7 +76,6 @@ public:		// User declarations
 
 	int getTextHeight(int index);
 	int getTextWidth(int index);
-
 
     void setItemSingleItemControl(const UnicodeString& componentName, const UnicodeString& item);
 

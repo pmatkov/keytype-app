@@ -5,7 +5,7 @@ object FrGeneratedText: TFrGeneratedText
   Height = 360
   TabOrder = 0
   object GBWords: TGroupBox
-    Left = 3
+    Left = 6
     Top = 3
     Width = 489
     Height = 348
@@ -235,7 +235,7 @@ object FrGeneratedText: TFrGeneratedText
   end
   object DFileOpen: TOpenTextFileDialog
     Left = 243
-    Top = 302
+    Top = 287
   end
   object msgDisplayTimer: TTimer
     Enabled = False

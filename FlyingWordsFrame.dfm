@@ -27,14 +27,16 @@ object FrFlyingWords: TFrFlyingWords
     Height = 15
     Caption = 'Time limit:'
   end
-  inline FrFlyingWordsStatsFrame: TFrFlyingWordsStatsFrame
+  inline FrFlyingWordsStats: TFrFlyingWordsStats
     Left = 0
     Top = 0
     Width = 628
     Height = 42
     TabOrder = 0
-    inherited msgDisplayTimer: TTimer
-      OnTimer = FrFlyingWordsStatsFramemsgDisplayTimerTimer
+    inherited TMsgDisplayTimer: TTimer
+      OnTimer = FrFlyingWordsStatsFrameTMsgDisplayTimerTimer
+      Left = 579
+      Top = 3
     end
   end
   object CBWordList: TComboBox
@@ -78,7 +80,7 @@ object FrFlyingWords: TFrFlyingWords
   end
   object DFileOpen: TOpenTextFileDialog
     Filter = 'Text files (*.txt)'
-    Left = 258
-    Top = 312
+    Left = 303
+    Top = 360
   end
 end

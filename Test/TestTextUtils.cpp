@@ -23,7 +23,7 @@ class TTestTextUtils : public TTestCase
 		void __fastcall TestcountChars();
 		void __fastcall TestisEndChar();
 		void __fastcall TesttrimCharacters();
-		void __fastcall TestsplitTextIntoWords();
+		void __fastcall TestsplitToTokens();
         void __fastcall TestreplaceChar();
         void __fastcall TestisWordBreak();
         void __fastcall TestcountCharsUntilWordBreak();
@@ -83,16 +83,16 @@ void __fastcall TTestTextUtils::TesttrimCharacters()
 	CheckEquals(UnicodeString("Fast & Furious"), TextUtils::trimCharacters("   Fast & Furious  ", L' '));
 }
 
-void __fastcall TTestTextUtils::TestsplitTextIntoWords() {
+void __fastcall TTestTextUtils::TestsplitToTokens() {
 
-   std::vector<UnicodeString> testValue = TextUtils::splitTextIntoWords("Back to the future");
+   std::vector<UnicodeString> testValue = TextUtils::splitToTokens("Back to the future");
    UnicodeString expectedValue[] = {"Back", "to", "the", "future"};
 
-	 for (int i = 0; i < testValue.size();  i++) {
+   for (int i = 0; i < testValue.size();  i++) {
 
-     	LOGGER_LOG(IntToStr((int)i+1) + "/ Expected: " + expectedValue[i] + " Result:" + testValue[i]);
-		CheckEquals(testValue[i], expectedValue[i]);
-	 }
+   	LOGGER_LOG(IntToStr((int)i+1) + "/ Expected: " + expectedValue[i] + " Result:" + testValue[i]);
+    CheckEquals(testValue[i], expectedValue[i]);
+   }
 }
 
 void __fastcall TTestTextUtils::TestisWordBreak() {

@@ -36,7 +36,6 @@ __published:	// IDE-managed Components
 	TTabSheet *TSCustomText;
 
 private:	// User declarations
-
 	std::unique_ptr<TFrGeneratedText> FrGeneratedText;
 	std::unique_ptr<TFrExternalSources> FrExternalSources;
 	std::unique_ptr<TFrCustomText> FrCustomText;

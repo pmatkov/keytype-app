@@ -23,7 +23,6 @@ class GeneratorOptions {
         int getMax() const;
 };
 
-
 namespace Generator {
 
     UnicodeString generateChars(UnicodeString letters, int maxChars);

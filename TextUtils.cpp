@@ -96,7 +96,7 @@ namespace TextUtils {
 
      }
 
-    std::vector<UnicodeString> splitTextIntoWords(const UnicodeString& text)
+    std::vector<UnicodeString> splitToTokens(const UnicodeString& text, wchar_t delimiter)
     {
 
     	std::vector<UnicodeString> tokens = {};
@@ -106,7 +106,7 @@ namespace TextUtils {
             std::unique_ptr<TStringList> list = std::make_unique<TStringList>();
 
             list->DelimitedText = text;
-            list->Delimiter = ' ';
+            list->Delimiter = delimiter;
 
             for (int i = 0; i < list->Count; i++)	{
                 tokens.push_back(list->Strings[i]);

@@ -4,38 +4,52 @@ library KeyType;
 
 {ITE} {DFMFileType} {AuthenticationForm.dfm}
 {ITE} {DFMFileType} {ConverterForm.dfm}
+{ITE} {DFMFileType} {CoursesFrame.dfm}
 {ITE} {DFMFileType} {CustomTextFrame.dfm}
 {ITE} {DFMFileType} {DataModule.dfm}
 {ITE} {DFMFileType} {ExternalSourcesFrame.dfm}
 {ITE} {DFMFileType} {FlyingWordsFrame.dfm}
 {ITE} {DFMFileType} {FlyingWordsStatsFrame.dfm}
 {ITE} {DFMFileType} {GeneratedTextFrame.dfm}
+{ITE} {DFMFileType} {LessonResultsForm.dfm}
+{ITE} {DFMFileType} {Lessons2Frame.dfm}
+{ITE} {DFMFileType} {LessonsForm.dfm}
+{ITE} {DFMFileType} {LessonsFrame.dfm}
 {ITE} {DFMFileType} {LoginFrame.dfm}
 {ITE} {DFMFileType} {MainForm.dfm}
 {ITE} {DFMFileType} {MainFrame.dfm}
-{ITE} {DFMFileType} {OptionsFrame.dfm}
 {ITE} {DFMFileType} {PracticeFrame.dfm}
 {ITE} {DFMFileType} {PracticeOptionsForm.dfm}
 {ITE} {DFMFileType} {PreferencesForm.dfm}
+{ITE} {DFMFileType} {ProfileForm.dfm}
 {ITE} {DFMFileType} {RegisterFrame.dfm}
+{ITE} {DFMFileType} {TypingStatsFrame.dfm}
+{ITE} {DFMFileType} {TypingTextFrame.dfm}
 {ITE} {RCFileType} {Win32\Debug\KeyType_DRC.rc}
 
 {$R 'AuthenticationForm.dfm' 'FAuthentication:TForm'}
 {$R 'ConverterForm.dfm' 'FConverter:TForm'}
+{$R 'CoursesFrame.dfm' 'FrCourses:TForm'}
 {$R 'CustomTextFrame.dfm' 'FrCustomText:TForm'}
 {$R 'DataModule.dfm' 'DataModule1:TForm'}
 {$R 'ExternalSourcesFrame.dfm' 'FrExternalSources:TForm'}
 {$R 'FlyingWordsFrame.dfm' 'FrFlyingWords:TForm'}
-{$R 'FlyingWordsStatsFrame.dfm' 'FrFlyingWordsStatsFrame:TForm'}
+{$R 'FlyingWordsStatsFrame.dfm' 'FrFlyingWordsStats:TForm'}
 {$R 'GeneratedTextFrame.dfm' 'FrGeneratedText:TForm'}
+{$R 'LessonResultsForm.dfm' 'FLessonResults:TForm'}
+{$R 'Lessons2Frame.dfm' 'FrLessons2:TForm'}
+{$R 'LessonsForm.dfm' 'FLessons:TForm'}
+{$R 'LessonsFrame.dfm' 'FrLessons:TForm'}
 {$R 'LoginFrame.dfm' 'FrLogin:TForm'}
 {$R 'MainForm.dfm' 'FMain:TForm'}
 {$R 'MainFrame.dfm' 'FrMain:TForm'}
-{$R 'OptionsFrame.dfm' 'FrOptions:TForm'}
 {$R 'PracticeFrame.dfm' 'FrPractice:TForm'}
 {$R 'PracticeOptionsForm.dfm' 'FPracticeOptions:TForm'}
 {$R 'PreferencesForm.dfm' 'FPreferences:TForm'}
+{$R 'ProfileForm.dfm' 'FrProfile:TForm'}
 {$R 'RegisterFrame.dfm' 'FrRegister:TForm'}
+{$R 'TypingStatsFrame.dfm' 'FrTypingStats:TForm'}
+{$R 'TypingTextFrame.dfm' 'FrTypingText:TForm'}
 {$R 'Win32\Debug\KeyType_DRC.res' 'Win32\Debug\KeyType_DRC.rc'}
 
 {$E ENG}

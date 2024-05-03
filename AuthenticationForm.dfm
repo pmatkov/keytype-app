@@ -11,5 +11,6 @@ object FAuthentication: TFAuthentication
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OnActivate = FormActivate
   TextHeight = 15
 end

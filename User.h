@@ -18,6 +18,7 @@ class User {
 	private:
         UnicodeString id = "";
     	UnicodeString username = "";
+        UnicodeString password = "";
 		UnicodeString name = "";
 		UnicodeString surname = "";
         UnicodeString email = "";
@@ -29,11 +30,14 @@ class User {
 	public:
 
 		User();
-        User(const UnicodeString &_username);
-		User(const UnicodeString &_id, const UnicodeString &_username, const UnicodeString &_name, const UnicodeString &_surname, int _age,  const UnicodeString &_email);
+        User(const UnicodeString &_username, const UnicodeString &_password);
+		User(const UnicodeString &_id, const UnicodeString &_username, const UnicodeString &_password, const UnicodeString &_name, const UnicodeString &_surname, int _age,  const UnicodeString &_email);
 
         const UnicodeString & getUsername() const;
 		void setUsername(const UnicodeString &_username);
+
+        const UnicodeString &getPassword() const;
+		void setPassword(const UnicodeString &_password);
 
 		const UnicodeString & getName() const;
 		void setName(const UnicodeString &_name);
