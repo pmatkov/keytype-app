@@ -51,20 +51,26 @@ void TFrTypingText::setTypingStatus(SessionStatus status)  {
 
 //            ShowMessage(StrToInt( REText->Font->Size));
 
-			if (mainSession->getTypingSettings().getSeparatorType() == SeparatorType::Space) {
-            	REText->Text = typingSession->getTextSource().getText().SubString(1, maxChars);
-            }
-            else if (mainSession->getTypingSettings().getSeparatorType() == SeparatorType::Dot) {
-				REText->Text = TextUtils::replaceChar(typingSession->getTextSource().getText().SubString(1, maxChars), ' ', L'\u25E6');
-            }
+            // set text source and color
 
+			UnicodeString sourceText = typingSession->getTextSource().getText();
             UIUtils::setTextColor(REText, clSilver);
 
-            LStart->Caption = "Press space bar to start the practice";
+			if (mainSession->getTypingSettings().getSeparatorType() == SeparatorType::Space) {
+            	REText->Text = sourceText.SubString(1, maxChars);
+            }
+            else if (mainSession->getTypingSettings().getSeparatorType() == SeparatorType::Dot) {
+				REText->Text = TextUtils::replaceChar(sourceText.SubString(1, maxChars), ' ', L'\u25E6');
+            }
+
+            LInfo->Caption = "Press space bar to start the practice";
+            LInfo->Visible = true;
             break;
         }
         case Started: {
             UIUtils::setTextColor(REText, clBlack);
+
+            // set caret style
 
             if (mainSession->getTypingSettings().getCaretType() == CaretType::Block) {
             	UIUtils::setCharBgColor(REText, 0, clSilver);
@@ -74,19 +80,19 @@ void TFrTypingText::setTypingStatus(SessionStatus status)  {
             }
 
             // activate the timer
-            typingSession->setSessionStart();
-            FrTypingStats->Timer1->Enabled = true;
-
+            typingSession->startSessionTimer();
+            FrTypingStats->TStatsTimer->Enabled = true;
+            FrTypingStats->clearTimerDisplay();
             FrTypingStats->displayStatsItems();
 
-            LStart->Visible = false;
+            LInfo->Visible = false;
             break;
         }
         case Restarted: {
+
 			REText->Text = typingSession->getTextSource().getText().SubString(1, maxChars);
             UIUtils::setTextColor(REText, clSilver);
-            LStart->Caption = "Press space bar to start the practice";
-            LStart->Visible = true;
+            LInfo->Visible = true;
             break;
 
         }
@@ -94,15 +100,27 @@ void TFrTypingText::setTypingStatus(SessionStatus status)  {
         	UIUtils::setTextColor(REText, clBlack);
             int index = typingSession->getTextSource().getCharIndex()-1;
             UIUtils::setCharColor(REText, parser->getBuffer(), index, index + parser->getInsertedChars().Length(), clRed);
-            LStart->Visible = false;
+            LInfo->Caption = "Press space bar to start the practice";
+            LInfo->Visible = false;
             break;
 
         }
         case Paused: {
           	FrTypingStats->hideStatsItems();
             UIUtils::setTextColor(REText, clSilver);
-            LStart->Caption = "Press space bar to resume the practice";
-            LStart->Visible = true;
+            LInfo->Caption = "Press space bar to resume the practice";
+            LInfo->Visible = true;
+            break;
+        }
+        case Completed: {
+            typingSession->stopSessionTimer();
+            FrTypingStats->TStatsTimer->Enabled = false;
+            break;
+        }
+        case Cleared: {
+        	FrTypingStats->hideStatsItems();
+            LInfo->Visible = false;
+            REText->Text = "";
             break;
         }
         default:
@@ -113,13 +131,13 @@ void TFrTypingText::setTypingStatus(SessionStatus status)  {
 
 }
 
-void TFrTypingText::updateSessionStatus(SessionStatus status) {
+void TFrTypingText::changeSessionStatus(SessionStatus status) {
 
 	if (status == SessionStatus::Initialized) {
         typingSession->setSessionStatus(SessionStatus::Started);
         setTypingStatus(SessionStatus::Started);
 
-    	LOGGER(LogLevel::Info, "Practice session started");
+    	LOGGER(LogLevel::Info, "Typing session started");
 	}
 	else if (status == SessionStatus::Paused) {
         typingSession->setSessionStatus(SessionStatus::Resumed);
@@ -128,17 +146,15 @@ void TFrTypingText::updateSessionStatus(SessionStatus status) {
     }
 }
 
-
-
 void TFrTypingText::processCharMessages(WPARAM wParam) {
 
     wchar_t key = parser->getChar(wParam);
 
     // start and pause typing session
 
-    if (key == SPACE && !parser->isInputEnabled() && typingSession->getSessionStatus() != SessionStatus::Completed) {
+    if (key == SPACE && !parser->isInputEnabled() && typingSession->getSessionStatus() != SessionStatus::Completed && typingSession->getSessionStatus() != SessionStatus::Cleared) {
 
-        updateSessionStatus(typingSession->getSessionStatus());
+        changeSessionStatus(typingSession->getSessionStatus());
         parser->setInputEnabled(true);
     }
     else if (key && parser->isInputEnabled()) {
@@ -174,9 +190,16 @@ void TFrTypingText::processCharMessages(WPARAM wParam) {
         // move caret to the next char
         moveCaret(mainSession->getTypingSettings().getCaretType(), index);
 
+        // end typing session if last char reached
+
         if (typingSession->getTextSource().getCharIndex()-1 == typingSession->getTextSource().getText().Length()) {
-          	typingSession->setSessionStatus(SessionStatus::Completed);
+
             parser->setInputEnabled(false);
+
+//            typingSession->setSessionStatus(SessionStatus::Completed);
+//            setTypingStatus(SessionStatus::Completed);
+
+            LOGGER(LogLevel::Info, "Typing session completed");
 
             if (OnTypingComplete) {
                 OnTypingComplete(this);

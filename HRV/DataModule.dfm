@@ -18,8 +18,8 @@ object DataModule1: TDataModule1
     Connection = MySQLDBConnection
     ResourceOptions.AssignedValues = [rvEscapeExpand]
     TableName = 'keytype.courses'
-    Left = 336
-    Top = 210
+    Left = 279
+    Top = 216
     object TCoursesid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'
@@ -70,8 +70,8 @@ object DataModule1: TDataModule1
     FormatOptions.AssignedValues = [fvSortLocale, fvSortOptions]
     ResourceOptions.AssignedValues = [rvEscapeExpand]
     TableName = 'keytype.lessons'
-    Left = 415
-    Top = 207
+    Left = 343
+    Top = 222
     object TLessonsid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'
@@ -133,18 +133,18 @@ object DataModule1: TDataModule1
   end
   object DCourses: TDataSource
     DataSet = TCourses
-    Left = 336
-    Top = 297
+    Left = 267
+    Top = 291
   end
   object DLessons: TDataSource
     DataSet = TLessons
-    Left = 417
-    Top = 297
+    Left = 336
+    Top = 294
   end
   object DUsers: TDataSource
     DataSet = TUsers
-    Left = 249
-    Top = 297
+    Left = 210
+    Top = 288
   end
   object TUsers: TFDTable
     Active = True
@@ -152,8 +152,8 @@ object DataModule1: TDataModule1
     Connection = MySQLDBConnection
     ResourceOptions.AssignedValues = [rvEscapeExpand]
     TableName = 'keytype.users'
-    Left = 255
-    Top = 219
+    Left = 219
+    Top = 213
     object TUsersid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'
@@ -198,19 +198,20 @@ object DataModule1: TDataModule1
   end
   object DLessonResults: TDataSource
     DataSet = TLessonResults
-    Left = 501
-    Top = 297
+    Left = 402
+    Top = 300
   end
   object TLessonResults: TFDTable
     Active = True
+    OnCalcFields = TLessonResultsCalcFields
     IndexFieldNames = 'idUser'
     MasterSource = DUsers
     MasterFields = 'id'
     Connection = MySQLDBConnection
     ResourceOptions.AssignedValues = [rvEscapeExpand]
     TableName = 'keytype.lessonresults'
-    Left = 495
-    Top = 213
+    Left = 399
+    Top = 225
     object TLessonResultsid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'
@@ -235,10 +236,11 @@ object DataModule1: TDataModule1
       KeyFields = 'idLesson'
       Lookup = True
     end
-    object TLessonResultsresult: TBooleanField
+    object TLessonResultsresult: TStringField
       AutoGenerateValue = arDefault
       FieldName = 'result'
       Origin = 'result'
+      Size = 255
     end
     object TLessonResultsspeed: TBCDField
       AutoGenerateValue = arDefault
@@ -253,6 +255,16 @@ object DataModule1: TDataModule1
       Origin = 'accuracy'
       Precision = 10
       Size = 2
+    end
+    object TLessonResultsduration: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'duration'
+      Origin = 'duration'
+    end
+    object TLessonResultsdurationHMS: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'durationHMS'
+      Calculated = True
     end
     object TLessonResultsdate: TDateField
       AutoGenerateValue = arDefault
@@ -285,6 +297,56 @@ object DataModule1: TDataModule1
       LookupResultField = 'goalValue'
       KeyFields = 'idCourse'
       Lookup = True
+    end
+  end
+  object IdTCPClient1: TIdTCPClient
+    ConnectTimeout = 0
+    Host = '127.0.0.1'
+    Port = 6001
+    ReadTimeout = -1
+    Left = 60
+    Top = 303
+  end
+  object DKeyStatistics: TDataSource
+    DataSet = TKeyStatistics
+    Left = 489
+    Top = 315
+  end
+  object TKeyStatistics: TFDTable
+    Active = True
+    IndexFieldNames = 'idLessonResults'
+    MasterSource = DLessonResults
+    MasterFields = 'id'
+    Connection = MySQLDBConnection
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'keytype.keystatistics'
+    Left = 483
+    Top = 231
+    object TKeyStatisticsid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+    end
+    object TKeyStatisticsidLessonResults: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'idLessonResults'
+      Origin = 'idLessonResults'
+    end
+    object TKeyStatisticskey: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'key'
+      Origin = '`key`'
+      FixedChar = True
+      Size = 1
+    end
+    object TKeyStatisticscorrect: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'correct'
+      Origin = 'correct'
+    end
+    object TKeyStatisticsmistake: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'mistake'
+      Origin = 'mistake'
     end
   end
 end

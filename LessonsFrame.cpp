@@ -20,6 +20,7 @@ __fastcall TFrLessons::TFrLessons(TComponent* Owner, TDataModule1 *_dataModule) 
 	if (_dataModule) {
 
     	dataModule = _dataModule;
+        dataModule->TLessons->MasterSource = dataModule->DCourses;
         UIUtils::setComboBoxItems(CBFilter, dataModule->getColumnNames(DBGridLessons->DataSource->DataSet, "courseName"), -1);
 
        	LOGGER(LogLevel::Debug, "Lessons displayed");
@@ -133,10 +134,10 @@ void __fastcall TFrLessons::BtSortClick(TObject *Sender)
 {
 
     if (ESort->Text == "") {
-      dataModule->TLessons->IndexFieldNames = "idCourses";
+      	dataModule->TLessons->IndexFieldNames = "idCourses";
     }
     else {
-      dataModule->TLessons->IndexFieldNames = ESort->Text;
+      	dataModule->TLessons->IndexFieldNames = ESort->Text;
     }
 
 }
@@ -144,8 +145,8 @@ void __fastcall TFrLessons::BtSortClick(TObject *Sender)
 void __fastcall TFrLessons::BtMasterDetailClick(TObject *Sender)
 {
 	if (BtMasterDetail->Caption == "Master off") {
-      dataModule->TLessons->MasterSource = nullptr;
-      BtMasterDetail->Caption = "Master on";
+      	dataModule->TLessons->MasterSource = nullptr;
+      	BtMasterDetail->Caption = "Master on";
     }
     else {
     	dataModule->TLessons->MasterSource = dataModule->DCourses;

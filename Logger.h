@@ -10,7 +10,9 @@
 #include <vcl.h>
 
 #define LOGGER(level, message) Logger::getLogger().log(level, message, __FUNCTION__, __LINE__)
+#define LOGGER_SIMPLE(messsage) Logger::getLogger().log(messsage)
 
+class MainSession;
 
 enum class LogLevel {
     Debug = 1,
@@ -25,8 +27,8 @@ enum class LogLevel {
 enum class LogInterval {
     Never,
     Auto,
-    Weekly,
-    Monthly,
+    Week,
+    Month,
     Count,
     Unknown
 };
@@ -37,14 +39,11 @@ LogLevel operator&(LogLevel a, LogLevel b);
 class Logger {
 
     private:
+    	MainSession *mainSession;
+
     	std::vector<UnicodeString> buffer;
 
         UnicodeString logFilename = "";
-        bool firstFlush = true;
-
-        bool enableLogging = false;
-        LogLevel logLevel = LogLevel::All;
-        LogInterval logInterval = LogInterval::Auto;
 
         std::chrono::steady_clock::time_point intervalStart;
         const std::chrono::seconds flushInterval = std::chrono::seconds(60);
@@ -57,19 +56,15 @@ class Logger {
    		Logger& operator=(const Logger&)=delete;
 
     public:
-
+        void setMainSession(MainSession *_mainSession);
     	static Logger& getLogger();
-
-        void setEnableLogging(bool _enableLogging);
-    	void setLogLevel(LogLevel level);
-        LogInterval getLogInterval() const;
-        void setLogInterval(LogInterval _logInterval);
 
         static UnicodeString getLogLevelAsString(LogLevel level);
         static LogLevel getStringAsLogLevel(const UnicodeString &level);
 
+        void log(const UnicodeString& message);
         void log(LogLevel level, const UnicodeString& message, const char* functionName, int lineNumber);
-        void flushBuffer();
+        void writeToFile();
 
         UnicodeString findNextFileIndex(const UnicodeString &dirName, const UnicodeString &fileType);
         UnicodeString getFileIndex(const UnicodeString &file);
@@ -77,7 +72,7 @@ class Logger {
         void sortLogsByTimeStamp(std::vector<UnicodeString> &logs, bool sortDescending);
 
         std::vector<UnicodeString> findMatchingLogs(std::vector<UnicodeString> logs, LogInterval interval);
-        bool archiveLogFiles(LogInterval interval);
+        UnicodeString archiveLogFiles();
 
        	static std::vector<UnicodeString>& getLogLevelStrings();
         static std::vector<UnicodeString>& getLogIntervalStrings();

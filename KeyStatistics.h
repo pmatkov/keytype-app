@@ -2,26 +2,30 @@
 
 #ifndef KeyStatisticsH
 #define KeyStatisticsH
+
+//#include "IKeyStatistics.h"
 //---------------------------------------------------------------------------
 class KeyStatistics {
 
 	private:
-		int totalCount = 0;
-		int correctCount = 0;
-		int mistakesCount = 0;
+        wchar_t key;
+		int correct = 0;
+		int mistake = 0;
 
     public:
-    	const int& getTotalCount() const;
-		void setTotalCount(int _totalCount);
-		void incTotalCount();
+    	KeyStatistics();
+        KeyStatistics(wchar_t _key);
+        KeyStatistics(wchar_t _key, int _correct, int _mistake);
 
-		const int& getCorrectCount() const;
-		void setCorrectCount(int _correctCount);
-		void incCorrectCount();
+        wchar_t getKey() const;
 
-		const int& getMistakesCount() const;
-		void setMistakesCount(int _mistakesCount);
-		void incMistakesCount();
+		int getCorrect() const;
+		void setCorrect(int _correct);
+		void increaseCorrect();
+
+		int getMistake() const;
+		void setMistake(int _mistake);
+		void increaseMistake();
 };
 
 #endif

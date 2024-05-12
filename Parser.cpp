@@ -22,12 +22,12 @@ Parser::Parser(MainSession *_mainSession, TypingSession *_typingSession) {
     }
 }
 
- const std::vector<std::pair<UnicodeString, bool>>& Parser::getInputLog() const {
-	 return inputLog;
+ const std::vector<std::pair<UnicodeString, bool>>& Parser::getKeyLog() const {
+	 return keyLog;
  }
 
- void Parser::setInputLog(const std::vector<std::pair<UnicodeString, bool>>& text) {
-	inputLog = text;
+ void Parser::setKeyLog(const std::vector<std::pair<UnicodeString, bool>>& text) {
+	keyLog = text;
 }
 
  const std::vector<std::pair<UnicodeString, bool>>& Parser::getBuffer() const {
@@ -63,6 +63,16 @@ const bool& Parser::isInputEnabled() const {
 void Parser::setInputEnabled(bool _inputEnabled) {
 	inputEnabled = _inputEnabled;
 }
+
+void Parser::resetParserData() {
+
+    keyLog.clear();
+	buffer.clear();
+	insertedChars = "";
+    setInputEnabled(false);
+
+}
+
 
 wchar_t Parser::getChar(WPARAM wParam){
 
@@ -101,15 +111,15 @@ wchar_t Parser::getChar(WPARAM wParam){
 
                         if (wch == typingSession->getTextSource()[typingSession->getTextSource().getCharIndex()]) {
 
-                            inputLog.push_back(std::make_pair(UnicodeString(wch), false));
+                            keyLog.push_back(std::make_pair(UnicodeString(wch), false));
 
-                            // flag mistakes in buffer
-                            if (!mistake) {
-                            	buffer.push_back(std::make_pair(UnicodeString(wch), false));
+                            // mark mistake in buffer
+                            if (mistake) {
+                            	buffer.push_back(std::make_pair(UnicodeString(wch), true));
+                                mistake = false;
                             }
                             else {
-                              	buffer.push_back(std::make_pair(UnicodeString(wch), true));
-                                mistake = false;
+                            	buffer.push_back(std::make_pair(UnicodeString(wch), false));
                             }
 
                             // count typed words
@@ -117,20 +127,26 @@ wchar_t Parser::getChar(WPARAM wParam){
                                 typingSession->increaseTypedWords();
                             }
 
+                            typingSession->increaseCorrectKey(wch);
+
                             typingSession->increaseCharIndex();
                             return wch;
 
                         } else {
-                        	inputLog.push_back(std::make_pair(UnicodeString(wch), true));
+                        	keyLog.push_back(std::make_pair(UnicodeString(wch), true));
 
                             if (mainSession->getTypingSettings().getCountConsecutiveMistakes()) {
                             	typingSession->increaseMistakes();
+
+                                typingSession->increaseMistakeKey(typingSession->getTextSource()[typingSession->getTextSource().getCharIndex()]);
                             }
                             else {
-                                // flag mistake but don't add to buffer yet (only add after input is valid)
+                                // flag mistake but don't add to buffer yet (only add after correct input)
                             	if (!mistake) {
                        				typingSession->increaseMistakes();
                                		mistake = true;
+
+                                    typingSession->increaseMistakeKey(typingSession->getTextSource()[typingSession->getTextSource().getCharIndex()]);
                             	}
                             }
 

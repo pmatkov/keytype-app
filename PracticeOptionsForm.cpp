@@ -18,16 +18,18 @@ TFPracticeOptions *FPracticeOptions;
 
 __fastcall TFPracticeOptions::TFPracticeOptions(TComponent* Owner) : TForm(Owner) {}
 
-__fastcall TFPracticeOptions::TFPracticeOptions(TComponent* Owner, MainSession *_mainSession) : TForm(Owner) {
+__fastcall TFPracticeOptions::TFPracticeOptions(TComponent* Owner, TDataModule1 *_dataModule, MainSession *_mainSession) : TForm(Owner) {
 
-	if (_mainSession) {
-	   mainSession = _mainSession;
+	if (_dataModule && _mainSession) {
+
+	   dataModule = _dataModule;
+       mainSession = _mainSession;
 	}
     else {
         throw CustomExceptions::ENullPointerException();
     }
 
-    FrGeneratedText = UIUtils::createFrame<TFrGeneratedText>(TSGeneratedText);
+    FrGeneratedText = UIUtils::createFrame<TFrGeneratedText>(TSGeneratedText, dataModule);
 	FrExternalSources = UIUtils::createFrame<TFrExternalSources>(TSExternalSources);
     FrCustomText = UIUtils::createFrame<TFrCustomText>(TSCustomText);
 

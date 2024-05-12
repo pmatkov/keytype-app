@@ -5,9 +5,9 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45409.5511574074</prop>
-        <prop prop-type="OrigDateTime">45409.5507407407</prop>
-        <prop prop-type="XlatDateTime">45409.0324305556</prop>
+        <prop prop-type="SelfDateTime">45424.8829166667</prop>
+        <prop prop-type="OrigDateTime">45424.8697685185</prop>
+        <prop prop-type="XlatDateTime">45415.9386111111</prop>
         <prop prop-type="Translated">0</prop>
         <prop prop-type="UnTranslated">31</prop>
       </prop-group>
@@ -38,60 +38,60 @@
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45409.0545082523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFrTypingText</prop><prop prop-type="Localize">0</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrTypingText.O:LStart.Left" resname="O:FrTypingText.O:LStart.Left">
-        <source>21</source>
+      <trans-unit id="O:FrTypingText.O:LInfo.Left" resname="O:FrTypingText.O:LInfo.Left">
+        <source>33</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45409.0545082523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45424.8829225463</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrTypingText.O:LStart.Top" resname="O:FrTypingText.O:LStart.Top">
+      <trans-unit id="O:FrTypingText.O:LInfo.Top" resname="O:FrTypingText.O:LInfo.Top">
         <source>125</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45409.0545082523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45424.8829225463</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrTypingText.O:LStart.Width" resname="O:FrTypingText.O:LStart.Width">
-        <source>280</source>
+      <trans-unit id="O:FrTypingText.O:LInfo.Width" resname="O:FrTypingText.O:LInfo.Width">
+        <source>260</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45409.0545082523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45424.8829225463</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrTypingText.O:LStart.Height" resname="O:FrTypingText.O:LStart.Height">
+      <trans-unit id="O:FrTypingText.O:LInfo.Height" resname="O:FrTypingText.O:LInfo.Height">
         <source>17</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45409.0545082523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45424.8829225463</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrTypingText.O:LStart.AutoSize" resname="O:FrTypingText.O:LStart.AutoSize">
+      <trans-unit id="O:FrTypingText.O:LInfo.AutoSize" resname="O:FrTypingText.O:LInfo.AutoSize">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45409.0545082523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45424.8829225463</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrTypingText.O:LStart.Font.Charset" resname="O:FrTypingText.O:LStart.Font.Charset">
+      <trans-unit id="O:FrTypingText.O:LInfo.Font.Charset" resname="O:FrTypingText.O:LInfo.Font.Charset">
         <source>DEFAULT_CHARSET</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45409.0545082523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45424.8829225463</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrTypingText.O:LStart.Font.Color" resname="O:FrTypingText.O:LStart.Font.Color">
+      <trans-unit id="O:FrTypingText.O:LInfo.Font.Color" resname="O:FrTypingText.O:LInfo.Font.Color">
         <source>clWindowText</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45409.0545082523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45424.8829225463</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrTypingText.O:LStart.Font.Height" resname="O:FrTypingText.O:LStart.Font.Height">
+      <trans-unit id="O:FrTypingText.O:LInfo.Font.Height" resname="O:FrTypingText.O:LInfo.Font.Height">
         <source>-13</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45409.0545082523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45424.8829225463</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrTypingText.O:LStart.Font.Name" resname="O:FrTypingText.O:LStart.Font.Name">
+      <trans-unit id="O:FrTypingText.O:LInfo.Font.Name" resname="O:FrTypingText.O:LInfo.Font.Name">
         <source>'Segoe UI'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45409.0545082523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45424.8829225463</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrTypingText.O:LStart.Font.Style" resname="O:FrTypingText.O:LStart.Font.Style">
+      <trans-unit id="O:FrTypingText.O:LInfo.Font.Style" resname="O:FrTypingText.O:LInfo.Font.Style">
         <source>[]</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45409.0545082523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45424.8829225463</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrTypingText.O:LStart.ParentFont" resname="O:FrTypingText.O:LStart.ParentFont">
+      <trans-unit id="O:FrTypingText.O:LInfo.ParentFont" resname="O:FrTypingText.O:LInfo.ParentFont">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45409.0545082523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45424.8829225463</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrTypingText.O:REText.Left" resname="O:FrTypingText.O:REText.Left">
         <source>6</source>

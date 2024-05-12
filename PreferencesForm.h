@@ -10,6 +10,7 @@
 
 #include "MainSession.h"
 #include "AuthenticationService.h"
+#include <Vcl.ExtCtrls.hpp>
 
 //---------------------------------------------------------------------------
 class TFPreferences : public TForm
@@ -40,8 +41,11 @@ __published:	// IDE-managed Components
 	TButton *BtAccept;
 	TLabel *LSeparator;
 	TComboBox *CBSeparator;
-	TLabel *LArchiveLogs;
+	TLabel *LLogInterval;
 	TComboBox *CBLogInterval;
+	TButton *BtArchiveLogs;
+	TLabel *LArchiveStatus;
+	TTimer *msgDisplayTimer;
 	void __fastcall CBLanguageChange(TObject *Sender);
 	void __fastcall CBLoggingEnableClick(TObject *Sender);
 	void __fastcall BtReset1Click(TObject *Sender);
@@ -58,6 +62,8 @@ __published:	// IDE-managed Components
 	void __fastcall CBLoggingChange(TObject *Sender);
 	void __fastcall CBFont1Change(TObject *Sender);
 	void __fastcall CBLogIntervalChange(TObject *Sender);
+	void __fastcall BtArchiveLogsClick(TObject *Sender);
+	void __fastcall msgDisplayTimerTimer(TObject *Sender);
 private:	// User declarations
 	MainSession *mainSession;
     AuthenticationService *authService;

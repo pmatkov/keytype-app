@@ -16,6 +16,8 @@
 #include "TextUtils.h"
 #include "EnumUtils.h"
 
+#include "MainSession.h"
+
 #include "TimeManager.h"
 #include "EDirNotFoundException.h"
 #include "EInvalidArgumentException.h"
@@ -31,6 +33,17 @@ Logger::Logger() {
 	intervalStart = std::chrono::steady_clock::now();
 }
 
+void Logger::setMainSession(MainSession *_mainSession) {
+
+    if (_mainSession) {
+      	mainSession = _mainSession;
+    }
+    else {
+        throw CustomExceptions::ENullPointerException();
+    }
+}
+
+
 Logger& Logger::getLogger() {
 
     static Logger logger;
@@ -44,24 +57,6 @@ LogLevel operator|(LogLevel a, LogLevel b) {
 LogLevel operator&(LogLevel a, LogLevel b) {
     return static_cast<LogLevel>(static_cast<int>(a) & static_cast<int>(b));
 }
-
-void Logger::setEnableLogging(bool _enableLogging) {
-    enableLogging = _enableLogging;
-}
-
-void Logger::setLogLevel(LogLevel level) {
-    logLevel = level;
-}
-
-LogInterval Logger::getLogInterval() const {
-    return logInterval;
-}
-
-
-void Logger::setLogInterval(LogInterval _logInterval) {
-    logInterval = _logInterval;
-}
-
 
 UnicodeString Logger::getLogLevelAsString(LogLevel level) {
 
@@ -104,12 +99,18 @@ LogLevel Logger::getStringAsLogLevel(const UnicodeString &level) {
 }
 
 
-// add log to buffer
+// add log to the buffer
+
+void Logger::log(const UnicodeString& message) {
+
+	buffer.push_back(message);
+}
+
 void Logger::log(LogLevel level, const UnicodeString& message, const char* functionName, int lineNumber) {
 
-	const int MAX_LOGS = 20;
+	const int MAX_LOGS = 10;
 
-    if (enableLogging && (static_cast<int>(logLevel) & static_cast<int>(level))) {
+    if (!mainSession || (static_cast<int>(mainSession->getAppSettings().getLogLevel()) & static_cast<int>(level))) {
 
     	UnicodeString logLine;
         logLine = TimeManager::getCurrentDateTime() + " ";
@@ -118,45 +119,39 @@ void Logger::log(LogLevel level, const UnicodeString& message, const char* funct
 
         buffer.push_back(logLine);
 
-        if (buffer.size() >= MAX_LOGS || std::chrono::steady_clock::now() - intervalStart >= flushInterval) {
-            flushBuffer();
-            firstFlush = false;
+        if (buffer.size() >= MAX_LOGS || (std::chrono::steady_clock::now() - intervalStart >= flushInterval)) {
+            writeToFile();
         }
     }
 }
 
 // write log to file
 
-void Logger::flushBuffer() {
+void Logger::writeToFile() {
 
-    if (!enableLogging) {
-        return;
-    }
+    if (mainSession && mainSession->getAppSettings().getEnableLogging()) {
 
-    UnicodeString path = FileUtils::createAbsolutePath("Log\\" + UnicodeString(LOG_PREFIX) + TimeManager::getCurrentDate() + ".log", true);
+    	UnicodeString path = FileUtils::createAbsolutePath("Log\\" + UnicodeString(LOG_PREFIX) + TimeManager::getCurrentDate() + ".log", true);
 
-    std::unique_ptr<TStreamWriter> writer;
+        std::unique_ptr<TStreamWriter> writer;
 
-    try {
+        try {
 
-        writer = std::make_unique<TStreamWriter>(path, true, TEncoding::UTF8, 1024);
+            writer = std::make_unique<TStreamWriter>(path, true, TEncoding::UTF8, 1024);
 
-        if (firstFlush) {
-        	writer->WriteLine(UnicodeString("--Session started--"));
-            firstFlush = false;
+            for (const UnicodeString &string: buffer) {
+                writer->WriteLine(string);
+            }
+
+            buffer.clear();
+            intervalStart = std::chrono::steady_clock::now();
+
+        }
+        catch (const Exception &ex)	{
+
+            ShowMessage("Error writing to file: " + path);
         }
 
-        for (const UnicodeString &string: buffer) {
-            writer->WriteLine(string);
-        }
-
-        buffer.clear();
-        intervalStart = std::chrono::steady_clock::now();
-
-    }
-    catch (const Exception &ex)	{
-
-        ShowMessage("Error writing to file: " + path);
     }
 
 }
@@ -167,7 +162,7 @@ std::vector<UnicodeString>& Logger::getLogLevelStrings() {
     return logLevelStrings;
 }
 
-std::vector<UnicodeString> Logger::logIntervalStrings = {"Never", "Auto", "Weekly", "Monthly"};
+std::vector<UnicodeString> Logger::logIntervalStrings = {"Never", "Auto", "Week", "Month"};
 
 std::vector<UnicodeString>& Logger::getLogIntervalStrings() {
     return logIntervalStrings;
@@ -218,15 +213,15 @@ UnicodeString Logger::findNextFileIndex(const UnicodeString &dirName, const Unic
 
 std::vector<UnicodeString> Logger::findMatchingLogs(std::vector<UnicodeString> logs, LogInterval interval) {
 
-    const int MAX_LOG_FILES = 10;
+    const int AUTO_ARCHIVE_LIMIT = 5;
 
     std::vector<UnicodeString> matchingLogs;
 
-    if (interval == LogInterval::Auto && logs.size() > MAX_LOG_FILES) {
+    if (interval == LogInterval::Auto && logs.size() > AUTO_ARCHIVE_LIMIT) {
 
         sortLogsByTimeStamp(logs, false);
 
-        for (int i = 0; i < MAX_LOG_FILES; i++) {
+        for (int i = 0; i < AUTO_ARCHIVE_LIMIT; i++) {
             matchingLogs.push_back(logs[i]);
         }
     }
@@ -238,10 +233,10 @@ std::vector<UnicodeString> Logger::findMatchingLogs(std::vector<UnicodeString> l
 
             int days = DaysBetween(logDate, Now());
 
-            if (interval == LogInterval::Weekly && days >= 7) {
+            if (interval == LogInterval::Week && days >= 7) {
                 matchingLogs.push_back(log);
             }
-            else if (interval == LogInterval::Monthly && days >= 30) {
+            else if (interval == LogInterval::Month && days >= 30) {
                 matchingLogs.push_back(log);
             }
         }
@@ -328,15 +323,12 @@ UnicodeString Logger::getFileIndex(const UnicodeString &file) {
     }
 }
 
-bool Logger::archiveLogFiles(LogInterval interval)
+UnicodeString Logger::archiveLogFiles()
 {
 
-    if (!enableLogging) {
-       return false;
-    }
     // find log files
-	std::optional<std::vector<UnicodeString>> logs;
-	UnicodeString dirPath = FileUtils::createAbsolutePath("Log", false);
+    std::optional<std::vector<UnicodeString>> logs;
+    UnicodeString dirPath = FileUtils::createAbsolutePath("Log", false);
 
     try {
         logs = FileUtils::getFileNames(dirPath, "log");
@@ -347,19 +339,26 @@ bool Logger::archiveLogFiles(LogInterval interval)
     std::vector<UnicodeString> matchingLogs;
 
     if (logs.has_value()) {
-        matchingLogs = findMatchingLogs(*logs, interval);
+
+        if (mainSession) {
+        	matchingLogs = findMatchingLogs(*logs, mainSession->getAppSettings().getLogInterval());
+        }
+    }
+    else {
+    	LOGGER(LogLevel::Info, "No logs found");
+        return "No logs found";
     }
 
-    if (matchingLogs.size()) {
+//    if (matchingLogs.size()) {
 
-    	UnicodeString index = findNextFileIndex("Log", "tgz");
-		UnicodeString command =	FileUtils::createAbsolutePath("Archiver", false) + "Win32\\Debug\\Archiver.exe tar -czf " + \
+        UnicodeString index = findNextFileIndex("Log", "tgz");
+        UnicodeString command =	FileUtils::createAbsolutePath("Archiver", false) + "Win32\\Debug\\Archiver.exe tar -czf " + \
          FileUtils::createAbsolutePath("Log", false) + "archive_" + TimeManager::getCurrentDate() +  "_" + index + ".tgz -C " + \
          FileUtils::createAbsolutePath("Log", false) + " " + TextUtils::vectorToString(matchingLogs);
 
         STARTUPINFO si = { sizeof(si) };
         PROCESS_INFORMATION pi;
-        unsigned long returnValue;
+        unsigned long retValue;
 
         if (!CreateProcess(NULL, command.c_str(), NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi)) {
             LOGGER(LogLevel::Error, "Unable to create process");
@@ -367,15 +366,33 @@ bool Logger::archiveLogFiles(LogInterval interval)
         }
 
         WaitForSingleObject(pi.hProcess, INFINITE);
-        GetExitCodeProcess(pi.hProcess, &returnValue);
-        LOGGER(LogLevel::Info, "Process return value: " +  IntToStr((int)(returnValue)));
-
+        GetExitCodeProcess(pi.hProcess, &retValue);
         CloseHandle(pi.hProcess);
         CloseHandle(pi.hThread);
 
-    }
+        if (!retValue) {
+        	LOGGER(LogLevel::Info, "Logs archived successfully");
+        	return "Logs archived successfully";
+        }
+        else if (retValue == 1)  {
+        	LOGGER(LogLevel::Info, "Invalid command");
+        	return "Invalid command ";
+        }
+        else if (retValue == 2)  {
+        	LOGGER(LogLevel::Info, "No matching logs");
+        	return "No matching logs";
+        }
+        else {
+        	LOGGER(LogLevel::Info, "Unknown error");
+        	return "Unknown error";
+        }
 
-    return true;
+//    }
+//    else {
+//    	LOGGER(LogLevel::Info, "No matching logs found");
+//        return "No matching logs found";
+//    }
+
 
 }
 

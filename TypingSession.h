@@ -17,7 +17,8 @@ enum SessionStatus {
 	Restarted,
 	Resumed,
     Paused,
-    Completed
+    Completed,
+    Cleared
 };
 
 enum LessonGoal {
@@ -38,10 +39,7 @@ class TypingSession : public Session {
         int wordCount;
 
         std::vector<double> speedReadings;
-
         std::map<wchar_t, KeyStatistics> keyStatistics;
-
-        TDateTime sessionTime;
 
         int typedWords = 0;
 		int mistakes = 0;
@@ -65,6 +63,10 @@ class TypingSession : public Session {
         int getWordCount() const;
         void setWordCount(int _wordCount);
 
+        void increaseCorrectKey(wchar_t key);
+        void increaseMistakeKey(wchar_t key);
+        std::map<wchar_t, KeyStatistics> &getKeyStatistics();
+
 		void increaseCharIndex();
 		void decreaseCharIndex();
 
@@ -81,9 +83,6 @@ class TypingSession : public Session {
         double getAvgSpeed();
         double calculateSpeed();
 
-        TDateTime getSessionTime() const;
-        void setSessionTime(TDateTime _sessionTime);
-
         const SessionStatus& getSessionStatus() const;
         void setSessionStatus(const SessionStatus &_sessionStatus);
 
@@ -95,6 +94,8 @@ class TypingSession : public Session {
 
         int getDifficulty() const;
         void setDifficulty(int _difficulty);
+
+        void resetSessionData();
 
         const std::vector<UnicodeString>& getLessonGoalStrings();
 

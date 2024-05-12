@@ -232,3 +232,16 @@ void __fastcall TFPreferences::CBLogIntervalChange(TObject *Sender)
     }
 }
 
+void __fastcall TFPreferences::BtArchiveLogsClick(TObject *Sender)
+{
+ 	Logger &logger = Logger::getLogger();
+    UIUtils::displayTimedMessage(msgDisplayTimer, LArchiveStatus, logger.archiveLogFiles());
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFPreferences::msgDisplayTimerTimer(TObject *Sender)
+{
+   	UIUtils::removeTimedMessage(msgDisplayTimer, LArchiveStatus);
+}
+//---------------------------------------------------------------------------
+

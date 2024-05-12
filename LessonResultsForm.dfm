@@ -1,9 +1,11 @@
 object FLessonResults: TFLessonResults
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
   Caption = 'Lesson results'
-  ClientHeight = 442
-  ClientWidth = 628
+  ClientHeight = 421
+  ClientWidth = 584
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,9 +15,9 @@ object FLessonResults: TFLessonResults
   TextHeight = 15
   object DBGridLessonResults: TDBGrid
     Left = 13
-    Top = 155
-    Width = 600
-    Height = 236
+    Top = 158
+    Width = 561
+    Height = 206
     DataSource = DataModule1.DLessonResults
     Options = [dgTitles, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick, dgTitleHotTrack]
     TabOrder = 0
@@ -26,32 +28,37 @@ object FLessonResults: TFLessonResults
     TitleFont.Style = []
     Columns = <
       item
+        Alignment = taCenter
         Expanded = False
         FieldName = 'id'
         Width = 20
         Visible = True
       end
       item
+        Alignment = taCenter
         Expanded = False
         FieldName = 'idUser'
-        Width = 45
+        Width = 40
         Visible = True
       end
       item
+        Alignment = taCenter
         Expanded = False
         FieldName = 'lessonName'
         Title.Caption = 'Lesson name'
-        Width = 140
+        Width = 100
         Visible = True
       end
       item
+        Alignment = taCenter
         Expanded = False
         FieldName = 'lessonGoal'
         Title.Caption = 'Goal'
-        Width = 70
+        Width = 50
         Visible = True
       end
       item
+        Alignment = taCenter
         Expanded = False
         FieldName = 'lessonGoalValue'
         Title.Caption = 'Value'
@@ -59,38 +66,49 @@ object FLessonResults: TFLessonResults
         Visible = True
       end
       item
+        Alignment = taCenter
         Expanded = False
         FieldName = 'result'
         Title.Caption = 'Result'
-        Width = 60
+        Width = 50
         Visible = True
       end
       item
+        Alignment = taCenter
         Expanded = False
         FieldName = 'speed'
         Title.Caption = 'Speed'
-        Width = 60
+        Width = 55
         Visible = True
       end
       item
+        Alignment = taCenter
         Expanded = False
         FieldName = 'accuracy'
         Title.Caption = 'Accuracy'
-        Width = 60
+        Width = 55
         Visible = True
       end
       item
         Expanded = False
+        FieldName = 'durationHMS'
+        Title.Caption = 'Duration'
+        Width = 60
+        Visible = True
+      end
+      item
+        Alignment = taCenter
+        Expanded = False
         FieldName = 'date'
         Title.Caption = 'Date'
-        Width = 80
+        Width = 60
         Visible = True
       end>
   end
   object DBUsers: TDBGrid
     Left = 125
     Top = 31
-    Width = 488
+    Width = 449
     Height = 100
     DataSource = DataModule1.DUsers
     Options = [dgTitles, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick, dgTitleHotTrack]
@@ -102,12 +120,14 @@ object FLessonResults: TFLessonResults
     TitleFont.Style = []
     Columns = <
       item
+        Alignment = taCenter
         Expanded = False
         FieldName = 'id'
         Width = 20
         Visible = True
       end
       item
+        Alignment = taCenter
         Expanded = False
         FieldName = 'username'
         Title.Caption = 'Username'
@@ -115,20 +135,23 @@ object FLessonResults: TFLessonResults
         Visible = True
       end
       item
+        Alignment = taCenter
         Expanded = False
         FieldName = 'name'
         Title.Caption = 'Name'
-        Width = 100
+        Width = 80
         Visible = True
       end
       item
+        Alignment = taCenter
         Expanded = False
         FieldName = 'surname'
         Title.Caption = 'Surname'
-        Width = 100
+        Width = 80
         Visible = True
       end
       item
+        Alignment = taCenter
         Expanded = False
         FieldName = 'email'
         Title.Caption = 'E-mail'
@@ -136,6 +159,7 @@ object FLessonResults: TFLessonResults
         Visible = True
       end
       item
+        Alignment = taCenter
         Expanded = False
         FieldName = 'age'
         Title.Caption = 'Age'
@@ -153,8 +177,8 @@ object FLessonResults: TFLessonResults
     TabOrder = 2
   end
   object BtViewReport: TButton
-    Left = 538
-    Top = 409
+    Left = 499
+    Top = 379
     Width = 75
     Height = 25
     Caption = 'View report'
@@ -162,8 +186,8 @@ object FLessonResults: TFLessonResults
     OnClick = BtViewReportClick
   end
   object BtExportRtf: TButton
-    Left = 312
-    Top = 409
+    Left = 279
+    Top = 379
     Width = 85
     Height = 25
     Caption = 'Export as RTF'
@@ -171,8 +195,8 @@ object FLessonResults: TFLessonResults
     OnClick = BtExportRtfClick
   end
   object BtExportPdf: TButton
-    Left = 408
-    Top = 409
+    Left = 378
+    Top = 379
     Width = 85
     Height = 25
     Caption = 'Export as PDF'
@@ -194,8 +218,8 @@ object FLessonResults: TFLessonResults
       'begin'
       ''
       'end.')
-    Left = 198
-    Top = 261
+    Left = 75
+    Top = 255
     Datasets = <
       item
         DataSet = frxUser
@@ -269,8 +293,8 @@ object FLessonResults: TFLessonResults
         Width = 740.409927000000000000
         object SysMemo1: TfrxSysMemoView
           AllowVectorExport = True
-          Left = 589.606680000000000000
-          Width = 60.472480000000000000
+          Left = 570.709030000000000000
+          Width = 71.811070000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -285,8 +309,8 @@ object FLessonResults: TFLessonResults
         end
         object SysMemo2: TfrxSysMemoView
           AllowVectorExport = True
-          Left = 657.638220000000000000
-          Width = 60.472440940000000000
+          Left = 650.079160000000000000
+          Width = 68.031500940000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -793,7 +817,7 @@ object FLessonResults: TFLessonResults
           AllowVectorExport = True
           Left = 457.323130000000000000
           Top = 41.574830000000000000
-          Width = 222.992270000000000000
+          Width = 230.551330000000000000
           Height = 18.897650000000000000
           DataField = 'lessonGoalValue'
           DataSet = frxLessonResult
@@ -872,6 +896,48 @@ object FLessonResults: TFLessonResults
           ParentFont = False
           VAlign = vaCenter
         end
+        object Memo25: TfrxMemoView
+          AllowVectorExport = True
+          Left = 355.275820000000000000
+          Top = 86.929190000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Color = clWhite
+          Frame.Typ = []
+          Fill.ForeColor = clWhite
+          Memo.UTF8W = (
+            'Duration:')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo26: TfrxMemoView
+          IndexTag = 1
+          AllowVectorExport = True
+          Left = 457.323130000000000000
+          Top = 86.929190000000000000
+          Width = 207.874150000000000000
+          Height = 18.897650000000000000
+          DataField = 'durationHMS'
+          DataSet = frxLessonResult
+          DataSetName = 'frxLessonResult'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clGray
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Color = clWhite
+          Frame.Typ = []
+          Fill.ForeColor = clWhite
+          Memo.UTF8W = (
+            '[frxLessonResult."durationHMS"]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
       end
     end
   end
@@ -881,8 +947,8 @@ object FLessonResults: TFLessonResults
     DataSet = DataModule1.TUsers
     BCDToCurrency = False
     DataSetOptions = []
-    Left = 258
-    Top = 264
+    Left = 138
+    Top = 255
   end
   object frxLessonResult: TfrxDBDataset
     UserName = 'frxLessonResult'
@@ -890,8 +956,8 @@ object FLessonResults: TFLessonResults
     DataSet = DataModule1.TLessonResults
     BCDToCurrency = False
     DataSetOptions = []
-    Left = 342
-    Top = 267
+    Left = 195
+    Top = 261
   end
   object frxPDFExport: TfrxPDFExport
     UseFileCache = True
@@ -919,8 +985,8 @@ object FLessonResults: TFLessonResults
     PdfA = False
     PDFStandard = psNone
     PDFVersion = pv17
-    Left = 432
-    Top = 264
+    Left = 264
+    Top = 258
   end
   object frxRTFExport: TfrxRTFExport
     UseFileCache = True
@@ -934,7 +1000,7 @@ object FLessonResults: TFLessonResults
     SuppressPageHeadersFooters = False
     HeaderFooterMode = hfText
     AutoSize = False
-    Left = 513
-    Top = 267
+    Left = 339
+    Top = 261
   end
 end

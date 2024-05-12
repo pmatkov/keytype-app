@@ -41,19 +41,16 @@ void __fastcall TFrRegister::BtRegisterClick(TObject *Sender)
     if (authenticationService->registerUser(EUsername->Text, EPassword->Text)) {
 
         if (OnRegister) {
-            LOGGER(LogLevel::Info, "User registered as <" + EUsername->Text + ">");
             OnRegister(this, mrOk);
         }
 
     } else {
 
         if (!usernameAvailable) {
-        	LResponse->Caption = "Username unavailable";
-            LOGGER(LogLevel::Debug, "Username unavailable");
+        	LResponse->Caption = "Username not available";
         }
         else {
-        	LResponse->Caption = "Registration unsuccessful";
-        	LOGGER(LogLevel::Debug, "Registration unsuccessful");
+        	LResponse->Caption = "Registration failed";
         }
     }
 }
@@ -86,7 +83,7 @@ void TFrRegister::UpdateRegisterButtonState()
 {
     if (EUsername->Text != "" && EPassword->Text != "" && ERepeatPassword->Text != "") {
         if (EPassword->Text.Compare(ERepeatPassword->Text) != 0) {
-            LResponse->Caption = "Passwords mismatch";
+            LResponse->Caption = "Passwords don't match";
         }
         else {
         	BtRegister->Enabled = true;

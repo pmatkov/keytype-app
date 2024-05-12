@@ -28,13 +28,13 @@ object FMain: TFMain
     end
     object MenuItemLessons: TMenuItem
       Caption = 'Lessons'
-      object MenuSubItemConfiguration: TMenuItem
-        Caption = 'Configuration'
-        OnClick = MenuSubItemConfigurationClick
-      end
       object MenuSubItemLessonStart: TMenuItem
         Caption = 'Start'
         OnClick = MenuSubItemLessonStartClick
+      end
+      object MenuSubItemConfiguration: TMenuItem
+        Caption = 'Configuration'
+        OnClick = MenuSubItemConfigurationClick
       end
       object MenuSubItemLessonResults: TMenuItem
         Caption = 'Results'

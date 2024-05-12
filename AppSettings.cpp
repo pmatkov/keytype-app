@@ -46,7 +46,7 @@ bool AppSettings::getEnableLogging() const {
 
 void AppSettings::setEnableLogging(bool _enableLogging) {
     enableLogging = _enableLogging;
-    Logger::getLogger().setEnableLogging(enableLogging);
+//    Logger::getLogger().setEnableLogging(enableLogging);
 }
 
 bool AppSettings::getLanguageChanged() const {
@@ -62,7 +62,7 @@ const LogLevel& AppSettings::getLogLevel() const {
 
 void AppSettings::setLogLevel(LogLevel _logLevel) {
     logLevel  = _logLevel;
-    Logger::getLogger().setLogLevel(logLevel);
+//    Logger::getLogger().setLogLevel(logLevel);
 }
 
 const LogInterval &AppSettings::getLogInterval() const {
@@ -71,7 +71,7 @@ const LogInterval &AppSettings::getLogInterval() const {
 
 void AppSettings::setLogInterval(LogInterval _logInterval) {
     logInterval = _logInterval;
-    Logger::getLogger().setLogInterval(logInterval);
+//    Logger::getLogger().setLogInterval(logInterval);
 }
 
 void AppSettings::loadDefaults() {

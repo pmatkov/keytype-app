@@ -46,9 +46,9 @@ object FrTypingStats: TFrTypingStats
     Height = 15
     AutoSize = False
   end
-  object Timer1: TTimer
+  object TStatsTimer: TTimer
     Enabled = False
-    OnTimer = Timer1Timer
+    OnTimer = TStatsTimerTimer
     Left = 510
     Top = 9
   end

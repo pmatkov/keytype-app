@@ -4,21 +4,19 @@
 #define SessionH
 //---------------------------------------------------------------------------
 
-#include "UUIDGenerator.h"
 #include "TimeManager.h"
 
 class Session
 {
     private:
-        boost::uuids::uuid sessionUuid;
-        std::chrono::time_point<std::chrono::system_clock> sessionStart;
-    	std::chrono::time_point<std::chrono::system_clock> sessionEnd;
+        std::chrono::time_point<std::chrono::system_clock> sessionStartTime;
+    	std::chrono::time_point<std::chrono::system_clock> sessionEndTime;
 
 	public:
         Session();
 
-        void setSessionStart();
- 		void setSessionEnd();
+        void startSessionTimer();
+ 		void stopSessionTimer();
         long getElapsedTime() const;
 
 };

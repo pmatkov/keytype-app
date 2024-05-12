@@ -37,6 +37,8 @@
 #include "DataModule.h"
 #include "AuthenticationForm.h"
 
+class UserStatistics;
+class TFStatistics;
 //---------------------------------------------------------------------------
 
 
@@ -59,6 +61,7 @@ __published:	// IDE-managed Components
 	void __fastcall MenuSubItemConfigurationClick(TObject *Sender);
 	void __fastcall MenuSubItemLessonStartClick(TObject *Sender);
     void __fastcall MenuSubItemViewProfileClick(TObject *Sender);
+    void __fastcall MenuSubItemViewStatisticsClick(TObject *Sender);
     void __fastcall MenuSubItemDeleteProfileClick(TObject *Sender);
     void __fastcall MenuSubItemSwitchUserClick(TObject *Sender);
 	void __fastcall MenuSubItemLessonResultsClick(TObject *Sender);
@@ -73,6 +76,9 @@ private:	// User declarations
 	std::unique_ptr<TFrFlyingWords> FrFlyingWords;
     std::unique_ptr<TFrLessons2> FrLessons2;
 
+	TFStatistics *FStatistics;
+    UserStatistics *userStatistics;
+
 	std::unique_ptr<MainSession> mainSession;
     std::unique_ptr<TypingSession> typingSession;
     std::unique_ptr<AuthenticationService> authService;
@@ -80,6 +86,7 @@ private:	// User declarations
 
     std::unique_ptr<TMenuItem> menuItemProfile;
     std::unique_ptr<TMenuItem> menuSubItemViewProfile;
+    std::unique_ptr<TMenuItem> menuSubItemViewStatistics;
     std::unique_ptr<TMenuItem> menuSubItemDeleteProfile;
     std::unique_ptr<TMenuItem> menuSubItemSwitchUser;
 

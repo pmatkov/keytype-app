@@ -1,0 +1,33 @@
+//---------------------------------------------------------------------------
+
+#ifndef ServerFormH
+#define ServerFormH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+
+#include "DataModule.h"
+#include "Logger.h"
+
+class TFServer : public TForm
+{
+__published:	// IDE-managed Components
+	TButton *BtTCPServer1;
+	TLabel *LConnectionStatusDisplay;
+	void __fastcall BtTCPServer1Click(TObject *Sender);
+private:	// User declarations
+	TDataModule2 *dataModule;
+    Logger &logger;
+public:		// User declarations
+	__fastcall TFServer(TComponent* Owner);
+    void setDataModule(TDataModule2 *_dataModule);
+    void __fastcall DMConnectionEstablished(TObject *Sender);
+    void __fastcall DMConnectionClosed(TObject *Sender);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TFServer *FServer;
+//---------------------------------------------------------------------------
+#endif
+

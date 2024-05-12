@@ -6,40 +6,35 @@
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 
-const int& KeyStatistics::getTotalCount() const {
-	return totalCount;
+KeyStatistics::KeyStatistics() {}
+KeyStatistics::KeyStatistics(wchar_t _key): key (_key) {}
+KeyStatistics::KeyStatistics(wchar_t _key, int _correct, int _mistake): key (_key), correct(_correct), mistake(_mistake) {}
+
+wchar_t KeyStatistics::getKey() const {
+ 	return key;
 }
 
-void KeyStatistics::setTotalCount(int _totalCount) {
-	totalCount = _totalCount;
+int KeyStatistics::getCorrect() const {
+	return correct;
 }
 
-void KeyStatistics::incTotalCount() {
-	totalCount++;
+void KeyStatistics::setCorrect(int _correct) {
+   correct = _correct;
 }
 
-const int& KeyStatistics::getCorrectCount() const {
-	return correctCount;
+void KeyStatistics::increaseCorrect() {
+	correct++;
 }
 
-void KeyStatistics::setCorrectCount(int _correctCount) {
-   correctCount = _correctCount;
+int KeyStatistics::getMistake() const {
+	return mistake;
 }
 
-void KeyStatistics::incCorrectCount() {
-	correctCount++;
+void KeyStatistics::setMistake(int _mistake) {
+	 mistake = _mistake;
 }
 
-const int& KeyStatistics::getMistakesCount() const {
-	return mistakesCount;
-}
-
-void KeyStatistics::setMistakesCount(int _mistakesCount) {
-
-	 mistakesCount = _mistakesCount;
-}
-
-void KeyStatistics::incMistakesCount() {
-	mistakesCount++;
+void KeyStatistics::increaseMistake() {
+	mistake++;
 }
 

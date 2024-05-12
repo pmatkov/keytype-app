@@ -35,7 +35,7 @@ void __fastcall TFrLogin::BtSignInClick(TObject *Sender)
     if (authenticationService->loginUser(EUsername->Text, EPassword->Text)) {
 
         if (OnLogin) {
-            LOGGER(LogLevel::Info, "User signed in as <" + EUsername->Text + ">");
+
             OnLogin(this, mrOk);
         }
 
@@ -52,7 +52,6 @@ void __fastcall TFrLogin::BtGuestClick(TObject *Sender)
 	if (authenticationService->loginUser("guest", "")) {
 
          if (OnLogin) {
-            LOGGER(LogLevel::Info, "User signed in as <guest>");
             OnLogin(this, mrOk);
          }
      }

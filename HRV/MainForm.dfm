@@ -28,13 +28,13 @@ object FMain: TFMain
     end
     object MenuItemLessons: TMenuItem
       Caption = 'Lekcije'
-      object MenuSubItemConfiguration: TMenuItem
-        Caption = 'Konfiguracija'
-        OnClick = MenuSubItemConfigurationClick
-      end
       object MenuSubItemLessonStart: TMenuItem
         Caption = 'Pokreni'
         OnClick = MenuSubItemLessonStartClick
+      end
+      object MenuSubItemConfiguration: TMenuItem
+        Caption = 'Konfiguracija'
+        OnClick = MenuSubItemConfigurationClick
       end
       object MenuSubItemLessonResults: TMenuItem
         Caption = 'Rezultati'

@@ -29,6 +29,7 @@ bool AuthenticationService::loginUser(const UnicodeString& username, const Unico
 
         user = User();
 		authenticated = true;
+        LOGGER(LogLevel::Info, "User signed in as <guest>");
 
 		return true;
 	}
@@ -49,6 +50,8 @@ bool AuthenticationService::loginUser(const UnicodeString& username, const Unico
 			authenticated = true;
 
         	query->Close();
+
+            LOGGER(LogLevel::Info, "User signed in as <" + username + ">");
         	return true;
         }
 		else {
@@ -66,7 +69,7 @@ bool  AuthenticationService::logoutUser() {
 
 	if (authenticated) {
 
-    	LOGGER(LogLevel::Info, "User logged out");
+    	LOGGER(LogLevel::Info, "User signed out");
 
         user = User();
 		authenticated = false;
@@ -100,9 +103,11 @@ bool AuthenticationService::registerUser(const UnicodeString& username, const Un
             	user = User(username, password);
 				authenticated = true;
                 query->Close();
+                LOGGER(LogLevel::Info, "User registered as <" + username + ">");
                 return true;
             }
             else {
+            	LOGGER(LogLevel::Debug, "Registration failed");
                 query->Close();
         		return false;
             }
@@ -111,6 +116,7 @@ bool AuthenticationService::registerUser(const UnicodeString& username, const Un
         	query->Close();
 
             if (OnUsernameUnavailable) {
+            	LOGGER(LogLevel::Debug, "Username not available");
                 OnUsernameUnavailable();
              }
              return false;

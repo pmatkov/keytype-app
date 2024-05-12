@@ -2,6 +2,6 @@
 
 #pragma hdrstop
 
-#include "UserStatistics.h"
+#include "IKeyStatistics.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)

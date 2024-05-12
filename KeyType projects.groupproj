@@ -18,6 +18,15 @@
         <Projects Include="Archiver\Archiver.cbproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="Server\Server.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Statistics\Statistics.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DLL\StatisticsLib.cbproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -71,14 +80,41 @@
     <Target Name="Archiver:Make">
         <MSBuild Projects="Archiver\Archiver.cbproj" Targets="Make"/>
     </Target>
+    <Target Name="Server">
+        <MSBuild Projects="Server\Server.cbproj"/>
+    </Target>
+    <Target Name="Server:Clean">
+        <MSBuild Projects="Server\Server.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Server:Make">
+        <MSBuild Projects="Server\Server.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Statistics">
+        <MSBuild Projects="Statistics\Statistics.cbproj"/>
+    </Target>
+    <Target Name="Statistics:Clean">
+        <MSBuild Projects="Statistics\Statistics.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Statistics:Make">
+        <MSBuild Projects="Statistics\Statistics.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="StatisticsLib">
+        <MSBuild Projects="DLL\StatisticsLib.cbproj"/>
+    </Target>
+    <Target Name="StatisticsLib:Clean">
+        <MSBuild Projects="DLL\StatisticsLib.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="StatisticsLib:Make">
+        <MSBuild Projects="DLL\StatisticsLib.cbproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="KeyType;KeyTypeTests;KeyType_HRV;KeyType_ENG;Archiver"/>
+        <CallTarget Targets="KeyType;KeyTypeTests;KeyType_HRV;KeyType_ENG;Archiver;Server;Statistics;StatisticsLib"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="KeyType:Clean;KeyTypeTests:Clean;KeyType_HRV:Clean;KeyType_ENG:Clean;Archiver:Clean"/>
+        <CallTarget Targets="KeyType:Clean;KeyTypeTests:Clean;KeyType_HRV:Clean;KeyType_ENG:Clean;Archiver:Clean;Server:Clean;Statistics:Clean;StatisticsLib:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="KeyType:Make;KeyTypeTests:Make;KeyType_HRV:Make;KeyType_ENG:Make;Archiver:Make"/>
+        <CallTarget Targets="KeyType:Make;KeyTypeTests:Make;KeyType_HRV:Make;KeyType_ENG:Make;Archiver:Make;Server:Make;Statistics:Make;StatisticsLib:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

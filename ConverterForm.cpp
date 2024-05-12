@@ -16,11 +16,16 @@
 
 TFConverter *FConverter;
 //---------------------------------------------------------------------------
-__fastcall TFConverter::TFConverter(TComponent* Owner)
-	: TForm(Owner)
-{
+__fastcall TFConverter::TFConverter(TComponent* Owner) 	: TForm(Owner)  {}
+
+__fastcall TFConverter::TFConverter(TComponent* Owner, TDataModule1 *_dataModule) : TForm(Owner)  {
+
+    if (_dataModule) {
+    	dataModule = _dataModule;
+    }
 }
-//---------------------------------------------------------------------------
+
+
 void __fastcall TFConverter::BtBrowseClick(TObject *Sender)
 {
 
@@ -41,31 +46,45 @@ void __fastcall TFConverter::BtBrowseClick(TObject *Sender)
 
 void __fastcall TFConverter::BtConvertClick(TObject *Sender)
 {
-    std::optional<UnicodeString> buffer;
+//    std::optional<UnicodeString> buffer;
+//
+//    try {
+//        buffer = FileUtils::readFromTextFile(DFileOpen->FileName);
+//    } catch (CustomExceptions::EFileNotFoundException &ex) {
+//        LOGGER(LogLevel::Fatal, ex.getMessage());
+//    }
+//
+//    if (buffer.has_value()) {
+//    	std::vector<UnicodeString> wordList = TextUtils::splitToTokens(*buffer);
+//    	std::optional<UnicodeString> jsonString = Dictionary::generateJsonFromWordList(wordList);
+//
+//    	if (jsonString.has_value()) {
+//
+//        	FileUtils::saveToTextFile(FileUtils::createAbsolutePath("Data\\" + EOutput->Text, true), std::vector<UnicodeString>{*jsonString});
+//     	}
+//    }
 
-    try {
-        buffer = FileUtils::readFromTextFile(DFileOpen->FileName);
-    } catch (CustomExceptions::EFileNotFoundException &ex) {
-        LOGGER(LogLevel::Fatal, ex.getMessage());
+    if (dataModule->convertWordList(DFileOpen->FileName)) {
+          UIUtils::displayTimedMessage(msgDisplayTimer, LInfo, "Converted");
+    }
+    else {
+        UIUtils::displayTimedMessage(msgDisplayTimer, LInfo, "Failed");
     }
 
-    if (buffer.has_value()) {
-    	std::vector<UnicodeString> wordList = TextUtils::splitToTokens(*buffer);
-    	std::optional<UnicodeString> jsonString = Dictionary::generateJsonFromWordList(wordList);
 
-    	if (jsonString.has_value()) {
-
-        	FileUtils::saveToTextFile(FileUtils::createAbsolutePath("Data\\" + EOutput->Text, true), std::vector<UnicodeString>{*jsonString});
-     	}
-    }
-
-    UIUtils::displayTimedMessage(msgDisplayTimer, LInfo, "Converted");
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TFConverter::msgDisplayTimerTimer(TObject *Sender)
 {
 	UIUtils::removeTimedMessage(msgDisplayTimer, LInfo);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFConverter::FormActivate(TObject *Sender)
+{
+   EInput->Text = "";
+   EOutput->Text = "";
 }
 //---------------------------------------------------------------------------
 

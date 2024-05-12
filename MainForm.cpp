@@ -1,10 +1,20 @@
 //---------------------------------------------------------------------------
+#undef UNICODE
+#define UNICODE
 
 #include "MainForm.h"
+
+#include <System.DateUtils.hpp>
+
 #include "UIUtils.h"
+#include "FileUtils.h"
 #include "TextUtils.h"
 #include "ENullPointerException.h"
 #include "GameThread.h"
+
+#include "KeyStatistics.h"
+#include "DLL\\UserStatistics.h"
+#include "DLL\\StatisticsForm.h"
 
 //---------------------------------------------------------------------------
 #pragma hdrstop
@@ -34,11 +44,12 @@ void TFMain::setDataModule(TDataModule1 *_dataModule) {
     }
 }
 
-
 void TFMain::setMainSession(std::unique_ptr<MainSession> _mainSession) {
 
     if (_mainSession) {
       	mainSession = std::move(_mainSession);
+
+        logger.setMainSession(mainSession.get());
 
 		UIUtils::changeFontFamily(this, mainSession->getAppSettings().getFontFamily());
         UIUtils::changeLanguage(mainSession->getAppSettings().getLanguage());
@@ -57,7 +68,7 @@ void TFMain::setAuthenticationService(std::unique_ptr<AuthenticationService> _au
 
         updateProfileMenu();
 
-       	LOGGER(LogLevel::Debug, "Main session moved");
+       	LOGGER(LogLevel::Debug, "Authentication service moved");
     }
     else {
         throw CustomExceptions::ENullPointerException();
@@ -114,7 +125,7 @@ void __fastcall TFMain::MenuSubitemPracticeNewClick(TObject *Sender)
     }
 
     if (!FrPractice) {
-		FrPractice = UIUtils::createFrame<TFrPractice>(this, parser.get(), mainSession.get(), typingSession.get());
+		FrPractice = UIUtils::createFrame<TFrPractice>(this, dataModule, parser.get(), mainSession.get(), typingSession.get());
 
         //  set subclass procedure for REText
 		SetWindowSubclass(FrPractice->FrTypingText->REText->Handle, &FrPractice->FrTypingText->RESubclass, 0, 0);
@@ -251,6 +262,105 @@ void __fastcall TFMain::MenuSubItemViewProfileClick(TObject *Sender) {
     FrProfile->ShowModal();
 }
 
+void __fastcall TFMain::MenuSubItemViewStatisticsClick(TObject *Sender) {
+
+	if (!FStatistics) {
+
+    	std::unique_ptr<TFDQuery> query = std::make_unique<TFDQuery>(nullptr);
+        std::map<wchar_t, KeyStatistics> keyStatistics;
+        std::vector<TDateTime> practiceTime;
+
+        try {
+
+            query->Connection = dataModule->MySQLDBConnection;
+            UnicodeString username = authService->getUser().getUsername();
+
+            query->SQL->Text = "SELECT `key`, SUM(correct) AS sumCorrect, SUM(mistake) AS sumMistake FROM keystatistics JOIN lessonresults \
+             ON keystatistics.idLessonResults = lessonresults.id JOIN users ON lessonresults.idUser = users.id \
+            WHERE username = :username GROUP BY `key` ORDER BY `key` ASC";
+
+            query->Params->ParamByName("username")->AsString = username;
+            query->Open();
+
+            if (!query->IsEmpty()) {
+
+            	while (!query->Eof) {
+                    wchar_t key = query->FieldByName("key")->AsString[1];
+                    int sumCorrect = query->FieldByName("sumCorrect")->AsInteger;
+                    int sumMistake = query->FieldByName("sumMistake")->AsInteger;
+
+                    keyStatistics[key] = KeyStatistics(key, sumCorrect, sumMistake);
+
+                    query->Next();
+                }
+            }
+
+            query->Close();
+
+            query->SQL->Text = "SELECT `date`, SUM(duration) AS sumDuration FROM lessonresults \
+            JOIN users ON lessonresults.idUser = users.id \
+            WHERE username = :username GROUP BY `date` ORDER BY `date` ASC";
+
+            query->Params->ParamByName("username")->AsString = username;
+            query->Open();
+
+            if (!query->IsEmpty()) {
+
+            	while (!query->Eof) {
+
+                 	TDateTime tDate = query->FieldByName("date")->AsDateTime;
+
+            		unsigned short year, month, day;
+                    DecodeDate(tDate, year, month, day);
+
+                    int totalDuration = query->FieldByName("sumDuration")->AsInteger;
+                	unsigned short hrs = totalDuration / 3600;
+                    unsigned short min = (totalDuration % 3600) / 60;
+                    unsigned short sec = totalDuration % 60;
+
+                    practiceTime.push_back(EncodeDateTime(year, month, day, hrs, min, sec, 0));
+
+                    query->Next();
+                }
+
+            }
+          query->Close();
+
+        } catch (Exception &ex) {
+            LOGGER(LogLevel::Fatal, ex.Message);
+        }
+
+
+    	HINSTANCE Statistics;
+
+        if ((Statistics = LoadLibrary(L"StatisticsLib.dll")) == nullptr) {
+            ShowMessage("Can't load DLL");
+            return;
+        }
+
+        typedef UserStatistics*(*__stdcall pCreateUserStatistics)(const std::vector<TDateTime>&, const std::map<wchar_t, KeyStatistics>&);
+        pCreateUserStatistics CreateUserStatistics;
+
+        if ((CreateUserStatistics = (pCreateUserStatistics)GetProcAddress(Statistics, "CreateUserStatistics")) == nullptr) {
+            ShowMessage("Can't find CreateUserStatistics function");
+            return;
+        }
+
+    	userStatistics = CreateUserStatistics(practiceTime, keyStatistics);
+
+		typedef TFStatistics*(*__stdcall pCreateStatisticsForm)(UserStatistics *userStatistics);
+        pCreateStatisticsForm CreateStatisticsForm;
+
+        if ((CreateStatisticsForm = (pCreateStatisticsForm)GetProcAddress(Statistics, "CreateStatisticsForm")) == nullptr) {
+            ShowMessage("Can't find CreateStatisticsForm function");
+            return;
+        }
+
+   		CreateStatisticsForm(userStatistics);
+        FreeLibrary(Statistics);
+	}
+}
+
 
 void __fastcall TFMain::MenuSubItemDeleteProfileClick(TObject *Sender) {
 
@@ -297,6 +407,23 @@ void TFMain::updateProfileMenu() {
         menuSubItemViewProfile->Caption = "Pregledaj profil";
     }
 
+    UnicodeString projectExePath = ExtractFilePath(Application->ExeName);
+
+    if (FileUtils::checkFileExistance(projectExePath + "StatisticsLib.dll")) {
+
+        if (!menuSubItemViewStatistics) {
+            menuSubItemViewStatistics = std::make_unique<TMenuItem>(MainMenu);
+            menuSubItemViewStatistics->OnClick = MenuSubItemViewStatisticsClick;
+            menuItemProfile->Add(menuSubItemViewStatistics.get());
+        }
+        if (mainSession->getAppSettings().getLanguage() == Language::English) {
+            menuSubItemViewStatistics->Caption = "View statistics";
+        }
+        else if (mainSession->getAppSettings().getLanguage() == Language::Croatian) {
+            menuSubItemViewStatistics->Caption = "Pregledaj statistiku";
+        }
+    }
+
     if (!menuSubItemDeleteProfile) {
     	menuSubItemDeleteProfile = std::make_unique<TMenuItem>(MainMenu);
         menuSubItemDeleteProfile->OnClick = MenuSubItemDeleteProfileClick;
@@ -330,6 +457,9 @@ void TFMain::updateProfileMenu() {
         if (menuSubItemViewProfile) {
             menuSubItemViewProfile->Visible	= false;
         }
+        if (menuSubItemViewStatistics) {
+            menuSubItemViewStatistics->Visible	= false;
+        }
         if (menuSubItemDeleteProfile) {
             menuSubItemDeleteProfile->Visible	= false;
         }
@@ -342,11 +472,13 @@ void TFMain::updateProfileMenu() {
     	if (menuSubItemViewProfile) {
             menuSubItemViewProfile->Visible	= true;
         }
+        if (menuSubItemViewStatistics) {
+            menuSubItemViewStatistics->Visible	= true;
+        }
         if (menuSubItemDeleteProfile) {
             menuSubItemDeleteProfile->Visible = true;
         }
     }
 
+
 }
-
-

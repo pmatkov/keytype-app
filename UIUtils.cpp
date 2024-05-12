@@ -1,5 +1,7 @@
 //---------------------------------------------------------------------------
 
+#include <algorithm>
+
 #include "UIUtils.h"
 #include "TextUtils.h"
 #include "FileUtils.h"
@@ -388,7 +390,7 @@ namespace UIUtils {
     }
 
     void displayTimedMessage(TTimer *timer, TLabel *label, const UnicodeString &msg) {
-    	label->Font->Color = clBlue;
+    	label->Font->Color = TColor(0x8B8B00);
         label->Caption = msg;
         timer->Enabled = true;
     }

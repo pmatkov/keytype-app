@@ -6,7 +6,7 @@
 
 #include <vcl.h>
 
-#include "UserStatistics.h"
+//#include "UserStatistics.h"
 
 enum UserType {
 	Registered,
@@ -24,7 +24,7 @@ class User {
         UnicodeString email = "";
 		int age = 0;
 
-		UserStatistics userStats;
+//		UserStatistics userStats;
 		UserType userType = Guest;
 
 	public:

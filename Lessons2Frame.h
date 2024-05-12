@@ -11,6 +11,7 @@
 #include "OptionsFrame.h"
 #include "PracticeFrame.h"
 #include <Vcl.ExtCtrls.hpp>
+#include <vcl.h>
 
 #include "Parser.h"
 #include "MainSession.h"
@@ -57,19 +58,13 @@ public:		// User declarations
 	__fastcall TFrLessons2(TComponent* Owner);
     __fastcall TFrLessons2(TComponent* Owner, Parser *_parser, MainSession *_mainSession, TypingSession *_typingSession, AuthenticationService *_authService, TDataModule1 *_dataModule);
 
-	void updateSessionStatus(SessionStatus status);
-    void moveCaret(CaretType caretType, int index);
-    void clearCaret(CaretType caretType, int index);
-	void setCaret(CaretType caretType, int index);
-
     void hideInterfaceValues();
-    void setTextSource(int index);
+    bool setTextSource(int index);
 
     void __fastcall FrTypingTextTypingComplete(TObject *Sender);
 
     void processCharMessages(WPARAM wParam);
    	virtual void __fastcall WndProc(TMessage &Message);
-
 
 };
 //---------------------------------------------------------------------------

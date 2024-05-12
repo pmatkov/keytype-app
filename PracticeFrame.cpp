@@ -25,9 +25,11 @@ TFrPractice *FrPractice;
 //---------------------------------------------------------------------------
 __fastcall TFrPractice::TFrPractice(TComponent* Owner) : TFrame(Owner) {}
 
-__fastcall TFrPractice::TFrPractice(TComponent* Owner, Parser* _parser, MainSession *_mainSession, TypingSession *_typingSession) : TFrame(Owner) {
-	if (_parser && _mainSession && _typingSession) {
+__fastcall TFrPractice::TFrPractice(TComponent* Owner, TDataModule1 *_dataModule, Parser* _parser, MainSession *_mainSession, TypingSession *_typingSession) : TFrame(Owner) {
 
+	if (_dataModule && _parser && _mainSession && _typingSession) {
+
+       dataModule = _dataModule;
        parser = _parser;
        mainSession = _mainSession;
 	   typingSession = _typingSession;
@@ -40,8 +42,8 @@ __fastcall TFrPractice::TFrPractice(TComponent* Owner, Parser* _parser, MainSess
        FrTypingText->setParser(parser);
        FrTypingText->setFrameTypingStats(FrTypingStats);
 
-       FrTypingText->setTypingStatus(Initialized);
        typingSession->setSessionStatus(SessionStatus::Initialized);
+       FrTypingText->setTypingStatus(Initialized);
 
        LOGGER(LogLevel::Debug, "Practice frame displayed");
 
@@ -57,7 +59,7 @@ __fastcall TFrPractice::TFrPractice(TComponent* Owner, Parser* _parser, MainSess
 
 void __fastcall TFrPractice::FrOptionsBtOptionsClick(TObject *Sender)
 {
-	FPracticeOptions = std::make_unique<TFPracticeOptions>(nullptr, mainSession);
+	FPracticeOptions = std::make_unique<TFPracticeOptions>(nullptr, dataModule, mainSession);
     FPracticeOptions->Position = poMainFormCenter;
 
 	typingSession->setSessionStatus(SessionStatus::Paused);

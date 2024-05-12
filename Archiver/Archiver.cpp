@@ -4,9 +4,10 @@
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-    std::string command;
+    std::string command = "";
 
-    for (int i = 1; i < argc; ++i) {
+
+    for (int i = 1; i < argc; i++) {
         command += argv[i];
 
         if (i < argc - 1) {
@@ -14,8 +15,11 @@ int _tmain(int argc, _TCHAR* argv[])
         }
     }
 
-    if (!command.length() || (command.substr(0, 3) != "tar")) {
+    if (command.find("tar") == std::string::npos) {
         return 1;
+    }
+    else if (command.find(".log") == std::string::npos) {
+        return 2;
     }
 
     STARTUPINFO si = { sizeof(si) };
@@ -23,7 +27,7 @@ int _tmain(int argc, _TCHAR* argv[])
     unsigned long returnValue;
 
     if (!CreateProcess(NULL, const_cast<char*>(command.c_str()), NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi)) {
-        return 1;
+        return 3;
     }
 
     WaitForSingleObject(pi.hProcess, INFINITE);

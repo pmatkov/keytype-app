@@ -11,13 +11,14 @@
 //---------------------------------------------------------------------------
 USEFORM("MainFrame.cpp", FrMain); /* TFrame: File Type */
 USEFORM("MainForm.cpp", FMain);
-USEFORM("PreferencesForm.cpp", FPreferences);
+USEFORM("LoginFrame.cpp", FrLogin); /* TFrame: File Type */
 USEFORM("PracticeOptionsForm.cpp", FPractice);
 USEFORM("PracticeFrame.cpp", FrPractice); /* TFrame: File Type */
-USEFORM("LoginFrame.cpp", FrLogin); /* TFrame: File Type */
-USEFORM("Lessons2Frame.cpp", FrLessons2); /* TFrame: File Type */
+USEFORM("LessonResultsForm.cpp", FLessonResults);
 USEFORM("LessonsFrame.cpp", FrLessons); /* TFrame: File Type */
 USEFORM("LessonsForm.cpp", FLessons);
+USEFORM("Lessons2Frame.cpp", FrLessons2); /* TFrame: File Type */
+USEFORM("PreferencesForm.cpp", FPreferences);
 USEFORM("TypingTextFrame.cpp", FrTypingText); /* TFrame: File Type */
 USEFORM("TypingStatsFrame.cpp", FrTypingStats); /* TFrame: File Type */
 USEFORM("RegisterFrame.cpp", FrRegister); /* TFrame: File Type */
@@ -29,9 +30,8 @@ USEFORM("CustomTextFrame.cpp", FrCustomText); /* TFrame: File Type */
 USEFORM("CoursesFrame.cpp", FrCourses); /* TFrame: File Type */
 USEFORM("ConverterForm.cpp", FConverter);
 USEFORM("GeneratedTextFrame.cpp", FrGeneratedText); /* TFrame: File Type */
-USEFORM("FlyingWordsFrame.cpp", FrFlyingWords); /* TFrame: File Type */
 USEFORM("FlyingWordsStatsFrame.cpp", FrFlyingWordsStats); /* TFrame: File Type */
-USEFORM("LessonResultsForm.cpp", FLessonResults);
+USEFORM("FlyingWordsFrame.cpp", FrFlyingWords); /* TFrame: File Type */
 //---------------------------------------------------------------------------
 #include "MainForm.h"
 #include "PracticeOptionsForm.h"
@@ -52,19 +52,16 @@ int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 		Application->Initialize();
 		Application->MainFormOnTaskBar = true;
 
-		// set up logging
-       	LOGGER(LogLevel::Info, "App started");
+        LOGGER_SIMPLE("--Main app started--");
 
 		std::unique_ptr<TDataModule1> DataModule1 = std::make_unique<TDataModule1>(nullptr);
 		std::unique_ptr<AuthenticationService> authService = std::make_unique<AuthenticationService>(DataModule1.get());
 
-		// create auth form
         std::unique_ptr<TFAuthentication> FAuthentication = std::make_unique<TFAuthentication>(nullptr, authService.get());
 		FAuthentication->Position = poScreenCenter;
 
 		if (FAuthentication->ShowModal() == mrOk) {
 
-			// pointeri?
 			AppSettings appSettings(authService->getUser());
             TypingSettings typingSettings(authService->getUser());
 
@@ -72,8 +69,6 @@ int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 
 			//  create main form
 			Application->CreateForm(__classid(TFMain), &FMain);
-		Application->CreateForm(__classid(TFrProfile), &FrProfile);
-		Application->CreateForm(__classid(TFLessonResults), &FLessonResults);
 		FMain->Position = poScreenCenter;
 
             FMain->setMainSession(std::move(mainSession));
@@ -101,10 +96,8 @@ int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
             LOGGER(LogLevel::Fatal, ex.Message);
 		}
 	}
-
     Logger &logger = Logger::getLogger();
-    logger.flushBuffer();
-    logger.archiveLogFiles(logger.getLogInterval());
+    logger.writeToFile();
 
 	return 0;
 }

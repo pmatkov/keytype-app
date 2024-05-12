@@ -18,7 +18,7 @@ class TFrTypingText : public TFrame
 {
 __published:	// IDE-managed Components
 	TRichEdit *REText;
-	TLabel *LStart;
+	TLabel *LInfo;
 private:	// User declarations
 	MainSession *mainSession;
     TypingSession *typingSession;
@@ -36,7 +36,7 @@ public:		// User declarations
     void setFrameTypingStats(TFrTypingStats *_FrTypingStats);
 
     void setTypingStatus(SessionStatus status);
-    void updateSessionStatus(SessionStatus status);
+    void changeSessionStatus(SessionStatus status);
 
     void processCharMessages(WPARAM wParam);
     void moveCaret(CaretType caretType, int index);

@@ -58,7 +58,7 @@
         <ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\release\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
         <ProjectType>CppVCLApplication</ProjectType>
         <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
-        <AllPackageLibs>rtl.lib;vcl.lib;vclimg.lib;vclactnband.lib;vclx.lib;xmlrtl.lib;dbrtl.lib;FireDAC.lib;FireDACCommonDriver.lib;FireDACCommon.lib;vclFireDAC.lib;vcldb.lib;vclwinx.lib;bindengine.lib;FireDACMySQLDriver.lib;soaprtl.lib;inet.lib;vclie.lib;vcledge.lib;frx28.lib;fs28.lib;frxDB28.lib;fsDB28.lib;frxe28.lib</AllPackageLibs>
+        <AllPackageLibs>rtl.lib;vcl.lib;vclimg.lib;vclactnband.lib;vclx.lib;xmlrtl.lib;dbrtl.lib;FireDAC.lib;FireDACCommonDriver.lib;FireDACCommon.lib;vclFireDAC.lib;vcldb.lib;vclwinx.lib;bindengine.lib;FireDACMySQLDriver.lib;soaprtl.lib;inet.lib;vclie.lib;vcledge.lib;frx28.lib;fs28.lib;frxDB28.lib;fsDB28.lib;frxe28.lib;IndySystem.lib;IndyCore.lib</AllPackageLibs>
         <_TCHARMapping>wchar_t</_TCHARMapping>
         <Multithreaded>true</Multithreaded>
         <Icon_MainIcon>$(BDS)\bin\cbuilder_PROJECTICON.ico</Icon_MainIcon>
@@ -80,6 +80,7 @@
         <VerInfo_Locale>1033</VerInfo_Locale>
         <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
         <BCC_PCHName_Clang>KeyTypePCH1.h</BCC_PCHName_Clang>
+        <ILINK_LibraryPath>C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Win32\Debug\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
         <PackageImports>adortl;appanalytics;bcbie;bcbsmp;bindcomp;bindcompdbx;bindcompfmx;bindcompvcl;bindcompvclsmp;bindcompvclwinx;bindengine;CloudService;CustomIPTransport;DataSnapClient;DataSnapCommon;DataSnapConnectors;DatasnapConnectorsFreePascal;DataSnapFireDAC;DataSnapIndy10ServerTransport;DataSnapNativeClient;DataSnapProviderClient;DataSnapServer;DataSnapServerMidas;dbexpress;dbrtl;dbxcds;DbxClientDriver;DbxCommonDriver;DBXDb2Driver;DBXFirebirdDriver;DBXInformixDriver;DBXInterBaseDriver;DBXMSSQLDriver;DBXMySQLDriver;DBXOdbcDriver;DBXOracleDriver;DBXSqliteDriver;DBXSybaseASADriver;DBXSybaseASEDriver;dsnap;dsnapcon;dsnapxml;emsclient;emsclientfiredac;emsedge;emshosting;emsserverresource;FireDAC;FireDACADSDriver;FireDACASADriver;FireDACCommon;FireDACCommonDriver;FireDACCommonODBC;FireDACDb2Driver;FireDACDBXDriver;FireDACDSDriver;FireDACIBDriver;FireDACInfxDriver;FireDACMongoDBDriver;FireDACMSAccDriver;FireDACMSSQLDriver;FireDACMySQLDriver;FireDACODBCDriver;FireDACOracleDriver;FireDACPgDriver;FireDACSqliteDriver;FireDACTDataDriver;fmx;fmxase;fmxdae;fmxFireDAC;fmxobj;IndyCore;IndyIPClient;IndyIPCommon;IndyIPServer;IndyProtocols;IndySystem;inet;inetdb;inetdbxpress;RESTBackendComponents;RESTComponents;rtl;soapmidas;soaprtl;soapserver;tethering;vcl;vclactnband;vcldb;vcldsnap;vcledge;vclFireDAC;vclie;vclimg;VCLRESTComponents;VclSmp;vcltouch;vclwinx;vclx;xmlrtl;$(PackageImports)</PackageImports>
@@ -114,7 +115,7 @@
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
         <ILINK_LibraryPath>$(BDSLIB)\$(PLATFORM)$(CC_SUFFIX)\debug;$(ILINK_LibraryPath)</ILINK_LibraryPath>
-        <LinkPackageImports>rtl.bpi;vcl.bpi;vclimg.bpi;vclactnband.bpi;vclx.bpi;xmlrtl.bpi;dbrtl.bpi;FireDAC.bpi;FireDACCommonDriver.bpi;FireDACCommon.bpi;vclFireDAC.bpi;vcldb.bpi;vclwinx.bpi;bindengine.bpi;FireDACMySQLDriver.bpi;soaprtl.bpi;inet.bpi;vclie.bpi;vcledge.bpi;frx28.bpi;frxDB28.bpi;frxe28.bpi</LinkPackageImports>
+        <LinkPackageImports>rtl.bpi;vcl.bpi;vclimg.bpi;vclactnband.bpi;vclx.bpi;xmlrtl.bpi;dbrtl.bpi;FireDAC.bpi;FireDACCommonDriver.bpi;FireDACCommon.bpi;vclFireDAC.bpi;vcldb.bpi;vclwinx.bpi;bindengine.bpi;FireDACMySQLDriver.bpi;soaprtl.bpi;inet.bpi;vclie.bpi;vcledge.bpi;frx28.bpi;frxDB28.bpi;frxe28.bpi;IndySystem.bpi;IndyCore.bpi</LinkPackageImports>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <LinkPackageStatics>fs28.lib;fsDB28.lib</LinkPackageStatics>
@@ -298,6 +299,11 @@
             <VirtualFolder>{4BFADF1C-F038-4685-8422-706F34C58511}</VirtualFolder>
             <DependentOn>IGameDisplay.h</DependentOn>
             <BuildOrder>56</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="IKeyStatistics.cpp">
+            <VirtualFolder>{4AADD3FA-CB81-45BA-96EF-7958F7960233}</VirtualFolder>
+            <DependentOn>IKeyStatistics.h</DependentOn>
+            <BuildOrder>69</BuildOrder>
         </CppCompile>
         <CppCompile Include="IMultiItemDisplay.cpp">
             <VirtualFolder>{4BFADF1C-F038-4685-8422-706F34C58511}</VirtualFolder>
@@ -516,30 +522,26 @@
             <DependentOn>User.h</DependentOn>
             <BuildOrder>10</BuildOrder>
         </CppCompile>
-        <CppCompile Include="UserStatistics.cpp">
-            <VirtualFolder>{4AADD3FA-CB81-45BA-96EF-7958F7960233}</VirtualFolder>
-            <DependentOn>UserStatistics.h</DependentOn>
-            <BuildOrder>19</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="UUIDGenerator.cpp">
+        <None Include="UUIDGenerator.cpp">
+            <Exclude>True</Exclude>
             <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
             <DependentOn>UUIDGenerator.h</DependentOn>
             <BuildOrder>32</BuildOrder>
-        </CppCompile>
+        </None>
         <FormResources Include="MainFrame.dfm"/>
         <FormResources Include="MainForm.dfm"/>
-        <FormResources Include="PreferencesForm.dfm"/>
+        <FormResources Include="LoginFrame.dfm"/>
         <FormResources Include="PracticeOptionsForm.dfm"/>
         <FormResources Include="PracticeFrame.dfm"/>
-        <FormResources Include="LoginFrame.dfm"/>
-        <FormResources Include="Lessons2Frame.dfm"/>
         <FormResources Include="LessonResultsForm.dfm"/>
         <FormResources Include="LessonsFrame.dfm"/>
         <FormResources Include="LessonsForm.dfm"/>
-        <FormResources Include="TypingTextFrame.dfm"/>
+        <FormResources Include="Lessons2Frame.dfm"/>
         <FormResources Include="TypingStatsFrame.dfm"/>
+        <FormResources Include="TypingTextFrame.dfm"/>
         <FormResources Include="RegisterFrame.dfm"/>
         <FormResources Include="ProfileForm.dfm"/>
+        <FormResources Include="PreferencesForm.dfm"/>
         <FormResources Include="ExternalSourcesFrame.dfm"/>
         <FormResources Include="AuthenticationForm.dfm"/>
         <FormResources Include="DataModule.dfm"/>
@@ -619,18 +621,18 @@
                     <RDP_Source_Files Name="Item2">ViewProfileForm.dfm</RDP_Source_Files>
                     <RDP_Source_Files Name="Item3">MainFrame.dfm</RDP_Source_Files>
                     <RDP_Source_Files Name="Item4">MainForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item5">PreferencesForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item5">LoginFrame.dfm</RDP_Source_Files>
                     <RDP_Source_Files Name="Item6">PracticeOptionsForm.dfm</RDP_Source_Files>
                     <RDP_Source_Files Name="Item7">PracticeFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item8">LoginFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item9">Lessons2Frame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item10">LessonResultsForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item11">LessonsFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item12">LessonsForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item8">LessonResultsForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item9">LessonsFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item10">LessonsForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item11">Lessons2Frame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item12">TypingStatsFrame.dfm</RDP_Source_Files>
                     <RDP_Source_Files Name="Item13">TypingTextFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item14">TypingStatsFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item15">RegisterFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item16">ProfileForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item14">RegisterFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item15">ProfileForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item16">PreferencesForm.dfm</RDP_Source_Files>
                     <RDP_Source_Files Name="Item17">ExternalSourcesFrame.dfm</RDP_Source_Files>
                     <RDP_Source_Files Name="Item18">AuthenticationForm.dfm</RDP_Source_Files>
                     <RDP_Source_Files Name="Item19">DataModule.dfm</RDP_Source_Files>

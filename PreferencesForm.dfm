@@ -42,12 +42,19 @@ object FPreferences: TFPreferences
       Height = 15
       Caption = 'Font family:'
     end
-    object LArchiveLogs: TLabel
+    object LLogInterval: TLabel
       Left = 12
       Top = 194
-      Width = 68
+      Width = 100
       Height = 15
-      Caption = 'Archive logs:'
+      Caption = 'Archive older than:'
+    end
+    object LArchiveStatus: TLabel
+      Left = 12
+      Top = 224
+      Width = 140
+      Height = 15
+      AutoSize = False
     end
     object CBLanguage: TComboBox
       Left = 126
@@ -101,6 +108,16 @@ object FPreferences: TFPreferences
       Style = csDropDownList
       TabOrder = 5
       OnChange = CBLogIntervalChange
+    end
+    object BtArchiveLogs: TButton
+      Left = 166
+      Top = 220
+      Width = 75
+      Height = 25
+      Cancel = True
+      Caption = 'Archive logs'
+      TabOrder = 6
+      OnClick = BtArchiveLogsClick
     end
   end
   object GroupBox2: TGroupBox
@@ -242,5 +259,12 @@ object FPreferences: TFPreferences
     ModalResult = 1
     TabOrder = 3
     OnClick = BtAcceptClick
+  end
+  object msgDisplayTimer: TTimer
+    Enabled = False
+    Interval = 3000
+    OnTimer = msgDisplayTimerTimer
+    Left = 69
+    Top = 312
   end
 end

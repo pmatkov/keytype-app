@@ -4,6 +4,8 @@
 #pragma hdrstop
 
 #include "DataModule.h"
+#include "FileUtils.h"
+#include "Logger.h"
 #include <System.Math.hpp>
 
 //---------------------------------------------------------------------------
@@ -23,6 +25,23 @@ void __fastcall TDataModule1::TLessonsCalcFields(TDataSet *DataSet)
  	if (DataSet->State != dsInsert && DataSet->State != dsEdit) {
        float avgChar = static_cast<float>(TLessons->FieldByName("charCount")->AsInteger) / TLessons->FieldByName("wordCount")->AsInteger;
        TLessons->FieldByName("avgChars")->AsFloat = RoundTo(avgChar, -2);
+    }
+}
+
+
+void __fastcall TDataModule1::TLessonResultsCalcFields(TDataSet *DataSet)
+{
+	if (DataSet->State != dsInsert && DataSet->State != dsEdit) {
+
+      int duration = TLessonResults->FieldByName("duration")->AsInteger;
+      int hrs = duration / 3600;
+      int min = (duration - (hrs * 3600)) / 60;
+      int sec = (duration - (hrs * 3600)) % 60;
+
+      UnicodeString hrsStr = (hrs < 10 ? "0" : "") + IntToStr(hrs);
+      UnicodeString minStr = (min < 10 ? "0" : "") + IntToStr(min);
+      UnicodeString secStr = (sec < 10 ? "0" : "") + IntToStr(sec);
+      TLessonResults->FieldByName("durationHMS")->AsString = hrsStr + ":" + minStr + ":" + secStr;
     }
 }
 
@@ -99,5 +118,81 @@ std::vector<UnicodeString> TDataModule1::getStringsFromColumnValues(const std::v
     }
 
     return values;
+}
+
+UnicodeString TDataModule1::generateText(const UnicodeString &letters, bool useNumbers, bool useUppercase,  bool usePunctuation, int min, int max) {
+
+    UnicodeString generatedText = "";
+
+    try {
+       try {
+            IdTCPClient1->Connect();
+
+            IdTCPClient1->IOHandler->WriteLn(1);
+            IdTCPClient1->IOHandler->WriteLn(letters);
+            IdTCPClient1->IOHandler->WriteLn(useNumbers);
+            IdTCPClient1->IOHandler->WriteLn(useUppercase);
+            IdTCPClient1->IOHandler->WriteLn(usePunctuation);
+            IdTCPClient1->IOHandler->WriteLn(min);
+            IdTCPClient1->IOHandler->WriteLn(max);
+
+            generatedText = IdTCPClient1->Socket->ReadLn();
+
+            LOGGER(LogLevel::Debug, "Client complete");
+       }
+       catch (Exception &ex) {
+            LOGGER(LogLevel::Error, "Client error: " + ex.Message);
+        }
+
+    }
+    __finally {
+
+    	IdTCPClient1->Disconnect();
+
+    }
+    return generatedText;
+}
+
+
+bool TDataModule1::convertWordList(const UnicodeString& filePath) {
+
+    try {
+    	try {
+
+            IdTCPClient1->Connect();
+
+            IdTCPClient1->IOHandler->WriteLn(2);
+     		IdTCPClient1->IOHandler->WriteLn(ExtractFileName(filePath));
+    		std::unique_ptr<TFileStream> fileStream = std::make_unique<TFileStream>(filePath, fmOpenRead);
+
+      		IdTCPClient1->IOHandler->LargeStream = true;
+            IdTCPClient1->IOHandler->Write(fileStream.get(), 0, true);
+            fileStream.reset();
+
+            UnicodeString serverResponse = IdTCPClient1->IOHandler->ReadLn();
+
+            if (serverResponse == "File converted") {
+                UnicodeString convertedFilePath = FileUtils::traverseUpDirTree(filePath, 2) + "Data\\" + ExtractFileName(filePath);
+                convertedFilePath = convertedFilePath.Delete(convertedFilePath.Length()-2, 3) + "json";
+
+            	std::unique_ptr<TStream> fileStream = std::make_unique<TFileStream>(convertedFilePath, fmCreate);
+            	IdTCPClient1->IOHandler->LargeStream = true;
+        		IdTCPClient1->IOHandler->ReadStream(fileStream.get());
+
+            	LOGGER(LogLevel::Debug, "Client complete");
+                return true;
+            }
+       }
+       catch (Exception &ex) {
+            LOGGER(LogLevel::Error, "Client error: " + ex.Message);
+        }
+
+    }
+    __finally {
+
+    	IdTCPClient1->Disconnect();
+
+    }
+    return false;
 }
 

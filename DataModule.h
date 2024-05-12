@@ -23,6 +23,10 @@
 #include <FireDAC.DApt.Intf.hpp>
 #include <FireDAC.DatS.hpp>
 #include <FireDAC.Stan.Param.hpp>
+#include <IdBaseComponent.hpp>
+#include <IdComponent.hpp>
+#include <IdTCPClient.hpp>
+#include <IdTCPConnection.hpp>
 
 #include <vector>
 //---------------------------------------------------------------------------
@@ -65,7 +69,6 @@ __published:	// IDE-managed Components
 	TFDAutoIncField *TLessonResultsid;
 	TIntegerField *TLessonResultsidUser;
 	TIntegerField *TLessonResultsidLesson;
-	TBooleanField *TLessonResultsresult;
 	TDateField *TLessonResultsdate;
 	TStringField *TLessonResultslessonName;
 	TIntegerField *TLessonResultsidCourse;
@@ -74,7 +77,19 @@ __published:	// IDE-managed Components
 	TStringField *TUserspassword;
 	TBCDField *TLessonResultsspeed;
 	TBCDField *TLessonResultsaccuracy;
+	TStringField *TLessonResultsresult;
+	TIdTCPClient *IdTCPClient1;
+	TIntegerField *TLessonResultsduration;
+	TStringField *TLessonResultsdurationHMS;
+	TDataSource *DKeyStatistics;
+	TFDTable *TKeyStatistics;
+	TFDAutoIncField *TKeyStatisticsid;
+	TIntegerField *TKeyStatisticsidLessonResults;
+	TStringField *TKeyStatisticskey;
+	TIntegerField *TKeyStatisticscorrect;
+	TIntegerField *TKeyStatisticsmistake;
 	void __fastcall TLessonsCalcFields(TDataSet *DataSet);
+	void __fastcall TLessonResultsCalcFields(TDataSet *DataSet);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TDataModule1(TComponent* Owner);
@@ -83,6 +98,9 @@ public:		// User declarations
    	std::vector<std::pair<int, UnicodeString>> getColumnValues(TDataSet *DataSet,  const UnicodeString &idName, const UnicodeString &columnName, int index);
     UnicodeString getColumnValue(TDataSet *DataSet, const UnicodeString &columnName, int index);
     std::vector<UnicodeString> getStringsFromColumnValues(const std::vector<std::pair<int, UnicodeString>> &pairs);
+
+    UnicodeString generateText(const UnicodeString &letters, bool useNumbers, bool useUppercase,  bool usePunctuation, int min, int max);
+    bool convertWordList(const UnicodeString& filePath);
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TDataModule1 *DataModule1;

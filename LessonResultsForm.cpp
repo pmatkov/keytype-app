@@ -24,6 +24,7 @@ __fastcall TFLessonResults::TFLessonResults(TComponent* Owner, TDataModule1 *_da
 
 	if (_dataModule) {
     	dataModule = _dataModule;
+        dataModule->TLessons->MasterSource = nullptr;
 
         frxPDFExport->DefaultPath = FileUtils::createAbsolutePath("Report", false);
         frxRTFExport->DefaultPath = FileUtils::createAbsolutePath("Report", false);

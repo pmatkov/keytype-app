@@ -21,7 +21,6 @@ void TFrTypingStats::setTypingSession(TypingSession *_typingSession) {
    typingSession = _typingSession;
 }
 
-
 void TFrTypingStats::displayStatsItems() {
 
 	LTime->Visible = true;
@@ -42,7 +41,6 @@ void TFrTypingStats::displayStatsItems() {
         LAccuracy->Font->Color = clGray;
         LDisplayAccuracy->Font->Color = clSilver;
     }
-
 }
 
 void TFrTypingStats::hideStatsItems() {
@@ -56,23 +54,28 @@ void TFrTypingStats::hideStatsItems() {
 	LDisplayAccuracy->Visible = false;
 }
 
-void __fastcall TFrTypingStats::Timer1Timer(TObject *Sender)
+void TFrTypingStats::clearTimerDisplay() {
+	LDisplayTime->Caption = FormatDateTime("hh:nn:ss", EncodeTime(0, 0, 0, 0));
+    LDisplaySpeed->Caption = FormatFloat("0.00", 0) + " WPM";
+    LDisplayAccuracy->Caption = FormatFloat("0.00", 0) + " %";
+}
+
+void __fastcall TFrTypingStats::TStatsTimerTimer(TObject *Sender)
 {
-    if (typingSession->getSessionStatus() == SessionStatus::Started) {
 
-        int min = typingSession->getElapsedTime()/ 60;
-        int sec = typingSession->getElapsedTime()% 60;
-        TDateTime elapsedTime = System::Sysutils::EncodeTime(0, min, sec, 0);
-        typingSession->setSessionTime(elapsedTime);
+    int min = typingSession->getElapsedTime()/ 60;
+    int sec = typingSession->getElapsedTime()% 60;
+    TDateTime elapsedTime = System::Sysutils::EncodeTime(0, min, sec, 0);
 
-        LDisplayTime->Caption = FormatDateTime("hh:nn:ss", elapsedTime);
 
-        if (mainSession->getTypingSettings().getDisplaySpeed()) {
-           LDisplaySpeed->Caption = FormatFloat("0.00", typingSession->getSpeed()) + " WPM";
-        }
-        if (mainSession->getTypingSettings().getDisplayAccuracy()) {
-           LDisplayAccuracy->Caption = FormatFloat("0.00", typingSession->getAccuracy()) + " %";
-        }
+    LDisplayTime->Caption = FormatDateTime("hh:nn:ss", elapsedTime);
+
+    if (mainSession->getTypingSettings().getDisplaySpeed()) {
+       LDisplaySpeed->Caption = FormatFloat("0.00", typingSession->getSpeed()) + " WPM";
     }
+    if (mainSession->getTypingSettings().getDisplayAccuracy()) {
+       LDisplayAccuracy->Caption = FormatFloat("0.00", typingSession->getAccuracy()) + " %";
+    }
+
 }
 

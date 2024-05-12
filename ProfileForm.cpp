@@ -24,6 +24,8 @@ __fastcall TFrProfile::TFrProfile(TComponent* Owner, MainSession *_mainSession, 
 
         UIUtils::enableChildControls(GBProfile, false);
 
+        EAge->Field->Alignment = taLeftJustify;
+
         DFileOpen->InitialDir = FileUtils::createAbsolutePath("Images", false);
     	DFileOpen->Filter = "Image Files(*jpg; *.png)|*.jpg;*.png";
 

@@ -16,6 +16,7 @@
 
 #include <memory>
 
+#include "DataModule.h"
 #include "Dictionary.h"
 #include "ISingleItemDisplay.h"
 #include "IMultiItemDisplay.h"
@@ -74,12 +75,13 @@ __published:	// IDE-managed Components
 	void __fastcall BtConvertClick(TObject *Sender);
 
 private:	// User declarations
-
+	TDataModule1 *dataModule;
 	std::unique_ptr<Dictionary> dictionary;
     std::unique_ptr<TFConverter> FConverter;
 
 public:		// User declarations
 	__fastcall TFrGeneratedText(TComponent* Owner);
+    __fastcall TFrGeneratedText(TComponent* Owner, TDataModule1 *_dataModule);
 
     void displayTimedMessage(TTimer *timer, TLabel *label, const UnicodeString &msg);
 

@@ -36,6 +36,26 @@ void TypingSession::setWordCount(int _wordCount) {
     wordCount = _wordCount;
 }
 
+void TypingSession::increaseCorrectKey(wchar_t key) {
+
+  if (keyStatistics.find(key) == keyStatistics.end()) {
+        keyStatistics[key] = KeyStatistics(key);
+  }
+  keyStatistics[key].increaseCorrect();
+}
+
+void TypingSession::increaseMistakeKey(wchar_t key) {
+
+  if (keyStatistics.find(key) == keyStatistics.end()) {
+        keyStatistics[key] = KeyStatistics(key);
+  }
+  keyStatistics[key].increaseMistake();
+}
+
+std::map<wchar_t, KeyStatistics> &TypingSession::getKeyStatistics() {
+     return keyStatistics;
+}
+
 void TypingSession::increaseCharIndex() {
 	 textSource.increaseCharIndex();
 }
@@ -43,7 +63,6 @@ void TypingSession::increaseCharIndex() {
 void TypingSession::decreaseCharIndex() {
 	 textSource.decreaseCharIndex();
 }
-
 
 void TypingSession::increaseTypedWords() {
   typedWords++;
@@ -74,17 +93,17 @@ double TypingSession::getAvgSpeed() {
     }
 
     int readingCount = speedReadings.size();
-    speedReadings.clear();
-
  	return sum/ readingCount;
 }
 
 double TypingSession::calculateSpeed() {
 
-	if (!typedWords) {
+	if (!typedWords || !getElapsedTime()) {
         return 0;
     }
+
     double speed = typedWords/ (getElapsedTime()/ 60.0);
+
     speedReadings.push_back(speed);
     return speed;
 }
@@ -104,13 +123,6 @@ double TypingSession::calculateAccuracy() {
     return accuracy;
 }
 
-TDateTime TypingSession::getSessionTime() const {
-    return sessionTime;
-}
-
-void TypingSession::setSessionTime(TDateTime _sessionTime) {
-    sessionTime = _sessionTime;
-}
 
 const SessionStatus& TypingSession::getSessionStatus() const {
 	return sessionStatus;
@@ -146,6 +158,15 @@ void TypingSession::setDifficulty(int _difficulty) {
 
 const std::vector<UnicodeString>& TypingSession::getLessonGoalStrings() {
     return lessonGoalStrings;
+}
+
+void TypingSession::resetSessionData() {
+
+    typedWords = 0;
+    mistakes = 0;
+    speedReadings.clear();
+    keyStatistics.clear();
+
 }
 
 std::vector<UnicodeString> TypingSession::lessonGoalStrings = {"speed", "accuracy"};

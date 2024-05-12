@@ -6,7 +6,7 @@
 //---------------------------------------------------------------------------
 
 #include<vcl.h>
-#include <memory>
+#include <vector>
 
 #include "ISettings.h"
 #include "User.h"

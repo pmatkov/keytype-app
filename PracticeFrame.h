@@ -14,6 +14,7 @@
 #include "PracticeOptionsForm.h"
 #include "OptionsFrame.h"
 
+#include "DataModule.h"
 #include "Parser.h"
 #include "MainSession.h"
 #include "TypingSession.h"
@@ -32,6 +33,8 @@ __published:	// IDE-managed Components
 	void __fastcall FrOptionsBtOptionsClick(TObject *Sender);
 
 private:	// User declarations
+
+	TDataModule1 *dataModule;
 	Parser *parser;
     MainSession *mainSession;
     TypingSession *typingSession;
@@ -41,7 +44,7 @@ private:	// User declarations
 
 public:		// User declarations
 	__fastcall TFrPractice(TComponent* Owner);
-    __fastcall TFrPractice(TComponent* Owner, Parser *_parser, MainSession *_mainSession, TypingSession *_typingSession);
+    __fastcall TFrPractice(TComponent* Owner, TDataModule1 *_dataModule, Parser *_parser, MainSession *_mainSession, TypingSession *_typingSession);
 
     void processCharMessages(WPARAM wParam);
 

@@ -5,9 +5,9 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45408.9045601852</prop>
-        <prop prop-type="OrigDateTime">45408.840462963</prop>
-        <prop prop-type="XlatDateTime">45401.5292824074</prop>
+        <prop prop-type="SelfDateTime">45424.8829166667</prop>
+        <prop prop-type="OrigDateTime">45424.8556944444</prop>
+        <prop prop-type="XlatDateTime">45415.9386111111</prop>
         <prop prop-type="Translated">0</prop>
         <prop prop-type="UnTranslated">38</prop>
       </prop-group>
@@ -188,25 +188,25 @@
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45408.0166760764</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrTypingStats.O:Timer1.Enabled" resname="O:FrTypingStats.O:Timer1.Enabled">
+      <trans-unit id="O:FrTypingStats.O:TStatsTimer.Enabled" resname="O:FrTypingStats.O:TStatsTimer.Enabled">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45408.0166760764</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45424.8829224421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrTypingStats.O:Timer1.OnTimer" resname="O:FrTypingStats.O:Timer1.OnTimer">
-        <source>Timer1Timer</source>
+      <trans-unit id="O:FrTypingStats.O:TStatsTimer.OnTimer" resname="O:FrTypingStats.O:TStatsTimer.OnTimer">
+        <source>TStatsTimerTimer</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45408.9045607755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45424.8829224421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrTypingStats.O:Timer1.Left" resname="O:FrTypingStats.O:Timer1.Left">
+      <trans-unit id="O:FrTypingStats.O:TStatsTimer.Left" resname="O:FrTypingStats.O:TStatsTimer.Left">
         <source>510</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45408.0166760764</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45424.8829224421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrTypingStats.O:Timer1.Top" resname="O:FrTypingStats.O:Timer1.Top">
+      <trans-unit id="O:FrTypingStats.O:TStatsTimer.Top" resname="O:FrTypingStats.O:TStatsTimer.Top">
         <source>9</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45408.0166760764</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45424.8829224421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
     </body>
   </file>

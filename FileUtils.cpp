@@ -58,6 +58,11 @@ namespace FileUtils {
         return newPath;
     }
 
+    bool checkFileExistance(const UnicodeString& filePath) {
+
+    	return TFile::Exists(filePath);
+    }
+
     // fetch list of files in a directory
 
     std::optional<std::vector<UnicodeString>> getFileNames(const UnicodeString &path, const UnicodeString &fileType) {

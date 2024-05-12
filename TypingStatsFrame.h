@@ -21,8 +21,8 @@ __published:	// IDE-managed Components
 	TLabel *LDisplaySpeed;
 	TLabel *LAccuracy;
 	TLabel *LDisplayAccuracy;
-	TTimer *Timer1;
-    void __fastcall Timer1Timer(TObject *Sender);
+	TTimer *TStatsTimer;
+    void __fastcall TStatsTimerTimer(TObject *Sender);
 private:	// User declarations
 	MainSession *mainSession;
     TypingSession *typingSession;
@@ -34,6 +34,8 @@ public:		// User declarations
 
     void displayStatsItems();
     void hideStatsItems();
+
+    void clearTimerDisplay();
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TFrTypingStats *FrTypingStats;

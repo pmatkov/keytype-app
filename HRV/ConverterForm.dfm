@@ -11,6 +11,7 @@ object FConverter: TFConverter
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OnActivate = FormActivate
   TextHeight = 15
   object LInput: TLabel
     Left = 12
@@ -27,9 +28,9 @@ object FConverter: TFConverter
     Caption = 'Output file:'
   end
   object LInfo: TLabel
-    Left = 218
-    Top = 102
-    Width = 75
+    Left = 223
+    Top = 101
+    Width = 70
     Height = 15
     AutoSize = False
     BiDiMode = bdLeftToRight
@@ -69,14 +70,13 @@ object FConverter: TFConverter
     OnClick = BtBrowseClick
   end
   object DFileOpen: TOpenTextFileDialog
-    Left = 174
-    Top = 66
+    Left = 177
+    Top = 65533
   end
   object msgDisplayTimer: TTimer
     Enabled = False
     Interval = 3000
     OnTimer = msgDisplayTimerTimer
-    Left = 84
-    Top = 69
+    Left = 96
   end
 end

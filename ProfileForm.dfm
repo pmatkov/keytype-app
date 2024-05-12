@@ -2,6 +2,7 @@ object FrProfile: TFrProfile
   Left = 0
   Top = 0
   BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
   Caption = 'Profile'
   ClientHeight = 309
   ClientWidth = 381
@@ -163,14 +164,14 @@ object FrProfile: TFrProfile
     TabOrder = 4
   end
   object DFileOpen: TOpenPictureDialog
-    Left = 177
-    Top = 252
+    Left = 180
+    Top = 240
   end
   object msgDisplayTimer: TTimer
     Enabled = False
     Interval = 3000
     OnTimer = msgDisplayTimerTimer
-    Left = 180
-    Top = 4
+    Left = 78
+    Top = 1
   end
 end

@@ -17,6 +17,7 @@
 #include <vcl.h>
 #include <memory>
 
+#include "DataModule.h"
 #include "Dictionary.h"
 #include "MainSession.h"
 
@@ -40,11 +41,12 @@ private:	// User declarations
 	std::unique_ptr<TFrExternalSources> FrExternalSources;
 	std::unique_ptr<TFrCustomText> FrCustomText;
 
+    TDataModule1 *dataModule;
 	MainSession  *mainSession;
 
 public:		// User declarations
 	__fastcall TFPracticeOptions(TComponent* Owner);
-    __fastcall TFPracticeOptions(TComponent* Owner, MainSession *mainSession);
+    __fastcall TFPracticeOptions(TComponent* Owner, TDataModule1 *_dataModule, MainSession *mainSession);
 
     TFrGeneratedText* GetFrGeneratedText() const;
     TFrExternalSources* GetFrExternalSources() const;

@@ -5,9 +5,9 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45415.522962963</prop>
-        <prop prop-type="OrigDateTime">45415.0171990741</prop>
-        <prop prop-type="XlatDateTime">45389.5474305556</prop>
+        <prop prop-type="SelfDateTime">45418.0448148148</prop>
+        <prop prop-type="OrigDateTime">45418.044537037</prop>
+        <prop prop-type="XlatDateTime">45415.9386111111</prop>
         <prop prop-type="Translated">0</prop>
         <prop prop-type="UnTranslated">35</prop>
       </prop-group>
@@ -128,25 +128,25 @@
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45395.1060990741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FMain.O:MainMenu.O:MenuItemLessons.O:MenuSubItemConfiguration.Caption" resname="O:FMain.O:MainMenu.O:MenuItemLessons.O:MenuSubItemConfiguration.Caption">
-        <source>'Configuration'</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45395.1060990741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FMain.O:MainMenu.O:MenuItemLessons.O:MenuSubItemConfiguration.OnClick" resname="O:FMain.O:MainMenu.O:MenuItemLessons.O:MenuSubItemConfiguration.OnClick">
-        <source>MenuSubItemConfigurationClick</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45395.1060990741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
       <trans-unit id="O:FMain.O:MainMenu.O:MenuItemLessons.O:MenuSubItemLessonStart.Caption" resname="O:FMain.O:MainMenu.O:MenuItemLessons.O:MenuSubItemLessonStart.Caption">
         <source>'Start'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7045353819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45411.7045353819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FMain.O:MainMenu.O:MenuItemLessons.O:MenuSubItemLessonStart.OnClick" resname="O:FMain.O:MainMenu.O:MenuItemLessons.O:MenuSubItemLessonStart.OnClick">
         <source>MenuSubItemLessonStartClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7045353819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45411.7045353819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FMain.O:MainMenu.O:MenuItemLessons.O:MenuSubItemConfiguration.Caption" resname="O:FMain.O:MainMenu.O:MenuItemLessons.O:MenuSubItemConfiguration.Caption">
+        <source>'Configuration'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.1060990741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FMain.O:MainMenu.O:MenuItemLessons.O:MenuSubItemConfiguration.OnClick" resname="O:FMain.O:MainMenu.O:MenuItemLessons.O:MenuSubItemConfiguration.OnClick">
+        <source>MenuSubItemConfigurationClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45395.1060990741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FMain.O:MainMenu.O:MenuItemLessons.O:MenuSubItemLessonResults.Caption" resname="O:FMain.O:MainMenu.O:MenuItemLessons.O:MenuSubItemLessonResults.Caption">
         <source>'Results'</source>

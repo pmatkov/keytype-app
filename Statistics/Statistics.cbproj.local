@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.938,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\IKeyStatistics.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.184,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Statistics\Main.cpp=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Statistics\Statistics.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.127,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Statistics\Statistics.cpp=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Statistics\Statistics.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.123,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Statistics\File1.cpp=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Statistics\Main.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.334,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Statistics\Statistics.cbproj=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Statistics\Statistics.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.126,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Statistics\Statistics.cbproj=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Statistics\Statistics.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.842,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\Project1.cbproj=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Statistics\Statistics.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.329,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Statistics\StatisticsPCH1.h=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Statistics\StatisticsPCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.837,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\File1.cpp=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Statistics\File1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.948,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\File1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.793,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Statistics\StatisticsPCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.940,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.405,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Statistics\Unit1.h=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Statistics\UserStatistics.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.405,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Statistics\Unit1.cpp=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Statistics\UserStatistics.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.043,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Statistics\Unit1.cpp</Transaction>
+    <Transaction>2024.05.11 19:37:50.295,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\KeyStatistics.cpp</Transaction>
+  </Transactions>
+</BorlandProject>

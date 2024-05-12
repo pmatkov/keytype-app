@@ -10,9 +10,14 @@
 #include <Vcl.Dialogs.hpp>
 #include <Vcl.ExtDlgs.hpp>
 
+#include "DataModule.h"
 #include "WordList.h"
 #include "Dictionary.h"
 #include <Vcl.ExtCtrls.hpp>
+#include <IdBaseComponent.hpp>
+#include <IdComponent.hpp>
+#include <IdTCPClient.hpp>
+#include <IdTCPConnection.hpp>
 //---------------------------------------------------------------------------
 class TFConverter : public TForm
 {
@@ -29,10 +34,12 @@ __published:	// IDE-managed Components
 	void __fastcall BtBrowseClick(TObject *Sender);
 	void __fastcall BtConvertClick(TObject *Sender);
 	void __fastcall msgDisplayTimerTimer(TObject *Sender);
+	void __fastcall FormActivate(TObject *Sender);
 private:	// User declarations
-
+	TDataModule1 *dataModule;
 public:		// User declarations
 	__fastcall TFConverter(TComponent* Owner);
+    __fastcall TFConverter(TComponent* Owner, TDataModule1 *_dataModule);
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TFConverter *FConverter;

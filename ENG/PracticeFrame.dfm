@@ -33,7 +33,7 @@ object FrPractice: TFrPractice
   inline FrTypingText: TFrTypingText
     Left = 104
     Top = 142
-    Width = 339
+    Width = 327
     Height = 165
     TabOrder = 2
     ExplicitLeft = 104

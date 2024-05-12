@@ -27,6 +27,12 @@ TFrGeneratedText *FrGeneratedText;
 //---------------------------------------------------------------------------
 __fastcall TFrGeneratedText::TFrGeneratedText(TComponent* Owner) : TFrame(Owner), dictionary(ModelFactory::createDictionary(*this, *this)) {}
 
+__fastcall TFrGeneratedText::TFrGeneratedText(TComponent* Owner, TDataModule1 *_dataModule) : TFrame(Owner), dictionary(ModelFactory::createDictionary(*this, *this)) {
+	if (_dataModule) {
+    	dataModule = _dataModule;
+    }
+}
+
 void __fastcall TFrGeneratedText::BtBrowseClick(TObject *Sender) {
 
   UIUtils::setFileDialogProperties(DFileOpen, "Data", "json");
@@ -176,7 +182,7 @@ void __fastcall TFrGeneratedText::msgDisplayTimerTimer(TObject *Sender) {
 void __fastcall TFrGeneratedText::BtConvertClick(TObject *Sender) {
 
 	if (!FConverter) {
-		FConverter = std::make_unique<TFConverter>(nullptr);
+		FConverter = std::make_unique<TFConverter>(nullptr, dataModule);
 		FConverter->Position = poMainFormCenter;
 	}
 	FConverter->Show();
