@@ -5,11 +5,11 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45420.5005324074</prop>
-        <prop prop-type="OrigDateTime">45419.0009722222</prop>
-        <prop prop-type="XlatDateTime">45415.938587963</prop>
+        <prop prop-type="SelfDateTime">45429.7172916667</prop>
+        <prop prop-type="OrigDateTime">45429.545162037</prop>
+        <prop prop-type="XlatDateTime">45424.9793981481</prop>
         <prop prop-type="Translated">0</prop>
-        <prop prop-type="UnTranslated">62</prop>
+        <prop prop-type="UnTranslated">63</prop>
       </prop-group>
     </header>
     <body>
@@ -28,300 +28,305 @@
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
+      <trans-unit id="O:FConverter.BorderStyle" resname="O:FConverter.BorderStyle">
+        <source>bsSingle</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45429.7172941782</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
       <trans-unit id="O:FConverter.Caption" resname="O:FConverter.Caption">
         <source>'Convert word list to JSON'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.ClientHeight" resname="O:FConverter.ClientHeight">
         <source>124</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.ClientWidth" resname="O:FConverter.ClientWidth">
         <source>301</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.Color" resname="O:FConverter.Color">
         <source>clBtnFace</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.Font.Charset" resname="O:FConverter.Font.Charset">
         <source>DEFAULT_CHARSET</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.Font.Color" resname="O:FConverter.Font.Color">
         <source>clWindowText</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.Font.Height" resname="O:FConverter.Font.Height">
         <source>-12</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.Font.Name" resname="O:FConverter.Font.Name">
         <source>'Segoe UI'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.Font.Style" resname="O:FConverter.Font.Style">
         <source>[]</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.OnActivate" resname="O:FConverter.OnActivate">
         <source>FormActivate</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45418.9965433565</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45418.9965433565</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.TextHeight" resname="O:FConverter.TextHeight">
         <source>15</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TFConverter</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:LInput.Left" resname="O:FConverter.O:LInput.Left">
         <source>12</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:LInput.Top" resname="O:FConverter.O:LInput.Top">
         <source>32</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:LInput.Width" resname="O:FConverter.O:LInput.Width">
         <source>50</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:LInput.Height" resname="O:FConverter.O:LInput.Height">
         <source>15</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:LInput.Caption" resname="O:FConverter.O:LInput.Caption">
         <source>'Input file:'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:LOutput.Left" resname="O:FConverter.O:LOutput.Left">
         <source>12</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:LOutput.Top" resname="O:FConverter.O:LOutput.Top">
         <source>70</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:LOutput.Width" resname="O:FConverter.O:LOutput.Width">
         <source>60</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:LOutput.Height" resname="O:FConverter.O:LOutput.Height">
         <source>15</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:LOutput.Caption" resname="O:FConverter.O:LOutput.Caption">
         <source>'Output file:'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:LInfo.Left" resname="O:FConverter.O:LInfo.Left">
         <source>223</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.9503702431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.9503702431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:LInfo.Top" resname="O:FConverter.O:LInfo.Top">
         <source>101</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.9503702431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.9503702431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:LInfo.Width" resname="O:FConverter.O:LInfo.Width">
         <source>70</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.9503702431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.9503702431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:LInfo.Height" resname="O:FConverter.O:LInfo.Height">
         <source>15</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.9503702431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.9503702431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:LInfo.AutoSize" resname="O:FConverter.O:LInfo.AutoSize">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.968263831</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.968263831</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:LInfo.BiDiMode" resname="O:FConverter.O:LInfo.BiDiMode">
         <source>bdLeftToRight</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.968263831</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.968263831</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:LInfo.ParentBiDiMode" resname="O:FConverter.O:LInfo.ParentBiDiMode">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.968263831</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.968263831</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:BtConvert.Left" resname="O:FConverter.O:BtConvert.Left">
         <source>218</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:BtConvert.Top" resname="O:FConverter.O:BtConvert.Top">
         <source>66</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:BtConvert.Width" resname="O:FConverter.O:BtConvert.Width">
         <source>75</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:BtConvert.Height" resname="O:FConverter.O:BtConvert.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:BtConvert.Caption" resname="O:FConverter.O:BtConvert.Caption">
         <source>'Convert'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:BtConvert.TabOrder" resname="O:FConverter.O:BtConvert.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:BtConvert.OnClick" resname="O:FConverter.O:BtConvert.OnClick">
         <source>BtConvertClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:EInput.Left" resname="O:FConverter.O:EInput.Left">
         <source>85</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:EInput.Top" resname="O:FConverter.O:EInput.Top">
         <source>29</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:EInput.Width" resname="O:FConverter.O:EInput.Width">
         <source>120</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:EInput.Height" resname="O:FConverter.O:EInput.Height">
         <source>23</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:EInput.TabOrder" resname="O:FConverter.O:EInput.TabOrder">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:EOutput.Left" resname="O:FConverter.O:EOutput.Left">
         <source>85</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:EOutput.Top" resname="O:FConverter.O:EOutput.Top">
         <source>67</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:EOutput.Width" resname="O:FConverter.O:EOutput.Width">
         <source>120</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:EOutput.Height" resname="O:FConverter.O:EOutput.Height">
         <source>23</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:EOutput.Enabled" resname="O:FConverter.O:EOutput.Enabled">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:EOutput.TabOrder" resname="O:FConverter.O:EOutput.TabOrder">
         <source>2</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:BtBrowse.Left" resname="O:FConverter.O:BtBrowse.Left">
         <source>218</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:BtBrowse.Top" resname="O:FConverter.O:BtBrowse.Top">
         <source>28</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:BtBrowse.Width" resname="O:FConverter.O:BtBrowse.Width">
         <source>75</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:BtBrowse.Height" resname="O:FConverter.O:BtBrowse.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:BtBrowse.Caption" resname="O:FConverter.O:BtBrowse.Caption">
         <source>'Browse'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:BtBrowse.TabOrder" resname="O:FConverter.O:BtBrowse.TabOrder">
         <source>3</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:BtBrowse.OnClick" resname="O:FConverter.O:BtBrowse.OnClick">
         <source>BtBrowseClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:DFileOpen.Left" resname="O:FConverter.O:DFileOpen.Left">
         <source>177</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TOpenTextFileDialog</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TOpenTextFileDialog</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:DFileOpen.Top" resname="O:FConverter.O:DFileOpen.Top">
         <source>65533</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TOpenTextFileDialog</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.804574213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TOpenTextFileDialog</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:msgDisplayTimer.Enabled" resname="O:FConverter.O:msgDisplayTimer.Enabled">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.9503702431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.9503702431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:msgDisplayTimer.Interval" resname="O:FConverter.O:msgDisplayTimer.Interval">
         <source>3000</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.9503702431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.9503702431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:msgDisplayTimer.OnTimer" resname="O:FConverter.O:msgDisplayTimer.OnTimer">
         <source>msgDisplayTimerTimer</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.9640453704</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.9640453704</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FConverter.O:msgDisplayTimer.Left" resname="O:FConverter.O:msgDisplayTimer.Left">
         <source>96</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45376.9503702431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45376.9503702431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
     </body>
   </file>

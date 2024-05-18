@@ -11,6 +11,7 @@
 
 #define LOGGER_LOG(message) UnitTestLogger::getLogger().addToLog(message)
 #define LOGGER_DISPLAY_LOG() UnitTestLogger::getLogger().displayLog()
+#define LOGGER_CLEAR_LOG() UnitTestLogger::getLogger().clearLog()
 
 class UnitTestLogger
 {
@@ -24,6 +25,7 @@ class UnitTestLogger
 	public:
     	static UnitTestLogger& getLogger();
 		void addToLog(const UnicodeString& text);
+        void clearLog();
         void displayLog();
 
 };

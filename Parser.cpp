@@ -15,7 +15,7 @@ Parser::Parser(MainSession *_mainSession, TypingSession *_typingSession) {
         mainSession = _mainSession;
         typingSession = _typingSession;
 
-        LOGGER(LogLevel::Debug, "Parser created");
+        LOGGER(LogLevel::Debug, "Created parser");
 
     } else {
         throw CustomExceptions::ENullPointerException();
@@ -64,13 +64,12 @@ void Parser::setInputEnabled(bool _inputEnabled) {
 	inputEnabled = _inputEnabled;
 }
 
-void Parser::resetParserData() {
+void Parser::resetParser() {
 
+	setInputEnabled(false);
     keyLog.clear();
 	buffer.clear();
 	insertedChars = "";
-    setInputEnabled(false);
-
 }
 
 

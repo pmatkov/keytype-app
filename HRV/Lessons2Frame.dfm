@@ -176,7 +176,7 @@ object FrLessons2: TFrLessons2
     TabOrder = 4
     ExplicitLeft = 149
     ExplicitTop = 187
-    inherited LInfo: TLabel
+    inherited LPrompt: TLabel
       Left = 17
       Top = 122
       ExplicitLeft = 17

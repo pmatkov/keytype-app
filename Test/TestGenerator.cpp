@@ -16,38 +16,30 @@ class TTestGenerator : public TTestCase
 		virtual void __fastcall TearDown();
 
 	__published:
-		void __fastcall TestgenerateText();
-		void __fastcall TestgenerateWord();
+		void __fastcall TestgenerateTokenSequence();
+		void __fastcall TestgenerateToken();
 		void __fastcall TestshuffleChars();
 
 	private:
-		int testCount;
+        Generator generator;
 
-		int maxChars;
+        UnicodeString letters = L"abcdefghijklmnopqrstuvwxyz";
+        bool useNumbers = false;
+        bool useUppercase = false;
+        bool usePunctuation = false;
 
-		UnicodeString letters;
-		bool uppercase;
-		bool numbers;
-		bool punctuation;
+		int testCount = 10;
+		int minChars = 5;
+        int maxChars = 10;
 
-		UnicodeString inputText;
+		UnicodeString input = L"Sunny Hvar";
 
 };
 
 
 void __fastcall TTestGenerator::SetUp()
 {
-	testCount = 10;
-
-	maxChars = 50;
-
-	letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	uppercase = true;
-	numbers = false;
-	punctuation = false;
-
-	inputText = "Sunny Hvar";
-
+	generator = Generator(letters, useNumbers, useUppercase, usePunctuation);
 	LOGGER_LOG("Starting test...");
 
 }
@@ -58,39 +50,34 @@ void __fastcall TTestGenerator::TearDown()
     LOGGER_DISPLAY_LOG();
 }
 
-void __fastcall TTestGenerator::TestgenerateText()
+void __fastcall TTestGenerator::TestgenerateTokenSequence()
 {
 
 	for (int i = 0; i < testCount; i++) {
 
-		UnicodeString result = Generator::generateText(letters, GeneratorOptions(uppercase, numbers, punctuation, 5, 10));
+		UnicodeString result = generator.generateTokenSequence(minChars, maxChars, 10, 10);
 
 		LOGGER_LOG("Test " + IntToStr(i + 1) + ": " + result);
-
 	}
-
 }
     
-void __fastcall TTestGenerator::TestgenerateWord()
+void __fastcall TTestGenerator::TestgenerateToken()
 {
 
 	for (int i = 0; i < testCount; i++) {
 
-		UnicodeString result = Generator::generateWord(letters, GeneratorOptions(uppercase, numbers, punctuation, 5, 10));
+		UnicodeString result = generator.generateToken(minChars, maxChars);
 
 		LOGGER_LOG("Test " + IntToStr(i + 1) + ": " + result);
 
-		if (!uppercase && !numbers && !punctuation) {
-
-			for (int i = 1; i <= result.Length(); i++)
-			{
-				if (letters.Pos(result[i]) == 0)
-				{
-					LOGGER_LOG("Invalid char: " + UnicodeString(result[i]));
-					return;
-				}
-			}
-		}
+        for (int i = 1; i <= result.Length(); i++)
+        {
+            if (letters.Pos(result[i]) == 0)
+            {
+                LOGGER_LOG("Invalid char: " + UnicodeString(result[i]));
+                return;
+            }
+        }
 
 	}
 
@@ -101,9 +88,9 @@ void __fastcall TTestGenerator::TestshuffleChars()
 
 	for (int i = 0; i < testCount; i++) {
 
-        UnicodeString result = Generator::shuffleChars(inputText);
+        UnicodeString result = generator.shuffleChars(input);
         LOGGER_LOG("Test " + IntToStr(i + 1) + ": " + result);
-        CheckNotEquals(inputText, result, L"Words are the same");
+        CheckNotEquals(input, result, L"Words are the same");
 	}
 
 }

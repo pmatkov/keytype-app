@@ -34,18 +34,18 @@ void __fastcall TFServer::DMConnectionClosed(TObject *Sender)
     LConnectionStatusDisplay->Caption = "connection closed";
 }
 
-void __fastcall TFServer::BtTCPServer1Click(TObject *Sender)
+void __fastcall TFServer::BtTCPServerClick(TObject *Sender)
 {
-    if (BtTCPServer1->Caption == "Start TCP Server1") {
+    if (BtTCPServer->Caption == "Start TCP Server") {
 
-    	BtTCPServer1->Caption = "Stop TCP Server1";
+    	BtTCPServer->Caption = "Stop TCP Server";
         dataModule->IdTCPServer->Active = true;
         LConnectionStatusDisplay->Caption = "waiting for connection..";
 
     }
-    else if (BtTCPServer1->Caption == "Stop TCP Server1") {
+    else if (BtTCPServer->Caption == "Stop TCP Server") {
 
-    	BtTCPServer1->Caption = "Start TCP Server1";
+    	BtTCPServer->Caption = "Start TCP Server";
         dataModule->IdTCPServer->Active = false;
         LConnectionStatusDisplay->Caption = "";
 

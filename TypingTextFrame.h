@@ -18,7 +18,7 @@ class TFrTypingText : public TFrame
 {
 __published:	// IDE-managed Components
 	TRichEdit *REText;
-	TLabel *LInfo;
+	TLabel *LPrompt;
 private:	// User declarations
 	MainSession *mainSession;
     TypingSession *typingSession;
@@ -35,8 +35,10 @@ public:		// User declarations
     void setParser(Parser *_parser);
     void setFrameTypingStats(TFrTypingStats *_FrTypingStats);
 
-    void setTypingStatus(SessionStatus status);
+    void changeSessionView(SessionStatus status);
     void changeSessionStatus(SessionStatus status);
+    void initializeTypingStats();
+    void resetTypingStats();
 
     void processCharMessages(WPARAM wParam);
     void moveCaret(CaretType caretType, int index);
@@ -45,7 +47,7 @@ public:		// User declarations
 
     static LRESULT CALLBACK RESubclass(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam, UINT_PTR uIdSubclass, DWORD_PTR dwRefData);
 
-    void __fastcall (__closure *OnTypingComplete)(TObject *Sender);
+    void __fastcall (__closure *OnLessonComplete)(TObject *Sender);
 
 };
 //---------------------------------------------------------------------------

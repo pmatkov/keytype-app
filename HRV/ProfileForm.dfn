@@ -5,697 +5,678 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45424.1116898148</prop>
-        <prop prop-type="OrigDateTime">45423.9954861111</prop>
-        <prop prop-type="XlatDateTime">45415.9386111111</prop>
-        <prop prop-type="Translated">9</prop>
-        <prop prop-type="UnTranslated">126</prop>
+        <prop prop-type="SelfDateTime">45430.7159027778</prop>
+        <prop prop-type="OrigDateTime">45430.0184953704</prop>
+        <prop prop-type="XlatDateTime">45424.9793981481</prop>
+        <prop prop-type="Translated">0</prop>
+        <prop prop-type="UnTranslated">133</prop>
       </prop-group>
     </header>
     <body>
-      <trans-unit id="O:FrProfile.Left" resname="O:FrProfile.Left">
+      <trans-unit id="O:FProfile.Left" resname="O:FProfile.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TFrProfile</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TFProfile</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.Top" resname="O:FrProfile.Top">
+      <trans-unit id="O:FProfile.Top" resname="O:FProfile.Top">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TFrProfile</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TFProfile</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.BorderIcons" resname="O:FrProfile.BorderIcons">
-        <source>[biSystemMenu]</source>
+      <trans-unit id="O:FProfile.BorderIcons" resname="O:FProfile.BorderIcons">
+        <source>[biSystemMenu, biMinimize]</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TFrProfile</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TFProfile</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.BorderStyle" resname="O:FrProfile.BorderStyle">
+      <trans-unit id="O:FProfile.BorderStyle" resname="O:FProfile.BorderStyle">
         <source>bsSingle</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45418.0440946991</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TFrProfile</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TFProfile</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.Caption" resname="O:FrProfile.Caption">
+      <trans-unit id="O:FProfile.Caption" resname="O:FProfile.Caption">
         <source>'Profile'</source>
-        <target>'Profil'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">1</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFrProfile</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFProfile</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.ClientHeight" resname="O:FrProfile.ClientHeight">
-        <source>309</source>
+      <trans-unit id="O:FProfile.ClientHeight" resname="O:FProfile.ClientHeight">
+        <source>306</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TFrProfile</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TFProfile</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.ClientWidth" resname="O:FrProfile.ClientWidth">
-        <source>381</source>
+      <trans-unit id="O:FProfile.ClientWidth" resname="O:FProfile.ClientWidth">
+        <source>380</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TFrProfile</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TFProfile</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.Color" resname="O:FrProfile.Color">
+      <trans-unit id="O:FProfile.Color" resname="O:FProfile.Color">
         <source>clBtnFace</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TFrProfile</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TFProfile</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.Font.Charset" resname="O:FrProfile.Font.Charset">
+      <trans-unit id="O:FProfile.Font.Charset" resname="O:FProfile.Font.Charset">
         <source>DEFAULT_CHARSET</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TFrProfile</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TFProfile</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.Font.Color" resname="O:FrProfile.Font.Color">
+      <trans-unit id="O:FProfile.Font.Color" resname="O:FProfile.Font.Color">
         <source>clWindowText</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TFrProfile</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TFProfile</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.Font.Height" resname="O:FrProfile.Font.Height">
+      <trans-unit id="O:FProfile.Font.Height" resname="O:FProfile.Font.Height">
         <source>-12</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TFrProfile</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TFProfile</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.Font.Name" resname="O:FrProfile.Font.Name">
+      <trans-unit id="O:FProfile.Font.Name" resname="O:FProfile.Font.Name">
         <source>'Segoe UI'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TFrProfile</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TFProfile</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.Font.Style" resname="O:FrProfile.Font.Style">
+      <trans-unit id="O:FProfile.Font.Style" resname="O:FProfile.Font.Style">
         <source>[]</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TFrProfile</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TFProfile</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.OnActivate" resname="O:FrProfile.OnActivate">
+      <trans-unit id="O:FProfile.OnActivate" resname="O:FProfile.OnActivate">
         <source>FormActivate</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.9446495949</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TFrProfile</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TFProfile</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.TextHeight" resname="O:FrProfile.TextHeight">
+      <trans-unit id="O:FProfile.TextHeight" resname="O:FProfile.TextHeight">
         <source>15</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TFrProfile</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TFProfile</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LUsername.Left" resname="O:FrProfile.O:LUsername.Left">
+      <trans-unit id="O:FProfile.O:LUsername.Left" resname="O:FProfile.O:LUsername.Left">
         <source>147</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LUsername.Top" resname="O:FrProfile.O:LUsername.Top">
+      <trans-unit id="O:FProfile.O:LUsername.Top" resname="O:FProfile.O:LUsername.Top">
         <source>42</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LUsername.Width" resname="O:FrProfile.O:LUsername.Width">
+      <trans-unit id="O:FProfile.O:LUsername.Width" resname="O:FProfile.O:LUsername.Width">
         <source>56</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LUsername.Height" resname="O:FrProfile.O:LUsername.Height">
+      <trans-unit id="O:FProfile.O:LUsername.Height" resname="O:FProfile.O:LUsername.Height">
         <source>15</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LUsername.Caption" resname="O:FrProfile.O:LUsername.Caption">
+      <trans-unit id="O:FProfile.O:LUsername.Caption" resname="O:FProfile.O:LUsername.Caption">
         <source>'Username:'</source>
-        <target>'Korisničko ime:'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">1</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LPassword.Left" resname="O:FrProfile.O:LPassword.Left">
+      <trans-unit id="O:FProfile.O:LPassword.Left" resname="O:FProfile.O:LPassword.Left">
         <source>147</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LPassword.Top" resname="O:FrProfile.O:LPassword.Top">
+      <trans-unit id="O:FProfile.O:LPassword.Top" resname="O:FProfile.O:LPassword.Top">
         <source>75</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LPassword.Width" resname="O:FrProfile.O:LPassword.Width">
+      <trans-unit id="O:FProfile.O:LPassword.Width" resname="O:FProfile.O:LPassword.Width">
         <source>53</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LPassword.Height" resname="O:FrProfile.O:LPassword.Height">
+      <trans-unit id="O:FProfile.O:LPassword.Height" resname="O:FProfile.O:LPassword.Height">
         <source>15</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LPassword.Caption" resname="O:FrProfile.O:LPassword.Caption">
+      <trans-unit id="O:FProfile.O:LPassword.Caption" resname="O:FProfile.O:LPassword.Caption">
         <source>'Password:'</source>
-        <target>'Lozinka:'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">1</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LName.Left" resname="O:FrProfile.O:LName.Left">
+      <trans-unit id="O:FProfile.O:LName.Left" resname="O:FProfile.O:LName.Left">
         <source>147</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LName.Top" resname="O:FrProfile.O:LName.Top">
+      <trans-unit id="O:FProfile.O:LName.Top" resname="O:FProfile.O:LName.Top">
         <source>111</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LName.Width" resname="O:FrProfile.O:LName.Width">
+      <trans-unit id="O:FProfile.O:LName.Width" resname="O:FProfile.O:LName.Width">
         <source>35</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LName.Height" resname="O:FrProfile.O:LName.Height">
+      <trans-unit id="O:FProfile.O:LName.Height" resname="O:FProfile.O:LName.Height">
         <source>15</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LName.Caption" resname="O:FrProfile.O:LName.Caption">
+      <trans-unit id="O:FProfile.O:LName.Caption" resname="O:FProfile.O:LName.Caption">
         <source>'Name:'</source>
-        <target>'Ime:'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">1</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LSurname.Left" resname="O:FrProfile.O:LSurname.Left">
+      <trans-unit id="O:FProfile.O:LSurname.Left" resname="O:FProfile.O:LSurname.Left">
         <source>147</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LSurname.Top" resname="O:FrProfile.O:LSurname.Top">
+      <trans-unit id="O:FProfile.O:LSurname.Top" resname="O:FProfile.O:LSurname.Top">
         <source>147</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LSurname.Width" resname="O:FrProfile.O:LSurname.Width">
+      <trans-unit id="O:FProfile.O:LSurname.Width" resname="O:FProfile.O:LSurname.Width">
         <source>50</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.033255625</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LSurname.Height" resname="O:FrProfile.O:LSurname.Height">
+      <trans-unit id="O:FProfile.O:LSurname.Height" resname="O:FProfile.O:LSurname.Height">
         <source>15</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LSurname.Caption" resname="O:FrProfile.O:LSurname.Caption">
+      <trans-unit id="O:FProfile.O:LSurname.Caption" resname="O:FProfile.O:LSurname.Caption">
         <source>'Surname:'</source>
-        <target>'Prezime:'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">1</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LEmail.Left" resname="O:FrProfile.O:LEmail.Left">
+      <trans-unit id="O:FProfile.O:LEmail.Left" resname="O:FProfile.O:LEmail.Left">
         <source>147</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LEmail.Top" resname="O:FrProfile.O:LEmail.Top">
+      <trans-unit id="O:FProfile.O:LEmail.Top" resname="O:FProfile.O:LEmail.Top">
         <source>180</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LEmail.Width" resname="O:FrProfile.O:LEmail.Width">
+      <trans-unit id="O:FProfile.O:LEmail.Width" resname="O:FProfile.O:LEmail.Width">
         <source>37</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LEmail.Height" resname="O:FrProfile.O:LEmail.Height">
+      <trans-unit id="O:FProfile.O:LEmail.Height" resname="O:FProfile.O:LEmail.Height">
         <source>15</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LEmail.Caption" resname="O:FrProfile.O:LEmail.Caption">
+      <trans-unit id="O:FProfile.O:LEmail.Caption" resname="O:FProfile.O:LEmail.Caption">
         <source>'E-mail:'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LAge.Left" resname="O:FrProfile.O:LAge.Left">
+      <trans-unit id="O:FProfile.O:LAge.Left" resname="O:FProfile.O:LAge.Left">
         <source>147</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LAge.Top" resname="O:FrProfile.O:LAge.Top">
+      <trans-unit id="O:FProfile.O:LAge.Top" resname="O:FProfile.O:LAge.Top">
         <source>216</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LAge.Width" resname="O:FrProfile.O:LAge.Width">
+      <trans-unit id="O:FProfile.O:LAge.Width" resname="O:FProfile.O:LAge.Width">
         <source>24</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LAge.Height" resname="O:FrProfile.O:LAge.Height">
+      <trans-unit id="O:FProfile.O:LAge.Height" resname="O:FProfile.O:LAge.Height">
         <source>15</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LAge.Caption" resname="O:FrProfile.O:LAge.Caption">
+      <trans-unit id="O:FProfile.O:LAge.Caption" resname="O:FProfile.O:LAge.Caption">
         <source>'Age:'</source>
-        <target>'Godine:'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672569</prop><prop prop-type="Status">1</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LInfo.Left" resname="O:FrProfile.O:LInfo.Left">
+      <trans-unit id="O:FProfile.O:LInfo.Left" resname="O:FProfile.O:LInfo.Left">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.9911072917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LInfo.Top" resname="O:FrProfile.O:LInfo.Top">
+      <trans-unit id="O:FProfile.O:LInfo.Top" resname="O:FProfile.O:LInfo.Top">
         <source>274</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.9911072917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LInfo.Width" resname="O:FrProfile.O:LInfo.Width">
+      <trans-unit id="O:FProfile.O:LInfo.Width" resname="O:FProfile.O:LInfo.Width">
         <source>100</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.9911072917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LInfo.Height" resname="O:FrProfile.O:LInfo.Height">
+      <trans-unit id="O:FProfile.O:LInfo.Height" resname="O:FProfile.O:LInfo.Height">
         <source>15</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.9911072917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:LInfo.AutoSize" resname="O:FrProfile.O:LInfo.AutoSize">
+      <trans-unit id="O:FProfile.O:LInfo.AutoSize" resname="O:FProfile.O:LInfo.AutoSize">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.9911072917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:BtEditSave.Left" resname="O:FrProfile.O:BtEditSave.Left">
+      <trans-unit id="O:FProfile.O:BtEditSave.Left" resname="O:FProfile.O:BtEditSave.Left">
         <source>285</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672685</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:BtEditSave.Top" resname="O:FrProfile.O:BtEditSave.Top">
+      <trans-unit id="O:FProfile.O:BtEditSave.Top" resname="O:FProfile.O:BtEditSave.Top">
         <source>270</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672685</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:BtEditSave.Width" resname="O:FrProfile.O:BtEditSave.Width">
+      <trans-unit id="O:FProfile.O:BtEditSave.Width" resname="O:FProfile.O:BtEditSave.Width">
         <source>85</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672685</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:BtEditSave.Height" resname="O:FrProfile.O:BtEditSave.Height">
+      <trans-unit id="O:FProfile.O:BtEditSave.Height" resname="O:FProfile.O:BtEditSave.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672685</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:BtEditSave.Caption" resname="O:FrProfile.O:BtEditSave.Caption">
+      <trans-unit id="O:FProfile.O:BtEditSave.Caption" resname="O:FProfile.O:BtEditSave.Caption">
         <source>'Edit profile'</source>
-        <target>'Uredi profil'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672685</prop><prop prop-type="Status">1</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:BtEditSave.TabOrder" resname="O:FrProfile.O:BtEditSave.TabOrder">
+      <trans-unit id="O:FProfile.O:BtEditSave.TabOrder" resname="O:FProfile.O:BtEditSave.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7177672685</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:BtEditSave.OnClick" resname="O:FrProfile.O:BtEditSave.OnClick">
+      <trans-unit id="O:FProfile.O:BtEditSave.OnClick" resname="O:FProfile.O:BtEditSave.OnClick">
         <source>BtEditSaveClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7255315741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:BtChangeImage.Left" resname="O:FrProfile.O:BtChangeImage.Left">
+      <trans-unit id="O:FProfile.O:BtChangeImage.Left" resname="O:FProfile.O:BtChangeImage.Left">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.9465398148</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:BtChangeImage.Top" resname="O:FrProfile.O:BtChangeImage.Top">
+      <trans-unit id="O:FProfile.O:BtChangeImage.Top" resname="O:FProfile.O:BtChangeImage.Top">
         <source>152</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.9465398148</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:BtChangeImage.Width" resname="O:FrProfile.O:BtChangeImage.Width">
+      <trans-unit id="O:FProfile.O:BtChangeImage.Width" resname="O:FProfile.O:BtChangeImage.Width">
         <source>85</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.9465398148</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:BtChangeImage.Height" resname="O:FrProfile.O:BtChangeImage.Height">
+      <trans-unit id="O:FProfile.O:BtChangeImage.Height" resname="O:FProfile.O:BtChangeImage.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.9465398148</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:BtChangeImage.Caption" resname="O:FrProfile.O:BtChangeImage.Caption">
+      <trans-unit id="O:FProfile.O:BtChangeImage.Caption" resname="O:FProfile.O:BtChangeImage.Caption">
         <source>'Change image'</source>
-        <target>'Izmijeni sliku'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.9465398148</prop><prop prop-type="Status">1</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:BtChangeImage.TabOrder" resname="O:FrProfile.O:BtChangeImage.TabOrder">
+      <trans-unit id="O:FProfile.O:BtChangeImage.TabOrder" resname="O:FProfile.O:BtChangeImage.TabOrder">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.9465398148</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:BtChangeImage.OnClick" resname="O:FrProfile.O:BtChangeImage.OnClick">
+      <trans-unit id="O:FProfile.O:BtChangeImage.OnClick" resname="O:FProfile.O:BtChangeImage.OnClick">
         <source>BtChangeImageClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.9465398148</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.Left" resname="O:FrProfile.O:GBProfile.Left">
+      <trans-unit id="O:FProfile.O:GBProfile.Left" resname="O:FProfile.O:GBProfile.Left">
         <source>231</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7309048611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.Top" resname="O:FrProfile.O:GBProfile.Top">
+      <trans-unit id="O:FProfile.O:GBProfile.Top" resname="O:FProfile.O:GBProfile.Top">
         <source>27</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7309048611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.Width" resname="O:FrProfile.O:GBProfile.Width">
+      <trans-unit id="O:FProfile.O:GBProfile.Width" resname="O:FProfile.O:GBProfile.Width">
         <source>139</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7309048611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.Height" resname="O:FrProfile.O:GBProfile.Height">
+      <trans-unit id="O:FProfile.O:GBProfile.Height" resname="O:FProfile.O:GBProfile.Height">
         <source>220</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7309048611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.TabOrder" resname="O:FrProfile.O:GBProfile.TabOrder">
+      <trans-unit id="O:FProfile.O:GBProfile.TabOrder" resname="O:FProfile.O:GBProfile.TabOrder">
         <source>3</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7309048611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">68</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">68</prop><prop prop-type="Type">TGroupBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EName.Left" resname="O:FrProfile.O:GBProfile.O:EName.Left">
+      <trans-unit id="O:FProfile.O:GBProfile.O:EName.Left" resname="O:FProfile.O:GBProfile.O:EName.Left">
         <source>9</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7309048611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EName.Top" resname="O:FrProfile.O:GBProfile.O:EName.Top">
+      <trans-unit id="O:FProfile.O:GBProfile.O:EName.Top" resname="O:FProfile.O:GBProfile.O:EName.Top">
         <source>81</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7309048611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">70</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">70</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EName.Width" resname="O:FrProfile.O:GBProfile.O:EName.Width">
+      <trans-unit id="O:FProfile.O:GBProfile.O:EName.Width" resname="O:FProfile.O:GBProfile.O:EName.Width">
         <source>121</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7309048611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EName.Height" resname="O:FrProfile.O:GBProfile.O:EName.Height">
+      <trans-unit id="O:FProfile.O:GBProfile.O:EName.Height" resname="O:FProfile.O:GBProfile.O:EName.Height">
         <source>23</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7309048611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EName.DataField" resname="O:FrProfile.O:GBProfile.O:EName.DataField">
+      <trans-unit id="O:FProfile.O:GBProfile.O:EName.DataField" resname="O:FProfile.O:GBProfile.O:EName.DataField">
         <source>'name'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.9521907292</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EName.DataSource" resname="O:FrProfile.O:GBProfile.O:EName.DataSource">
+      <trans-unit id="O:FProfile.O:GBProfile.O:EName.DataSource" resname="O:FProfile.O:GBProfile.O:EName.DataSource">
         <source>DataModule1.DUsers</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.9521907292</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EName.TabOrder" resname="O:FrProfile.O:GBProfile.O:EName.TabOrder">
-        <source>2</source>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EName.TabOrder" resname="O:FProfile.O:GBProfile.O:EName.TabOrder">
+        <source>1</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7309048611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">75</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">75</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:ESurname.Left" resname="O:FrProfile.O:GBProfile.O:ESurname.Left">
+      <trans-unit id="O:FProfile.O:GBProfile.O:ESurname.Left" resname="O:FProfile.O:GBProfile.O:ESurname.Left">
         <source>9</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7309048611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">76</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">76</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:ESurname.Top" resname="O:FrProfile.O:GBProfile.O:ESurname.Top">
+      <trans-unit id="O:FProfile.O:GBProfile.O:ESurname.Top" resname="O:FProfile.O:GBProfile.O:ESurname.Top">
         <source>117</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7309048727</prop><prop prop-type="Status">0</prop><prop prop-type="Order">77</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">77</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:ESurname.Width" resname="O:FrProfile.O:GBProfile.O:ESurname.Width">
+      <trans-unit id="O:FProfile.O:GBProfile.O:ESurname.Width" resname="O:FProfile.O:GBProfile.O:ESurname.Width">
         <source>121</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7309048727</prop><prop prop-type="Status">0</prop><prop prop-type="Order">78</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">78</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:ESurname.Height" resname="O:FrProfile.O:GBProfile.O:ESurname.Height">
+      <trans-unit id="O:FProfile.O:GBProfile.O:ESurname.Height" resname="O:FProfile.O:GBProfile.O:ESurname.Height">
         <source>23</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7309048727</prop><prop prop-type="Status">0</prop><prop prop-type="Order">79</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">79</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:ESurname.DataField" resname="O:FrProfile.O:GBProfile.O:ESurname.DataField">
+      <trans-unit id="O:FProfile.O:GBProfile.O:ESurname.DataField" resname="O:FProfile.O:GBProfile.O:ESurname.DataField">
         <source>'surname'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.9521907292</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:ESurname.DataSource" resname="O:FrProfile.O:GBProfile.O:ESurname.DataSource">
+      <trans-unit id="O:FProfile.O:GBProfile.O:ESurname.DataSource" resname="O:FProfile.O:GBProfile.O:ESurname.DataSource">
         <source>DataModule1.DUsers</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.9521907292</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:ESurname.TabOrder" resname="O:FrProfile.O:GBProfile.O:ESurname.TabOrder">
-        <source>3</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7309048727</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EEmail.Left" resname="O:FrProfile.O:GBProfile.O:EEmail.Left">
-        <source>9</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7309048611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EEmail.Top" resname="O:FrProfile.O:GBProfile.O:EEmail.Top">
-        <source>150</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7309048611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">84</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EEmail.Width" resname="O:FrProfile.O:GBProfile.O:EEmail.Width">
-        <source>121</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7309048611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EEmail.Height" resname="O:FrProfile.O:GBProfile.O:EEmail.Height">
-        <source>23</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7309048611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">86</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EEmail.DataField" resname="O:FrProfile.O:GBProfile.O:EEmail.DataField">
-        <source>'email'</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.9521907292</prop><prop prop-type="Status">0</prop><prop prop-type="Order">87</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EEmail.DataSource" resname="O:FrProfile.O:GBProfile.O:EEmail.DataSource">
-        <source>DataModule1.DUsers</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.9521907292</prop><prop prop-type="Status">0</prop><prop prop-type="Order">88</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EEmail.TabOrder" resname="O:FrProfile.O:GBProfile.O:EEmail.TabOrder">
-        <source>4</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7309048611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">89</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EAge.Left" resname="O:FrProfile.O:GBProfile.O:EAge.Left">
-        <source>9</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7309048611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">90</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EAge.Top" resname="O:FrProfile.O:GBProfile.O:EAge.Top">
-        <source>183</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7309048611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">91</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EAge.Width" resname="O:FrProfile.O:GBProfile.O:EAge.Width">
-        <source>121</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7309048611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">92</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EAge.Height" resname="O:FrProfile.O:GBProfile.O:EAge.Height">
-        <source>23</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7309048611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">93</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EAge.BiDiMode" resname="O:FrProfile.O:GBProfile.O:EAge.BiDiMode">
-        <source>bdLeftToRight</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.956261956</prop><prop prop-type="Status">0</prop><prop prop-type="Order">94</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EAge.DataField" resname="O:FrProfile.O:GBProfile.O:EAge.DataField">
-        <source>'age'</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.9521907292</prop><prop prop-type="Status">0</prop><prop prop-type="Order">95</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EAge.DataSource" resname="O:FrProfile.O:GBProfile.O:EAge.DataSource">
-        <source>DataModule1.DUsers</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.9521907292</prop><prop prop-type="Status">0</prop><prop prop-type="Order">96</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EAge.ParentBiDiMode" resname="O:FrProfile.O:GBProfile.O:EAge.ParentBiDiMode">
-        <source>False</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.956261956</prop><prop prop-type="Status">0</prop><prop prop-type="Order">97</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EAge.TabOrder" resname="O:FrProfile.O:GBProfile.O:EAge.TabOrder">
-        <source>5</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7309048611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">98</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EPassword.Left" resname="O:FrProfile.O:GBProfile.O:EPassword.Left">
-        <source>9</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.956261956</prop><prop prop-type="Status">0</prop><prop prop-type="Order">99</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EPassword.Top" resname="O:FrProfile.O:GBProfile.O:EPassword.Top">
-        <source>45</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.956261956</prop><prop prop-type="Status">0</prop><prop prop-type="Order">100</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EPassword.Width" resname="O:FrProfile.O:GBProfile.O:EPassword.Width">
-        <source>121</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.956261956</prop><prop prop-type="Status">0</prop><prop prop-type="Order">101</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EPassword.Height" resname="O:FrProfile.O:GBProfile.O:EPassword.Height">
-        <source>23</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.956261956</prop><prop prop-type="Status">0</prop><prop prop-type="Order">102</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EPassword.DataField" resname="O:FrProfile.O:GBProfile.O:EPassword.DataField">
-        <source>'password'</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.956261956</prop><prop prop-type="Status">0</prop><prop prop-type="Order">103</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EPassword.DataSource" resname="O:FrProfile.O:GBProfile.O:EPassword.DataSource">
-        <source>DataModule1.DUsers</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.956261956</prop><prop prop-type="Status">0</prop><prop prop-type="Order">104</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EPassword.PasswordChar" resname="O:FrProfile.O:GBProfile.O:EPassword.PasswordChar">
-        <source>'*'</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.956261956</prop><prop prop-type="Status">0</prop><prop prop-type="Order">105</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EPassword.TabOrder" resname="O:FrProfile.O:GBProfile.O:EPassword.TabOrder">
-        <source>1</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.956261956</prop><prop prop-type="Status">0</prop><prop prop-type="Order">106</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EUsername.Left" resname="O:FrProfile.O:GBProfile.O:EUsername.Left">
-        <source>9</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.956261956</prop><prop prop-type="Status">0</prop><prop prop-type="Order">107</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EUsername.Top" resname="O:FrProfile.O:GBProfile.O:EUsername.Top">
-        <source>12</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.956261956</prop><prop prop-type="Status">0</prop><prop prop-type="Order">108</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EUsername.Width" resname="O:FrProfile.O:GBProfile.O:EUsername.Width">
-        <source>121</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.956261956</prop><prop prop-type="Status">0</prop><prop prop-type="Order">109</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EUsername.Height" resname="O:FrProfile.O:GBProfile.O:EUsername.Height">
-        <source>23</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.956261956</prop><prop prop-type="Status">0</prop><prop prop-type="Order">110</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EUsername.DataField" resname="O:FrProfile.O:GBProfile.O:EUsername.DataField">
-        <source>'username'</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.956261956</prop><prop prop-type="Status">0</prop><prop prop-type="Order">111</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EUsername.DataSource" resname="O:FrProfile.O:GBProfile.O:EUsername.DataSource">
-        <source>DataModule1.DUsers</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.956261956</prop><prop prop-type="Status">0</prop><prop prop-type="Order">112</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:GBProfile.O:EUsername.TabOrder" resname="O:FrProfile.O:GBProfile.O:EUsername.TabOrder">
-        <source>0</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.956261956</prop><prop prop-type="Status">0</prop><prop prop-type="Order">113</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:BtDeleteImage.Left" resname="O:FrProfile.O:BtDeleteImage.Left">
-        <source>25</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.9465398148</prop><prop prop-type="Status">0</prop><prop prop-type="Order">114</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:BtDeleteImage.Top" resname="O:FrProfile.O:BtDeleteImage.Top">
-        <source>191</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.9465398148</prop><prop prop-type="Status">0</prop><prop prop-type="Order">115</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:BtDeleteImage.Width" resname="O:FrProfile.O:BtDeleteImage.Width">
-        <source>85</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.9465398148</prop><prop prop-type="Status">0</prop><prop prop-type="Order">116</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:BtDeleteImage.Height" resname="O:FrProfile.O:BtDeleteImage.Height">
-        <source>25</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.9465398148</prop><prop prop-type="Status">0</prop><prop prop-type="Order">117</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:BtDeleteImage.Caption" resname="O:FrProfile.O:BtDeleteImage.Caption">
-        <source>'Delete image'</source>
-        <target>'Obriši sliku'</target>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.9465398148</prop><prop prop-type="Status">1</prop><prop prop-type="Order">118</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:BtDeleteImage.TabOrder" resname="O:FrProfile.O:BtDeleteImage.TabOrder">
+      <trans-unit id="O:FProfile.O:GBProfile.O:ESurname.TabOrder" resname="O:FProfile.O:GBProfile.O:ESurname.TabOrder">
         <source>2</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.9465398148</prop><prop prop-type="Status">0</prop><prop prop-type="Order">119</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:BtDeleteImage.OnClick" resname="O:FrProfile.O:BtDeleteImage.OnClick">
-        <source>BtDeleteImageClick</source>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EEmail.Left" resname="O:FProfile.O:GBProfile.O:EEmail.Left">
+        <source>9</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45412.0046139236</prop><prop prop-type="Status">0</prop><prop prop-type="Order">120</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:DBImage.Left" resname="O:FrProfile.O:DBImage.Left">
-        <source>17</source>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EEmail.Top" resname="O:FProfile.O:GBProfile.O:EEmail.Top">
+        <source>150</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.9777442014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">121</prop><prop prop-type="Type">TDBImage</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">84</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:DBImage.Top" resname="O:FrProfile.O:DBImage.Top">
-        <source>39</source>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EEmail.Width" resname="O:FProfile.O:GBProfile.O:EEmail.Width">
+        <source>121</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.9777442014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">122</prop><prop prop-type="Type">TDBImage</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:DBImage.Width" resname="O:FrProfile.O:DBImage.Width">
-        <source>100</source>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EEmail.Height" resname="O:FProfile.O:GBProfile.O:EEmail.Height">
+        <source>23</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.9777442014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">123</prop><prop prop-type="Type">TDBImage</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">86</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:DBImage.Height" resname="O:FrProfile.O:DBImage.Height">
-        <source>100</source>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EEmail.DataField" resname="O:FProfile.O:GBProfile.O:EEmail.DataField">
+        <source>'email'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.9777442014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">124</prop><prop prop-type="Type">TDBImage</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">87</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:DBImage.DataField" resname="O:FrProfile.O:DBImage.DataField">
-        <source>'profileImage'</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.9777442014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">125</prop><prop prop-type="Type">TDBImage</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FrProfile.O:DBImage.DataSource" resname="O:FrProfile.O:DBImage.DataSource">
+      <trans-unit id="O:FProfile.O:GBProfile.O:EEmail.DataSource" resname="O:FProfile.O:GBProfile.O:EEmail.DataSource">
         <source>DataModule1.DUsers</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.9777442014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">126</prop><prop prop-type="Type">TDBImage</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">88</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:DBImage.TabOrder" resname="O:FrProfile.O:DBImage.TabOrder">
-        <source>4</source>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EEmail.TabOrder" resname="O:FProfile.O:GBProfile.O:EEmail.TabOrder">
+        <source>3</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.9777442014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">127</prop><prop prop-type="Type">TDBImage</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">89</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:DFileOpen.Left" resname="O:FrProfile.O:DFileOpen.Left">
-        <source>180</source>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EAge.Left" resname="O:FProfile.O:GBProfile.O:EAge.Left">
+        <source>9</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.9976439236</prop><prop prop-type="Status">0</prop><prop prop-type="Order">128</prop><prop prop-type="Type">TOpenPictureDialog</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">90</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:DFileOpen.Top" resname="O:FrProfile.O:DFileOpen.Top">
-        <source>240</source>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EAge.Top" resname="O:FProfile.O:GBProfile.O:EAge.Top">
+        <source>183</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.9976439236</prop><prop prop-type="Status">0</prop><prop prop-type="Order">129</prop><prop prop-type="Type">TOpenPictureDialog</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">91</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:msgDisplayTimer.Enabled" resname="O:FrProfile.O:msgDisplayTimer.Enabled">
+      <trans-unit id="O:FProfile.O:GBProfile.O:EAge.Width" resname="O:FProfile.O:GBProfile.O:EAge.Width">
+        <source>121</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">92</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EAge.Height" resname="O:FProfile.O:GBProfile.O:EAge.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">93</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EAge.BiDiMode" resname="O:FProfile.O:GBProfile.O:EAge.BiDiMode">
+        <source>bdLeftToRight</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">94</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EAge.DataField" resname="O:FProfile.O:GBProfile.O:EAge.DataField">
+        <source>'age'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">95</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EAge.DataSource" resname="O:FProfile.O:GBProfile.O:EAge.DataSource">
+        <source>DataModule1.DUsers</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">96</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EAge.ParentBiDiMode" resname="O:FProfile.O:GBProfile.O:EAge.ParentBiDiMode">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.9911072917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">130</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">97</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:msgDisplayTimer.Interval" resname="O:FrProfile.O:msgDisplayTimer.Interval">
+      <trans-unit id="O:FProfile.O:GBProfile.O:EAge.TabOrder" resname="O:FProfile.O:GBProfile.O:EAge.TabOrder">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">98</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EUsername.Left" resname="O:FProfile.O:GBProfile.O:EUsername.Left">
+        <source>9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">99</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EUsername.Top" resname="O:FProfile.O:GBProfile.O:EUsername.Top">
+        <source>12</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">100</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EUsername.Width" resname="O:FProfile.O:GBProfile.O:EUsername.Width">
+        <source>121</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">101</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EUsername.Height" resname="O:FProfile.O:GBProfile.O:EUsername.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">102</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EUsername.DataField" resname="O:FProfile.O:GBProfile.O:EUsername.DataField">
+        <source>'username'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">103</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EUsername.DataSource" resname="O:FProfile.O:GBProfile.O:EUsername.DataSource">
+        <source>DataModule1.DUsers</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">104</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EUsername.TabOrder" resname="O:FProfile.O:GBProfile.O:EUsername.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">105</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EPassword.Left" resname="O:FProfile.O:GBProfile.O:EPassword.Left">
+        <source>9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">106</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EPassword.Top" resname="O:FProfile.O:GBProfile.O:EPassword.Top">
+        <source>45</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">107</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EPassword.Width" resname="O:FProfile.O:GBProfile.O:EPassword.Width">
+        <source>121</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">108</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EPassword.Height" resname="O:FProfile.O:GBProfile.O:EPassword.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">109</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EPassword.PasswordChar" resname="O:FProfile.O:GBProfile.O:EPassword.PasswordChar">
+        <source>'*'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">110</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:GBProfile.O:EPassword.TabOrder" resname="O:FProfile.O:GBProfile.O:EPassword.TabOrder">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">111</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:BtDeleteImage.Left" resname="O:FProfile.O:BtDeleteImage.Left">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">112</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:BtDeleteImage.Top" resname="O:FProfile.O:BtDeleteImage.Top">
+        <source>191</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556482</prop><prop prop-type="Status">0</prop><prop prop-type="Order">113</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:BtDeleteImage.Width" resname="O:FProfile.O:BtDeleteImage.Width">
+        <source>85</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556482</prop><prop prop-type="Status">0</prop><prop prop-type="Order">114</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:BtDeleteImage.Height" resname="O:FProfile.O:BtDeleteImage.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556482</prop><prop prop-type="Status">0</prop><prop prop-type="Order">115</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:BtDeleteImage.Caption" resname="O:FProfile.O:BtDeleteImage.Caption">
+        <source>'Delete image'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556482</prop><prop prop-type="Status">0</prop><prop prop-type="Order">116</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:BtDeleteImage.TabOrder" resname="O:FProfile.O:BtDeleteImage.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556482</prop><prop prop-type="Status">0</prop><prop prop-type="Order">117</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:BtDeleteImage.OnClick" resname="O:FProfile.O:BtDeleteImage.OnClick">
+        <source>BtDeleteImageClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556482</prop><prop prop-type="Status">0</prop><prop prop-type="Order">118</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:DBImage.Left" resname="O:FProfile.O:DBImage.Left">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556482</prop><prop prop-type="Status">0</prop><prop prop-type="Order">119</prop><prop prop-type="Type">TDBImage</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:DBImage.Top" resname="O:FProfile.O:DBImage.Top">
+        <source>39</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556482</prop><prop prop-type="Status">0</prop><prop prop-type="Order">120</prop><prop prop-type="Type">TDBImage</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:DBImage.Width" resname="O:FProfile.O:DBImage.Width">
+        <source>100</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556482</prop><prop prop-type="Status">0</prop><prop prop-type="Order">121</prop><prop prop-type="Type">TDBImage</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:DBImage.Height" resname="O:FProfile.O:DBImage.Height">
+        <source>100</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556482</prop><prop prop-type="Status">0</prop><prop prop-type="Order">122</prop><prop prop-type="Type">TDBImage</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:DBImage.DataField" resname="O:FProfile.O:DBImage.DataField">
+        <source>'profileImage'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556482</prop><prop prop-type="Status">0</prop><prop prop-type="Order">123</prop><prop prop-type="Type">TDBImage</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:DBImage.DataSource" resname="O:FProfile.O:DBImage.DataSource">
+        <source>DataModule1.DUsers</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556482</prop><prop prop-type="Status">0</prop><prop prop-type="Order">124</prop><prop prop-type="Type">TDBImage</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:DBImage.TabOrder" resname="O:FProfile.O:DBImage.TabOrder">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556482</prop><prop prop-type="Status">0</prop><prop prop-type="Order">125</prop><prop prop-type="Type">TDBImage</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:DFileOpen.Left" resname="O:FProfile.O:DFileOpen.Left">
+        <source>180</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556482</prop><prop prop-type="Status">0</prop><prop prop-type="Order">126</prop><prop prop-type="Type">TOpenPictureDialog</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:DFileOpen.Top" resname="O:FProfile.O:DFileOpen.Top">
+        <source>240</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556482</prop><prop prop-type="Status">0</prop><prop prop-type="Order">127</prop><prop prop-type="Type">TOpenPictureDialog</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:msgDisplayTimer.Enabled" resname="O:FProfile.O:msgDisplayTimer.Enabled">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45427.0332556482</prop><prop prop-type="Status">0</prop><prop prop-type="Order">128</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FProfile.O:msgDisplayTimer.Interval" resname="O:FProfile.O:msgDisplayTimer.Interval">
         <source>3000</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.9911072917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">131</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556482</prop><prop prop-type="Status">0</prop><prop prop-type="Order">129</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:msgDisplayTimer.OnTimer" resname="O:FrProfile.O:msgDisplayTimer.OnTimer">
+      <trans-unit id="O:FProfile.O:msgDisplayTimer.OnTimer" resname="O:FProfile.O:msgDisplayTimer.OnTimer">
         <source>msgDisplayTimerTimer</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229785417</prop><prop prop-type="Status">0</prop><prop prop-type="Order">132</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556482</prop><prop prop-type="Status">0</prop><prop prop-type="Order">130</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:msgDisplayTimer.Left" resname="O:FrProfile.O:msgDisplayTimer.Left">
+      <trans-unit id="O:FProfile.O:msgDisplayTimer.Left" resname="O:FProfile.O:msgDisplayTimer.Left">
         <source>78</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.9911072917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">133</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556482</prop><prop prop-type="Status">0</prop><prop prop-type="Order">131</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrProfile.O:msgDisplayTimer.Top" resname="O:FrProfile.O:msgDisplayTimer.Top">
+      <trans-unit id="O:FProfile.O:msgDisplayTimer.Top" resname="O:FProfile.O:msgDisplayTimer.Top">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45414.9911072917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">134</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45427.0332556482</prop><prop prop-type="Status">0</prop><prop prop-type="Order">132</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
     </body>
   </file>

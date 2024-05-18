@@ -42,7 +42,7 @@ object FPreferences: TFPreferences
       Height = 15
       Caption = 'Font family:'
     end
-    object LLogInterval: TLabel
+    object LArchiveLogLimit: TLabel
       Left = 12
       Top = 194
       Width = 100
@@ -92,27 +92,27 @@ object FPreferences: TFPreferences
       OnChange = CBFont1Change
     end
     object BtReset1: TButton
-      Left = 166
+      Left = 151
       Top = 330
-      Width = 75
+      Width = 90
       Height = 25
       Caption = 'Reset'
       TabOrder = 4
       OnClick = BtReset1Click
     end
-    object CBLogInterval: TComboBox
+    object CBArchiveLogLimit: TComboBox
       Left = 126
       Top = 191
       Width = 115
       Height = 23
       Style = csDropDownList
       TabOrder = 5
-      OnChange = CBLogIntervalChange
+      OnChange = CBArchiveLogLimitChange
     end
     object BtArchiveLogs: TButton
-      Left = 166
-      Top = 220
-      Width = 75
+      Left = 151
+      Top = 228
+      Width = 90
       Height = 25
       Cancel = True
       Caption = 'Archive logs'
@@ -223,9 +223,9 @@ object FPreferences: TFPreferences
       OnChange = CBFontSizeChange
     end
     object BtReset2: TButton
-      Left = 162
+      Left = 147
       Top = 330
-      Width = 75
+      Width = 90
       Height = 25
       Caption = 'Reset'
       TabOrder = 7

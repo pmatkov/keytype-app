@@ -21,6 +21,7 @@ TypingSettings::TypingSettings(User user) {
         section = user.getUsername() + "\\";
         loadSettings();
     }
+    LOGGER(LogLevel::Debug, "Created typing settings");
 }
 
 const CaretType& TypingSettings::getCaretType() const {
@@ -91,7 +92,7 @@ void TypingSettings::loadDefaults() {
     caretType = CaretType::Block;
     separatorType = SeparatorType::Dot;
     fontFamily = "Segoe UI";
-    fontSize = 11;
+    fontSize = 12;
 
     stopOnMistake = true;
     countConsecutiveMistakes = false;
@@ -113,7 +114,7 @@ void TypingSettings::loadSettings() {
 			caretType = registry->ValueExists("CaretType") ? EnumUtils::stringToEnum<CaretType>(caretTypeStrings, registry->ReadString("CaretType")) : CaretType::Underline;
 			separatorType = registry->ValueExists("SeparatorType") ? EnumUtils::stringToEnum<SeparatorType>(separatorTypeStrings, registry->ReadString("SeparatorType")) : SeparatorType::Dot;
             fontFamily = registry->ValueExists("FontFamily") ? registry->ReadString("FontFamily") : "Segoe UI";
-            fontSize = registry->ValueExists("FontSize") ? registry->ReadInteger("FontSize") : 11;
+            fontSize = registry->ValueExists("FontSize") ? registry->ReadInteger("FontSize") : 12;
 
             stopOnMistake = registry->ValueExists("stopOnMistake") ? registry->ReadBool("stopOnMistake") : true;
             countConsecutiveMistakes = registry->ValueExists("countConsecutiveMistakes") ? registry->ReadBool("countConsecutiveMistakes") : false;

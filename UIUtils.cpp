@@ -176,7 +176,8 @@ namespace UIUtils {
 
         int splitSize = 100;
 
-        UnicodeString sampleText = Generator::generateChars("abcdefghijklmnopqrstuvwxyz", initialEstimate * 2);
+        Generator generator;
+        UnicodeString sampleText = generator.generateChars(initialEstimate * 2);
 
         for (int i = 0; i < 3; i++) {
             UnicodeString generatedText = sampleText.SubString(1, splitSize * (i + 1));

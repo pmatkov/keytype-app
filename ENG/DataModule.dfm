@@ -170,6 +170,12 @@ object DataModule1: TDataModule1
       Origin = '`password`'
       Size = 255
     end
+    object TUserssalt: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'salt'
+      Origin = 'salt'
+      Size = 255
+    end
     object TUsersname: TStringField
       AutoGenerateValue = arDefault
       FieldName = 'name'
@@ -325,6 +331,7 @@ object DataModule1: TDataModule1
     object TKeyStatisticsid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'
+      ReadOnly = True
     end
     object TKeyStatisticsidLessonResults: TIntegerField
       AutoGenerateValue = arDefault

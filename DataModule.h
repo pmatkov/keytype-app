@@ -27,6 +27,11 @@
 #include <IdComponent.hpp>
 #include <IdTCPClient.hpp>
 #include <IdTCPConnection.hpp>
+#include "uTPLb_BaseNonVisualComponent.hpp"
+#include "uTPLb_Codec.hpp"
+#include "uTPLb_CryptographicLibrary.hpp"
+#include "uTPLb_Signatory.hpp"
+#include <System.SysUtils.hpp>
 
 #include <vector>
 //---------------------------------------------------------------------------
@@ -88,6 +93,7 @@ __published:	// IDE-managed Components
 	TStringField *TKeyStatisticskey;
 	TIntegerField *TKeyStatisticscorrect;
 	TIntegerField *TKeyStatisticsmistake;
+	TStringField *TUserssalt;
 	void __fastcall TLessonsCalcFields(TDataSet *DataSet);
 	void __fastcall TLessonResultsCalcFields(TDataSet *DataSet);
 private:	// User declarations
@@ -99,7 +105,7 @@ public:		// User declarations
     UnicodeString getColumnValue(TDataSet *DataSet, const UnicodeString &columnName, int index);
     std::vector<UnicodeString> getStringsFromColumnValues(const std::vector<std::pair<int, UnicodeString>> &pairs);
 
-    UnicodeString generateText(const UnicodeString &letters, bool useNumbers, bool useUppercase,  bool usePunctuation, int min, int max);
+    UnicodeString generateText(const UnicodeString &letters, bool useNumbers, bool useUppercase,  bool usePunctuation, int minTokens, int maxTokens);
     bool convertWordList(const UnicodeString& filePath);
 };
 //---------------------------------------------------------------------------

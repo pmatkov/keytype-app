@@ -18,7 +18,7 @@
 #include <Vcl.Mask.hpp>
 
 //---------------------------------------------------------------------------
-class TFrProfile : public TForm
+class TFProfile : public TForm
 {
 __published:	// IDE-managed Components
 	TLabel *LUsername;
@@ -38,9 +38,9 @@ __published:	// IDE-managed Components
 	TDBEdit *ESurname;
 	TDBEdit *EEmail;
 	TDBEdit *EAge;
-	TDBEdit *EPassword;
 	TLabel *LInfo;
 	TTimer *msgDisplayTimer;
+	TEdit *EPassword;
 	void __fastcall BtEditSaveClick(TObject *Sender);
 	void __fastcall BtChangeImageClick(TObject *Sender);
 	void __fastcall BtDeleteImageClick(TObject *Sender);
@@ -52,10 +52,10 @@ private:	// User declarations
 	AuthenticationService *authService;
     TDataModule1 *dataModule;
 public:		// User declarations
-	__fastcall TFrProfile(TComponent* Owner);
-    __fastcall TFrProfile(TComponent* Owner,  MainSession *_mainSession, AuthenticationService *_authService, TDataModule1 *_dataModule);
+	__fastcall TFProfile(TComponent* Owner);
+    __fastcall TFProfile(TComponent* Owner,  MainSession *_mainSession, AuthenticationService *_authService, TDataModule1 *_dataModule);
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TFrProfile *FrProfile;
+extern PACKAGE TFProfile *FProfile;
 //---------------------------------------------------------------------------
 #endif

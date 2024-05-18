@@ -5,9 +5,9 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45424.8829166667</prop>
-        <prop prop-type="OrigDateTime">45424.8681481481</prop>
-        <prop prop-type="XlatDateTime">45415.9386111111</prop>
+        <prop prop-type="SelfDateTime">45426.0866898148</prop>
+        <prop prop-type="OrigDateTime">45426.0786574074</prop>
+        <prop prop-type="XlatDateTime">45424.9793981481</prop>
         <prop prop-type="Translated">6</prop>
         <prop prop-type="UnTranslated">155</prop>
       </prop-group>
@@ -748,25 +748,25 @@
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45409.0545032523</prop><prop prop-type="Status">0</prop><prop prop-type="Order">145</prop><prop prop-type="Type">TFrTypingText</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrLessons2.L:FrTypingText.I:LInfo.Left" resname="O:FrLessons2.L:FrTypingText.I:LInfo.Left">
+      <trans-unit id="O:FrLessons2.L:FrTypingText.I:LPrompt.Left" resname="O:FrLessons2.L:FrTypingText.I:LPrompt.Left">
         <source>17</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45424.8829190972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">146</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45426.0867102778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">146</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrLessons2.L:FrTypingText.I:LInfo.Top" resname="O:FrLessons2.L:FrTypingText.I:LInfo.Top">
+      <trans-unit id="O:FrLessons2.L:FrTypingText.I:LPrompt.Top" resname="O:FrLessons2.L:FrTypingText.I:LPrompt.Top">
         <source>122</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45424.8829190972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">147</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45426.0867102778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">147</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrLessons2.L:FrTypingText.I:LInfo.ExplicitLeft" resname="O:FrLessons2.L:FrTypingText.I:LInfo.ExplicitLeft">
+      <trans-unit id="O:FrLessons2.L:FrTypingText.I:LPrompt.ExplicitLeft" resname="O:FrLessons2.L:FrTypingText.I:LPrompt.ExplicitLeft">
         <source>17</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45424.8829191088</prop><prop prop-type="Status">0</prop><prop prop-type="Order">148</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45426.0867102778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">148</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FrLessons2.L:FrTypingText.I:LInfo.ExplicitTop" resname="O:FrLessons2.L:FrTypingText.I:LInfo.ExplicitTop">
+      <trans-unit id="O:FrLessons2.L:FrTypingText.I:LPrompt.ExplicitTop" resname="O:FrLessons2.L:FrTypingText.I:LPrompt.ExplicitTop">
         <source>122</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45424.8829191088</prop><prop prop-type="Status">0</prop><prop prop-type="Order">149</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45426.0867102778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">149</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrLessons2.L:FrTypingText.I:REText.Left" resname="O:FrLessons2.L:FrTypingText.I:REText.Left">
         <source>8</source>

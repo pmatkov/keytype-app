@@ -8,6 +8,7 @@
 
 #include "FileUtils.h"
 #include "TextUtils.h"
+#include "CryptoUtils.h"
 #include "Logger.h"
 #include "EFileNotFoundException.h"
 
@@ -19,41 +20,54 @@
 TDataModule2 *DataModule2;
 
 
-__fastcall TDataModule2::TDataModule2(TComponent* Owner) : TDataModule(Owner) {
-
-	LOGGER(LogLevel::Debug, "Created server");
-
-}
+__fastcall TDataModule2::TDataModule2(TComponent* Owner) : TDataModule(Owner) {}
 
 void __fastcall TDataModule2::IdTCPServerExecute(TIdContext *AContext)
 {
     TIdIOHandler *ioHandler = AContext->Connection->IOHandler;
+
     try {
     	try {
 
-           	int requestType = StrToInt(ioHandler->ReadLn());
+        	std::unique_ptr<TCryptographicLibrary> cryptLib = CryptoUtils::createCryptoLib();
+            std::unique_ptr<TCodec> codec = CryptoUtils::createRSACodec(cryptLib.get());
+            std::unique_ptr<TSignatory> signatory = CryptoUtils::createSignatory();
+            signatory->Codec = codec.get();
+
+        	UnicodeString prvKeyPath = FileUtils::createAbsolutePath("Server\\Keys\\prv_key_srv.bin", true);
+            UnicodeString pubKeyPath = FileUtils::createAbsolutePath("Server\\Keys\\pub_key_app.bin", true);
+
+            int requestType = StrToInt(CryptoUtils::decryptStringRSA(codec.get(), signatory.get(), prvKeyPath, ioHandler->ReadLn()));
 
             if (requestType == 1) {
-            	UnicodeString letters = ioHandler->ReadLn();
-                bool useNumbers = StrToInt(ioHandler->ReadLn());
-                bool useUppercase = StrToInt(ioHandler->ReadLn());
-                bool usePunctuation = StrToInt(ioHandler->ReadLn());
-                int min = StrToInt(ioHandler->ReadLn());
-                int max = StrToInt(ioHandler->ReadLn());
 
-                UnicodeString generatedText = Generator::generateText(letters, GeneratorOptions(useNumbers, useUppercase, usePunctuation, min, max));
+            	UnicodeString letters = CryptoUtils::decryptStringRSA(codec.get(), signatory.get(), prvKeyPath, ioHandler->ReadLn());
+                bool useNumbers = StrToInt(CryptoUtils::decryptStringRSA(codec.get(), signatory.get(), prvKeyPath, ioHandler->ReadLn()));
+                bool useUppercase = StrToInt(CryptoUtils::decryptStringRSA(codec.get(), signatory.get(), prvKeyPath, ioHandler->ReadLn()));
+                bool usePunctuation = StrToInt(CryptoUtils::decryptStringRSA(codec.get(), signatory.get(), prvKeyPath, ioHandler->ReadLn()));
+                int minTokens = StrToInt(CryptoUtils::decryptStringRSA(codec.get(), signatory.get(), prvKeyPath, ioHandler->ReadLn()));
+                int maxTokens = StrToInt(CryptoUtils::decryptStringRSA(codec.get(), signatory.get(), prvKeyPath, ioHandler->ReadLn()));
 
-            	ioHandler->WriteLn(generatedText);
+                Generator generator(letters, useNumbers, useUppercase, usePunctuation);
+                UnicodeString generatedText = generator.generateTokenSequence(3, 8, minTokens, maxTokens);
+
+                ioHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, generatedText));
+
             }
             else if (requestType == 2) {
 
-                UnicodeString fileName = ioHandler->ReadLn();
+                UnicodeString fileName = CryptoUtils::decryptStringRSA(codec.get(), signatory.get(), prvKeyPath, ioHandler->ReadLn());
+
                 UnicodeString filePath = FileUtils::createAbsolutePath("Server\\Data\\srv_" + fileName, true);
 
-                std::unique_ptr<TFileStream> fileStream = std::make_unique<TFileStream>(filePath, fmCreate);
+                std::unique_ptr<TFileStream> fStream = std::make_unique<TFileStream>(filePath, fmCreate);
+                std::unique_ptr<TMemoryStream> mStream = std::make_unique<TMemoryStream>();
                 ioHandler->LargeStream = true;
-                ioHandler->ReadStream(fileStream.get());
-                fileStream.reset();
+
+                ioHandler->ReadStream(mStream.get());
+            	CryptoUtils::decryptStreamRSA(codec.get(), signatory.get(), prvKeyPath, fStream.get(), mStream.get());
+                fStream.reset();
+                mStream.reset();
 
                 std::optional<UnicodeString> buffer;
 
@@ -72,19 +86,26 @@ void __fastcall TDataModule2::IdTCPServerExecute(TIdContext *AContext)
                     	UnicodeString convertedFilePath = FileUtils::createAbsolutePath("Server\\Data\\srv_" + fileName.Delete(fileName.Length()-2, 3) + "json", true);
 
                     	FileUtils::saveToTextFile(convertedFilePath, std::vector<UnicodeString>{*jsonString});
-                        fileStream = std::make_unique<TFileStream>(filePath, fmOpenRead);
 
-                    	ioHandler->WriteLn("File converted");
+                        ioHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, "File converted"));
+
+                        fStream = std::make_unique<TFileStream>(convertedFilePath, fmOpenRead);
+                        mStream = std::make_unique<TMemoryStream>();
+
+                        CryptoUtils::encryptStreamRSA(codec.get(), signatory.get(), pubKeyPath, fStream.get(), mStream.get());
+
                         ioHandler->LargeStream = true;
-                        ioHandler->Write(fileStream.get(), 0, true);
+                        ioHandler->Write(mStream.get(), 0, true);
+
+
                     }
                 }
             }
 
-            LOGGER(LogLevel::Debug, "Server complete");
+            LOGGER(LogLevel::Debug, "Socket I/O complete");
 
         }  catch (Exception &ex) {
-        	LOGGER(LogLevel::Error, "Server error: " + ex.Message);
+        	LOGGER(LogLevel::Error, "TCP server error: " + ex.Message);
         }
     }__finally {
         AContext->Connection->Disconnect();
@@ -99,7 +120,7 @@ void __fastcall TDataModule2::IdTCPServerConnect(TIdContext *AContext)
         OnConnectionEstablished(this);
     }
 
-    LOGGER(LogLevel::Debug, "Connection established.");
+    LOGGER(LogLevel::Debug, "Connection established");
 }
 //---------------------------------------------------------------------------
 
@@ -109,7 +130,7 @@ void __fastcall TDataModule2::IdTCPServerDisconnect(TIdContext *AContext)
         OnConnectionClosed(this);
     }
 
-    LOGGER(LogLevel::Debug, "Connection closed.");
+    LOGGER(LogLevel::Debug, "Connection closed");
 }
 
 std::optional<UnicodeString> TDataModule2::generateJsonFromWordList(const std::vector<UnicodeString> &wordList) {

@@ -17,10 +17,13 @@
 //   If your DLL uses the dynamic version of the RTL, you do not need to
 //   explicitly add MEMMGR.LIB as this will be done implicitly for you
 
+#include <vcl.h>
+#include <windows.h>
+
 #pragma hdrstop
 #pragma argsused
 
-extern "C" int _libmain(unsigned long reason)
+int WINAPI DllEntryPoint(HINSTANCE hinst, unsigned long reason, void* lpReserved)
 {
 	return 1;
 }

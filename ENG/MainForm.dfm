@@ -21,9 +21,9 @@ object FMain: TFMain
     Top = 339
     object MenuItemPractice: TMenuItem
       Caption = 'Practice'
-      object MenuSubitemPracticeNew: TMenuItem
-        Caption = 'New'
-        OnClick = MenuSubitemPracticeNewClick
+      object MenuSubitemPracticeStart: TMenuItem
+        Caption = 'Start'
+        OnClick = MenuSubitemPracticeStartClick
       end
     end
     object MenuItemLessons: TMenuItem
@@ -53,6 +53,20 @@ object FMain: TFMain
       object MenuSubitemPreferences: TMenuItem
         Caption = 'Preferences'
         OnClick = MenuSubitemPreferencesClick
+      end
+    end
+    object MenuItemView: TMenuItem
+      Caption = 'View'
+      object MenuSubitemLogs: TMenuItem
+        Caption = 'Logs'
+        OnClick = MenuSubitemLogsClick
+      end
+    end
+    object MenuItemHelp: TMenuItem
+      Caption = 'Help'
+      object MenuSubitemAbout: TMenuItem
+        Caption = 'About'
+        OnClick = MenuSubitemAboutClick
       end
     end
   end

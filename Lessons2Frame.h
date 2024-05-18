@@ -18,6 +18,7 @@
 #include "TypingSession.h"
 #include "AuthenticationService.h"
 #include "DataModule.h"
+#include "Achievement.h"
 
 #include "TypingStatsFrame.h"
 #include "TypingTextFrame.h"
@@ -60,8 +61,11 @@ public:		// User declarations
 
     void hideInterfaceValues();
     bool setTextSource(int index);
+    void resetLessonControls();
 
-    void __fastcall FrTypingTextTypingComplete(TObject *Sender);
+    void __fastcall processLessonComplete(TObject *Sender);
+    bool isAchievementEligibile(int idUser, AchievementType achievementType);
+    void assignAchievement(int idUser, AchievementType achievementType, const UnicodeString &description);
 
     void processCharMessages(WPARAM wParam);
    	virtual void __fastcall WndProc(TMessage &Message);

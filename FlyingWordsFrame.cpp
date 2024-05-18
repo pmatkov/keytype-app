@@ -27,7 +27,7 @@ __fastcall TFrFlyingWords::TFrFlyingWords(TComponent* Owner) : TFrame(Owner), ga
     wordMatchEvent = std::make_unique<TEvent>(nullptr, false, false, "WmEvent", false);
     terminateEvent = std::make_unique<TEvent>(nullptr, true, false, "TeEvent", false);
 
-    LOGGER(LogLevel::Debug, "Flying words frame displayed");
+    LOGGER(LogLevel::Debug, "Created frame flying words");
 }
 
  TFrFlyingWords::~TFrFlyingWords() {

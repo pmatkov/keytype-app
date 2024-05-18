@@ -13,7 +13,9 @@ class  AuthenticationService {
        	TDataModule1 *dataModule;
 
         User user;
+
         bool authenticated = false;
+        bool userChanged = false;
 
 	public:
         AuthenticationService(TDataModule1 *_dataModule);
@@ -21,7 +23,13 @@ class  AuthenticationService {
     	bool loginUser(const UnicodeString& username, const UnicodeString& password);
         bool logoutUser();
         bool registerUser(const UnicodeString& username, const UnicodeString& password);
+
         const User& getUser() const;
+
+        bool getUserChanged() const;
+        void setUserChanged(bool _userChanged);
+
+        bool verifyCredentials(const UnicodeString& hashedPassword, const UnicodeString& saltedPassword);
 
         void __fastcall (__closure *OnUsernameUnavailable)();
 };

@@ -43,9 +43,9 @@ __fastcall TFrPractice::TFrPractice(TComponent* Owner, TDataModule1 *_dataModule
        FrTypingText->setFrameTypingStats(FrTypingStats);
 
        typingSession->setSessionStatus(SessionStatus::Initialized);
-       FrTypingText->setTypingStatus(Initialized);
+       FrTypingText->changeSessionView(SessionStatus::Initialized);
 
-       LOGGER(LogLevel::Debug, "Practice frame displayed");
+       LOGGER(LogLevel::Debug, "Created practice frame");
 
 	}
     else {
@@ -62,13 +62,13 @@ void __fastcall TFrPractice::FrOptionsBtOptionsClick(TObject *Sender)
 	FPracticeOptions = std::make_unique<TFPracticeOptions>(nullptr, dataModule, mainSession);
     FPracticeOptions->Position = poMainFormCenter;
 
-	typingSession->setSessionStatus(SessionStatus::Paused);
-	FrTypingText->setTypingStatus(SessionStatus::Paused);
+//	typingSession->setSessionStatus(SessionStatus::Paused);
+//	FrTypingText->setTypingStatus(SessionStatus::Paused);
     parser->setInputEnabled(false);
 
 	if (FPracticeOptions->ShowModal() == mrOk) {
 
-    	LOGGER(LogLevel::Debug, "Practice options displayed");
+    	LOGGER(LogLevel::Debug, "Displayed practice options");
 
 		int index = FPracticeOptions->PCSourceText->ActivePageIndex;
 		TTabSheet* activeTab = FPracticeOptions->PCSourceText->Pages[index];

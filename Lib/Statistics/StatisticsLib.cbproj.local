@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.843,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\StatisticsLib.cpp=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\File1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.941,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\UserStatistics.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.553,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\File1.cpp=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\File1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.685,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.559,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\StatisticsLib.cbproj=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.959,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\StatisticsLib.cbproj=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\StatisticsLib.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.749,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\Unit1.cpp=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\StatisticsForm.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.748,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.749,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\Unit1.dfm=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\StatisticsForm.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.751,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\File1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.507,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\StatisticsLibPCH1.h=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.098,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\KeyStatistics.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.529,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\KeyStatistics.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.749,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\Unit1.h=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\StatisticsForm.h</Transaction>
+  </Transactions>
+</BorlandProject>

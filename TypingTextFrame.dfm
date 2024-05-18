@@ -4,10 +4,10 @@ object FrTypingText: TFrTypingText
   Width = 327
   Height = 160
   TabOrder = 0
-  object LInfo: TLabel
-    Left = 33
+  object LPrompt: TLabel
+    Left = 39
     Top = 125
-    Width = 260
+    Width = 256
     Height = 17
     AutoSize = False
     Font.Charset = DEFAULT_CHARSET

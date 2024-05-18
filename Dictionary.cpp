@@ -47,24 +47,24 @@ std::vector<UnicodeString> Dictionary::getDictionaryKeys() {
 
 std::vector<DictionaryEntry> Dictionary::getDictionaryValues() {
 
-	std::vector<DictionaryEntry> values;
+	std::vector<DictionaryEntry> dictionaryEntries;
   	for (const std::pair<const UnicodeString, DictionaryEntry>& item : dictionary) {
-    	values.push_back(item.second);
+    	dictionaryEntries.push_back(item.second);
   	}
-  	return values;
+  	return dictionaryEntries;
 }
 
 std::vector<UnicodeString> Dictionary::getDictionaryValuesAsStrings() {
 
-   std::vector<DictionaryEntry> values = getDictionaryValues();
-   std::vector<UnicodeString> valuesStr;
+   std::vector<DictionaryEntry> dictionaryEntries = getDictionaryValues();
+   std::vector<UnicodeString> convertedDictionaryEntries;
 
-   for (const DictionaryEntry &value : values) {
-    	valuesStr.insert(valuesStr.end(), {value.getWord(), EnumUtils::enumToString<WordCategory>(DictionaryEntry::getEnumStrings(), \
-        value.getWordCategory()), value.getDefinition(), value.getSynonymsAsString()});
+   for (const DictionaryEntry &entry : dictionaryEntries) {
+    	convertedDictionaryEntries.insert(convertedDictionaryEntries.end(), {entry.getWord(), EnumUtils::enumToString<WordCategory>(DictionaryEntry::getEnumStrings(), \
+        entry.getWordCategory()), entry.getDefinition(), entry.getSynonymsAsString()});
   	}
 
-    return valuesStr;
+    return convertedDictionaryEntries;
 }
 
 

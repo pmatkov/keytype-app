@@ -21,9 +21,9 @@ object FMain: TFMain
     Top = 339
     object MenuItemPractice: TMenuItem
       Caption = 'Vje'#382'ba'
-      object MenuSubitemPracticeNew: TMenuItem
-        Caption = 'Novo'
-        OnClick = MenuSubitemPracticeNewClick
+      object MenuSubitemPracticeStart: TMenuItem
+        Caption = 'Pokreni'
+        OnClick = MenuSubitemPracticeStartClick
       end
     end
     object MenuItemLessons: TMenuItem
@@ -53,6 +53,20 @@ object FMain: TFMain
       object MenuSubitemPreferences: TMenuItem
         Caption = 'Preferencije'
         OnClick = MenuSubitemPreferencesClick
+      end
+    end
+    object MenuItemView: TMenuItem
+      Caption = 'Pregledaj'
+      object MenuSubitemLogs: TMenuItem
+        Caption = 'Logove'
+        OnClick = MenuSubitemLogsClick
+      end
+    end
+    object MenuItemHelp: TMenuItem
+      Caption = 'Pomo'#263
+      object MenuSubitemAbout: TMenuItem
+        Caption = 'O aplikaciji'
+        OnClick = MenuSubitemAboutClick
       end
     end
   end

@@ -10,7 +10,7 @@
 
 TypingSession::TypingSession() {
 
-	LOGGER(LogLevel::Debug, "Typing session created");
+	LOGGER(LogLevel::Debug, "Created typing session");
 }
 
 const TextSource& TypingSession::getTextSource() const {
@@ -82,45 +82,46 @@ void TypingSession::increaseMistakes() {
 
 double TypingSession::getSpeed() {
 
- 	return calculateSpeed();
+	return speed;
 }
 
 double TypingSession::getAvgSpeed() {
+
     double sum = 0;
+    int readingsCount = speedReadings.size();
+
+    if (!readingsCount) {
+       return sum;
+    }
 
     for (int sp: speedReadings) {
       sum += sp;
     }
 
-    int readingCount = speedReadings.size();
- 	return sum/ readingCount;
+ 	return sum/ readingsCount;
 }
 
-double TypingSession::calculateSpeed() {
+void TypingSession::calculateSpeed() {
 
-	if (!typedWords || !getElapsedTime()) {
-        return 0;
+	long elapsedTime = getElapsedTime();
+
+	if ((textSource.getCharIndex()-1) && elapsedTime) {
+
+        speed = ((textSource.getCharIndex()-1)/ 5) /(elapsedTime/ 60.0);
+        speedReadings.push_back(speed);
     }
-
-    double speed = typedWords/ (getElapsedTime()/ 60.0);
-
-    speedReadings.push_back(speed);
-    return speed;
 }
 
 double TypingSession::getAccuracy() {
 
-    return calculateAccuracy();
+	return accuracy;
 }
 
-double TypingSession::calculateAccuracy() {
+void TypingSession::calculateAccuracy() {
 
-    if (!textSource.getCharCount()) {
-        return 100;
+    if (textSource.getCharCount()) {
+        accuracy = ((double)(textSource.getCharCount() - mistakes) / textSource.getCharCount()) * 100.0;
     }
-
-    double accuracy = ((double)(textSource.getCharCount() - mistakes) / textSource.getCharCount()) * 100.0;
-    return accuracy;
 }
 
 
@@ -130,6 +131,14 @@ const SessionStatus& TypingSession::getSessionStatus() const {
 
 void TypingSession::setSessionStatus(const SessionStatus &_sessionStatus) {
 	sessionStatus = _sessionStatus;
+}
+
+const SessionType& TypingSession::getSessionType() const {
+    return sessionType;
+}
+
+void TypingSession::setSessionType(const SessionType &_sessionType) {
+    sessionType = _sessionType;
 }
 
 const LessonGoal& TypingSession::getLessonGoal() const {
@@ -156,18 +165,35 @@ void TypingSession::setDifficulty(int _difficulty) {
    difficulty = _difficulty;
 }
 
+const std::vector<UnicodeString>& TypingSession::getSessionStatusStrings() {
+    return sessionStatusStrings;
+}
+
+const std::vector<UnicodeString>& TypingSession::getSessionTypeStrings() {
+    return sessionTypeStrings;
+}
+
 const std::vector<UnicodeString>& TypingSession::getLessonGoalStrings() {
     return lessonGoalStrings;
 }
 
-void TypingSession::resetSessionData() {
+void TypingSession::initializeSession() {
 
+    startSessionTimer();
+}
+
+void TypingSession::resetSession() {
+
+    speed = 0;
+    accuracy = 100;
     typedWords = 0;
     mistakes = 0;
     speedReadings.clear();
     keyStatistics.clear();
-
+    stopSessionTimer();
 }
 
+std::vector<UnicodeString> TypingSession::sessionStatusStrings = {"initialized", "started", "completed",  "reset"};
+std::vector<UnicodeString> TypingSession::sessionTypeStrings = {"practice", "lesson"};
 std::vector<UnicodeString> TypingSession::lessonGoalStrings = {"speed", "accuracy"};
 

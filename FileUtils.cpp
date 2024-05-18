@@ -1,9 +1,11 @@
 //---------------------------------------------------------------------------
 #include <cwctype>
 #include <map>
+#include <System.IOUtils.hpp>
 
 #include "FileUtils.h"
 #include "TextUtils.h"
+#include "CryptoUtils.h"
 #include "Logger.h"
 #include "EDirNotFoundException.h"
 #include "EFileNotFoundException.h"
@@ -17,7 +19,7 @@
 
 namespace FileUtils {
 
-    // convert relative to absolute path (relative path starts at <project root>)
+    // create absolute path from relative path
 
     UnicodeString createAbsolutePath(const UnicodeString& relPath, bool isFile) {
 
@@ -58,12 +60,8 @@ namespace FileUtils {
         return newPath;
     }
 
-    bool checkFileExistance(const UnicodeString& filePath) {
 
-    	return TFile::Exists(filePath);
-    }
-
-    // fetch list of files in a directory
+    // get list of files in a directory
 
     std::optional<std::vector<UnicodeString>> getFileNames(const UnicodeString &path, const UnicodeString &fileType) {
 
@@ -102,6 +100,22 @@ namespace FileUtils {
          #endif
     }
 
+    UnicodeString getFileSize(const UnicodeString &path) {
+
+      __int64 fileSize = TFile::GetSize(path);
+
+      return fileSize > 1000000 ? FormatFloat("0.00", fileSize/ 1000000.0) + " MB" : FormatFloat("0.00", fileSize/ 1000.0) + " KB";
+
+	}
+
+    UnicodeString getFileAge(const UnicodeString &path) {
+
+      std::unique_ptr<TDateTime> timeDate = std::make_unique<TDateTime>();
+      FileAge(path, *timeDate, true);
+
+      return DateTimeToStr(*timeDate);
+
+	}
 
     std::optional<UnicodeString> readFromTextFile(const UnicodeString &path) {
 
@@ -133,23 +147,56 @@ namespace FileUtils {
        else {
             return std::nullopt;
        }
-
     }
 
+std::optional<std::vector<UnicodeString>> readFromTextFileByLine(const UnicodeString &path) {
 
-    void saveToTextFile(const UnicodeString &path, const std::vector<UnicodeString> &list) {
+    std::unique_ptr<TStreamReader> reader;
+    std::vector<UnicodeString> lines;
+
+    if (FileExists(path)) {
+        try {
+            reader = std::make_unique<TStreamReader>(path, TEncoding::UTF8);
+            UnicodeString line;
+
+            while (!reader->EndOfStream) {
+                line = reader->ReadLine();
+
+                if (!line.IsEmpty()) {
+                	line = CryptoUtils::decryptStringAES(line);
+                    lines.push_back(line);
+                }
+            }
+        } catch (const Exception &ex) {
+            ShowMessage("Error reading from file");
+            LOGGER(LogLevel::Error, "Error reading from file: " + path);
+            return std::nullopt;
+        }
+    } else {
+        throw CustomExceptions::EFileNotFoundException();
+    }
+
+    if (!lines.empty()) {
+        LOGGER(LogLevel::Debug, "Read from file: " + path);
+        return lines;
+    } else {
+        return std::nullopt;
+    }
+}
+
+
+    void saveToTextFile(const UnicodeString &path, const std::vector<UnicodeString> &strings, bool append) {
 
         std::unique_ptr<TStreamWriter> writer;
 
         try {
 
-            writer = std::make_unique<TStreamWriter>(path, false, TEncoding::UTF8, 1024);
+            writer = std::make_unique<TStreamWriter>(path, append, TEncoding::UTF8, 1024);
 
-            for (const UnicodeString &string: list){
-                writer->WriteLine(string);
+            for (const UnicodeString &str: strings){
+                writer->WriteLine(str);
             }
 
-            LOGGER(LogLevel::Debug, "Saved to file: " + path);
         }
         catch (Exception &ex)	{
 

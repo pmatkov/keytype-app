@@ -22,7 +22,6 @@ class TTestLogger : public TTestCase
         void __fastcall TestFindMatchingLogs();
         void __fastcall TestGetFileIndex();
         void __fastcall TestFindNextFileIndex();
-        void __fastcall TestArchiveLogFiles();
 
     private:
     	Logger *logger;
@@ -98,7 +97,7 @@ void __fastcall TTestLogger::TestFindMatchingLogs()
 {
     std::vector<UnicodeString> testLogs = { "ktype_log_2024-03-14", "ktype_log_2024-03-05", "ktype_log_2023-12-11", "ktype_log_2024-03-11",  "ktype_log_2023-11-05", "ktype_log_2024-01-01", "ktype_log_2024-03-07"};
 
-    std::vector<UnicodeString> resultLogs = logger->findMatchingLogs(testLogs, LogInterval::Weekly);
+    std::vector<UnicodeString> resultLogs = logger->findMatchingLogs(testLogs, ArchiveLogLimit::Week);
 
     Check(resultLogs.size(), "No matching logs");
     logger->sortLogsByTimeStamp(resultLogs, false);
@@ -113,7 +112,7 @@ void __fastcall TTestLogger::TestFindMatchingLogs()
     CheckEquals(resultLogs[0], "ktype_log_2023-11-05", "Logs not filtered correctly");
     CheckEquals(resultLogs[1], "ktype_log_2023-12-11", "Logs not filtered  correctly");
 
-    resultLogs = logger->findMatchingLogs(testLogs, LogInterval::Auto);
+    resultLogs = logger->findMatchingLogs(testLogs, ArchiveLogLimit::Auto);
     Check(resultLogs.size(), "No matching logs");
     logger->sortLogsByTimeStamp(resultLogs, false);
 
@@ -156,15 +155,6 @@ void __fastcall TTestLogger::TestFindNextFileIndex()
 
     LOGGER_LOG("Expected: 00 Result: " + logger->findNextFileIndex("Log", "zip"));
     Check("00" == logger->findNextFileIndex("Log", "zip"), "Wrong file index");
-}
-
-
-void __fastcall TTestLogger::TestArchiveLogFiles()
-{
-    // test archiving
-
-    LOGGER_LOG("Expected: true Result: " + (logger->archiveLogFiles(LogInterval::Auto) ? UnicodeString("true") :  UnicodeString("false")));
-    CheckEquals(true, logger->archiveLogFiles(LogInterval::Auto), "Wrong file index");
 }
 
 

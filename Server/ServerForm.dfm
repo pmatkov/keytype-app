@@ -1,6 +1,8 @@
 object FServer: TFServer
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
   Caption = 'Server'
   ClientHeight = 202
   ClientWidth = 308
@@ -24,13 +26,13 @@ object FServer: TFServer
     Font.Style = []
     ParentFont = False
   end
-  object BtTCPServer1: TButton
+  object BtTCPServer: TButton
     Left = 18
     Top = 20
     Width = 100
     Height = 25
-    Caption = 'Start TCP Server1'
+    Caption = 'Start TCP Server'
     TabOrder = 0
-    OnClick = BtTCPServer1Click
+    OnClick = BtTCPServerClick
   end
 end

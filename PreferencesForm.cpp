@@ -32,7 +32,7 @@ __fastcall TFPreferences::TFPreferences(TComponent* Owner, MainSession *_mainSes
         setAppSettingsItems();
         setTypingSettingsItems();
 
-       	LOGGER(LogLevel::Debug, "Preferences displayed");
+       	LOGGER(LogLevel::Debug, "Created preferences form");
     }
     else {
         throw CustomExceptions::ENullPointerException();
@@ -45,35 +45,35 @@ void TFPreferences::setAppSettingsItems() {
    UIUtils::setComboBoxItems(CBLanguage, AppSettings::getLanguageStrings(), EnumUtils::enumToString<Language>(AppSettings::getLanguageStrings(), mainSession->getAppSettings().getLanguage()));
 
    if (CBFont1->Items->Count == 0) {
-   	UIUtils::setComboBoxItems(CBFont1, UIUtils::getScreenFonts(), mainSession->getAppSettings().getFontFamily());
+   		UIUtils::setComboBoxItems(CBFont1, UIUtils::getScreenFonts(), mainSession->getAppSettings().getFontFamily());
    }
    else {
-   	CBFont1->ItemIndex = UIUtils::findItemIndex(UIUtils::getScreenFonts(), mainSession->getAppSettings().getFontFamily());
+   		CBFont1->ItemIndex = UIUtils::findItemIndex(UIUtils::getScreenFonts(), mainSession->getAppSettings().getFontFamily());
    }
 
    CBLoggingEnable->Checked = mainSession->getAppSettings().getEnableLogging();
 
    if  (CBLoggingEnable->Checked) {
-        UIUtils::setComboBoxItems(CBLogging, Logger::getLogLevelStrings(), Logger::getLogLevelAsString(mainSession->getAppSettings().getLogLevel()));
-        UIUtils::setComboBoxItems(CBLogInterval, Logger::getLogIntervalStrings(), EnumUtils::enumToString<LogInterval>(Logger::getLogIntervalStrings(), mainSession->getAppSettings().getLogInterval()));
+   		UIUtils::setComboBoxItems(CBLogging, Logger::getLogLevelStrings(), Logger::getLogLevelAsString(mainSession->getAppSettings().getLogLevel()));
    }
    else {
        CBLogging->Enabled = false;
-       CBLogInterval->Enabled = false;
    }
+   UIUtils::setComboBoxItems(CBArchiveLogLimit, Logger::getArchiveLogLimitStrings(), EnumUtils::enumToString<ArchiveLogLimit>(Logger::getArchiveLogLimitStrings(), mainSession->getAppSettings().getArchiveLogLimit()));
 }
 
 void TFPreferences::setTypingSettingsItems() {
+
    UIUtils::setComboBoxItems(CBCaret, TypingSettings::getCaretTypeStrings(), EnumUtils::enumToString<CaretType>(TypingSettings::getCaretTypeStrings(), mainSession->getTypingSettings().getCaretType()));
    UIUtils::setComboBoxItems(CBSeparator, TypingSettings::getSeparatorTypeStrings(), EnumUtils::enumToString<SeparatorType>(TypingSettings::getSeparatorTypeStrings(), mainSession->getTypingSettings().getSeparatorType()));
 
    if (CBFont2->Items->Count == 0) {
-   	UIUtils::setComboBoxItems(CBFont2, UIUtils::getScreenFonts(), mainSession->getTypingSettings().getFontFamily());
+   		UIUtils::setComboBoxItems(CBFont2, UIUtils::getScreenFonts(), mainSession->getTypingSettings().getFontFamily());
    }
    else {
-   	CBFont2->ItemIndex = UIUtils::findItemIndex(UIUtils::getScreenFonts(), mainSession->getTypingSettings().getFontFamily());
+   		CBFont2->ItemIndex = UIUtils::findItemIndex(UIUtils::getScreenFonts(), mainSession->getTypingSettings().getFontFamily());
    }
-   UIUtils::setComboBoxItems(CBFontSize, {"9", "10", "11", "12", "14"}, IntToStr(mainSession->getTypingSettings().getFontSize()));
+   UIUtils::setComboBoxItems(CBFontSize, {"10", "11", "12", "14", "16"}, IntToStr(mainSession->getTypingSettings().getFontSize()));
 
    CBMistake->Checked = mainSession->getTypingSettings().getStopOnMistake();
    CBConsecutiveMistakes->Checked = mainSession->getTypingSettings().getCountConsecutiveMistakes();
@@ -112,8 +112,12 @@ void __fastcall TFPreferences::CBLanguageChange(TObject *Sender)
 
     if (selectedIndex != -1) {
     	UnicodeString selectedText = CBLanguage->Items->Strings[selectedIndex];
-        mainSession->getAppSettings().setLanguage(EnumUtils::stringToEnum<Language>(mainSession->getAppSettings().getLanguageStrings(), selectedText));
-        mainSession->getAppSettings().setLanguageChanged(true);
+        Language selectedLanguage = EnumUtils::stringToEnum<Language>(mainSession->getAppSettings().getLanguageStrings(), selectedText);
+
+        if (selectedLanguage != mainSession->getAppSettings().getLanguage()) {
+             mainSession->getAppSettings().setLanguage(selectedLanguage);
+       		 mainSession->getAppSettings().setLanguageChanged(true);
+        }
     }
 
 }
@@ -192,11 +196,9 @@ void __fastcall TFPreferences::CBLoggingEnableClick(TObject *Sender)
 
     if  (!CBLoggingEnable->Checked) {
     	CBLogging->Enabled = false;
-       	CBLogInterval->Enabled = false;
     }
     else {
     	CBLogging->Enabled = true;
-       	CBLogInterval->Enabled = true;
     }
 }
 
@@ -222,13 +224,13 @@ void __fastcall TFPreferences::CBFont1Change(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TFPreferences::CBLogIntervalChange(TObject *Sender)
+void __fastcall TFPreferences::CBArchiveLogLimitChange(TObject *Sender)
 {
-	int selectedIndex = CBLogInterval->ItemIndex;
+	int selectedIndex = CBArchiveLogLimit->ItemIndex;
 
     if (selectedIndex != -1) {
-    	UnicodeString selectedText = CBLogInterval->Items->Strings[selectedIndex];
-        mainSession->getAppSettings().setLogInterval(EnumUtils::stringToEnum<LogInterval>(Logger::getLogIntervalStrings(), selectedText));
+    	UnicodeString selectedText = CBArchiveLogLimit->Items->Strings[selectedIndex];
+        mainSession->getAppSettings().setArchiveLogLimit(EnumUtils::stringToEnum<ArchiveLogLimit>(Logger::getArchiveLogLimitStrings(), selectedText));
     }
 }
 

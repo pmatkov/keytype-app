@@ -21,10 +21,16 @@
         <Projects Include="Server\Server.cbproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="Statistics\Statistics.cbproj">
+        <Projects Include="Lib\About\AboutLib.cbproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="DLL\StatisticsLib.cbproj">
+        <Projects Include="Lib\Resource\ResourceLib.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Lib\Statistics\StatisticsLib.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Lib\Generator\GeneratorLib.cbproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -89,32 +95,50 @@
     <Target Name="Server:Make">
         <MSBuild Projects="Server\Server.cbproj" Targets="Make"/>
     </Target>
-    <Target Name="Statistics">
-        <MSBuild Projects="Statistics\Statistics.cbproj"/>
+    <Target Name="AboutLib">
+        <MSBuild Projects="Lib\About\AboutLib.cbproj"/>
     </Target>
-    <Target Name="Statistics:Clean">
-        <MSBuild Projects="Statistics\Statistics.cbproj" Targets="Clean"/>
+    <Target Name="AboutLib:Clean">
+        <MSBuild Projects="Lib\About\AboutLib.cbproj" Targets="Clean"/>
     </Target>
-    <Target Name="Statistics:Make">
-        <MSBuild Projects="Statistics\Statistics.cbproj" Targets="Make"/>
+    <Target Name="AboutLib:Make">
+        <MSBuild Projects="Lib\About\AboutLib.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="ResourceLib">
+        <MSBuild Projects="Lib\Resource\ResourceLib.cbproj"/>
+    </Target>
+    <Target Name="ResourceLib:Clean">
+        <MSBuild Projects="Lib\Resource\ResourceLib.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ResourceLib:Make">
+        <MSBuild Projects="Lib\Resource\ResourceLib.cbproj" Targets="Make"/>
     </Target>
     <Target Name="StatisticsLib">
-        <MSBuild Projects="DLL\StatisticsLib.cbproj"/>
+        <MSBuild Projects="Lib\Statistics\StatisticsLib.cbproj"/>
     </Target>
     <Target Name="StatisticsLib:Clean">
-        <MSBuild Projects="DLL\StatisticsLib.cbproj" Targets="Clean"/>
+        <MSBuild Projects="Lib\Statistics\StatisticsLib.cbproj" Targets="Clean"/>
     </Target>
     <Target Name="StatisticsLib:Make">
-        <MSBuild Projects="DLL\StatisticsLib.cbproj" Targets="Make"/>
+        <MSBuild Projects="Lib\Statistics\StatisticsLib.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="GeneratorLib">
+        <MSBuild Projects="Lib\Generator\GeneratorLib.cbproj"/>
+    </Target>
+    <Target Name="GeneratorLib:Clean">
+        <MSBuild Projects="Lib\Generator\GeneratorLib.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GeneratorLib:Make">
+        <MSBuild Projects="Lib\Generator\GeneratorLib.cbproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="KeyType;KeyTypeTests;KeyType_HRV;KeyType_ENG;Archiver;Server;Statistics;StatisticsLib"/>
+        <CallTarget Targets="KeyType;KeyTypeTests;KeyType_HRV;KeyType_ENG;Archiver;Server;AboutLib;ResourceLib;StatisticsLib;GeneratorLib"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="KeyType:Clean;KeyTypeTests:Clean;KeyType_HRV:Clean;KeyType_ENG:Clean;Archiver:Clean;Server:Clean;Statistics:Clean;StatisticsLib:Clean"/>
+        <CallTarget Targets="KeyType:Clean;KeyTypeTests:Clean;KeyType_HRV:Clean;KeyType_ENG:Clean;Archiver:Clean;Server:Clean;AboutLib:Clean;ResourceLib:Clean;StatisticsLib:Clean;GeneratorLib:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="KeyType:Make;KeyTypeTests:Make;KeyType_HRV:Make;KeyType_ENG:Make;Archiver:Make;Server:Make;Statistics:Make;StatisticsLib:Make"/>
+        <CallTarget Targets="KeyType:Make;KeyTypeTests:Make;KeyType_HRV:Make;KeyType_ENG:Make;Archiver:Make;Server:Make;AboutLib:Make;ResourceLib:Make;StatisticsLib:Make;GeneratorLib:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

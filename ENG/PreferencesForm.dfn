@@ -5,9 +5,9 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45418.8314583333</prop>
-        <prop prop-type="OrigDateTime">45418.8296759259</prop>
-        <prop prop-type="XlatDateTime">45415.9386111111</prop>
+        <prop prop-type="SelfDateTime">45425.9374537037</prop>
+        <prop prop-type="OrigDateTime">45425.9371759259</prop>
+        <prop prop-type="XlatDateTime">45424.9793981481</prop>
         <prop prop-type="Translated">0</prop>
         <prop prop-type="UnTranslated">208</prop>
       </prop-group>
@@ -193,30 +193,30 @@
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FPreferences.O:GroupBox1.O:LLogInterval.Left" resname="O:FPreferences.O:GroupBox1.O:LLogInterval.Left">
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:LArchiveLogLimit.Left" resname="O:FPreferences.O:GroupBox1.O:LArchiveLogLimit.Left">
         <source>12</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45418.8218119792</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45425.9104188657</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FPreferences.O:GroupBox1.O:LLogInterval.Top" resname="O:FPreferences.O:GroupBox1.O:LLogInterval.Top">
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:LArchiveLogLimit.Top" resname="O:FPreferences.O:GroupBox1.O:LArchiveLogLimit.Top">
         <source>194</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45418.8218119792</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45425.9104188657</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FPreferences.O:GroupBox1.O:LLogInterval.Width" resname="O:FPreferences.O:GroupBox1.O:LLogInterval.Width">
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:LArchiveLogLimit.Width" resname="O:FPreferences.O:GroupBox1.O:LArchiveLogLimit.Width">
         <source>100</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45418.8218119792</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45425.9104188657</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FPreferences.O:GroupBox1.O:LLogInterval.Height" resname="O:FPreferences.O:GroupBox1.O:LLogInterval.Height">
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:LArchiveLogLimit.Height" resname="O:FPreferences.O:GroupBox1.O:LArchiveLogLimit.Height">
         <source>15</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45418.8218119792</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45425.9104188657</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FPreferences.O:GroupBox1.O:LLogInterval.Caption" resname="O:FPreferences.O:GroupBox1.O:LLogInterval.Caption">
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:LArchiveLogLimit.Caption" resname="O:FPreferences.O:GroupBox1.O:LArchiveLogLimit.Caption">
         <source>'Archive older than:'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45418.8218119792</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45425.9104188657</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPreferences.O:GroupBox1.O:LArchiveStatus.Left" resname="O:FPreferences.O:GroupBox1.O:LArchiveStatus.Left">
         <source>12</source>
@@ -379,7 +379,7 @@
         <prop prop-type="Created">45360.9856635764</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPreferences.O:GroupBox1.O:BtReset1.Left" resname="O:FPreferences.O:GroupBox1.O:BtReset1.Left">
-        <source>166</source>
+        <source>151</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -389,7 +389,7 @@
         <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPreferences.O:GroupBox1.O:BtReset1.Width" resname="O:FPreferences.O:GroupBox1.O:BtReset1.Width">
-        <source>75</source>
+        <source>90</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495897106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">75</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -413,53 +413,53 @@
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45352.9129181019</prop><prop prop-type="Status">0</prop><prop prop-type="Order">79</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBLogInterval.Left" resname="O:FPreferences.O:GroupBox1.O:CBLogInterval.Left">
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBArchiveLogLimit.Left" resname="O:FPreferences.O:GroupBox1.O:CBArchiveLogLimit.Left">
         <source>126</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45367.0419608912</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45425.9104188657</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBLogInterval.Top" resname="O:FPreferences.O:GroupBox1.O:CBLogInterval.Top">
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBArchiveLogLimit.Top" resname="O:FPreferences.O:GroupBox1.O:CBArchiveLogLimit.Top">
         <source>191</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45367.0419608912</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45425.9104188657</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBLogInterval.Width" resname="O:FPreferences.O:GroupBox1.O:CBLogInterval.Width">
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBArchiveLogLimit.Width" resname="O:FPreferences.O:GroupBox1.O:CBArchiveLogLimit.Width">
         <source>115</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45367.0419608912</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45425.9104188657</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBLogInterval.Height" resname="O:FPreferences.O:GroupBox1.O:CBLogInterval.Height">
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBArchiveLogLimit.Height" resname="O:FPreferences.O:GroupBox1.O:CBArchiveLogLimit.Height">
         <source>23</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45367.0419608912</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45425.9104188657</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBLogInterval.Style" resname="O:FPreferences.O:GroupBox1.O:CBLogInterval.Style">
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBArchiveLogLimit.Style" resname="O:FPreferences.O:GroupBox1.O:CBArchiveLogLimit.Style">
         <source>csDropDownList</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45367.0419608912</prop><prop prop-type="Status">0</prop><prop prop-type="Order">84</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45425.9104188657</prop><prop prop-type="Status">0</prop><prop prop-type="Order">84</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBLogInterval.TabOrder" resname="O:FPreferences.O:GroupBox1.O:CBLogInterval.TabOrder">
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBArchiveLogLimit.TabOrder" resname="O:FPreferences.O:GroupBox1.O:CBArchiveLogLimit.TabOrder">
         <source>5</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45367.0419608912</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45425.9104188657</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBLogInterval.OnChange" resname="O:FPreferences.O:GroupBox1.O:CBLogInterval.OnChange">
-        <source>CBLogIntervalChange</source>
+      <trans-unit id="O:FPreferences.O:GroupBox1.O:CBArchiveLogLimit.OnChange" resname="O:FPreferences.O:GroupBox1.O:CBArchiveLogLimit.OnChange">
+        <source>CBArchiveLogLimitChange</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45367.0419608912</prop><prop prop-type="Status">0</prop><prop prop-type="Order">86</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45425.9104188657</prop><prop prop-type="Status">0</prop><prop prop-type="Order">86</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPreferences.O:GroupBox1.O:BtArchiveLogs.Left" resname="O:FPreferences.O:GroupBox1.O:BtArchiveLogs.Left">
-        <source>166</source>
+        <source>151</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45418.8218119792</prop><prop prop-type="Status">0</prop><prop prop-type="Order">87</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPreferences.O:GroupBox1.O:BtArchiveLogs.Top" resname="O:FPreferences.O:GroupBox1.O:BtArchiveLogs.Top">
-        <source>220</source>
+        <source>228</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45418.8218119792</prop><prop prop-type="Status">0</prop><prop prop-type="Order">88</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPreferences.O:GroupBox1.O:BtArchiveLogs.Width" resname="O:FPreferences.O:GroupBox1.O:BtArchiveLogs.Width">
-        <source>75</source>
+        <source>90</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45418.8218119792</prop><prop prop-type="Status">0</prop><prop prop-type="Order">89</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -884,7 +884,7 @@
         <prop prop-type="Created">45360.9856635764</prop><prop prop-type="Status">0</prop><prop prop-type="Order">173</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPreferences.O:GroupBox2.O:BtReset2.Left" resname="O:FPreferences.O:GroupBox2.O:BtReset2.Left">
-        <source>162</source>
+        <source>147</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">174</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -894,7 +894,7 @@
         <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">175</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FPreferences.O:GroupBox2.O:BtReset2.Width" resname="O:FPreferences.O:GroupBox2.O:BtReset2.Width">
-        <source>75</source>
+        <source>90</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495897222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">176</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>

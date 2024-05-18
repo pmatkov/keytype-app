@@ -42,12 +42,12 @@ object FPreferences: TFPreferences
       Height = 15
       Caption = 'Vrsta fonta:'
     end
-    object LLogInterval: TLabel
+    object LArchiveLogLimit: TLabel
       Left = 12
       Top = 194
       Width = 100
       Height = 15
-      Caption = 'Archive older than:'
+      Caption = 'Arhiviraj starije od:'
     end
     object LArchiveStatus: TLabel
       Left = 12
@@ -92,30 +92,30 @@ object FPreferences: TFPreferences
       OnChange = CBFont1Change
     end
     object BtReset1: TButton
-      Left = 166
+      Left = 151
       Top = 330
-      Width = 75
+      Width = 90
       Height = 25
       Caption = 'Resetiraj'
       TabOrder = 4
       OnClick = BtReset1Click
     end
-    object CBLogInterval: TComboBox
+    object CBArchiveLogLimit: TComboBox
       Left = 126
       Top = 191
       Width = 115
       Height = 23
       Style = csDropDownList
       TabOrder = 5
-      OnChange = CBLogIntervalChange
+      OnChange = CBArchiveLogLimitChange
     end
     object BtArchiveLogs: TButton
-      Left = 166
-      Top = 220
-      Width = 75
+      Left = 151
+      Top = 228
+      Width = 90
       Height = 25
       Cancel = True
-      Caption = 'Archive logs'
+      Caption = 'Arhiviraj logove'
       TabOrder = 6
       OnClick = BtArchiveLogsClick
     end
@@ -153,7 +153,7 @@ object FPreferences: TFPreferences
       Top = 81
       Width = 79
       Height = 15
-      Caption = 'Vrsta separatora:'
+      Caption = 'Vrsta razmaka:'
     end
     object CBCaret: TComboBox
       Left = 126
@@ -170,7 +170,7 @@ object FPreferences: TFPreferences
       Width = 229
       Height = 17
       Alignment = taLeftJustify
-      Caption = 'Stani kod pogre'#353'ke:'
+      Caption = 'Stani kod gre'#353'ke:'
       TabOrder = 1
       OnClick = CBMistakeClick
     end
@@ -223,9 +223,9 @@ object FPreferences: TFPreferences
       OnChange = CBFontSizeChange
     end
     object BtReset2: TButton
-      Left = 162
+      Left = 147
       Top = 330
-      Width = 75
+      Width = 90
       Height = 25
       Caption = 'Resetiraj'
       TabOrder = 7
@@ -246,7 +246,7 @@ object FPreferences: TFPreferences
     Top = 408
     Width = 75
     Height = 25
-    Caption = 'Otka'#382'i'
+    Caption = 'Odustani'
     ModalResult = 2
     TabOrder = 2
   end

@@ -24,7 +24,7 @@ enum class LogLevel {
     Unknown
 };
 
-enum class LogInterval {
+enum class ArchiveLogLimit {
     Never,
     Auto,
     Week,
@@ -49,11 +49,11 @@ class Logger {
         const std::chrono::seconds flushInterval = std::chrono::seconds(60);
 
         static std::vector<UnicodeString> logLevelStrings;
-        static std::vector<UnicodeString> logIntervalStrings;
+        static std::vector<UnicodeString> archiveLogLimitStrings;
 
         Logger();
         Logger(const Logger&)=delete;
-   		Logger& operator=(const Logger&)=delete;
+        Logger& operator=(const Logger&)=delete;
 
     public:
         void setMainSession(MainSession *_mainSession);
@@ -62,7 +62,7 @@ class Logger {
         static UnicodeString getLogLevelAsString(LogLevel level);
         static LogLevel getStringAsLogLevel(const UnicodeString &level);
 
-        void log(const UnicodeString& message);
+        void log(const UnicodeString& logEntry);
         void log(LogLevel level, const UnicodeString& message, const char* functionName, int lineNumber);
         void writeToFile();
 
@@ -71,11 +71,11 @@ class Logger {
         TDate convertLogTimeStampToDate(const UnicodeString &log);
         void sortLogsByTimeStamp(std::vector<UnicodeString> &logs, bool sortDescending);
 
-        std::vector<UnicodeString> findMatchingLogs(std::vector<UnicodeString> logs, LogInterval interval);
+        std::vector<UnicodeString> findMatchingLogs(std::vector<UnicodeString> logs, ArchiveLogLimit archiveLogLimit);
         UnicodeString archiveLogFiles();
 
        	static std::vector<UnicodeString>& getLogLevelStrings();
-        static std::vector<UnicodeString>& getLogIntervalStrings();
+        static std::vector<UnicodeString>& getArchiveLogLimitStrings();
 };
 
 #endif

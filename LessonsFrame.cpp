@@ -23,7 +23,7 @@ __fastcall TFrLessons::TFrLessons(TComponent* Owner, TDataModule1 *_dataModule) 
         dataModule->TLessons->MasterSource = dataModule->DCourses;
         UIUtils::setComboBoxItems(CBFilter, dataModule->getColumnNames(DBGridLessons->DataSource->DataSet, "courseName"), -1);
 
-       	LOGGER(LogLevel::Debug, "Lessons displayed");
+       	LOGGER(LogLevel::Debug, "Created frame lessons");
     }
     else {
         throw CustomExceptions::ENullPointerException();

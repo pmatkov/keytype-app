@@ -4,4 +4,10 @@ object FrMain: TFrMain
   Width = 628
   Height = 422
   TabOrder = 0
+  object LLogo: TLabel
+    Left = 177
+    Top = 141
+    Width = 3
+    Height = 15
+  end
 end

@@ -56,6 +56,8 @@
 			<File FileName="ViewProfileForm.dfm" ContainerId="W32Form" ModuleName="ViewProfileForm.dfm"/>
 			<File FileName="ProfileForm.dfm" ContainerId="W32Form" ModuleName="ProfileForm.dfm"/>
 			<File FileName="LessonResultsForm.dfm" ContainerId="W32Form" ModuleName="LessonResultsForm.dfm"/>
+			<File FileName="AchievementsForm.dfm" ContainerId="W32Form" ModuleName="AchievementsForm.dfm"/>
+			<File FileName="LogsForm.dfm" ContainerId="W32Form" ModuleName="LogsForm.dfm"/>
 		</FileList>
 	</W32ResourceDLL.Personality>
 </BorlandProject>

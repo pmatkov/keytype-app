@@ -57,7 +57,7 @@ void TFrTypingStats::hideStatsItems() {
 void TFrTypingStats::clearTimerDisplay() {
 	LDisplayTime->Caption = FormatDateTime("hh:nn:ss", EncodeTime(0, 0, 0, 0));
     LDisplaySpeed->Caption = FormatFloat("0.00", 0) + " WPM";
-    LDisplayAccuracy->Caption = FormatFloat("0.00", 0) + " %";
+    LDisplayAccuracy->Caption = FormatFloat("0.00", 100) + " %";
 }
 
 void __fastcall TFrTypingStats::TStatsTimerTimer(TObject *Sender)
@@ -67,8 +67,10 @@ void __fastcall TFrTypingStats::TStatsTimerTimer(TObject *Sender)
     int sec = typingSession->getElapsedTime()% 60;
     TDateTime elapsedTime = System::Sysutils::EncodeTime(0, min, sec, 0);
 
-
     LDisplayTime->Caption = FormatDateTime("hh:nn:ss", elapsedTime);
+
+    typingSession->calculateSpeed();
+    typingSession->calculateAccuracy();
 
     if (mainSession->getTypingSettings().getDisplaySpeed()) {
        LDisplaySpeed->Caption = FormatFloat("0.00", typingSession->getSpeed()) + " WPM";

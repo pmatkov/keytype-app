@@ -2,6 +2,7 @@
 
 library KeyType;
 
+{ITE} {DFMFileType} {AchievementsForm.dfm}
 {ITE} {DFMFileType} {AuthenticationForm.dfm}
 {ITE} {DFMFileType} {ConverterForm.dfm}
 {ITE} {DFMFileType} {CoursesFrame.dfm}
@@ -16,6 +17,7 @@ library KeyType;
 {ITE} {DFMFileType} {LessonsForm.dfm}
 {ITE} {DFMFileType} {LessonsFrame.dfm}
 {ITE} {DFMFileType} {LoginFrame.dfm}
+{ITE} {DFMFileType} {LogsForm.dfm}
 {ITE} {DFMFileType} {MainForm.dfm}
 {ITE} {DFMFileType} {MainFrame.dfm}
 {ITE} {DFMFileType} {PracticeFrame.dfm}
@@ -27,6 +29,7 @@ library KeyType;
 {ITE} {DFMFileType} {TypingTextFrame.dfm}
 {ITE} {RCFileType} {Win32\Debug\KeyType_DRC.rc}
 
+{$R 'AchievementsForm.dfm' 'FAchievements:TForm'}
 {$R 'AuthenticationForm.dfm' 'FAuthentication:TForm'}
 {$R 'ConverterForm.dfm' 'FConverter:TForm'}
 {$R 'CoursesFrame.dfm' 'FrCourses:TForm'}
@@ -41,12 +44,13 @@ library KeyType;
 {$R 'LessonsForm.dfm' 'FLessons:TForm'}
 {$R 'LessonsFrame.dfm' 'FrLessons:TForm'}
 {$R 'LoginFrame.dfm' 'FrLogin:TForm'}
+{$R 'LogsForm.dfm' 'FLogs:TForm'}
 {$R 'MainForm.dfm' 'FMain:TForm'}
 {$R 'MainFrame.dfm' 'FrMain:TForm'}
 {$R 'PracticeFrame.dfm' 'FrPractice:TForm'}
 {$R 'PracticeOptionsForm.dfm' 'FPracticeOptions:TForm'}
 {$R 'PreferencesForm.dfm' 'FPreferences:TForm'}
-{$R 'ProfileForm.dfm' 'FrProfile:TForm'}
+{$R 'ProfileForm.dfm' 'FProfile:TForm'}
 {$R 'RegisterFrame.dfm' 'FrRegister:TForm'}
 {$R 'TypingStatsFrame.dfm' 'FrTypingStats:TForm'}
 {$R 'TypingTextFrame.dfm' 'FrTypingText:TForm'}

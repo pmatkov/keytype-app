@@ -6,16 +6,17 @@
 #include "ProfileForm.h"
 #include "FileUtils.h"
 #include "UIUtils.h"
+#include "CryptoUtils.h"
 #include "Logger.h"
 #include "ENullPointerException.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
-TFrProfile *FrProfile;
+TFProfile *FProfile;
 //---------------------------------------------------------------------------
-__fastcall TFrProfile::TFrProfile(TComponent* Owner) : TForm(Owner)  {}
+__fastcall TFProfile::TFProfile(TComponent* Owner) : TForm(Owner)  {}
 
-__fastcall TFrProfile::TFrProfile(TComponent* Owner, MainSession *_mainSession, AuthenticationService *_authService, TDataModule1 *_dataModule) : TForm(Owner)  {
+__fastcall TFProfile::TFProfile(TComponent* Owner, MainSession *_mainSession, AuthenticationService *_authService, TDataModule1 *_dataModule) : TForm(Owner)  {
      if (_authService && _mainSession && _dataModule) {
 
      	mainSession = _mainSession;
@@ -29,16 +30,15 @@ __fastcall TFrProfile::TFrProfile(TComponent* Owner, MainSession *_mainSession, 
         DFileOpen->InitialDir = FileUtils::createAbsolutePath("Images", false);
     	DFileOpen->Filter = "Image Files(*jpg; *.png)|*.jpg;*.png";
 
-       	LOGGER(LogLevel::Debug, "View profile displayed");
+       	LOGGER(LogLevel::Debug, "Created profile form");
     }
     else {
         throw CustomExceptions::ENullPointerException();
     }
 
-
 }
 
-void __fastcall TFrProfile::BtEditSaveClick(TObject *Sender)
+void __fastcall TFProfile::BtEditSaveClick(TObject *Sender)
 {
 	if (BtEditSave->Caption == "Edit profile" || BtEditSave->Caption == "Uredi profil") {
 
@@ -53,9 +53,11 @@ void __fastcall TFrProfile::BtEditSaveClick(TObject *Sender)
     }
      else if (BtEditSave->Caption == "Save profile" || BtEditSave->Caption == "Spremi profil") {
 
-     	if (dataModule->TUsers->Locate("username; password", VarArrayOf(OPENARRAY(Variant, (authService->getUser().getUsername(), authService->getUser().getPassword()))), TLocateOptions())) {
+     	int userID;
 
-        	int userID = dataModule->TUsers->FieldByName("id")->AsInteger;
+     	if (dataModule->TUsers->Locate("username", authService->getUser().getUsername(), TLocateOptions())) {
+
+        	userID = dataModule->TUsers->FieldByName("id")->AsInteger;
 
             if (EUsername->Text != dataModule->getColumnValue(dataModule->TUsers, "username", userID)) {
 
@@ -65,9 +67,15 @@ void __fastcall TFrProfile::BtEditSaveClick(TObject *Sender)
                 }
             }
         }
+
+
+        UnicodeString salt = dataModule->getColumnValue(dataModule->TUsers, "salt", userID);
+        UnicodeString hashedPassword = CryptoUtils::generateSHA512Hash(EPassword->Text + salt);
+        UnicodeString oldPassword = dataModule->getColumnValue(dataModule->TUsers, "password", userID);
+
         dataModule->TUsers->Edit();
      	dataModule->TUsers->FieldByName("username")->AsString = EUsername->Text;
-     	dataModule->TUsers->FieldByName("password")->AsString = EPassword->Text;
+     	dataModule->TUsers->FieldByName("password")->AsString = EPassword->Text != "" ? hashedPassword : oldPassword;
      	dataModule->TUsers->FieldByName("name")->AsString = EName->Text;
      	dataModule->TUsers->FieldByName("surname")->AsString = ESurname->Text;
      	dataModule->TUsers->FieldByName("email")->AsString = EEmail->Text;
@@ -102,7 +110,7 @@ void __fastcall TFrProfile::BtEditSaveClick(TObject *Sender)
      }
 }
 //---------------------------------------------------------------------------
-void __fastcall TFrProfile::BtChangeImageClick(TObject *Sender)
+void __fastcall TFProfile::BtChangeImageClick(TObject *Sender)
 {
 
     if (DFileOpen->Execute()) {
@@ -128,7 +136,7 @@ void __fastcall TFrProfile::BtChangeImageClick(TObject *Sender)
 
 }
 
-void __fastcall TFrProfile::BtDeleteImageClick(TObject *Sender)
+void __fastcall TFProfile::BtDeleteImageClick(TObject *Sender)
 {
 	dataModule->TUsers->Edit();
     dataModule->TUsers->FieldByName("profileImage")->Clear();
@@ -137,7 +145,7 @@ void __fastcall TFrProfile::BtDeleteImageClick(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TFrProfile::BtDeleteClick(TObject *Sender)
+void __fastcall TFProfile::BtDeleteClick(TObject *Sender)
 {
 	dataModule->TUsers->Delete();
 
@@ -150,17 +158,17 @@ void __fastcall TFrProfile::BtDeleteClick(TObject *Sender)
     }
 }
 
-void __fastcall TFrProfile::FormActivate(TObject *Sender)
+void __fastcall TFProfile::FormActivate(TObject *Sender)
 {
      if (authService && mainSession && dataModule) {
 
      	EAge->Alignment = taLeftJustify;
-        dataModule->TUsers->Locate("username; password", VarArrayOf(OPENARRAY(Variant, (authService->getUser().getUsername(), authService->getUser().getPassword()))), TLocateOptions());
+        dataModule->TUsers->Locate("username", authService->getUser().getUsername(), TLocateOptions());
      }
 }
 
 
-void __fastcall TFrProfile::msgDisplayTimerTimer(TObject *Sender)
+void __fastcall TFProfile::msgDisplayTimerTimer(TObject *Sender)
 {
 	UIUtils::removeTimedMessage(msgDisplayTimer, LInfo);
 }

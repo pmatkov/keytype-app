@@ -1,7 +1,6 @@
 //---------------------------------------------------------------------------
 
-#pragma hdrstop
-
-#include "IKeyStatistics.h"
+#ifndef TestAchievementsUtilsH
+#define TestAchievementsUtilsH
 //---------------------------------------------------------------------------
-#pragma package(smart_init)
+#endif

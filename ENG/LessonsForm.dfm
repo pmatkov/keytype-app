@@ -1,8 +1,10 @@
 object FLessons: TFLessons
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
   Caption = 'Configuration'
-  ClientHeight = 444
+  ClientHeight = 443
   ClientWidth = 530
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -11,13 +13,12 @@ object FLessons: TFLessons
   Font.Name = 'Segoe UI'
   Font.Style = []
   TextHeight = 15
-  object BtAccept: TButton
+  object BtClose: TButton
     Left = 447
-    Top = 411
+    Top = 410
     Width = 75
     Height = 25
-    Caption = 'Accept'
-    ModalResult = 1
+    Caption = 'Close'
     TabOrder = 0
   end
   object PCLessons: TPageControl

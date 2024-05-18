@@ -20,7 +20,7 @@
 class TFLessons : public TForm
 {
 __published:	// IDE-managed Components
-	TButton *BtAccept;
+	TButton *BtClose;
 	TPageControl *PCLessons;
 	TTabSheet *TSCourses;
 	TTabSheet *TSLessons;

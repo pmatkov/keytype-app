@@ -13,8 +13,9 @@
 #include "GameThread.h"
 
 #include "KeyStatistics.h"
-#include "DLL\\UserStatistics.h"
-#include "DLL\\StatisticsForm.h"
+#include "Lib\\Statistics\\UserStatistics.h"
+#include "Lib\\Statistics\\StatisticsForm.h"
+#include "Lib\\About\\AboutForm.h"
 
 //---------------------------------------------------------------------------
 #pragma hdrstop
@@ -54,7 +55,8 @@ void TFMain::setMainSession(std::unique_ptr<MainSession> _mainSession) {
 		UIUtils::changeFontFamily(this, mainSession->getAppSettings().getFontFamily());
         UIUtils::changeLanguage(mainSession->getAppSettings().getLanguage());
 
-       	LOGGER(LogLevel::Debug, "Main session moved");
+        FrMain->setLogo();
+
     }
     else {
         throw CustomExceptions::ENullPointerException();
@@ -67,8 +69,6 @@ void TFMain::setAuthenticationService(std::unique_ptr<AuthenticationService> _au
       	authService = std::move(_authService);
 
         updateProfileMenu();
-
-       	LOGGER(LogLevel::Debug, "Authentication service moved");
     }
     else {
         throw CustomExceptions::ENullPointerException();
@@ -80,7 +80,6 @@ void TFMain::setAuthenticationForm(std::unique_ptr<TFAuthentication> _FAuthentic
     if (_FAuthentication) {
       	FAuthentication = std::move(_FAuthentication);
 
-       	LOGGER(LogLevel::Debug, "Authentication form moved");
     }
     else {
         throw CustomExceptions::ENullPointerException();
@@ -113,7 +112,7 @@ void __fastcall TFMain::WndProc(Messages::TMessage &Message) {
 	}
 }
 
-void __fastcall TFMain::MenuSubitemPracticeNewClick(TObject *Sender)
+void __fastcall TFMain::MenuSubitemPracticeStartClick(TObject *Sender)
 {
 
 	if (!typingSession) {
@@ -131,11 +130,14 @@ void __fastcall TFMain::MenuSubitemPracticeNewClick(TObject *Sender)
 		SetWindowSubclass(FrPractice->FrTypingText->REText->Handle, &FrPractice->FrTypingText->RESubclass, 0, 0);
 	}
 
+    typingSession->setSessionType(SessionType::Practice);
+
 	if (FrMain && FrMain->Visible) {
 		UIUtils::switchFrames<TFrMain, TFrPractice>(FrMain, FrPractice);
 	}
     else if (FrLessons2 && FrLessons2->Visible) {
 		UIUtils::switchFrames<TFrLessons2, TFrPractice>(FrLessons2, FrPractice);
+
 	}
 
     // terminate thread and cleanup
@@ -155,14 +157,6 @@ void __fastcall TFMain::MenuSubitemPreferencesClick(TObject *Sender)
 		FPreferences->Position = poMainFormCenter;
 	}
 
-    if (typingSession) {
-		typingSession->setSessionStatus(SessionStatus::Paused);
-		FrPractice->FrTypingText->setTypingStatus(SessionStatus::Paused);
-
-        FrPractice->FrTypingText->clearCaret(mainSession->getTypingSettings().getCaretType(), typingSession->getTextSource().getCharIndex()-1);
-        parser->setInputEnabled(false);
-    }
-
     if (FPreferences->ShowModal() == mrOk) {
 
         if (mainSession->getAppSettings().getLanguageChanged()) {
@@ -170,10 +164,6 @@ void __fastcall TFMain::MenuSubitemPreferencesClick(TObject *Sender)
             mainSession->getAppSettings().setLanguageChanged(false);
         }
 
-        if (typingSession) {
-            typingSession->setSessionStatus(SessionStatus::Initialized);
-            FrPractice->FrTypingText->setTypingStatus(SessionStatus::Initialized);
-        }
     }
 }
 
@@ -201,12 +191,19 @@ void __fastcall TFMain::MenuSubItemConfigurationClick(TObject *Sender)
         FLessons->Position = poMainFormCenter;
 	}
 
- 	if (FLessons->ShowModal() == mrOk) {
-
-		//
-    }
+ 	FLessons->ShowModal();
 }
-//---------------------------------------------------------------------------
+
+
+void __fastcall TFMain::MenuSubitemLogsClick(TObject *Sender)
+{
+	if (!FLogs) {
+		FLogs = std::make_unique<TFLogs>(nullptr, authService.get(), dataModule);
+        FLogs->Position = poMainFormCenter;
+	}
+
+ 	FLogs->ShowModal();
+}
 
 void __fastcall TFMain::MenuSubItemLessonStartClick(TObject *Sender)
 {
@@ -223,6 +220,8 @@ void __fastcall TFMain::MenuSubItemLessonStartClick(TObject *Sender)
         //  set subclass procedure for REText
 		SetWindowSubclass(FrLessons2->FrTypingText->REText->Handle, &FrLessons2->FrTypingText->RESubclass, 0, 0);
 	}
+
+    typingSession->setSessionType(SessionType::Lesson);
 
 	if (FrMain && FrMain->Visible) {
 		UIUtils::switchFrames<TFrMain, TFrLessons2>(FrMain, FrLessons2);
@@ -244,22 +243,20 @@ void __fastcall TFMain::MenuSubItemLessonResultsClick(TObject *Sender)
 		FLessonResults = std::make_unique<TFLessonResults>(nullptr, dataModule);
         FLessonResults->Position = poMainFormCenter;
 	}
-    if (FLessonResults->ShowModal() == mrOk) {
 
-		//
-    }
+    FLessonResults->ShowModal();
 }
 
 
 void __fastcall TFMain::MenuSubItemViewProfileClick(TObject *Sender) {
 
-	if (!FrProfile) {
+	if (!FProfile) {
 
-		FrProfile = std::make_unique<TFrProfile>(this,  mainSession.get(), authService.get(), dataModule);
-        FrProfile->Position = poMainFormCenter;
+		FProfile = std::make_unique<TFProfile>(nullptr, mainSession.get(), authService.get(), dataModule);
+        FProfile->Position = poMainFormCenter;
 
 	}
-    FrProfile->ShowModal();
+    FProfile->ShowModal();
 }
 
 void __fastcall TFMain::MenuSubItemViewStatisticsClick(TObject *Sender) {
@@ -330,11 +327,11 @@ void __fastcall TFMain::MenuSubItemViewStatisticsClick(TObject *Sender) {
             LOGGER(LogLevel::Fatal, ex.Message);
         }
 
-
     	HINSTANCE Statistics;
 
         if ((Statistics = LoadLibrary(L"StatisticsLib.dll")) == nullptr) {
-            ShowMessage("Can't load DLL");
+        	LOGGER(LogLevel::Debug, "Failed to load dll");
+            ShowMessage("Failed to load dll");
             return;
         }
 
@@ -342,17 +339,19 @@ void __fastcall TFMain::MenuSubItemViewStatisticsClick(TObject *Sender) {
         pCreateUserStatistics CreateUserStatistics;
 
         if ((CreateUserStatistics = (pCreateUserStatistics)GetProcAddress(Statistics, "CreateUserStatistics")) == nullptr) {
-            ShowMessage("Can't find CreateUserStatistics function");
+          	LOGGER(LogLevel::Debug, "Can't find CreateUserStatistics function in dll");
+            ShowMessage("Can't find CreateUserStatistics function in dll");
             return;
         }
 
     	userStatistics = CreateUserStatistics(practiceTime, keyStatistics);
 
-		typedef TFStatistics*(*__stdcall pCreateStatisticsForm)(UserStatistics *userStatistics);
+		typedef void(*__stdcall pCreateStatisticsForm)(UserStatistics *userStatistics);
         pCreateStatisticsForm CreateStatisticsForm;
 
         if ((CreateStatisticsForm = (pCreateStatisticsForm)GetProcAddress(Statistics, "CreateStatisticsForm")) == nullptr) {
-            ShowMessage("Can't find CreateStatisticsForm function");
+        	LOGGER(LogLevel::Debug, "Can't find CreateStatisticsForm function in dll");
+            ShowMessage("Can't find CreateStatisticsForm function in dll");
             return;
         }
 
@@ -361,10 +360,23 @@ void __fastcall TFMain::MenuSubItemViewStatisticsClick(TObject *Sender) {
 	}
 }
 
+void __fastcall TFMain::MenuSubItemViewAchievementsClick(TObject *Sender) {
+
+	if (!FAchievements) {
+
+		FAchievements = std::make_unique<TFAchievements>(nullptr, authService.get(), dataModule);
+        FAchievements->Position = poMainFormCenter;
+
+	}
+    FAchievements->ShowModal();
+}
+
+
 
 void __fastcall TFMain::MenuSubItemDeleteProfileClick(TObject *Sender) {
 
-	if (dataModule->TUsers->Locate("username; password", VarArrayOf(OPENARRAY(Variant, (authService->getUser().getUsername(), authService->getUser().getPassword()))), TLocateOptions())) {
+	if (dataModule->TUsers->Locate("username", authService->getUser().getUsername(), TLocateOptions())) {
+
 		dataModule->TUsers->Delete();
     }
     authService->loginUser("guest", "");
@@ -383,15 +395,63 @@ void __fastcall TFMain::MenuSubItemSwitchUserClick(TObject *Sender) {
 
     if (FAuthentication->ShowModal() == mrOk) {
 
+        if (authService->getUserChanged()) {
+
+        	UnicodeString previousFontFamily =  mainSession->getAppSettings().getFontFamily();
+            Language previousLanguage = mainSession->getAppSettings().getLanguage();
+
+            AppSettings appSettings(authService->getUser());
+            TypingSettings typingSettings(authService->getUser());
+
+            mainSession->setAppSettings(appSettings);
+            mainSession->setTypingSettings(typingSettings);
+
+            if (previousFontFamily != mainSession->getAppSettings().getFontFamily()) {
+            	UIUtils::changeFontFamily(this, mainSession->getAppSettings().getFontFamily());
+            }
+            if (previousLanguage != mainSession->getAppSettings().getLanguage()) {
+            	UIUtils::changeLanguage(mainSession->getAppSettings().getLanguage());
+            }
+
+            authService->setUserChanged(false);
+        }
+
         updateProfileMenu();
     }
 }
-void TFMain::updateProfileMenu() {
 
+void __fastcall TFMain::MenuSubitemAboutClick(TObject *Sender)
+{
+	if (!FAbout) {
+
+      	HINSTANCE About;
+
+        if ((About = LoadLibrary(L"AboutLib.dll")) == nullptr) {
+        	LOGGER(LogLevel::Debug, "Failed to load dll");
+            ShowMessage("Failed to load dll");
+            return;
+        }
+
+		typedef void(*__stdcall pCreateAboutForm)();
+        pCreateAboutForm CreateAboutForm;
+
+        if ((CreateAboutForm = (pCreateAboutForm)GetProcAddress(About, "CreateAboutForm")) == nullptr) {
+        	LOGGER(LogLevel::Debug, "Can't find CreateAboutForm function in dll");
+            ShowMessage("Can't find CreateAboutForm function in dll");
+            return;
+        }
+
+   		CreateAboutForm();
+        FreeLibrary(About);
+    }
+}
+
+
+void TFMain::updateProfileMenu() {
 
     if (!menuItemProfile) {
     	menuItemProfile = std::make_unique<TMenuItem>(MainMenu);
-        MainMenu->Items->Add(menuItemProfile.get());
+    	MainMenu->Items->Add(menuItemProfile.get());
     }
 
     if (!menuSubItemViewProfile) {
@@ -409,7 +469,7 @@ void TFMain::updateProfileMenu() {
 
     UnicodeString projectExePath = ExtractFilePath(Application->ExeName);
 
-    if (FileUtils::checkFileExistance(projectExePath + "StatisticsLib.dll")) {
+    if (TFile::Exists(projectExePath + "StatisticsLib.dll")) {
 
         if (!menuSubItemViewStatistics) {
             menuSubItemViewStatistics = std::make_unique<TMenuItem>(MainMenu);
@@ -423,6 +483,19 @@ void TFMain::updateProfileMenu() {
             menuSubItemViewStatistics->Caption = "Pregledaj statistiku";
         }
     }
+
+    if (!menuSubItemViewAchievements) {
+        menuSubItemViewAchievements = std::make_unique<TMenuItem>(MainMenu);
+        menuSubItemViewAchievements->OnClick = MenuSubItemViewAchievementsClick;
+        menuItemProfile->Add(menuSubItemViewAchievements.get());
+    }
+    if (mainSession->getAppSettings().getLanguage() == Language::English) {
+        menuSubItemViewAchievements->Caption = "View achievements";
+    }
+    else if (mainSession->getAppSettings().getLanguage() == Language::Croatian) {
+        menuSubItemViewAchievements->Caption = "Pregledaj postignuca";
+    }
+
 
     if (!menuSubItemDeleteProfile) {
     	menuSubItemDeleteProfile = std::make_unique<TMenuItem>(MainMenu);
@@ -458,10 +531,13 @@ void TFMain::updateProfileMenu() {
             menuSubItemViewProfile->Visible	= false;
         }
         if (menuSubItemViewStatistics) {
-            menuSubItemViewStatistics->Visible	= false;
+            menuSubItemViewStatistics->Visible = false;
+        }
+        if (menuSubItemViewAchievements) {
+            menuSubItemViewAchievements->Visible = false;
         }
         if (menuSubItemDeleteProfile) {
-            menuSubItemDeleteProfile->Visible	= false;
+            menuSubItemDeleteProfile->Visible = false;
         }
 
     }
@@ -473,7 +549,10 @@ void TFMain::updateProfileMenu() {
             menuSubItemViewProfile->Visible	= true;
         }
         if (menuSubItemViewStatistics) {
-            menuSubItemViewStatistics->Visible	= true;
+            menuSubItemViewStatistics->Visible = true;
+        }
+        if (menuSubItemViewAchievements) {
+            menuSubItemViewAchievements->Visible = true;
         }
         if (menuSubItemDeleteProfile) {
             menuSubItemDeleteProfile->Visible = true;
@@ -482,3 +561,6 @@ void TFMain::updateProfileMenu() {
 
 
 }
+
+//---------------------------------------------------------------------------
+

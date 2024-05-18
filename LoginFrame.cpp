@@ -22,7 +22,7 @@ __fastcall TFrLogin::TFrLogin(TComponent* Owner, AuthenticationService *_authent
 
 	if (_authenticationService) {
 	   	authenticationService = _authenticationService;
-    	LOGGER(LogLevel::Debug, "Login frame created");
+    	LOGGER(LogLevel::Debug, "Created Login frame");
 	}
     else {
         throw CustomExceptions::ENullPointerException();

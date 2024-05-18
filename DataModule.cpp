@@ -5,12 +5,17 @@
 
 #include "DataModule.h"
 #include "FileUtils.h"
+#include "CryptoUtils.h"
 #include "Logger.h"
 #include <System.Math.hpp>
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma classgroup "Vcl.Controls.TControl"
+#pragma link "uTPLb_BaseNonVisualComponent"
+#pragma link "uTPLb_Codec"
+#pragma link "uTPLb_CryptographicLibrary"
+#pragma link "uTPLb_Signatory"
 #pragma resource "*.dfm"
 
 TDataModule1 *DataModule1;
@@ -120,28 +125,39 @@ std::vector<UnicodeString> TDataModule1::getStringsFromColumnValues(const std::v
     return values;
 }
 
-UnicodeString TDataModule1::generateText(const UnicodeString &letters, bool useNumbers, bool useUppercase,  bool usePunctuation, int min, int max) {
+UnicodeString TDataModule1::generateText(const UnicodeString &letters, bool useNumbers, bool useUppercase,  bool usePunctuation, int minTokens, int maxTokens) {
 
     UnicodeString generatedText = "";
 
     try {
        try {
+
+       		std::unique_ptr<TCryptographicLibrary> cryptLib = CryptoUtils::createCryptoLib();
+            std::unique_ptr<TCodec> codec = CryptoUtils::createRSACodec(cryptLib.get());
+            std::unique_ptr<TSignatory> signatory = CryptoUtils::createSignatory();
+            signatory->Codec = codec.get();
+
+       		UnicodeString prvKeyPath = FileUtils::createAbsolutePath("Keys\\prv_key_app.bin", true);
+            UnicodeString pubKeyPath = FileUtils::createAbsolutePath("Keys\\pub_key_srv.bin", true);
+
             IdTCPClient1->Connect();
 
-            IdTCPClient1->IOHandler->WriteLn(1);
-            IdTCPClient1->IOHandler->WriteLn(letters);
-            IdTCPClient1->IOHandler->WriteLn(useNumbers);
-            IdTCPClient1->IOHandler->WriteLn(useUppercase);
-            IdTCPClient1->IOHandler->WriteLn(usePunctuation);
-            IdTCPClient1->IOHandler->WriteLn(min);
-            IdTCPClient1->IOHandler->WriteLn(max);
+            LOGGER(LogLevel::Debug, "Connected to TCP server");
 
-            generatedText = IdTCPClient1->Socket->ReadLn();
+            IdTCPClient1->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, "1"));
+            IdTCPClient1->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, letters));
+            IdTCPClient1->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, UnicodeString(useNumbers)));
+            IdTCPClient1->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, UnicodeString(useUppercase)));
+            IdTCPClient1->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, UnicodeString(usePunctuation)));
+            IdTCPClient1->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, UnicodeString(minTokens)));
+            IdTCPClient1->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, UnicodeString(maxTokens)));
 
-            LOGGER(LogLevel::Debug, "Client complete");
+            generatedText = CryptoUtils::decryptStringRSA(codec.get(), signatory.get(), prvKeyPath, IdTCPClient1->IOHandler->ReadLn());
+
+            LOGGER(LogLevel::Debug, "Socket I/O complete");
        }
        catch (Exception &ex) {
-            LOGGER(LogLevel::Error, "Client error: " + ex.Message);
+            LOGGER(LogLevel::Error, "TCP client error: " + ex.Message);
         }
 
     }
@@ -159,32 +175,51 @@ bool TDataModule1::convertWordList(const UnicodeString& filePath) {
     try {
     	try {
 
+        	std::unique_ptr<TCryptographicLibrary> cryptLib = CryptoUtils::createCryptoLib();
+            std::unique_ptr<TCodec> codec = CryptoUtils::createRSACodec(cryptLib.get());
+            std::unique_ptr<TSignatory> signatory = CryptoUtils::createSignatory();
+            signatory->Codec = codec.get();
+
+        	UnicodeString prvKeyPath = FileUtils::createAbsolutePath("Keys\\prv_key_app.bin", true);
+            UnicodeString pubKeyPath = FileUtils::createAbsolutePath("Keys\\pub_key_srv.bin", true);
+
             IdTCPClient1->Connect();
 
-            IdTCPClient1->IOHandler->WriteLn(2);
-     		IdTCPClient1->IOHandler->WriteLn(ExtractFileName(filePath));
-    		std::unique_ptr<TFileStream> fileStream = std::make_unique<TFileStream>(filePath, fmOpenRead);
+            LOGGER(LogLevel::Debug, "Connected to TCP server");
 
-      		IdTCPClient1->IOHandler->LargeStream = true;
-            IdTCPClient1->IOHandler->Write(fileStream.get(), 0, true);
-            fileStream.reset();
+			IdTCPClient1->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, "2"));
+            IdTCPClient1->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, ExtractFileName(filePath)));
 
-            UnicodeString serverResponse = IdTCPClient1->IOHandler->ReadLn();
+            std::unique_ptr<TFileStream> fStream = std::make_unique<TFileStream>(filePath, fmOpenRead);
+            std::unique_ptr<TMemoryStream> mStream = std::make_unique<TMemoryStream>();
+
+            CryptoUtils::encryptStreamRSA(codec.get(), signatory.get(), pubKeyPath, fStream.get(), mStream.get());
+
+            IdTCPClient1->IOHandler->LargeStream = true;
+            IdTCPClient1->IOHandler->Write(mStream.get(), 0, true);
+            fStream.reset();
+            mStream.reset();
+
+            UnicodeString serverResponse = CryptoUtils::decryptStringRSA(codec.get(), signatory.get(), prvKeyPath, IdTCPClient1->IOHandler->ReadLn());
 
             if (serverResponse == "File converted") {
+
                 UnicodeString convertedFilePath = FileUtils::traverseUpDirTree(filePath, 2) + "Data\\" + ExtractFileName(filePath);
                 convertedFilePath = convertedFilePath.Delete(convertedFilePath.Length()-2, 3) + "json";
 
-            	std::unique_ptr<TStream> fileStream = std::make_unique<TFileStream>(convertedFilePath, fmCreate);
-            	IdTCPClient1->IOHandler->LargeStream = true;
-        		IdTCPClient1->IOHandler->ReadStream(fileStream.get());
+            	fStream = std::make_unique<TFileStream>(convertedFilePath, fmCreate);
+                mStream = std::make_unique<TMemoryStream>();
 
-            	LOGGER(LogLevel::Debug, "Client complete");
+                IdTCPClient1->IOHandler->LargeStream = true;
+                IdTCPClient1->IOHandler->ReadStream(mStream.get());
+                CryptoUtils::decryptStreamRSA(codec.get(), signatory.get(), prvKeyPath, fStream.get(), mStream.get());
+
+                LOGGER(LogLevel::Debug, "Socket I/O complete");
                 return true;
             }
        }
        catch (Exception &ex) {
-            LOGGER(LogLevel::Error, "Client error: " + ex.Message);
+            LOGGER(LogLevel::Error, "TCP client error: " + ex.Message);
         }
 
     }

@@ -29,7 +29,7 @@ __fastcall TFLessons::TFLessons(TComponent* Owner, TDataModule1 *_dataModule) : 
         UIUtils::setFrameVisibility<TFrCourses>(FrCourses, true);
         UIUtils::setFrameVisibility<TFrLessons>(FrLessons, true);
 
-       	LOGGER(LogLevel::Debug, "Lessons displayed");
+       	LOGGER(LogLevel::Debug, "Created form lessons");
     }
     else {
         throw CustomExceptions::ENullPointerException();

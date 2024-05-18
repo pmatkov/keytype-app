@@ -20,7 +20,7 @@ __fastcall TFrRegister::TFrRegister(TComponent* Owner, AuthenticationService *_a
 	   	authenticationService = _authenticationService;
         authenticationService->OnUsernameUnavailable = FrUsernameUnavailable;
 
-    	LOGGER(LogLevel::Debug, "Register frame created");
+    	LOGGER(LogLevel::Debug, "Created register frame");
 	}
     else {
         throw CustomExceptions::ENullPointerException();
@@ -54,7 +54,6 @@ void __fastcall TFrRegister::BtRegisterClick(TObject *Sender)
         }
     }
 }
-
 
 //  event handler
 void __fastcall TFrRegister::FrUsernameUnavailable()

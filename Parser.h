@@ -44,7 +44,7 @@ class Parser {
 		const bool& isInputEnabled() const;
 		void setInputEnabled(bool _inputEnabled);
 
-        void resetParserData();
+        void resetParser();
 
 		wchar_t getChar(WPARAM wParam);
 

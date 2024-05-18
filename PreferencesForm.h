@@ -41,8 +41,8 @@ __published:	// IDE-managed Components
 	TButton *BtAccept;
 	TLabel *LSeparator;
 	TComboBox *CBSeparator;
-	TLabel *LLogInterval;
-	TComboBox *CBLogInterval;
+	TLabel *LArchiveLogLimit;
+	TComboBox *CBArchiveLogLimit;
 	TButton *BtArchiveLogs;
 	TLabel *LArchiveStatus;
 	TTimer *msgDisplayTimer;
@@ -61,18 +61,18 @@ __published:	// IDE-managed Components
 	void __fastcall CBFontSizeChange(TObject *Sender);
 	void __fastcall CBLoggingChange(TObject *Sender);
 	void __fastcall CBFont1Change(TObject *Sender);
-	void __fastcall CBLogIntervalChange(TObject *Sender);
+	void __fastcall CBArchiveLogLimitChange(TObject *Sender);
 	void __fastcall BtArchiveLogsClick(TObject *Sender);
 	void __fastcall msgDisplayTimerTimer(TObject *Sender);
 private:	// User declarations
 	MainSession *mainSession;
-    AuthenticationService *authService;
+    	AuthenticationService *authService;
 
 public:		// User declarations
 	__fastcall TFPreferences(TComponent* Owner);
-    __fastcall TFPreferences(TComponent* Owner, MainSession *_mainSession, AuthenticationService *_authService);
-	void setAppSettingsItems();
-    void setTypingSettingsItems();
+        __fastcall TFPreferences(TComponent* Owner, MainSession *_mainSession, AuthenticationService *_authService);
+            void setAppSettingsItems();
+        void setTypingSettingsItems();
 
 };
 //---------------------------------------------------------------------------

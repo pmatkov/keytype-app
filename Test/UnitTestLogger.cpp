@@ -21,6 +21,11 @@ void UnitTestLogger::addToLog(const UnicodeString& text) {
 	log->Add(text);
 };
 
+void UnitTestLogger::clearLog() {
+
+	log->Clear();
+};
+
 void UnitTestLogger::displayLog() {
 
     if (log->Count) {

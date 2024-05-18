@@ -11,17 +11,24 @@
 #include "TextSource.h"
 #include "KeyStatistics.h"
 
-enum SessionStatus {
+enum class SessionStatus {
 	Initialized,
 	Started,
-	Restarted,
-	Resumed,
-    Paused,
     Completed,
-    Cleared
+    Reset,
+    Count,
+    Unknwown
 };
 
-enum LessonGoal {
+enum class SessionType {
+	Practice,
+    Lesson,
+    Count,
+	Unknown
+};
+
+
+enum class LessonGoal {
 	lSpeed,
 	lAccuracy,
     Count,
@@ -38,6 +45,9 @@ class TypingSession : public Session {
         int charCount;
         int wordCount;
 
+        double speed = 0;
+        double accuracy = 100;
+
         std::vector<double> speedReadings;
         std::map<wchar_t, KeyStatistics> keyStatistics;
 
@@ -45,11 +55,14 @@ class TypingSession : public Session {
 		int mistakes = 0;
 
         SessionStatus sessionStatus;
+        SessionType sessionType;
 
         LessonGoal lessonGoal;
         int goalValue;
         int difficulty;
 
+        static std::vector<UnicodeString> sessionStatusStrings;
+        static std::vector<UnicodeString> sessionTypeStrings;
         static std::vector<UnicodeString> lessonGoalStrings;
 
 	public:
@@ -77,14 +90,17 @@ class TypingSession : public Session {
 		void increaseMistakes();
 
         double getAccuracy();
-        double calculateAccuracy();
+        void calculateAccuracy();
 
         double getSpeed();
         double getAvgSpeed();
-        double calculateSpeed();
+        void calculateSpeed();
 
         const SessionStatus& getSessionStatus() const;
         void setSessionStatus(const SessionStatus &_sessionStatus);
+
+    	const SessionType& getSessionType() const;
+        void setSessionType(const SessionType &_sessionType);
 
         const LessonGoal& getLessonGoal() const;
         void setLessonGoal(const LessonGoal &_lessonGoal);
@@ -95,8 +111,11 @@ class TypingSession : public Session {
         int getDifficulty() const;
         void setDifficulty(int _difficulty);
 
-        void resetSessionData();
+        void initializeSession();
+        void resetSession();
 
+        const std::vector<UnicodeString>& getSessionStatusStrings();
+        const std::vector<UnicodeString>& getSessionTypeStrings();
         const std::vector<UnicodeString>& getLessonGoalStrings();
 
 };

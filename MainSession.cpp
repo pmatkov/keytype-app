@@ -5,9 +5,7 @@
 #include <chrono>
 #include "MainSession.h"
 
-#ifndef LoggerH
 #include "Logger.h"
-#endif
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -17,7 +15,7 @@ MainSession::MainSession(AppSettings _appSettings, TypingSettings _typingSetting
    appSettings = _appSettings;
    typingSettings = _typingSettings;
 
-   LOGGER(LogLevel::Debug, "Main session created");
+   LOGGER(LogLevel::Debug, "Created main session");
 }
 
 AppSettings& MainSession::getAppSettings() {

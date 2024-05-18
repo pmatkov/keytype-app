@@ -4,8 +4,8 @@ object FPracticeOptions: TFPracticeOptions
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Select a text source'
-  ClientHeight = 444
-  ClientWidth = 530
+  ClientHeight = 443
+  ClientWidth = 526
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

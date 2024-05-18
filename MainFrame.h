@@ -11,9 +11,11 @@
 class TFrMain : public TFrame
 {
 __published:	// IDE-managed Components
+	TLabel *LLogo;
 private:	// User declarations
 public:		// User declarations
 	__fastcall TFrMain(TComponent* Owner);
+    void setLogo();
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TFrMain *FrMain;

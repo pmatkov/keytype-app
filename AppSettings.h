@@ -27,7 +27,7 @@ class AppSettings: public ISettings {
 
         bool enableLogging;
         LogLevel logLevel;
-        LogInterval logInterval;
+        ArchiveLogLimit archiveLogLimit;
 
         bool languageChanged = false;
 
@@ -49,8 +49,8 @@ class AppSettings: public ISettings {
         const LogLevel &getLogLevel() const;
         void setLogLevel(LogLevel _logLevel);
 
-        const LogInterval &getLogInterval() const;
-		void setLogInterval(LogInterval _logInterval);
+        const ArchiveLogLimit &getArchiveLogLimit() const;
+        void setArchiveLogLimit(ArchiveLogLimit _archiveLogLimit);
 
         bool getLanguageChanged() const;
         void setLanguageChanged(bool _languageChanged);

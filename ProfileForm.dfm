@@ -1,11 +1,11 @@
-object FrProfile: TFrProfile
+object FProfile: TFProfile
   Left = 0
   Top = 0
-  BorderIcons = [biSystemMenu]
+  BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Profile'
-  ClientHeight = 309
-  ClientWidth = 381
+  ClientHeight = 306
+  ClientWidth = 380
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -94,7 +94,7 @@ object FrProfile: TFrProfile
       Height = 23
       DataField = 'name'
       DataSource = DataModule1.DUsers
-      TabOrder = 2
+      TabOrder = 1
     end
     object ESurname: TDBEdit
       Left = 9
@@ -103,7 +103,7 @@ object FrProfile: TFrProfile
       Height = 23
       DataField = 'surname'
       DataSource = DataModule1.DUsers
-      TabOrder = 3
+      TabOrder = 2
     end
     object EEmail: TDBEdit
       Left = 9
@@ -112,7 +112,7 @@ object FrProfile: TFrProfile
       Height = 23
       DataField = 'email'
       DataSource = DataModule1.DUsers
-      TabOrder = 4
+      TabOrder = 3
     end
     object EAge: TDBEdit
       Left = 9
@@ -123,17 +123,7 @@ object FrProfile: TFrProfile
       DataField = 'age'
       DataSource = DataModule1.DUsers
       ParentBiDiMode = False
-      TabOrder = 5
-    end
-    object EPassword: TDBEdit
-      Left = 9
-      Top = 45
-      Width = 121
-      Height = 23
-      DataField = 'password'
-      DataSource = DataModule1.DUsers
-      PasswordChar = '*'
-      TabOrder = 1
+      TabOrder = 4
     end
     object EUsername: TDBEdit
       Left = 9
@@ -143,6 +133,14 @@ object FrProfile: TFrProfile
       DataField = 'username'
       DataSource = DataModule1.DUsers
       TabOrder = 0
+    end
+    object EPassword: TEdit
+      Left = 9
+      Top = 45
+      Width = 121
+      Height = 23
+      PasswordChar = '*'
+      TabOrder = 5
     end
   end
   object BtDeleteImage: TButton

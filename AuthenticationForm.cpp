@@ -47,6 +47,7 @@ void __fastcall TFAuthentication::FrLoginRegisterSelect(TObject *Sender)
 {
 	UIUtils::switchFrames<TFrLogin, TFrRegister>(FrLogin, FrRegister);
     Caption = "Register";
+    FrRegister->EUsername->SetFocus();
 }
 
 void __fastcall TFAuthentication::FrLoginSignInComplete(TObject *Sender, TModalResult result)
@@ -79,6 +80,8 @@ void __fastcall TFAuthentication::FormActivate(TObject *Sender)
 	UIUtils::setFrameVisibility<TFrLogin>(FrLogin, true);
     UIUtils::setFrameVisibility<TFrRegister>(FrRegister, false);
     Caption = "Login";
+
+    FrLogin->EUsername->SetFocus();
 }
 //---------------------------------------------------------------------------
 

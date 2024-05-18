@@ -1,0 +1,7 @@
+1 FONT "Font\\Sixtyfour-Regular.ttf"
+PngImage_1 RCDATA "Images\\arrow.png"
+PngImage_2 RCDATA "Images\\badge.png"
+PngImage_3 RCDATA "Images\\check-mark.png"
+PngImage_4 RCDATA "Images\\football.png"
+PngImage_5 RCDATA "Images\\man-climbing-stairs.png"
+PngImage_6 RCDATA "Images\\rocket.png"

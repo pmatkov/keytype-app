@@ -2,6 +2,7 @@ object FConverter: TFConverter
   Left = 0
   Top = 0
   BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
   Caption = 'Convert word list to JSON'
   ClientHeight = 124
   ClientWidth = 301
