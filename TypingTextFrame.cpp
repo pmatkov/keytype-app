@@ -41,11 +41,14 @@ void TFrTypingText::changeSessionView(SessionStatus status)  {
 
         case SessionStatus::Initialized: {
 
+            // calculate max displayable chars
+
         	int maxChars = TextUtils::countCharsUntilWordBreak(typingSession->getTextSource().getText(), UIUtils::estimateMaxChars(REText));
 
-            FrTypingStats->hideStatsItems();
+			resetTypingStats();
 
-			// fix font change at runtime
+			// change font at runtime
+
             REText->Font->Name = mainSession->getTypingSettings().getFontFamily();
             REText->Font->Size = mainSession->getTypingSettings().getFontSize();
 
@@ -56,11 +59,16 @@ void TFrTypingText::changeSessionView(SessionStatus status)  {
 			UnicodeString sourceText = typingSession->getTextSource().getText();
             UIUtils::setTextColor(REText, clSilver);
 
+            // set seaprator
+
 			if (mainSession->getTypingSettings().getSeparatorType() == SeparatorType::Space) {
             	REText->Text = sourceText.SubString(1, maxChars);
             }
+
+            // change separator (TextCasing SOAP)
+
             else if (mainSession->getTypingSettings().getSeparatorType() == SeparatorType::Dot) {
-				REText->Text = TextUtils::replaceChar(sourceText.SubString(1, maxChars), ' ', L'\u25E6');
+                REText->Text = TextUtils::replaceWordSeparator(sourceText.SubString(1, maxChars), "·");
             }
 
             LPrompt->Caption = "Press space bar to start the practice";
@@ -134,16 +142,21 @@ void TFrTypingText::resetTypingStats() {
 
 void TFrTypingText::processCharMessages(WPARAM wParam) {
 
-    wchar_t key = parser->getChar(wParam);
 
-    // start and pause typing session
+    // fetch next char from the input
 
-    if (key == SPACE && !parser->isInputEnabled() && typingSession->getSessionStatus() != SessionStatus::Completed) {
+    wchar_t wch = parser->getChar(wParam);
+
+    // start/ pause typing session
+
+    bool status = parser->isInputEnabled();
+
+    if (wch == SPACE && !parser->isInputEnabled() && typingSession->getSessionStatus() != SessionStatus::Completed) {
 
         changeSessionStatus(typingSession->getSessionStatus());
         parser->setInputEnabled(true);
     }
-    else if (key && parser->isInputEnabled()) {
+    else if (wch && parser->isInputEnabled()) {
 
         int index = typingSession->getTextSource().getCharIndex()-1;
 
@@ -153,9 +166,9 @@ void TFrTypingText::processCharMessages(WPARAM wParam) {
             UIUtils::setCharColor(REText, parser->getBuffer(), clRed);
         }
 
-        // insert chars on mistake (only if 'stop on mistake' isn't checked)
+        // insert chars on mistake (if 'stop on mistake' is unchecked)
 
-        if (key == BACKSPACE || !parser->getInsertedChars().IsEmpty()) {
+        if (wch == BACKSPACE || !parser->getInsertedChars().IsEmpty()) {
 
             UnicodeString text = "";
             if (mainSession->getTypingSettings().getSeparatorType() == SeparatorType::Space) {
@@ -165,7 +178,7 @@ void TFrTypingText::processCharMessages(WPARAM wParam) {
                 text = TextUtils::replaceChar(typingSession->getTextSource().getText(), ' ', L'\u25E6');
             }
 
-            // recalculate max chars for REText based on inserted chars
+            // recalculate max displayable chars when inserting chars
 
             text.Insert(parser->getInsertedChars(), index+1);
             int maxChars = TextUtils::countCharsUntilWordBreak(typingSession->getTextSource().getText(), UIUtils::estimateMaxChars(REText));
@@ -173,10 +186,11 @@ void TFrTypingText::processCharMessages(WPARAM wParam) {
             UIUtils::setCharColor(REText, parser->getBuffer(), index, index + parser->getInsertedChars().Length(), clRed);
         }
 
-        // move caret to the next char
+        // move caret to next char
+
         moveCaret(mainSession->getTypingSettings().getCaretType(), index);
 
-        // end typing session if last char reached
+        // end typing session
 
         if (typingSession->getTextSource().getCharIndex()-1 == typingSession->getTextSource().getText().Length()) {
 
@@ -221,6 +235,8 @@ void TFrTypingText::setCaret(CaretType caretType, int index) {
 	}
 }
 
+
+// hide caret, change cursor, disable mouse and forward char messages when TypingTextFrame is in focus
 
 LRESULT CALLBACK TFrTypingText::RESubclass(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam, UINT_PTR uIdSubclass, DWORD_PTR dwRefData)
 {

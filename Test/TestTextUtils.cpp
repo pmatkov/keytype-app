@@ -6,7 +6,7 @@
 #include <vector>
 #include <memory>
 
-
+#include "TextCasingSOAP.h"
 #include "TextUtils.h"
 #include "UnitTestLogger.h"
 
@@ -25,6 +25,7 @@ class TTestTextUtils : public TTestCase
 		void __fastcall TesttrimCharacters();
 		void __fastcall TestsplitToTokens();
         void __fastcall TestreplaceChar();
+        void __fastcall TestreplaceWordSeparator();
         void __fastcall TestisWordBreak();
         void __fastcall TestcountCharsUntilWordBreak();
 		void __fastcall TestformatJson();
@@ -35,6 +36,7 @@ class TTestTextUtils : public TTestCase
 
 void __fastcall TTestTextUtils::SetUp() {
 
+    LOGGER_CLEAR_LOG();
 	LOGGER_LOG("Starting test...");
 
 	}
@@ -72,11 +74,11 @@ void __fastcall TTestTextUtils::TestisEndChar()
     
 void __fastcall TTestTextUtils::TesttrimCharacters()
 {
-//
-//    LOGGER_LOG("Expected: Ferrari Result: " + TextUtils::trimCharacters("\"Ferrari\"", L'\"'));
-//	CheckEquals(UnicodeString("Ferrari"), TextUtils::trimCharacters("\"Ferrari\"", L'\"'));
 
-        LOGGER_LOG("Expected: Result: " + TextUtils::trimCharacters("\"\"", L'\"'));
+    LOGGER_LOG("Expected: Ferrari Result: " + TextUtils::trimCharacters("\"Ferrari\"", L'\"'));
+	CheckEquals(UnicodeString("Ferrari"), TextUtils::trimCharacters("\"Ferrari\"", L'\"'));
+
+	LOGGER_LOG("Expected: Result: " + TextUtils::trimCharacters("\"\"", L'\"'));
 	CheckEquals(UnicodeString(""), TextUtils::trimCharacters("\"\"", L'\"'));
 
 	LOGGER_LOG("Expected: Fast & Furious Result: " + TextUtils::trimCharacters("   Fast & Furious  ", L' '));
@@ -85,13 +87,13 @@ void __fastcall TTestTextUtils::TesttrimCharacters()
 
 void __fastcall TTestTextUtils::TestsplitToTokens() {
 
-   std::vector<UnicodeString> testValue = TextUtils::splitToTokens("Back to the future");
-   UnicodeString expectedValue[] = {"Back", "to", "the", "future"};
+   std::vector<UnicodeString> testValue = TextUtils::splitToTokens("first$second", '$');
+   UnicodeString expectedValue[] = {"first", "second"};
 
    for (int i = 0; i < testValue.size();  i++) {
 
-   	LOGGER_LOG(IntToStr((int)i+1) + "/ Expected: " + expectedValue[i] + " Result:" + testValue[i]);
-    CheckEquals(testValue[i], expectedValue[i]);
+   	LOGGER_LOG(IntToStr((int)i+1) + "/ Expected: " + expectedValue[i] + " Result: " + testValue[i]);
+    CheckEquals(expectedValue[i], testValue[i]);
    }
 }
 
@@ -124,6 +126,19 @@ void __fastcall TTestTextUtils::TestreplaceChar() {
     LOGGER_LOG("Result: " + result);
     CheckEquals(result, L"Back\u00B7to\u00B7the\u00B7future");
 }
+
+void __fastcall TTestTextUtils::TestreplaceWordSeparator() {
+
+ 	UnicodeString testString = "back to the future";
+    UnicodeString separator = "·";
+
+    LOGGER_LOG("Test string: " + testString);
+    UnicodeString result = TextUtils::replaceWordSeparator(testString, separator);
+
+    LOGGER_LOG("Result: " + result);
+    CheckEquals(result, "back·to·the·future");
+}
+
 
 void __fastcall TTestTextUtils::TestcountCharsUntilWordBreak() {
 

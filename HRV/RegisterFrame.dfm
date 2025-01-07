@@ -1,40 +1,40 @@
 object FrRegister: TFrRegister
   Left = 0
   Top = 0
-  Width = 262
-  Height = 343
+  Width = 250
+  Height = 364
   TabOrder = 0
   object LUsername: TLabel
-    Left = 72
-    Top = 36
+    Left = 66
+    Top = 24
     Width = 56
     Height = 15
     Caption = 'Korisni'#269'ko ime'
   end
   object LPassword: TLabel
-    Left = 72
-    Top = 96
+    Left = 66
+    Top = 84
     Width = 53
     Height = 15
     Caption = 'Lozinka'
   end
   object LRepeatPassword: TLabel
-    Left = 72
-    Top = 156
+    Left = 66
+    Top = 144
     Width = 92
     Height = 15
     Caption = 'Ponovi lozinku'
   end
   object LAlreadyRegistered: TLabel
-    Left = 72
-    Top = 270
+    Left = 66
+    Top = 258
     Width = 100
     Height = 15
     Caption = 'Ve'#263' registriran?'
   end
   object LResponse: TLabel
-    Left = 72
-    Top = 210
+    Left = 66
+    Top = 198
     Width = 118
     Height = 15
     AutoSize = False
@@ -48,24 +48,24 @@ object FrRegister: TFrRegister
     ParentFont = False
   end
   object EPassword: TEdit
-    Left = 72
-    Top = 117
+    Left = 66
+    Top = 105
     Width = 118
     Height = 23
     TabOrder = 1
     OnChange = EPasswordChange
   end
   object EUsername: TEdit
-    Left = 72
-    Top = 57
+    Left = 66
+    Top = 45
     Width = 118
     Height = 23
     TabOrder = 0
     OnChange = EUsernameChange
   end
   object ERepeatPassword: TEdit
-    Left = 72
-    Top = 177
+    Left = 66
+    Top = 165
     Width = 118
     Height = 23
     PasswordChar = '*'
@@ -73,8 +73,8 @@ object FrRegister: TFrRegister
     OnChange = ERepeatPasswordChange
   end
   object BtRegister: TButton
-    Left = 72
-    Top = 231
+    Left = 66
+    Top = 219
     Width = 118
     Height = 25
     Caption = 'Registriraj se'
@@ -83,12 +83,23 @@ object FrRegister: TFrRegister
     OnClick = BtRegisterClick
   end
   object BtSignIn: TButton
-    Left = 72
-    Top = 291
+    Left = 66
+    Top = 279
     Width = 118
     Height = 25
     Caption = 'Prijavi se'
     TabOrder = 4
     OnClick = BtSignInClick
+  end
+  object CBRestAuth: TCheckBox
+    Left = 66
+    Top = 315
+    Width = 118
+    Height = 17
+    Caption = 'Resue credentials'
+    Checked = True
+    Enabled = False
+    State = cbChecked
+    TabOrder = 5
   end
 end

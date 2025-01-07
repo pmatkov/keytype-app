@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\KeyboardFrame.dfm" source-language="hr-HR" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\KeyboardFrame.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">45439.9149537037</prop>
+        <prop prop-type="OrigDateTime">45439.9141435185</prop>
+        <prop prop-type="XlatDateTime">45439.8357638889</prop>
+        <prop prop-type="Translated">0</prop>
+        <prop prop-type="UnTranslated">9</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:FrKeyboard.Left" resname="O:FrKeyboard.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45439.837658588</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TFrKeyboard</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrKeyboard.Top" resname="O:FrKeyboard.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45439.837658588</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TFrKeyboard</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrKeyboard.Width" resname="O:FrKeyboard.Width">
+        <source>332</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45439.837658588</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TFrKeyboard</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrKeyboard.Height" resname="O:FrKeyboard.Height">
+        <source>138</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45439.837658588</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TFrKeyboard</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrKeyboard.TabOrder" resname="O:FrKeyboard.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45439.837658588</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFrKeyboard</prop><prop prop-type="Localize">0</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrKeyboard.O:PKeyboardBase.Left" resname="O:FrKeyboard.O:PKeyboardBase.Left">
+        <source>6</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45439.837658588</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrKeyboard.O:PKeyboardBase.Top" resname="O:FrKeyboard.O:PKeyboardBase.Top">
+        <source>6</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45439.837658588</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrKeyboard.O:PKeyboardBase.Width" resname="O:FrKeyboard.O:PKeyboardBase.Width">
+        <source>320</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45439.837658588</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrKeyboard.O:PKeyboardBase.Height" resname="O:FrKeyboard.O:PKeyboardBase.Height">
+        <source>124</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45439.837658588</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrKeyboard.O:PKeyboardBase.TabOrder" resname="O:FrKeyboard.O:PKeyboardBase.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45439.837658588</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

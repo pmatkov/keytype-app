@@ -2,39 +2,39 @@ object FrExternalSources: TFrExternalSources
   Left = 0
   Top = 0
   Width = 504
-  Height = 360
+  Height = 400
   TabOrder = 0
   object LAuthor: TLabel
     Left = 148
-    Top = 207
+    Top = 246
     Width = 40
     Height = 15
     Caption = 'Author:'
   end
   object LTitle: TLabel
-    Left = 271
-    Top = 207
+    Left = 268
+    Top = 246
     Width = 25
     Height = 15
     Caption = 'Title:'
   end
   object LYear: TLabel
     Left = 394
-    Top = 207
+    Top = 246
     Width = 25
     Height = 15
     Caption = 'Year:'
   end
   object LParagraph: TLabel
     Left = 148
-    Top = 260
+    Top = 299
     Width = 57
     Height = 15
     Caption = 'Paragraph:'
   end
   object TVLiteratureCategories: TTreeView
-    Left = 3
-    Top = 3
+    Left = 6
+    Top = 6
     Width = 136
     Height = 337
     HideSelection = False
@@ -58,10 +58,10 @@ object FrExternalSources: TFrExternalSources
       0073006F00700068007900}
   end
   object LVLiteratureDetails: TListView
-    Left = 145
-    Top = 3
-    Width = 351
-    Height = 94
+    Left = 148
+    Top = 6
+    Width = 348
+    Height = 115
     Columns = <
       item
         Caption = 'Author'
@@ -84,10 +84,10 @@ object FrExternalSources: TFrExternalSources
     OnSelectItem = LVLiteratureDetailsSelectItem
   end
   object MParagraph: TMemo
-    Left = 145
-    Top = 106
-    Width = 351
-    Height = 84
+    Left = 148
+    Top = 132
+    Width = 348
+    Height = 94
     Lines.Strings = (
       '')
     ReadOnly = True
@@ -95,60 +95,60 @@ object FrExternalSources: TFrExternalSources
     TabOrder = 2
   end
   object EAuthor: TEdit
-    Left = 145
-    Top = 228
-    Width = 108
+    Left = 148
+    Top = 267
+    Width = 105
     Height = 23
     TabOrder = 3
   end
   object ETitle: TEdit
-    Left = 265
-    Top = 228
-    Width = 111
+    Left = 268
+    Top = 267
+    Width = 105
     Height = 23
     TabOrder = 4
   end
   object EYear: TEdit
-    Left = 388
-    Top = 228
-    Width = 108
+    Left = 391
+    Top = 267
+    Width = 105
     Height = 23
     TabOrder = 5
   end
   object EParagraph: TEdit
-    Left = 145
-    Top = 281
-    Width = 351
+    Left = 148
+    Top = 320
+    Width = 348
     Height = 23
     TabOrder = 6
   end
-  object BtDelete2: TButton
-    Left = 364
-    Top = 317
+  object BtDelete: TButton
+    Left = 361
+    Top = 356
     Width = 58
     Height = 23
     Caption = 'Delete'
     Enabled = False
     TabOrder = 7
-    OnClick = BtDelete2Click
+    OnClick = BtDeleteClick
   end
-  object BtAddSave2: TButton
+  object BtAddSave: TButton
     Left = 438
-    Top = 317
+    Top = 356
     Width = 58
     Height = 23
     Caption = 'Add'
     TabOrder = 8
-    OnClick = BtAddSave2Click
+    OnClick = BtAddSaveClick
   end
   object XMLTransform: TXMLTransform
-    Left = 282
-    Top = 138
+    Left = 36
+    Top = 222
   end
   object XMLDocument: TXMLDocument
     NodeIndentStr = #9
     Options = [doNodeAutoCreate, doNodeAutoIndent, doAttrNull, doAutoPrefix, doNamespaceDecl]
-    Left = 378
-    Top = 142
+    Left = 39
+    Top = 286
   end
 end

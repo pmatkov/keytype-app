@@ -24,7 +24,8 @@ void __fastcall GameThread::Execute()
 	while  (!Terminated) {
 		auto end = std::chrono::high_resolution_clock::now();
 
-		// create new words if none available
+		// create new words
+
 		if (!gameEngine.getWords().size() && !gameEngine.getWordsOnDisplay().size() && \
 			std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() > batchDelay) {
 
@@ -32,11 +33,13 @@ void __fastcall GameThread::Execute()
 			batchDelay = 2000;
 			start = std::chrono::high_resolution_clock::now();
 		}
-		// prepare words for display
+
 		if (gameEngine.getWords().size() && \
 			std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() > wordDelay) {
 
             FlyingWord word = gameEngine.getFirstWord();
+
+            // display word in initial position
 
 			Synchronize([this, word]() {
 				UnicodeString text = word.getText();
@@ -64,7 +67,7 @@ void __fastcall GameThread::Execute()
 
 		}
 
-        // display or remove words
+        // move or remove words
         mutexWords.Acquire();
 
 		if (gameEngine.getWordsOnDisplay().size()) {
@@ -85,6 +88,8 @@ void __fastcall GameThread::Execute()
 				int limitBottom = word.getInnerLimit().getBottom();
 				int moveDown = limitBottom > y + (static_cast<int>(word.getSpeed())) ? static_cast<int>(word.getSpeed()) : limitBottom - y;
 
+                // calculate new word position
+
 				if (moveRight) {
 
 					if (word.getDirection() == Direction::Neutral && word.getMaxHDistance()) {
@@ -103,6 +108,8 @@ void __fastcall GameThread::Execute()
 					   word.setMaxHDistance(Random::getRandom(0, (word.getOuterLimit().getRight() - word.getPosition().getX()) / 2));
 					}
 
+                    // move word to new position
+
 					Synchronize([this, word, i]() {
 						int x = word.getPosition().getX();
 						int y = word.getPosition().getY();
@@ -111,6 +118,9 @@ void __fastcall GameThread::Execute()
                      gameEngine.replaceWordOnDisplay(i, word);
 
 				}
+
+                // remove word if no more space to move
+
                 else {
 					Synchronize([this, i]() {gameDisplay.removeTextControl(i);});
 					gameEngine.removeWordOnDisplay(i);

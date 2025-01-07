@@ -16,13 +16,16 @@
 
 namespace CryptoUtils {
 
+    UnicodeString generateSHA256Hash(const UnicodeString& string);
 	UnicodeString generateSHA512Hash(const UnicodeString& string);
 
     UnicodeString generateRandomSalt(int lengthBytes);
     UnicodeString byteToHex(unsigned char byte);
 
+    UnicodeString generateSalt(const UnicodeString& input);
+
     std::unique_ptr<TCryptographicLibrary> createCryptoLib();
-    std::unique_ptr<TSignatory>createSignatory();
+    std::unique_ptr<TSignatory>createSignatory(TCodec *codec);
 
     std::unique_ptr<TCodec> createAESCodec(TCryptographicLibrary *cryptoLibrary);
     std::unique_ptr<TCodec> createRSACodec(TCryptographicLibrary *cryptoLibrary);
@@ -38,7 +41,16 @@ namespace CryptoUtils {
     void encryptStreamRSA(TCodec *codec, TSignatory *signatory, const UnicodeString &path, TStream *streamIn, TStream *streamOut);
     void decryptStreamRSA(TCodec *codec, TSignatory *signatory, const UnicodeString &path, TStream *streamIn, TStream *streamOut);
 
+    UnicodeString createSignature(TSignatory *signatory, const UnicodeString &path, const UnicodeString &string, bool isToken);
+    bool verifySignature(TSignatory *signatory, const UnicodeString &path, const UnicodeString &string, const UnicodeString &signature, bool isToken);
 
+    UnicodeString encodeStringToBase64(const UnicodeString &string);
+    UnicodeString decodeBase64ToString(const UnicodeString &b64string);
+    UnicodeString encodeStringToBase64URL(const UnicodeString &string);
+    UnicodeString decodeBase64URLToString(const UnicodeString &b64string);
+
+    UnicodeString createToken(const UnicodeString& keyPath, const UnicodeString &username, const UnicodeString &role);
+    bool verifyToken(const UnicodeString& keyPath, const UnicodeString &token);
 
 
 }

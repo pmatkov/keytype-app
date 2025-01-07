@@ -27,6 +27,13 @@ enum class SeparatorType {
 	Unknown
 };
 
+enum class KeyboardLayout {
+    QWERTZ,
+	Dvorak,
+    Count,
+	Unknown
+};
+
 class TypingSettings: public ISettings {
 
     private:
@@ -35,15 +42,17 @@ class TypingSettings: public ISettings {
 
         UnicodeString fontFamily;
         int fontSize;
+        KeyboardLayout keyboardLayout;
 
         bool stopOnMistake;
         bool countConsecutiveMistakes;
         bool displaySpeed;
         bool displayAccuracy;
 
-    	UnicodeString section = "";
+    	UnicodeString username = "";
         static std::vector<UnicodeString> caretTypeStrings;
         static std::vector<UnicodeString> separatorTypeStrings;
+        static std::vector<UnicodeString> keyboardLayoutStrings;
 
     public:
         TypingSettings();
@@ -56,6 +65,9 @@ class TypingSettings: public ISettings {
 
         const UnicodeString& getFontFamily() const;
         void setFontFamily(const UnicodeString& _fontFamily);
+
+        const KeyboardLayout& getKeyboardLayout() const;
+		void setKeyboardLayout(const KeyboardLayout &_keyboardLayout);
 
         int getFontSize() const;
         void setFontSize(int _fontSize);
@@ -78,6 +90,7 @@ class TypingSettings: public ISettings {
 
         static const std::vector<UnicodeString>& getCaretTypeStrings();
         static const std::vector<UnicodeString>& getSeparatorTypeStrings();
+        static const std::vector<UnicodeString>& getKeyboardLayoutStrings();
 
 };
 

@@ -1,8 +1,6 @@
 //---------------------------------------------------------------------------
 
 #include <vcl.h>
-#include <vector>
-#include <optional>
 #pragma hdrstop
 
 #include "LogsForm.h"
@@ -12,6 +10,9 @@
 #include "Logger.h"
 #include "EDirNotFoundException.h"
 #include "ENullPointerException.h"
+
+#include <vector>
+#include <optional>
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -28,90 +29,96 @@ __fastcall TFLogs::TFLogs(TComponent* Owner, AuthenticationService *_authService
 
     if (_authService && _dataModule) {
 
-           authService = _authService;
-           dataModule = _dataModule;
+       authService = _authService;
+       dataModule = _dataModule;
 
-           LOGGER(LogLevel::Debug, "Created logs form");
+       LOGGER(LogLevel::Debug, "Created logs form");
 	}
     else {
-        throw CustomExceptions::ENullPointerException();
+       throw CustomExceptions::ENullPointerException();
     }
 
 }
-//---------------------------------------------------------------------------
-void __fastcall TFLogs::LVLogDatesSelectItem(TObject *Sender, TListItem *Item, bool Selected)
-{
-	if (LVLogDates->Selected) {
-    	updateLogViewer(LVLogDates->ItemIndex);
-    }
-}
 
+void TFLogs::updateLogBrowser(int index) {
 
-void TFLogs::updateLogViewer(int index) {
+    // read log file
+
+    std::optional<std::vector<UnicodeString>> encryptedLogEntries = FileUtils::readFromTextFileByLine(FileUtils::createAbsolutePath("Log", false) + LVLogFiles->Selected->Caption);
 
 	MLogs->Clear();
-
-    std::optional<std::vector<UnicodeString>> fileContents = FileUtils::readFromTextFileByLine(FileUtils::createAbsolutePath("Log", false) + LVLogDates->Selected->Caption);
-
 	MLogs->Lines->BeginUpdate();
 
-    if (fileContents.has_value()) {
+    if (encryptedLogEntries.has_value()) {
 
-        for (const UnicodeString &string: *fileContents) {
-           MLogs->Lines->Add(string);
+        for (const UnicodeString &encryptedEntry: *encryptedLogEntries) {
+
+            // decrpyt log entries
+
+           UnicodeString decryptedEntry = CryptoUtils::decryptStringAES(encryptedEntry);
+           MLogs->Lines->Add(decryptedEntry);
          }
     }
 
     MLogs->Lines->EndUpdate();
 }
 
-void __fastcall TFLogs::LVLogDatesMouseDown(TObject *Sender, TMouseButton Button, TShiftState Shift, int X, int Y)
+void __fastcall TFLogs::LVLogFilesSelectItem(TObject *Sender, TListItem *Item, bool Selected)
+{
+	if (LVLogFiles->Selected) {
+    	updateLogBrowser(LVLogFiles->ItemIndex);
+    }
+}
+
+void __fastcall TFLogs::LVLogFilesMouseDown(TObject *Sender, TMouseButton Button, TShiftState Shift, int X, int Y)
 {
 
-	if (LVLogDates->SelCount > 1) {
+	if (LVLogFiles->SelCount > 1) {
 
 		TItemStates selected = TItemStates() << isSelected;
-		TListItem *Item = LVLogDates->GetNextItem(Item, sdAll, selected);
+		TListItem *Item = LVLogFiles->GetNextItem(Item, sdAll, selected);
 
 		while (Item) {
 			Item->Selected = false;
-			Item = LVLogDates->GetNextItem(Item, sdAll, selected);
+			Item = LVLogFiles->GetNextItem(Item, sdAll, selected);
 		}
 	}
-	else if (!LVLogDates->SelCount) {
+	else if (!LVLogFiles->SelCount) {
 
-		if (LVLogDates->ItemFocused) {
-           LVLogDates->ItemFocused->Focused = false;
+		if (LVLogFiles->ItemFocused) {
+           LVLogFiles->ItemFocused->Focused = false;
 		}
         MLogs->Clear();
 	}
 }
-//---------------------------------------------------------------------------
 
 void __fastcall TFLogs::FormActivate(TObject *Sender)
 {
-	std::optional<std::vector<UnicodeString>> fileNames;
+
+    // get list of log files
+
+	std::optional<std::vector<UnicodeString>> logs;
    	UnicodeString dirPath = FileUtils::createAbsolutePath("Log", false);
 
     try {
-        fileNames = FileUtils::getFileNames(dirPath, "log");
+        logs = FileUtils::getFiles(dirPath, "log");
     } catch (CustomExceptions::EDirNotFoundException &ex) {
          throw Exception("Log dir not found");
     }
 
-    if (fileNames.has_value()) {
+    if (logs.has_value()) {
 
-        std::vector<UnicodeString> logInfos;
+        std::vector<UnicodeString> logDetails;
 
-        for (const UnicodeString &fileName: *fileNames) {
+        for (const UnicodeString &log: *logs) {
 
-        	UnicodeString fileAge = FileUtils::getFileAge(FileUtils::createAbsolutePath("Log", false) + fileName);
-           	UnicodeString fileSize = FileUtils::getFileSize(FileUtils::createAbsolutePath("Log", false) + fileName);
+        	UnicodeString fileAge = FileUtils::getFileAge(FileUtils::createAbsolutePath("Log", false) + log);
+           	UnicodeString fileSize = FileUtils::getFileSize(FileUtils::createAbsolutePath("Log", false) + log);
 
-            logInfos.insert(logInfos.end(), {fileName, fileAge, fileSize});
+            logDetails.insert(logDetails.end(), {log, fileAge, fileSize});
         }
 
-    	UIUtils::setListViewItems(LVLogDates, logInfos, 3);
+    	UIUtils::setListViewItems(LVLogFiles, logDetails, 3);
     }
     else {
     	LOGGER(LogLevel::Info, "No logs found");

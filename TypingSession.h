@@ -40,16 +40,16 @@ class TypingSession : public Session {
 
 	private:
 		TextSource textSource;
-        UnicodeString instructions;
 
-        int charCount;
         int wordCount;
+        int charCount;
 
-        double speed = 0;
         double accuracy = 100;
+        double speed = 0;
+
+        std::map<wchar_t, KeyStatistics> keyStatistics;
 
         std::vector<double> speedReadings;
-        std::map<wchar_t, KeyStatistics> keyStatistics;
 
         int typedWords = 0;
 		int mistakes = 0;
@@ -61,6 +61,8 @@ class TypingSession : public Session {
         int goalValue;
         int difficulty;
 
+        bool virtualKeyboardVisible = false;
+
         static std::vector<UnicodeString> sessionStatusStrings;
         static std::vector<UnicodeString> sessionTypeStrings;
         static std::vector<UnicodeString> lessonGoalStrings;
@@ -71,10 +73,17 @@ class TypingSession : public Session {
 		const TextSource& getTextSource() const;
 		void setTextSource(const TextSource& _textSource);
 
-        int getCharCount() const;
-        void setCharCount(int _charCount);
         int getWordCount() const;
         void setWordCount(int _wordCount);
+        int getCharCount() const;
+        void setCharCount(int _charCount);
+
+        double getAccuracy();
+        void calculateAccuracy();
+
+        double getSpeed();
+        double getAvgSpeed();
+        void calculateSpeed();
 
         void increaseCorrectKey(wchar_t key);
         void increaseMistakeKey(wchar_t key);
@@ -88,13 +97,6 @@ class TypingSession : public Session {
 		int getMistakes() const;
 		void setMistakes(int _mistakes);
 		void increaseMistakes();
-
-        double getAccuracy();
-        void calculateAccuracy();
-
-        double getSpeed();
-        double getAvgSpeed();
-        void calculateSpeed();
 
         const SessionStatus& getSessionStatus() const;
         void setSessionStatus(const SessionStatus &_sessionStatus);
@@ -110,6 +112,9 @@ class TypingSession : public Session {
 
         int getDifficulty() const;
         void setDifficulty(int _difficulty);
+
+        void setVirtualKeyboardVisible(bool _virtualKeyboardVisible);
+        bool isVirtualKeyboardVisible();
 
         void initializeSession();
         void resetSession();

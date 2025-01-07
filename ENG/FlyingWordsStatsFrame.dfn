@@ -5,9 +5,9 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45425.0010185185</prop>
-        <prop prop-type="OrigDateTime">45424.9749768519</prop>
-        <prop prop-type="XlatDateTime">45424.9749768519</prop>
+        <prop prop-type="SelfDateTime">45479.7589351852</prop>
+        <prop prop-type="OrigDateTime">45479.7588657407</prop>
+        <prop prop-type="XlatDateTime">45430.7315740741</prop>
         <prop prop-type="Translated">0</prop>
         <prop prop-type="UnTranslated">54</prop>
       </prop-group>
@@ -39,7 +39,7 @@
         <prop prop-type="Created">45408.0166741898</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFrFlyingWordsStats</prop><prop prop-type="Localize">0</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrFlyingWordsStats.O:LLastWord.Left" resname="O:FrFlyingWordsStats.O:LLastWord.Left">
-        <source>18</source>
+        <source>15</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45408.0166741898</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -79,7 +79,7 @@
         <prop prop-type="Created">45408.0166741898</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrFlyingWordsStats.O:LLastWordDisplay.Width" resname="O:FrFlyingWordsStats.O:LLastWordDisplay.Width">
-        <source>100</source>
+        <source>110</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45408.0166741898</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -99,7 +99,7 @@
         <prop prop-type="Created">45408.0166741898</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrFlyingWordsStats.O:LTimeRemaining.Left" resname="O:FrFlyingWordsStats.O:LTimeRemaining.Left">
-        <source>349</source>
+        <source>355</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45408.0166741898</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -129,7 +129,7 @@
         <prop prop-type="Created">45408.0166741898</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrFlyingWordsStats.O:LTimeRemainingDisplay.Left" resname="O:FrFlyingWordsStats.O:LTimeRemainingDisplay.Left">
-        <source>441</source>
+        <source>447</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45408.0166741898</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -159,7 +159,7 @@
         <prop prop-type="Created">45408.0166741898</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrFlyingWordsStats.O:LMatchCount.Left" resname="O:FrFlyingWordsStats.O:LMatchCount.Left">
-        <source>194</source>
+        <source>200</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45408.0166741898</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -189,7 +189,7 @@
         <prop prop-type="Created">45408.0166741898</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrFlyingWordsStats.O:LPointsDisplay.Left" resname="O:FrFlyingWordsStats.O:LPointsDisplay.Left">
-        <source>547</source>
+        <source>553</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45408.0166741898</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -219,7 +219,7 @@
         <prop prop-type="Created">45408.0166741898</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrFlyingWordsStats.O:LPoints.Left" resname="O:FrFlyingWordsStats.O:LPoints.Left">
-        <source>505</source>
+        <source>511</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45408.0166741898</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -249,7 +249,7 @@
         <prop prop-type="Created">45408.0166741898</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrFlyingWordsStats.O:LMatchCountDisplay.Left" resname="O:FrFlyingWordsStats.O:LMatchCountDisplay.Left">
-        <source>287</source>
+        <source>293</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45408.0166741898</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -279,12 +279,12 @@
         <prop prop-type="Created">45408.0166741898</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrFlyingWordsStats.O:TMsgDisplayTimer.Left" resname="O:FrFlyingWordsStats.O:TMsgDisplayTimer.Left">
-        <source>582</source>
+        <source>333</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45408.0166741898</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrFlyingWordsStats.O:TMsgDisplayTimer.Top" resname="O:FrFlyingWordsStats.O:TMsgDisplayTimer.Top">
-        <source>9</source>
+        <source>3</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45408.0166741898</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>

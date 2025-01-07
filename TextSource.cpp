@@ -1,16 +1,13 @@
 //---------------------------------------------------------------------------
+
+#pragma hdrstop
+
 #include "TextSource.h"
 #include "TextUtils.h"
-//---------------------------------------------------------------------------
-#pragma hdrstop
+
 #pragma package(smart_init)
 
-TextSource::TextSource() {
-
-	text = "The quick brown fox jumps over the lazy dog";
-	wordCount = TextUtils::countWords(text);
-    charCount = text.Length();
-}
+TextSource::TextSource() {}
 
 TextSource::TextSource(UnicodeString _text) : text(_text) {
 
@@ -43,7 +40,6 @@ int TextSource::getCharCount() const {
 const UnicodeString& TextSource::getCurrentWord() const {
 	return currentWord;
 }
-
 
 wchar_t TextSource::operator[](int index) const {
    if (index >= 1 && index <= text.Length()) {

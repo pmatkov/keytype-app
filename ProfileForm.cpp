@@ -7,6 +7,7 @@
 #include "FileUtils.h"
 #include "UIUtils.h"
 #include "CryptoUtils.h"
+#include "Random.h"
 #include "Logger.h"
 #include "ENullPointerException.h"
 //---------------------------------------------------------------------------
@@ -25,8 +26,6 @@ __fastcall TFProfile::TFProfile(TComponent* Owner, MainSession *_mainSession, Au
 
         UIUtils::enableChildControls(GBProfile, false);
 
-        EAge->Field->Alignment = taLeftJustify;
-
         DFileOpen->InitialDir = FileUtils::createAbsolutePath("Images", false);
     	DFileOpen->Filter = "Image Files(*jpg; *.png)|*.jpg;*.png";
 
@@ -37,6 +36,20 @@ __fastcall TFProfile::TFProfile(TComponent* Owner, MainSession *_mainSession, Au
     }
 
 }
+
+void __fastcall TFProfile::FormActivate(TObject *Sender)
+{
+     if (mainSession && authService && dataModule) {
+
+     	EAge->Alignment = taLeftJustify;
+
+        // set active record in dataset
+
+        dataModule->TUsers->Locate("username", authService->getUser().getUsername(), TLocateOptions());
+     }
+}
+
+// edit profile
 
 void __fastcall TFProfile::BtEditSaveClick(TObject *Sender)
 {
@@ -53,41 +66,33 @@ void __fastcall TFProfile::BtEditSaveClick(TObject *Sender)
     }
      else if (BtEditSave->Caption == "Save profile" || BtEditSave->Caption == "Spremi profil") {
 
-     	int userID;
+        int userID;
 
-     	if (dataModule->TUsers->Locate("username", authService->getUser().getUsername(), TLocateOptions())) {
+        if (dataModule->TUsers->Locate("username", authService->getUser().getUsername(), TLocateOptions())) {
 
-        	userID = dataModule->TUsers->FieldByName("id")->AsInteger;
-
-            if (EUsername->Text != dataModule->getColumnValue(dataModule->TUsers, "username", userID)) {
-
-                if (dataModule->TUsers->Locate("username", authService->getUser().getUsername(), TLocateOptions())) {
-                    ShowMessage("Username already registered.");
-                    return ;
-                }
-            }
+            userID = dataModule->TUsers->FieldByName("id")->AsInteger;
         }
 
+        UnicodeString salt = CryptoUtils::generateSalt(EUsername->Text);
+        UnicodeString hashedSalt = CryptoUtils::generateSHA256Hash(salt);
 
-        UnicodeString salt = dataModule->getColumnValue(dataModule->TUsers, "salt", userID);
-        UnicodeString hashedPassword = CryptoUtils::generateSHA512Hash(EPassword->Text + salt);
         UnicodeString oldPassword = dataModule->getColumnValue(dataModule->TUsers, "password", userID);
+        UnicodeString password = EPassword->Text != "" ? CryptoUtils::generateSHA512Hash(IntToStr(Random::getRandom(1, 100)) + EPassword->Text + hashedSalt) : oldPassword;
 
         dataModule->TUsers->Edit();
-     	dataModule->TUsers->FieldByName("username")->AsString = EUsername->Text;
-     	dataModule->TUsers->FieldByName("password")->AsString = EPassword->Text != "" ? hashedPassword : oldPassword;
-     	dataModule->TUsers->FieldByName("name")->AsString = EName->Text;
-     	dataModule->TUsers->FieldByName("surname")->AsString = ESurname->Text;
-     	dataModule->TUsers->FieldByName("email")->AsString = EEmail->Text;
+        dataModule->TUsers->FieldByName("password")->AsString = password;
+        dataModule->TUsers->FieldByName("name")->AsString = EName->Text;
+        dataModule->TUsers->FieldByName("surname")->AsString = ESurname->Text;
+        dataModule->TUsers->FieldByName("email")->AsString = EEmail->Text;
 
         if (!EAge->Text.IsEmpty()) {
-        	dataModule->TUsers->FieldByName("age")->AsInteger = StrToInt(EAge->Text);
+            dataModule->TUsers->FieldByName("age")->AsInteger = StrToInt(EAge->Text);
         }
         else {
              dataModule->TUsers->FieldByName("age")->Clear();
         }
 
-    	dataModule->TUsers->Post();
+        dataModule->TUsers->Post();
 
         if (mainSession->getAppSettings().getLanguage() == Language::English) {
     		UIUtils::displayTimedMessage(msgDisplayTimer, LInfo, "Profile saved");
@@ -109,7 +114,8 @@ void __fastcall TFProfile::BtEditSaveClick(TObject *Sender)
 
      }
 }
-//---------------------------------------------------------------------------
+
+
 void __fastcall TFProfile::BtChangeImageClick(TObject *Sender)
 {
 
@@ -119,17 +125,21 @@ void __fastcall TFProfile::BtChangeImageClick(TObject *Sender)
 
         std::unique_ptr<TFileStream> fileStream = std::make_unique<TFileStream>(DFileOpen->FileName, fmOpenRead);
 
-        dataModule->TUsers->Edit();
+        if (dataModule->TUsers && dataModule->TUsers->Active && !dataModule->TUsers->IsEmpty()) {
 
-        try {
-            std::unique_ptr<TStream> blobStream(dataModule->TUsers->CreateBlobStream(dataModule->TUsers->FieldByName("profileImage"), bmWrite));
-            blobStream->CopyFrom(fileStream.get(), fileStream->Size);
-            blobStream.reset();
-            dataModule->TUsers->Post();
-        }
-        catch (const Exception &) {
-            dataModule->TUsers->Cancel();
-            throw;
+            dataModule->TUsers->Edit();
+
+            try {
+                std::unique_ptr<TStream> blobStream(dataModule->TUsers->CreateBlobStream(dataModule->TUsers->FieldByName("profileImage"), bmWrite));
+                blobStream->CopyFrom(fileStream.get(), fileStream->Size);
+                blobStream.reset();
+
+                dataModule->TUsers->Post();
+            }
+            catch (const Exception &) {
+                dataModule->TUsers->Cancel();
+                throw;
+            }
         }
       }
     }
@@ -138,15 +148,17 @@ void __fastcall TFProfile::BtChangeImageClick(TObject *Sender)
 
 void __fastcall TFProfile::BtDeleteImageClick(TObject *Sender)
 {
-	dataModule->TUsers->Edit();
+    dataModule->TUsers->Edit();
     dataModule->TUsers->FieldByName("profileImage")->Clear();
     dataModule->TUsers->Post();
 
 }
-//---------------------------------------------------------------------------
+
+// delete profile
 
 void __fastcall TFProfile::BtDeleteClick(TObject *Sender)
 {
+
 	dataModule->TUsers->Delete();
 
     if (mainSession->getAppSettings().getLanguage() == Language::English) {
@@ -158,14 +170,6 @@ void __fastcall TFProfile::BtDeleteClick(TObject *Sender)
     }
 }
 
-void __fastcall TFProfile::FormActivate(TObject *Sender)
-{
-     if (authService && mainSession && dataModule) {
-
-     	EAge->Alignment = taLeftJustify;
-        dataModule->TUsers->Locate("username", authService->getUser().getUsername(), TLocateOptions());
-     }
-}
 
 
 void __fastcall TFProfile::msgDisplayTimerTimer(TObject *Sender)

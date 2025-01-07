@@ -1,10 +1,11 @@
 //---------------------------------------------------------------------------
 #include <vcl.h>
+#pragma hdrstop
 
 #include "ExternalSourcesFrame.h"
 #include "FileUtils.h"
 //---------------------------------------------------------------------------
-#pragma hdrstop
+
 #pragma package(smart_init)
 #pragma resource "*.dfm"
 TFrExternalSources *FrExternalSources;
@@ -53,8 +54,8 @@ void __fastcall TFrExternalSources::TVLiteratureCategoriesChange(TObject *Sender
 void TFrExternalSources::updateListView(TTreeNode* Node)
 {
 	LVLiteratureDetails->Items->Clear();
-    BtAddSave2->Caption = "Add";
-    BtDelete2->Enabled = false;
+    BtAddSave->Caption = "Add";
+    BtDelete->Enabled = false;
 
 	if (!Node->HasChildren) {
 
@@ -114,8 +115,8 @@ void __fastcall TFrExternalSources::LVLiteratureDetailsSelectItem(TObject *Sende
 void __fastcall TFrExternalSources::LVLiteratureDetailsMouseDown(TObject *Sender, TMouseButton Button, TShiftState Shift, int X, int Y)
 {
 	if (LVLiteratureDetails->SelCount == 1) {
-    	BtAddSave2->Caption = "Save";
-    	BtDelete2->Enabled = true;
+    	BtAddSave->Caption = "Save";
+    	BtDelete->Enabled = true;
 	}
 	else if (LVLiteratureDetails->SelCount > 1) {
 
@@ -139,8 +140,8 @@ void __fastcall TFrExternalSources::LVLiteratureDetailsMouseDown(TObject *Sender
 
 void TFrExternalSources::resetFrameFields() {
 
-	BtAddSave2->Caption = "Add";
-    BtDelete2->Enabled = false;
+	BtAddSave->Caption = "Add";
+    BtDelete->Enabled = false;
 
     EAuthor->Text = "";
 	ETitle->Text = "";
@@ -149,18 +150,20 @@ void TFrExternalSources::resetFrameFields() {
 }
 
 
-void __fastcall TFrExternalSources::BtAddSave2Click(TObject *Sender)  {
+void __fastcall TFrExternalSources::BtAddSaveClick(TObject *Sender)  {
 
     if (!TVLiteratureCategories->Selected) {
-    	ShowMessage("Select a book genre.");
+    	ShowMessage("Select book genre");
         return;
     }
    	if (EAuthor->Text.IsEmpty() || ETitle->Text.IsEmpty() || EYear->Text.IsEmpty() || EParagraph->Text.IsEmpty()) {
-     	ShowMessage("Input fields should not be empty.");
+     	ShowMessage("Input fields should not be empty");
         return;
      }
 
-    if (BtAddSave2->Caption.Compare("Add") == 0) {
+    if (BtAddSave->Caption == "Add") {
+
+        // add book
 
        	_di_IXMLlibraryType library = Getlibrary(XMLDocument);
         TTreeNode *parentNode = TVLiteratureCategories->Selected->Parent;
@@ -177,14 +180,16 @@ void __fastcall TFrExternalSources::BtAddSave2Click(TObject *Sender)  {
         resetFrameFields();
     }
 
-    else if (BtAddSave2->Caption.Compare("Save") == 0)  {
+    else if (BtAddSave->Caption == "Save")  {
+
+        // edit book
 
     	_di_IXMLbookType book = booksInGenre[LVLiteratureDetails->ItemIndex];
 
-        if (EAuthor->Text.Compare(book->Get_author()) == 0 && ETitle->Text.Compare(book->Get_title()) == 0 \
-    		&& EYear->Text.Compare(IntToStr(book->Get_year())) == 0 && EParagraph->Text.Compare(book->Get_paragraph()) == 0) {
+        if (EAuthor->Text == book->Get_author() && ETitle->Text == book->Get_title() \
+    		&& EYear->Text == IntToStr(book->Get_year()) && EParagraph->Text == book->Get_paragraph()) {
 
-            ShowMessage("Nothing to save.");
+            ShowMessage("Nothing to save");
             return;
         }
         else {
@@ -204,15 +209,17 @@ void __fastcall TFrExternalSources::BtAddSave2Click(TObject *Sender)  {
         }
     }
 
+    // save changes
+
     XMLDocument->SaveToFile(XMLDocument->FileName);
     updateListView(TVLiteratureCategories->Selected);
 }
 
 
-void __fastcall TFrExternalSources::BtDelete2Click(TObject *Sender) {
+void __fastcall TFrExternalSources::BtDeleteClick(TObject *Sender) {
 
     if (!TVLiteratureCategories->Selected) {
-    	ShowMessage("Select a book genre.");
+    	ShowMessage("Select book genre");
         return;
     }
 
@@ -224,6 +231,9 @@ void __fastcall TFrExternalSources::BtDelete2Click(TObject *Sender) {
     std::vector<_di_IXMLbookType> books = mapOfBooks[TVLiteratureCategories->Selected->Text.LowerCase()];
     books.erase(books.begin() + LVLiteratureDetails->Selected->Index);
     mapOfBooks[TVLiteratureCategories->Selected->Text.LowerCase()] = books;
+
+
+    // save changes
 
     XMLDocument->SaveToFile(XMLDocument->FileName);
 

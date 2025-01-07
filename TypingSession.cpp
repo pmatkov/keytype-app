@@ -20,6 +20,14 @@ void TypingSession::setTextSource(const TextSource& _textSource) {
 	textSource = _textSource;
 }
 
+int TypingSession::getWordCount() const {
+    return wordCount;
+}
+
+void TypingSession::setWordCount(int _wordCount) {
+    wordCount = _wordCount;
+}
+
 int TypingSession::getCharCount() const {
     return charCount;
 }
@@ -28,12 +36,55 @@ void TypingSession::setCharCount(int _charCount) {
     charCount = _charCount;
 }
 
-int TypingSession::getWordCount() const {
-    return wordCount;
+double TypingSession::getSpeed() {
+
+	return speed;
 }
 
-void TypingSession::setWordCount(int _wordCount) {
-    wordCount = _wordCount;
+
+double TypingSession::getAvgSpeed() {
+
+    double sum = 0;
+    int readingsCount = speedReadings.size();
+
+    if (!readingsCount) {
+       return sum;
+    }
+
+    for (int sp: speedReadings) {
+      sum += sp;
+    }
+
+ 	return sum/ readingsCount;
+}
+
+// current speed = chars/ session time
+
+void TypingSession::calculateSpeed() {
+
+	long elapsedTime = getElapsedTime();
+
+	if ((textSource.getCharIndex()-1) && elapsedTime) {
+
+        speed = ((textSource.getCharIndex()-1)/ 5) /(elapsedTime/ 60.0);
+
+        // save current speed to buffer
+        speedReadings.push_back(speed);
+    }
+}
+
+double TypingSession::getAccuracy() {
+
+	return accuracy;
+}
+
+// current accuracy = (correct chars/ total chars) * 100
+
+void TypingSession::calculateAccuracy() {
+
+    if (textSource.getCharCount()) {
+        accuracy = ((double)(textSource.getCharCount() - mistakes) / textSource.getCharCount()) * 100.0;
+    }
 }
 
 void TypingSession::increaseCorrectKey(wchar_t key) {
@@ -78,50 +129,6 @@ void TypingSession::setMistakes(int _mistakes) {
 
 void TypingSession::increaseMistakes() {
 	mistakes++;
-}
-
-double TypingSession::getSpeed() {
-
-	return speed;
-}
-
-double TypingSession::getAvgSpeed() {
-
-    double sum = 0;
-    int readingsCount = speedReadings.size();
-
-    if (!readingsCount) {
-       return sum;
-    }
-
-    for (int sp: speedReadings) {
-      sum += sp;
-    }
-
- 	return sum/ readingsCount;
-}
-
-void TypingSession::calculateSpeed() {
-
-	long elapsedTime = getElapsedTime();
-
-	if ((textSource.getCharIndex()-1) && elapsedTime) {
-
-        speed = ((textSource.getCharIndex()-1)/ 5) /(elapsedTime/ 60.0);
-        speedReadings.push_back(speed);
-    }
-}
-
-double TypingSession::getAccuracy() {
-
-	return accuracy;
-}
-
-void TypingSession::calculateAccuracy() {
-
-    if (textSource.getCharCount()) {
-        accuracy = ((double)(textSource.getCharCount() - mistakes) / textSource.getCharCount()) * 100.0;
-    }
 }
 
 
@@ -177,9 +184,19 @@ const std::vector<UnicodeString>& TypingSession::getLessonGoalStrings() {
     return lessonGoalStrings;
 }
 
+void TypingSession::setVirtualKeyboardVisible(bool _virtualKeyboardVisible) {
+    virtualKeyboardVisible = _virtualKeyboardVisible;
+}
+
+
+bool TypingSession::isVirtualKeyboardVisible() {
+     return virtualKeyboardVisible;
+}
+
+
 void TypingSession::initializeSession() {
 
-    startSessionTimer();
+    startTimer();
 }
 
 void TypingSession::resetSession() {
@@ -190,7 +207,7 @@ void TypingSession::resetSession() {
     mistakes = 0;
     speedReadings.clear();
     keyStatistics.clear();
-    stopSessionTimer();
+    stopTimer();
 }
 
 std::vector<UnicodeString> TypingSession::sessionStatusStrings = {"initialized", "started", "completed",  "reset"};

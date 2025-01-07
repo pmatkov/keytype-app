@@ -3,7 +3,7 @@ object FProfile: TFProfile
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'Profile'
+  Caption = 'Profil'
   ClientHeight = 306
   ClientWidth = 380
   Color = clBtnFace
@@ -19,28 +19,28 @@ object FProfile: TFProfile
     Top = 42
     Width = 56
     Height = 15
-    Caption = 'Username:'
+    Caption = 'Korisni'#269'ko ime:'
   end
   object LPassword: TLabel
     Left = 147
     Top = 75
     Width = 53
     Height = 15
-    Caption = 'Password:'
+    Caption = 'Lozinka:'
   end
   object LName: TLabel
     Left = 147
     Top = 111
     Width = 35
     Height = 15
-    Caption = 'Name:'
+    Caption = 'Ime:'
   end
   object LSurname: TLabel
     Left = 147
     Top = 147
     Width = 50
     Height = 15
-    Caption = 'Surname:'
+    Caption = 'Prezime:'
   end
   object LEmail: TLabel
     Left = 147
@@ -54,7 +54,7 @@ object FProfile: TFProfile
     Top = 216
     Width = 24
     Height = 15
-    Caption = 'Age:'
+    Caption = 'Godine:'
   end
   object LInfo: TLabel
     Left = 25
@@ -68,98 +68,99 @@ object FProfile: TFProfile
     Top = 270
     Width = 85
     Height = 25
-    Caption = 'Edit profile'
+    Caption = 'Uredi profil'
     TabOrder = 0
     OnClick = BtEditSaveClick
   end
   object BtChangeImage: TButton
-    Left = 25
+    Left = 23
     Top = 152
-    Width = 85
+    Width = 90
     Height = 25
-    Caption = 'Change image'
+    Caption = 'Promijeni sliku'
     TabOrder = 1
     OnClick = BtChangeImageClick
   end
   object GBProfile: TGroupBox
     Left = 231
-    Top = 27
+    Top = 63
     Width = 139
-    Height = 220
+    Height = 178
     TabOrder = 3
     object EName: TDBEdit
       Left = 9
-      Top = 81
+      Top = 45
       Width = 121
       Height = 23
       DataField = 'name'
       DataSource = DataModule1.DUsers
-      TabOrder = 1
+      TabOrder = 0
     end
     object ESurname: TDBEdit
       Left = 9
-      Top = 117
+      Top = 81
       Width = 121
       Height = 23
       DataField = 'surname'
       DataSource = DataModule1.DUsers
-      TabOrder = 2
+      TabOrder = 1
     end
     object EEmail: TDBEdit
       Left = 9
-      Top = 150
+      Top = 114
       Width = 121
       Height = 23
       DataField = 'email'
       DataSource = DataModule1.DUsers
-      TabOrder = 3
+      TabOrder = 2
     end
     object EAge: TDBEdit
       Left = 9
-      Top = 183
+      Top = 147
       Width = 121
       Height = 23
       BiDiMode = bdLeftToRight
       DataField = 'age'
       DataSource = DataModule1.DUsers
       ParentBiDiMode = False
-      TabOrder = 4
-    end
-    object EUsername: TDBEdit
-      Left = 9
-      Top = 12
-      Width = 121
-      Height = 23
-      DataField = 'username'
-      DataSource = DataModule1.DUsers
-      TabOrder = 0
+      TabOrder = 3
     end
     object EPassword: TEdit
       Left = 9
-      Top = 45
+      Top = 9
       Width = 121
       Height = 23
       PasswordChar = '*'
-      TabOrder = 5
+      TabOrder = 4
     end
   end
   object BtDeleteImage: TButton
-    Left = 25
+    Left = 23
     Top = 191
-    Width = 85
+    Width = 90
     Height = 25
-    Caption = 'Delete image'
+    Caption = 'Obri'#353'i sliku'
     TabOrder = 2
     OnClick = BtDeleteImageClick
   end
   object DBImage: TDBImage
-    Left = 17
+    Left = 13
     Top = 39
     Width = 100
     Height = 100
     DataField = 'profileImage'
     DataSource = DataModule1.DUsers
     TabOrder = 4
+  end
+  object EUsername: TDBEdit
+    Left = 240
+    Top = 39
+    Width = 121
+    Height = 23
+    DataField = 'username'
+    DataSource = DataModule1.DUsers
+    Enabled = False
+    TabOrder = 5
   end
   object DFileOpen: TOpenPictureDialog
     Left = 180

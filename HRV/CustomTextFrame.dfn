@@ -5,11 +5,11 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45415.9486805556</prop>
-        <prop prop-type="OrigDateTime">45415.938587963</prop>
-        <prop prop-type="XlatDateTime">45415.938587963</prop>
+        <prop prop-type="SelfDateTime">45445.248587963</prop>
+        <prop prop-type="OrigDateTime">45445.2480787037</prop>
+        <prop prop-type="XlatDateTime">45430.7315509259</prop>
         <prop prop-type="Translated">0</prop>
-        <prop prop-type="UnTranslated">4</prop>
+        <prop prop-type="UnTranslated">51</prop>
       </prop-group>
     </header>
     <body>
@@ -29,7 +29,7 @@
         <prop prop-type="Created">45346.949584456</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TFrCustomText</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrCustomText.Height" resname="O:FrCustomText.Height">
-        <source>360</source>
+        <source>400</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.949584456</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TFrCustomText</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -37,6 +37,241 @@
         <source>0</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.949584456</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFrCustomText</prop><prop prop-type="Localize">0</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:LInfo.Left" resname="O:FrCustomText.O:LInfo.Left">
+        <source>372</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45441.087042963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:LInfo.Top" resname="O:FrCustomText.O:LInfo.Top">
+        <source>294</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45441.087042963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:LInfo.Width" resname="O:FrCustomText.O:LInfo.Width">
+        <source>112</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45441.087042963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:LInfo.Height" resname="O:FrCustomText.O:LInfo.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45441.087042963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:LInfo.AutoSize" resname="O:FrCustomText.O:LInfo.AutoSize">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45441.087042963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:MText.Left" resname="O:FrCustomText.O:MText.Left">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45440.899124919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:MText.Top" resname="O:FrCustomText.O:MText.Top">
+        <source>219</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45440.899124919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:MText.Width" resname="O:FrCustomText.O:MText.Width">
+        <source>343</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45440.899124919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:MText.Height" resname="O:FrCustomText.O:MText.Height">
+        <source>160</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45440.899124919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:MText.TabOrder" resname="O:FrCustomText.O:MText.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45440.899124919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:BtAddSave.Left" resname="O:FrCustomText.O:BtAddSave.Left">
+        <source>378</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:BtAddSave.Top" resname="O:FrCustomText.O:BtAddSave.Top">
+        <source>219</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:BtAddSave.Width" resname="O:FrCustomText.O:BtAddSave.Width">
+        <source>90</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:BtAddSave.Height" resname="O:FrCustomText.O:BtAddSave.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:BtAddSave.Caption" resname="O:FrCustomText.O:BtAddSave.Caption">
+        <source>'Add'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:BtAddSave.TabOrder" resname="O:FrCustomText.O:BtAddSave.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:BtAddSave.OnClick" resname="O:FrCustomText.O:BtAddSave.OnClick">
+        <source>BtAddSaveClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:BtDelete.Left" resname="O:FrCustomText.O:BtDelete.Left">
+        <source>378</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:BtDelete.Top" resname="O:FrCustomText.O:BtDelete.Top">
+        <source>257</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:BtDelete.Width" resname="O:FrCustomText.O:BtDelete.Width">
+        <source>90</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:BtDelete.Height" resname="O:FrCustomText.O:BtDelete.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:BtDelete.Caption" resname="O:FrCustomText.O:BtDelete.Caption">
+        <source>'Delete'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:BtDelete.Enabled" resname="O:FrCustomText.O:BtDelete.Enabled">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45445.2486067708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:BtDelete.TabOrder" resname="O:FrCustomText.O:BtDelete.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:BtDelete.OnClick" resname="O:FrCustomText.O:BtDelete.OnClick">
+        <source>BtDeleteClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:LVCustomText.Left" resname="O:FrCustomText.O:LVCustomText.Left">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:LVCustomText.Top" resname="O:FrCustomText.O:LVCustomText.Top">
+        <source>9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:LVCustomText.Width" resname="O:FrCustomText.O:LVCustomText.Width">
+        <source>469</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:LVCustomText.Height" resname="O:FrCustomText.O:LVCustomText.Height">
+        <source>187</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:LVCustomText.Columns[0].Caption" resname="O:FrCustomText.O:LVCustomText.Columns[0].Caption">
+        <source>'id'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:LVCustomText.Columns[0].Width" resname="O:FrCustomText.O:LVCustomText.Columns[0].Width">
+        <source>30</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:LVCustomText.Columns[1].Caption" resname="O:FrCustomText.O:LVCustomText.Columns[1].Caption">
+        <source>'Text'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:LVCustomText.Columns[1].Width" resname="O:FrCustomText.O:LVCustomText.Columns[1].Width">
+        <source>320</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:LVCustomText.Columns[2].Caption" resname="O:FrCustomText.O:LVCustomText.Columns[2].Caption">
+        <source>'Date added'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:LVCustomText.Columns[2].Width" resname="O:FrCustomText.O:LVCustomText.Columns[2].Width">
+        <source>110</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:LVCustomText.MultiSelect" resname="O:FrCustomText.O:LVCustomText.MultiSelect">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:LVCustomText.ReadOnly" resname="O:FrCustomText.O:LVCustomText.ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:LVCustomText.RowSelect" resname="O:FrCustomText.O:LVCustomText.RowSelect">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:LVCustomText.TabOrder" resname="O:FrCustomText.O:LVCustomText.TabOrder">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:LVCustomText.ViewStyle" resname="O:FrCustomText.O:LVCustomText.ViewStyle">
+        <source>vsReport</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:LVCustomText.OnMouseDown" resname="O:FrCustomText.O:LVCustomText.OnMouseDown">
+        <source>LVCustomTextMouseDown</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:LVCustomText.OnSelectItem" resname="O:FrCustomText.O:LVCustomText.OnSelectItem">
+        <source>LVCustomTextSelectItem</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.0328383218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:msgDisplayTimer.Enabled" resname="O:FrCustomText.O:msgDisplayTimer.Enabled">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45441.087042963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:msgDisplayTimer.Interval" resname="O:FrCustomText.O:msgDisplayTimer.Interval">
+        <source>3000</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45442.0540305093</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:msgDisplayTimer.OnTimer" resname="O:FrCustomText.O:msgDisplayTimer.OnTimer">
+        <source>msgDisplayTimerTimer</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45441.1358475347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:msgDisplayTimer.Left" resname="O:FrCustomText.O:msgDisplayTimer.Left">
+        <source>413</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45441.087042963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrCustomText.O:msgDisplayTimer.Top" resname="O:FrCustomText.O:msgDisplayTimer.Top">
+        <source>315</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45441.087042963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
     </body>
   </file>

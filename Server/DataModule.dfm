@@ -1,6 +1,6 @@
 object DataModule2: TDataModule2
-  Height = 480
-  Width = 640
+  Height = 209
+  Width = 313
   object IdTCPServer: TIdTCPServer
     Bindings = <
       item
@@ -11,7 +11,18 @@ object DataModule2: TDataModule2
     OnConnect = IdTCPServerConnect
     OnDisconnect = IdTCPServerDisconnect
     OnExecute = IdTCPServerExecute
-    Left = 315
-    Top = 270
+    Left = 87
+    Top = 81
+  end
+  object IdUDPServer: TIdUDPServer
+    Bindings = <
+      item
+        IP = '0.0.0.0'
+        Port = 6501
+      end>
+    DefaultPort = 6501
+    OnUDPRead = IdUDPServerUDPRead
+    Left = 183
+    Top = 84
   end
 end

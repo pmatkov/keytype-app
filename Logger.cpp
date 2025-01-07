@@ -1,15 +1,9 @@
 //---------------------------------------------------------------------------
 
-#pragma hdrstop
-
 #undef UNICODE
 #define UNICODE
 
-#include <windows.h>
-#include <memory>
-#include <cstring>
-
-#include <System.DateUtils.hpp>
+#pragma hdrstop
 
 #include "Logger.h"
 #include "FileUtils.h"
@@ -23,6 +17,12 @@
 #include "EDirNotFoundException.h"
 #include "EInvalidArgumentException.h"
 #include "ENullPointerException.h"
+
+#include <windows.h>
+#include <memory>
+#include <cstring>
+
+#include <System.DateUtils.hpp>
 
 #define LOG_PREFIX "keytype_"
 #define DATE_FORMAT "yyyy-mm-dd"
@@ -99,10 +99,11 @@ LogLevel Logger::getStringAsLogLevel(const UnicodeString &level) {
 	}
 }
 
-
-// add log to buffer
+// add log entry
 
 void Logger::log(const UnicodeString& logEntry) {
+
+ 	// encrypt log entry
 
 	UnicodeString encryptedLogEntry = CryptoUtils::encryptStringAES(logEntry);
 
@@ -121,6 +122,7 @@ void Logger::log(LogLevel level, const UnicodeString& message, const char* funct
         logEntry += UnicodeString(functionName) + ":" + IntToStr(lineNumber) + " - " + message;
 
         // encrypt log entry
+
         UnicodeString encryptedLogEntry = CryptoUtils::encryptStringAES(logEntry);
         buffer.push_back(encryptedLogEntry);
 
@@ -130,7 +132,7 @@ void Logger::log(LogLevel level, const UnicodeString& message, const char* funct
     }
 }
 
-// write log to file
+// save log to file
 
 void Logger::writeToFile() {
 
@@ -163,7 +165,7 @@ UnicodeString Logger::findNextFileIndex(const UnicodeString &dirName, const Unic
     UnicodeString dirPath = FileUtils::createAbsolutePath(dirName, false);
 
     try {
-        files = FileUtils::getFileNames(dirPath, fileType);
+        files = FileUtils::getFiles(dirPath, fileType);
     } catch (CustomExceptions::EDirNotFoundException &ex) {
          throw Exception("Dir not found");
     }
@@ -316,11 +318,12 @@ UnicodeString Logger::archiveLogFiles()
 {
 
     // find log files
+
     std::optional<std::vector<UnicodeString>> logs;
     UnicodeString dirPath = FileUtils::createAbsolutePath("Log", false);
 
     try {
-        logs = FileUtils::getFileNames(dirPath, "log");
+        logs = FileUtils::getFiles(dirPath, "log");
     } catch (CustomExceptions::EDirNotFoundException &ex) {
          throw Exception("Log dir not found");
     }
@@ -334,27 +337,32 @@ UnicodeString Logger::archiveLogFiles()
         }
     }
     else {
-    	LOGGER(LogLevel::Info, "No logs found");
+    	LOGGER(LogLevel::Error, "No logs found");
         return "No logs found";
     }
 
-
     UnicodeString index = findNextFileIndex("Log", "tgz");
+
+    // create path to archive program with params (archiving tool, archive name, files to archive)
+
     UnicodeString command =	FileUtils::createAbsolutePath("Archiver", false) + "Win32\\Debug\\Archiver.exe tar -czf " + \
-     FileUtils::createAbsolutePath("Log", false) + "archive_" + TimeManager::getCurrentDate() +  "_" + index + ".tgz -C " + \
-     FileUtils::createAbsolutePath("Log", false) + " " + TextUtils::vectorToString(matchingLogs);
+    FileUtils::createAbsolutePath("Log", false) + "archive_" + TimeManager::getCurrentDate() +  "_" + index + ".tgz -C " + \
+    FileUtils::createAbsolutePath("Log", false) + " " + TextUtils::vectorToString(matchingLogs);
 
     STARTUPINFO si = { sizeof(si) };
     PROCESS_INFORMATION pi;
-    unsigned long retValue;
+
 
     if (!CreateProcess(NULL, command.c_str(), NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi)) {
         LOGGER(LogLevel::Error, "Unable to create process");
         return false;
     }
 
+    unsigned long retValue;
+
     WaitForSingleObject(pi.hProcess, INFINITE);
     GetExitCodeProcess(pi.hProcess, &retValue);
+
     CloseHandle(pi.hProcess);
     CloseHandle(pi.hThread);
 
@@ -363,15 +371,15 @@ UnicodeString Logger::archiveLogFiles()
         return "Logs archived successfully";
     }
     else if (retValue == 1)  {
-        LOGGER(LogLevel::Info, "Invalid command");
-        return "Invalid command ";
+        LOGGER(LogLevel::Error, "Invalid command");
+        return "Invalid command";
     }
     else if (retValue == 2)  {
-        LOGGER(LogLevel::Info, "No matching logs");
+        LOGGER(LogLevel::Error, "No matching logs");
         return "No matching logs";
     }
     else {
-        LOGGER(LogLevel::Info, "Unknown error");
+        LOGGER(LogLevel::Error, "Unknown error");
         return "Unknown error";
     }
 

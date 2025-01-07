@@ -21,15 +21,16 @@ class  AuthenticationService {
         AuthenticationService(TDataModule1 *_dataModule);
 
     	bool loginUser(const UnicodeString& username, const UnicodeString& password);
-        bool logoutUser();
         bool registerUser(const UnicodeString& username, const UnicodeString& password);
+
+        bool logoutUser();
 
         const User& getUser() const;
 
         bool getUserChanged() const;
         void setUserChanged(bool _userChanged);
 
-        bool verifyCredentials(const UnicodeString& hashedPassword, const UnicodeString& saltedPassword);
+		bool verifyCredentials(const UnicodeString &username, const UnicodeString& hashedPassword, const UnicodeString& password);
 
         void __fastcall (__closure *OnUsernameUnavailable)();
 };

@@ -21,6 +21,7 @@ namespace TextUtils
 
     std::vector<UnicodeString> splitToTokens(const UnicodeString& text, wchar_t delimiter = ' ');
     UnicodeString replaceChar(const UnicodeString& text, wchar_t original, wchar_t replacement);
+    UnicodeString replaceWordSeparator(const UnicodeString& text, const UnicodeString &separator);
     bool isWordBreak(const UnicodeString& line, int index);
     int countCharsUntilWordBreak(const UnicodeString& line, int index);
 
@@ -29,7 +30,6 @@ namespace TextUtils
     UnicodeString vectorToString(const std::vector<UnicodeString> &list);
 
     UnicodeString formatJson(const UnicodeString& string);
-    TJSONObject* convertToJSONObject(const UnicodeString &string);
 
 };
 //---------------------------------------------------------------------------

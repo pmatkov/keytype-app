@@ -21,10 +21,10 @@
 class TFLogs : public TForm
 {
 __published:	// IDE-managed Components
-	TListView *LVLogDates;
+	TListView *LVLogFiles;
 	TMemo *MLogs;
-	void __fastcall LVLogDatesSelectItem(TObject *Sender, TListItem *Item, bool Selected);
-	void __fastcall LVLogDatesMouseDown(TObject *Sender, TMouseButton Button, TShiftState Shift,
+	void __fastcall LVLogFilesSelectItem(TObject *Sender, TListItem *Item, bool Selected);
+	void __fastcall LVLogFilesMouseDown(TObject *Sender, TMouseButton Button, TShiftState Shift,
           int X, int Y);
 	void __fastcall FormActivate(TObject *Sender);
 
@@ -35,7 +35,7 @@ public:		// User declarations
 	__fastcall TFLogs(TComponent* Owner);
     __fastcall TFLogs(TComponent* Owner, AuthenticationService *_authService, TDataModule1 *_dataModule);
 
-    void updateLogViewer(int index);
+    void updateLogBrowser(int index);
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TFLogs *FLogs;

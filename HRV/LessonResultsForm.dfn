@@ -5,11 +5,11 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45425.0010185185</prop>
-        <prop prop-type="OrigDateTime">45424.9793981481</prop>
-        <prop prop-type="XlatDateTime">45424.9793981481</prop>
-        <prop prop-type="Translated">0</prop>
-        <prop prop-type="UnTranslated">835</prop>
+        <prop prop-type="SelfDateTime">45480.9983796296</prop>
+        <prop prop-type="OrigDateTime">45480.5400231481</prop>
+        <prop prop-type="XlatDateTime">45430.7315740741</prop>
+        <prop prop-type="Translated">16</prop>
+        <prop prop-type="UnTranslated">819</prop>
       </prop-group>
     </header>
     <body>
@@ -35,8 +35,9 @@
       </trans-unit>
       <trans-unit id="O:FLessonResults.Caption" resname="O:FLessonResults.Caption">
         <source>'Lesson results'</source>
+        <target>'Rezultati lekcija'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229772106</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFLessonResults</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229772106</prop><prop prop-type="Status">1</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFLessonResults</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.ClientHeight" resname="O:FLessonResults.ClientHeight">
         <source>421</source>
@@ -210,8 +211,9 @@
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:DBGridLessonResults.Columns[2].Title.Caption" resname="O:FLessonResults.O:DBGridLessonResults.Columns[2].Title.Caption">
         <source>'Lesson name'</source>
+        <target>'Naziv lekcije'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.9618739352</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.9618739352</prop><prop prop-type="Status">1</prop><prop prop-type="Order">39</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:DBGridLessonResults.Columns[2].Width" resname="O:FLessonResults.O:DBGridLessonResults.Columns[2].Width">
         <source>100</source>
@@ -240,8 +242,9 @@
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:DBGridLessonResults.Columns[3].Title.Caption" resname="O:FLessonResults.O:DBGridLessonResults.Columns[3].Title.Caption">
         <source>'Goal'</source>
+        <target>'Cilj'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229772222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229772222</prop><prop prop-type="Status">1</prop><prop prop-type="Order">45</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:DBGridLessonResults.Columns[3].Width" resname="O:FLessonResults.O:DBGridLessonResults.Columns[3].Width">
         <source>50</source>
@@ -270,8 +273,9 @@
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:DBGridLessonResults.Columns[4].Title.Caption" resname="O:FLessonResults.O:DBGridLessonResults.Columns[4].Title.Caption">
         <source>'Value'</source>
+        <target>'Vrijednost'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229772222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229772222</prop><prop prop-type="Status">1</prop><prop prop-type="Order">51</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:DBGridLessonResults.Columns[4].Width" resname="O:FLessonResults.O:DBGridLessonResults.Columns[4].Width">
         <source>40</source>
@@ -300,8 +304,9 @@
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:DBGridLessonResults.Columns[5].Title.Caption" resname="O:FLessonResults.O:DBGridLessonResults.Columns[5].Title.Caption">
         <source>'Result'</source>
+        <target>'Rezultat'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229772222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229772222</prop><prop prop-type="Status">1</prop><prop prop-type="Order">57</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:DBGridLessonResults.Columns[5].Width" resname="O:FLessonResults.O:DBGridLessonResults.Columns[5].Width">
         <source>50</source>
@@ -330,8 +335,9 @@
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:DBGridLessonResults.Columns[6].Title.Caption" resname="O:FLessonResults.O:DBGridLessonResults.Columns[6].Title.Caption">
         <source>'Speed'</source>
+        <target>'Brzina'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229772222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229772222</prop><prop prop-type="Status">1</prop><prop prop-type="Order">63</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:DBGridLessonResults.Columns[6].Width" resname="O:FLessonResults.O:DBGridLessonResults.Columns[6].Width">
         <source>55</source>
@@ -360,8 +366,9 @@
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:DBGridLessonResults.Columns[7].Title.Caption" resname="O:FLessonResults.O:DBGridLessonResults.Columns[7].Title.Caption">
         <source>'Accuracy'</source>
+        <target>'Točnost'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229772222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229772222</prop><prop prop-type="Status">1</prop><prop prop-type="Order">69</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:DBGridLessonResults.Columns[7].Width" resname="O:FLessonResults.O:DBGridLessonResults.Columns[7].Width">
         <source>55</source>
@@ -385,8 +392,9 @@
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:DBGridLessonResults.Columns[8].Title.Caption" resname="O:FLessonResults.O:DBGridLessonResults.Columns[8].Title.Caption">
         <source>'Duration'</source>
+        <target>'Trajanje'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229772222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229772222</prop><prop prop-type="Status">1</prop><prop prop-type="Order">74</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:DBGridLessonResults.Columns[8].Width" resname="O:FLessonResults.O:DBGridLessonResults.Columns[8].Width">
         <source>60</source>
@@ -415,8 +423,9 @@
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:DBGridLessonResults.Columns[9].Title.Caption" resname="O:FLessonResults.O:DBGridLessonResults.Columns[9].Title.Caption">
         <source>'Date'</source>
+        <target>'Datum'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45420.5005365741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45420.5005365741</prop><prop prop-type="Status">1</prop><prop prop-type="Order">80</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:DBGridLessonResults.Columns[9].Width" resname="O:FLessonResults.O:DBGridLessonResults.Columns[9].Width">
         <source>60</source>
@@ -530,8 +539,9 @@
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:DBUsers.Columns[1].Title.Caption" resname="O:FLessonResults.O:DBUsers.Columns[1].Title.Caption">
         <source>'Username'</source>
+        <target>'Korisničko ime'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229772222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">103</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229772222</prop><prop prop-type="Status">1</prop><prop prop-type="Order">103</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:DBUsers.Columns[1].Width" resname="O:FLessonResults.O:DBUsers.Columns[1].Width">
         <source>80</source>
@@ -560,8 +570,9 @@
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:DBUsers.Columns[2].Title.Caption" resname="O:FLessonResults.O:DBUsers.Columns[2].Title.Caption">
         <source>'Name'</source>
+        <target>'Naziv'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229772222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">109</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229772222</prop><prop prop-type="Status">1</prop><prop prop-type="Order">109</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:DBUsers.Columns[2].Width" resname="O:FLessonResults.O:DBUsers.Columns[2].Width">
         <source>80</source>
@@ -590,8 +601,9 @@
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:DBUsers.Columns[3].Title.Caption" resname="O:FLessonResults.O:DBUsers.Columns[3].Title.Caption">
         <source>'Surname'</source>
+        <target>'Prezime'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229772222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">115</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229772222</prop><prop prop-type="Status">1</prop><prop prop-type="Order">115</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:DBUsers.Columns[3].Width" resname="O:FLessonResults.O:DBUsers.Columns[3].Width">
         <source>80</source>
@@ -650,8 +662,9 @@
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:DBUsers.Columns[5].Title.Caption" resname="O:FLessonResults.O:DBUsers.Columns[5].Title.Caption">
         <source>'Age'</source>
+        <target>'Godine'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229772338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">127</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229772338</prop><prop prop-type="Status">1</prop><prop prop-type="Order">127</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:DBUsers.Columns[5].Width" resname="O:FLessonResults.O:DBUsers.Columns[5].Width">
         <source>40</source>
@@ -720,8 +733,9 @@
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:BtViewReport.Caption" resname="O:FLessonResults.O:BtViewReport.Caption">
         <source>'View report'</source>
+        <target>'Pregledaj'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.8597841898</prop><prop prop-type="Status">0</prop><prop prop-type="Order">141</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.8597841898</prop><prop prop-type="Status">1</prop><prop prop-type="Order">141</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:BtViewReport.TabOrder" resname="O:FLessonResults.O:BtViewReport.TabOrder">
         <source>3</source>
@@ -755,8 +769,9 @@
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:BtExportRtf.Caption" resname="O:FLessonResults.O:BtExportRtf.Caption">
         <source>'Export as RTF'</source>
+        <target>'Izvezi kao RTF'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.8597841898</prop><prop prop-type="Status">0</prop><prop prop-type="Order">148</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.8597841898</prop><prop prop-type="Status">1</prop><prop prop-type="Order">148</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:BtExportRtf.TabOrder" resname="O:FLessonResults.O:BtExportRtf.TabOrder">
         <source>4</source>
@@ -790,8 +805,9 @@
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:BtExportPdf.Caption" resname="O:FLessonResults.O:BtExportPdf.Caption">
         <source>'Export as PDF'</source>
+        <target>'Izvezi kao PDF'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.8597842014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">155</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.8597842014</prop><prop prop-type="Status">1</prop><prop prop-type="Order">155</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:BtExportPdf.TabOrder" resname="O:FLessonResults.O:BtExportPdf.TabOrder">
         <source>5</source>
@@ -869,12 +885,12 @@
         <prop prop-type="Created">45415.8597842014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">170</prop><prop prop-type="Type">TfrxReport</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:frxReport.Left" resname="O:FLessonResults.O:frxReport.Left">
-        <source>75</source>
+        <source>15</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45415.8597842014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">171</prop><prop prop-type="Type">TfrxReport</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:frxReport.Top" resname="O:FLessonResults.O:frxReport.Top">
-        <source>255</source>
+        <source>366</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45415.8597842014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">172</prop><prop prop-type="Type">TfrxReport</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -3944,12 +3960,12 @@
         <prop prop-type="Created">45415.8597842824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">785</prop><prop prop-type="Type">TfrxDBDataset</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:frxUser.Left" resname="O:FLessonResults.O:frxUser.Left">
-        <source>138</source>
+        <source>93</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45415.8597842824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">786</prop><prop prop-type="Type">TfrxDBDataset</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:frxUser.Top" resname="O:FLessonResults.O:frxUser.Top">
-        <source>255</source>
+        <source>369</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45415.8597842824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">787</prop><prop prop-type="Type">TfrxDBDataset</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -3979,12 +3995,12 @@
         <prop prop-type="Created">45415.8597842824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">792</prop><prop prop-type="Type">TfrxDBDataset</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:frxLessonResult.Left" resname="O:FLessonResults.O:frxLessonResult.Left">
-        <source>195</source>
+        <source>177</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45415.8597842824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">793</prop><prop prop-type="Type">TfrxDBDataset</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:frxLessonResult.Top" resname="O:FLessonResults.O:frxLessonResult.Top">
-        <source>261</source>
+        <source>369</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45415.8597842824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">794</prop><prop prop-type="Type">TfrxDBDataset</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -4114,12 +4130,12 @@
         <prop prop-type="Created">45415.8597842824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">819</prop><prop prop-type="Type">TfrxPDFExport</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:frxPDFExport.Left" resname="O:FLessonResults.O:frxPDFExport.Left">
-        <source>264</source>
+        <source>441</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45415.8597842824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">820</prop><prop prop-type="Type">TfrxPDFExport</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:frxPDFExport.Top" resname="O:FLessonResults.O:frxPDFExport.Top">
-        <source>258</source>
+        <source>240</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45415.8597842824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">821</prop><prop prop-type="Type">TfrxPDFExport</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -4179,12 +4195,12 @@
         <prop prop-type="Created">45415.8597842824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">832</prop><prop prop-type="Type">TfrxRTFExport</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:frxRTFExport.Left" resname="O:FLessonResults.O:frxRTFExport.Left">
-        <source>339</source>
+        <source>441</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45415.8597842824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">833</prop><prop prop-type="Type">TfrxRTFExport</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:frxRTFExport.Top" resname="O:FLessonResults.O:frxRTFExport.Top">
-        <source>261</source>
+        <source>306</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45415.8597842824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">834</prop><prop prop-type="Type">TfrxRTFExport</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>

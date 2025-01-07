@@ -58,6 +58,8 @@
 			<File FileName="LessonResultsForm.dfm" ContainerId="W32Form" ModuleName="LessonResultsForm.dfm"/>
 			<File FileName="AchievementsForm.dfm" ContainerId="W32Form" ModuleName="AchievementsForm.dfm"/>
 			<File FileName="LogsForm.dfm" ContainerId="W32Form" ModuleName="LogsForm.dfm"/>
+			<File FileName="PracticeSourceForm.dfm" ContainerId="W32Form" ModuleName="PracticeSourceForm.dfm"/>
+			<File FileName="KeyboardFrame.dfm" ContainerId="W32Form" ModuleName="KeyboardFrame.dfm"/>
 		</FileList>
 	</W32ResourceDLL.Personality>
 </BorlandProject>

@@ -1,11 +1,11 @@
-object FPracticeOptions: TFPracticeOptions
+object FPracticeSource: TFPracticeSource
   Left = 0
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Select a text source'
-  ClientHeight = 443
-  ClientWidth = 526
+  ClientHeight = 493
+  ClientWidth = 530
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,28 +15,28 @@ object FPracticeOptions: TFPracticeOptions
   Position = poMainFormCenter
   TextHeight = 15
   object BtCancel: TButton
-    Left = 441
-    Top = 411
+    Left = 445
+    Top = 460
     Width = 75
     Height = 25
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 0
+    TabOrder = 1
   end
   object BtAccept: TButton
-    Left = 344
-    Top = 411
+    Left = 347
+    Top = 460
     Width = 75
     Height = 25
     Caption = 'Accept'
     ModalResult = 1
-    TabOrder = 1
+    TabOrder = 0
   end
   object PCSourceText: TPageControl
     Left = 8
-    Top = 8
+    Top = 13
     Width = 512
-    Height = 390
+    Height = 430
     ActivePage = TSGeneratedText
     TabOrder = 2
     object TSGeneratedText: TTabSheet

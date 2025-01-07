@@ -1,13 +1,14 @@
 //---------------------------------------------------------------------------
 
 #include <vcl.h>
+#pragma hdrstop
 
 #include "LessonsForm.h"
 #include "Logger.h"
 #include "UIUtils.h"
 #include "ENullPointerException.h"
 //---------------------------------------------------------------------------
-#pragma hdrstop
+
 #pragma package(smart_init)
 #pragma link "CoursesFrame"
 #pragma link "LessonsFrame"

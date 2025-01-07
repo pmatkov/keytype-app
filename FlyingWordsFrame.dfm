@@ -13,15 +13,15 @@ object FrFlyingWords: TFrFlyingWords
   ParentFont = False
   TabOrder = 0
   object LWordList: TLabel
-    Left = 33
+    Left = 24
     Top = 374
-    Width = 50
+    Width = 69
     Height = 15
-    Caption = 'Word list:'
+    Caption = 'Word list file:'
     Transparent = True
   end
   object LTimeLimit: TLabel
-    Left = 341
+    Left = 359
     Top = 374
     Width = 56
     Height = 15
@@ -36,11 +36,10 @@ object FrFlyingWords: TFrFlyingWords
     inherited TMsgDisplayTimer: TTimer
       OnTimer = FrFlyingWordsStatsFrameTMsgDisplayTimerTimer
       Left = 579
-      Top = 3
     end
   end
   object CBWordList: TComboBox
-    Left = 89
+    Left = 116
     Top = 371
     Width = 103
     Height = 23
@@ -50,7 +49,7 @@ object FrFlyingWords: TFrFlyingWords
     OnChange = CBWordListChange
   end
   object CBTime: TComboBox
-    Left = 403
+    Left = 436
     Top = 371
     Width = 64
     Height = 23
@@ -59,7 +58,7 @@ object FrFlyingWords: TFrFlyingWords
     TabStop = False
   end
   object BtBrowse: TButton
-    Left = 210
+    Left = 240
     Top = 370
     Width = 75
     Height = 25
@@ -69,18 +68,18 @@ object FrFlyingWords: TFrFlyingWords
     OnClick = BtBrowseClick
   end
   object BtStartQuit: TButton
-    Left = 495
+    Left = 525
     Top = 370
     Width = 75
     Height = 25
-    Caption = 'Start game'
+    Caption = 'Start'
     TabOrder = 4
     TabStop = False
     OnClick = BtStartQuitClick
   end
   object DFileOpen: TOpenTextFileDialog
     Filter = 'Text files (*.txt)'
-    Left = 303
-    Top = 360
+    Left = 570
+    Top = 303
   end
 end

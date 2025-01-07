@@ -26,12 +26,12 @@ void TFServer::setDataModule(TDataModule2 *_dataModule) {
 
 void __fastcall TFServer::DMConnectionEstablished(TObject *Sender)
 {
-    LConnectionStatusDisplay->Caption = "connection established";
+    LTCPConnectionStatus->Caption = "connection established";
 }
 
 void __fastcall TFServer::DMConnectionClosed(TObject *Sender)
 {
-    LConnectionStatusDisplay->Caption = "connection closed";
+    LTCPConnectionStatus->Caption = "connection closed";
 }
 
 void __fastcall TFServer::BtTCPServerClick(TObject *Sender)
@@ -40,14 +40,32 @@ void __fastcall TFServer::BtTCPServerClick(TObject *Sender)
 
     	BtTCPServer->Caption = "Stop TCP Server";
         dataModule->IdTCPServer->Active = true;
-        LConnectionStatusDisplay->Caption = "waiting for connection..";
+        LTCPConnectionStatus->Caption = "waiting for connection..";
 
     }
     else if (BtTCPServer->Caption == "Stop TCP Server") {
 
     	BtTCPServer->Caption = "Start TCP Server";
         dataModule->IdTCPServer->Active = false;
-        LConnectionStatusDisplay->Caption = "";
+        LTCPConnectionStatus->Caption = "";
+
+    }
+}
+
+void __fastcall TFServer::BtUDPServerClick(TObject *Sender)
+{
+   	if (BtUDPServer->Caption == "Start UDP server") {
+
+    	BtUDPServer->Caption = "Stop UDP server";
+        dataModule->IdUDPServer->Active = true;
+        LUDPServerStatus->Caption = "started..";
+
+    }
+    else if (BtUDPServer->Caption == "Stop UDP server") {
+
+    	BtUDPServer->Caption = "Start UDP server";
+        dataModule->IdUDPServer->Active = false;
+        LUDPServerStatus->Caption = "";
 
     }
 }

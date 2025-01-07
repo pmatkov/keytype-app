@@ -3,6 +3,8 @@
 
 #pragma hdrstop
 
+#include <map>
+
 #include "DataModule.h"
 #include "Generator.h"
 
@@ -31,13 +33,14 @@ void __fastcall TDataModule2::IdTCPServerExecute(TIdContext *AContext)
 
         	std::unique_ptr<TCryptographicLibrary> cryptLib = CryptoUtils::createCryptoLib();
             std::unique_ptr<TCodec> codec = CryptoUtils::createRSACodec(cryptLib.get());
-            std::unique_ptr<TSignatory> signatory = CryptoUtils::createSignatory();
-            signatory->Codec = codec.get();
+            std::unique_ptr<TSignatory> signatory = CryptoUtils::createSignatory(codec.get());
 
         	UnicodeString prvKeyPath = FileUtils::createAbsolutePath("Server\\Keys\\prv_key_srv.bin", true);
             UnicodeString pubKeyPath = FileUtils::createAbsolutePath("Server\\Keys\\pub_key_app.bin", true);
 
             int requestType = StrToInt(CryptoUtils::decryptStringRSA(codec.get(), signatory.get(), prvKeyPath, ioHandler->ReadLn()));
+
+            // text generation - TCP server + RSA encryption
 
             if (requestType == 1) {
 
@@ -54,6 +57,9 @@ void __fastcall TDataModule2::IdTCPServerExecute(TIdContext *AContext)
                 ioHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, generatedText));
 
             }
+
+            // file conversion - TCP server + RSA encryption (streams)
+
             else if (requestType == 2) {
 
                 UnicodeString fileName = CryptoUtils::decryptStringRSA(codec.get(), signatory.get(), prvKeyPath, ioHandler->ReadLn());
@@ -62,10 +68,11 @@ void __fastcall TDataModule2::IdTCPServerExecute(TIdContext *AContext)
 
                 std::unique_ptr<TFileStream> fStream = std::make_unique<TFileStream>(filePath, fmCreate);
                 std::unique_ptr<TMemoryStream> mStream = std::make_unique<TMemoryStream>();
-                ioHandler->LargeStream = true;
 
+                ioHandler->LargeStream = true;
                 ioHandler->ReadStream(mStream.get());
             	CryptoUtils::decryptStreamRSA(codec.get(), signatory.get(), prvKeyPath, fStream.get(), mStream.get());
+
                 fStream.reset();
                 mStream.reset();
 
@@ -78,6 +85,7 @@ void __fastcall TDataModule2::IdTCPServerExecute(TIdContext *AContext)
                 }
 
                 if (buffer.has_value()) {
+
                     std::vector<UnicodeString> wordList = TextUtils::splitToTokens(*buffer);
                     std::optional<UnicodeString> jsonString = generateJsonFromWordList(wordList);
 
@@ -96,7 +104,6 @@ void __fastcall TDataModule2::IdTCPServerExecute(TIdContext *AContext)
 
                         ioHandler->LargeStream = true;
                         ioHandler->Write(mStream.get(), 0, true);
-
 
                     }
                 }
@@ -184,4 +191,33 @@ std::optional<UnicodeString> TDataModule2::generateJsonFromWordList(const std::v
     }
 
 }
+
+void __fastcall TDataModule2::IdUDPServerUDPRead(TIdUDPListenerThread *AThread, const TIdBytes AData, TIdSocketHandle *ABinding)
+{
+    std::map<wchar_t, wchar_t> qwertzToDvorak = {
+        {'Q', '\''}, {'W', ','}, {'E', '.'}, {'R', 'P'}, {'T', 'Y'},
+        {'Y', 'F'}, {'U', 'G'}, {'I', 'C'}, {'O', 'R'}, {'P', 'L'},
+        {'A', 'A'}, {'S', 'O'}, {'D', 'E'}, {'F', 'U'}, {'G', 'I'},
+        {'H', 'D'}, {'J', 'H'}, {'K', 'T'}, {'L', 'N'}, {';', 'S'},
+       	{'\'', '-'}, {'Z', ';'}, {'X', 'Q'}, {'C', 'J'}, {'V', 'K'},
+        {'B', 'X'}, {'N', 'B'}, {'M', 'M'}, {',', 'W'}, {'.', 'V'},
+        {'/', 'Z'},
+    };
+
+	UnicodeString key = TEncoding::UTF8->GetString(AData);
+    UnicodeString translatedKey = key;
+
+    if (key.Length() == 1) {
+
+        std::map<wchar_t, wchar_t>::iterator it = qwertzToDvorak.find(key[1]);
+
+       if (it != qwertzToDvorak.end()) {
+       		translatedKey = it->second;
+       }
+
+    }
+
+    ABinding->SendTo(ABinding->PeerIP, ABinding->PeerPort, translatedKey);
+}
+//---------------------------------------------------------------------------
 

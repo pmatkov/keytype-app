@@ -55,15 +55,20 @@ __published:	// IDE-managed Components
 	TLabel *LInfo;
 	TTimer *msgDisplayTimer;
 	TLabel *LWordsMin;
-	TComboBox *CBWordsMin;
-	TComboBox *CBWordsMax;
+	TComboBox *CBCharsWordMin;
+	TComboBox *CBCharsWordMax;
 	TLabel *LWordsMax;
-	TCheckBox *CBNumbers;
-	TCheckBox *CBPunctuation;
+	TCheckBox *CBSynonyms;
 	TMemo *MPreview;
-	TButton *BtTest;
-	TButton *BtTestThreads;
+	TButton *BtGenerate;
 	TButton *BtConvert;
+	TLabel *LCharsWordMax;
+	TComboBox *CBWordsMax;
+	TComboBox *CBWordsMin;
+	TLabel *LCharsWordMin;
+	TButton *BtShuffle;
+	TButton *BtSynonyms;
+	TCheckBox *CBUppercase;
 
     void __fastcall BtBrowseClick(TObject *Sender);
 	void __fastcall BtDelete1Click(TObject *Sender);
@@ -73,6 +78,9 @@ __published:	// IDE-managed Components
 	void __fastcall msgDisplayTimerTimer(TObject *Sender);
 	void __fastcall LVDictionaryMouseDown(TObject *Sender, TMouseButton Button, TShiftState Shift, int X, int Y);
 	void __fastcall BtConvertClick(TObject *Sender);
+	void __fastcall BtGenerateClick(TObject *Sender);
+	void __fastcall BtShuffleClick(TObject *Sender);
+	void __fastcall BtSynonymsClick(TObject *Sender);
 
 private:	// User declarations
 	TDataModule1 *dataModule;

@@ -35,8 +35,10 @@ __published:	// IDE-managed Components
 	void __fastcall BtConvertClick(TObject *Sender);
 	void __fastcall msgDisplayTimerTimer(TObject *Sender);
 	void __fastcall FormActivate(TObject *Sender);
+
 private:	// User declarations
 	TDataModule1 *dataModule;
+
 public:		// User declarations
 	__fastcall TFConverter(TComponent* Owner);
     __fastcall TFConverter(TComponent* Owner, TDataModule1 *_dataModule);

@@ -58,7 +58,7 @@
         <ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\release\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
         <ProjectType>CppVCLApplication</ProjectType>
         <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
-        <AllPackageLibs>rtl.lib;vcl.lib;vclimg.lib;vclactnband.lib;vclx.lib;xmlrtl.lib;dbrtl.lib;FireDAC.lib;FireDACCommonDriver.lib;FireDACCommon.lib;vclFireDAC.lib;vcldb.lib;vclwinx.lib;bindengine.lib;FireDACMySQLDriver.lib;soaprtl.lib;inet.lib;vclie.lib;vcledge.lib;frx28.lib;fs28.lib;frxDB28.lib;fsDB28.lib;frxe28.lib;IndySystem.lib;IndyCore.lib;LockBox3CR.lib</AllPackageLibs>
+        <AllPackageLibs>rtl.lib;vcl.lib;vclimg.lib;vclactnband.lib;vclx.lib;xmlrtl.lib;dbrtl.lib;FireDAC.lib;FireDACCommonDriver.lib;FireDACCommon.lib;vclFireDAC.lib;vcldb.lib;vclwinx.lib;bindengine.lib;FireDACMySQLDriver.lib;soaprtl.lib;inet.lib;vclie.lib;vcledge.lib;frx28.lib;fs28.lib;frxDB28.lib;fsDB28.lib;frxe28.lib;IndySystem.lib;IndyCore.lib;LockBox3CR.lib;bindcomp.lib;RESTComponents.lib;CustomIPTransport.lib</AllPackageLibs>
         <_TCHARMapping>wchar_t</_TCHARMapping>
         <Multithreaded>true</Multithreaded>
         <Icon_MainIcon>$(BDS)\bin\cbuilder_PROJECTICON.ico</Icon_MainIcon>
@@ -115,7 +115,7 @@
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
         <ILINK_LibraryPath>$(BDSLIB)\$(PLATFORM)$(CC_SUFFIX)\debug;$(ILINK_LibraryPath)</ILINK_LibraryPath>
-        <LinkPackageImports>rtl.bpi;vcl.bpi;vclimg.bpi;vclactnband.bpi;vclx.bpi;xmlrtl.bpi;dbrtl.bpi;FireDAC.bpi;FireDACCommonDriver.bpi;FireDACCommon.bpi;vclFireDAC.bpi;vcldb.bpi;vclwinx.bpi;bindengine.bpi;FireDACMySQLDriver.bpi;soaprtl.bpi;inet.bpi;vclie.bpi;vcledge.bpi;frx28.bpi;frxDB28.bpi;frxe28.bpi;IndySystem.bpi;IndyCore.bpi</LinkPackageImports>
+        <LinkPackageImports>rtl.bpi;vcl.bpi;vclimg.bpi;vclactnband.bpi;vclx.bpi;xmlrtl.bpi;dbrtl.bpi;FireDAC.bpi;FireDACCommonDriver.bpi;FireDACCommon.bpi;vclFireDAC.bpi;vcldb.bpi;vclwinx.bpi;bindengine.bpi;FireDACMySQLDriver.bpi;soaprtl.bpi;inet.bpi;vclie.bpi;vcledge.bpi;frx28.bpi;frxDB28.bpi;frxe28.bpi;IndySystem.bpi;IndyCore.bpi;bindcomp.bpi;RESTComponents.bpi;CustomIPTransport.bpi</LinkPackageImports>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <LinkPackageStatics>fs28.lib;fsDB28.lib;LockBox3CR.lib</LinkPackageStatics>
@@ -178,6 +178,11 @@
             <VirtualFolder>{8FB63F96-DB9B-44EE-BA3E-3A48525DE697}</VirtualFolder>
             <DependentOn>Books.h</DependentOn>
             <BuildOrder>18</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="ColorButton.cpp">
+            <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
+            <DependentOn>ColorButton.h</DependentOn>
+            <BuildOrder>77</BuildOrder>
         </CppCompile>
         <CppCompile Include="ConverterForm.cpp">
             <VirtualFolder>{D1032E3D-EA49-42CE-95C2-FF399AA004CF}</VirtualFolder>
@@ -322,10 +327,6 @@
             <DependentOn>GeneratedTextFrame.h</DependentOn>
             <BuildOrder>27</BuildOrder>
         </CppCompile>
-        <LibFiles Include="GeneratorLib.lib" Condition="'$(Platform)'=='Win32'">
-            <BuildOrder>68</BuildOrder>
-            <IgnorePath>true</IgnorePath>
-        </LibFiles>
         <CppCompile Include="IGameDisplay.cpp">
             <VirtualFolder>{4BFADF1C-F038-4685-8422-706F34C58511}</VirtualFolder>
             <DependentOn>IGameDisplay.h</DependentOn>
@@ -345,6 +346,14 @@
             <VirtualFolder>{4BFADF1C-F038-4685-8422-706F34C58511}</VirtualFolder>
             <DependentOn>ISingleItemDisplay.h</DependentOn>
             <BuildOrder>61</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="KeyboardFrame.cpp">
+            <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
+            <Form>FrKeyboard</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+            <DependentOn>KeyboardFrame.h</DependentOn>
+            <BuildOrder>76</BuildOrder>
         </CppCompile>
         <CppCompile Include="KeyStatistics.cpp">
             <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
@@ -457,11 +466,11 @@
             <DependentOn>PracticeFrame.h</DependentOn>
             <BuildOrder>25</BuildOrder>
         </CppCompile>
-        <CppCompile Include="PracticeOptionsForm.cpp">
+        <CppCompile Include="PracticeSourceForm.cpp">
             <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
-            <Form>FPractice</Form>
+            <Form>FPracticeSource</Form>
             <FormType>dfm</FormType>
-            <DependentOn>PracticeOptionsForm.h</DependentOn>
+            <DependentOn>PracticeSourceForm.h</DependentOn>
             <BuildOrder>12</BuildOrder>
         </CppCompile>
         <CppCompile Include="PreferencesForm.cpp">
@@ -508,6 +517,16 @@
             <BuildOrder>68</BuildOrder>
             <IgnorePath>true</IgnorePath>
         </LibFiles>
+        <CppCompile Include="TextCasingSOAP.cpp">
+            <VirtualFolder>{E4DA7E9B-DBC6-4FED-A59E-0602460A3378}</VirtualFolder>
+            <DependentOn>TextCasingSOAP.h</DependentOn>
+            <BuildOrder>75</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="TextServiceSOAP.cpp">
+            <VirtualFolder>{E4DA7E9B-DBC6-4FED-A59E-0602460A3378}</VirtualFolder>
+            <DependentOn>TextServiceSOAP.h</DependentOn>
+            <BuildOrder>77</BuildOrder>
+        </CppCompile>
         <CppCompile Include="TextSource.cpp">
             <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
             <DependentOn>TextSource.h</DependentOn>
@@ -559,21 +578,21 @@
             <DependentOn>User.h</DependentOn>
             <BuildOrder>10</BuildOrder>
         </CppCompile>
+        <FormResources Include="MainForm.dfm"/>
         <FormResources Include="LogsForm.dfm"/>
         <FormResources Include="LoginFrame.dfm"/>
-        <FormResources Include="MainForm.dfm"/>
         <FormResources Include="MainFrame.dfm"/>
+        <FormResources Include="PracticeFrame.dfm"/>
         <FormResources Include="LessonsFrame.dfm"/>
         <FormResources Include="LessonsForm.dfm"/>
         <FormResources Include="Lessons2Frame.dfm"/>
         <FormResources Include="LessonResultsForm.dfm"/>
-        <FormResources Include="PracticeFrame.dfm"/>
+        <FormResources Include="PracticeSourceForm.dfm"/>
         <FormResources Include="TypingTextFrame.dfm"/>
         <FormResources Include="TypingStatsFrame.dfm"/>
+        <FormResources Include="RegisterFrame.dfm"/>
         <FormResources Include="ProfileForm.dfm"/>
         <FormResources Include="PreferencesForm.dfm"/>
-        <FormResources Include="PracticeOptionsForm.dfm"/>
-        <FormResources Include="RegisterFrame.dfm"/>
         <FormResources Include="CustomTextFrame.dfm"/>
         <FormResources Include="CoursesFrame.dfm"/>
         <FormResources Include="ConverterForm.dfm"/>
@@ -581,6 +600,7 @@
         <FormResources Include="AchievementsForm.dfm"/>
         <FormResources Include="AuthenticationForm.dfm"/>
         <FormResources Include="GeneratedTextFrame.dfm"/>
+        <FormResources Include="KeyboardFrame.dfm"/>
         <FormResources Include="ExternalSourcesFrame.dfm"/>
         <FormResources Include="FlyingWordsStatsFrame.dfm"/>
         <FormResources Include="FlyingWordsFrame.dfm"/>
@@ -619,11 +639,11 @@
                         <VFOLDER ID="{F6B7C7E8-2F86-4A67-B4A3-6E99C1D2C773}" name="Authentication"/>
                         <VFOLDER ID="{D1032E3D-EA49-42CE-95C2-FF399AA004CF}" name="Converter"/>
                         <VFOLDER ID="{E0097B50-4B62-4563-BB1D-2B1764BFCDE4}" name="Lessons"/>
+                        <VFOLDER ID="{CB158F19-0D21-4CE8-838A-4B41C5711017}" name="Logs"/>
                         <VFOLDER ID="{84360D3D-4874-46E9-88EE-445E3FC0314D}" name="Main"/>
                         <VFOLDER ID="{78CB0057-7BC4-4B83-9609-C573EB0EAF04}" name="Practice"/>
                         <VFOLDER ID="{B49A349D-1438-45E5-B4FD-36C3DF2C665B}" name="Preferences"/>
                         <VFOLDER ID="{2E918AF9-752D-48F9-8019-B9A9EEE106C8}" name="Profile"/>
-                        <VFOLDER ID="{CB158F19-0D21-4CE8-838A-4B41C5711017}" name="Logs"/>
                     </VFOLDER>
                     <VFOLDER ID="{8FD859FE-69F3-4938-8F63-0FFC19E975BE}" name="Game"/>
                     <VFOLDER ID="{4BAA1710-5749-48D2-B3F3-197353059E4E}" name="Models"/>
@@ -632,6 +652,7 @@
                     <VFOLDER ID="{6D6A1B94-904B-4CFC-BA2B-E48D16DDAD0E}" name="Settings"/>
                     <VFOLDER ID="{CE54C44E-A3BA-434A-8509-1E40452898D3}" name="Utils"/>
                     <VFOLDER ID="{4BFADF1C-F038-4685-8422-706F34C58511}" name="VIew"/>
+                    <VFOLDER ID="{E4DA7E9B-DBC6-4FED-A59E-0602460A3378}" name="Web service"/>
                 </VFOLDERS>
                 <Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\bcboffice2k280.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
@@ -652,32 +673,34 @@
                     <RDP_Source_Files Name="Item0">PracticeForm.dfm</RDP_Source_Files>
                     <RDP_Source_Files Name="Item1">OptionsFrame.dfm</RDP_Source_Files>
                     <RDP_Source_Files Name="Item2">ViewProfileForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item3">LogsForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item4">LoginFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item5">MainForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item6">MainFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item7">LessonsFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item8">LessonsForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item9">Lessons2Frame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item10">LessonResultsForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item11">PracticeFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item12">TypingTextFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item13">TypingStatsFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item14">ProfileForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item15">PreferencesForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item16">PracticeOptionsForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item17">RegisterFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item18">CustomTextFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item19">CoursesFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item20">ConverterForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item21">DataModule.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item22">AchievementsForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item23">AuthenticationForm.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item24">GeneratedTextFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item25">ExternalSourcesFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item26">FlyingWordsStatsFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item27">FlyingWordsFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item28">Win32\Debug\KeyType.drc</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item3">PracticeOptionsForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item4">MainForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item5">LogsForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item6">LoginFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item7">MainFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item8">PracticeFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item9">LessonsFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item10">LessonsForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item11">Lessons2Frame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item12">LessonResultsForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item13">PracticeSourceForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item14">TypingTextFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item15">TypingStatsFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item16">RegisterFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item17">ProfileForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item18">PreferencesForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item19">CustomTextFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item20">CoursesFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item21">ConverterForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item22">DataModule.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item23">AchievementsForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item24">AuthenticationForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item25">GeneratedTextFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item26">KeyboardFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item27">ExternalSourcesFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item28">FlyingWordsStatsFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item29">FlyingWordsFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item30">Win32\Debug\KeyType.drc</RDP_Source_Files>
                 </RDP_Source_Files>
             </CPlusPlusBuilder.Personality>
             <Deployment Version="4">
@@ -740,12 +763,6 @@
                 <DeployFile LocalName=".\Win32\Debug\KeyType.tds" Configuration="Debug" Class="DebugSymbols">
                     <Platform Name="Win32">
                         <RemoteName>KeyType.tds</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="GeneratorLib.lib" Configuration="Debug" Class="ProjectFile">
-                    <Platform Name="Win32">
-                        <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>

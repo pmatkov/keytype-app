@@ -18,7 +18,7 @@ TypingSettings::TypingSettings(User user) {
        	loadDefaults();
     }
     else {
-        section = user.getUsername() + "\\";
+        username = user.getUsername();
         loadSettings();
     }
     LOGGER(LogLevel::Debug, "Created typing settings");
@@ -54,6 +54,15 @@ int TypingSettings::getFontSize() const {
 
 void TypingSettings::setFontSize(int _fontSize) {
     fontSize = _fontSize;
+}
+
+
+const KeyboardLayout& TypingSettings::getKeyboardLayout() const {
+    return keyboardLayout;
+}
+
+void TypingSettings::setKeyboardLayout(const KeyboardLayout &_keyboardLayout) {
+    keyboardLayout = _keyboardLayout;
 }
 
 bool TypingSettings::getStopOnMistake() const {
@@ -93,6 +102,7 @@ void TypingSettings::loadDefaults() {
     separatorType = SeparatorType::Dot;
     fontFamily = "Segoe UI";
     fontSize = 12;
+    keyboardLayout = KeyboardLayout::QWERTZ;
 
     stopOnMistake = true;
     countConsecutiveMistakes = false;
@@ -108,13 +118,13 @@ void TypingSettings::loadSettings() {
     try
 	{
 
-        if (!section.IsEmpty() && registry->OpenKeyReadOnly("Software\\KeyType\\" + section)) {
-
+        if (!username.IsEmpty() && registry->OpenKeyReadOnly("Software\\KeyType\\" + username + "\\")) {
 
 			caretType = registry->ValueExists("CaretType") ? EnumUtils::stringToEnum<CaretType>(caretTypeStrings, registry->ReadString("CaretType")) : CaretType::Underline;
 			separatorType = registry->ValueExists("SeparatorType") ? EnumUtils::stringToEnum<SeparatorType>(separatorTypeStrings, registry->ReadString("SeparatorType")) : SeparatorType::Dot;
             fontFamily = registry->ValueExists("FontFamily") ? registry->ReadString("FontFamily") : "Segoe UI";
             fontSize = registry->ValueExists("FontSize") ? registry->ReadInteger("FontSize") : 12;
+            keyboardLayout = registry->ValueExists("KeyboardLayout") ? EnumUtils::stringToEnum<KeyboardLayout>(keyboardLayoutStrings, registry->ReadString("KeyboardLayout")) : KeyboardLayout::QWERTZ;
 
             stopOnMistake = registry->ValueExists("stopOnMistake") ? registry->ReadBool("stopOnMistake") : true;
             countConsecutiveMistakes = registry->ValueExists("countConsecutiveMistakes") ? registry->ReadBool("countConsecutiveMistakes") : false;
@@ -139,12 +149,13 @@ void TypingSettings::saveSettings() {
 
     try
 	{
-        if (registry->OpenKey("Software\\KeyType\\" + section, true)) {
+        if (registry->OpenKey("Software\\KeyType\\" + username + "\\", true)) {
 
 			registry->WriteString("CaretType", EnumUtils::enumToString<CaretType>(caretTypeStrings, caretType));
 			registry->WriteString("SeparatorType", EnumUtils::enumToString<SeparatorType>(separatorTypeStrings, separatorType));
             registry->WriteString("FontFamily", fontFamily);
             registry->WriteInteger("FontSize", fontSize);
+            registry->WriteString("KeyboardLayout", EnumUtils::enumToString<KeyboardLayout>(keyboardLayoutStrings, keyboardLayout));
 
             registry->WriteBool("StopOnMistake", stopOnMistake);
             registry->WriteBool("CountConsecutiveMistakes", countConsecutiveMistakes);
@@ -166,6 +177,11 @@ const std::vector<UnicodeString>& TypingSettings::getSeparatorTypeStrings() {
     return separatorTypeStrings;
 }
 
+const std::vector<UnicodeString>& TypingSettings::getKeyboardLayoutStrings() {
+    return keyboardLayoutStrings;
+}
+
 std::vector<UnicodeString> TypingSettings::caretTypeStrings = {"Block", "Underline"};
 std::vector<UnicodeString> TypingSettings::separatorTypeStrings = {"Dot", "Space"};
+std::vector<UnicodeString> TypingSettings::keyboardLayoutStrings = {"QWERTZ", "Dvorak"};
 

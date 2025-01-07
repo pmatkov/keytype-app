@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.417,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\TextServiceLib.cbproj=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.712,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\TextServiceLib.cbproj=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\TextServiceLib.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.264,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Random.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.011,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.865,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\WebModuleUnit.cpp=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\WebModule.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.688,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\SOAPServer.cbproj=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\TextServiceLib.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.814,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\TextWebService.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.274,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\WebModuleUnit1.h=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.865,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\WebModuleUnit.dfm=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\WebModule.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.450,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\WebModuleUnit.dfm=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\WebModuleUnit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.274,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\WebModuleUnit1.dfm=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.450,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\WebModuleUnit.h=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\WebModuleUnit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.865,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\WebModuleUnit.h=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\WebModule.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.786,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.370,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\TextWebService.cpp=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\TextWebService.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.621,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\TextWebService.cpp=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\TextService.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.274,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\WebModuleUnit1.cpp=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.450,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\WebModuleUnit.cpp=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\WebModuleUnit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.672,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\SOAPServerPCH1.h=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\TextServiceLibPCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.313,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\TextServiceLibPCH1.h=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.621,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\TextWebService.h=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\TextService.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.370,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\ISAPI\TextWebService.h=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\TextWebService.h</Transaction>
+  </Transactions>
+</BorlandProject>

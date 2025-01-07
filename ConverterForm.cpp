@@ -13,7 +13,6 @@
 #pragma package(smart_init)
 #pragma resource "*.dfm"
 
-
 TFConverter *FConverter;
 //---------------------------------------------------------------------------
 __fastcall TFConverter::TFConverter(TComponent* Owner) 	: TForm(Owner)  {}
@@ -25,9 +24,16 @@ __fastcall TFConverter::TFConverter(TComponent* Owner, TDataModule1 *_dataModule
     }
 }
 
+void __fastcall TFConverter::FormActivate(TObject *Sender)
+{
+   EInput->Text = "";
+   EOutput->Text = "";
+}
 
 void __fastcall TFConverter::BtBrowseClick(TObject *Sender)
 {
+
+    // select word list file
 
     UIUtils::setFileDialogProperties(DFileOpen, "WordList", "txt");
 
@@ -46,23 +52,6 @@ void __fastcall TFConverter::BtBrowseClick(TObject *Sender)
 
 void __fastcall TFConverter::BtConvertClick(TObject *Sender)
 {
-//    std::optional<UnicodeString> buffer;
-//
-//    try {
-//        buffer = FileUtils::readFromTextFile(DFileOpen->FileName);
-//    } catch (CustomExceptions::EFileNotFoundException &ex) {
-//        LOGGER(LogLevel::Fatal, ex.getMessage());
-//    }
-//
-//    if (buffer.has_value()) {
-//    	std::vector<UnicodeString> wordList = TextUtils::splitToTokens(*buffer);
-//    	std::optional<UnicodeString> jsonString = Dictionary::generateJsonFromWordList(wordList);
-//
-//    	if (jsonString.has_value()) {
-//
-//        	FileUtils::saveToTextFile(FileUtils::createAbsolutePath("Data\\" + EOutput->Text, true), std::vector<UnicodeString>{*jsonString});
-//     	}
-//    }
 
     if (dataModule->convertWordList(DFileOpen->FileName)) {
           UIUtils::displayTimedMessage(msgDisplayTimer, LInfo, "Converted");
@@ -70,21 +59,10 @@ void __fastcall TFConverter::BtConvertClick(TObject *Sender)
     else {
         UIUtils::displayTimedMessage(msgDisplayTimer, LInfo, "Failed");
     }
-
-
 }
-//---------------------------------------------------------------------------
 
 void __fastcall TFConverter::msgDisplayTimerTimer(TObject *Sender)
 {
 	UIUtils::removeTimedMessage(msgDisplayTimer, LInfo);
 }
-//---------------------------------------------------------------------------
-
-void __fastcall TFConverter::FormActivate(TObject *Sender)
-{
-   EInput->Text = "";
-   EOutput->Text = "";
-}
-//---------------------------------------------------------------------------
 

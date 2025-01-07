@@ -5,9 +5,9 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45429.7172916667</prop>
-        <prop prop-type="OrigDateTime">45429.5543518519</prop>
-        <prop prop-type="XlatDateTime">45427.7446064815</prop>
+        <prop prop-type="SelfDateTime">45480.9984027778</prop>
+        <prop prop-type="OrigDateTime">45480.6558796296</prop>
+        <prop prop-type="XlatDateTime">45430.7315972222</prop>
         <prop prop-type="Translated">0</prop>
         <prop prop-type="UnTranslated">40</prop>
       </prop-group>
@@ -39,12 +39,12 @@
         <prop prop-type="Created">45427.7677139931</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFLogs</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLogs.ClientHeight" resname="O:FLogs.ClientHeight">
-        <source>346</source>
+        <source>342</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45427.7677139931</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TFLogs</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLogs.ClientWidth" resname="O:FLogs.ClientWidth">
-        <source>528</source>
+        <source>512</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45427.7677139931</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TFLogs</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -88,90 +88,90 @@
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45427.7677139931</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TFLogs</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FLogs.O:LVLogDates.Left" resname="O:FLogs.O:LVLogDates.Left">
+      <trans-unit id="O:FLogs.O:LVLogFiles.Left" resname="O:FLogs.O:LVLogFiles.Left">
         <source>15</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45427.7677139931</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45480.9984081134</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FLogs.O:LVLogDates.Top" resname="O:FLogs.O:LVLogDates.Top">
+      <trans-unit id="O:FLogs.O:LVLogFiles.Top" resname="O:FLogs.O:LVLogFiles.Top">
         <source>17</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45427.7677139931</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45480.9984081134</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FLogs.O:LVLogDates.Width" resname="O:FLogs.O:LVLogDates.Width">
+      <trans-unit id="O:FLogs.O:LVLogFiles.Width" resname="O:FLogs.O:LVLogFiles.Width">
         <source>499</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45427.7677139931</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45480.9984081134</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FLogs.O:LVLogDates.Height" resname="O:FLogs.O:LVLogDates.Height">
+      <trans-unit id="O:FLogs.O:LVLogFiles.Height" resname="O:FLogs.O:LVLogFiles.Height">
         <source>107</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45427.7677139931</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45480.9984081134</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FLogs.O:LVLogDates.Columns[0].Caption" resname="O:FLogs.O:LVLogDates.Columns[0].Caption">
+      <trans-unit id="O:FLogs.O:LVLogFiles.Columns[0].Caption" resname="O:FLogs.O:LVLogFiles.Columns[0].Caption">
         <source>'File name'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45427.7677139931</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+        <prop prop-type="Created">45480.998408125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FLogs.O:LVLogDates.Columns[0].Width" resname="O:FLogs.O:LVLogDates.Columns[0].Width">
-        <source>270</source>
+      <trans-unit id="O:FLogs.O:LVLogFiles.Columns[0].Width" resname="O:FLogs.O:LVLogFiles.Columns[0].Width">
+        <source>250</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45427.7677139931</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">45480.998408125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FLogs.O:LVLogDates.Columns[1].Caption" resname="O:FLogs.O:LVLogDates.Columns[1].Caption">
+      <trans-unit id="O:FLogs.O:LVLogFiles.Columns[1].Caption" resname="O:FLogs.O:LVLogFiles.Columns[1].Caption">
         <source>'Last modified'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45427.7677139931</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">45480.998408125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FLogs.O:LVLogDates.Columns[1].Width" resname="O:FLogs.O:LVLogDates.Columns[1].Width">
+      <trans-unit id="O:FLogs.O:LVLogFiles.Columns[1].Width" resname="O:FLogs.O:LVLogFiles.Columns[1].Width">
         <source>120</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45427.7677139931</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">45480.998408125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FLogs.O:LVLogDates.Columns[2].Caption" resname="O:FLogs.O:LVLogDates.Columns[2].Caption">
+      <trans-unit id="O:FLogs.O:LVLogFiles.Columns[2].Caption" resname="O:FLogs.O:LVLogFiles.Columns[2].Caption">
         <source>'File size'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45427.7677139931</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">45480.998408125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FLogs.O:LVLogDates.Columns[2].Width" resname="O:FLogs.O:LVLogDates.Columns[2].Width">
-        <source>100</source>
+      <trans-unit id="O:FLogs.O:LVLogFiles.Columns[2].Width" resname="O:FLogs.O:LVLogFiles.Columns[2].Width">
+        <source>120</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45427.7677139931</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+        <prop prop-type="Created">45480.998408125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FLogs.O:LVLogDates.MultiSelect" resname="O:FLogs.O:LVLogDates.MultiSelect">
+      <trans-unit id="O:FLogs.O:LVLogFiles.MultiSelect" resname="O:FLogs.O:LVLogFiles.MultiSelect">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45427.7677139931</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45480.998408125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FLogs.O:LVLogDates.ReadOnly" resname="O:FLogs.O:LVLogDates.ReadOnly">
+      <trans-unit id="O:FLogs.O:LVLogFiles.ReadOnly" resname="O:FLogs.O:LVLogFiles.ReadOnly">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45427.7677139931</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45480.998408125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FLogs.O:LVLogDates.RowSelect" resname="O:FLogs.O:LVLogDates.RowSelect">
+      <trans-unit id="O:FLogs.O:LVLogFiles.RowSelect" resname="O:FLogs.O:LVLogFiles.RowSelect">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45427.7677139931</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45480.998408125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FLogs.O:LVLogDates.TabOrder" resname="O:FLogs.O:LVLogDates.TabOrder">
+      <trans-unit id="O:FLogs.O:LVLogFiles.TabOrder" resname="O:FLogs.O:LVLogFiles.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45427.7677139931</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45480.998408125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FLogs.O:LVLogDates.ViewStyle" resname="O:FLogs.O:LVLogDates.ViewStyle">
+      <trans-unit id="O:FLogs.O:LVLogFiles.ViewStyle" resname="O:FLogs.O:LVLogFiles.ViewStyle">
         <source>vsReport</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45427.7677139931</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45480.998408125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FLogs.O:LVLogDates.OnMouseDown" resname="O:FLogs.O:LVLogDates.OnMouseDown">
-        <source>LVLogDatesMouseDown</source>
+      <trans-unit id="O:FLogs.O:LVLogFiles.OnMouseDown" resname="O:FLogs.O:LVLogFiles.OnMouseDown">
+        <source>LVLogFilesMouseDown</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45427.7677139931</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45480.998408125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FLogs.O:LVLogDates.OnSelectItem" resname="O:FLogs.O:LVLogDates.OnSelectItem">
-        <source>LVLogDatesSelectItem</source>
+      <trans-unit id="O:FLogs.O:LVLogFiles.OnSelectItem" resname="O:FLogs.O:LVLogFiles.OnSelectItem">
+        <source>LVLogFilesSelectItem</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45427.7677139931</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45480.998408125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLogs.O:MLogs.Left" resname="O:FLogs.O:MLogs.Left">
         <source>15</source>

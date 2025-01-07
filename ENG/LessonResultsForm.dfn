@@ -5,9 +5,9 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45425.0010185185</prop>
-        <prop prop-type="OrigDateTime">45424.9793981481</prop>
-        <prop prop-type="XlatDateTime">45424.9793981481</prop>
+        <prop prop-type="SelfDateTime">45480.9983796296</prop>
+        <prop prop-type="OrigDateTime">45480.5400231481</prop>
+        <prop prop-type="XlatDateTime">45430.7315740741</prop>
         <prop prop-type="Translated">0</prop>
         <prop prop-type="UnTranslated">835</prop>
       </prop-group>
@@ -869,12 +869,12 @@
         <prop prop-type="Created">45415.8597912037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">170</prop><prop prop-type="Type">TfrxReport</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:frxReport.Left" resname="O:FLessonResults.O:frxReport.Left">
-        <source>75</source>
+        <source>15</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45415.8597912037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">171</prop><prop prop-type="Type">TfrxReport</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:frxReport.Top" resname="O:FLessonResults.O:frxReport.Top">
-        <source>255</source>
+        <source>366</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45415.8597912037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">172</prop><prop prop-type="Type">TfrxReport</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -3944,12 +3944,12 @@
         <prop prop-type="Created">45415.8597912847</prop><prop prop-type="Status">0</prop><prop prop-type="Order">785</prop><prop prop-type="Type">TfrxDBDataset</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:frxUser.Left" resname="O:FLessonResults.O:frxUser.Left">
-        <source>138</source>
+        <source>93</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45415.8597912847</prop><prop prop-type="Status">0</prop><prop prop-type="Order">786</prop><prop prop-type="Type">TfrxDBDataset</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:frxUser.Top" resname="O:FLessonResults.O:frxUser.Top">
-        <source>255</source>
+        <source>369</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45415.8597912847</prop><prop prop-type="Status">0</prop><prop prop-type="Order">787</prop><prop prop-type="Type">TfrxDBDataset</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -3979,12 +3979,12 @@
         <prop prop-type="Created">45415.8597912847</prop><prop prop-type="Status">0</prop><prop prop-type="Order">792</prop><prop prop-type="Type">TfrxDBDataset</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:frxLessonResult.Left" resname="O:FLessonResults.O:frxLessonResult.Left">
-        <source>195</source>
+        <source>177</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45415.8597912847</prop><prop prop-type="Status">0</prop><prop prop-type="Order">793</prop><prop prop-type="Type">TfrxDBDataset</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:frxLessonResult.Top" resname="O:FLessonResults.O:frxLessonResult.Top">
-        <source>261</source>
+        <source>369</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45415.8597912847</prop><prop prop-type="Status">0</prop><prop prop-type="Order">794</prop><prop prop-type="Type">TfrxDBDataset</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -4114,12 +4114,12 @@
         <prop prop-type="Created">45415.8597912963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">819</prop><prop prop-type="Type">TfrxPDFExport</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:frxPDFExport.Left" resname="O:FLessonResults.O:frxPDFExport.Left">
-        <source>264</source>
+        <source>441</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45415.8597912963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">820</prop><prop prop-type="Type">TfrxPDFExport</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:frxPDFExport.Top" resname="O:FLessonResults.O:frxPDFExport.Top">
-        <source>258</source>
+        <source>240</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45415.8597912963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">821</prop><prop prop-type="Type">TfrxPDFExport</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -4179,12 +4179,12 @@
         <prop prop-type="Created">45415.8597912963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">832</prop><prop prop-type="Type">TfrxRTFExport</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:frxRTFExport.Left" resname="O:FLessonResults.O:frxRTFExport.Left">
-        <source>339</source>
+        <source>441</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45415.8597912963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">833</prop><prop prop-type="Type">TfrxRTFExport</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FLessonResults.O:frxRTFExport.Top" resname="O:FLessonResults.O:frxRTFExport.Top">
-        <source>261</source>
+        <source>306</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45415.8597912963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">834</prop><prop prop-type="Type">TfrxRTFExport</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>

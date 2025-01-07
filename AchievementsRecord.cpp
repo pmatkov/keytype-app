@@ -11,6 +11,7 @@
 int AchievementsRecord::idCounter = 1;
 
 AchievementsRecord::AchievementsRecord() {}
+
 AchievementsRecord::AchievementsRecord(int _idUser, const UnicodeString _title, const UnicodeString _description, TDateTime _date) : id(idCounter++), idUser(_idUser), date(_date) {
 
     wcsncpy_s(title, 30, _title.c_str(), 29);

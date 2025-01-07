@@ -20,10 +20,10 @@
 
 TDataModule1 *DataModule1;
 //---------------------------------------------------------------------------
-__fastcall TDataModule1::TDataModule1(TComponent* Owner)
-	: TDataModule(Owner)
-{
-}
+__fastcall TDataModule1::TDataModule1(TComponent* Owner) : TDataModule(Owner)  {}
+
+
+// avgChars = charCount/ wordCount (TLessons)
 
 void __fastcall TDataModule1::TLessonsCalcFields(TDataSet *DataSet)
 {
@@ -33,6 +33,7 @@ void __fastcall TDataModule1::TLessonsCalcFields(TDataSet *DataSet)
     }
 }
 
+// durationHMS = seconds to hh:mm:ss (TLessonResults)
 
 void __fastcall TDataModule1::TLessonResultsCalcFields(TDataSet *DataSet)
 {
@@ -125,6 +126,9 @@ std::vector<UnicodeString> TDataModule1::getStringsFromColumnValues(const std::v
     return values;
 }
 
+
+// text generation - TCP client + RSA encryption
+
 UnicodeString TDataModule1::generateText(const UnicodeString &letters, bool useNumbers, bool useUppercase,  bool usePunctuation, int minTokens, int maxTokens) {
 
     UnicodeString generatedText = "";
@@ -134,27 +138,26 @@ UnicodeString TDataModule1::generateText(const UnicodeString &letters, bool useN
 
        		std::unique_ptr<TCryptographicLibrary> cryptLib = CryptoUtils::createCryptoLib();
             std::unique_ptr<TCodec> codec = CryptoUtils::createRSACodec(cryptLib.get());
-            std::unique_ptr<TSignatory> signatory = CryptoUtils::createSignatory();
-            signatory->Codec = codec.get();
+            std::unique_ptr<TSignatory> signatory = CryptoUtils::createSignatory(codec.get());
 
        		UnicodeString prvKeyPath = FileUtils::createAbsolutePath("Keys\\prv_key_app.bin", true);
             UnicodeString pubKeyPath = FileUtils::createAbsolutePath("Keys\\pub_key_srv.bin", true);
 
-            IdTCPClient1->Connect();
+            IdTCPClient->Connect();
 
             LOGGER(LogLevel::Debug, "Connected to TCP server");
 
-            IdTCPClient1->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, "1"));
-            IdTCPClient1->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, letters));
-            IdTCPClient1->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, UnicodeString(useNumbers)));
-            IdTCPClient1->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, UnicodeString(useUppercase)));
-            IdTCPClient1->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, UnicodeString(usePunctuation)));
-            IdTCPClient1->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, UnicodeString(minTokens)));
-            IdTCPClient1->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, UnicodeString(maxTokens)));
+            IdTCPClient->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, "1"));
+            IdTCPClient->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, letters));
+            IdTCPClient->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, UnicodeString(useNumbers)));
+            IdTCPClient->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, UnicodeString(useUppercase)));
+            IdTCPClient->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, UnicodeString(usePunctuation)));
+            IdTCPClient->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, UnicodeString(minTokens)));
+            IdTCPClient->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, UnicodeString(maxTokens)));
 
-            generatedText = CryptoUtils::decryptStringRSA(codec.get(), signatory.get(), prvKeyPath, IdTCPClient1->IOHandler->ReadLn());
+            generatedText = CryptoUtils::decryptStringRSA(codec.get(), signatory.get(), prvKeyPath, IdTCPClient->IOHandler->ReadLn());
 
-            LOGGER(LogLevel::Debug, "Socket I/O complete");
+            LOGGER(LogLevel::Debug, "TCP I/O complete");
        }
        catch (Exception &ex) {
             LOGGER(LogLevel::Error, "TCP client error: " + ex.Message);
@@ -163,12 +166,13 @@ UnicodeString TDataModule1::generateText(const UnicodeString &letters, bool useN
     }
     __finally {
 
-    	IdTCPClient1->Disconnect();
+    	IdTCPClient->Disconnect();
 
     }
     return generatedText;
 }
 
+// file conversion - TCP client + RSA encryption (streams)
 
 bool TDataModule1::convertWordList(const UnicodeString& filePath) {
 
@@ -177,30 +181,30 @@ bool TDataModule1::convertWordList(const UnicodeString& filePath) {
 
         	std::unique_ptr<TCryptographicLibrary> cryptLib = CryptoUtils::createCryptoLib();
             std::unique_ptr<TCodec> codec = CryptoUtils::createRSACodec(cryptLib.get());
-            std::unique_ptr<TSignatory> signatory = CryptoUtils::createSignatory();
-            signatory->Codec = codec.get();
+            std::unique_ptr<TSignatory> signatory = CryptoUtils::createSignatory(codec.get());
 
         	UnicodeString prvKeyPath = FileUtils::createAbsolutePath("Keys\\prv_key_app.bin", true);
             UnicodeString pubKeyPath = FileUtils::createAbsolutePath("Keys\\pub_key_srv.bin", true);
 
-            IdTCPClient1->Connect();
+            IdTCPClient->Connect();
 
             LOGGER(LogLevel::Debug, "Connected to TCP server");
 
-			IdTCPClient1->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, "2"));
-            IdTCPClient1->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, ExtractFileName(filePath)));
+			IdTCPClient->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, "2"));
+            IdTCPClient->IOHandler->WriteLn(CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, ExtractFileName(filePath)));
 
             std::unique_ptr<TFileStream> fStream = std::make_unique<TFileStream>(filePath, fmOpenRead);
             std::unique_ptr<TMemoryStream> mStream = std::make_unique<TMemoryStream>();
 
             CryptoUtils::encryptStreamRSA(codec.get(), signatory.get(), pubKeyPath, fStream.get(), mStream.get());
 
-            IdTCPClient1->IOHandler->LargeStream = true;
-            IdTCPClient1->IOHandler->Write(mStream.get(), 0, true);
+            // send stream size using Write(Int64) before sending stream data (largeStream)
+            IdTCPClient->IOHandler->LargeStream = true;
+            IdTCPClient->IOHandler->Write(mStream.get(), 0, true);
             fStream.reset();
             mStream.reset();
 
-            UnicodeString serverResponse = CryptoUtils::decryptStringRSA(codec.get(), signatory.get(), prvKeyPath, IdTCPClient1->IOHandler->ReadLn());
+            UnicodeString serverResponse = CryptoUtils::decryptStringRSA(codec.get(), signatory.get(), prvKeyPath, IdTCPClient->IOHandler->ReadLn());
 
             if (serverResponse == "File converted") {
 
@@ -210,8 +214,8 @@ bool TDataModule1::convertWordList(const UnicodeString& filePath) {
             	fStream = std::make_unique<TFileStream>(convertedFilePath, fmCreate);
                 mStream = std::make_unique<TMemoryStream>();
 
-                IdTCPClient1->IOHandler->LargeStream = true;
-                IdTCPClient1->IOHandler->ReadStream(mStream.get());
+                IdTCPClient->IOHandler->LargeStream = true;
+                IdTCPClient->IOHandler->ReadStream(mStream.get());
                 CryptoUtils::decryptStreamRSA(codec.get(), signatory.get(), prvKeyPath, fStream.get(), mStream.get());
 
                 LOGGER(LogLevel::Debug, "Socket I/O complete");
@@ -225,9 +229,26 @@ bool TDataModule1::convertWordList(const UnicodeString& filePath) {
     }
     __finally {
 
-    	IdTCPClient1->Disconnect();
+    	IdTCPClient->Disconnect();
 
     }
     return false;
+}
+
+UnicodeString TDataModule1::translateKey(const UnicodeString &key) {
+
+    UnicodeString translatedKey = "";
+
+    try {
+        IdUDPClient->Send(key);
+        translatedKey = IdUDPClient->ReceiveString();
+
+        LOGGER(LogLevel::Debug, "UDP I/O complete");
+    }
+    catch (Exception &ex) {
+    	LOGGER(LogLevel::Error, "UDP client error: " + ex.Message);
+    }
+
+    return translatedKey;
 }
 

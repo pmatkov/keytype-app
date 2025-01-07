@@ -3,8 +3,8 @@ object FAuthentication: TFAuthentication
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  ClientHeight = 339
-  ClientWidth = 246
+  ClientHeight = 362
+  ClientWidth = 242
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

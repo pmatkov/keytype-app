@@ -16,6 +16,7 @@
 #pragma package(smart_init)
 
 GameEngine::GameEngine(ISingleItemDisplay &_singleItemDisplay, IGameDisplay &_gameDisplay) : singleItemDisplay(_singleItemDisplay), gameDisplay(_gameDisplay)  {
+
 	mutexWords = std::make_unique<TMutex>(false);
     mutexScore = std::make_unique<TMutex>(false);
 }
@@ -46,9 +47,12 @@ void GameEngine::initializeGame(FWLimit::Limit _gameArea) {
 
     	gameArea = _gameArea;
 
-		gameThread = new GameThread(false, gameDisplay, *this, *mutexWords);
         TFrFlyingWords &flyingWords = static_cast<TFrFlyingWords&>(gameDisplay);
-        keystrokeProcessorThread = new KeystrokeProcessorThread(false, gameDisplay, flyingWords.getGameEngine(), flyingWords.getKeyStrokeQueue(),\
+
+        // create threads
+
+        gameThread = new GameThread(false, gameDisplay, *this, *mutexWords);
+        keystrokeProcessorThread = new KeystrokeProcessorThread(false, gameDisplay, *this, flyingWords.getKeyStrokeQueue(),\
          flyingWords.getCriticalSection(), *mutexWords, *mutexScore, flyingWords.getKeyStrokeEvent(), flyingWords.getWordMatchEvent(), flyingWords.getTerminateEvent());
         gameScoreThread = new GameScoreThread(false, singleItemDisplay, *this, *mutexScore, flyingWords.getWordMatchEvent(), flyingWords.getTerminateEvent());
 
@@ -166,7 +170,7 @@ int GameEngine::getDelay(int min, int max) {
 }
 
 template <typename T>
-void GameEngine::thTerminate(T *&thread) {
+void GameEngine::thTerminate(T*& thread) {
 
    	if (thread != nullptr) {
 		thread->Terminate();
@@ -174,10 +178,10 @@ void GameEngine::thTerminate(T *&thread) {
 		FreeAndNil(thread);
 	}
 }
-template void GameEngine::thTerminate<GameThread>(GameThread*&);
-template void GameEngine::thTerminate<KeystrokeProcessorThread>(KeystrokeProcessorThread*&);
-template void GameEngine::thTerminate<GameScoreThread>(GameScoreThread*&);
 
+template void GameEngine::thTerminate<GameScoreThread>(GameScoreThread*&);
+template void GameEngine::thTerminate<KeystrokeProcessorThread>(KeystrokeProcessorThread*&);
+template void GameEngine::thTerminate<GameThread>(GameThread*&);
 
 void GameEngine::threadTerminate() {
 
@@ -194,6 +198,7 @@ void GameEngine::gameCleanup()  {
     	gameDisplay.removeAllTextControls();
         clearWords();
         clearWordsOnDisplay();
+
         singleItemDisplay.setItemSingleItemControl("LastWord", "");
         singleItemDisplay.setItemSingleItemControl("MatchCount", "");
         singleItemDisplay.setItemSingleItemControl("TimeRemaining", "");

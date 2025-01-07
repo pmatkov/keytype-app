@@ -37,7 +37,7 @@ __fastcall TFLessonResults::TFLessonResults(TComponent* Owner, TDataModule1 *_da
 
 void __fastcall TFLessonResults::BtViewReportClick(TObject *Sender)
 {
-      frxReport->ShowReport();
+	frxReport->ShowReport();
 }
 
 void __fastcall TFLessonResults::BtExportPdfClick(TObject *Sender)

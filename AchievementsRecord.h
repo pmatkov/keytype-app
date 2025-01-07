@@ -18,7 +18,7 @@ class AchievementsRecord {
 
     public:
         AchievementsRecord();
-        AchievementsRecord(int _idUser, const UnicodeString _title, const UnicodeString _badge, TDateTime _date);
+        AchievementsRecord(int _idUser, const UnicodeString _title, const UnicodeString _description, TDateTime _date);
 
         int getIdUser() const;
         UnicodeString getTitle() const;

@@ -41,11 +41,12 @@ __published:	// IDE-managed Components
 	TLabel *LInfo;
 	TTimer *msgDisplayTimer;
 	TEdit *EPassword;
+
+    void __fastcall FormActivate(TObject *Sender);
 	void __fastcall BtEditSaveClick(TObject *Sender);
 	void __fastcall BtChangeImageClick(TObject *Sender);
 	void __fastcall BtDeleteImageClick(TObject *Sender);
 	void __fastcall BtDeleteClick(TObject *Sender);
-	void __fastcall FormActivate(TObject *Sender);
 	void __fastcall msgDisplayTimerTimer(TObject *Sender);
 private:	// User declarations
  	MainSession *mainSession;

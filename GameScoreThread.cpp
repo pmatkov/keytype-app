@@ -23,6 +23,9 @@ void GameScoreThread::Execute()
 
         if (signaledObj == &wordMatchEvent) {
 
+            /* get last matched word
+          		(synchronize with keystrokeProcessorThread) */
+
             mutexScore.Acquire();
             UnicodeString word = gameEngine.getLastMatch();
             mutexScore.Release();
@@ -31,18 +34,17 @@ void GameScoreThread::Execute()
 
             GameStatistics gs = gameEngine.getGameStatistics();
 
+            int currentMatchCount = gs.getMatchCount();
+            gs.setMatchCount(currentMatchCount + 1);
+
             int currentPoints = gs.getPoints();
             int newPoints = GameStatistics::calculatePoints(word);
             gs.setPoints(currentPoints + newPoints);
 
-            int currentMatchCount = gs.getMatchCount();
-            gs.setMatchCount(currentMatchCount + 1);            ;
-
             gameEngine.setGameStatistics(gs);
 
-            Synchronize([this, currentPoints, newPoints]() {singleItemDisplay.setItemSingleItemControl("Points", currentPoints + newPoints);});
             Synchronize([this, currentMatchCount]() {singleItemDisplay.setItemSingleItemControl("MatchCount", currentMatchCount + 1);});
-
+            Synchronize([this, currentPoints, newPoints]() {singleItemDisplay.setItemSingleItemControl("Points", currentPoints + newPoints);});
         }
         else {
             break;

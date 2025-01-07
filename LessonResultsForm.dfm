@@ -218,8 +218,8 @@ object FLessonResults: TFLessonResults
       'begin'
       ''
       'end.')
-    Left = 75
-    Top = 255
+    Left = 15
+    Top = 366
     Datasets = <
       item
         DataSet = frxUser
@@ -947,8 +947,8 @@ object FLessonResults: TFLessonResults
     DataSet = DataModule1.TUsers
     BCDToCurrency = False
     DataSetOptions = []
-    Left = 138
-    Top = 255
+    Left = 93
+    Top = 369
   end
   object frxLessonResult: TfrxDBDataset
     UserName = 'frxLessonResult'
@@ -956,8 +956,8 @@ object FLessonResults: TFLessonResults
     DataSet = DataModule1.TLessonResults
     BCDToCurrency = False
     DataSetOptions = []
-    Left = 195
-    Top = 261
+    Left = 177
+    Top = 369
   end
   object frxPDFExport: TfrxPDFExport
     UseFileCache = True
@@ -985,8 +985,8 @@ object FLessonResults: TFLessonResults
     PdfA = False
     PDFStandard = psNone
     PDFVersion = pv17
-    Left = 264
-    Top = 258
+    Left = 441
+    Top = 240
   end
   object frxRTFExport: TfrxRTFExport
     UseFileCache = True
@@ -1000,7 +1000,7 @@ object FLessonResults: TFLessonResults
     SuppressPageHeadersFooters = False
     HeaderFooterMode = hfText
     AutoSize = False
-    Left = 339
-    Top = 261
+    Left = 441
+    Top = 306
   end
 end

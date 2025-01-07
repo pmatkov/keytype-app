@@ -15,49 +15,49 @@ object FrCourses: TFrCourses
       Top = 243
       Width = 30
       Height = 15
-      Caption = 'name'
+      Caption = 'naziv'
     end
     object LDescription: TLabel
       Left = 93
       Top = 243
       Width = 59
       Height = 15
-      Caption = 'description'
+      Caption = 'opis'
     end
     object LDifficulty: TLabel
       Left = 216
       Top = 243
       Width = 47
       Height = 15
-      Caption = 'difficulty'
+      Caption = 'te'#382'ina'
     end
     object LGoal: TLabel
       Left = 273
       Top = 240
       Width = 23
       Height = 15
-      Caption = 'goal'
+      Caption = 'cilj'
     end
     object LLanguage: TLabel
       Left = 408
       Top = 243
       Width = 49
       Height = 15
-      Caption = 'language'
+      Caption = 'jezik'
     end
     object LGoalValue: TLabel
       Left = 354
       Top = 243
       Width = 41
       Height = 15
-      Caption = 'goal val'
+      Caption = 'cilj vr.'
     end
     object BtClearSelection: TButton
       Left = 13
       Top = 303
       Width = 75
       Height = 25
-      Caption = 'Clear select'
+      Caption = 'Deselektiraj'
       TabOrder = 0
       OnClick = BtClearSelectionClick
     end
@@ -129,7 +129,7 @@ object FrCourses: TFrCourses
       Top = 10
       Width = 75
       Height = 25
-      Caption = 'Filter'
+      Caption = 'Filtriraj'
       TabOrder = 8
       OnClick = BtFilterClick
     end
@@ -145,7 +145,7 @@ object FrCourses: TFrCourses
       Top = 10
       Width = 75
       Height = 25
-      Caption = 'Sort'
+      Caption = 'Sortiraj'
       TabOrder = 10
       OnClick = BtSortClick
     end
@@ -182,42 +182,42 @@ object FrCourses: TFrCourses
       item
         Expanded = False
         FieldName = 'name'
-        Title.Caption = 'Name'
+        Title.Caption = 'Naziv'
         Width = 90
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'description'
-        Title.Caption = 'Description'
+        Title.Caption = 'Opis'
         Width = 120
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'difficulty'
-        Title.Caption = 'Difficulty'
+        Title.Caption = 'Te'#382'ina'
         Width = 50
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'goal'
-        Title.Caption = 'Goal'
+        Title.Caption = 'Cilj'
         Width = 50
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'goalValue'
-        Title.Caption = 'Goal value'
+        Title.Caption = 'Cilj vr.'
         Width = 60
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'language'
-        Title.Caption = 'Language'
+        Title.Caption = 'Jezik'
         Width = 80
         Visible = True
       end>
@@ -227,7 +227,7 @@ object FrCourses: TFrCourses
     Top = 306
     Width = 75
     Height = 25
-    Caption = 'Delete'
+    Caption = 'Obri'#353'i'
     TabOrder = 1
     OnClick = BtDeleteClick
   end
@@ -236,7 +236,7 @@ object FrCourses: TFrCourses
     Top = 306
     Width = 75
     Height = 25
-    Caption = 'Add'
+    Caption = 'Dodaj'
     TabOrder = 3
     OnClick = BtAddSaveClick
   end

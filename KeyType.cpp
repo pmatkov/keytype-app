@@ -9,20 +9,21 @@
 #pragma hdrstop
 
 //---------------------------------------------------------------------------
-USEFORM("LoginFrame.cpp", FrLogin); /* TFrame: File Type */
-USEFORM("LessonsFrame.cpp", FrLessons); /* TFrame: File Type */
 USEFORM("MainForm.cpp", FMain);
+USEFORM("LogsForm.cpp", FLogs);
+USEFORM("LoginFrame.cpp", FrLogin); /* TFrame: File Type */
 USEFORM("MainFrame.cpp", FrMain); /* TFrame: File Type */
+USEFORM("PracticeFrame.cpp", FrPractice); /* TFrame: File Type */
+USEFORM("LessonsFrame.cpp", FrLessons); /* TFrame: File Type */
 USEFORM("LessonsForm.cpp", FLessons);
 USEFORM("Lessons2Frame.cpp", FrLessons2); /* TFrame: File Type */
 USEFORM("LessonResultsForm.cpp", FLessonResults);
-USEFORM("PracticeFrame.cpp", FrPractice); /* TFrame: File Type */
+USEFORM("PracticeSourceForm.cpp", FPracticeSource);
 USEFORM("TypingTextFrame.cpp", FrTypingText); /* TFrame: File Type */
 USEFORM("TypingStatsFrame.cpp", FrTypingStats); /* TFrame: File Type */
+USEFORM("RegisterFrame.cpp", FrRegister); /* TFrame: File Type */
 USEFORM("ProfileForm.cpp", FProfile);
 USEFORM("PreferencesForm.cpp", FPreferences);
-USEFORM("PracticeOptionsForm.cpp", FPractice);
-USEFORM("RegisterFrame.cpp", FrRegister); /* TFrame: File Type */
 USEFORM("CustomTextFrame.cpp", FrCustomText); /* TFrame: File Type */
 USEFORM("CoursesFrame.cpp", FrCourses); /* TFrame: File Type */
 USEFORM("ConverterForm.cpp", FConverter);
@@ -30,13 +31,13 @@ USEFORM("DataModule.cpp", DataModule1); /* TDataModule: File Type */
 USEFORM("AchievementsForm.cpp", FAchievements);
 USEFORM("AuthenticationForm.cpp", FAuthentication);
 USEFORM("GeneratedTextFrame.cpp", FrGeneratedText); /* TFrame: File Type */
+USEFORM("KeyboardFrame.cpp", FrKeyboard); /* TFrame: File Type */
 USEFORM("ExternalSourcesFrame.cpp", FrExternalSources); /* TFrame: File Type */
 USEFORM("FlyingWordsStatsFrame.cpp", FrFlyingWordsStats); /* TFrame: File Type */
 USEFORM("FlyingWordsFrame.cpp", FrFlyingWords); /* TFrame: File Type */
-USEFORM("LogsForm.cpp", FLogs);
 //---------------------------------------------------------------------------
 #include "MainForm.h"
-#include "PracticeOptionsForm.h"
+#include "PracticeSourceForm.h"
 #include "AuthenticationForm.h"
 #include "Parser.h"
 #include "Logger.h"
@@ -54,7 +55,7 @@ int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 		Application->Initialize();
 		Application->MainFormOnTaskBar = true;
 
-        LOGGER_SIMPLE("--Main app started--");
+        LOGGER_SIMPLE("--App started--");
 
 		std::unique_ptr<TDataModule1> DataModule1 = std::make_unique<TDataModule1>(nullptr);
 		std::unique_ptr<AuthenticationService> authService = std::make_unique<AuthenticationService>(DataModule1.get());
@@ -69,10 +70,8 @@ int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 
             std::unique_ptr<MainSession> mainSession = std::make_unique<MainSession>(appSettings, typingSettings);
 
-			//  create main form
+			//  main form
 			Application->CreateForm(__classid(TFMain), &FMain);
-            Application->CreateForm(__classid(TFAchievements), &FAchievements);
-            Application->CreateForm(__classid(TFLogs), &FLogs);
             FMain->Position = poScreenCenter;
 
             FMain->setMainSession(std::move(mainSession));

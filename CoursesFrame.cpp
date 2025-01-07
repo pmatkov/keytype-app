@@ -18,6 +18,7 @@ __fastcall TFrCourses::TFrCourses(TComponent* Owner) : TFrame(Owner) {}
 __fastcall TFrCourses::TFrCourses(TComponent* Owner, TDataModule1 *_dataModule)	: TFrame(Owner) {
 
 	if (_dataModule) {
+
     	dataModule = _dataModule;
 
     	UIUtils::setComboBoxItems(CBFilter, dataModule->getColumnNames(DBGridCourses->DataSource->DataSet, ""), -1);
@@ -28,8 +29,9 @@ __fastcall TFrCourses::TFrCourses(TComponent* Owner, TDataModule1 *_dataModule)	
 }
 void __fastcall TFrCourses::DBGridCoursesCellClick(TColumn *Column)
 {
+
     EName->Text = DBGridCourses->DataSource->DataSet->FieldByName("name")->AsString;
-    EDescription->Text = DBGridCourses->DataSource->DataSet->FieldByName("name")->AsString;
+    EDescription->Text = DBGridCourses->DataSource->DataSet->FieldByName("description")->AsString;
     UIUtils::selectComboBoxItem(CBDifficulty, DBGridCourses->DataSource->DataSet->FieldByName("difficulty")->AsString);
     UIUtils::selectComboBoxItem(CBGoal, DBGridCourses->DataSource->DataSet->FieldByName("goal")->AsString);
    	EGoalValue->Text = DBGridCourses->DataSource->DataSet->FieldByName("goalValue")->AsInteger;
@@ -49,29 +51,30 @@ void __fastcall TFrCourses::BtAddSaveClick(TObject *Sender)
    	if (areFieldsEmpty()) {
  		ShowMessage("Input fields should not be empty.");
         return;
-     }
+    }
 
     if (BtAddSave->Caption == "Add") {
 
     	DBGridCourses->DataSource->DataSet->Append();
 
     }
-     else if (BtAddSave->Caption == "Save") {
+    else if (BtAddSave->Caption == "Save") {
 
-     	DBGridCourses->DataSource->DataSet->Edit();
-
-     }
-     DBGridCourses->DataSource->DataSet->FieldByName("name")->AsString = EName->Text;
-     DBGridCourses->DataSource->DataSet->FieldByName("description")->AsString = EDescription->Text;
-     DBGridCourses->DataSource->DataSet->FieldByName("difficulty")->AsInteger = StrToInt(CBDifficulty->Text);
-     DBGridCourses->DataSource->DataSet->FieldByName("goal")->AsString = CBGoal->Text;
-     DBGridCourses->DataSource->DataSet->FieldByName("goalValue")->AsInteger = StrToInt(EGoalValue->Text);
-     DBGridCourses->DataSource->DataSet->FieldByName("language")->AsString = CBLanguage->Text;
-     DBGridCourses->DataSource->DataSet->Post();
-
-     if (BtAddSave->Caption == "Add") {
-     	clearInputFields();
+    	DBGridCourses->DataSource->DataSet->Edit();
     }
+
+    DBGridCourses->DataSource->DataSet->FieldByName("name")->AsString = EName->Text;
+    DBGridCourses->DataSource->DataSet->FieldByName("description")->AsString = EDescription->Text;
+    DBGridCourses->DataSource->DataSet->FieldByName("difficulty")->AsInteger = StrToInt(CBDifficulty->Text);
+    DBGridCourses->DataSource->DataSet->FieldByName("goal")->AsString = CBGoal->Text;
+    DBGridCourses->DataSource->DataSet->FieldByName("goalValue")->AsInteger = StrToInt(EGoalValue->Text);
+    DBGridCourses->DataSource->DataSet->FieldByName("language")->AsString = CBLanguage->Text;
+
+    DBGridCourses->DataSource->DataSet->Post();
+
+    if (BtAddSave->Caption == "Add") {
+     	clearInputFields();
+	}
 
 }
 
@@ -105,22 +108,28 @@ void TFrCourses::clearInputFields() {
     BtAddSave->Caption = "Add";
 }
 
+// filter courses
+
 void __fastcall TFrCourses::BtFilterClick(TObject *Sender)
 {
+
     if (CBFilter->Text != "") {
     	DBGridCourses->DataSource->DataSet->Filter = CBFilter->Text + " LIKE '%" + EFilter->Text + "%'";
        	DBGridCourses->DataSource->DataSet->Filtered = true;
     }
 }
-//---------------------------------------------------------------------------
+
+// sort courses
 
 void __fastcall TFrCourses::BtSortClick(TObject *Sender)
 {
+
 	if (ESort->Text == "") {
+
       dataModule->TCourses->IndexFieldNames = "";
     }
     else {
-      dataModule->TCourses->IndexFieldNames = ESort->Text;
+     	dataModule->TCourses->IndexFieldNames = ESort->Text;
     }
 
 }

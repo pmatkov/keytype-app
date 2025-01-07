@@ -23,11 +23,14 @@ __fastcall TFrFlyingWords::TFrFlyingWords(TComponent* Owner) : TFrame(Owner), ga
 
 	keyStrokeQueue = std::make_unique<std::queue<wchar_t>>();
     criticalSection = std::make_unique<TCriticalSection>();
+
     keyStrokeEvent = std::make_unique<TEvent>(nullptr, false, false, "KsEvent", false);
     wordMatchEvent = std::make_unique<TEvent>(nullptr, false, false, "WmEvent", false);
     terminateEvent = std::make_unique<TEvent>(nullptr, true, false, "TeEvent", false);
 
-    LOGGER(LogLevel::Debug, "Created frame flying words");
+    UIUtils::setComboBoxItems(CBTime, {"1", "2", "3", "4", "5"}, 0);
+
+    LOGGER(LogLevel::Debug, "Created flying words frame");
 }
 
  TFrFlyingWords::~TFrFlyingWords() {
@@ -64,16 +67,36 @@ __fastcall TFrFlyingWords::TFrFlyingWords(TComponent* Owner) : TFrame(Owner), ga
 
 void __fastcall TFrFlyingWords::BtStartQuitClick(TObject *Sender)
 {
-	if (BtStartQuit->Caption == "Start game") {
+	if (BtStartQuit->Caption == "Start" || BtStartQuit->Caption == "Pokreni") {
 
         if (CBWordList->Text.IsEmpty()) {
-        	ShowMessage("Select word list");
+
+        	if (BtStartQuit->Caption == "Start") {
+                ShowMessage("Select word list");
+            }
+            else {
+                ShowMessage("Odaberi listu rijeci");
+            }
+
         }
         else if (!gameEngine->isWordListLoaded()) {
-        	ShowMessage("Word list is empty");
+
+        	if (BtStartQuit->Caption == "Start") {
+                ShowMessage("Word list is empty");
+            }
+            else {
+                ShowMessage("Lista rijeci je prazna");
+            }
+
         }
         else{
-        	BtStartQuit->Caption = "Quit game";
+        	if (BtStartQuit->Caption == "Start") {
+            	BtStartQuit->Caption = "Stop";
+            }
+            else if (BtStartQuit->Caption == "Pokreni") {
+                BtStartQuit->Caption = "Zavrsi";
+            }
+
             this->SetFocus();
             UIUtils::showChildControls(FrFlyingWordsStats, true);
             CBWordList->Enabled = false;
@@ -83,8 +106,15 @@ void __fastcall TFrFlyingWords::BtStartQuitClick(TObject *Sender)
             gameEngine->initializeGame(FWLimit::Limit(FrFlyingWordsStats->Height + 10, BtStartQuit->Top - 10, 0, this->ClientWidth));
         }
 	}
-    else if (BtStartQuit->Caption == "Quit game") {
-        BtStartQuit->Caption = "Start game";
+    else if (BtStartQuit->Caption == "Quit" || BtStartQuit->Caption == "Zavrsi") {
+
+        if (BtStartQuit->Caption == "Quit") {
+            BtStartQuit->Caption = "Start";
+        }
+        else if (BtStartQuit->Caption == "Zavrsi") {
+        	BtStartQuit->Caption = "Pokreni";
+        }
+
         UIUtils::showChildControls(FrFlyingWordsStats, false);
         CBWordList->Enabled = true;
         BtBrowse->Enabled = true;
@@ -147,7 +177,6 @@ void __fastcall TFrFlyingWords::BtBrowseClick(TObject *Sender) {
 
          if (FileExists(DFileOpen->FileName)) {
 
-              // extracts filename and extension from path
              UnicodeString filename = ExtractFileName(DFileOpen->FileName);
 
              if (CBWordList->Items->IndexOf(filename) == -1) {
@@ -189,18 +218,20 @@ void TFrFlyingWords::processCharMessages(WPARAM wParam) {
 
     if (gameEngine->getGameStatus() == GameStatus::Started) {
 
-      	wchar_t key = static_cast<wchar_t>(wParam);
+      	wchar_t wch = static_cast<wchar_t>(wParam);
+
+        /* add char to queue
+        	(synchronize with keystrokeProcessorThread) */
 
     	criticalSection->Acquire();
-        if (key != ENTER) {
-           keyStrokeQueue->push(key);
+        if (wch != ENTER) {
+           keyStrokeQueue->push(wch);
         }
      	criticalSection->Release();
 
-        if (keyStrokeQueue->size() && key == ENTER) {
+        if (keyStrokeQueue->size() && wch == ENTER) {
         	keyStrokeEvent->SetEvent();
         }
-
     }
 }
 

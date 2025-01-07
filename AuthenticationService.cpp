@@ -4,12 +4,14 @@
 
 #include <FireDAC.DApt.hpp>
 
-
 #include "AuthenticationService.h"
+#include "TextUtils.h"
+#include "FileUtils.h"
 #include "CryptoUtils.h"
 #include "ENullPointerException.h"
 #include "User.h"
 #include "Logger.h"
+#include "Random.h"
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -25,11 +27,14 @@ AuthenticationService::AuthenticationService(TDataModule1 *_dataModule) {
     }
 }
 
-bool AuthenticationService::loginUser(const UnicodeString& username, const UnicodeString& password) {
+bool AuthenticationService::loginUser(const UnicodeString &username, const UnicodeString &password) {
 
 	if (username.Compare("guest") == 0) {
 
-    	user = User();
+        // create token for REST service
+
+    	UnicodeString token = CryptoUtils::createToken(FileUtils::createAbsolutePath("Keys\\prv_key.bin", true), "guest", "guest");
+    	user = User("guest", token);
 		authenticated = true;
         LOGGER(LogLevel::Info, "User <guest> signed in");
 
@@ -48,21 +53,26 @@ bool AuthenticationService::loginUser(const UnicodeString& username, const Unico
 
             query->First();
             UnicodeString hashedPassword = query->FieldByName("password")->AsString;
-            UnicodeString salt = query->FieldByName("salt")->AsString;
+            UnicodeString role = query->FieldByName("role")->AsString;
 
             query->Next();
 
-            if (!query->Eof || !verifyCredentials(hashedPassword, password + salt)) {
+            // verify credentials
+
+            if (!query->Eof || !verifyCredentials(username, hashedPassword, password)) {
             	query->Close();
             	LOGGER(LogLevel::Debug, "Login failed");
             	return false;
             }
 
-            if (!user.getUsername().IsEmpty() && user.getUsername() != username) {
+            if (user.getUsername() != username) {
                 userChanged = true;
             }
 
-            user = User(username);
+            // create token for REST service
+
+            UnicodeString token = CryptoUtils::createToken(FileUtils::createAbsolutePath("Keys\\prv_key.bin", true), username, role);
+            user = User(username, token);
             authenticated = true;
 
             query->Close();
@@ -83,21 +93,8 @@ bool AuthenticationService::loginUser(const UnicodeString& username, const Unico
     return false;
 }
 
-bool  AuthenticationService::logoutUser() {
 
-	if (authenticated) {
-
-        user = User();
-		authenticated = false;
-        LOGGER(LogLevel::Info, "User signed out");
-
-		return true;
-	}
-
-    return false;
-}
-
-bool AuthenticationService::registerUser(const UnicodeString& username, const UnicodeString& password) {
+bool AuthenticationService::registerUser(const UnicodeString &username, const UnicodeString &password) {
 
 
     std::unique_ptr<TFDQuery> query = std::make_unique<TFDQuery>(nullptr);
@@ -109,23 +106,30 @@ bool AuthenticationService::registerUser(const UnicodeString& username, const Un
 
         if (query->IsEmpty()) {
 
-            UnicodeString salt = CryptoUtils::generateRandomSalt(32);
-            UnicodeString hashedPassword = CryptoUtils::generateSHA512Hash(password + salt);
+            // generate password hash
+
+        	UnicodeString salt = CryptoUtils::generateSalt(username);
+            UnicodeString hashedSalt = CryptoUtils::generateSHA256Hash(salt);
+            UnicodeString hashedPassword = CryptoUtils::generateSHA512Hash(IntToStr(Random::getRandom(1, 100)) + password + hashedSalt);
 
             query->Close();
-            query->SQL->Text = "INSERT INTO users (username, password, salt) VALUES (:username, :password, :salt)";
+
+            query->SQL->Text = "INSERT INTO users (username, password, role) VALUES (:username, :password, :role)";
             query->Params->ParamByName("username")->AsString = username;
             query->Params->ParamByName("password")->AsString = hashedPassword;
-            query->Params->ParamByName("salt")->AsString = salt;
+            query->Params->ParamByName("role")->AsString = "regular";
         	query->ExecSQL();
 
             if (query->RowsAffected > 0) {
 
-                if (!user.getUsername().IsEmpty() && user.getUsername() != username) {
+                if (user.getUsername() != username) {
                     userChanged = true;
                 }
 
-            	user = User(username);
+                // create token for REST service
+
+                UnicodeString token = CryptoUtils::createToken(FileUtils::createAbsolutePath("Keys\\prv_key.bin", true), username, "regular");
+            	user = User(username, token);
 				authenticated = true;
 
                 query->Close();
@@ -144,7 +148,7 @@ bool AuthenticationService::registerUser(const UnicodeString& username, const Un
         	query->Close();
 
             if (OnUsernameUnavailable) {
-            	LOGGER(LogLevel::Debug, "Registration failed. Username not available");
+            	LOGGER(LogLevel::Debug, "Username not available");
                 OnUsernameUnavailable();
              }
              return false;
@@ -156,6 +160,19 @@ bool AuthenticationService::registerUser(const UnicodeString& username, const Un
 
     return false;
 
+}
+
+bool  AuthenticationService::logoutUser() {
+
+	if (authenticated) {
+        user = User();
+		authenticated = false;
+        LOGGER(LogLevel::Info, "User signed out");
+
+		return true;
+	}
+
+    return false;
 }
 
 const User& AuthenticationService::getUser() const {
@@ -171,10 +188,18 @@ void AuthenticationService::setUserChanged(bool _userChanged) {
     userChanged = _userChanged;
 }
 
+bool AuthenticationService::verifyCredentials(const UnicodeString &username, const UnicodeString& hashedPassword, const UnicodeString& password) {
 
-bool AuthenticationService::verifyCredentials(const UnicodeString& hashedPassword, const UnicodeString& saltedPassword) {
+    bool verified = false;
+    UnicodeString salt = CryptoUtils::generateSalt(username);
+    UnicodeString hashedSalt = CryptoUtils::generateSHA256Hash(salt);
 
-    return CryptoUtils::generateSHA512Hash(saltedPassword) == hashedPassword;
+    for (int i = 1; i <= 100; i++) {
+
+      if (CryptoUtils::generateSHA512Hash(IntToStr(i) + password + hashedSalt) == hashedPassword) {
+          verified = true;
+          break;
+      }
+    }
+    return verified;
 }
-
-

@@ -3,9 +3,9 @@ object FLogs: TFLogs
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'Logs'
-  ClientHeight = 346
-  ClientWidth = 528
+  Caption = 'Zapisi'
+  ClientHeight = 342
+  ClientWidth = 512
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,7 +14,7 @@ object FLogs: TFLogs
   Font.Style = []
   OnActivate = FormActivate
   TextHeight = 15
-  object LVLogDates: TListView
+  object LVLogFiles: TListView
     Left = 15
     Top = 17
     Width = 499
@@ -22,7 +22,7 @@ object FLogs: TFLogs
     Columns = <
       item
         Caption = 'File name'
-        Width = 270
+        Width = 250
       end
       item
         Caption = 'Last modified'
@@ -30,15 +30,15 @@ object FLogs: TFLogs
       end
       item
         Caption = 'File size'
-        Width = 100
+        Width = 120
       end>
     MultiSelect = True
     ReadOnly = True
     RowSelect = True
     TabOrder = 0
     ViewStyle = vsReport
-    OnMouseDown = LVLogDatesMouseDown
-    OnSelectItem = LVLogDatesSelectItem
+    OnMouseDown = LVLogFilesMouseDown
+    OnSelectItem = LVLogFilesSelectItem
   end
   object MLogs: TMemo
     Left = 15

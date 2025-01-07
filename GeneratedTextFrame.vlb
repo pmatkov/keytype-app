@@ -1,88 +1,103 @@
-﻿[CBNumbers]
-Coordinates=10,298,114,58
-
-[MPreview]
-Coordinates=587,366,71,58
+﻿[MPreview]
+Coordinates=587,366,61,51
 
 [EDefinition]
-Coordinates=154,366,77,58
+Coordinates=154,366,68,51
 
 [BtConvert]
-Coordinates=589,10,72,58
-
-[BtTest]
-Coordinates=10,434,52,58
+Coordinates=589,10,64,51
 
 [CBCategory]
-Coordinates=367,10,101,124
+Coordinates=367,10,84,105
 
 [ESynonyms]
-Coordinates=350,366,83,58
-
-[CBWordsMin]
-Coordinates=478,10,101,124
-
-[LWordsMax]
-Coordinates=354,298,83,58
+Coordinates=350,366,73,51
 
 [BtBrowse]
-Coordinates=591,298,69,58
+Coordinates=591,298,62,51
 
 [GBWords]
-Coordinates=507,366,70,58
+Coordinates=507,366,61,51
 
 [BtAddSave1]
-Coordinates=258,298,86,58
+Coordinates=258,298,75,51
 
 [EWord]
-Coordinates=443,366,54,58
-
-[BtTestThreads]
-Coordinates=241,366,99,58
-
-[CBPunctuation]
-Coordinates=134,298,114,58
+Coordinates=443,366,47,51
 
 [LSynonym]
-Coordinates=506,298,75,58
+Coordinates=506,298,66,51
 
 [BtDelete1]
-Coordinates=668,366,71,58
+Coordinates=668,366,61,51
 
 [LDefinition]
-Coordinates=670,298,76,58
+Coordinates=670,298,68,51
 
 [LInfo]
-Coordinates=447,298,49,58
+Coordinates=447,298,41,51
 
 [DFileOpen]
-Coordinates=0,453,76,36
-
-[LWordsMin]
-Coordinates=72,434,79,58
+Coordinates=0,453,65,33
 
 [msgDisplayTimer]
-Coordinates=574,155,114,36
+Coordinates=574,155,100,33
 
 [LWord]
-Coordinates=92,366,52,58
+Coordinates=92,366,46,51
 
 [LCategory]
-Coordinates=161,434,74,58
-
-[CBWordsMax]
-Coordinates=136,10,101,124
+Coordinates=161,434,65,51
 
 []
-Coordinates=574,210,91,36
+Coordinates=10,298,114,58
 
 [LDictionary]
-Coordinates=10,366,72,58
+Coordinates=10,366,70,51
 
 [CBDictionaryFiles]
-Coordinates=247,10,110,124
+Coordinates=247,10,103,105
 Visible=True
 
 [LVDictionary]
-Coordinates=10,10,116,278
+Coordinates=10,10,97,231
+
+[BtGenerate]
+Coordinates=10,434,69,51
+
+[LWordsMin]
+Coordinates=72,434,70,51
+
+[LWordsMax]
+Coordinates=354,298,72,51
+
+[CBCharsWordMin]
+Coordinates=478,10,102,105
+
+[CBCharsWordMax]
+Coordinates=136,10,104,105
+
+[CBSynonyms]
+Coordinates=134,298,95,51
+
+[CBWordsMax]
+Coordinates=45,260,84,105
+
+[BtShuffle]
+Coordinates=126,134,60,51
+
+[LCharsWordMin]
+Coordinates=248,403,93,51
+
+[CBWordsMin]
+Coordinates=278,134,84,105
+
+[LCharsWordMax]
+Coordinates=126,204,96,51
+
+[CBUppercase]
+Coordinates=489,207,95,51
+
+[BtSynonyms]
+Coordinates=464,134,77,51
 

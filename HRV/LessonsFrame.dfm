@@ -22,7 +22,7 @@ object FrLessons: TFrLessons
       Top = 243
       Width = 30
       Height = 15
-      Caption = 'name'
+      Caption = 'naziv'
     end
     object LCharacters: TLabel
       Left = 197
@@ -36,7 +36,7 @@ object FrLessons: TFrLessons
       Top = 243
       Width = 61
       Height = 15
-      Caption = 'broj rije'#269'i'
+      Caption = 'br. rije'#269'i'
     end
     object LDateModified: TLabel
       Left = 405
@@ -50,7 +50,7 @@ object FrLessons: TFrLessons
       Top = 243
       Width = 57
       Height = 15
-      Caption = 'broj znakova'
+      Caption = 'br. znakova'
     end
     object BtDelete: TButton
       Left = 323
@@ -82,7 +82,7 @@ object FrLessons: TFrLessons
       Top = 303
       Width = 75
       Height = 25
-      Caption = 'Obri'#353'i odabrano'
+      Caption = 'Deselektiraj'
       TabOrder = 3
       OnClick = BtClearSelectionClick
     end
@@ -166,7 +166,7 @@ object FrLessons: TFrLessons
       Top = 303
       Width = 75
       Height = 25
-      Caption = 'Isklju'#269'i master'
+      Caption = 'Isklj. master'
       TabOrder = 14
       OnClick = BtMasterDetailClick
     end
@@ -194,61 +194,61 @@ object FrLessons: TFrLessons
       end
       item
         Expanded = False
-        FieldName = 'idCourses'
+        FieldName = 'id kursa'
         Width = 55
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'courseName'
-        Title.Caption = 'Course name'
+        Title.Caption = 'Naziv kursa'
         Width = 75
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'name'
-        Title.Caption = 'Name'
+        Title.Caption = 'Naziv lekc.'
         Width = 75
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'instructions'
-        Title.Caption = 'Instructions'
+        Title.Caption = 'Upute'
         Width = 110
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'characters'
-        Title.Caption = 'Characters'
+        Title.Caption = 'Znakovi'
         Width = 65
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'charCount'
-        Title.Caption = 'Char count'
+        Title.Caption = 'Br. znakova'
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'wordCount'
-        Title.Caption = 'Word count'
+        Title.Caption = 'Br. rije'#269'i'
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'avgChars'
-        Title.Caption = 'Avg chars'
+        Title.Caption = 'Prosj. znakova'
         Width = 55
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'dateModified'
-        Title.Caption = 'Date modified'
+        Title.Caption = 'Datum izmjene'
         Visible = True
       end>
   end

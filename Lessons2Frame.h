@@ -11,7 +11,7 @@
 #include "OptionsFrame.h"
 #include "PracticeFrame.h"
 #include <Vcl.ExtCtrls.hpp>
-#include <vcl.h>
+
 
 #include "Parser.h"
 #include "MainSession.h"
@@ -60,11 +60,11 @@ public:		// User declarations
     __fastcall TFrLessons2(TComponent* Owner, Parser *_parser, MainSession *_mainSession, TypingSession *_typingSession, AuthenticationService *_authService, TDataModule1 *_dataModule);
 
     void hideInterfaceValues();
-    bool setTextSource(int index);
+    bool setTextSource(int lessonIndex);
     void resetLessonControls();
 
     void __fastcall processLessonComplete(TObject *Sender);
-    bool isAchievementEligibile(int idUser, AchievementType achievementType);
+    bool isAchievementEligible(int idUser, AchievementType achievementType);
     void assignAchievement(int idUser, AchievementType achievementType, const UnicodeString &description);
 
     void processCharMessages(WPARAM wParam);

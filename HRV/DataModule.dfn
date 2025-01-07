@@ -5,11 +5,11 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45430.0165046296</prop>
-        <prop prop-type="OrigDateTime">45430.0102314815</prop>
-        <prop prop-type="XlatDateTime">45424.9793981481</prop>
+        <prop prop-type="SelfDateTime">45480.9983796296</prop>
+        <prop prop-type="OrigDateTime">45480.9018518518</prop>
+        <prop prop-type="XlatDateTime">45430.7315972222</prop>
         <prop prop-type="Translated">0</prop>
-        <prop prop-type="UnTranslated">244</prop>
+        <prop prop-type="UnTranslated">276</prop>
       </prop-group>
     </header>
     <body>
@@ -89,12 +89,12 @@
         <prop prop-type="Created">45395.1060928472</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TCourses.Left" resname="O:DataModule1.O:TCourses.Left">
-        <source>279</source>
+        <source>267</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45395.1060928472</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TCourses.Top" resname="O:DataModule1.O:TCourses.Top">
-        <source>216</source>
+        <source>222</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45395.1060928472</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -474,12 +474,12 @@
         <prop prop-type="Created">45395.1060928472</prop><prop prop-type="Status">0</prop><prop prop-type="Order">91</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:DCourses.Left" resname="O:DataModule1.O:DCourses.Left">
-        <source>267</source>
+        <source>258</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45395.1060928472</prop><prop prop-type="Status">0</prop><prop prop-type="Order">92</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:DCourses.Top" resname="O:DataModule1.O:DCourses.Top">
-        <source>291</source>
+        <source>309</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45395.1060928472</prop><prop prop-type="Status">0</prop><prop prop-type="Order">93</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -489,12 +489,12 @@
         <prop prop-type="Created">45395.1060928472</prop><prop prop-type="Status">0</prop><prop prop-type="Order">94</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:DLessons.Left" resname="O:DataModule1.O:DLessons.Left">
-        <source>336</source>
+        <source>330</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45395.1060928472</prop><prop prop-type="Status">0</prop><prop prop-type="Order">95</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:DLessons.Top" resname="O:DataModule1.O:DLessons.Top">
-        <source>294</source>
+        <source>309</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45395.1060928472</prop><prop prop-type="Status">0</prop><prop prop-type="Order">96</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -504,19 +504,19 @@
         <prop prop-type="Created">45411.7045295833</prop><prop prop-type="Status">0</prop><prop prop-type="Order">97</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:DUsers.Left" resname="O:DataModule1.O:DUsers.Left">
-        <source>210</source>
+        <source>186</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45411.7045295833</prop><prop prop-type="Status">0</prop><prop prop-type="Order">98</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:DUsers.Top" resname="O:DataModule1.O:DUsers.Top">
-        <source>288</source>
+        <source>312</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45411.7045295833</prop><prop prop-type="Status">0</prop><prop prop-type="Order">99</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TUsers.Active" resname="O:DataModule1.O:TUsers.Active">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.523947338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">100</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45479.6990105093</prop><prop prop-type="Status">0</prop><prop prop-type="Order">100</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TUsers.IndexFieldNames" resname="O:DataModule1.O:TUsers.IndexFieldNames">
         <source>'id'</source>
@@ -539,12 +539,12 @@
         <prop prop-type="Created">45411.7045295833</prop><prop prop-type="Status">0</prop><prop prop-type="Order">104</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TUsers.Left" resname="O:DataModule1.O:TUsers.Left">
-        <source>219</source>
+        <source>198</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45411.7045295833</prop><prop prop-type="Status">0</prop><prop prop-type="Order">105</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TUsers.Top" resname="O:DataModule1.O:TUsers.Top">
-        <source>213</source>
+        <source>219</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45411.7045295833</prop><prop prop-type="Status">0</prop><prop prop-type="Order">106</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -598,640 +598,800 @@
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45415.5229762847</prop><prop prop-type="Status">0</prop><prop prop-type="Order">116</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:DataModule1.O:TUsers.O:TUserssalt.AutoGenerateValue" resname="O:DataModule1.O:TUsers.O:TUserssalt.AutoGenerateValue">
-        <source>arDefault</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45430.0085261343</prop><prop prop-type="Status">0</prop><prop prop-type="Order">117</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:DataModule1.O:TUsers.O:TUserssalt.FieldName" resname="O:DataModule1.O:TUsers.O:TUserssalt.FieldName">
-        <source>'salt'</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45430.0085261343</prop><prop prop-type="Status">0</prop><prop prop-type="Order">118</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:DataModule1.O:TUsers.O:TUserssalt.Origin" resname="O:DataModule1.O:TUsers.O:TUserssalt.Origin">
-        <source>'salt'</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45430.0085261343</prop><prop prop-type="Status">0</prop><prop prop-type="Order">119</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:DataModule1.O:TUsers.O:TUserssalt.Size" resname="O:DataModule1.O:TUsers.O:TUserssalt.Size">
-        <source>255</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45430.0085261343</prop><prop prop-type="Status">0</prop><prop prop-type="Order">120</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
       <trans-unit id="O:DataModule1.O:TUsers.O:TUsersname.AutoGenerateValue" resname="O:DataModule1.O:TUsers.O:TUsersname.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7205457755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">121</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45411.7205457755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">117</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TUsers.O:TUsersname.FieldName" resname="O:DataModule1.O:TUsers.O:TUsersname.FieldName">
         <source>'name'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7205457755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">122</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45411.7205457755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">118</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TUsers.O:TUsersname.Origin" resname="O:DataModule1.O:TUsers.O:TUsersname.Origin">
         <source>'`name`'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7205457755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">123</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45411.7205457755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">119</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TUsers.O:TUserssurname.AutoGenerateValue" resname="O:DataModule1.O:TUsers.O:TUserssurname.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7205457755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">124</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45411.7205457755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">120</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TUsers.O:TUserssurname.FieldName" resname="O:DataModule1.O:TUsers.O:TUserssurname.FieldName">
         <source>'surname'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7205457755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">125</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45411.7205457755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">121</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TUsers.O:TUserssurname.Origin" resname="O:DataModule1.O:TUsers.O:TUserssurname.Origin">
         <source>'surname'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7205457755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">126</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45411.7205457755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">122</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TUsers.O:TUsersemail.AutoGenerateValue" resname="O:DataModule1.O:TUsers.O:TUsersemail.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7205457755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">127</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45411.7205457755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">123</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TUsers.O:TUsersemail.FieldName" resname="O:DataModule1.O:TUsers.O:TUsersemail.FieldName">
         <source>'email'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7205457755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">128</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45411.7205457755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">124</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TUsers.O:TUsersemail.Origin" resname="O:DataModule1.O:TUsers.O:TUsersemail.Origin">
         <source>'email'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7205457755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">129</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45411.7205457755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">125</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TUsers.O:TUsersage.AutoGenerateValue" resname="O:DataModule1.O:TUsers.O:TUsersage.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7205457755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">130</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45411.7205457755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">126</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TUsers.O:TUsersage.FieldName" resname="O:DataModule1.O:TUsers.O:TUsersage.FieldName">
         <source>'age'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7205457755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">131</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45411.7205457755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">127</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TUsers.O:TUsersage.Origin" resname="O:DataModule1.O:TUsers.O:TUsersage.Origin">
         <source>'age'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.7205457755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">132</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45411.7205457755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">128</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TUsers.O:TUsersprofileImage.AutoGenerateValue" resname="O:DataModule1.O:TUsers.O:TUsersprofileImage.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.9500916551</prop><prop prop-type="Status">0</prop><prop prop-type="Order">133</prop><prop prop-type="Type">TBlobField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45411.9500916551</prop><prop prop-type="Status">0</prop><prop prop-type="Order">129</prop><prop prop-type="Type">TBlobField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TUsers.O:TUsersprofileImage.FieldName" resname="O:DataModule1.O:TUsers.O:TUsersprofileImage.FieldName">
         <source>'profileImage'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.9500916551</prop><prop prop-type="Status">0</prop><prop prop-type="Order">134</prop><prop prop-type="Type">TBlobField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45411.9500916551</prop><prop prop-type="Status">0</prop><prop prop-type="Order">130</prop><prop prop-type="Type">TBlobField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TUsers.O:TUsersprofileImage.Origin" resname="O:DataModule1.O:TUsers.O:TUsersprofileImage.Origin">
         <source>'profileImage'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45411.9500916551</prop><prop prop-type="Status">0</prop><prop prop-type="Order">135</prop><prop prop-type="Type">TBlobField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45411.9500916551</prop><prop prop-type="Status">0</prop><prop prop-type="Order">131</prop><prop prop-type="Type">TBlobField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:DLessonResults.DataSet" resname="O:DataModule1.O:DLessonResults.DataSet">
         <source>TLessonResults</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762847</prop><prop prop-type="Status">0</prop><prop prop-type="Order">136</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762847</prop><prop prop-type="Status">0</prop><prop prop-type="Order">132</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:DLessonResults.Left" resname="O:DataModule1.O:DLessonResults.Left">
-        <source>402</source>
+        <source>414</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762847</prop><prop prop-type="Status">0</prop><prop prop-type="Order">137</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762847</prop><prop prop-type="Status">0</prop><prop prop-type="Order">133</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:DLessonResults.Top" resname="O:DataModule1.O:DLessonResults.Top">
-        <source>300</source>
+        <source>303</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">138</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">134</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.Active" resname="O:DataModule1.O:TLessonResults.Active">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.6218110532</prop><prop prop-type="Status">0</prop><prop prop-type="Order">139</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.6218110532</prop><prop prop-type="Status">0</prop><prop prop-type="Order">135</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.OnCalcFields" resname="O:DataModule1.O:TLessonResults.OnCalcFields">
         <source>TLessonResultsCalcFields</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45420.5005351736</prop><prop prop-type="Status">0</prop><prop prop-type="Order">140</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45420.5005351736</prop><prop prop-type="Status">0</prop><prop prop-type="Order">136</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.IndexFieldNames" resname="O:DataModule1.O:TLessonResults.IndexFieldNames">
         <source>'idUser'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">141</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">137</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.MasterSource" resname="O:DataModule1.O:TLessonResults.MasterSource">
         <source>DUsers</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">142</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">138</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.MasterFields" resname="O:DataModule1.O:TLessonResults.MasterFields">
         <source>'id'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">143</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">139</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.Connection" resname="O:DataModule1.O:TLessonResults.Connection">
         <source>MySQLDBConnection</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">144</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">140</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.ResourceOptions.AssignedValues" resname="O:DataModule1.O:TLessonResults.ResourceOptions.AssignedValues">
         <source>[rvEscapeExpand]</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">145</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">141</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.TableName" resname="O:DataModule1.O:TLessonResults.TableName">
         <source>'keytype.lessonresults'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">146</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">142</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.Left" resname="O:DataModule1.O:TLessonResults.Left">
-        <source>399</source>
+        <source>420</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">147</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">143</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.Top" resname="O:DataModule1.O:TLessonResults.Top">
         <source>225</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">148</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">144</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsid.FieldName" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsid.FieldName">
         <source>'id'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">149</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">145</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsid.Origin" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsid.Origin">
         <source>'id'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">150</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">146</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsid.ReadOnly" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsid.ReadOnly">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">151</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">147</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsidUser.AutoGenerateValue" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsidUser.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">152</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">148</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsidUser.FieldName" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsidUser.FieldName">
         <source>'idUser'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">153</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">149</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsidUser.Origin" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsidUser.Origin">
         <source>'idUser'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">154</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">150</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsidLesson.AutoGenerateValue" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsidLesson.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">155</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">151</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsidLesson.FieldName" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsidLesson.FieldName">
         <source>'idLesson'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">156</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">152</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsidLesson.Origin" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsidLesson.Origin">
         <source>'idLesson'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">157</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">153</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultslessonName.FieldKind" resname="O:DataModule1.O:TLessonResults.O:TLessonResultslessonName.FieldKind">
         <source>fkLookup</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">158</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">154</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultslessonName.FieldName" resname="O:DataModule1.O:TLessonResults.O:TLessonResultslessonName.FieldName">
         <source>'lessonName'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">159</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">155</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultslessonName.LookupDataSet" resname="O:DataModule1.O:TLessonResults.O:TLessonResultslessonName.LookupDataSet">
         <source>TLessons</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">160</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">156</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultslessonName.LookupKeyFields" resname="O:DataModule1.O:TLessonResults.O:TLessonResultslessonName.LookupKeyFields">
         <source>'id'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">161</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">157</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultslessonName.LookupResultField" resname="O:DataModule1.O:TLessonResults.O:TLessonResultslessonName.LookupResultField">
         <source>'name'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">162</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">158</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultslessonName.KeyFields" resname="O:DataModule1.O:TLessonResults.O:TLessonResultslessonName.KeyFields">
         <source>'idLesson'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">163</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">159</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultslessonName.Lookup" resname="O:DataModule1.O:TLessonResults.O:TLessonResultslessonName.Lookup">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">164</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">160</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsresult.AutoGenerateValue" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsresult.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">165</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">161</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsresult.FieldName" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsresult.FieldName">
         <source>'result'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">166</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">162</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsresult.Origin" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsresult.Origin">
         <source>'result'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">167</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">163</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsresult.Size" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsresult.Size">
         <source>255</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.9486998032</prop><prop prop-type="Status">0</prop><prop prop-type="Order">168</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.9486998032</prop><prop prop-type="Status">0</prop><prop prop-type="Order">164</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsspeed.AutoGenerateValue" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsspeed.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">169</prop><prop prop-type="Type">TBCDField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">165</prop><prop prop-type="Type">TBCDField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsspeed.FieldName" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsspeed.FieldName">
         <source>'speed'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">170</prop><prop prop-type="Type">TBCDField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">166</prop><prop prop-type="Type">TBCDField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsspeed.Origin" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsspeed.Origin">
         <source>'speed'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">171</prop><prop prop-type="Type">TBCDField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">167</prop><prop prop-type="Type">TBCDField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsspeed.Precision" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsspeed.Precision">
         <source>10</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5575357292</prop><prop prop-type="Status">0</prop><prop prop-type="Order">172</prop><prop prop-type="Type">TBCDField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5575357292</prop><prop prop-type="Status">0</prop><prop prop-type="Order">168</prop><prop prop-type="Type">TBCDField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsspeed.Size" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsspeed.Size">
         <source>2</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5575357292</prop><prop prop-type="Status">0</prop><prop prop-type="Order">173</prop><prop prop-type="Type">TBCDField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5575357292</prop><prop prop-type="Status">0</prop><prop prop-type="Order">169</prop><prop prop-type="Type">TBCDField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsaccuracy.AutoGenerateValue" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsaccuracy.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">174</prop><prop prop-type="Type">TBCDField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">170</prop><prop prop-type="Type">TBCDField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsaccuracy.FieldName" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsaccuracy.FieldName">
         <source>'accuracy'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">175</prop><prop prop-type="Type">TBCDField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">171</prop><prop prop-type="Type">TBCDField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsaccuracy.Origin" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsaccuracy.Origin">
         <source>'accuracy'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">176</prop><prop prop-type="Type">TBCDField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">172</prop><prop prop-type="Type">TBCDField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsaccuracy.Precision" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsaccuracy.Precision">
         <source>10</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5575357292</prop><prop prop-type="Status">0</prop><prop prop-type="Order">177</prop><prop prop-type="Type">TBCDField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5575357292</prop><prop prop-type="Status">0</prop><prop prop-type="Order">173</prop><prop prop-type="Type">TBCDField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsaccuracy.Size" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsaccuracy.Size">
         <source>2</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5575357292</prop><prop prop-type="Status">0</prop><prop prop-type="Order">178</prop><prop prop-type="Type">TBCDField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5575357292</prop><prop prop-type="Status">0</prop><prop prop-type="Order">174</prop><prop prop-type="Type">TBCDField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsduration.AutoGenerateValue" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsduration.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45420.5005351736</prop><prop prop-type="Status">0</prop><prop prop-type="Order">179</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45420.5005351736</prop><prop prop-type="Status">0</prop><prop prop-type="Order">175</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsduration.FieldName" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsduration.FieldName">
         <source>'duration'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45420.5005351736</prop><prop prop-type="Status">0</prop><prop prop-type="Order">180</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45420.5005351736</prop><prop prop-type="Status">0</prop><prop prop-type="Order">176</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsduration.Origin" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsduration.Origin">
         <source>'duration'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45420.5005351736</prop><prop prop-type="Status">0</prop><prop prop-type="Order">181</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45420.5005351736</prop><prop prop-type="Status">0</prop><prop prop-type="Order">177</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsdurationHMS.FieldKind" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsdurationHMS.FieldKind">
         <source>fkCalculated</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45420.5005351736</prop><prop prop-type="Status">0</prop><prop prop-type="Order">182</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45420.5005351736</prop><prop prop-type="Status">0</prop><prop prop-type="Order">178</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsdurationHMS.FieldName" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsdurationHMS.FieldName">
         <source>'durationHMS'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45420.5005351736</prop><prop prop-type="Status">0</prop><prop prop-type="Order">183</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45420.5005351736</prop><prop prop-type="Status">0</prop><prop prop-type="Order">179</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsdurationHMS.Calculated" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsdurationHMS.Calculated">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45420.5005351736</prop><prop prop-type="Status">0</prop><prop prop-type="Order">184</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45420.5005351736</prop><prop prop-type="Status">0</prop><prop prop-type="Order">180</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsdate.AutoGenerateValue" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsdate.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">185</prop><prop prop-type="Type">TDateField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">181</prop><prop prop-type="Type">TDateField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsdate.FieldName" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsdate.FieldName">
         <source>'date'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">186</prop><prop prop-type="Type">TDateField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">182</prop><prop prop-type="Type">TDateField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsdate.Origin" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsdate.Origin">
         <source>'`date`'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">187</prop><prop prop-type="Type">TDateField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">183</prop><prop prop-type="Type">TDateField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsidCourse.FieldKind" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsidCourse.FieldKind">
         <source>fkLookup</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">188</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">184</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsidCourse.FieldName" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsidCourse.FieldName">
         <source>'idCourse'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">189</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">185</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsidCourse.LookupDataSet" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsidCourse.LookupDataSet">
         <source>TLessons</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">190</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">186</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsidCourse.LookupKeyFields" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsidCourse.LookupKeyFields">
         <source>'id'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">191</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">187</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsidCourse.LookupResultField" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsidCourse.LookupResultField">
         <source>'idCourses'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">192</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">188</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsidCourse.KeyFields" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsidCourse.KeyFields">
         <source>'idLesson'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">193</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">189</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultsidCourse.Lookup" resname="O:DataModule1.O:TLessonResults.O:TLessonResultsidCourse.Lookup">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">194</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">190</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoal.FieldKind" resname="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoal.FieldKind">
         <source>fkLookup</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">195</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">191</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoal.FieldName" resname="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoal.FieldName">
         <source>'lessonGoal'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">196</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">192</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoal.LookupDataSet" resname="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoal.LookupDataSet">
         <source>TCourses</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">197</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">193</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoal.LookupKeyFields" resname="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoal.LookupKeyFields">
         <source>'id'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">198</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">194</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoal.LookupResultField" resname="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoal.LookupResultField">
         <source>'goal'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">199</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">195</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoal.KeyFields" resname="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoal.KeyFields">
         <source>'idCourse'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">200</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">196</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoal.Lookup" resname="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoal.Lookup">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">201</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">197</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoalValue.FieldKind" resname="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoalValue.FieldKind">
         <source>fkLookup</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">202</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">198</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoalValue.FieldName" resname="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoalValue.FieldName">
         <source>'lessonGoalValue'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">203</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">199</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoalValue.LookupDataSet" resname="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoalValue.LookupDataSet">
         <source>TCourses</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">204</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">200</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoalValue.LookupKeyFields" resname="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoalValue.LookupKeyFields">
         <source>'id'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">205</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">201</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoalValue.LookupResultField" resname="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoalValue.LookupResultField">
         <source>'goalValue'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">206</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">202</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoalValue.KeyFields" resname="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoalValue.KeyFields">
         <source>'idCourse'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">207</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">203</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoalValue.Lookup" resname="O:DataModule1.O:TLessonResults.O:TLessonResultslessonGoalValue.Lookup">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">208</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45415.5229762963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">204</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:DataModule1.O:IdTCPClient1.ConnectTimeout" resname="O:DataModule1.O:IdTCPClient1.ConnectTimeout">
+      <trans-unit id="O:DataModule1.O:IdTCPClient.ConnectTimeout" resname="O:DataModule1.O:IdTCPClient.ConnectTimeout">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45418.9298400926</prop><prop prop-type="Status">0</prop><prop prop-type="Order">209</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45473.7392361227</prop><prop prop-type="Status">0</prop><prop prop-type="Order">205</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:DataModule1.O:IdTCPClient1.Host" resname="O:DataModule1.O:IdTCPClient1.Host">
+      <trans-unit id="O:DataModule1.O:IdTCPClient.Host" resname="O:DataModule1.O:IdTCPClient.Host">
         <source>'127.0.0.1'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45418.9298400926</prop><prop prop-type="Status">0</prop><prop prop-type="Order">210</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45473.7392361227</prop><prop prop-type="Status">0</prop><prop prop-type="Order">206</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:DataModule1.O:IdTCPClient1.Port" resname="O:DataModule1.O:IdTCPClient1.Port">
+      <trans-unit id="O:DataModule1.O:IdTCPClient.Port" resname="O:DataModule1.O:IdTCPClient.Port">
         <source>6001</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45418.9298400926</prop><prop prop-type="Status">0</prop><prop prop-type="Order">211</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45473.7392361227</prop><prop prop-type="Status">0</prop><prop prop-type="Order">207</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:DataModule1.O:IdTCPClient1.ReadTimeout" resname="O:DataModule1.O:IdTCPClient1.ReadTimeout">
+      <trans-unit id="O:DataModule1.O:IdTCPClient.ReadTimeout" resname="O:DataModule1.O:IdTCPClient.ReadTimeout">
         <source>-1</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45418.9298400926</prop><prop prop-type="Status">0</prop><prop prop-type="Order">212</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45473.7392361227</prop><prop prop-type="Status">0</prop><prop prop-type="Order">208</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:DataModule1.O:IdTCPClient1.Left" resname="O:DataModule1.O:IdTCPClient1.Left">
-        <source>60</source>
+      <trans-unit id="O:DataModule1.O:IdTCPClient.Left" resname="O:DataModule1.O:IdTCPClient.Left">
+        <source>66</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45418.9298400926</prop><prop prop-type="Status">0</prop><prop prop-type="Order">213</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45473.7392361227</prop><prop prop-type="Status">0</prop><prop prop-type="Order">209</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:DataModule1.O:IdTCPClient1.Top" resname="O:DataModule1.O:IdTCPClient1.Top">
-        <source>303</source>
+      <trans-unit id="O:DataModule1.O:IdTCPClient.Top" resname="O:DataModule1.O:IdTCPClient.Top">
+        <source>396</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45418.9298400926</prop><prop prop-type="Status">0</prop><prop prop-type="Order">214</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45473.7392361227</prop><prop prop-type="Status">0</prop><prop prop-type="Order">210</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:DKeyStatistics.DataSet" resname="O:DataModule1.O:DKeyStatistics.DataSet">
         <source>TKeyStatistics</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">215</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">211</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:DKeyStatistics.Left" resname="O:DataModule1.O:DKeyStatistics.Left">
-        <source>489</source>
+        <source>504</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">216</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">212</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:DKeyStatistics.Top" resname="O:DataModule1.O:DKeyStatistics.Top">
-        <source>315</source>
+        <source>321</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">217</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">213</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.Active" resname="O:DataModule1.O:TKeyStatistics.Active">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">218</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">214</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.IndexFieldNames" resname="O:DataModule1.O:TKeyStatistics.IndexFieldNames">
         <source>'idLessonResults'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">219</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">215</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.MasterSource" resname="O:DataModule1.O:TKeyStatistics.MasterSource">
         <source>DLessonResults</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">220</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">216</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.MasterFields" resname="O:DataModule1.O:TKeyStatistics.MasterFields">
         <source>'id'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">221</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">217</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.Connection" resname="O:DataModule1.O:TKeyStatistics.Connection">
         <source>MySQLDBConnection</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">222</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">218</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.ResourceOptions.AssignedValues" resname="O:DataModule1.O:TKeyStatistics.ResourceOptions.AssignedValues">
         <source>[rvEscapeExpand]</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">223</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">219</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.TableName" resname="O:DataModule1.O:TKeyStatistics.TableName">
         <source>'keytype.keystatistics'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">224</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">220</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.Left" resname="O:DataModule1.O:TKeyStatistics.Left">
-        <source>483</source>
+        <source>516</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">225</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">221</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.Top" resname="O:DataModule1.O:TKeyStatistics.Top">
-        <source>231</source>
+        <source>228</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">226</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">222</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticsid.FieldName" resname="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticsid.FieldName">
         <source>'id'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">227</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">223</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticsid.Origin" resname="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticsid.Origin">
         <source>'id'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">228</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45422.8978101389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">224</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticsid.ReadOnly" resname="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticsid.ReadOnly">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45425.7247904745</prop><prop prop-type="Status">0</prop><prop prop-type="Order">229</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45425.7247904745</prop><prop prop-type="Status">0</prop><prop prop-type="Order">225</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticsidLessonResults.AutoGenerateValue" resname="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticsidLessonResults.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45423.9622823148</prop><prop prop-type="Status">0</prop><prop prop-type="Order">230</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45423.9622823148</prop><prop prop-type="Status">0</prop><prop prop-type="Order">226</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticsidLessonResults.FieldName" resname="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticsidLessonResults.FieldName">
         <source>'idLessonResults'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45423.9622823148</prop><prop prop-type="Status">0</prop><prop prop-type="Order">231</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45423.9622823148</prop><prop prop-type="Status">0</prop><prop prop-type="Order">227</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticsidLessonResults.Origin" resname="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticsidLessonResults.Origin">
         <source>'idLessonResults'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45423.9622823148</prop><prop prop-type="Status">0</prop><prop prop-type="Order">232</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45423.9622823148</prop><prop prop-type="Status">0</prop><prop prop-type="Order">228</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticskey.AutoGenerateValue" resname="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticskey.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45422.8978101505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">233</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45422.8978101505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">229</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticskey.FieldName" resname="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticskey.FieldName">
         <source>'key'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45422.8978101505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">234</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45422.8978101505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">230</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticskey.Origin" resname="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticskey.Origin">
         <source>'`key`'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45422.8978101505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">235</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45422.8978101505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">231</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticskey.FixedChar" resname="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticskey.FixedChar">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45422.8978101505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">236</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45422.8978101505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">232</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticskey.Size" resname="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticskey.Size">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45422.8978101505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">237</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45422.8978101505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">233</prop><prop prop-type="Type">TStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticscorrect.AutoGenerateValue" resname="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticscorrect.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45422.8978101505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">238</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45422.8978101505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">234</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticscorrect.FieldName" resname="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticscorrect.FieldName">
         <source>'correct'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45422.8978101505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">239</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45422.8978101505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">235</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticscorrect.Origin" resname="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticscorrect.Origin">
         <source>'correct'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45422.8978101505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">240</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45422.8978101505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">236</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticsmistake.AutoGenerateValue" resname="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticsmistake.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45422.8978101505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">241</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45422.8978101505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">237</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticsmistake.FieldName" resname="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticsmistake.FieldName">
         <source>'mistake'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45422.8978101505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">242</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45422.8978101505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">238</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticsmistake.Origin" resname="O:DataModule1.O:TKeyStatistics.O:TKeyStatisticsmistake.Origin">
         <source>'mistake'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45422.8978101505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">243</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45422.8978101505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">239</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:RESTClient.Params" resname="O:DataModule1.O:RESTClient.Params">
+        <source>&lt;&gt;</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">240</prop><prop prop-type="Type">TRESTClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:RESTClient.SynchronizedEvents" resname="O:DataModule1.O:RESTClient.SynchronizedEvents">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">241</prop><prop prop-type="Type">TRESTClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:RESTClient.Left" resname="O:DataModule1.O:RESTClient.Left">
+        <source>36</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">242</prop><prop prop-type="Type">TRESTClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:RESTClient.Top" resname="O:DataModule1.O:RESTClient.Top">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">243</prop><prop prop-type="Type">TRESTClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:RESTRequest.AssignedValues" resname="O:DataModule1.O:RESTRequest.AssignedValues">
+        <source>[rvConnectTimeout, rvReadTimeout]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">244</prop><prop prop-type="Type">TRESTRequest</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:RESTRequest.Client" resname="O:DataModule1.O:RESTRequest.Client">
+        <source>RESTClient</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">245</prop><prop prop-type="Type">TRESTRequest</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:RESTRequest.Params" resname="O:DataModule1.O:RESTRequest.Params">
+        <source>&lt;&gt;</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">246</prop><prop prop-type="Type">TRESTRequest</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:RESTRequest.Response" resname="O:DataModule1.O:RESTRequest.Response">
+        <source>RESTResponse</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">247</prop><prop prop-type="Type">TRESTRequest</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:RESTRequest.SynchronizedEvents" resname="O:DataModule1.O:RESTRequest.SynchronizedEvents">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">248</prop><prop prop-type="Type">TRESTRequest</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:RESTRequest.Left" resname="O:DataModule1.O:RESTRequest.Left">
+        <source>126</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">249</prop><prop prop-type="Type">TRESTRequest</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:RESTRequest.Top" resname="O:DataModule1.O:RESTRequest.Top">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">250</prop><prop prop-type="Type">TRESTRequest</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:RESTResponse.Left" resname="O:DataModule1.O:RESTResponse.Left">
+        <source>222</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">251</prop><prop prop-type="Type">TRESTResponse</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:RESTResponse.Top" resname="O:DataModule1.O:RESTResponse.Top">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">252</prop><prop prop-type="Type">TRESTResponse</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:RESTResponseDataSetAdapter.Dataset" resname="O:DataModule1.O:RESTResponseDataSetAdapter.Dataset">
+        <source>FDMemTable</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">253</prop><prop prop-type="Type">TRESTResponseDataSetAdapter</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:RESTResponseDataSetAdapter.FieldDefs" resname="O:DataModule1.O:RESTResponseDataSetAdapter.FieldDefs">
+        <source>&lt;&gt;</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">254</prop><prop prop-type="Type">TRESTResponseDataSetAdapter</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:RESTResponseDataSetAdapter.Response" resname="O:DataModule1.O:RESTResponseDataSetAdapter.Response">
+        <source>RESTResponse</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">255</prop><prop prop-type="Type">TRESTResponseDataSetAdapter</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:RESTResponseDataSetAdapter.TypesMode" resname="O:DataModule1.O:RESTResponseDataSetAdapter.TypesMode">
+        <source>JSONOnly</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45440.8991251736</prop><prop prop-type="Status">0</prop><prop prop-type="Order">256</prop><prop prop-type="Type">TRESTResponseDataSetAdapter</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:RESTResponseDataSetAdapter.Left" resname="O:DataModule1.O:RESTResponseDataSetAdapter.Left">
+        <source>396</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">257</prop><prop prop-type="Type">TRESTResponseDataSetAdapter</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:RESTResponseDataSetAdapter.Top" resname="O:DataModule1.O:RESTResponseDataSetAdapter.Top">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">258</prop><prop prop-type="Type">TRESTResponseDataSetAdapter</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:FDMemTable.FetchOptions.AssignedValues" resname="O:DataModule1.O:FDMemTable.FetchOptions.AssignedValues">
+        <source>[evMode]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">259</prop><prop prop-type="Type">TFDMemTable</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:FDMemTable.FetchOptions.Mode" resname="O:DataModule1.O:FDMemTable.FetchOptions.Mode">
+        <source>fmAll</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">260</prop><prop prop-type="Type">TFDMemTable</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:FDMemTable.ResourceOptions.AssignedValues" resname="O:DataModule1.O:FDMemTable.ResourceOptions.AssignedValues">
+        <source>[rvSilentMode]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">261</prop><prop prop-type="Type">TFDMemTable</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:FDMemTable.ResourceOptions.SilentMode" resname="O:DataModule1.O:FDMemTable.ResourceOptions.SilentMode">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">262</prop><prop prop-type="Type">TFDMemTable</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:FDMemTable.UpdateOptions.AssignedValues" resname="O:DataModule1.O:FDMemTable.UpdateOptions.AssignedValues">
+        <source>[uvUpdateChngFields, uvUpdateMode, uvLockMode, uvLockPoint, uvLockWait, uvRefreshMode, uvFetchGeneratorsPoint, uvCheckRequired, uvCheckReadOnly, uvCheckUpdatable]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">263</prop><prop prop-type="Type">TFDMemTable</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:FDMemTable.UpdateOptions.LockWait" resname="O:DataModule1.O:FDMemTable.UpdateOptions.LockWait">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">264</prop><prop prop-type="Type">TFDMemTable</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:FDMemTable.UpdateOptions.FetchGeneratorsPoint" resname="O:DataModule1.O:FDMemTable.UpdateOptions.FetchGeneratorsPoint">
+        <source>gpNone</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">265</prop><prop prop-type="Type">TFDMemTable</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:FDMemTable.UpdateOptions.CheckRequired" resname="O:DataModule1.O:FDMemTable.UpdateOptions.CheckRequired">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">266</prop><prop prop-type="Type">TFDMemTable</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:FDMemTable.Left" resname="O:DataModule1.O:FDMemTable.Left">
+        <source>324</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">267</prop><prop prop-type="Type">TFDMemTable</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:FDMemTable.Top" resname="O:DataModule1.O:FDMemTable.Top">
+        <source>108</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45438.7974363773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">268</prop><prop prop-type="Type">TFDMemTable</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:DWebService.DataSet" resname="O:DataModule1.O:DWebService.DataSet">
+        <source>FDMemTable</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45440.8991251736</prop><prop prop-type="Status">0</prop><prop prop-type="Order">269</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:DWebService.Left" resname="O:DataModule1.O:DWebService.Left">
+        <source>432</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45440.8991251736</prop><prop prop-type="Status">0</prop><prop prop-type="Order">270</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:DWebService.Top" resname="O:DataModule1.O:DWebService.Top">
+        <source>111</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45440.8991251736</prop><prop prop-type="Status">0</prop><prop prop-type="Order">271</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:IdUDPClient.Host" resname="O:DataModule1.O:IdUDPClient.Host">
+        <source>'127.0.0.1'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45473.7392361343</prop><prop prop-type="Status">0</prop><prop prop-type="Order">272</prop><prop prop-type="Type">TIdUDPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:IdUDPClient.Port" resname="O:DataModule1.O:IdUDPClient.Port">
+        <source>6501</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45473.7392361343</prop><prop prop-type="Status">0</prop><prop prop-type="Order">273</prop><prop prop-type="Type">TIdUDPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:IdUDPClient.Left" resname="O:DataModule1.O:IdUDPClient.Left">
+        <source>156</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45473.7392361343</prop><prop prop-type="Status">0</prop><prop prop-type="Order">274</prop><prop prop-type="Type">TIdUDPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DataModule1.O:IdUDPClient.Top" resname="O:DataModule1.O:IdUDPClient.Top">
+        <source>402</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45473.7392361343</prop><prop prop-type="Status">0</prop><prop prop-type="Order">275</prop><prop prop-type="Type">TIdUDPClient</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
     </body>
   </file>

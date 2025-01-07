@@ -24,6 +24,7 @@ __published:	// IDE-managed Components
 	TLabel *LAlreadyRegistered;
 	TButton *BtSignIn;
 	TLabel *LResponse;
+	TCheckBox *CBRestAuth;
 	void __fastcall BtSignInClick(TObject *Sender);
 	void __fastcall BtRegisterClick(TObject *Sender);
 	void __fastcall EUsernameChange(TObject *Sender);

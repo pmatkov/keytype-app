@@ -2,23 +2,27 @@
 #undef UNICODE
 #define UNICODE
 
+#include <vcl.h>
+#pragma hdrstop
+
 #include "MainForm.h"
 
 #include <System.DateUtils.hpp>
 
 #include "UIUtils.h"
-#include "FileUtils.h"
 #include "TextUtils.h"
+#include "EnumUtils.h"
+#include "FileUtils.h"
+#include "Logger.h"
 #include "ENullPointerException.h"
-#include "GameThread.h"
 
+#include "GameThread.h"
 #include "KeyStatistics.h"
 #include "Lib\\Statistics\\UserStatistics.h"
 #include "Lib\\Statistics\\StatisticsForm.h"
 #include "Lib\\About\\AboutForm.h"
 
 //---------------------------------------------------------------------------
-#pragma hdrstop
 #pragma package(smart_init)
 #pragma link "OptionsFrame"
 #pragma link "MainFrame"
@@ -51,6 +55,8 @@ void TFMain::setMainSession(std::unique_ptr<MainSession> _mainSession) {
       	mainSession = std::move(_mainSession);
 
         logger.setMainSession(mainSession.get());
+
+        // set font, language and logo
 
 		UIUtils::changeFontFamily(this, mainSession->getAppSettings().getFontFamily());
         UIUtils::changeLanguage(mainSession->getAppSettings().getLanguage());
@@ -86,8 +92,7 @@ void TFMain::setAuthenticationForm(std::unique_ptr<TFAuthentication> _FAuthentic
     }
 }
 
-
-// dispatch char messages for processing
+// dispatch char messages to active frame
 
 void __fastcall TFMain::WndProc(Messages::TMessage &Message) {
 
@@ -112,6 +117,8 @@ void __fastcall TFMain::WndProc(Messages::TMessage &Message) {
 	}
 }
 
+// menu practice/ start
+
 void __fastcall TFMain::MenuSubitemPracticeStartClick(TObject *Sender)
 {
 
@@ -123,8 +130,12 @@ void __fastcall TFMain::MenuSubitemPracticeStartClick(TObject *Sender)
         parser = std::make_unique<Parser>(mainSession.get(), typingSession.get());
     }
 
+    if (FrPractice) {
+        FrPractice.reset();
+    }
+
     if (!FrPractice) {
-		FrPractice = UIUtils::createFrame<TFrPractice>(this, dataModule, parser.get(), mainSession.get(), typingSession.get());
+		FrPractice = UIUtils::createFrame<TFrPractice>(this, parser.get(), mainSession.get(), typingSession.get(), dataModule, authService.get());
 
         //  set subclass procedure for REText
 		SetWindowSubclass(FrPractice->FrTypingText->REText->Handle, &FrPractice->FrTypingText->RESubclass, 0, 0);
@@ -149,61 +160,7 @@ void __fastcall TFMain::MenuSubitemPracticeStartClick(TObject *Sender)
 	}
 }
 
-void __fastcall TFMain::MenuSubitemPreferencesClick(TObject *Sender)
-{
-
-	if (!FPreferences) {
-		FPreferences = std::make_unique<TFPreferences>(nullptr, mainSession.get(), authService.get());
-		FPreferences->Position = poMainFormCenter;
-	}
-
-    if (FPreferences->ShowModal() == mrOk) {
-
-        if (mainSession->getAppSettings().getLanguageChanged()) {
-            UIUtils::changeLanguage(mainSession->getAppSettings().getLanguage());
-            mainSession->getAppSettings().setLanguageChanged(false);
-        }
-
-    }
-}
-
-void __fastcall TFMain::MenuSubitemFlyingWordsClick(TObject *Sender)
-{
-	if (!FrFlyingWords) {
-		FrFlyingWords = UIUtils::createFrame<TFrFlyingWords>(this);
-	}
-
-	if (FrMain && FrMain->Visible) {
-		UIUtils::switchFrames<TFrMain, TFrFlyingWords>(FrMain, FrFlyingWords);
-	}
-	else if (FrPractice && FrPractice->Visible) {
-		UIUtils::switchFrames<TFrPractice, TFrFlyingWords>(FrPractice, FrFlyingWords);
-	}
-    else if (FrLessons2 && FrLessons2->Visible) {
-		UIUtils::switchFrames<TFrLessons2, TFrFlyingWords>(FrLessons2, FrFlyingWords);
-	}
-}
-
-void __fastcall TFMain::MenuSubItemConfigurationClick(TObject *Sender)
-{
-   	if (!FLessons) {
-		FLessons = std::make_unique<TFLessons>(nullptr, dataModule);
-        FLessons->Position = poMainFormCenter;
-	}
-
- 	FLessons->ShowModal();
-}
-
-
-void __fastcall TFMain::MenuSubitemLogsClick(TObject *Sender)
-{
-	if (!FLogs) {
-		FLogs = std::make_unique<TFLogs>(nullptr, authService.get(), dataModule);
-        FLogs->Position = poMainFormCenter;
-	}
-
- 	FLogs->ShowModal();
-}
+// menu lessons/ start
 
 void __fastcall TFMain::MenuSubItemLessonStartClick(TObject *Sender)
 {
@@ -227,6 +184,10 @@ void __fastcall TFMain::MenuSubItemLessonStartClick(TObject *Sender)
 		UIUtils::switchFrames<TFrMain, TFrLessons2>(FrMain, FrLessons2);
 	}
 
+    else if (FrPractice && FrPractice->Visible) {
+		UIUtils::switchFrames<TFrPractice, TFrLessons2>(FrPractice, FrLessons2);
+	}
+
     // terminate thread and cleanup
 	else if (FrFlyingWords && FrFlyingWords->Visible) {
 
@@ -236,6 +197,19 @@ void __fastcall TFMain::MenuSubItemLessonStartClick(TObject *Sender)
 	}
 }
 
+// menu lessons/ configuration
+
+void __fastcall TFMain::MenuSubItemConfigurationClick(TObject *Sender)
+{
+   	if (!FLessons) {
+		FLessons = std::make_unique<TFLessons>(nullptr, dataModule);
+        FLessons->Position = poMainFormCenter;
+	}
+
+ 	FLessons->ShowModal();
+}
+
+// menu lessons/ results
 
 void __fastcall TFMain::MenuSubItemLessonResultsClick(TObject *Sender)
 {
@@ -247,17 +221,79 @@ void __fastcall TFMain::MenuSubItemLessonResultsClick(TObject *Sender)
     FLessonResults->ShowModal();
 }
 
+// menu games/ flying words
+
+void __fastcall TFMain::MenuSubitemFlyingWordsClick(TObject *Sender)
+{
+	if (!FrFlyingWords) {
+		FrFlyingWords = UIUtils::createFrame<TFrFlyingWords>(this);
+	}
+
+	if (FrMain && FrMain->Visible) {
+		UIUtils::switchFrames<TFrMain, TFrFlyingWords>(FrMain, FrFlyingWords);
+	}
+	else if (FrPractice && FrPractice->Visible) {
+		UIUtils::switchFrames<TFrPractice, TFrFlyingWords>(FrPractice, FrFlyingWords);
+	}
+    else if (FrLessons2 && FrLessons2->Visible) {
+		UIUtils::switchFrames<TFrLessons2, TFrFlyingWords>(FrLessons2, FrFlyingWords);
+	}
+}
+
+// menu settings/ preferences
+
+void __fastcall TFMain::MenuSubitemPreferencesClick(TObject *Sender)
+{
+
+	if (!FPreferences) {
+		FPreferences = std::make_unique<TFPreferences>(nullptr, mainSession.get(), authService.get());
+		FPreferences->Position = poMainFormCenter;
+	}
+
+    if (FPreferences->ShowModal() == mrOk) {
+
+        // change language
+
+        if (mainSession->getAppSettings().getLanguageChanged()) {
+            UIUtils::changeLanguage(mainSession->getAppSettings().getLanguage());
+            mainSession->getAppSettings().setLanguageChanged(false);
+        }
+        if (FrPractice && FrPractice->Visible) {
+            FrPractice.reset();
+        	FrPractice = UIUtils::createFrame<TFrPractice>(this, parser.get(), mainSession.get(), typingSession.get(), dataModule, authService.get());
+
+            //  set subclass procedure for REText
+            SetWindowSubclass(FrPractice->FrTypingText->REText->Handle, &FrPractice->FrTypingText->RESubclass, 0, 0);
+        }
+    }
+}
+
+// menu view/ logs
+
+void __fastcall TFMain::MenuSubitemLogsClick(TObject *Sender)
+{
+	if (!FLogs) {
+		FLogs = std::make_unique<TFLogs>(nullptr, authService.get(), dataModule);
+        FLogs->Position = poMainFormCenter;
+	}
+
+ 	FLogs->ShowModal();
+}
+
+// menu profile/ view profile
 
 void __fastcall TFMain::MenuSubItemViewProfileClick(TObject *Sender) {
 
 	if (!FProfile) {
 
 		FProfile = std::make_unique<TFProfile>(nullptr, mainSession.get(), authService.get(), dataModule);
-        FProfile->Position = poMainFormCenter;
-
 	}
+
+    FProfile->Position = poMainFormCenter;
     FProfile->ShowModal();
 }
+
+// menu profile/ view statistics
 
 void __fastcall TFMain::MenuSubItemViewStatisticsClick(TObject *Sender) {
 
@@ -327,6 +363,8 @@ void __fastcall TFMain::MenuSubItemViewStatisticsClick(TObject *Sender) {
             LOGGER(LogLevel::Fatal, ex.Message);
         }
 
+        // load StatisticsLib.dll
+
     	HINSTANCE Statistics;
 
         if ((Statistics = LoadLibrary(L"StatisticsLib.dll")) == nullptr) {
@@ -360,6 +398,8 @@ void __fastcall TFMain::MenuSubItemViewStatisticsClick(TObject *Sender) {
 	}
 }
 
+// menu profile/ view achievements
+
 void __fastcall TFMain::MenuSubItemViewAchievementsClick(TObject *Sender) {
 
 	if (!FAchievements) {
@@ -371,7 +411,7 @@ void __fastcall TFMain::MenuSubItemViewAchievementsClick(TObject *Sender) {
     FAchievements->ShowModal();
 }
 
-
+// menu profile/ delete profile
 
 void __fastcall TFMain::MenuSubItemDeleteProfileClick(TObject *Sender) {
 
@@ -384,6 +424,8 @@ void __fastcall TFMain::MenuSubItemDeleteProfileClick(TObject *Sender) {
 
 }
 
+// menu profile/ switch user
+
 void __fastcall TFMain::MenuSubItemSwitchUserClick(TObject *Sender) {
 
 
@@ -392,6 +434,8 @@ void __fastcall TFMain::MenuSubItemSwitchUserClick(TObject *Sender) {
        FAuthentication = std::make_unique<TFAuthentication>(nullptr, authService.get());
 	}
     FAuthentication->Position = poMainFormCenter;
+
+    // change font and language
 
     if (FAuthentication->ShowModal() == mrOk) {
 
@@ -420,6 +464,8 @@ void __fastcall TFMain::MenuSubItemSwitchUserClick(TObject *Sender) {
     }
 }
 
+// menu help/ about
+
 void __fastcall TFMain::MenuSubitemAboutClick(TObject *Sender)
 {
 	if (!FAbout) {
@@ -446,6 +492,8 @@ void __fastcall TFMain::MenuSubitemAboutClick(TObject *Sender)
     }
 }
 
+
+// dynamically update profile menu based on logged in user
 
 void TFMain::updateProfileMenu() {
 
@@ -496,6 +544,24 @@ void TFMain::updateProfileMenu() {
         menuSubItemViewAchievements->Caption = "Pregledaj postignuca";
     }
 
+    if (!menuSubItemProfileSeparator) {
+    	menuSubItemProfileSeparator = std::make_unique<TMenuItem>(MainMenu);
+        menuSubItemProfileSeparator->Caption = "-";
+    	menuItemProfile->Add(menuSubItemProfileSeparator.get());
+    }
+
+    if (!menuSubItemSwitchUser) {
+        menuSubItemSwitchUser = std::make_unique<TMenuItem>(MainMenu);
+        menuSubItemSwitchUser->OnClick = MenuSubItemSwitchUserClick;
+        menuItemProfile->Add(menuSubItemSwitchUser.get());
+    }
+
+    if (mainSession->getAppSettings().getLanguage() == Language::English) {
+        menuSubItemSwitchUser->Caption = "Switch user";
+    }
+    else if (mainSession->getAppSettings().getLanguage() == Language::Croatian) {
+        menuSubItemSwitchUser->Caption = "Promijeni korisnika";
+    }
 
     if (!menuSubItemDeleteProfile) {
     	menuSubItemDeleteProfile = std::make_unique<TMenuItem>(MainMenu);
@@ -510,19 +576,6 @@ void TFMain::updateProfileMenu() {
         menuSubItemDeleteProfile->Caption = "Obriši profil";
     }
 
-
-    if (!menuSubItemSwitchUser) {
-        menuSubItemSwitchUser = std::make_unique<TMenuItem>(MainMenu);
-        menuSubItemSwitchUser->OnClick = MenuSubItemSwitchUserClick;
-        menuItemProfile->Add(menuSubItemSwitchUser.get());
-    }
-    if (mainSession->getAppSettings().getLanguage() == Language::English) {
-        menuSubItemSwitchUser->Caption = "Switch user";
-    }
-    else if (mainSession->getAppSettings().getLanguage() == Language::Croatian) {
-        menuSubItemSwitchUser->Caption = "Promijeni korisnika";
-    }
-
 	if (authService->getUser().getUserType() == UserType::Guest) {
 
         menuItemProfile->Caption = "[guest]";
@@ -530,17 +583,24 @@ void TFMain::updateProfileMenu() {
         if (menuSubItemViewProfile) {
             menuSubItemViewProfile->Visible	= false;
         }
+        if (menuSubItemDeleteProfile) {
+            menuSubItemDeleteProfile->Visible = false;
+        }
         if (menuSubItemViewStatistics) {
             menuSubItemViewStatistics->Visible = false;
+        }
+        if (menuSubItemProfileSeparator) {
+            menuSubItemProfileSeparator->Visible = false;
         }
         if (menuSubItemViewAchievements) {
             menuSubItemViewAchievements->Visible = false;
         }
-        if (menuSubItemDeleteProfile) {
-            menuSubItemDeleteProfile->Visible = false;
-        }
 
     }
+
+
+    // display additional menu subitems for registered user
+
     else if (authService->getUser().getUserType() == UserType::Registered) {
 
         menuItemProfile->Caption = "[" + authService->getUser().getUsername() + "]";
@@ -548,19 +608,32 @@ void TFMain::updateProfileMenu() {
     	if (menuSubItemViewProfile) {
             menuSubItemViewProfile->Visible	= true;
         }
+        if (menuSubItemDeleteProfile) {
+            menuSubItemDeleteProfile->Visible = true;
+        }
         if (menuSubItemViewStatistics) {
             menuSubItemViewStatistics->Visible = true;
+        }
+        if (menuSubItemProfileSeparator) {
+            menuSubItemProfileSeparator->Visible = true;
         }
         if (menuSubItemViewAchievements) {
             menuSubItemViewAchievements->Visible = true;
         }
-        if (menuSubItemDeleteProfile) {
-            menuSubItemDeleteProfile->Visible = true;
-        }
-    }
 
+    }
 
 }
 
+//---------------------------------------------------------------------------
+
+void __fastcall TFMain::FormClose(TObject *Sender, TCloseAction &Action)
+{
+	if (FrFlyingWords && FrFlyingWords->getGameEngine().getGameStatus() != GameStatus::Completed) {
+
+    	FrFlyingWords->getGameEngine().threadTerminate();
+        FrFlyingWords->getGameEngine().gameCleanup();
+	}
+}
 //---------------------------------------------------------------------------
 

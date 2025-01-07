@@ -36,15 +36,15 @@ __published:	// IDE-managed Components
 	TEdit *EYear;
 	TLabel *LParagraph;
 	TEdit *EParagraph;
-	TButton *BtDelete2;
-	TButton *BtAddSave2;
+	TButton *BtDelete;
+	TButton *BtAddSave;
 	TXMLTransform *XMLTransform;
 	TXMLDocument *XMLDocument;
 	void __fastcall TVLiteratureCategoriesChange(TObject *Sender, TTreeNode *Node);
 	void __fastcall LVLiteratureDetailsSelectItem(TObject *Sender, TListItem *Item, bool Selected);
-	void __fastcall BtAddSave2Click(TObject *Sender);
+	void __fastcall BtAddSaveClick(TObject *Sender);
 	void __fastcall LVLiteratureDetailsMouseDown(TObject *Sender, TMouseButton Button, TShiftState Shift, int X, int Y);
-	void __fastcall BtDelete2Click(TObject *Sender);
+	void __fastcall BtDeleteClick(TObject *Sender);
 
 private:	// User declarations
         std::map<UnicodeString, std::vector<_di_IXMLbookType>> mapOfBooks;

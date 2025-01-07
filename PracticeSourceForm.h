@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------
 
-#ifndef PracticeOptionsFormH
-#define PracticeOptionsFormH
+#ifndef PracticeSourceFormH
+#define PracticeSourceFormH
 
 //---------------------------------------------------------------------------
 #include <System.Classes.hpp>
@@ -14,19 +14,20 @@
 #include <Vcl.Dialogs.hpp>
 #include <Vcl.ExtDlgs.hpp>
 #include <Vcl.AppEvnts.hpp>
-#include <vcl.h>
+
 #include <memory>
 
 #include "DataModule.h"
 #include "Dictionary.h"
 #include "MainSession.h"
 
+#include "AuthenticationService.h"
 #include "GeneratedTextFrame.h"
 #include "ExternalSourcesFrame.h"
 #include "CustomTextFrame.h"
 
 //---------------------------------------------------------------------------
-class TFPracticeOptions : public TForm
+class TFPracticeSource : public TForm
 {
 __published:	// IDE-managed Components
 	TButton *BtAccept;
@@ -43,10 +44,11 @@ private:	// User declarations
 
     TDataModule1 *dataModule;
 	MainSession  *mainSession;
+    AuthenticationService *authService;
 
 public:		// User declarations
-	__fastcall TFPracticeOptions(TComponent* Owner);
-    __fastcall TFPracticeOptions(TComponent* Owner, TDataModule1 *_dataModule, MainSession *mainSession);
+	__fastcall TFPracticeSource(TComponent* Owner);
+    __fastcall TFPracticeSource(TComponent* Owner, TDataModule1 *_dataModule, MainSession *mainSession, AuthenticationService *_authService);
 
     TFrGeneratedText* GetFrGeneratedText() const;
     TFrExternalSources* GetFrExternalSources() const;
@@ -55,7 +57,7 @@ public:		// User declarations
 };
 
 //---------------------------------------------------------------------------
-extern PACKAGE TFPracticeOptions *FPracticeOptions;
+extern PACKAGE TFPracticeSource *FPracticeSource;
 //---------------------------------------------------------------------------
 
 #endif

@@ -19,7 +19,7 @@ AppSettings::AppSettings(User user) {
        	loadDefaults();
     }
     else {
-    	section = user.getUsername();
+    	username = user.getUsername();
         loadSettings();
     }
     LOGGER(LogLevel::Debug, "Created app settings");
@@ -87,12 +87,13 @@ void AppSettings::loadSettings() {
 
 	try {
 
-        if (!section.IsEmpty() && iniFile->SectionExists(section)) {
-            language = EnumUtils::stringToEnum<Language>(languageStrings, iniFile->ReadString(section, "Language", "English"));
-            fontFamily = iniFile->ReadString(section, "FontFamily", "Segoe UI");
-            enableLogging = iniFile->ReadBool(section, "EnableLogging", true);
-            logLevel = Logger::getStringAsLogLevel(iniFile->ReadString(section, "LogLevel", "All"));
-            archiveLogLimit = EnumUtils::stringToEnum<ArchiveLogLimit>(Logger::getArchiveLogLimitStrings(), iniFile->ReadString(section, "ArchiveLogLimit", "Auto"));
+        if (!username.IsEmpty() && iniFile->SectionExists(username)) {
+
+            language = EnumUtils::stringToEnum<Language>(languageStrings, iniFile->ReadString(username, "Language", "English"));
+            fontFamily = iniFile->ReadString(username, "FontFamily", "Segoe UI");
+            enableLogging = iniFile->ReadBool(username, "EnableLogging", true);
+            logLevel = Logger::getStringAsLogLevel(iniFile->ReadString(username, "LogLevel", "All"));
+            archiveLogLimit = EnumUtils::stringToEnum<ArchiveLogLimit>(Logger::getArchiveLogLimitStrings(), iniFile->ReadString(username, "ArchiveLogLimit", "Auto"));
         }
         else {
             loadDefaults();
@@ -110,13 +111,13 @@ void AppSettings::saveSettings() {
 
     try
 	{
-    	if (!section.IsEmpty()) {
+    	if (!username.IsEmpty()) {
 
-            iniFile->WriteString(section, "Language", EnumUtils::enumToString<Language>(languageStrings, language));
-            iniFile->WriteString(section, "FontFamily", fontFamily);
-            iniFile->WriteBool(section, "EnableLogging", enableLogging);
-            iniFile->WriteString(section, "LogLevel",  Logger::getLogLevelAsString(logLevel));
-            iniFile->WriteString(section, "ArchiveLogLimit", EnumUtils::enumToString<ArchiveLogLimit>(Logger::getArchiveLogLimitStrings(), archiveLogLimit));
+            iniFile->WriteString(username, "Language", EnumUtils::enumToString<Language>(languageStrings, language));
+            iniFile->WriteString(username, "FontFamily", fontFamily);
+            iniFile->WriteBool(username, "EnableLogging", enableLogging);
+            iniFile->WriteString(username, "LogLevel",  Logger::getLogLevelAsString(logLevel));
+            iniFile->WriteString(username, "ArchiveLogLimit", EnumUtils::enumToString<ArchiveLogLimit>(Logger::getArchiveLogLimitStrings(), archiveLogLimit));
         }
 
     }

@@ -51,8 +51,11 @@ __published:	// IDE-managed Components
 
 private:	// User declarations
 	std::unique_ptr<GameEngine> gameEngine;
+
     std::vector<std::unique_ptr<TLabel>> LFlyingWords;
+
     std::unique_ptr<std::queue<wchar_t>> keyStrokeQueue;
+
     std::unique_ptr<TCriticalSection> criticalSection;
     std::unique_ptr<TEvent> keyStrokeEvent;
     std::unique_ptr<TEvent> wordMatchEvent;

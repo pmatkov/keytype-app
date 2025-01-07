@@ -18,6 +18,7 @@ __fastcall TFStatistics::TFStatistics(TComponent* Owner) : TForm(Owner) {}
 __fastcall TFStatistics::TFStatistics(TComponent* Owner, UserStatistics *_userStatistics) : TForm(Owner) {
 
     if (_userStatistics) {
+
         userStatistics = _userStatistics;
 
         std::vector<TDateTime> practiceTime = userStatistics->getPracticeTime();
@@ -38,7 +39,6 @@ __fastcall TFStatistics::TFStatistics(TComponent* Owner, UserStatistics *_userSt
             STime->XValues->DateTime = true;
             STime->AddXY(EncodeDate(year, month, day), totalMinutes);
         }
-
 
         for (const auto& pair : keyStatistics) {
             SCorrect->AddY(pair.second.getCorrect(), UnicodeString(pair.first));

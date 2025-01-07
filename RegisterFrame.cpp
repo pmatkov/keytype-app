@@ -37,7 +37,6 @@ void __fastcall TFrRegister::BtSignInClick(TObject *Sender)
 void __fastcall TFrRegister::BtRegisterClick(TObject *Sender)
 {
 
-
     if (authenticationService->registerUser(EUsername->Text, EPassword->Text)) {
 
         if (OnRegister) {
@@ -61,7 +60,7 @@ void __fastcall TFrRegister::FrUsernameUnavailable()
     usernameAvailable = false;
 }
 
-// validate user input
+// validate input
 
 void __fastcall TFrRegister::EUsernameChange(TObject *Sender)
 {
@@ -78,10 +77,13 @@ void __fastcall TFrRegister::ERepeatPasswordChange(TObject *Sender)
 	UpdateRegisterButtonState();
 }
 
+// enable/ disable register
+
 void TFrRegister::UpdateRegisterButtonState()
 {
     if (EUsername->Text != "" && EPassword->Text != "" && ERepeatPassword->Text != "") {
         if (EPassword->Text.Compare(ERepeatPassword->Text) != 0) {
+        	BtRegister->Enabled = false;
             LResponse->Caption = "Passwords don't match";
         }
         else {

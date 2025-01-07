@@ -12,6 +12,7 @@ library KeyType;
 {ITE} {DFMFileType} {FlyingWordsFrame.dfm}
 {ITE} {DFMFileType} {FlyingWordsStatsFrame.dfm}
 {ITE} {DFMFileType} {GeneratedTextFrame.dfm}
+{ITE} {DFMFileType} {KeyboardFrame.dfm}
 {ITE} {DFMFileType} {LessonResultsForm.dfm}
 {ITE} {DFMFileType} {Lessons2Frame.dfm}
 {ITE} {DFMFileType} {LessonsForm.dfm}
@@ -21,7 +22,7 @@ library KeyType;
 {ITE} {DFMFileType} {MainForm.dfm}
 {ITE} {DFMFileType} {MainFrame.dfm}
 {ITE} {DFMFileType} {PracticeFrame.dfm}
-{ITE} {DFMFileType} {PracticeOptionsForm.dfm}
+{ITE} {DFMFileType} {PracticeSourceForm.dfm}
 {ITE} {DFMFileType} {PreferencesForm.dfm}
 {ITE} {DFMFileType} {ProfileForm.dfm}
 {ITE} {DFMFileType} {RegisterFrame.dfm}
@@ -39,6 +40,7 @@ library KeyType;
 {$R 'FlyingWordsFrame.dfm' 'FrFlyingWords:TForm'}
 {$R 'FlyingWordsStatsFrame.dfm' 'FrFlyingWordsStats:TForm'}
 {$R 'GeneratedTextFrame.dfm' 'FrGeneratedText:TForm'}
+{$R 'KeyboardFrame.dfm' 'FrKeyboard:TForm'}
 {$R 'LessonResultsForm.dfm' 'FLessonResults:TForm'}
 {$R 'Lessons2Frame.dfm' 'FrLessons2:TForm'}
 {$R 'LessonsForm.dfm' 'FLessons:TForm'}
@@ -48,7 +50,7 @@ library KeyType;
 {$R 'MainForm.dfm' 'FMain:TForm'}
 {$R 'MainFrame.dfm' 'FrMain:TForm'}
 {$R 'PracticeFrame.dfm' 'FrPractice:TForm'}
-{$R 'PracticeOptionsForm.dfm' 'FPracticeOptions:TForm'}
+{$R 'PracticeSourceForm.dfm' 'FPracticeSource:TForm'}
 {$R 'PreferencesForm.dfm' 'FPreferences:TForm'}
 {$R 'ProfileForm.dfm' 'FProfile:TForm'}
 {$R 'RegisterFrame.dfm' 'FrRegister:TForm'}

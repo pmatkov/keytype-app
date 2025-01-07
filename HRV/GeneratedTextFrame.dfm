@@ -2,13 +2,13 @@ object FrGeneratedText: TFrGeneratedText
   Left = 0
   Top = 0
   Width = 504
-  Height = 360
+  Height = 400
   TabOrder = 0
   object GBWords: TGroupBox
     Left = 6
     Top = 3
     Width = 489
-    Height = 348
+    Height = 391
     TabOrder = 0
     object LDictionary: TLabel
       Left = 15
@@ -19,14 +19,14 @@ object FrGeneratedText: TFrGeneratedText
     end
     object LDefinition: TLabel
       Left = 12
-      Top = 237
+      Top = 239
       Width = 55
       Height = 15
       Caption = 'Definicija:'
     end
     object LSynonym: TLabel
       Left = 12
-      Top = 268
+      Top = 271
       Width = 58
       Height = 15
       Caption = 'Sinonimi:'
@@ -46,25 +46,39 @@ object FrGeneratedText: TFrGeneratedText
       Caption = 'Riije'#269':'
     end
     object LInfo: TLabel
-      Left = 15
-      Top = 314
-      Width = 65
+      Left = 12
+      Top = 347
+      Width = 78
       Height = 15
       AutoSize = False
     end
     object LWordsMin: TLabel
-      Left = 270
-      Top = 170
+      Left = 258
+      Top = 202
       Width = 61
       Height = 15
       Caption = 'Rije'#269'i min:'
     end
     object LWordsMax: TLabel
-      Left = 397
+      Left = 406
+      Top = 202
+      Width = 26
+      Height = 15
+      Caption = 'max:'
+    end
+    object LCharsWordMax: TLabel
+      Left = 406
       Top = 170
       Width = 26
       Height = 15
       Caption = 'max:'
+    end
+    object LCharsWordMin: TLabel
+      Left = 258
+      Top = 170
+      Width = 92
+      Height = 15
+      Caption = 'Znakova/ rije'#269'i min:'
     end
     object BtBrowse: TButton
       Left = 235
@@ -88,18 +102,18 @@ object FrGeneratedText: TFrGeneratedText
       Left = 12
       Top = 45
       Width = 466
-      Height = 106
+      Height = 109
       Columns = <
         item
           Caption = 'Rije'#269
           Width = 80
         end
         item
-          Caption = 'Category'
+          Caption = 'Kategorija'
           Width = 100
         end
         item
-          Caption = 'Definition'
+          Caption = 'Definicija'
           Width = 160
         end
         item
@@ -123,7 +137,7 @@ object FrGeneratedText: TFrGeneratedText
     end
     object EDefinition: TEdit
       Left = 90
-      Top = 234
+      Top = 231
       Width = 133
       Height = 23
       TabOrder = 4
@@ -144,17 +158,17 @@ object FrGeneratedText: TFrGeneratedText
       TabOrder = 6
     end
     object BtAddSave1: TButton
-      Left = 166
-      Top = 311
-      Width = 57
+      Left = 167
+      Top = 305
+      Width = 56
       Height = 23
       Caption = 'Dodaj'
       TabOrder = 7
       OnClick = BtAddSave1Click
     end
     object BtDelete1: TButton
-      Left = 90
-      Top = 311
+      Left = 102
+      Top = 305
       Width = 56
       Height = 23
       Caption = 'Obri'#353'i'
@@ -162,66 +176,51 @@ object FrGeneratedText: TFrGeneratedText
       TabOrder = 8
       OnClick = BtDelete1Click
     end
-    object CBWordsMin: TComboBox
-      Left = 337
+    object CBCharsWordMin: TComboBox
+      Left = 362
       Top = 167
-      Width = 45
+      Width = 38
       Height = 23
       Style = csDropDownList
       TabOrder = 9
     end
-    object CBWordsMax: TComboBox
-      Left = 433
+    object CBCharsWordMax: TComboBox
+      Left = 438
       Top = 167
-      Width = 45
+      Width = 38
       Height = 23
       Style = csDropDownList
       TabOrder = 10
     end
-    object CBNumbers: TCheckBox
-      Left = 270
-      Top = 202
-      Width = 88
+    object CBSynonyms: TCheckBox
+      Left = 376
+      Top = 234
+      Width = 102
       Height = 17
-      BiDiMode = bdRightToLeft
-      Caption = 'Brojevi'
+      Alignment = taLeftJustify
+      BiDiMode = bdLeftToRight
+      Caption = 'Sinononi:'
       ParentBiDiMode = False
       TabOrder = 11
     end
-    object CBPunctuation: TCheckBox
-      Left = 367
-      Top = 202
-      Width = 111
-      Height = 17
-      BiDiMode = bdRightToLeft
-      Caption = 'Interpunkcija'
-      ParentBiDiMode = False
+    object MPreview: TMemo
+      Left = 258
+      Top = 265
+      Width = 220
+      Height = 64
+      Lines.Strings = (
+        'Pregled generiranog teksta')
+      ReadOnly = True
       TabOrder = 12
     end
-    object MPreview: TMemo
-      Left = 270
-      Top = 231
-      Width = 208
-      Height = 52
-      Lines.Strings = (
-        '')
-      TabOrder = 13
-    end
-    object BtTest: TButton
+    object BtGenerate: TButton
       Left = 403
-      Top = 310
+      Top = 343
       Width = 75
       Height = 25
-      Caption = 'Test'
-      TabOrder = 14
-    end
-    object BtTestThreads: TButton
-      Left = 316
-      Top = 310
-      Width = 75
-      Height = 25
-      Caption = 'Test [T]'
-      TabOrder = 15
+      Caption = 'Generiraj'
+      TabOrder = 13
+      OnClick = BtGenerateClick
     end
     object BtConvert: TButton
       Left = 403
@@ -229,19 +228,64 @@ object FrGeneratedText: TFrGeneratedText
       Width = 75
       Height = 25
       Caption = 'Konverter'
-      TabOrder = 16
+      TabOrder = 14
       OnClick = BtConvertClick
     end
+    object CBWordsMax: TComboBox
+      Left = 438
+      Top = 199
+      Width = 38
+      Height = 23
+      Style = csDropDownList
+      TabOrder = 15
+    end
+    object BtShuffle: TButton
+      Left = 315
+      Top = 343
+      Width = 75
+      Height = 25
+      Caption = 'Izmije'#353'aj'
+      TabOrder = 16
+      OnClick = BtShuffleClick
+    end
+    object BtSynonyms: TButton
+      Left = 12
+      Top = 304
+      Width = 62
+      Height = 25
+      Caption = 'Dohvati @'
+      TabOrder = 17
+      OnClick = BtSynonymsClick
+    end
+    object CBUppercase: TCheckBox
+      Left = 256
+      Top = 234
+      Width = 106
+      Height = 17
+      Alignment = taLeftJustify
+      BiDiMode = bdLeftToRight
+      Caption = 'Velika slova:'
+      ParentBiDiMode = False
+      TabOrder = 18
+    end
+  end
+  object CBWordsMin: TComboBox
+    Left = 368
+    Top = 202
+    Width = 38
+    Height = 23
+    Style = csDropDownList
+    TabOrder = 1
   end
   object DFileOpen: TOpenTextFileDialog
-    Left = 243
-    Top = 287
+    Left = 156
+    Top = 98
   end
   object msgDisplayTimer: TTimer
     Enabled = False
     Interval = 3000
     OnTimer = msgDisplayTimerTimer
-    Left = 246
-    Top = 215
+    Left = 66
+    Top = 98
   end
 end

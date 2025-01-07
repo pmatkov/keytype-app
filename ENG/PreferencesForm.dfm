@@ -4,8 +4,8 @@ object FPreferences: TFPreferences
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Preferences'
-  ClientHeight = 444
-  ClientWidth = 528
+  ClientHeight = 467
+  ClientWidth = 527
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,36 +18,36 @@ object FPreferences: TFPreferences
     Left = 6
     Top = 27
     Width = 254
-    Height = 370
+    Height = 391
     Caption = 'Application settings'
     TabOrder = 0
     object LLanguage: TLabel
       Left = 12
-      Top = 45
+      Top = 37
       Width = 55
       Height = 15
       Caption = 'Language:'
     end
     object LLogging: TLabel
       Left = 12
-      Top = 157
+      Top = 149
       Width = 47
       Height = 15
       Caption = 'Logging:'
     end
     object LFont1: TLabel
       Left = 12
-      Top = 81
+      Top = 73
       Width = 63
       Height = 15
       Caption = 'Font family:'
     end
     object LArchiveLogLimit: TLabel
       Left = 12
-      Top = 194
-      Width = 100
+      Top = 186
+      Width = 70
       Height = 15
-      Caption = 'Archive older than:'
+      Caption = 'Archive limit:'
     end
     object LArchiveStatus: TLabel
       Left = 12
@@ -58,7 +58,7 @@ object FPreferences: TFPreferences
     end
     object CBLanguage: TComboBox
       Left = 126
-      Top = 42
+      Top = 34
       Width = 115
       Height = 23
       Style = csDropDownList
@@ -67,7 +67,7 @@ object FPreferences: TFPreferences
     end
     object CBLogging: TComboBox
       Left = 126
-      Top = 154
+      Top = 146
       Width = 115
       Height = 23
       Style = csDropDownList
@@ -76,7 +76,7 @@ object FPreferences: TFPreferences
     end
     object CBLoggingEnable: TCheckBox
       Left = 93
-      Top = 157
+      Top = 149
       Width = 16
       Height = 17
       TabOrder = 2
@@ -84,7 +84,7 @@ object FPreferences: TFPreferences
     end
     object CBFont1: TComboBox
       Left = 126
-      Top = 78
+      Top = 70
       Width = 115
       Height = 23
       Style = csDropDownList
@@ -93,7 +93,7 @@ object FPreferences: TFPreferences
     end
     object BtReset1: TButton
       Left = 151
-      Top = 330
+      Top = 348
       Width = 90
       Height = 25
       Caption = 'Reset'
@@ -102,7 +102,7 @@ object FPreferences: TFPreferences
     end
     object CBArchiveLogLimit: TComboBox
       Left = 126
-      Top = 191
+      Top = 183
       Width = 115
       Height = 23
       Style = csDropDownList
@@ -111,7 +111,7 @@ object FPreferences: TFPreferences
     end
     object BtArchiveLogs: TButton
       Left = 151
-      Top = 228
+      Top = 224
       Width = 90
       Height = 25
       Cancel = True
@@ -124,40 +124,47 @@ object FPreferences: TFPreferences
     Left = 266
     Top = 27
     Width = 254
-    Height = 370
+    Height = 391
     Caption = 'Typing settings'
     TabOrder = 1
     object LCaret: TLabel
       Left = 12
-      Top = 45
+      Top = 37
       Width = 57
       Height = 15
       Caption = 'Caret type:'
     end
     object LFont2: TLabel
       Left = 12
-      Top = 117
+      Top = 109
       Width = 63
       Height = 15
       Caption = 'Font family:'
     end
     object LFontSize: TLabel
       Left = 12
-      Top = 157
+      Top = 149
       Width = 49
       Height = 15
       Caption = 'Font size:'
     end
     object LSeparator: TLabel
       Left = 12
-      Top = 81
+      Top = 73
       Width = 79
       Height = 15
       Caption = 'Separator type:'
     end
+    object LKeyboardLayout: TLabel
+      Left = 13
+      Top = 186
+      Width = 89
+      Height = 15
+      Caption = 'Keyboard layout:'
+    end
     object CBCaret: TComboBox
       Left = 126
-      Top = 42
+      Top = 34
       Width = 115
       Height = 23
       Style = csDropDownList
@@ -166,7 +173,7 @@ object FPreferences: TFPreferences
     end
     object CBMistake: TCheckBox
       Left = 12
-      Top = 195
+      Top = 222
       Width = 229
       Height = 17
       Alignment = taLeftJustify
@@ -176,7 +183,7 @@ object FPreferences: TFPreferences
     end
     object CBConsecutiveMistakes: TCheckBox
       Left = 12
-      Top = 228
+      Top = 254
       Width = 229
       Height = 17
       Alignment = taLeftJustify
@@ -186,7 +193,7 @@ object FPreferences: TFPreferences
     end
     object CBSpeed: TCheckBox
       Left = 12
-      Top = 261
+      Top = 284
       Width = 229
       Height = 17
       Alignment = taLeftJustify
@@ -196,7 +203,7 @@ object FPreferences: TFPreferences
     end
     object CBFont2: TComboBox
       Left = 126
-      Top = 114
+      Top = 106
       Width = 115
       Height = 23
       Style = csDropDownList
@@ -205,7 +212,7 @@ object FPreferences: TFPreferences
     end
     object CBAccuracy: TCheckBox
       Left = 12
-      Top = 294
+      Top = 317
       Width = 229
       Height = 17
       Alignment = taLeftJustify
@@ -215,7 +222,7 @@ object FPreferences: TFPreferences
     end
     object CBFontSize: TComboBox
       Left = 126
-      Top = 154
+      Top = 146
       Width = 115
       Height = 23
       Style = csDropDownList
@@ -224,7 +231,7 @@ object FPreferences: TFPreferences
     end
     object BtReset2: TButton
       Left = 147
-      Top = 330
+      Top = 348
       Width = 90
       Height = 25
       Caption = 'Reset'
@@ -233,17 +240,26 @@ object FPreferences: TFPreferences
     end
     object CBSeparator: TComboBox
       Left = 126
-      Top = 78
+      Top = 70
       Width = 115
       Height = 23
       Style = csDropDownList
       TabOrder = 8
       OnChange = CBSeparatorChange
     end
+    object CBKeyboardLayout: TComboBox
+      Left = 127
+      Top = 183
+      Width = 115
+      Height = 23
+      Style = csDropDownList
+      TabOrder = 9
+      OnChange = CBKeyboardLayoutChange
+    end
   end
   object BtCancel: TButton
     Left = 444
-    Top = 408
+    Top = 435
     Width = 75
     Height = 25
     Caption = 'Cancel'
@@ -252,7 +268,7 @@ object FPreferences: TFPreferences
   end
   object BtAccept: TButton
     Left = 349
-    Top = 408
+    Top = 435
     Width = 75
     Height = 25
     Caption = 'Accept'

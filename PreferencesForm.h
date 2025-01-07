@@ -46,6 +46,8 @@ __published:	// IDE-managed Components
 	TButton *BtArchiveLogs;
 	TLabel *LArchiveStatus;
 	TTimer *msgDisplayTimer;
+	TLabel *LKeyboardLayout;
+	TComboBox *CBKeyboardLayout;
 	void __fastcall CBLanguageChange(TObject *Sender);
 	void __fastcall CBLoggingEnableClick(TObject *Sender);
 	void __fastcall BtReset1Click(TObject *Sender);
@@ -64,15 +66,16 @@ __published:	// IDE-managed Components
 	void __fastcall CBArchiveLogLimitChange(TObject *Sender);
 	void __fastcall BtArchiveLogsClick(TObject *Sender);
 	void __fastcall msgDisplayTimerTimer(TObject *Sender);
+	void __fastcall CBKeyboardLayoutChange(TObject *Sender);
 private:	// User declarations
 	MainSession *mainSession;
-    	AuthenticationService *authService;
+    AuthenticationService *authService;
 
 public:		// User declarations
 	__fastcall TFPreferences(TComponent* Owner);
-        __fastcall TFPreferences(TComponent* Owner, MainSession *_mainSession, AuthenticationService *_authService);
-            void setAppSettingsItems();
-        void setTypingSettingsItems();
+    __fastcall TFPreferences(TComponent* Owner, MainSession *_mainSession, AuthenticationService *_authService);
+    void setAppSettingsItems();
+    void setTypingSettingsItems();
 
 };
 //---------------------------------------------------------------------------

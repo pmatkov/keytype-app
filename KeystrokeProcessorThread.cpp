@@ -29,6 +29,9 @@ void KeystrokeProcessorThread::Execute()
 
         	wordMatch  = false;
 
+            /*  fetch chars from queue
+            	(synchronize with main thread) */
+
             criticalSection.Acquire();
             while (!keystrokeQueue.empty())
             {
@@ -36,6 +39,9 @@ void KeystrokeProcessorThread::Execute()
                 keystrokeQueue.pop();
             }
             criticalSection.Release();
+
+             /*  remove words on match
+           		(synchronize with gameThread) */
 
             mutexWords.Acquire();
             for (int i = 0; i < gameEngine.getWordsOnDisplay().size(); i++) {
@@ -49,6 +55,9 @@ void KeystrokeProcessorThread::Execute()
                 }
             }
             mutexWords.Release();
+
+            /*  set word match
+            	(synchronize with gameScoreThread) */
 
             mutexScore.Acquire();
             if (wordMatch) {

@@ -76,6 +76,7 @@ class GameEngine {
 
 		const GameStatus &getGameStatus() const;
 		void setGameStatus(GameStatus _gameStatus);
+
         const GameStatistics &getGameStatistics() const;
 		void setGameStatistics(GameStatistics _gameStatistics);
 

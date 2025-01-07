@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="ITextWebServiceservice" targetNamespace="http://tempuri.org/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ns1="urn:TextService">
+  <types>
+    <xs:schema targetNamespace="urn:TextService" xmlns="urn:TextService">
+      <xs:complexType name="DynamicArray">
+        <xs:complexContent>
+          <xs:restriction base="soapenc:Array">
+            <sequence xmlns="http://www.w3.org/2001/XMLSchema"/>
+            <xs:attribute ref="soapenc:arrayType" n1:arrayType="xs:string[]" xmlns:n1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xs:restriction>
+        </xs:complexContent>
+      </xs:complexType>
+    </xs:schema>
+  </types>
+  <message name="generateText0Request">
+    <part name="wordList" type="ns1:DynamicArray"/>
+    <part name="minChars" type="xs:int"/>
+    <part name="maxChars" type="xs:int"/>
+    <part name="minWords" type="xs:int"/>
+    <part name="maxWords" type="xs:int"/>
+    <part name="useUppercase" type="xs:boolean"/>
+  </message>
+  <message name="generateText0Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="shuffleWords1Request">
+    <part name="words" type="xs:string"/>
+  </message>
+  <message name="shuffleWords1Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <portType name="ITextWebService">
+    <operation name="generateText">
+      <input message="tns:generateText0Request"/>
+      <output message="tns:generateText0Response"/>
+    </operation>
+    <operation name="shuffleWords">
+      <input message="tns:shuffleWords1Request"/>
+      <output message="tns:shuffleWords1Response"/>
+    </operation>
+  </portType>
+  <binding name="ITextWebServicebinding" type="tns:ITextWebService">
+    <binding xmlns="http://schemas.xmlsoap.org/wsdl/soap/" style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="generateText">
+      <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:TextService-ITextWebService#generateText" style="rpc"/>
+      <input>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:TextService-ITextWebService"/>
+      </input>
+      <output>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:TextService-ITextWebService"/>
+      </output>
+    </operation>
+    <operation name="shuffleWords">
+      <operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="urn:TextService-ITextWebService#shuffleWords" style="rpc"/>
+      <input>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:TextService-ITextWebService"/>
+      </input>
+      <output>
+        <body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:TextService-ITextWebService"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="ITextWebServiceservice">
+    <port name="ITextWebServicePort" binding="tns:ITextWebServicebinding">
+      <address xmlns="http://schemas.xmlsoap.org/wsdl/soap/" location="http://localhost/SOAPServer.dll/soap/ITextWebService"/>
+    </port>
+  </service>
+</definitions>
+

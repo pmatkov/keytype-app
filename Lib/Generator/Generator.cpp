@@ -4,6 +4,8 @@
 
 #include "Generator.h"
 #include "Random.h"
+#include "TextService.h"
+
 #include <cwctype>
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -11,10 +13,9 @@
 
 Generator::Generator() {}
 
-Generator::Generator(UnicodeString _letters, bool _useNumbers, bool _useUppercase, bool _usePunctuation)
-: letters(_letters), useNumbers(_useNumbers), useUppercase(_useUppercase), usePunctuation(_usePunctuation) {}
-Generator::Generator(bool _useNumbers, bool _useUppercase, bool _usePunctuation)
-: useNumbers(_useNumbers), useUppercase(_useUppercase), usePunctuation(_usePunctuation) {}
+Generator::Generator(UnicodeString _letters, bool _useNumbers, bool _useUppercase, bool _usePunctuation) : letters(_letters), useNumbers(_useNumbers), \
+	useUppercase(_useUppercase), usePunctuation(_usePunctuation) {}
+Generator::Generator(bool _useNumbers, bool _useUppercase, bool _usePunctuation) : useNumbers(_useNumbers), useUppercase(_useUppercase), usePunctuation(_usePunctuation) {}
 
 
 UnicodeString Generator::generateChars(int charCount) {
@@ -98,4 +99,32 @@ UnicodeString Generator::shuffleChars(UnicodeString string) {
     }
 
     return string;
+}
+
+UnicodeString Generator::shuffleWords(UnicodeString words) {
+
+    _di_ITextWebService textService = GetITextWebService();
+
+    UnicodeString result = textService->shuffleWords(words);
+
+    return result;
+
+}
+
+UnicodeString Generator::generateText(const std::vector<UnicodeString> &wordList, int minChars, int maxChars, int minWords, int maxWords) {
+
+	DynamicArray<UnicodeString> stringArray;
+
+    stringArray.Length = wordList.size();
+
+    for (int i = 0; i < wordList.size(); i++) {
+        stringArray[i] = wordList[i];
+    }
+
+    _di_ITextWebService textService = GetITextWebService();
+
+    UnicodeString result = textService->generateText(stringArray, minChars, maxChars, minWords, maxWords, useUppercase);
+
+    return result;
+
 }

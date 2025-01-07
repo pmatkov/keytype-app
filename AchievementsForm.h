@@ -7,7 +7,6 @@
 #include <Vcl.Controls.hpp>
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.Forms.hpp>
-#include <vcl.h>
 
 #include <vector>
 #include <memory>

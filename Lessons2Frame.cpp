@@ -1,10 +1,20 @@
 //---------------------------------------------------------------------------
 
-#pragma hdrstop
 #undef UNICODE
 #define UNICODE
 
+#include <vcl.h>
+#pragma hdrstop
+
 #include "Lessons2Frame.h"
+
+#include "UIUtils.h"
+#include "TextUtils.h"
+#include "EnumUtils.h"
+#include "FileUtils.h"
+#include "CryptoUtils.h"
+#include "Logger.h"
+#include "ENullPointerException.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma link "OptionsFrame"
@@ -13,16 +23,9 @@
 #pragma link "TypingTextFrame"
 #pragma resource "*.dfm"
 
-#include "UIUtils.h"
-#include "TextUtils.h"
-#include "EnumUtils.h"
-#include "FileUtils.h"
-#include "CryptoUtils.h"
 #include "Generator.h"
 #include "AchievementsRecord.h"
 #include "AchievementsUtils.h"
-#include "Logger.h"
-#include "ENullPointerException.h"
 
 TFrLessons2 *FrLessons2;
 //---------------------------------------------------------------------------
@@ -41,12 +44,12 @@ __fastcall TFrLessons2::TFrLessons2(TComponent* Owner)
 
        FrTypingStats->setMainSession(mainSession);
        FrTypingStats->setTypingSession(typingSession);
-       FrTypingStats->hideStatsItems();
 
        FrTypingText->setMainSession(mainSession);
        FrTypingText->setTypingSession(typingSession);
        FrTypingText->setParser(parser);
        FrTypingText->setFrameTypingStats(FrTypingStats);
+       FrTypingText->resetTypingStats();
 
        coursesValues = dataModule->getColumnValues(dataModule->TCourses, "name");
        std::vector<UnicodeString> courseStringValues = dataModule->getStringsFromColumnValues(coursesValues);
@@ -156,23 +159,22 @@ void TFrLessons2::hideInterfaceValues() {
 }
 
 
-bool TFrLessons2::setTextSource(int index) {
+bool TFrLessons2::setTextSource(int lessonIndex) {
 
-//	UnicodeString textSource = Generator::generateText(dataModule->getColumnValue(dataModule->TLessons, "characters", index), \
-//     GeneratorOptions(false, false, false, typingSession->getWordCount(), typingSession->getWordCount()));
-
-	UnicodeString textSource = dataModule->generateText(dataModule->getColumnValue(dataModule->TLessons, "characters", index), \
+	UnicodeString textSource = dataModule->generateText(dataModule->getColumnValue(dataModule->TLessons, "characters", lessonIndex), \
      false, false, false, typingSession->getWordCount(), typingSession->getWordCount());
 
 
      if (!textSource.IsEmpty()) {
 
-        // shorten generated text if longer than lesson char count
+        // adjust text length
+
      	if (textSource.Length() > typingSession->getCharCount()) {
          	textSource.SetLength(typingSession->getCharCount());
         }
 
-        // set source text
+        // set text
+
         typingSession->setTextSource(TextSource(textSource));
         return true;
      }
@@ -187,8 +189,6 @@ void __fastcall TFrLessons2::BtStartQuitClick(TObject *Sender)
 
 	if (BtStartQuit->Caption == "Start" || BtStartQuit->Caption == "Pokreni" ||  BtStartQuit->Caption == "Restart" || BtStartQuit->Caption == "Ponovi") {
 
-        // warn if lesson isn't selected
-
         if (CBSelectLesson->ItemIndex == 0) {
 
         	if (mainSession->getAppSettings().getLanguage() == Language::English) {
@@ -201,15 +201,10 @@ void __fastcall TFrLessons2::BtStartQuitClick(TObject *Sender)
         }
         else{
 
-        	int index = lessonsValues[CBSelectLesson->ItemIndex-1].first;
-        	if (setTextSource(index)) {
+        	int lessonIndex = lessonsValues[CBSelectLesson->ItemIndex-1].first;
+            bool sourceSet = setTextSource(lessonIndex);
 
-                if (mainSession->getAppSettings().getLanguage() == Language::English) {
-                   BtStartQuit->Caption = "Quit";
-                }
-                else if (mainSession->getAppSettings().getLanguage() == Language::Croatian) {
-                    BtStartQuit->Caption = "Završi";
-                }
+        	if (sourceSet) {
 
                 CBSelectCourse->Enabled = false;
                 CBSelectLesson->Enabled = false;
@@ -221,8 +216,14 @@ void __fastcall TFrLessons2::BtStartQuitClick(TObject *Sender)
 
                 typingSession->setSessionStatus(SessionStatus::Initialized);
                 FrTypingText->changeSessionView(SessionStatus::Initialized);
-            }
 
+                if (mainSession->getAppSettings().getLanguage() == Language::English) {
+                   BtStartQuit->Caption = "Quit";
+                }
+                else if (mainSession->getAppSettings().getLanguage() == Language::Croatian) {
+                    BtStartQuit->Caption = "Završi";
+                }
+            }
         }
 	}
     else if (BtStartQuit->Caption == "Quit" || BtStartQuit->Caption == "Završi" ) {
@@ -238,7 +239,13 @@ void __fastcall TFrLessons2::BtStartQuitClick(TObject *Sender)
         CBSelectLesson->Enabled = true;
 
         LLessonResult->Visible = true;
-        LLessonResultDisplay->Font->Color = clRed;
+
+     	LLessonResultDisplay->Font->Color = clSilver;
+
+        if (LLessonResult->Left == 214) {
+            LLessonResult->Left = LLessonResult->Left + 20;
+            LLessonResultDisplay->Left = LLessonResultDisplay->Left + 20;
+        }
 
         if (mainSession->getAppSettings().getLanguage() == Language::English) {
            LLessonResultDisplay->Caption = "cancelled";
@@ -292,6 +299,11 @@ void __fastcall TFrLessons2::processLessonComplete(TObject *Sender)
     LLessonResult->Visible = true;
     LLessonResultDisplay->Font->Color =  passed ? TColor(0x8B8B00) : TColor(0x0045FF);
 
+    if (LLessonResult->Left > 214) {
+        LLessonResult->Left = LLessonResult->Left - 20;
+        LLessonResultDisplay->Left = LLessonResultDisplay->Left - 20;
+    }
+
     if (mainSession->getAppSettings().getLanguage() == Language::English) {
         LLessonResultDisplay->Caption = passed ? " passed (" : " failed (";
     }
@@ -304,6 +316,8 @@ void __fastcall TFrLessons2::processLessonComplete(TObject *Sender)
  	resetLessonControls();
 
     int idUser;
+
+    // save lessons results to db
 
     if (dataModule->TUsers->Locate("username", authService->getUser().getUsername(), TLocateOptions())) {
 
@@ -322,6 +336,8 @@ void __fastcall TFrLessons2::processLessonComplete(TObject *Sender)
 
         dataModule->TLessonResults->Last();
         int lastId = dataModule->TLessonResults->FieldByName("ID")->AsInteger;
+
+        // save key statistics to db
 
         for (const std::pair<wchar_t, KeyStatistics>& ks : keyStatistics) {
 
@@ -345,13 +361,15 @@ void __fastcall TFrLessons2::processLessonComplete(TObject *Sender)
         };
     }
 
+    // save achievements
+
     if (typingSession->getLessonGoal() == LessonGoal::lSpeed && lessonResult > 40) {
-    	if (isAchievementEligibile(idUser, AchievementType::SpeedMaster)) {
+    	if (isAchievementEligible(idUser, AchievementType::SpeedMaster)) {
            assignAchievement(idUser, AchievementType::SpeedMaster, ("reached speed of " +  FormatFloat("0.00", lessonResult) + " WPM"));
         }
     }
     else if (typingSession->getLessonGoal() == LessonGoal::lAccuracy && lessonResult == 100) {
-    	if (isAchievementEligibile(idUser, AchievementType::PerfectScore)) {
+    	if (isAchievementEligible(idUser, AchievementType::PerfectScore)) {
            assignAchievement(idUser, AchievementType::PerfectScore, ("reached accuracy of " +  FormatFloat("0.00", lessonResult) + " %"));
         }
     }
@@ -360,7 +378,7 @@ void __fastcall TFrLessons2::processLessonComplete(TObject *Sender)
     FrTypingText->changeSessionView(SessionStatus::Completed);
 }
 
-bool TFrLessons2::isAchievementEligibile(int idUser, AchievementType achievementType) {
+bool TFrLessons2::isAchievementEligible(int idUser, AchievementType achievementType) {
 
      std::vector<AchievementsRecord> records = AchievementsUtils::readFromFile(FileUtils::createAbsolutePath("Data\\achievements", true));
 

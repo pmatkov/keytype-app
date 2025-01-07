@@ -9,14 +9,14 @@
 class Session
 {
     private:
-        std::chrono::time_point<std::chrono::system_clock> sessionStartTime;
-    	std::chrono::time_point<std::chrono::system_clock> sessionEndTime;
+        std::chrono::time_point<std::chrono::system_clock> startTime;
+    	std::chrono::time_point<std::chrono::system_clock> endTime;
 
 	public:
         Session();
 
-        void startSessionTimer();
- 		void stopSessionTimer();
+        void startTimer();
+ 		void stopTimer();
         long getElapsedTime() const;
 
 };

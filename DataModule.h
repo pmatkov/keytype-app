@@ -32,6 +32,14 @@
 #include "uTPLb_CryptographicLibrary.hpp"
 #include "uTPLb_Signatory.hpp"
 #include <System.SysUtils.hpp>
+#include <Data.Bind.Components.hpp>
+#include <Data.Bind.ObjectScope.hpp>
+#include <REST.Client.hpp>
+#include <REST.Response.Adapter.hpp>
+#include <REST.Types.hpp>
+#include <REST.Authenticator.Basic.hpp>
+#include <IdUDPBase.hpp>
+#include <IdUDPClient.hpp>
 
 #include <vector>
 //---------------------------------------------------------------------------
@@ -83,7 +91,7 @@ __published:	// IDE-managed Components
 	TBCDField *TLessonResultsspeed;
 	TBCDField *TLessonResultsaccuracy;
 	TStringField *TLessonResultsresult;
-	TIdTCPClient *IdTCPClient1;
+	TIdTCPClient *IdTCPClient;
 	TIntegerField *TLessonResultsduration;
 	TStringField *TLessonResultsdurationHMS;
 	TDataSource *DKeyStatistics;
@@ -93,7 +101,13 @@ __published:	// IDE-managed Components
 	TStringField *TKeyStatisticskey;
 	TIntegerField *TKeyStatisticscorrect;
 	TIntegerField *TKeyStatisticsmistake;
-	TStringField *TUserssalt;
+	TRESTClient *RESTClient;
+	TRESTRequest *RESTRequest;
+	TRESTResponse *RESTResponse;
+	TRESTResponseDataSetAdapter *RESTResponseDataSetAdapter;
+	TFDMemTable *FDMemTable;
+	TDataSource *DWebService;
+	TIdUDPClient *IdUDPClient;
 	void __fastcall TLessonsCalcFields(TDataSet *DataSet);
 	void __fastcall TLessonResultsCalcFields(TDataSet *DataSet);
 private:	// User declarations
@@ -107,6 +121,7 @@ public:		// User declarations
 
     UnicodeString generateText(const UnicodeString &letters, bool useNumbers, bool useUppercase,  bool usePunctuation, int minTokens, int maxTokens);
     bool convertWordList(const UnicodeString& filePath);
+    UnicodeString translateKey(const UnicodeString &key);
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TDataModule1 *DataModule1;

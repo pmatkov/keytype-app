@@ -1,4 +1,6 @@
 //---------------------------------------------------------------------------
+#pragma hdrstop
+
 #include <cwctype>
 #include <map>
 #include <System.IOUtils.hpp>
@@ -14,7 +16,7 @@
 #define PROJECT_DIR "KeyType"
 
 //---------------------------------------------------------------------------
-#pragma hdrstop
+
 #pragma package(smart_init)
 
 namespace FileUtils {
@@ -61,9 +63,9 @@ namespace FileUtils {
     }
 
 
-    // get list of files in a directory
+    // get list of a directory's files
 
-    std::optional<std::vector<UnicodeString>> getFileNames(const UnicodeString &path, const UnicodeString &fileType) {
+    std::optional<std::vector<UnicodeString>> getFiles(const UnicodeString &path, const UnicodeString &fileType) {
 
         #ifdef TEST_GET_FILES
         return std::make_optional(std::vector<UnicodeString>{"archive_2024-03-11_02.zip", "archive_2024-03-14_02.zip", "archive_2024-03-10_03.zip"});
@@ -163,7 +165,6 @@ std::optional<std::vector<UnicodeString>> readFromTextFileByLine(const UnicodeSt
                 line = reader->ReadLine();
 
                 if (!line.IsEmpty()) {
-                	line = CryptoUtils::decryptStringAES(line);
                     lines.push_back(line);
                 }
             }

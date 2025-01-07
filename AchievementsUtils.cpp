@@ -54,8 +54,10 @@ namespace AchievementsUtils {
 
                 if (header.getHashValue() != CryptoUtils::generateSHA512Hash(header)) {
 
-                    ShowMessage(header.getHashValue() + " " + CryptoUtils::generateSHA512Hash(UnicodeString(header)) + " Invalid hash value");
-                    LOGGER(LogLevel::Debug, "Invalid hash value");
+                    // verify header hash
+
+                    ShowMessage(header.getHashValue() + " " + CryptoUtils::generateSHA512Hash(header) + " Invalid hash value");
+                    LOGGER(LogLevel::Error, "Invalid hash value");
                     return records;
                 }
 
@@ -83,28 +85,30 @@ namespace AchievementsUtils {
     std::vector<AchievementsRecord> filterAchievements(const std::vector<AchievementsRecord> &records, int idUser, AchievementType type) {
 
     	std::vector<AchievementsRecord> filteredRecords;
-        bool addRecord;
 
     	for (const AchievementsRecord &record: records) {
 
-            addRecord = false;
+            bool foundMatchingRecord = false;
+
+            // filter by user, achievement type or both
 
             if (idUser) {
               if (record.getIdUser() == idUser) {
-              	addRecord = true;
+              	foundMatchingRecord = true;
               }
             }
             else if (type != AchievementType::Unknown) {
                 if (EnumUtils::enumToString<AchievementType>(Achievement::getAchievementTypeStrings(), type) == record.getTitle()) {
-					addRecord = true;
+					foundMatchingRecord = true;
                 }
             }
             else if (idUser && type != AchievementType::Unknown) {
                  if (record.getIdUser() == idUser && (EnumUtils::enumToString<AchievementType>(Achievement::getAchievementTypeStrings(), type) == record.getTitle())) {
-					addRecord = true;
+					foundMatchingRecord = true;
                 }
             }
-            if (addRecord) {
+
+            if (foundMatchingRecord) {
                filteredRecords.push_back(record);
             }
         }

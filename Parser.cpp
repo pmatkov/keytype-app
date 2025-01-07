@@ -3,6 +3,8 @@
 #pragma hdrstop
 
 #include "Parser.h"
+#include <cwctype>
+
 #include "Logger.h"
 #include "ENullPointerException.h"
 
@@ -64,6 +66,8 @@ void Parser::setInputEnabled(bool _inputEnabled) {
 	inputEnabled = _inputEnabled;
 }
 
+// set state to initial values
+
 void Parser::resetParser() {
 
 	setInputEnabled(false);
@@ -79,14 +83,14 @@ wchar_t Parser::getChar(WPARAM wParam){
 
 	switch (wParam) {
 
-        // ignore enter, tab and escape
+        // ignore some control keys
+
 		case VK_RETURN:
 		case VK_TAB:
 		case VK_ESCAPE:
 			break;
 
-        /* correct typing mistakes (these mistakes are inserted in practice text
-        only if 'stop on mistake' isn't checked)*/
+        // clear mistake (if 'stop on mistake' is unchecked)
 
 		case VK_BACK:{
 
@@ -104,24 +108,30 @@ wchar_t Parser::getChar(WPARAM wParam){
                 	if (insertedChars.IsEmpty()) {
 
                         // change word separator
+
                         if (mainSession->getTypingSettings().getSeparatorType() == SeparatorType::Dot && typingSession->getTextSource()[typingSession->getTextSource().getCharIndex()] == L'\u25E6') {
                           wch = L'\u25E6';
                         }
 
+                        // correct key
+
                         if (wch == typingSession->getTextSource()[typingSession->getTextSource().getCharIndex()]) {
+
+                            // log all keys (correct and mistakes)
 
                             keyLog.push_back(std::make_pair(UnicodeString(wch), false));
 
-                            // mark mistake in buffer
-                            if (mistake) {
+                            // add first mistake to buffer
+
+                            if (mistakeRecorded) {
                             	buffer.push_back(std::make_pair(UnicodeString(wch), true));
-                                mistake = false;
+                                mistakeRecorded = false;
                             }
                             else {
                             	buffer.push_back(std::make_pair(UnicodeString(wch), false));
                             }
 
-                            // count typed words
+                            // increase word count
                             if (wParam == VK_SPACE || typingSession->getTextSource().getCharIndex() == typingSession->getTextSource().getText().Length()) {
                                 typingSession->increaseTypedWords();
                             }
@@ -131,25 +141,33 @@ wchar_t Parser::getChar(WPARAM wParam){
                             typingSession->increaseCharIndex();
                             return wch;
 
-                        } else {
+                        }
+                        // mistake key
+
+                        else {
+
+                            // log all keys (correct and mistakes)
+
                         	keyLog.push_back(std::make_pair(UnicodeString(wch), true));
 
                             if (mainSession->getTypingSettings().getCountConsecutiveMistakes()) {
-                            	typingSession->increaseMistakes();
 
+                            	typingSession->increaseMistakes();
                                 typingSession->increaseMistakeKey(typingSession->getTextSource()[typingSession->getTextSource().getCharIndex()]);
                             }
                             else {
-                                // flag mistake but don't add to buffer yet (only add after correct input)
-                            	if (!mistake) {
+                                // flag first mistake
+
+                            	if (!mistakeRecorded) {
                        				typingSession->increaseMistakes();
-                               		mistake = true;
+                               		mistakeRecorded = true;
 
                                     typingSession->increaseMistakeKey(typingSession->getTextSource()[typingSession->getTextSource().getCharIndex()]);
                             	}
                             }
 
-                            // insert invalid chars (only if 'stop on mistake' isn't checked)
+                            // add consecutive mistakes to buffer (if 'stop on mistake' is unchecked)
+
                             if (!mainSession->getTypingSettings().getStopOnMistake()) {
                                 insertedChars += UnicodeString(wch);
                             	return wch;

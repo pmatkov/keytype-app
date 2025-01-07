@@ -23,6 +23,7 @@ __published:	// IDE-managed Components
 	TEdit *EUsername;
 	TLabel *LNotRegistered;
 	TLabel *LResponse;
+	TCheckBox *CBRestAuth;
 	void __fastcall BtGuestClick(TObject *Sender);
 	void __fastcall BtRegisterClick(TObject *Sender);
 	void __fastcall EUsernameChange(TObject *Sender);

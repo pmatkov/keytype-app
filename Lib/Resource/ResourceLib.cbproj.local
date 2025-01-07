@@ -1,23 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.962,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\Resource\Stringtable\Stringtable.rc=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.614,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\Resource\Stringtable\Stringtable.rc</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.349,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\Resource\Stringtable\Stringtable.rc=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.266,=C:\Users\surf3r\OneDrive\Pictures\surf.png</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.603,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\Resource\Images\football.png</Transaction>
     <Transaction>1899.12.30 00:00:00.000.612,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\Resource\Images\man-climbing-stairs.png</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.580,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\Resource\Images\badge.png</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.415,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.626,C:\Users\surf3r\OneDrive\Pictures\surf.png=</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.624,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\Resource\Images\rocket.png</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.506,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\Resource\ResourceLibPCH1.h=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.316,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\Resource\File1.cpp=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\Resource\ResourceLib.cpp</Transaction>
     <Transaction>1899.12.30 00:00:00.000.569,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\Resource\Images\arrow.png</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.316,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\Resource\ResourceLib.cpp=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\Resource\File1.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.551,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\Resource\File1.cpp=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\File1.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.286,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\Resource\ResourceLib.cbproj=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\Resource\ResourceLib.cbproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.556,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\Resource\ResourceLib.cbproj=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.556,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\Project1.cbproj=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\Resource\ResourceLib.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.394,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\Resource\Stringtable\Stringtable.rc</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.004,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\Resource\Stringtable\Stringtable.rc</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.624,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\Resource\Images\rocket.png</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.626,C:\Users\surf3r\OneDrive\Pictures\surf.png=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.527,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\Resource\Stringtable.h=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\Resource\File1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.524,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\Resource\File1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.591,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\Resource\Images\check-mark.png</Transaction>
     <Transaction>1899.12.30 00:00:00.000.102,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\Resource\surf.png=</Transaction>
     <Transaction>1899.12.30 00:00:00.000.910,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\Resource\surf.png</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.591,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\Resource\Images\check-mark.png</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.266,=C:\Users\surf3r\OneDrive\Pictures\surf.png</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.286,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\Resource\ResourceLib.cbproj=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\Resource\ResourceLib.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.415,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.551,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\File1.cpp=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\Resource\File1.cpp</Transaction>
     <Transaction>1899.12.30 00:00:00.000.430,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\File1.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.603,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\Resource\Images\football.png</Transaction>
     <Transaction>1899.12.30 00:00:00.000.637,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\Resource\Font\Sixtyfour-Regular.ttf</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.580,=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Lib\Resource\Images\badge.png</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.506,C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\DLL\Resource\ResourceLibPCH1.h</Transaction>
   </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Font"/>
+    <File Path="Font\Sixtyfour-Regular.ttf"/>
+    <File Path="Images"/>
+    <File Path="Images\arrow.png"/>
+    <File Path="Images\badge.png"/>
+    <File Path="Images\check-mark.png"/>
+    <File Path="Images\football.png"/>
+    <File Path="Images\man-climbing-stairs.png"/>
+    <File Path="Images\rocket.png"/>
+    <File Path="Stringtable"/>
+    <File Path="Stringtable\Stringtable.rc"/>
+    <File Path="ResourceLib.cpp"/>
+    <File Path="ResourceLibPCH1.h"/>
+    <File Path="Stringtable.h"/>
+  </ProjectSortOrder>
 </BorlandProject>

@@ -2,7 +2,7 @@
 #undef UNICODE
 #define UNICODE
 
-#include <vector>
+#include <vcl.h>
 #pragma hdrstop
 
 #include "AchievementsForm.h"
@@ -33,6 +33,8 @@ __fastcall TFAchievements::TFAchievements(TComponent* Owner,  AuthenticationServ
 }
 
 void TFAchievements::loadImageFromLibrary(const UnicodeString &resourceName) {
+
+    // load ResourceLib.dll
 
 	HINSTANCE Resource;
 
@@ -91,7 +93,6 @@ void __fastcall TFAchievements::FormActivate(TObject *Sender)
                 UnicodeString title = record.getTitle();
                 UnicodeString description = record.getDescription();
                 UnicodeString date = FormatDateTime("dd/mm/yyyy", record.getDate());
-                UnicodeString image = "";
 
                 labels.push_back(std::make_unique<TLabel>(this));
                 labels[labels.size()-1]->Parent = this;
@@ -99,12 +100,16 @@ void __fastcall TFAchievements::FormActivate(TObject *Sender)
                 labels[labels.size()-1]->Left = 110;
                 labels[labels.size()-1]->Caption = title + " - " + description + " - " + date;
 
+                UnicodeString image = "";
+
                 if (title == "SpeedMaster") {
                     image = "PngImage_6";
                 }
                 else if (title == "PerfectScore") {
                     image = "PngImage_3";
                 }
+
+                // display achievement image
 
                 loadImageFromLibrary(image);
             }

@@ -4,8 +4,8 @@ object FMain: TFMain
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'KeyType'
-  ClientHeight = 422
-  ClientWidth = 628
+  ClientHeight = 421
+  ClientWidth = 624
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,6 +15,7 @@ object FMain: TFMain
   Menu = MainMenu
   Position = poScreenCenter
   Scaled = False
+  OnClose = FormClose
   TextHeight = 15
   object MainMenu: TMainMenu
     Left = 39
@@ -58,7 +59,7 @@ object FMain: TFMain
     object MenuItemView: TMenuItem
       Caption = 'Pregledaj'
       object MenuSubitemLogs: TMenuItem
-        Caption = 'Logove'
+        Caption = 'Zapisi'
         OnClick = MenuSubitemLogsClick
       end
     end

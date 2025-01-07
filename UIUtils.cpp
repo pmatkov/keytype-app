@@ -1,4 +1,8 @@
 //---------------------------------------------------------------------------
+#undef UNICODE
+#define UNICODE
+
+#pragma hdrstop
 
 #include <algorithm>
 
@@ -9,8 +13,6 @@
 #include "Logger.h"
 #include "reinit.hpp"
 #include "EFileNotFoundException.h"
-
-#pragma hdrstop
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -220,10 +222,24 @@ namespace UIUtils {
         secondControl->Enabled = true;
     }
 
+    UnicodeString getButtonCaption(TPanel *Panel)
+    {
+        for (int i = 0; i < Panel->ControlCount; i++)
+        {
+            TControl *control = Panel->Controls[i];
+            TSpeedButton *speedButton = dynamic_cast<TSpeedButton*>(control);
+            if (speedButton && speedButton->Down)
+            {
+                return speedButton->Caption;
+            }
+        }
+        return "";
+    }
+
 
     // font family for child controls
 
-    void changeFontFamily(TWinControl *Control, const UnicodeString fontFamily) {
+    void changeFontFamily(TWinControl *Control, const UnicodeString &fontFamily) {
 
         for (int i = 0; i < Control->ControlCount; i++)    {
             TControl *control = Control->Controls[i];
@@ -341,7 +357,6 @@ namespace UIUtils {
         listview->Items->EndUpdate();
 	}
 
-
     // Edit
 
     void setEditText(TEdit *edit, const UnicodeString &text) {
@@ -390,8 +405,8 @@ namespace UIUtils {
         FileDialog->Filter = "Text files|*." + filter.UpperCase();
     }
 
-    void displayTimedMessage(TTimer *timer, TLabel *label, const UnicodeString &msg) {
-    	label->Font->Color = TColor(0x8B8B00);
+    void displayTimedMessage(TTimer *timer, TLabel *label, const UnicodeString &msg, const TColor &color) {
+    	label->Font->Color = color;
         label->Caption = msg;
         timer->Enabled = true;
     }
@@ -410,5 +425,30 @@ namespace UIUtils {
         label->Font->Color = clBlack;
         timer->Enabled = false;
     }
+
+
+
+    UnicodeString getTranslatedString(const wchar_t *library, int stringID) {
+
+    	HINSTANCE resource;
+
+        if ((resource = LoadLibrary(library)) == nullptr) {
+            ShowMessage("Can't load DLL");
+            return "";
+        }
+
+        wchar_t buffer[256];
+
+        int size = LoadStringW(resource, stringID, buffer, sizeof(buffer) / sizeof(buffer[0]));
+
+        FreeLibrary(resource);
+
+        if (size > 0) {
+            return UnicodeString(buffer);
+        }
+
+        return "";
+    }
+
 }
 

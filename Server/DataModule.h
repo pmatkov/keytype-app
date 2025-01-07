@@ -9,6 +9,10 @@
 #include <IdCustomTCPServer.hpp>
 #include <IdTCPServer.hpp>
 #include <IdContext.hpp>
+#include <IdUDPBase.hpp>
+#include <IdUDPServer.hpp>
+#include <IdGlobal.hpp>
+#include <IdSocketHandle.hpp>
 
 #include <optional>
 #include <vector>
@@ -18,9 +22,12 @@ class TDataModule2 : public TDataModule
 {
 __published:	// IDE-managed Components
 	TIdTCPServer *IdTCPServer;
+	TIdUDPServer *IdUDPServer;
 	void __fastcall IdTCPServerExecute(TIdContext *AContext);
 	void __fastcall IdTCPServerConnect(TIdContext *AContext);
 	void __fastcall IdTCPServerDisconnect(TIdContext *AContext);
+	void __fastcall IdUDPServerUDPRead(TIdUDPListenerThread *AThread, const TIdBytes AData,
+          TIdSocketHandle *ABinding);
 private:	// User declarations
 
 public:		// User declarations

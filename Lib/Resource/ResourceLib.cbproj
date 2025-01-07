@@ -61,8 +61,8 @@
         <Multithreaded>true</Multithreaded>
         <ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
         <_TCHARMapping>wchar_t</_TCHARMapping>
-        <IncludePath>KeyType\DLL\Resource\;$(IncludePath)</IncludePath>
-        <ILINK_LibraryPath>KeyType\DLL\Resource\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <IncludePath>Stringtable\;KeyType\DLL\Resource\;$(IncludePath)</IncludePath>
+        <ILINK_LibraryPath>Stringtable\;KeyType\DLL\Resource\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
         <SanitizedProjectName>ResourceLib</SanitizedProjectName>
         <ILINK_GenerateDRC>True</ILINK_GenerateDRC>
     </PropertyGroup>
@@ -151,6 +151,14 @@
             <BuildOrder>0</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>
+        <None Include="Stringtable.h">
+            <BuildOrder>10</BuildOrder>
+        </None>
+        <ResourceCompile Include="Stringtable\Stringtable.rc">
+            <ModuleName>Stringtable.rc</ModuleName>
+            <Form>Stringtable.res</Form>
+            <BuildOrder>9</BuildOrder>
+        </ResourceCompile>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

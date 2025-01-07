@@ -4,8 +4,8 @@ object FConverter: TFConverter
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Convert word list to JSON'
-  ClientHeight = 124
-  ClientWidth = 301
+  ClientHeight = 123
+  ClientWidth = 297
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

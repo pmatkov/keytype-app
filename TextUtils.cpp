@@ -1,10 +1,14 @@
 //---------------------------------------------------------------------------
+#pragma hdrstop
+
 #include <cstring>
 #include "TextUtils.h"
+
+#include "TextCasingSOAP.h"
 #include "Logger.h"
 
 //---------------------------------------------------------------------------
-#pragma hdrstop
+
 #pragma package(smart_init)
 
 namespace TextUtils {
@@ -25,8 +29,8 @@ namespace TextUtils {
                 inSentence = false;
             }
             i++;
-          }
-          return count;
+        }
+        return count;
     }
 
     int countWords(const UnicodeString &text) {
@@ -46,8 +50,8 @@ namespace TextUtils {
                 inWord = false;
             }
             i++;
-          }
-          return count;
+        }
+        return count;
     }
 
     int countChars(const UnicodeString &text) {
@@ -105,11 +109,15 @@ namespace TextUtils {
 
             std::unique_ptr<TStringList> list = std::make_unique<TStringList>();
 
-            list->DelimitedText = text;
             list->Delimiter = delimiter;
+            list->DelimitedText = text;
 
             for (int i = 0; i < list->Count; i++)	{
-                tokens.push_back(list->Strings[i]);
+
+                if (!list->Strings[i].IsEmpty()) {
+            		tokens.push_back(list->Strings[i]);
+                }
+
             }
 
         }
@@ -127,6 +135,18 @@ namespace TextUtils {
         }
         return result;
     }
+
+   // change separator (TextCasing SOAP)
+
+    UnicodeString replaceWordSeparator(const UnicodeString& text, const UnicodeString &separator) {
+
+       	_di_TextCasingSoapType textCasingService = GetTextCasingSoapType();
+
+        UnicodeString result = textCasingService->TitleCaseWordsWithToken(text, separator).LowerCase();
+
+        return result;
+    }
+
 
     bool isWordBreak(const UnicodeString& text, int index) {
 
@@ -238,25 +258,6 @@ namespace TextUtils {
 
         return result;
 	}
-
-    TJSONObject* convertToJSONObject(const UnicodeString &string) {
-
-        try {
-
-            TJSONObject *jsonObject = (TJSONObject*) (TJSONObject::ParseJSONValue(string));
-
-            if (jsonObject) {
-                LOGGER(LogLevel::Debug, "Converted string to JSON object");
-                return jsonObject;
-            }
-
-        } catch (const Exception &ex) {
-            ShowMessage("Error converting to JSON");
-            LOGGER(LogLevel::Error, "Error converting string to JSON object");
-        }
-
-        return nullptr;
-    }
 
 
 }

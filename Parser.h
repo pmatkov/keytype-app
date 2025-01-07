@@ -9,6 +9,7 @@
 
 #include "MainSession.h"
 #include "TypingSession.h"
+#include "KeyboardFrame.h"
 
 class TFMain;
 
@@ -21,7 +22,7 @@ class Parser {
 		std::vector<std::pair<UnicodeString, bool>> buffer;
         UnicodeString insertedChars = "";
 
-        bool mistake = false;
+        bool mistakeRecorded = false;
         bool stopOnMistake = false;
 		bool inputEnabled = false;
 

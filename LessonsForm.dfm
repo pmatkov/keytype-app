@@ -4,8 +4,8 @@ object FLessons: TFLessons
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Configuration'
-  ClientHeight = 443
-  ClientWidth = 530
+  ClientHeight = 442
+  ClientWidth = 526
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

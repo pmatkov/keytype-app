@@ -4,8 +4,8 @@ object FStatistics: TFStatistics
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Statistics'
-  ClientHeight = 422
-  ClientWidth = 588
+  ClientHeight = 421
+  ClientWidth = 584
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

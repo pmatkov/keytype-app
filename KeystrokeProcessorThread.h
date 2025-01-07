@@ -12,10 +12,13 @@ class KeystrokeProcessorThread : public TThread
     private:
         IGameDisplay &gameDisplay;
         GameEngine &gameEngine;
+
         std::queue<wchar_t> &keystrokeQueue;
+
         TCriticalSection &criticalSection;
         TMutex &mutexWords;
         TMutex &mutexScore;
+
         TEvent &keyStrokeEvent;
         TEvent &wordMatchEvent;
         TEvent &terminateEvent;

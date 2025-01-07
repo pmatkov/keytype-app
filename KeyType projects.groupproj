@@ -33,6 +33,12 @@
         <Projects Include="Lib\Generator\GeneratorLib.cbproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="Lib\REST Server\RESTServer.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Lib\SOAP Server\SOAPServer.cbproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -131,14 +137,32 @@
     <Target Name="GeneratorLib:Make">
         <MSBuild Projects="Lib\Generator\GeneratorLib.cbproj" Targets="Make"/>
     </Target>
+    <Target Name="RESTServer">
+        <MSBuild Projects="Lib\REST Server\RESTServer.cbproj"/>
+    </Target>
+    <Target Name="RESTServer:Clean">
+        <MSBuild Projects="Lib\REST Server\RESTServer.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RESTServer:Make">
+        <MSBuild Projects="Lib\REST Server\RESTServer.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="SOAPServer">
+        <MSBuild Projects="Lib\SOAP Server\SOAPServer.cbproj"/>
+    </Target>
+    <Target Name="SOAPServer:Clean">
+        <MSBuild Projects="Lib\SOAP Server\SOAPServer.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SOAPServer:Make">
+        <MSBuild Projects="Lib\SOAP Server\SOAPServer.cbproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="KeyType;KeyTypeTests;KeyType_HRV;KeyType_ENG;Archiver;Server;AboutLib;ResourceLib;StatisticsLib;GeneratorLib"/>
+        <CallTarget Targets="KeyType;KeyTypeTests;KeyType_HRV;KeyType_ENG;Archiver;Server;AboutLib;ResourceLib;StatisticsLib;GeneratorLib;RESTServer;SOAPServer"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="KeyType:Clean;KeyTypeTests:Clean;KeyType_HRV:Clean;KeyType_ENG:Clean;Archiver:Clean;Server:Clean;AboutLib:Clean;ResourceLib:Clean;StatisticsLib:Clean;GeneratorLib:Clean"/>
+        <CallTarget Targets="KeyType:Clean;KeyTypeTests:Clean;KeyType_HRV:Clean;KeyType_ENG:Clean;Archiver:Clean;Server:Clean;AboutLib:Clean;ResourceLib:Clean;StatisticsLib:Clean;GeneratorLib:Clean;RESTServer:Clean;SOAPServer:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="KeyType:Make;KeyTypeTests:Make;KeyType_HRV:Make;KeyType_ENG:Make;Archiver:Make;Server:Make;AboutLib:Make;ResourceLib:Make;StatisticsLib:Make;GeneratorLib:Make"/>
+        <CallTarget Targets="KeyType:Make;KeyTypeTests:Make;KeyType_HRV:Make;KeyType_ENG:Make;Archiver:Make;Server:Make;AboutLib:Make;ResourceLib:Make;StatisticsLib:Make;GeneratorLib:Make;RESTServer:Make;SOAPServer:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

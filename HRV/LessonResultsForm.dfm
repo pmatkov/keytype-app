@@ -3,7 +3,7 @@ object FLessonResults: TFLessonResults
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'Lesson results'
+  Caption = 'Rezultati lekcija'
   ClientHeight = 421
   ClientWidth = 584
   Color = clBtnFace
@@ -45,7 +45,7 @@ object FLessonResults: TFLessonResults
         Alignment = taCenter
         Expanded = False
         FieldName = 'lessonName'
-        Title.Caption = 'Lesson name'
+        Title.Caption = 'Naziv lekcije'
         Width = 100
         Visible = True
       end
@@ -53,7 +53,7 @@ object FLessonResults: TFLessonResults
         Alignment = taCenter
         Expanded = False
         FieldName = 'lessonGoal'
-        Title.Caption = 'Goal'
+        Title.Caption = 'Cilj'
         Width = 50
         Visible = True
       end
@@ -61,7 +61,7 @@ object FLessonResults: TFLessonResults
         Alignment = taCenter
         Expanded = False
         FieldName = 'lessonGoalValue'
-        Title.Caption = 'Value'
+        Title.Caption = 'Vrijednost'
         Width = 40
         Visible = True
       end
@@ -69,7 +69,7 @@ object FLessonResults: TFLessonResults
         Alignment = taCenter
         Expanded = False
         FieldName = 'result'
-        Title.Caption = 'Result'
+        Title.Caption = 'Rezultat'
         Width = 50
         Visible = True
       end
@@ -77,7 +77,7 @@ object FLessonResults: TFLessonResults
         Alignment = taCenter
         Expanded = False
         FieldName = 'speed'
-        Title.Caption = 'Speed'
+        Title.Caption = 'Brzina'
         Width = 55
         Visible = True
       end
@@ -85,14 +85,14 @@ object FLessonResults: TFLessonResults
         Alignment = taCenter
         Expanded = False
         FieldName = 'accuracy'
-        Title.Caption = 'Accuracy'
+        Title.Caption = 'To'#269'nost'
         Width = 55
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'durationHMS'
-        Title.Caption = 'Duration'
+        Title.Caption = 'Trajanje'
         Width = 60
         Visible = True
       end
@@ -100,7 +100,7 @@ object FLessonResults: TFLessonResults
         Alignment = taCenter
         Expanded = False
         FieldName = 'date'
-        Title.Caption = 'Date'
+        Title.Caption = 'Datum'
         Width = 60
         Visible = True
       end>
@@ -130,7 +130,7 @@ object FLessonResults: TFLessonResults
         Alignment = taCenter
         Expanded = False
         FieldName = 'username'
-        Title.Caption = 'Username'
+        Title.Caption = 'Korisni'#269'ko ime'
         Width = 80
         Visible = True
       end
@@ -138,7 +138,7 @@ object FLessonResults: TFLessonResults
         Alignment = taCenter
         Expanded = False
         FieldName = 'name'
-        Title.Caption = 'Name'
+        Title.Caption = 'Naziv'
         Width = 80
         Visible = True
       end
@@ -146,7 +146,7 @@ object FLessonResults: TFLessonResults
         Alignment = taCenter
         Expanded = False
         FieldName = 'surname'
-        Title.Caption = 'Surname'
+        Title.Caption = 'Prezime'
         Width = 80
         Visible = True
       end
@@ -162,7 +162,7 @@ object FLessonResults: TFLessonResults
         Alignment = taCenter
         Expanded = False
         FieldName = 'age'
-        Title.Caption = 'Age'
+        Title.Caption = 'Godine'
         Width = 40
         Visible = True
       end>
@@ -181,7 +181,7 @@ object FLessonResults: TFLessonResults
     Top = 379
     Width = 75
     Height = 25
-    Caption = 'View report'
+    Caption = 'Pregledaj'
     TabOrder = 3
     OnClick = BtViewReportClick
   end
@@ -190,7 +190,7 @@ object FLessonResults: TFLessonResults
     Top = 379
     Width = 85
     Height = 25
-    Caption = 'Export as RTF'
+    Caption = 'Izvezi kao RTF'
     TabOrder = 4
     OnClick = BtExportRtfClick
   end
@@ -199,7 +199,7 @@ object FLessonResults: TFLessonResults
     Top = 379
     Width = 85
     Height = 25
-    Caption = 'Export as PDF'
+    Caption = 'Izvezi kao PDF'
     TabOrder = 5
     OnClick = BtExportPdfClick
   end
@@ -218,8 +218,8 @@ object FLessonResults: TFLessonResults
       'begin'
       ''
       'end.')
-    Left = 75
-    Top = 255
+    Left = 15
+    Top = 366
     Datasets = <
       item
         DataSet = frxUser
@@ -947,8 +947,8 @@ object FLessonResults: TFLessonResults
     DataSet = DataModule1.TUsers
     BCDToCurrency = False
     DataSetOptions = []
-    Left = 138
-    Top = 255
+    Left = 93
+    Top = 369
   end
   object frxLessonResult: TfrxDBDataset
     UserName = 'frxLessonResult'
@@ -956,8 +956,8 @@ object FLessonResults: TFLessonResults
     DataSet = DataModule1.TLessonResults
     BCDToCurrency = False
     DataSetOptions = []
-    Left = 195
-    Top = 261
+    Left = 177
+    Top = 369
   end
   object frxPDFExport: TfrxPDFExport
     UseFileCache = True
@@ -985,8 +985,8 @@ object FLessonResults: TFLessonResults
     PdfA = False
     PDFStandard = psNone
     PDFVersion = pv17
-    Left = 264
-    Top = 258
+    Left = 441
+    Top = 240
   end
   object frxRTFExport: TfrxRTFExport
     UseFileCache = True
@@ -1000,7 +1000,7 @@ object FLessonResults: TFLessonResults
     SuppressPageHeadersFooters = False
     HeaderFooterMode = hfText
     AutoSize = False
-    Left = 339
-    Top = 261
+    Left = 441
+    Top = 306
   end
 end

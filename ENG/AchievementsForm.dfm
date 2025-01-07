@@ -4,8 +4,8 @@ object FAchievements: TFAchievements
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Achievements'
-  ClientHeight = 345
-  ClientWidth = 496
+  ClientHeight = 344
+  ClientWidth = 492
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

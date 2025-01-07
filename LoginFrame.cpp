@@ -1,15 +1,15 @@
 //---------------------------------------------------------------------------
 
 #include <vcl.h>
-#include <memory>
-
 #pragma hdrstop
 
 #include "LoginFrame.h"
 #include "ENullPointerException.h"
 #include "UIUtils.h"
 #include "Logger.h"
+
 #include <FireDAC.DApt.hpp>
+#include <memory>
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -65,6 +65,8 @@ void __fastcall TFrLogin::BtRegisterClick(TObject *Sender)
      }
 }
 
+// validate input
+
 void __fastcall TFrLogin::EUsernameChange(TObject *Sender)
 {
 	UpdateSignInButtonState();
@@ -75,6 +77,8 @@ void __fastcall TFrLogin::EPasswordChange(TObject *Sender)
 {
 	UpdateSignInButtonState();
 }
+
+// enable/ disable sign in
 
 void TFrLogin::UpdateSignInButtonState()
 {

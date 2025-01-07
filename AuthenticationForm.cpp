@@ -24,7 +24,6 @@ __fastcall TFAuthentication::TFAuthentication(TComponent* Owner, AuthenticationS
 
 	   	authenticationService = _authenticationService;
 
-        // create frames
         FrLogin = UIUtils::createFrame<TFrLogin>(this, authenticationService);
         FrRegister = UIUtils::createFrame<TFrRegister>(this, authenticationService);
 
@@ -59,6 +58,7 @@ void __fastcall TFAuthentication::FrRegisterSignInSelect(TObject *Sender)
 {
 	UIUtils::switchFrames<TFrRegister, TFrLogin>(FrRegister, FrLogin);
     Caption = "Login";
+    FrLogin->EUsername->SetFocus();
 }
 
 void __fastcall TFAuthentication::FrRegisterRegisterComplete(TObject *Sender, TModalResult result)

@@ -12,14 +12,14 @@
         {
             "word": "one",
             "category": "noun",
-            "definition": "first number",
+            "definition": "the digit or figure 1 ",
             "synonyms": [
-                "uno"
+                "i"
             ]
         },
         {
             "word": "work",
-            "category": "noun",
+            "category": "verb",
             "definition": "an activity, such as a job",
             "synonyms": [
                 "operate",

@@ -18,8 +18,8 @@ object DataModule1: TDataModule1
     Connection = MySQLDBConnection
     ResourceOptions.AssignedValues = [rvEscapeExpand]
     TableName = 'keytype.courses'
-    Left = 279
-    Top = 216
+    Left = 267
+    Top = 222
     object TCoursesid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'
@@ -133,18 +133,18 @@ object DataModule1: TDataModule1
   end
   object DCourses: TDataSource
     DataSet = TCourses
-    Left = 267
-    Top = 291
+    Left = 258
+    Top = 309
   end
   object DLessons: TDataSource
     DataSet = TLessons
-    Left = 336
-    Top = 294
+    Left = 330
+    Top = 309
   end
   object DUsers: TDataSource
     DataSet = TUsers
-    Left = 210
-    Top = 288
+    Left = 186
+    Top = 312
   end
   object TUsers: TFDTable
     Active = True
@@ -152,8 +152,8 @@ object DataModule1: TDataModule1
     Connection = MySQLDBConnection
     ResourceOptions.AssignedValues = [rvEscapeExpand]
     TableName = 'keytype.users'
-    Left = 219
-    Top = 213
+    Left = 198
+    Top = 219
     object TUsersid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'
@@ -168,12 +168,6 @@ object DataModule1: TDataModule1
       AutoGenerateValue = arDefault
       FieldName = 'password'
       Origin = '`password`'
-      Size = 255
-    end
-    object TUserssalt: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'salt'
-      Origin = 'salt'
       Size = 255
     end
     object TUsersname: TStringField
@@ -204,8 +198,8 @@ object DataModule1: TDataModule1
   end
   object DLessonResults: TDataSource
     DataSet = TLessonResults
-    Left = 402
-    Top = 300
+    Left = 414
+    Top = 303
   end
   object TLessonResults: TFDTable
     Active = True
@@ -216,7 +210,7 @@ object DataModule1: TDataModule1
     Connection = MySQLDBConnection
     ResourceOptions.AssignedValues = [rvEscapeExpand]
     TableName = 'keytype.lessonresults'
-    Left = 399
+    Left = 420
     Top = 225
     object TLessonResultsid: TFDAutoIncField
       FieldName = 'id'
@@ -305,18 +299,18 @@ object DataModule1: TDataModule1
       Lookup = True
     end
   end
-  object IdTCPClient1: TIdTCPClient
+  object IdTCPClient: TIdTCPClient
     ConnectTimeout = 0
     Host = '127.0.0.1'
     Port = 6001
     ReadTimeout = -1
-    Left = 60
-    Top = 303
+    Left = 66
+    Top = 396
   end
   object DKeyStatistics: TDataSource
     DataSet = TKeyStatistics
-    Left = 489
-    Top = 315
+    Left = 504
+    Top = 321
   end
   object TKeyStatistics: TFDTable
     Active = True
@@ -326,8 +320,8 @@ object DataModule1: TDataModule1
     Connection = MySQLDBConnection
     ResourceOptions.AssignedValues = [rvEscapeExpand]
     TableName = 'keytype.keystatistics'
-    Left = 483
-    Top = 231
+    Left = 516
+    Top = 228
     object TKeyStatisticsid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'
@@ -355,5 +349,55 @@ object DataModule1: TDataModule1
       FieldName = 'mistake'
       Origin = 'mistake'
     end
+  end
+  object RESTClient: TRESTClient
+    Params = <>
+    SynchronizedEvents = False
+    Left = 36
+    Top = 21
+  end
+  object RESTRequest: TRESTRequest
+    AssignedValues = [rvConnectTimeout, rvReadTimeout]
+    Client = RESTClient
+    Params = <>
+    Response = RESTResponse
+    SynchronizedEvents = False
+    Left = 126
+    Top = 21
+  end
+  object RESTResponse: TRESTResponse
+    Left = 222
+    Top = 21
+  end
+  object RESTResponseDataSetAdapter: TRESTResponseDataSetAdapter
+    Dataset = FDMemTable
+    FieldDefs = <>
+    Response = RESTResponse
+    TypesMode = JSONOnly
+    Left = 396
+    Top = 15
+  end
+  object FDMemTable: TFDMemTable
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvUpdateChngFields, uvUpdateMode, uvLockMode, uvLockPoint, uvLockWait, uvRefreshMode, uvFetchGeneratorsPoint, uvCheckRequired, uvCheckReadOnly, uvCheckUpdatable]
+    UpdateOptions.LockWait = True
+    UpdateOptions.FetchGeneratorsPoint = gpNone
+    UpdateOptions.CheckRequired = False
+    Left = 324
+    Top = 108
+  end
+  object DWebService: TDataSource
+    DataSet = FDMemTable
+    Left = 432
+    Top = 111
+  end
+  object IdUDPClient: TIdUDPClient
+    Host = '127.0.0.1'
+    Port = 6501
+    Left = 156
+    Top = 402
   end
 end

@@ -44,23 +44,23 @@ void __fastcall TTestAchievementsUtils::TearDown()
 void __fastcall TTestAchievementsUtils::TestsaveToFile()
 {
 
-    AchievementsHeader header("ACHFile", 1.0, 2);
+    AchievementsHeader header("AcmFile", 1.0, 2);
     UnicodeString hash = CryptoUtils::generateSHA512Hash(header);
     header.setHashValue(hash);
 
     std::vector<AchievementsRecord> records = {
-       { 1, "Beginner", "badge1", TDateTime(2024, 2, 1) },
-       { 1, "SpeedMaster", "badge2", TDateTime::CurrentDate() }
+       { 1, "Beginner", "First lesson completed", TDateTime(2024, 2, 1) },
+       { 1, "SpeedMaster", "New speed record", TDateTime::CurrentDate() }
     };
 
-    AchievementsUtils::saveToFile(header, records, FileUtils::createAbsolutePath("Data\\achievements", true));
+    AchievementsUtils::saveToFile(header, records, FileUtils::createAbsolutePath("Data\\test", true));
     LOGGER_LOG("Result: " + hash);
 }
 
 void __fastcall TTestAchievementsUtils::TestreadFromFile()
 {
 
-    std::vector<AchievementsRecord> records = AchievementsUtils::readFromFile(FileUtils::createAbsolutePath("Data\\achievements", true));
+    std::vector<AchievementsRecord> records = AchievementsUtils::readFromFile(FileUtils::createAbsolutePath("Data\\test", true));
 
     if (records.size()) {
        	LOGGER_LOG("Records size: " + IntToStr(static_cast<int>(records.size())) + " record 1: " + records[0]);

@@ -131,9 +131,6 @@
             <BuildOrder>0</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>
-        <CppCompile Include="ResourceLib.cpp">
-            <BuildOrder>1</BuildOrder>
-        </CppCompile>
         <FormResources Include="AboutForm.dfm"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>

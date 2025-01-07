@@ -109,17 +109,17 @@ object FrLessons2: TFrLessons2
     ParentFont = False
   end
   object LLessonResult: TLabel
-    Left = 189
-    Top = 372
+    Left = 214
+    Top = 366
     Width = 71
     Height = 15
     Caption = 'Rezultat lekcije:'
     Visible = False
   end
   object LLessonResultDisplay: TLabel
-    Left = 272
-    Top = 372
-    Width = 204
+    Left = 291
+    Top = 366
+    Width = 185
     Height = 15
     AutoSize = False
     Font.Charset = DEFAULT_CHARSET
@@ -176,22 +176,21 @@ object FrLessons2: TFrLessons2
     TabOrder = 4
     ExplicitLeft = 149
     ExplicitTop = 187
+    ExplicitWidth = 327
     inherited LPrompt: TLabel
-      Left = 17
+      Left = 54
       Top = 122
-      ExplicitLeft = 17
+      ExplicitLeft = 54
       ExplicitTop = 122
     end
     inherited REText: TRichEdit
-      Left = 8
       Top = 3
       BorderStyle = bsSingle
-      ExplicitLeft = 8
       ExplicitTop = 3
     end
   end
   object BtStartQuit: TButton
-    Left = 531
+    Left = 522
     Top = 190
     Width = 75
     Height = 25

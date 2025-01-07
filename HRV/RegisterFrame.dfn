@@ -5,11 +5,11 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45425.0010185185</prop>
-        <prop prop-type="OrigDateTime">45424.975</prop>
-        <prop prop-type="XlatDateTime">45424.975</prop>
+        <prop prop-type="SelfDateTime">45479.6933101852</prop>
+        <prop prop-type="OrigDateTime">45479.6471759259</prop>
+        <prop prop-type="XlatDateTime">45430.7315740741</prop>
         <prop prop-type="Translated">6</prop>
-        <prop prop-type="UnTranslated">65</prop>
+        <prop prop-type="UnTranslated">74</prop>
       </prop-group>
     </header>
     <body>
@@ -24,12 +24,12 @@
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TFrRegister</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrRegister.Width" resname="O:FrRegister.Width">
-        <source>262</source>
+        <source>250</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TFrRegister</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrRegister.Height" resname="O:FrRegister.Height">
-        <source>343</source>
+        <source>364</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TFrRegister</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -39,12 +39,12 @@
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFrRegister</prop><prop prop-type="Localize">0</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrRegister.O:LUsername.Left" resname="O:FrRegister.O:LUsername.Left">
-        <source>72</source>
+        <source>66</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrRegister.O:LUsername.Top" resname="O:FrRegister.O:LUsername.Top">
-        <source>36</source>
+        <source>24</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -65,12 +65,12 @@
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">1</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrRegister.O:LPassword.Left" resname="O:FrRegister.O:LPassword.Left">
-        <source>72</source>
+        <source>66</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrRegister.O:LPassword.Top" resname="O:FrRegister.O:LPassword.Top">
-        <source>96</source>
+        <source>84</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -91,12 +91,12 @@
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">1</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrRegister.O:LRepeatPassword.Left" resname="O:FrRegister.O:LRepeatPassword.Left">
-        <source>72</source>
+        <source>66</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrRegister.O:LRepeatPassword.Top" resname="O:FrRegister.O:LRepeatPassword.Top">
-        <source>156</source>
+        <source>144</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -117,12 +117,12 @@
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">1</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrRegister.O:LAlreadyRegistered.Left" resname="O:FrRegister.O:LAlreadyRegistered.Left">
-        <source>72</source>
+        <source>66</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrRegister.O:LAlreadyRegistered.Top" resname="O:FrRegister.O:LAlreadyRegistered.Top">
-        <source>270</source>
+        <source>258</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -143,12 +143,12 @@
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">1</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrRegister.O:LResponse.Left" resname="O:FrRegister.O:LResponse.Left">
-        <source>72</source>
+        <source>66</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrRegister.O:LResponse.Top" resname="O:FrRegister.O:LResponse.Top">
-        <source>210</source>
+        <source>198</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -208,12 +208,12 @@
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrRegister.O:EPassword.Left" resname="O:FrRegister.O:EPassword.Left">
-        <source>72</source>
+        <source>66</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrRegister.O:EPassword.Top" resname="O:FrRegister.O:EPassword.Top">
-        <source>117</source>
+        <source>105</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -238,12 +238,12 @@
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrRegister.O:EUsername.Left" resname="O:FrRegister.O:EUsername.Left">
-        <source>72</source>
+        <source>66</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrRegister.O:EUsername.Top" resname="O:FrRegister.O:EUsername.Top">
-        <source>57</source>
+        <source>45</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -268,12 +268,12 @@
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrRegister.O:ERepeatPassword.Left" resname="O:FrRegister.O:ERepeatPassword.Left">
-        <source>72</source>
+        <source>66</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrRegister.O:ERepeatPassword.Top" resname="O:FrRegister.O:ERepeatPassword.Top">
-        <source>177</source>
+        <source>165</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495858449</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -303,12 +303,12 @@
         <prop prop-type="Created">45346.9495858565</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrRegister.O:BtRegister.Left" resname="O:FrRegister.O:BtRegister.Left">
-        <source>72</source>
+        <source>66</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495858565</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrRegister.O:BtRegister.Top" resname="O:FrRegister.O:BtRegister.Top">
-        <source>231</source>
+        <source>219</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495858565</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -344,12 +344,12 @@
         <prop prop-type="Created">45346.9495858565</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrRegister.O:BtSignIn.Left" resname="O:FrRegister.O:BtSignIn.Left">
-        <source>72</source>
+        <source>66</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495858565</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FrRegister.O:BtSignIn.Top" resname="O:FrRegister.O:BtSignIn.Top">
-        <source>291</source>
+        <source>279</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495858565</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -378,6 +378,51 @@
         <source>BtSignInClick</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45346.9495858565</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrRegister.O:CBRestAuth.Left" resname="O:FrRegister.O:CBRestAuth.Left">
+        <source>66</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.2354262037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrRegister.O:CBRestAuth.Top" resname="O:FrRegister.O:CBRestAuth.Top">
+        <source>315</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.2354262037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrRegister.O:CBRestAuth.Width" resname="O:FrRegister.O:CBRestAuth.Width">
+        <source>118</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.2354262037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrRegister.O:CBRestAuth.Height" resname="O:FrRegister.O:CBRestAuth.Height">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.2354262037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">75</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrRegister.O:CBRestAuth.Caption" resname="O:FrRegister.O:CBRestAuth.Caption">
+        <source>'Resue credentials'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.2354262037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">76</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrRegister.O:CBRestAuth.Checked" resname="O:FrRegister.O:CBRestAuth.Checked">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.2354262037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">77</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrRegister.O:CBRestAuth.Enabled" resname="O:FrRegister.O:CBRestAuth.Enabled">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.2354262037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">78</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrRegister.O:CBRestAuth.State" resname="O:FrRegister.O:CBRestAuth.State">
+        <source>cbChecked</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.2354262037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">79</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrRegister.O:CBRestAuth.TabOrder" resname="O:FrRegister.O:CBRestAuth.TabOrder">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45444.2354262037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
     </body>
   </file>

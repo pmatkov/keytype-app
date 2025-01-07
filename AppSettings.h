@@ -31,7 +31,7 @@ class AppSettings: public ISettings {
 
         bool languageChanged = false;
 
-        UnicodeString section = "";
+        UnicodeString username = "";
         static std::vector<UnicodeString> languageStrings;
 
     public:

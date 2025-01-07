@@ -1,6 +1,7 @@
 //---------------------------------------------------------------------------
 
 #include <vcl.h>
+#pragma hdrstop
 
 #include "PreferencesForm.h"
 #include "ENullPointerException.h"
@@ -11,8 +12,6 @@
 #include "UIUtils.h"
 #include "reinit.hpp"
 
-//---------------------------------------------------------------------------
-#pragma hdrstop
 #pragma package(smart_init)
 #pragma resource "*.dfm"
 
@@ -74,6 +73,7 @@ void TFPreferences::setTypingSettingsItems() {
    		CBFont2->ItemIndex = UIUtils::findItemIndex(UIUtils::getScreenFonts(), mainSession->getTypingSettings().getFontFamily());
    }
    UIUtils::setComboBoxItems(CBFontSize, {"10", "11", "12", "14", "16"}, IntToStr(mainSession->getTypingSettings().getFontSize()));
+   UIUtils::setComboBoxItems(CBKeyboardLayout, TypingSettings::getKeyboardLayoutStrings(), EnumUtils::enumToString<KeyboardLayout>(TypingSettings::getKeyboardLayoutStrings(), mainSession->getTypingSettings().getKeyboardLayout()));
 
    CBMistake->Checked = mainSession->getTypingSettings().getStopOnMistake();
    CBConsecutiveMistakes->Checked = mainSession->getTypingSettings().getCountConsecutiveMistakes();
@@ -94,8 +94,11 @@ void __fastcall TFPreferences::BtReset2Click(TObject *Sender)
       setTypingSettingsItems();
 }
 
+// save settings for registered user
+
 void __fastcall TFPreferences::BtAcceptClick(TObject *Sender)
 {
+
     if (authService->getUser().getUserType() == UserType::Registered) {
 
     	mainSession->getAppSettings().saveSettings();
@@ -119,76 +122,7 @@ void __fastcall TFPreferences::CBLanguageChange(TObject *Sender)
        		 mainSession->getAppSettings().setLanguageChanged(true);
         }
     }
-
 }
-void __fastcall TFPreferences::CBMistakeClick(TObject *Sender)
-{
-  	mainSession->getTypingSettings().setStopOnMistake(CBMistake->Checked);
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFPreferences::CBConsecutiveMistakesClick(TObject *Sender)
-{
-     mainSession->getTypingSettings().setCountConsecutiveMistakes(CBConsecutiveMistakes->Checked);
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFPreferences::CBSpeedClick(TObject *Sender)
-{
-	mainSession->getTypingSettings().setDisplaySpeed(CBSpeed->Checked);
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFPreferences::CBAccuracyClick(TObject *Sender)
-{
-   	mainSession->getTypingSettings().setDisplayAccuracy(CBAccuracy->Checked);
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFPreferences::CBCaretChange(TObject *Sender)
-{
-	int selectedIndex = CBCaret->ItemIndex;
-
-    if (selectedIndex != -1) {
-    	UnicodeString selectedText = CBCaret->Items->Strings[selectedIndex];
-        mainSession->getTypingSettings().setCaretType(EnumUtils::stringToEnum<CaretType>(mainSession->getTypingSettings().getCaretTypeStrings(), selectedText));
-    }
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFPreferences::CBSeparatorChange(TObject *Sender)
-{
-   	int selectedIndex = CBSeparator->ItemIndex;
-
-    if (selectedIndex != -1) {
-    	UnicodeString selectedText = CBSeparator->Items->Strings[selectedIndex];
-        mainSession->getTypingSettings().setSeparatorType(EnumUtils::stringToEnum<SeparatorType>(mainSession->getTypingSettings().getSeparatorTypeStrings(), selectedText));
-
-    }
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFPreferences::CBFont2Change(TObject *Sender)
-{
-	int selectedIndex = CBFont2->ItemIndex;
-
-    if (selectedIndex != -1) {
-    	UnicodeString selectedText = CBFont2->Items->Strings[selectedIndex];
-        mainSession->getTypingSettings().setFontFamily(selectedText);
-    }
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFPreferences::CBFontSizeChange(TObject *Sender)
-{
-	int selectedIndex = CBFontSize->ItemIndex;
-
-    if (selectedIndex != -1) {
-    	UnicodeString selectedText = CBFontSize->Items->Strings[selectedIndex];
-        mainSession->getTypingSettings().setFontSize(StrToInt(selectedText));
-    }
-}
-//---------------------------------------------------------------------------
 
 void __fastcall TFPreferences::CBLoggingEnableClick(TObject *Sender)
 {
@@ -211,7 +145,6 @@ void __fastcall TFPreferences::CBLoggingChange(TObject *Sender)
         mainSession->getAppSettings().setLogLevel(Logger::getStringAsLogLevel(selectedText));
     }
 }
-//---------------------------------------------------------------------------
 
 void __fastcall TFPreferences::CBFont1Change(TObject *Sender)
 {
@@ -222,7 +155,6 @@ void __fastcall TFPreferences::CBFont1Change(TObject *Sender)
         mainSession->getTypingSettings().setFontFamily(selectedText);
     }
 }
-//---------------------------------------------------------------------------
 
 void __fastcall TFPreferences::CBArchiveLogLimitChange(TObject *Sender)
 {
@@ -239,11 +171,85 @@ void __fastcall TFPreferences::BtArchiveLogsClick(TObject *Sender)
  	Logger &logger = Logger::getLogger();
     UIUtils::displayTimedMessage(msgDisplayTimer, LArchiveStatus, logger.archiveLogFiles());
 }
-//---------------------------------------------------------------------------
+
+void __fastcall TFPreferences::CBCaretChange(TObject *Sender)
+{
+	int selectedIndex = CBCaret->ItemIndex;
+
+    if (selectedIndex != -1) {
+    	UnicodeString selectedText = CBCaret->Items->Strings[selectedIndex];
+        mainSession->getTypingSettings().setCaretType(EnumUtils::stringToEnum<CaretType>(mainSession->getTypingSettings().getCaretTypeStrings(), selectedText));
+    }
+}
+
+void __fastcall TFPreferences::CBSeparatorChange(TObject *Sender)
+{
+   	int selectedIndex = CBSeparator->ItemIndex;
+
+    if (selectedIndex != -1) {
+    	UnicodeString selectedText = CBSeparator->Items->Strings[selectedIndex];
+        mainSession->getTypingSettings().setSeparatorType(EnumUtils::stringToEnum<SeparatorType>(mainSession->getTypingSettings().getSeparatorTypeStrings(), selectedText));
+
+    }
+}
+
+void __fastcall TFPreferences::CBFont2Change(TObject *Sender)
+{
+	int selectedIndex = CBFont2->ItemIndex;
+
+    if (selectedIndex != -1) {
+    	UnicodeString selectedText = CBFont2->Items->Strings[selectedIndex];
+        mainSession->getTypingSettings().setFontFamily(selectedText);
+    }
+}
+
+void __fastcall TFPreferences::CBFontSizeChange(TObject *Sender)
+{
+	int selectedIndex = CBFontSize->ItemIndex;
+
+    if (selectedIndex != -1) {
+    	UnicodeString selectedText = CBFontSize->Items->Strings[selectedIndex];
+        mainSession->getTypingSettings().setFontSize(StrToInt(selectedText));
+    }
+}
+
+
+void __fastcall TFPreferences::CBKeyboardLayoutChange(TObject *Sender)
+{
+	int selectedIndex = CBKeyboardLayout->ItemIndex;
+
+    if (selectedIndex != -1) {
+    	UnicodeString selectedText = CBKeyboardLayout->Items->Strings[selectedIndex];
+        mainSession->getTypingSettings().setKeyboardLayout(EnumUtils::stringToEnum<KeyboardLayout>(mainSession->getTypingSettings().getKeyboardLayoutStrings(), selectedText));
+
+    }
+}
+
+void __fastcall TFPreferences::CBMistakeClick(TObject *Sender)
+{
+  	mainSession->getTypingSettings().setStopOnMistake(CBMistake->Checked);
+}
+
+void __fastcall TFPreferences::CBConsecutiveMistakesClick(TObject *Sender)
+{
+     mainSession->getTypingSettings().setCountConsecutiveMistakes(CBConsecutiveMistakes->Checked);
+}
+
+void __fastcall TFPreferences::CBSpeedClick(TObject *Sender)
+{
+	mainSession->getTypingSettings().setDisplaySpeed(CBSpeed->Checked);
+}
+
+void __fastcall TFPreferences::CBAccuracyClick(TObject *Sender)
+{
+   	mainSession->getTypingSettings().setDisplayAccuracy(CBAccuracy->Checked);
+}
+
 
 void __fastcall TFPreferences::msgDisplayTimerTimer(TObject *Sender)
 {
    	UIUtils::removeTimedMessage(msgDisplayTimer, LArchiveStatus);
 }
 //---------------------------------------------------------------------------
+
 

@@ -1,0 +1,12 @@
+#include "Stringtable.h"
+
+STRINGTABLE
+BEGIN
+	IDS_START_HR "Pokreni"
+	IDS_START_ENG "Start"
+        IDS_STOP_HR "Završi"
+	IDS_STOP_ENG "Quit"
+        IDS_CANCELLED_HR "Otkazano"
+        IDS_CANCELLED_ENG "Cancelled"
+
+END

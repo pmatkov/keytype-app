@@ -19,8 +19,13 @@
 
 Dictionary::Dictionary(ISingleItemDisplay &_singleItemDisplay, IMultiItemDisplay &_multiItemDisplay) : singleItemDisplay(_singleItemDisplay), multiItemDisplay(_multiItemDisplay) {
 
+    // find dictionary files
+
      std::optional<std::vector<UnicodeString>> fileNames = findDictionaryFiles();
+
      if (fileNames.has_value()) {
+
+        // display dictionary
 
      	multiItemDisplay.setItemsMultiItemControl("DictionaryFiles", *fileNames, 0);
         setDictionary((*fileNames)[0]);
@@ -96,7 +101,7 @@ void Dictionary::internalDeleteDictionaryEntry(const UnicodeString &key) {
 void Dictionary::parseJsonToDictionary(const UnicodeString &path) {
 
 	TJSONObject *mainObject, *wordObject;
-	TJSONArray *dictionaryObject, *synonymsObject;
+	TJSONArray *dictionaryArray, *synonymsArray;
 
 	try {
         std::optional<UnicodeString> string = FileUtils::readFromTextFile(path);
@@ -104,19 +109,19 @@ void Dictionary::parseJsonToDictionary(const UnicodeString &path) {
         if (string.has_value()) {
 
         	dictionary.clear();
-        	mainObject = (TJSONObject*) TextUtils::convertToJSONObject(*string);
+        	mainObject = (TJSONObject*) (TJSONObject::ParseJSONValue((*string)));
 
             try {
 
                 if (mainObject) {
 
-                    dictionaryObject = static_cast<TJSONArray*> (TJSONObject::ParseJSONValue(mainObject->Values["dictionary"]->ToString()));
+                    dictionaryArray = static_cast<TJSONArray*> (TJSONObject::ParseJSONValue(mainObject->Values["dictionary"]->ToString()));
 
-                    if (dictionaryObject) {
+                    if (dictionaryArray) {
 
-                        for (int i = 0; i < dictionaryObject->Count; i++) {
+                        for (int i = 0; i < dictionaryArray->Count; i++) {
 
-                            wordObject = static_cast<TJSONObject*> (dictionaryObject->Items[i]);
+                            wordObject = static_cast<TJSONObject*> (dictionaryArray->Items[i]);
 
                             if (wordObject) {
 
@@ -130,12 +135,12 @@ void Dictionary::parseJsonToDictionary(const UnicodeString &path) {
                                 if (wordObject->Values["definition"])
                                     definition = TextUtils::trimCharacters(wordObject->Values["definition"]->ToString(), L'\"');
 
-                                synonymsObject = static_cast<TJSONArray*> (wordObject->Values["synonyms"]);
+                                synonymsArray = static_cast<TJSONArray*> (wordObject->Values["synonyms"]);
 
-                                if (synonymsObject) {
+                                if (synonymsArray) {
 
-                                    for (int j = 0; j < synonymsObject->Count; j++)   {
-                                        synonyms.push_back(TextUtils::trimCharacters(synonymsObject->Items[j]->ToString(), L'\"'));
+                                    for (int j = 0; j < synonymsArray->Count; j++)   {
+                                        synonyms.push_back(TextUtils::trimCharacters(synonymsArray->Items[j]->ToString(), L'\"'));
                                     }
                                 }
 
@@ -158,7 +163,7 @@ void Dictionary::parseJsonToDictionary(const UnicodeString &path) {
     }
     catch (const Exception &ex) {
 		ShowMessage("Unable to parse JSON");
-        LOGGER(LogLevel::Error, "Error parsing JSON format");
+        LOGGER(LogLevel::Error, "Error parsing JSON");
 	}
 
 }
@@ -168,48 +173,50 @@ std::optional<UnicodeString> Dictionary::generateJsonFromDictionary(const std::m
 
 	UnicodeString jsonString = "";
 
-		TJSONObject *mainObject, *dictionaryEntryObject;
-		TJSONArray *dictionaryArray, *synonymsArray;
+    TJSONObject *mainObject, *dictionaryEntryObject;
+    TJSONArray *dictionaryArray, *synonymsArray;
 
-		try {
+    try {
 
-            mainObject = new TJSONObject();
-			try {
-				dictionaryArray = new TJSONArray();
+        mainObject = new TJSONObject();
 
-				mainObject->AddPair("dictionary", dictionaryArray);
+        try {
+            dictionaryArray = new TJSONArray();
 
-				for (const std::pair<const UnicodeString, DictionaryEntry>& item : dictionary) {
+            mainObject->AddPair("dictionary", dictionaryArray);
 
-					UnicodeString word = item.second.getWord();
-					UnicodeString category = EnumUtils::enumToString<WordCategory>(DictionaryEntry::getEnumStrings(), item.second.getWordCategory());
+            for (const std::pair<const UnicodeString, DictionaryEntry>& item : dictionary) {
 
-					UnicodeString definition = item.second.getDefinition();
+                UnicodeString word = item.second.getWord();
+                UnicodeString category = EnumUtils::enumToString<WordCategory>(DictionaryEntry::getEnumStrings(), item.second.getWordCategory());
 
-					dictionaryEntryObject = new TJSONObject();
-					synonymsArray = new TJSONArray();
+                UnicodeString definition = item.second.getDefinition();
 
-					for (const UnicodeString &string : item.second.getSynonyms()) {
-						synonymsArray->Add(string);
-					}
+                dictionaryEntryObject = new TJSONObject();
+                synonymsArray = new TJSONArray();
 
-					dictionaryEntryObject->AddPair(new TJSONPair("word", word));
-					dictionaryEntryObject->AddPair(new TJSONPair("category", category));
-					dictionaryEntryObject->AddPair(new TJSONPair("definition", definition));
-					dictionaryEntryObject->AddPair(new TJSONPair("synonyms", synonymsArray));
+                for (const UnicodeString &string : item.second.getSynonyms()) {
+                    synonymsArray->Add(string);
+                }
 
-					dictionaryArray->AddElement(dictionaryEntryObject);
-				}
+                dictionaryEntryObject->AddPair("word", word);
+                dictionaryEntryObject->AddPair("category", category);
+                dictionaryEntryObject->AddPair("definition", definition);
+                dictionaryEntryObject->AddPair("synonyms", synonymsArray);
 
-				jsonString += TextUtils::formatJson(mainObject->ToString());
-				}
-            __finally {
-                mainObject->Free();
+                dictionaryArray->AddElement(dictionaryEntryObject);
             }
-		} catch (const Exception &ex) {
-			ShowMessage("Unable to generate JSON");
-            LOGGER(LogLevel::Error, "Error converting to JSON");
-		}
+
+            jsonString += TextUtils::formatJson(mainObject->ToString());
+
+            }
+        __finally {
+            mainObject->Free();
+        }
+    } catch (const Exception &ex) {
+        ShowMessage("Unable to generate JSON");
+        LOGGER(LogLevel::Error, "Error generating JSON");
+    }
 
 
 	if (!jsonString.IsEmpty()) {
@@ -246,10 +253,10 @@ std::optional<UnicodeString> Dictionary::generateJsonFromWordList(const std::vec
             	synonymsArray = new TJSONArray();
                 synonymsArray->Add(UnicodeString(L""));
 
-                dictionaryEntryObject->AddPair(new TJSONPair("word", word));
-       			dictionaryEntryObject->AddPair(new TJSONPair("category", UnicodeString(L"")));
-				dictionaryEntryObject->AddPair(new TJSONPair("definition", UnicodeString(L"")));
-                dictionaryEntryObject->AddPair(new TJSONPair("synonyms", synonymsArray));
+                dictionaryEntryObject->AddPair("word", word);
+       			dictionaryEntryObject->AddPair("category", UnicodeString(L""));
+				dictionaryEntryObject->AddPair("definition", UnicodeString(L""));
+                dictionaryEntryObject->AddPair("synonyms", synonymsArray);
 
                 dictionaryArray->AddElement(dictionaryEntryObject);
             }
@@ -291,7 +298,6 @@ bool Dictionary::isEqualToDictionaryItem(const DictionaryEntry &dictionaryEntry)
       }
     }
     return false;
-
 }
 
 void Dictionary::getDictionaryEntry(const UnicodeString &word) {
@@ -300,13 +306,12 @@ void Dictionary::getDictionaryEntry(const UnicodeString &word) {
 
     if (dictionaryEntry.has_value()) {
 
+        // display dictionary entry
+
        	UnicodeString category = EnumUtils::enumToString<WordCategory>(DictionaryEntry::getEnumStrings(), (*dictionaryEntry).getWordCategory());
 
-        if (category != "Unknown") {
-        	multiItemDisplay.selectItemMultiItemControl("Category", category);
-        }
-
         singleItemDisplay.setItemSingleItemControl("Word", word);
+        multiItemDisplay.selectItemMultiItemControl("Category", category);
         singleItemDisplay.setItemSingleItemControl("Definition", (*dictionaryEntry).getDefinition());
         singleItemDisplay.setItemSingleItemControl("Synonyms", (*dictionaryEntry).getSynonymsAsString());
     }
@@ -330,7 +335,7 @@ std::optional<std::vector<UnicodeString>> Dictionary::findDictionaryFiles() {
     std::optional<std::vector<UnicodeString>> fileNames;
 
     try {
-    	fileNames = FileUtils::getFileNames(dirPath, "json");
+    	fileNames = FileUtils::getFiles(dirPath, "json");
     } catch (CustomExceptions::EDirNotFoundException &ex) {
         LOGGER(LogLevel::Fatal, ex.getMessage());
     }
@@ -344,6 +349,8 @@ std::optional<std::vector<UnicodeString>> Dictionary::findDictionaryFiles() {
 
 void Dictionary::setDictionary(const UnicodeString &fileName) {
 
+    // display dictionary
+
     parseJsonToDictionary(FileUtils::createAbsolutePath("Data", false) + fileName);
     multiItemDisplay.setItemsMultiItemControl("Dictionary", getDictionaryValuesAsStrings(), 4);
 
@@ -352,9 +359,12 @@ void Dictionary::setDictionary(const UnicodeString &fileName) {
 
 
 void Dictionary::saveDictionaryToFile() {
+
 	std::optional<UnicodeString> jsonString = generateJsonFromDictionary(dictionary);
 
     if (jsonString.has_value()) {
+
+        // save to file and display dictionary
 
         FileUtils::saveToTextFile(FileUtils::createAbsolutePath("Data", false) + dictionaryFileName, std::vector<UnicodeString>{*jsonString});
         multiItemDisplay.setItemsMultiItemControl("Dictionary", getDictionaryValuesAsStrings(), 4);

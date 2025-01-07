@@ -1,7 +1,9 @@
 //---------------------------------------------------------------------------
 
 #include <vcl.h>
+#pragma hdrstop
 
+#include <System.StrUtils.hpp>
 
 #include "Factory.h"
 #include "GeneratedTextFrame.h"
@@ -9,17 +11,20 @@
 #include "UIUtils.h"
 #include "FileUtils.h"
 #include "TextUtils.h"
+#include "EnumUtils.h"
 #include "Dictionary.h"
 #include "DictionaryEntry.h"
-#include "EnumUtils.h"
+#include "Generator.h"
+
 #include "Logger.h"
 #include "EDirNotFoundException.h"
+#include "ENullPointerException.h"
 
 #define LETTERS 26
 #define BUTTON_SIZE 18
 
 //---------------------------------------------------------------------------
-#pragma hdrstop
+
 #pragma package(smart_init)
 #pragma resource "*.dfm"
 TFrGeneratedText *FrGeneratedText;
@@ -28,8 +33,23 @@ TFrGeneratedText *FrGeneratedText;
 __fastcall TFrGeneratedText::TFrGeneratedText(TComponent* Owner) : TFrame(Owner), dictionary(ModelFactory::createDictionary(*this, *this)) {}
 
 __fastcall TFrGeneratedText::TFrGeneratedText(TComponent* Owner, TDataModule1 *_dataModule) : TFrame(Owner), dictionary(ModelFactory::createDictionary(*this, *this)) {
+
 	if (_dataModule) {
     	dataModule = _dataModule;
+
+        UIUtils::setComboBoxItems(CBCharsWordMin, {"0", "3", "5", "7", "10"}, 0);
+        UIUtils::setComboBoxItems(CBCharsWordMax, {"3", "5", "7", "10", UnicodeString(L'\u221E')}, 4);
+
+        UIUtils::setComboBoxItems(CBWordsMin, {"5", "10", "15", "20", "25"}, 0);
+        UIUtils::setComboBoxItems(CBWordsMax, {"5", "10", "15", "20", "25"}, 1);
+
+        MPreview->Font->Color = clSilver;
+
+        LOGGER(LogLevel::Debug, "Created generated text frame");
+
+	}
+    else {
+        throw CustomExceptions::ENullPointerException();
     }
 }
 
@@ -41,7 +61,6 @@ void __fastcall TFrGeneratedText::BtBrowseClick(TObject *Sender) {
 
 		 if (FileExists(DFileOpen->FileName)) {
 
-             // extracts filename and extension from path
              UnicodeString filename = ExtractFileName(DFileOpen->FileName);
 
              if (CBDictionaryFiles->Items->IndexOf(filename) == -1) {
@@ -66,6 +85,7 @@ void __fastcall TFrGeneratedText::LVDictionarySelectItem(TObject *Sender, TListI
 void __fastcall TFrGeneratedText::LVDictionaryMouseDown(TObject *Sender, TMouseButton Button, TShiftState Shift, int X, int Y) {
 
 	if (LVDictionary->SelCount == 1) {
+
 		BtAddSave1->Caption = "Save";
 		BtDelete1->Enabled = true;
 	}
@@ -119,7 +139,7 @@ void __fastcall TFrGeneratedText::BtDelete1Click(TObject *Sender) {
 void __fastcall TFrGeneratedText::BtAddSave1Click(TObject *Sender) {
 
 	if (areFieldsEmpty()) {
-     	ShowMessage("Input fields should not be empty.");
+     	ShowMessage("Input fields should not be empty");
         return;
      }
 
@@ -129,23 +149,26 @@ void __fastcall TFrGeneratedText::BtAddSave1Click(TObject *Sender) {
      		updateItem(EWord->Text, CBCategory->Text, EDefinition->Text, ESynonyms->Text);
          }
          else {
-         	ShowMessage("The word is already in the list.");
+         	ShowMessage("The word is already in the list");
             return;
          }
 
      }
     else if (BtAddSave1->Caption == "Save") {
 
-         if (isEqualItem(EWord->Text, CBCategory->Text, EDefinition->Text, ESynonyms->Text)) {
+         if (!isEqualItem(EWord->Text, CBCategory->Text, EDefinition->Text, ESynonyms->Text)) {
      		updateItem(EWord->Text, CBCategory->Text, EDefinition->Text, ESynonyms->Text);
          }
          else {
-         	ShowMessage("The word is already in the list.");
+         	ShowMessage("Nothing was changed");
             return;
          }
      }
 
-    resetFrameFields();
+     if (BtAddSave1->Caption == "Add") {
+     	resetFrameFields();
+     }
+
     UnicodeString msg = BtAddSave1->Caption == "Add" ? "Added" : "Saved";
     UIUtils::displayTimedMessage(msgDisplayTimer, LInfo, msg);
 
@@ -209,9 +232,8 @@ void TFrGeneratedText::selectItemMultiItemControl(const UnicodeString& component
 
     	int index = CBCategory->Items->IndexOf(item);
 
-    	if (index != -1) {
-        	UIUtils::selectComboBoxItem(CBCategory, index);
-        }
+        UIUtils::selectComboBoxItem(CBCategory, index);
+
     }
 }
 
@@ -237,4 +259,135 @@ void TFrGeneratedText::addItemMultiItemControl(const UnicodeString& componentNam
     }
 }
 
+
+void __fastcall TFrGeneratedText::BtGenerateClick(TObject *Sender)
+{
+
+    if (CBDictionaryFiles->ItemIndex != -1) {
+
+    	if ((CBCharsWordMax->Text != UnicodeString(L'\u221E') && StrToInt(CBCharsWordMin->Text) > StrToInt(CBCharsWordMax->Text)) \
+        	|| StrToInt(CBWordsMin->Text) > StrToInt(CBWordsMax->Text)) {
+            ShowMessage("Min value should be <= max value");
+        }
+
+        std::vector<UnicodeString> wordList;
+
+        if (CBSynonyms->Checked) {
+
+           std::vector<DictionaryEntry> dictionaryEntries = dictionary->getDictionaryValues();
+
+           for (const DictionaryEntry &entry: dictionaryEntries)  {
+
+                std::vector<UnicodeString> synonyms = entry.getSynonyms();
+        		wordList.insert(wordList.end(), synonyms.begin(), synonyms.end());
+           }
+        }
+        else {
+        	wordList = dictionary->getDictionaryKeys();
+        }
+
+        //   generate text from word list (Generator/ TextService SOAP)
+
+        Generator generator(false, CBUppercase->Checked, false);
+
+        UnicodeString generatedText = generator.generateText(wordList, StrToInt(CBCharsWordMin->Text), \
+        	CBCharsWordMax->Text == UnicodeString(L'\u221E') ? 0 : StrToInt(CBCharsWordMax->Text), \
+         	StrToInt(CBWordsMin->Text), StrToInt(CBWordsMax->Text));
+
+        MPreview->Clear();
+
+        MPreview->Lines->BeginUpdate();
+
+        if (!generatedText.IsEmpty()) {
+
+        	MPreview->Font->Color = TColor(0xED9564);
+            MPreview->Lines->Add(generatedText);
+        }
+        else {
+          MPreview->Font->Color = TColor(0x0045FF);
+          MPreview->Lines->Add("No matching words");
+        }
+        MPreview->Lines->EndUpdate();
+    }
+
+}
+
+void __fastcall TFrGeneratedText::BtShuffleClick(TObject *Sender)
+{
+     if (CBDictionaryFiles->ItemIndex != -1) {
+
+        if (ContainsText(MPreview->Lines->Text, "Preview")) {
+            ShowMessage("Generate text before shuffle");
+        }
+
+        //   shuffle words in generated text (Generator/ TextService SOAP)
+
+        Generator generator(false, CBUppercase, false);
+        UnicodeString shuffledText = generator.shuffleWords(MPreview->Lines->Text);
+
+        MPreview->Clear();
+
+        MPreview->Lines->BeginUpdate();
+
+        if (!shuffledText.IsEmpty()) {
+            MPreview->Lines->Add(shuffledText);
+        }
+        MPreview->Lines->EndUpdate();
+     }
+}
+
+// fetch synonyms and word category (Datamuse REST)
+
+void __fastcall TFrGeneratedText::BtSynonymsClick(TObject *Sender)
+{
+    if (EWord->Text.IsEmpty()) {
+		ShowMessage("No word selected");
+        return;
+    }
+
+    dataModule->RESTClient->BaseURL = "https://api.datamuse.com/words?rel_syn=" + EWord->Text + "&max=5";
+
+    dataModule->RESTResponseDataSetAdapter->TypesMode = TJSONTypesMode::StringOnly;
+    dataModule->RESTResponse->RootElement = "";
+    dataModule->RESTRequest->Method = rmGET;
+    dataModule->RESTRequest->Execute();
+
+    if (dataModule->FDMemTable->RecordCount) {
+
+        dataModule->FDMemTable->First();
+        UnicodeString synonyms = dataModule->FDMemTable->FieldByName("word")->AsString;
+        ESynonyms->Text = synonyms;
+    }
+
+    dataModule->RESTClient->BaseURL = "https://api.datamuse.com/words?sp=" + EWord->Text + "&md=d&max=1";
+    dataModule->RESTRequest->Execute();
+    dataModule->RESTResponse->RootElement = "[0].defs[0]";
+
+    UnicodeString defintion = dataModule->RESTResponse->JSONText;
+    defintion = UnicodeString(TextUtils::trimCharacters(defintion, L'\"'));
+
+    defintion = StringReplace(defintion, _D("\\t"), _D("\t"), TReplaceFlags() << rfReplaceAll);
+    defintion = TextUtils::replaceChar(defintion, L'.', L' ');
+    std::vector<UnicodeString> tokens = TextUtils::splitToTokens(defintion, L'\t');
+    UnicodeString wordType = tokens[0];
+
+    if (wordType == "adj") {
+      selectItemMultiItemControl("Category", "Adjective");
+    }
+    else if (wordType == "adv") {
+      selectItemMultiItemControl("Category", "Adverb");
+    }
+    else if (wordType == "n") {
+      selectItemMultiItemControl("Category", "Noun");
+    }
+    else if (wordType == "v") {
+      selectItemMultiItemControl("Category", "Verb");
+    }
+
+    EDefinition->Text = TextUtils::vectorToString(std::vector<UnicodeString>(tokens.begin() + 1, tokens.end())).LowerCase();
+
+    dataModule->RESTResponse->RootElement = "";
+
+}
+//---------------------------------------------------------------------------
 

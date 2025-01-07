@@ -14,3 +14,4 @@ __fastcall TFrFlyingWordsStats::TFrFlyingWordsStats(TComponent* Owner)
 {
 }
 //---------------------------------------------------------------------------
+

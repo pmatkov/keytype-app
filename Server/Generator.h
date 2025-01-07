@@ -4,8 +4,9 @@
 #define GeneratorH
 //---------------------------------------------------------------------------
 #include <vcl.h>
+#include <vector>
 
-class Generator{
+class Generator {
 
     private:
         UnicodeString letters = L"abcdefghijklmnopqrstuvwxyz";
@@ -24,6 +25,9 @@ class Generator{
     	UnicodeString generateToken(int minChars, int maxChars);
         UnicodeString generateTokenSequence(int minChars, int maxChars, int minTokens, int maxToxens);
         UnicodeString shuffleChars(UnicodeString string);
+
+        UnicodeString shuffleWords(UnicodeString words);
+        UnicodeString generateText(const std::vector<UnicodeString> &wordList, int minChars, int maxChars, int minWords, int maxWords);
 
 };
 

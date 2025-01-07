@@ -32,7 +32,8 @@ namespace UIUtils {
     void showChildControls(TWinControl* parent, bool show);
     void switchControl(TWinControl* firstControl, TWinControl* secondControl);
 
-    void changeFontFamily(TWinControl *Control, const UnicodeString fontFamily);
+   	UnicodeString getButtonCaption(TPanel *Panel);
+    void changeFontFamily(TWinControl *Control, const UnicodeString &fontFamily);
 
     void addComboBoxItem(TComboBox *comboBox, const UnicodeString &item, int selectedIndex);
     void selectComboBoxItem(TComboBox *comboBox, int selectedIndex);
@@ -50,11 +51,13 @@ namespace UIUtils {
 
     void setFileDialogProperties(TOpenTextFileDialog *FileDialog, const UnicodeString &dir, const UnicodeString &filter);
 
-    void displayTimedMessage(TTimer *timer, TLabel *label, const UnicodeString &msg);
+    void displayTimedMessage(TTimer *timer, TLabel *label, const UnicodeString &msg, const TColor &color = TColor(0x8B8B00));
     void removeTimedMessage(TTimer *timer, TLabel *label);
 
     void higlightMessage(TTimer *timer, TLabel *label, TColor color);
     void removeHiglightMessage(TTimer *timer, TLabel *label);
+
+    UnicodeString getTranslatedString(const wchar_t *library, int stringID);
 
 
     template<typename T>

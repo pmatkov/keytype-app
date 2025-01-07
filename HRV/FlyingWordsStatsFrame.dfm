@@ -5,31 +5,31 @@ object FrFlyingWordsStats: TFrFlyingWordsStats
   Height = 42
   TabOrder = 0
   object LLastWord: TLabel
-    Left = 18
+    Left = 15
     Top = 15
     Width = 54
     Height = 15
-    Caption = 'Last word:'
+    Caption = 'Rije'#269':'
     Visible = False
   end
   object LLastWordDisplay: TLabel
     Left = 78
     Top = 15
-    Width = 100
+    Width = 110
     Height = 15
     AutoSize = False
     Visible = False
   end
   object LTimeRemaining: TLabel
-    Left = 349
+    Left = 355
     Top = 15
     Width = 86
     Height = 15
-    Caption = 'Time remaining:'
+    Caption = 'Vrijeme:'
     Visible = False
   end
   object LTimeRemainingDisplay: TLabel
-    Left = 441
+    Left = 447
     Top = 15
     Width = 50
     Height = 15
@@ -37,15 +37,15 @@ object FrFlyingWordsStats: TFrFlyingWordsStats
     Visible = False
   end
   object LMatchCount: TLabel
-    Left = 194
+    Left = 200
     Top = 15
     Width = 87
     Height = 15
-    Caption = 'Words matched:'
+    Caption = 'Pogo'#273'eno:'
     Visible = False
   end
   object LPointsDisplay: TLabel
-    Left = 547
+    Left = 553
     Top = 15
     Width = 50
     Height = 15
@@ -53,15 +53,15 @@ object FrFlyingWordsStats: TFrFlyingWordsStats
     Visible = False
   end
   object LPoints: TLabel
-    Left = 505
+    Left = 511
     Top = 15
     Width = 36
     Height = 15
-    Caption = 'Points:'
+    Caption = 'Bodovi:'
     Visible = False
   end
   object LMatchCountDisplay: TLabel
-    Left = 287
+    Left = 293
     Top = 15
     Width = 50
     Height = 15
@@ -69,7 +69,7 @@ object FrFlyingWordsStats: TFrFlyingWordsStats
   end
   object TMsgDisplayTimer: TTimer
     Interval = 1500
-    Left = 582
-    Top = 9
+    Left = 333
+    Top = 3
   end
 end

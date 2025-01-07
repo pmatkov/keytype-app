@@ -20,6 +20,7 @@ class Dictionary {
 	private:
         ISingleItemDisplay &singleItemDisplay;
         IMultiItemDisplay &multiItemDisplay;
+
 		std::map<UnicodeString, DictionaryEntry> dictionary;
 
         UnicodeString dictionaryFileName;
@@ -50,5 +51,6 @@ class Dictionary {
         std::optional<std::vector<UnicodeString>> findDictionaryFiles();
         void setDictionary(const UnicodeString &path);
         void saveDictionaryToFile();
+
 };
 #endif
