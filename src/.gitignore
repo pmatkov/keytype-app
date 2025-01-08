@@ -5,6 +5,7 @@
 *.dll
 
 # Build directories
+
 Debug/
 Release/
 __history/
