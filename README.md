@@ -18,25 +18,26 @@ This is a versatile typing practice app developed as part of an Advanced program
 - multi-language user interface with dynamic selection
 - app settings stored in INI file and Windows registry
 - data management with XML, JSON and custom file format
-- CRUD operations on database records with MySQL
+- CRUD operations with MySQL
 - lookup and calculated fields, including BLOB fields
 - automatic report generation with FastReports
 - multi-threading support in the "Flying Words" game
 - thread synchronization using mutexes and critical sections
 - safe UI updates from the main thread
-- separate log archiving and compression process
-- TCP client/server
-- UDP client/server
-- SOAP client/server
-- REST client/server
+- log archiving and compression tool
+- TCP client/ server and UDP client/ server
+- SOAP client/ server and REST client/ server, both as IIS ISAPI plugins
 - symmetric and asymmetric cryptography
 - hashing with variable salt and pepper
 - digital signature support
 - custom static and dynamic libraries
-- DLL-based forms
-- diarams with TeeChart
+- diagrams with TeeChart
 - unit testing with DUnit
 
 **Build instructions:**
-- the app can be built using C++ Builder. Free community edition is available
-- before using the app, start TCP and UDP server inside src/server folder (separate executable)
+- build all projects (RAD Studio 11)
+- place GeneratorLib.Lib in the src\ and src\Server folders, place AboutLib.dll, StatisticsLib.dll, ResourceLib.dll in the src\Win32\Debug folder
+- place SOAPServer.dll and RESTServer.dll in inetpub\wwwroot folder along with pub_key.bin from the src\Keys folder
+- create MySQL database from the script in the src/Db folder
+- start IIS with permissions to execute ISAPI dll's
+- start TCP and UDP server
