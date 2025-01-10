@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\src\core\forms\main\MainFrame.dfm" source-language="hr-HR" target-language="hr-HR" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\src\core\forms\main\MainFrame.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">45666.1235648148</prop>
+        <prop prop-type="OrigDateTime">45664.9908101852</prop>
+        <prop prop-type="XlatDateTime">45664.9908101852</prop>
+        <prop prop-type="Translated">0</prop>
+        <prop prop-type="UnTranslated">8</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:FrMain.Left" resname="O:FrMain.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235877778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TFrMain</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrMain.Top" resname="O:FrMain.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235877893</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TFrMain</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrMain.Width" resname="O:FrMain.Width">
+        <source>628</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235877893</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TFrMain</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrMain.Height" resname="O:FrMain.Height">
+        <source>422</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235877893</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TFrMain</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrMain.TabOrder" resname="O:FrMain.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235877893</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFrMain</prop><prop prop-type="Localize">0</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrMain.O:LLogo.Left" resname="O:FrMain.O:LLogo.Left">
+        <source>177</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235877893</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrMain.O:LLogo.Top" resname="O:FrMain.O:LLogo.Top">
+        <source>141</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235877893</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrMain.O:LLogo.Width" resname="O:FrMain.O:LLogo.Width">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235877893</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrMain.O:LLogo.Height" resname="O:FrMain.O:LLogo.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235877893</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

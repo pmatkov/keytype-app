@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\src\core\forms\main\Lessons2Frame.dfm" source-language="hr-HR" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\src\core\forms\main\Lessons2Frame.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">45666.123587963</prop>
+        <prop prop-type="OrigDateTime">45664.9915972222</prop>
+        <prop prop-type="XlatDateTime">45664.9915972222</prop>
+        <prop prop-type="Translated">0</prop>
+        <prop prop-type="UnTranslated">160</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:FrLessons2.Left" resname="O:FrLessons2.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TFrLessons2</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.Top" resname="O:FrLessons2.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TFrLessons2</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.Width" resname="O:FrLessons2.Width">
+        <source>628</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TFrLessons2</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.Height" resname="O:FrLessons2.Height">
+        <source>422</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TFrLessons2</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.TabOrder" resname="O:FrLessons2.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFrLessons2</prop><prop prop-type="Localize">0</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LChars.Left" resname="O:FrLessons2.O:LChars.Left">
+        <source>14</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LChars.Top" resname="O:FrLessons2.O:LChars.Top">
+        <source>105</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LChars.Width" resname="O:FrLessons2.O:LChars.Width">
+        <source>33</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LChars.Height" resname="O:FrLessons2.O:LChars.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LChars.Caption" resname="O:FrLessons2.O:LChars.Caption">
+        <source>'Chars:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LChars.Font.Charset" resname="O:FrLessons2.O:LChars.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LChars.Font.Color" resname="O:FrLessons2.O:LChars.Font.Color">
+        <source>clSilver</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LChars.Font.Height" resname="O:FrLessons2.O:LChars.Font.Height">
+        <source>-12</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LChars.Font.Name" resname="O:FrLessons2.O:LChars.Font.Name">
+        <source>'Segoe UI'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LChars.Font.Style" resname="O:FrLessons2.O:LChars.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LChars.ParentFont" resname="O:FrLessons2.O:LChars.ParentFont">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LWords.Left" resname="O:FrLessons2.O:LWords.Left">
+        <source>14</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LWords.Top" resname="O:FrLessons2.O:LWords.Top">
+        <source>129</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LWords.Width" resname="O:FrLessons2.O:LWords.Width">
+        <source>37</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LWords.Height" resname="O:FrLessons2.O:LWords.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LWords.Caption" resname="O:FrLessons2.O:LWords.Caption">
+        <source>'Words:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LWords.Font.Charset" resname="O:FrLessons2.O:LWords.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LWords.Font.Color" resname="O:FrLessons2.O:LWords.Font.Color">
+        <source>clSilver</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LWords.Font.Height" resname="O:FrLessons2.O:LWords.Font.Height">
+        <source>-12</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LWords.Font.Name" resname="O:FrLessons2.O:LWords.Font.Name">
+        <source>'Segoe UI'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LWords.Font.Style" resname="O:FrLessons2.O:LWords.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LWords.ParentFont" resname="O:FrLessons2.O:LWords.ParentFont">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LCharsDisplay.Left" resname="O:FrLessons2.O:LCharsDisplay.Left">
+        <source>111</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LCharsDisplay.Top" resname="O:FrLessons2.O:LCharsDisplay.Top">
+        <source>105</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LCharsDisplay.Width" resname="O:FrLessons2.O:LCharsDisplay.Width">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LCharsDisplay.Height" resname="O:FrLessons2.O:LCharsDisplay.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LCharsDisplay.AutoSize" resname="O:FrLessons2.O:LCharsDisplay.AutoSize">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LCharsDisplay.Font.Charset" resname="O:FrLessons2.O:LCharsDisplay.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LCharsDisplay.Font.Color" resname="O:FrLessons2.O:LCharsDisplay.Font.Color">
+        <source>clSilver</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LCharsDisplay.Font.Height" resname="O:FrLessons2.O:LCharsDisplay.Font.Height">
+        <source>-12</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LCharsDisplay.Font.Name" resname="O:FrLessons2.O:LCharsDisplay.Font.Name">
+        <source>'Segoe UI'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LCharsDisplay.Font.Style" resname="O:FrLessons2.O:LCharsDisplay.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LCharsDisplay.ParentFont" resname="O:FrLessons2.O:LCharsDisplay.ParentFont">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LWordsDisplay.Left" resname="O:FrLessons2.O:LWordsDisplay.Left">
+        <source>111</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LWordsDisplay.Top" resname="O:FrLessons2.O:LWordsDisplay.Top">
+        <source>129</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LWordsDisplay.Width" resname="O:FrLessons2.O:LWordsDisplay.Width">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LWordsDisplay.Height" resname="O:FrLessons2.O:LWordsDisplay.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LWordsDisplay.AutoSize" resname="O:FrLessons2.O:LWordsDisplay.AutoSize">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LWordsDisplay.Font.Charset" resname="O:FrLessons2.O:LWordsDisplay.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LWordsDisplay.Font.Color" resname="O:FrLessons2.O:LWordsDisplay.Font.Color">
+        <source>clSilver</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LWordsDisplay.Font.Height" resname="O:FrLessons2.O:LWordsDisplay.Font.Height">
+        <source>-12</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LWordsDisplay.Font.Name" resname="O:FrLessons2.O:LWordsDisplay.Font.Name">
+        <source>'Segoe UI'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LWordsDisplay.Font.Style" resname="O:FrLessons2.O:LWordsDisplay.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LWordsDisplay.ParentFont" resname="O:FrLessons2.O:LWordsDisplay.ParentFont">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LGoal.Left" resname="O:FrLessons2.O:LGoal.Left">
+        <source>14</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LGoal.Top" resname="O:FrLessons2.O:LGoal.Top">
+        <source>213</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001273</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LGoal.Width" resname="O:FrLessons2.O:LGoal.Width">
+        <source>27</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LGoal.Height" resname="O:FrLessons2.O:LGoal.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LGoal.Caption" resname="O:FrLessons2.O:LGoal.Caption">
+        <source>'Goal:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LGoal.Font.Charset" resname="O:FrLessons2.O:LGoal.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LGoal.Font.Color" resname="O:FrLessons2.O:LGoal.Font.Color">
+        <source>clSilver</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LGoal.Font.Height" resname="O:FrLessons2.O:LGoal.Font.Height">
+        <source>-12</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LGoal.Font.Name" resname="O:FrLessons2.O:LGoal.Font.Name">
+        <source>'Segoe UI'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LGoal.Font.Style" resname="O:FrLessons2.O:LGoal.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LGoal.ParentFont" resname="O:FrLessons2.O:LGoal.ParentFont">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LGoalDisplay.Left" resname="O:FrLessons2.O:LGoalDisplay.Left">
+        <source>51</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LGoalDisplay.Top" resname="O:FrLessons2.O:LGoalDisplay.Top">
+        <source>213</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LGoalDisplay.Width" resname="O:FrLessons2.O:LGoalDisplay.Width">
+        <source>85</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LGoalDisplay.Height" resname="O:FrLessons2.O:LGoalDisplay.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LGoalDisplay.AutoSize" resname="O:FrLessons2.O:LGoalDisplay.AutoSize">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LGoalDisplay.Font.Charset" resname="O:FrLessons2.O:LGoalDisplay.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LGoalDisplay.Font.Color" resname="O:FrLessons2.O:LGoalDisplay.Font.Color">
+        <source>clSilver</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LGoalDisplay.Font.Height" resname="O:FrLessons2.O:LGoalDisplay.Font.Height">
+        <source>-12</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LGoalDisplay.Font.Name" resname="O:FrLessons2.O:LGoalDisplay.Font.Name">
+        <source>'Segoe UI'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">68</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LGoalDisplay.Font.Style" resname="O:FrLessons2.O:LGoalDisplay.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LGoalDisplay.ParentFont" resname="O:FrLessons2.O:LGoalDisplay.ParentFont">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">70</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LDifficulty.Left" resname="O:FrLessons2.O:LDifficulty.Left">
+        <source>14</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LDifficulty.Top" resname="O:FrLessons2.O:LDifficulty.Top">
+        <source>187</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LDifficulty.Width" resname="O:FrLessons2.O:LDifficulty.Width">
+        <source>51</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LDifficulty.Height" resname="O:FrLessons2.O:LDifficulty.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LDifficulty.Caption" resname="O:FrLessons2.O:LDifficulty.Caption">
+        <source>'Difficulty:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">75</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LDifficulty.Font.Charset" resname="O:FrLessons2.O:LDifficulty.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">76</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LDifficulty.Font.Color" resname="O:FrLessons2.O:LDifficulty.Font.Color">
+        <source>clSilver</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">77</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LDifficulty.Font.Height" resname="O:FrLessons2.O:LDifficulty.Font.Height">
+        <source>-12</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">78</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LDifficulty.Font.Name" resname="O:FrLessons2.O:LDifficulty.Font.Name">
+        <source>'Segoe UI'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">79</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LDifficulty.Font.Style" resname="O:FrLessons2.O:LDifficulty.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LDifficulty.ParentFont" resname="O:FrLessons2.O:LDifficulty.ParentFont">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LDifficultyDisplay.Left" resname="O:FrLessons2.O:LDifficultyDisplay.Left">
+        <source>111</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LDifficultyDisplay.Top" resname="O:FrLessons2.O:LDifficultyDisplay.Top">
+        <source>187</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LDifficultyDisplay.Width" resname="O:FrLessons2.O:LDifficultyDisplay.Width">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">84</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LDifficultyDisplay.Height" resname="O:FrLessons2.O:LDifficultyDisplay.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LDifficultyDisplay.AutoSize" resname="O:FrLessons2.O:LDifficultyDisplay.AutoSize">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">86</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LDifficultyDisplay.Font.Charset" resname="O:FrLessons2.O:LDifficultyDisplay.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">87</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LDifficultyDisplay.Font.Color" resname="O:FrLessons2.O:LDifficultyDisplay.Font.Color">
+        <source>clSilver</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">88</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LDifficultyDisplay.Font.Height" resname="O:FrLessons2.O:LDifficultyDisplay.Font.Height">
+        <source>-12</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">89</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LDifficultyDisplay.Font.Name" resname="O:FrLessons2.O:LDifficultyDisplay.Font.Name">
+        <source>'Segoe UI'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">90</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LDifficultyDisplay.Font.Style" resname="O:FrLessons2.O:LDifficultyDisplay.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">91</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LDifficultyDisplay.ParentFont" resname="O:FrLessons2.O:LDifficultyDisplay.ParentFont">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">92</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LLessonResult.Left" resname="O:FrLessons2.O:LLessonResult.Left">
+        <source>214</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">93</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LLessonResult.Top" resname="O:FrLessons2.O:LLessonResult.Top">
+        <source>366</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">94</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LLessonResult.Width" resname="O:FrLessons2.O:LLessonResult.Width">
+        <source>71</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">95</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LLessonResult.Height" resname="O:FrLessons2.O:LLessonResult.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">96</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LLessonResult.Caption" resname="O:FrLessons2.O:LLessonResult.Caption">
+        <source>'Lesson result:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">97</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LLessonResult.Visible" resname="O:FrLessons2.O:LLessonResult.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">98</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LLessonResultDisplay.Left" resname="O:FrLessons2.O:LLessonResultDisplay.Left">
+        <source>291</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">99</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LLessonResultDisplay.Top" resname="O:FrLessons2.O:LLessonResultDisplay.Top">
+        <source>366</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">100</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LLessonResultDisplay.Width" resname="O:FrLessons2.O:LLessonResultDisplay.Width">
+        <source>185</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">101</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LLessonResultDisplay.Height" resname="O:FrLessons2.O:LLessonResultDisplay.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">102</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LLessonResultDisplay.AutoSize" resname="O:FrLessons2.O:LLessonResultDisplay.AutoSize">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">103</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LLessonResultDisplay.Font.Charset" resname="O:FrLessons2.O:LLessonResultDisplay.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">104</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LLessonResultDisplay.Font.Color" resname="O:FrLessons2.O:LLessonResultDisplay.Font.Color">
+        <source>clBlue</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">105</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LLessonResultDisplay.Font.Height" resname="O:FrLessons2.O:LLessonResultDisplay.Font.Height">
+        <source>-12</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">106</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LLessonResultDisplay.Font.Name" resname="O:FrLessons2.O:LLessonResultDisplay.Font.Name">
+        <source>'Segoe UI'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">107</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LLessonResultDisplay.Font.Style" resname="O:FrLessons2.O:LLessonResultDisplay.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">108</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:LLessonResultDisplay.ParentFont" resname="O:FrLessons2.O:LLessonResultDisplay.ParentFont">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">109</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:CBSelectCourse.Left" resname="O:FrLessons2.O:CBSelectCourse.Left">
+        <source>486</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">110</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:CBSelectCourse.Top" resname="O:FrLessons2.O:CBSelectCourse.Top">
+        <source>102</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">111</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:CBSelectCourse.Width" resname="O:FrLessons2.O:CBSelectCourse.Width">
+        <source>130</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">112</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:CBSelectCourse.Height" resname="O:FrLessons2.O:CBSelectCourse.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">113</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:CBSelectCourse.Style" resname="O:FrLessons2.O:CBSelectCourse.Style">
+        <source>csDropDownList</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">114</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:CBSelectCourse.TabOrder" resname="O:FrLessons2.O:CBSelectCourse.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">115</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:CBSelectCourse.OnChange" resname="O:FrLessons2.O:CBSelectCourse.OnChange">
+        <source>CBSelectCourseChange</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">116</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:CBSelectLesson.Left" resname="O:FrLessons2.O:CBSelectLesson.Left">
+        <source>486</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">117</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:CBSelectLesson.Top" resname="O:FrLessons2.O:CBSelectLesson.Top">
+        <source>139</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">118</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:CBSelectLesson.Width" resname="O:FrLessons2.O:CBSelectLesson.Width">
+        <source>130</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">119</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:CBSelectLesson.Height" resname="O:FrLessons2.O:CBSelectLesson.Height">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">120</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:CBSelectLesson.Style" resname="O:FrLessons2.O:CBSelectLesson.Style">
+        <source>csDropDownList</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">121</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:CBSelectLesson.TabOrder" resname="O:FrLessons2.O:CBSelectLesson.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">122</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:CBSelectLesson.OnChange" resname="O:FrLessons2.O:CBSelectLesson.OnChange">
+        <source>CBSelectLessonChange</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">123</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.L:FrTypingStats.Left" resname="O:FrLessons2.L:FrTypingStats.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">124</prop><prop prop-type="Type">TFrTypingStats</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.L:FrTypingStats.Top" resname="O:FrLessons2.L:FrTypingStats.Top">
+        <source>20</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">125</prop><prop prop-type="Type">TFrTypingStats</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.L:FrTypingStats.Width" resname="O:FrLessons2.L:FrTypingStats.Width">
+        <source>628</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">126</prop><prop prop-type="Type">TFrTypingStats</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.L:FrTypingStats.Height" resname="O:FrLessons2.L:FrTypingStats.Height">
+        <source>60</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">127</prop><prop prop-type="Type">TFrTypingStats</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.L:FrTypingStats.TabOrder" resname="O:FrLessons2.L:FrTypingStats.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">128</prop><prop prop-type="Type">TFrTypingStats</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.L:FrTypingStats.ExplicitTop" resname="O:FrLessons2.L:FrTypingStats.ExplicitTop">
+        <source>20</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">129</prop><prop prop-type="Type">TFrTypingStats</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.L:FrTypingStats.I:LDisplayAccuracy.Width" resname="O:FrLessons2.L:FrTypingStats.I:LDisplayAccuracy.Width">
+        <source>60</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">130</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.L:FrTypingStats.I:LDisplayAccuracy.ExplicitWidth" resname="O:FrLessons2.L:FrTypingStats.I:LDisplayAccuracy.ExplicitWidth">
+        <source>60</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">131</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:MInstructions.Left" resname="O:FrLessons2.O:MInstructions.Left">
+        <source>161</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">132</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:MInstructions.Top" resname="O:FrLessons2.O:MInstructions.Top">
+        <source>102</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">133</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:MInstructions.Width" resname="O:FrLessons2.O:MInstructions.Width">
+        <source>300</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">134</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:MInstructions.Height" resname="O:FrLessons2.O:MInstructions.Height">
+        <source>60</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">135</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:MInstructions.Enabled" resname="O:FrLessons2.O:MInstructions.Enabled">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">136</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:MInstructions.ReadOnly" resname="O:FrLessons2.O:MInstructions.ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">137</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:MInstructions.TabOrder" resname="O:FrLessons2.O:MInstructions.TabOrder">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">138</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.L:FrTypingText.Left" resname="O:FrLessons2.L:FrTypingText.Left">
+        <source>149</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">139</prop><prop prop-type="Type">TFrTypingText</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.L:FrTypingText.Top" resname="O:FrLessons2.L:FrTypingText.Top">
+        <source>187</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001389</prop><prop prop-type="Status">0</prop><prop prop-type="Order">140</prop><prop prop-type="Type">TFrTypingText</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.L:FrTypingText.Width" resname="O:FrLessons2.L:FrTypingText.Width">
+        <source>327</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">141</prop><prop prop-type="Type">TFrTypingText</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.L:FrTypingText.Height" resname="O:FrLessons2.L:FrTypingText.Height">
+        <source>160</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">142</prop><prop prop-type="Type">TFrTypingText</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.L:FrTypingText.TabOrder" resname="O:FrLessons2.L:FrTypingText.TabOrder">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">143</prop><prop prop-type="Type">TFrTypingText</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.L:FrTypingText.ExplicitLeft" resname="O:FrLessons2.L:FrTypingText.ExplicitLeft">
+        <source>149</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">144</prop><prop prop-type="Type">TFrTypingText</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.L:FrTypingText.ExplicitTop" resname="O:FrLessons2.L:FrTypingText.ExplicitTop">
+        <source>187</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">145</prop><prop prop-type="Type">TFrTypingText</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.L:FrTypingText.ExplicitWidth" resname="O:FrLessons2.L:FrTypingText.ExplicitWidth">
+        <source>327</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">146</prop><prop prop-type="Type">TFrTypingText</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.L:FrTypingText.I:LPrompt.Left" resname="O:FrLessons2.L:FrTypingText.I:LPrompt.Left">
+        <source>54</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">147</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.L:FrTypingText.I:LPrompt.Top" resname="O:FrLessons2.L:FrTypingText.I:LPrompt.Top">
+        <source>122</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">148</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.L:FrTypingText.I:LPrompt.ExplicitLeft" resname="O:FrLessons2.L:FrTypingText.I:LPrompt.ExplicitLeft">
+        <source>54</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">149</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.L:FrTypingText.I:LPrompt.ExplicitTop" resname="O:FrLessons2.L:FrTypingText.I:LPrompt.ExplicitTop">
+        <source>122</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">150</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.L:FrTypingText.I:REText.Top" resname="O:FrLessons2.L:FrTypingText.I:REText.Top">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">151</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.L:FrTypingText.I:REText.BorderStyle" resname="O:FrLessons2.L:FrTypingText.I:REText.BorderStyle">
+        <source>bsSingle</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">152</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.L:FrTypingText.I:REText.ExplicitTop" resname="O:FrLessons2.L:FrTypingText.I:REText.ExplicitTop">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">153</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:BtStartQuit.Left" resname="O:FrLessons2.O:BtStartQuit.Left">
+        <source>522</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">154</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:BtStartQuit.Top" resname="O:FrLessons2.O:BtStartQuit.Top">
+        <source>190</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">155</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:BtStartQuit.Width" resname="O:FrLessons2.O:BtStartQuit.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">156</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:BtStartQuit.Height" resname="O:FrLessons2.O:BtStartQuit.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">157</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:BtStartQuit.Caption" resname="O:FrLessons2.O:BtStartQuit.Caption">
+        <source>'Start'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">158</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:BtStartQuit.TabOrder" resname="O:FrLessons2.O:BtStartQuit.TabOrder">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">159</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrLessons2.O:BtStartQuit.OnClick" resname="O:FrLessons2.O:BtStartQuit.OnClick">
+        <source>BtStartQuitClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1236001505</prop><prop prop-type="Status">0</prop><prop prop-type="Order">160</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

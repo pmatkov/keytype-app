@@ -4,8 +4,8 @@ object FServer: TFServer
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Server'
-  ClientHeight = 142
-  ClientWidth = 308
+  ClientHeight = 141
+  ClientWidth = 304
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,7 +13,7 @@ object FServer: TFServer
   Font.Name = 'Segoe UI'
   Font.Style = []
   TextHeight = 15
-  object LTCPConnectionStatus: TLabel
+  object LTCPServerStatus: TLabel
     Left = 139
     Top = 39
     Width = 150

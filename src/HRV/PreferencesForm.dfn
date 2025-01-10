@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
 <xliff version="1.0">
-  <file original="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\PreferencesForm.dfm" source-language="hr-HR" target-language="hr-HR" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\PreferencesForm.dfm">
+  <file original="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\src\core\forms\profile\ProfileForm.dfm" source-language="hr-HR" target-language="hr-HR" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\src\core\forms\profile\ProfileForm.dfm">
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45480.9983796296</prop>
-        <prop prop-type="OrigDateTime">45480.8659027778</prop>
-        <prop prop-type="XlatDateTime">45430.7315972222</prop>
+        <prop prop-type="SelfDateTime">45666.9326157407</prop>
+        <prop prop-type="OrigDateTime">45664.9915972222</prop>
+        <prop prop-type="XlatDateTime">45664.9915972222</prop>
         <prop prop-type="Translated">20</prop>
         <prop prop-type="UnTranslated">200</prop>
       </prop-group>

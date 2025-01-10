@@ -1,4 +1,4 @@
- 
+
 //---------------------------------------------------------------------------
 #ifndef WebModuleH
 #define WebModuleH
@@ -36,6 +36,7 @@ __published:	// IDE-managed Components
 	TIntegerField *TKeyMappingidRow;
 	TIntegerField *TKeyMappingidCol;
 	TStringField *TKeyMappingkeyValue;
+	TFDPhysMySQLDriverLink *FDPhysMySQLDriverLink;
 	void __fastcall WebModule1DefaultHandlerAction(TObject *Sender, TWebRequest *Request,
           TWebResponse *Response, bool &Handled);
 	void __fastcall WebModule1keymapGETAction(TObject *Sender, TWebRequest *Request,
@@ -47,7 +48,7 @@ __published:	// IDE-managed Components
 	void __fastcall WebModule1customtextPUTAction(TObject *Sender, TWebRequest *Request,
           TWebResponse *Response, bool &Handled);
 	void __fastcall WebModuleBeforeDispatch(TObject *Sender, TWebRequest *Request,
-          TWebResponse *Response, bool &Handled);
+		  TWebResponse *Response, bool &Handled);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TWebModule1(TComponent* Owner);

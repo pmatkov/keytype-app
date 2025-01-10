@@ -20,7 +20,7 @@ This is a versatile typing practice app developed as part of an Advanced program
 - data management with XML, JSON and custom file format
 - CRUD operations on database records with MySQL
 - lookup and calculated fields, including BLOB fields
-- automatic report generation with FastReports (PDF + RTF)
+- automatic report generation with FastReports
 - multi-threading support in the "Flying Words" game
 - thread synchronization using mutexes and critical sections
 - safe UI updates from the main thread
@@ -34,6 +34,7 @@ This is a versatile typing practice app developed as part of an Advanced program
 - digital signature support
 - custom static and dynamic libraries
 - DLL-based forms
+- diarams with TeeChart
 - unit testing with DUnit
 
 **Build instructions:**

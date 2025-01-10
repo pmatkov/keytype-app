@@ -345,7 +345,6 @@ bool TWebModule1::isAuthenticated(TWebRequest *Request, bool &Handled) {
     return true;
 }
 
-
 bool TWebModule1::isAuthorized(TWebRequest *Request, bool &Handled) {
 
     // extract token from authorization header

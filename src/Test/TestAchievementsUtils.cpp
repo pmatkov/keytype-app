@@ -49,18 +49,18 @@ void __fastcall TTestAchievementsUtils::TestsaveToFile()
     header.setHashValue(hash);
 
     std::vector<AchievementsRecord> records = {
-       { 1, "Beginner", "First lesson completed", TDateTime(2024, 2, 1) },
+	   { 1, "Beginner", "First lesson completed", TDateTime(2024, 2, 1) },
        { 1, "SpeedMaster", "New speed record", TDateTime::CurrentDate() }
     };
 
-    AchievementsUtils::saveToFile(header, records, FileUtils::createAbsolutePath("Data\\test", true));
-    LOGGER_LOG("Result: " + hash);
+	AchievementsUtils::saveToFile(header, records, FileUtils::createProjectSubDirPath("Data") + "test");
+	LOGGER_LOG("Result: " + hash);
 }
 
 void __fastcall TTestAchievementsUtils::TestreadFromFile()
 {
 
-    std::vector<AchievementsRecord> records = AchievementsUtils::readFromFile(FileUtils::createAbsolutePath("Data\\test", true));
+	std::vector<AchievementsRecord> records = AchievementsUtils::readFromFile(FileUtils::createProjectSubDirPath("Data") + "test");
 
     if (records.size()) {
        	LOGGER_LOG("Records size: " + IntToStr(static_cast<int>(records.size())) + " record 1: " + records[0]);

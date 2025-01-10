@@ -31,12 +31,14 @@ void __fastcall TDataModule2::IdTCPServerExecute(TIdContext *AContext)
     try {
     	try {
 
-        	std::unique_ptr<TCryptographicLibrary> cryptLib = CryptoUtils::createCryptoLib();
+			std::unique_ptr<TCryptographicLibrary> cryptLib = CryptoUtils::createCryptoLib();
             std::unique_ptr<TCodec> codec = CryptoUtils::createRSACodec(cryptLib.get());
             std::unique_ptr<TSignatory> signatory = CryptoUtils::createSignatory(codec.get());
 
-        	UnicodeString prvKeyPath = FileUtils::createAbsolutePath("Server\\Keys\\prv_key_srv.bin", true);
-            UnicodeString pubKeyPath = FileUtils::createAbsolutePath("Server\\Keys\\pub_key_app.bin", true);
+			UnicodeString path = FileUtils::createProjectSubDirPath("Keys");
+
+			UnicodeString prvKeyPath = path + "prv_key_srv.bin";
+			UnicodeString pubKeyPath = path + "pub_key_app.bin";
 
             int requestType = StrToInt(CryptoUtils::decryptStringRSA(codec.get(), signatory.get(), prvKeyPath, ioHandler->ReadLn()));
 
@@ -64,7 +66,7 @@ void __fastcall TDataModule2::IdTCPServerExecute(TIdContext *AContext)
 
                 UnicodeString fileName = CryptoUtils::decryptStringRSA(codec.get(), signatory.get(), prvKeyPath, ioHandler->ReadLn());
 
-                UnicodeString filePath = FileUtils::createAbsolutePath("Server\\Data\\srv_" + fileName, true);
+				UnicodeString filePath = FileUtils::createProjectSubDirPath("Server") + "Data\\srv_" + fileName;
 
                 std::unique_ptr<TFileStream> fStream = std::make_unique<TFileStream>(filePath, fmCreate);
                 std::unique_ptr<TMemoryStream> mStream = std::make_unique<TMemoryStream>();
@@ -91,7 +93,7 @@ void __fastcall TDataModule2::IdTCPServerExecute(TIdContext *AContext)
 
                     if (jsonString.has_value()) {
 
-                    	UnicodeString convertedFilePath = FileUtils::createAbsolutePath("Server\\Data\\srv_" + fileName.Delete(fileName.Length()-2, 3) + "json", true);
+						UnicodeString convertedFilePath = FileUtils::createProjectSubDirPath("Server") + "Data\\srv_" + fileName.Delete(fileName.Length()-2, 3) + "json";
 
                     	FileUtils::saveToTextFile(convertedFilePath, std::vector<UnicodeString>{*jsonString});
 

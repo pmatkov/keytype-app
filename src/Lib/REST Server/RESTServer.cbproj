@@ -61,10 +61,10 @@
         <UsingDelphiRTL>true</UsingDelphiRTL>
         <Icon_MainIcon>$(BDS)\bin\cbuilder_PROJECTICON.ico</Icon_MainIcon>
         <Icns_MainIcns>$(BDS)\bin\cbuilder_PROJECTICNS.icns</Icns_MainIcns>
-        <IncludePath>..\..\;KeyType\Lib\REST Server\;$(IncludePath)</IncludePath>
-        <ILINK_LibraryPath>..\..\;KeyType\Lib\REST Server\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <IncludePath>..\..\Core\exceptions\;..\..\core\settings\;..\..\Core\models\;..\..\Core\session\;..\..\core\services\;..\..\Core\web service\;..\..\Core\utils\;..\..\;KeyType\Lib\REST Server\;$(IncludePath)</IncludePath>
+        <ILINK_LibraryPath>..\..\Core\exceptions\;..\..\core\settings\;..\..\Core\models\;..\..\Core\session\;..\..\core\services\;..\..\Core\web service\;..\..\Core\utils\;..\..\;KeyType\Lib\REST Server\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
         <SanitizedProjectName>RESTServer</SanitizedProjectName>
-        <AllPackageLibs>vcl.lib;rtl.lib;inet.lib;dbrtl.lib;FireDAC.lib;FireDACCommonDriver.lib;FireDACCommon.lib;xmlrtl.lib;vclFireDAC.lib;vcldb.lib;vclwinx.lib;vclimg.lib;bindengine.lib;vclx.lib;FireDACMySQLDriver.lib;LockBox3CR.lib</AllPackageLibs>
+        <AllPackageLibs>vcl.lib;rtl.lib;inet.lib;dbrtl.lib;FireDAC.lib;FireDACCommonDriver.lib;FireDACCommon.lib;xmlrtl.lib;vclFireDAC.lib;vcldb.lib;vclwinx.lib;vclimg.lib;bindengine.lib;vclx.lib;FireDACMySQLDriver.lib;LockBox3CR.lib;soaprtl.lib</AllPackageLibs>
         <ILINK_GenerateDRC>True</ILINK_GenerateDRC>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
@@ -106,7 +106,7 @@
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
         <ILINK_LibraryPath>$(BDSLIB)\$(PLATFORM)$(CC_SUFFIX)\debug;$(ILINK_LibraryPath)</ILINK_LibraryPath>
-        <LinkPackageImports>vcl.bpi;rtl.bpi;inet.bpi;dbrtl.bpi;FireDAC.bpi;FireDACCommonDriver.bpi;FireDACCommon.bpi;xmlrtl.bpi;vclFireDAC.bpi;vcldb.bpi;vclwinx.bpi;vclimg.bpi;bindengine.bpi;vclx.bpi;FireDACMySQLDriver.bpi;LockBox3CR.bpi</LinkPackageImports>
+        <LinkPackageImports>vcl.bpi;rtl.bpi;inet.bpi;dbrtl.bpi;FireDAC.bpi;FireDACCommonDriver.bpi;FireDACCommon.bpi;xmlrtl.bpi;vclFireDAC.bpi;vcldb.bpi;vclwinx.bpi;vclimg.bpi;bindengine.bpi;vclx.bpi;FireDACMySQLDriver.bpi;LockBox3CR.bpi;soaprtl.bpi</LinkPackageImports>
         <Debugger_HostApplication>C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\Win32\Debug\KeyType.exe</Debugger_HostApplication>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
@@ -117,9 +117,33 @@
         <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
     </PropertyGroup>
     <ItemGroup>
-        <CppCompile Include="..\..\CryptoUtils.cpp">
-            <DependentOn>..\..\CryptoUtils.h</DependentOn>
-            <BuildOrder>4</BuildOrder>
+        <CppCompile Include="..\..\Core\exceptions\EDirNotFoundException.cpp">
+            <DependentOn>..\..\Core\exceptions\EDirNotFoundException.h</DependentOn>
+            <BuildOrder>10</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\Core\models\User.cpp">
+            <DependentOn>..\..\Core\models\User.h</DependentOn>
+            <BuildOrder>8</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\core\services\Logger.cpp">
+            <DependentOn>..\..\core\services\Logger.h</DependentOn>
+            <BuildOrder>6</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\Core\session\MainSession.cpp">
+            <DependentOn>..\..\Core\session\MainSession.h</DependentOn>
+            <BuildOrder>7</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\core\settings\AppSettings.cpp">
+            <DependentOn>..\..\core\settings\AppSettings.h</DependentOn>
+            <BuildOrder>9</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\Core\utils\CryptoUtils.cpp">
+            <DependentOn>..\..\Core\utils\CryptoUtils.h</DependentOn>
+            <BuildOrder>5</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\core\utils\TextUtils.cpp">
+            <DependentOn>..\..\core\utils\TextUtils.h</DependentOn>
+            <BuildOrder>6</BuildOrder>
         </CppCompile>
         <CppCompile Include="RESTServer.cpp">
             <BuildOrder>0</BuildOrder>
@@ -134,10 +158,6 @@
             <DesignClass>TWebModule</DesignClass>
             <DependentOn>WebModule.h</DependentOn>
             <BuildOrder>1</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="..\..\TextUtils.cpp">
-            <DependentOn>..\..\TextUtils.h</DependentOn>
-            <BuildOrder>3</BuildOrder>
         </CppCompile>
         <FormResources Include="WebModule.dfm"/>
         <BuildConfiguration Include="Base">

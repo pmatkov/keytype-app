@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\src\core\forms\main\TypingStatsFrame.dfm" source-language="hr-HR" target-language="hr-HR" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\src\core\forms\main\TypingStatsFrame.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">45666.123587963</prop>
+        <prop prop-type="OrigDateTime">45430.6899305556</prop>
+        <prop prop-type="XlatDateTime">45430.6899305556</prop>
+        <prop prop-type="Translated">0</prop>
+        <prop prop-type="UnTranslated">38</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:FrTypingStats.Left" resname="O:FrTypingStats.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TFrTypingStats</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.Top" resname="O:FrTypingStats.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TFrTypingStats</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.Width" resname="O:FrTypingStats.Width">
+        <source>628</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TFrTypingStats</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.Height" resname="O:FrTypingStats.Height">
+        <source>60</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TFrTypingStats</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.TabOrder" resname="O:FrTypingStats.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFrTypingStats</prop><prop prop-type="Localize">0</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LTime.Left" resname="O:FrTypingStats.O:LTime.Left">
+        <source>101</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LTime.Top" resname="O:FrTypingStats.O:LTime.Top">
+        <source>20</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LTime.Width" resname="O:FrTypingStats.O:LTime.Width">
+        <source>29</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LTime.Height" resname="O:FrTypingStats.O:LTime.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LTime.Caption" resname="O:FrTypingStats.O:LTime.Caption">
+        <source>'Time:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LDisplayTime.Left" resname="O:FrTypingStats.O:LDisplayTime.Left">
+        <source>136</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LDisplayTime.Top" resname="O:FrTypingStats.O:LDisplayTime.Top">
+        <source>20</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LDisplayTime.Width" resname="O:FrTypingStats.O:LDisplayTime.Width">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LDisplayTime.Height" resname="O:FrTypingStats.O:LDisplayTime.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LDisplayTime.AutoSize" resname="O:FrTypingStats.O:LDisplayTime.AutoSize">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LSpeed.Left" resname="O:FrTypingStats.O:LSpeed.Left">
+        <source>216</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LSpeed.Top" resname="O:FrTypingStats.O:LSpeed.Top">
+        <source>20</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LSpeed.Width" resname="O:FrTypingStats.O:LSpeed.Width">
+        <source>35</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LSpeed.Height" resname="O:FrTypingStats.O:LSpeed.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LSpeed.Caption" resname="O:FrTypingStats.O:LSpeed.Caption">
+        <source>'Speed:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LDisplaySpeed.Left" resname="O:FrTypingStats.O:LDisplaySpeed.Left">
+        <source>257</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LDisplaySpeed.Top" resname="O:FrTypingStats.O:LDisplaySpeed.Top">
+        <source>20</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LDisplaySpeed.Width" resname="O:FrTypingStats.O:LDisplaySpeed.Width">
+        <source>60</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LDisplaySpeed.Height" resname="O:FrTypingStats.O:LDisplaySpeed.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LDisplaySpeed.AutoSize" resname="O:FrTypingStats.O:LDisplaySpeed.AutoSize">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LAccuracy.Left" resname="O:FrTypingStats.O:LAccuracy.Left">
+        <source>345</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LAccuracy.Top" resname="O:FrTypingStats.O:LAccuracy.Top">
+        <source>20</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LAccuracy.Width" resname="O:FrTypingStats.O:LAccuracy.Width">
+        <source>52</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LAccuracy.Height" resname="O:FrTypingStats.O:LAccuracy.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LAccuracy.Caption" resname="O:FrTypingStats.O:LAccuracy.Caption">
+        <source>'Accuracy:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LDisplayAccuracy.Left" resname="O:FrTypingStats.O:LDisplayAccuracy.Left">
+        <source>403</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LDisplayAccuracy.Top" resname="O:FrTypingStats.O:LDisplayAccuracy.Top">
+        <source>20</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LDisplayAccuracy.Width" resname="O:FrTypingStats.O:LDisplayAccuracy.Width">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LDisplayAccuracy.Height" resname="O:FrTypingStats.O:LDisplayAccuracy.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:LDisplayAccuracy.AutoSize" resname="O:FrTypingStats.O:LDisplayAccuracy.AutoSize">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:TStatsTimer.Enabled" resname="O:FrTypingStats.O:TStatsTimer.Enabled">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:TStatsTimer.OnTimer" resname="O:FrTypingStats.O:TStatsTimer.OnTimer">
+        <source>TStatsTimerTimer</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:TStatsTimer.Left" resname="O:FrTypingStats.O:TStatsTimer.Left">
+        <source>510</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrTypingStats.O:TStatsTimer.Top" resname="O:FrTypingStats.O:TStatsTimer.Top">
+        <source>9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.123588044</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

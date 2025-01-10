@@ -151,11 +151,7 @@
             <BuildOrder>0</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>
-        <None Include="Stringtable.h">
-            <BuildOrder>10</BuildOrder>
-        </None>
         <ResourceCompile Include="Stringtable\Stringtable.rc">
-            <ModuleName>Stringtable.rc</ModuleName>
             <Form>Stringtable.res</Form>
             <BuildOrder>9</BuildOrder>
         </ResourceCompile>

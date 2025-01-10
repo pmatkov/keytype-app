@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\src\core\forms\main\PracticeFrame.dfm" source-language="hr-HR" target-language="hr-HR" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\KeyType\src\core\forms\main\PracticeFrame.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">45666.1235648148</prop>
+        <prop prop-type="OrigDateTime">45664.9915972222</prop>
+        <prop prop-type="XlatDateTime">45664.9915972222</prop>
+        <prop prop-type="Translated">0</prop>
+        <prop prop-type="UnTranslated">112</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:FrPractice.Left" resname="O:FrPractice.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TFrPractice</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.Top" resname="O:FrPractice.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TFrPractice</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.Width" resname="O:FrPractice.Width">
+        <source>628</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TFrPractice</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.Height" resname="O:FrPractice.Height">
+        <source>422</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TFrPractice</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.TabOrder" resname="O:FrPractice.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFrPractice</prop><prop prop-type="Localize">0</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LPracticeResult.Left" resname="O:FrPractice.O:LPracticeResult.Left">
+        <source>133</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LPracticeResult.Top" resname="O:FrPractice.O:LPracticeResult.Top">
+        <source>393</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LPracticeResult.Width" resname="O:FrPractice.O:LPracticeResult.Width">
+        <source>77</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LPracticeResult.Height" resname="O:FrPractice.O:LPracticeResult.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LPracticeResult.Caption" resname="O:FrPractice.O:LPracticeResult.Caption">
+        <source>'Practice result:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LPracticeResult.Visible" resname="O:FrPractice.O:LPracticeResult.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LPracticeResultDisplay.Left" resname="O:FrPractice.O:LPracticeResultDisplay.Left">
+        <source>216</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LPracticeResultDisplay.Top" resname="O:FrPractice.O:LPracticeResultDisplay.Top">
+        <source>393</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LPracticeResultDisplay.Width" resname="O:FrPractice.O:LPracticeResultDisplay.Width">
+        <source>204</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LPracticeResultDisplay.Height" resname="O:FrPractice.O:LPracticeResultDisplay.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LPracticeResultDisplay.AutoSize" resname="O:FrPractice.O:LPracticeResultDisplay.AutoSize">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LPracticeResultDisplay.Font.Charset" resname="O:FrPractice.O:LPracticeResultDisplay.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LPracticeResultDisplay.Font.Color" resname="O:FrPractice.O:LPracticeResultDisplay.Font.Color">
+        <source>clBlue</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LPracticeResultDisplay.Font.Height" resname="O:FrPractice.O:LPracticeResultDisplay.Font.Height">
+        <source>-12</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LPracticeResultDisplay.Font.Name" resname="O:FrPractice.O:LPracticeResultDisplay.Font.Name">
+        <source>'Segoe UI'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LPracticeResultDisplay.Font.Style" resname="O:FrPractice.O:LPracticeResultDisplay.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LPracticeResultDisplay.ParentFont" resname="O:FrPractice.O:LPracticeResultDisplay.ParentFont">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LKeyboardLayout.Left" resname="O:FrPractice.O:LKeyboardLayout.Left">
+        <source>462</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LKeyboardLayout.Top" resname="O:FrPractice.O:LKeyboardLayout.Top">
+        <source>249</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LKeyboardLayout.Width" resname="O:FrPractice.O:LKeyboardLayout.Width">
+        <source>140</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LKeyboardLayout.Height" resname="O:FrPractice.O:LKeyboardLayout.Height">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:LKeyboardLayout.AutoSize" resname="O:FrPractice.O:LKeyboardLayout.AutoSize">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.L:FrTypingStats.Left" resname="O:FrPractice.L:FrTypingStats.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TFrTypingStats</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.L:FrTypingStats.Top" resname="O:FrPractice.L:FrTypingStats.Top">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TFrTypingStats</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.L:FrTypingStats.Width" resname="O:FrPractice.L:FrTypingStats.Width">
+        <source>628</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TFrTypingStats</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.L:FrTypingStats.Height" resname="O:FrPractice.L:FrTypingStats.Height">
+        <source>60</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TFrTypingStats</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.L:FrTypingStats.TabOrder" resname="O:FrPractice.L:FrTypingStats.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TFrTypingStats</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.L:FrTypingStats.ExplicitTop" resname="O:FrPractice.L:FrTypingStats.ExplicitTop">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TFrTypingStats</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.L:FrTypingStats.I:TStatsTimer.Left" resname="O:FrPractice.L:FrTypingStats.I:TStatsTimer.Left">
+        <source>522</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:BtStartQuit.Left" resname="O:FrPractice.O:BtStartQuit.Left">
+        <source>460</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:BtStartQuit.Top" resname="O:FrPractice.O:BtStartQuit.Top">
+        <source>190</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:BtStartQuit.Width" resname="O:FrPractice.O:BtStartQuit.Width">
+        <source>90</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:BtStartQuit.Height" resname="O:FrPractice.O:BtStartQuit.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:BtStartQuit.Caption" resname="O:FrPractice.O:BtStartQuit.Caption">
+        <source>'Start'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:BtStartQuit.TabOrder" resname="O:FrPractice.O:BtStartQuit.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:BtStartQuit.OnClick" resname="O:FrPractice.O:BtStartQuit.OnClick">
+        <source>BtStartQuitClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.L:FrTypingText.Left" resname="O:FrPractice.L:FrTypingText.Left">
+        <source>114</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TFrTypingText</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.L:FrTypingText.Top" resname="O:FrPractice.L:FrTypingText.Top">
+        <source>81</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TFrTypingText</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.L:FrTypingText.Width" resname="O:FrPractice.L:FrTypingText.Width">
+        <source>328</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TFrTypingText</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.L:FrTypingText.Height" resname="O:FrPractice.L:FrTypingText.Height">
+        <source>160</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TFrTypingText</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.L:FrTypingText.TabOrder" resname="O:FrPractice.L:FrTypingText.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TFrTypingText</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.L:FrTypingText.ExplicitLeft" resname="O:FrPractice.L:FrTypingText.ExplicitLeft">
+        <source>114</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TFrTypingText</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.L:FrTypingText.ExplicitTop" resname="O:FrPractice.L:FrTypingText.ExplicitTop">
+        <source>81</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TFrTypingText</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.L:FrTypingText.I:REText.Top" resname="O:FrPractice.L:FrTypingText.I:REText.Top">
+        <source>7</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.L:FrTypingText.I:REText.BorderStyle" resname="O:FrPractice.L:FrTypingText.I:REText.BorderStyle">
+        <source>bsSingle</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.L:FrTypingText.I:REText.ExplicitTop" resname="O:FrPractice.L:FrTypingText.I:REText.ExplicitTop">
+        <source>7</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TRichEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeType.Left" resname="O:FrPractice.O:PPracticeType.Left">
+        <source>460</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeType.Top" resname="O:FrPractice.O:PPracticeType.Top">
+        <source>88</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeType.Width" resname="O:FrPractice.O:PPracticeType.Width">
+        <source>150</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeType.Height" resname="O:FrPractice.O:PPracticeType.Height">
+        <source>40</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeType.ParentBackground" resname="O:FrPractice.O:PPracticeType.ParentBackground">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeType.TabOrder" resname="O:FrPractice.O:PPracticeType.TabOrder">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeType.O:SBtPracticeType1.Left" resname="O:FrPractice.O:PPracticeType.O:SBtPracticeType1.Left">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeType.O:SBtPracticeType1.Top" resname="O:FrPractice.O:PPracticeType.O:SBtPracticeType1.Top">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeType.O:SBtPracticeType1.Width" resname="O:FrPractice.O:PPracticeType.O:SBtPracticeType1.Width">
+        <source>55</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeType.O:SBtPracticeType1.Height" resname="O:FrPractice.O:PPracticeType.O:SBtPracticeType1.Height">
+        <source>22</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeType.O:SBtPracticeType1.GroupIndex" resname="O:FrPractice.O:PPracticeType.O:SBtPracticeType1.GroupIndex">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeType.O:SBtPracticeType1.Down" resname="O:FrPractice.O:PPracticeType.O:SBtPracticeType1.Down">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeType.O:SBtPracticeType1.Caption" resname="O:FrPractice.O:PPracticeType.O:SBtPracticeType1.Caption">
+        <source>'Words'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeType.O:SBtPracticeType2.Left" resname="O:FrPractice.O:PPracticeType.O:SBtPracticeType2.Left">
+        <source>83</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeType.O:SBtPracticeType2.Top" resname="O:FrPractice.O:PPracticeType.O:SBtPracticeType2.Top">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeType.O:SBtPracticeType2.Width" resname="O:FrPractice.O:PPracticeType.O:SBtPracticeType2.Width">
+        <source>55</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeType.O:SBtPracticeType2.Height" resname="O:FrPractice.O:PPracticeType.O:SBtPracticeType2.Height">
+        <source>22</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeType.O:SBtPracticeType2.GroupIndex" resname="O:FrPractice.O:PPracticeType.O:SBtPracticeType2.GroupIndex">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">68</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeType.O:SBtPracticeType2.Caption" resname="O:FrPractice.O:PPracticeType.O:SBtPracticeType2.Caption">
+        <source>'Time'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.Left" resname="O:FrPractice.O:PPracticeLimit.Left">
+        <source>460</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">70</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.Top" resname="O:FrPractice.O:PPracticeLimit.Top">
+        <source>134</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.Width" resname="O:FrPractice.O:PPracticeLimit.Width">
+        <source>150</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.Height" resname="O:FrPractice.O:PPracticeLimit.Height">
+        <source>40</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.TabOrder" resname="O:FrPractice.O:PPracticeLimit.TabOrder">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit1.Left" resname="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit1.Left">
+        <source>14</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">75</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit1.Top" resname="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit1.Top">
+        <source>9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">76</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit1.Width" resname="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit1.Width">
+        <source>22</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">77</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit1.Height" resname="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit1.Height">
+        <source>22</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">78</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit1.GroupIndex" resname="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit1.GroupIndex">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">79</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit1.Down" resname="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit1.Down">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit1.Caption" resname="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit1.Caption">
+        <source>'10'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit2.Left" resname="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit2.Left">
+        <source>47</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit2.Top" resname="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit2.Top">
+        <source>9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit2.Width" resname="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit2.Width">
+        <source>22</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">84</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit2.Height" resname="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit2.Height">
+        <source>22</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit2.GroupIndex" resname="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit2.GroupIndex">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">86</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit2.Caption" resname="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit2.Caption">
+        <source>'25'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">87</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit3.Left" resname="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit3.Left">
+        <source>88</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">88</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit3.Top" resname="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit3.Top">
+        <source>9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">89</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit3.Width" resname="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit3.Width">
+        <source>22</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">90</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit3.Height" resname="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit3.Height">
+        <source>22</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">91</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit3.GroupIndex" resname="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit3.GroupIndex">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878356</prop><prop prop-type="Status">0</prop><prop prop-type="Order">92</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit3.Caption" resname="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit3.Caption">
+        <source>'50'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878356</prop><prop prop-type="Status">0</prop><prop prop-type="Order">93</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit4.Left" resname="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit4.Left">
+        <source>116</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878356</prop><prop prop-type="Status">0</prop><prop prop-type="Order">94</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit4.Top" resname="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit4.Top">
+        <source>9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878356</prop><prop prop-type="Status">0</prop><prop prop-type="Order">95</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit4.Width" resname="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit4.Width">
+        <source>22</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878356</prop><prop prop-type="Status">0</prop><prop prop-type="Order">96</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit4.Height" resname="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit4.Height">
+        <source>22</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878356</prop><prop prop-type="Status">0</prop><prop prop-type="Order">97</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit4.GroupIndex" resname="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit4.GroupIndex">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878356</prop><prop prop-type="Status">0</prop><prop prop-type="Order">98</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit4.Caption" resname="O:FrPractice.O:PPracticeLimit.O:SBtPracticeLimit4.Caption">
+        <source>'75'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878356</prop><prop prop-type="Status">0</prop><prop prop-type="Order">99</prop><prop prop-type="Type">TSpeedButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:BtConfig.Left" resname="O:FrPractice.O:BtConfig.Left">
+        <source>575</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878356</prop><prop prop-type="Status">0</prop><prop prop-type="Order">100</prop><prop prop-type="Type">TBitBtn</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:BtConfig.Top" resname="O:FrPractice.O:BtConfig.Top">
+        <source>190</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878356</prop><prop prop-type="Status">0</prop><prop prop-type="Order">101</prop><prop prop-type="Type">TBitBtn</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:BtConfig.Width" resname="O:FrPractice.O:BtConfig.Width">
+        <source>35</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878356</prop><prop prop-type="Status">0</prop><prop prop-type="Order">102</prop><prop prop-type="Type">TBitBtn</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:BtConfig.Height" resname="O:FrPractice.O:BtConfig.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878356</prop><prop prop-type="Status">0</prop><prop prop-type="Order">103</prop><prop prop-type="Type">TBitBtn</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:BtConfig.TabOrder" resname="O:FrPractice.O:BtConfig.TabOrder">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878356</prop><prop prop-type="Status">0</prop><prop prop-type="Order">104</prop><prop prop-type="Type">TBitBtn</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.O:BtConfig.OnClick" resname="O:FrPractice.O:BtConfig.OnClick">
+        <source>BtConfigClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878356</prop><prop prop-type="Status">0</prop><prop prop-type="Order">105</prop><prop prop-type="Type">TBitBtn</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.L:FrKeyboard.Left" resname="O:FrPractice.L:FrKeyboard.Left">
+        <source>114</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878356</prop><prop prop-type="Status">0</prop><prop prop-type="Order">106</prop><prop prop-type="Type">TFrKeyboard</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.L:FrKeyboard.Top" resname="O:FrPractice.L:FrKeyboard.Top">
+        <source>249</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878356</prop><prop prop-type="Status">0</prop><prop prop-type="Order">107</prop><prop prop-type="Type">TFrKeyboard</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.L:FrKeyboard.Width" resname="O:FrPractice.L:FrKeyboard.Width">
+        <source>332</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878356</prop><prop prop-type="Status">0</prop><prop prop-type="Order">108</prop><prop prop-type="Type">TFrKeyboard</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.L:FrKeyboard.Height" resname="O:FrPractice.L:FrKeyboard.Height">
+        <source>138</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878356</prop><prop prop-type="Status">0</prop><prop prop-type="Order">109</prop><prop prop-type="Type">TFrKeyboard</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.L:FrKeyboard.TabOrder" resname="O:FrPractice.L:FrKeyboard.TabOrder">
+        <source>6</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878356</prop><prop prop-type="Status">0</prop><prop prop-type="Order">110</prop><prop prop-type="Type">TFrKeyboard</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.L:FrKeyboard.ExplicitLeft" resname="O:FrPractice.L:FrKeyboard.ExplicitLeft">
+        <source>114</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878356</prop><prop prop-type="Status">0</prop><prop prop-type="Order">111</prop><prop prop-type="Type">TFrKeyboard</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FrPractice.L:FrKeyboard.ExplicitTop" resname="O:FrPractice.L:FrKeyboard.ExplicitTop">
+        <source>249</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45666.1235878356</prop><prop prop-type="Status">0</prop><prop prop-type="Order">112</prop><prop prop-type="Type">TFrKeyboard</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

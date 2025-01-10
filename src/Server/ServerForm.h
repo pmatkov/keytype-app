@@ -15,7 +15,7 @@ class TFServer : public TForm
 {
 __published:	// IDE-managed Components
 	TButton *BtTCPServer;
-	TLabel *LTCPConnectionStatus;
+	TLabel *LTCPServerStatus;
 	TLabel *LUDPServerStatus;
 	TButton *BtUDPServer;
 	void __fastcall BtTCPServerClick(TObject *Sender);

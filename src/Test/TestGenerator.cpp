@@ -40,6 +40,8 @@ class TTestGenerator : public TTestCase
 void __fastcall TTestGenerator::SetUp()
 {
 	generator = Generator(letters, useNumbers, useUppercase, usePunctuation);
+
+	LOGGER_CLEAR_LOG();
 	LOGGER_LOG("Starting test...");
 
 }

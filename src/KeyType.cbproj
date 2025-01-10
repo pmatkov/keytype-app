@@ -65,8 +65,8 @@
         <UWP_CppLogo44>$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_44.png</UWP_CppLogo44>
         <UWP_CppLogo150>$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_150.png</UWP_CppLogo150>
         <SanitizedProjectName>KeyType</SanitizedProjectName>
-        <IncludePath>C:\Program Files (x86)\FastReports\LibD28\;Tests\;$(IncludePath)</IncludePath>
-        <ILINK_LibraryPath>C:\Program Files (x86)\FastReports\LibD28\;Tests\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <IncludePath>Core\dal\;core\web service\;core\view\;core\utils\;core\settings\;core\session\;core\services\;core\models\;core\game\;core\forms\profile\;core\forms\preferences\;core\forms\practice\;core\forms\main\;core\forms\logs\;core\forms\lessons\;core\forms\converter\;core\forms\authentication\;core\exceptions\;core\data\;core\achievements\;C:\Program Files (x86)\FastReports\LibD28\;Tests\;$(IncludePath)</IncludePath>
+        <ILINK_LibraryPath>Core\dal\;core\web service\;core\view\;core\utils\;core\settings\;core\session\;core\services\;core\models\;core\game\;core\forms\profile\;core\forms\preferences\;core\forms\practice\;core\forms\main\;core\forms\logs\;core\forms\lessons\;core\forms\converter\;core\forms\authentication\;core\exceptions\;core\data\;core\achievements\;C:\Program Files (x86)\FastReports\LibD28\;Tests\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
         <Custom_Styles>&quot;Windows11 Modern Dark|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Windows11_Modern_Dark.vsf&quot;;&quot;Windows11 Modern Light|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Windows11_Modern_Light.vsf&quot;</Custom_Styles>
         <ILINK_GenerateDRC>True</ILINK_GenerateDRC>
     </PropertyGroup>
@@ -130,240 +130,456 @@
         <LinkPackageImports>rtl.bpi;vcl.bpi</LinkPackageImports>
     </PropertyGroup>
     <ItemGroup>
-        <CppCompile Include="Achievement.cpp">
+        <CppCompile Include="core\achievements\Achievement.cpp">
             <VirtualFolder>{19CAE9E1-B7D4-4FA8-AF59-D5CA7D8D5042}</VirtualFolder>
-            <DependentOn>Achievement.h</DependentOn>
-            <BuildOrder>72</BuildOrder>
+            <DependentOn>core\achievements\Achievement.h</DependentOn>
+            <BuildOrder>74</BuildOrder>
         </CppCompile>
-        <CppCompile Include="AchievementsForm.cpp">
-            <VirtualFolder>{2E918AF9-752D-48F9-8019-B9A9EEE106C8}</VirtualFolder>
-            <Form>FAchievements</Form>
-            <FormType>dfm</FormType>
-            <DependentOn>AchievementsForm.h</DependentOn>
-            <BuildOrder>73</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="AchievementsHeader.cpp">
+        <CppCompile Include="core\achievements\AchievementsHeader.cpp">
             <VirtualFolder>{19CAE9E1-B7D4-4FA8-AF59-D5CA7D8D5042}</VirtualFolder>
-            <DependentOn>AchievementsHeader.h</DependentOn>
-            <BuildOrder>69</BuildOrder>
+            <DependentOn>core\achievements\AchievementsHeader.h</DependentOn>
+            <BuildOrder>75</BuildOrder>
         </CppCompile>
-        <CppCompile Include="AchievementsRecord.cpp">
+        <CppCompile Include="core\achievements\AchievementsRecord.cpp">
             <VirtualFolder>{19CAE9E1-B7D4-4FA8-AF59-D5CA7D8D5042}</VirtualFolder>
-            <DependentOn>AchievementsRecord.h</DependentOn>
-            <BuildOrder>70</BuildOrder>
+            <DependentOn>core\achievements\AchievementsRecord.h</DependentOn>
+            <BuildOrder>76</BuildOrder>
         </CppCompile>
-        <CppCompile Include="AchievementsUtils.cpp">
+        <CppCompile Include="core\achievements\AchievementsUtils.cpp">
             <VirtualFolder>{19CAE9E1-B7D4-4FA8-AF59-D5CA7D8D5042}</VirtualFolder>
-            <DependentOn>AchievementsUtils.h</DependentOn>
-            <BuildOrder>71</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="AppSettings.cpp">
-            <VirtualFolder>{6D6A1B94-904B-4CFC-BA2B-E48D16DDAD0E}</VirtualFolder>
-            <DependentOn>AppSettings.h</DependentOn>
-            <BuildOrder>42</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="AuthenticationForm.cpp">
-            <VirtualFolder>{F6B7C7E8-2F86-4A67-B4A3-6E99C1D2C773}</VirtualFolder>
-            <Form>FAuthentication</Form>
-            <FormType>dfm</FormType>
-            <DependentOn>AuthenticationForm.h</DependentOn>
-            <BuildOrder>21</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="AuthenticationService.cpp">
-            <VirtualFolder>{26BC7E46-ECBD-4AA7-B03E-17DAA77318AD}</VirtualFolder>
-            <DependentOn>AuthenticationService.h</DependentOn>
-            <BuildOrder>21</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="Books.cpp">
-            <VirtualFolder>{8FB63F96-DB9B-44EE-BA3E-3A48525DE697}</VirtualFolder>
-            <DependentOn>Books.h</DependentOn>
-            <BuildOrder>18</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="ColorButton.cpp">
-            <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
-            <DependentOn>ColorButton.h</DependentOn>
+            <DependentOn>core\achievements\AchievementsUtils.h</DependentOn>
             <BuildOrder>77</BuildOrder>
         </CppCompile>
-        <CppCompile Include="ConverterForm.cpp">
-            <VirtualFolder>{D1032E3D-EA49-42CE-95C2-FF399AA004CF}</VirtualFolder>
-            <Form>FConverter</Form>
-            <FormType>dfm</FormType>
-            <DependentOn>ConverterForm.h</DependentOn>
-            <BuildOrder>52</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="CoursesFrame.cpp">
-            <VirtualFolder>{E0097B50-4B62-4563-BB1D-2B1764BFCDE4}</VirtualFolder>
-            <Form>FrCourses</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TFrame</DesignClass>
-            <DependentOn>CoursesFrame.h</DependentOn>
-            <BuildOrder>63</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="CryptoUtils.cpp">
-            <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
-            <DependentOn>CryptoUtils.h</DependentOn>
-            <BuildOrder>71</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="CustomTextFrame.cpp">
-            <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
-            <Form>FrCustomText</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TFrame</DesignClass>
-            <DependentOn>CustomTextFrame.h</DependentOn>
-            <BuildOrder>29</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="DataModule.cpp">
+        <CppCompile Include="Core\dal\DataModule.cpp">
             <VirtualFolder>{8FB63F96-DB9B-44EE-BA3E-3A48525DE697}</VirtualFolder>
             <Form>DataModule1</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
-            <DependentOn>DataModule.h</DependentOn>
-            <BuildOrder>38</BuildOrder>
+            <DependentOn>Core\dal\DataModule.h</DependentOn>
+            <BuildOrder>79</BuildOrder>
         </CppCompile>
-        <CppCompile Include="Dictionary.cpp">
-            <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
-            <DependentOn>Dictionary.h</DependentOn>
-            <BuildOrder>15</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="DictionaryEntry.cpp">
-            <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
-            <DependentOn>DictionaryEntry.h</DependentOn>
-            <BuildOrder>53</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="EDirNotFoundException.cpp">
+        <CppCompile Include="core\exceptions\EDirNotFoundException.cpp">
             <VirtualFolder>{C9B9CF94-D644-46A8-AFE2-4CDDCCC37F87}</VirtualFolder>
-            <DependentOn>EDirNotFoundException.h</DependentOn>
-            <BuildOrder>44</BuildOrder>
+            <DependentOn>core\exceptions\EDirNotFoundException.h</DependentOn>
+            <BuildOrder>72</BuildOrder>
         </CppCompile>
-        <CppCompile Include="EFileNotFoundException.cpp">
+        <CppCompile Include="core\exceptions\EFileNotFoundException.cpp">
             <VirtualFolder>{C9B9CF94-D644-46A8-AFE2-4CDDCCC37F87}</VirtualFolder>
-            <DependentOn>EFileNotFoundException.h</DependentOn>
-            <BuildOrder>46</BuildOrder>
+            <DependentOn>core\exceptions\EFileNotFoundException.h</DependentOn>
+            <BuildOrder>73</BuildOrder>
         </CppCompile>
-        <CppCompile Include="EInvalidArgumentException.cpp">
+        <CppCompile Include="core\exceptions\EInvalidArgumentException.cpp">
             <VirtualFolder>{C9B9CF94-D644-46A8-AFE2-4CDDCCC37F87}</VirtualFolder>
-            <DependentOn>EInvalidArgumentException.h</DependentOn>
-            <BuildOrder>47</BuildOrder>
+            <DependentOn>core\exceptions\EInvalidArgumentException.h</DependentOn>
+            <BuildOrder>74</BuildOrder>
         </CppCompile>
-        <CppCompile Include="EIOException.cpp">
+        <CppCompile Include="core\exceptions\EIOException.cpp">
             <VirtualFolder>{C9B9CF94-D644-46A8-AFE2-4CDDCCC37F87}</VirtualFolder>
-            <DependentOn>EIOException.h</DependentOn>
-            <BuildOrder>45</BuildOrder>
+            <DependentOn>core\exceptions\EIOException.h</DependentOn>
+            <BuildOrder>75</BuildOrder>
         </CppCompile>
-        <CppCompile Include="ENullPointerException.cpp">
+        <CppCompile Include="core\exceptions\ENullPointerException.cpp">
             <VirtualFolder>{C9B9CF94-D644-46A8-AFE2-4CDDCCC37F87}</VirtualFolder>
-            <DependentOn>ENullPointerException.h</DependentOn>
-            <BuildOrder>34</BuildOrder>
+            <DependentOn>core\exceptions\ENullPointerException.h</DependentOn>
+            <BuildOrder>76</BuildOrder>
         </CppCompile>
-        <CppCompile Include="EnumUtils.cpp">
-            <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
-            <DependentOn>EnumUtils.h</DependentOn>
-            <BuildOrder>44</BuildOrder>
+        <CppCompile Include="core\exceptions\StackTrace.cpp">
+            <VirtualFolder>{C9B9CF94-D644-46A8-AFE2-4CDDCCC37F87}</VirtualFolder>
+            <DependentOn>core\exceptions\StackTrace.h</DependentOn>
+            <BuildOrder>77</BuildOrder>
         </CppCompile>
-        <CppCompile Include="ExternalSourcesFrame.cpp">
-            <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
-            <Form>FrExternalSources</Form>
+        <CppCompile Include="core\forms\authentication\AuthenticationForm.cpp">
+            <VirtualFolder>{F6B7C7E8-2F86-4A67-B4A3-6E99C1D2C773}</VirtualFolder>
+            <Form>FAuthentication</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>core\forms\authentication\AuthenticationForm.h</DependentOn>
+            <BuildOrder>75</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\forms\authentication\LoginFrame.cpp">
+            <VirtualFolder>{F6B7C7E8-2F86-4A67-B4A3-6E99C1D2C773}</VirtualFolder>
+            <Form>FrLogin</Form>
             <FormType>dfm</FormType>
             <DesignClass>TFrame</DesignClass>
-            <DependentOn>ExternalSourcesFrame.h</DependentOn>
-            <BuildOrder>57</BuildOrder>
+            <DependentOn>core\forms\authentication\LoginFrame.h</DependentOn>
+            <BuildOrder>76</BuildOrder>
         </CppCompile>
-        <CppCompile Include="Factory.cpp">
-            <VirtualFolder>{4BFADF1C-F038-4685-8422-706F34C58511}</VirtualFolder>
-            <DependentOn>Factory.h</DependentOn>
-            <BuildOrder>54</BuildOrder>
+        <CppCompile Include="core\forms\authentication\RegisterFrame.cpp">
+            <VirtualFolder>{F6B7C7E8-2F86-4A67-B4A3-6E99C1D2C773}</VirtualFolder>
+            <Form>FrRegister</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+            <DependentOn>core\forms\authentication\RegisterFrame.h</DependentOn>
+            <BuildOrder>77</BuildOrder>
         </CppCompile>
-        <CppCompile Include="FileUtils.cpp">
-            <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
-            <DependentOn>FileUtils.h</DependentOn>
-            <BuildOrder>16</BuildOrder>
+        <CppCompile Include="core\forms\converter\ConverterForm.cpp">
+            <VirtualFolder>{D1032E3D-EA49-42CE-95C2-FF399AA004CF}</VirtualFolder>
+            <Form>FConverter</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>core\forms\converter\ConverterForm.h</DependentOn>
+            <BuildOrder>77</BuildOrder>
         </CppCompile>
-        <CppCompile Include="FlyingWord.cpp">
-            <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
-            <DependentOn>FlyingWord.h</DependentOn>
-            <BuildOrder>49</BuildOrder>
+        <CppCompile Include="core\forms\lessons\CoursesFrame.cpp">
+            <VirtualFolder>{E0097B50-4B62-4563-BB1D-2B1764BFCDE4}</VirtualFolder>
+            <Form>FrCourses</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+            <DependentOn>core\forms\lessons\CoursesFrame.h</DependentOn>
+            <BuildOrder>77</BuildOrder>
         </CppCompile>
-        <CppCompile Include="FlyingWordsFrame.cpp">
+        <CppCompile Include="core\forms\lessons\LessonResultsForm.cpp">
+            <VirtualFolder>{E0097B50-4B62-4563-BB1D-2B1764BFCDE4}</VirtualFolder>
+            <Form>FLessonResults</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>core\forms\lessons\LessonResultsForm.h</DependentOn>
+            <BuildOrder>77</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Core\forms\lessons\LessonsForm.cpp">
+            <VirtualFolder>{E0097B50-4B62-4563-BB1D-2B1764BFCDE4}</VirtualFolder>
+            <Form>FLessons</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>Core\forms\lessons\LessonsForm.h</DependentOn>
+            <BuildOrder>79</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\forms\lessons\LessonsFrame.cpp">
+            <VirtualFolder>{E0097B50-4B62-4563-BB1D-2B1764BFCDE4}</VirtualFolder>
+            <Form>FrLessons</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+            <DependentOn>core\forms\lessons\LessonsFrame.h</DependentOn>
+            <BuildOrder>77</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\forms\logs\LogsForm.cpp">
+            <VirtualFolder>{CB158F19-0D21-4CE8-838A-4B41C5711017}</VirtualFolder>
+            <Form>FLogs</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>core\forms\logs\LogsForm.h</DependentOn>
+            <BuildOrder>77</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\forms\main\FlyingWordsFrame.cpp">
             <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
             <Form>FrFlyingWords</Form>
             <FormType>dfm</FormType>
             <DesignClass>TFrame</DesignClass>
-            <DependentOn>FlyingWordsFrame.h</DependentOn>
-            <BuildOrder>50</BuildOrder>
+            <DependentOn>core\forms\main\FlyingWordsFrame.h</DependentOn>
+            <BuildOrder>73</BuildOrder>
         </CppCompile>
-        <CppCompile Include="FlyingWordsStatsFrame.cpp">
+        <CppCompile Include="core\forms\main\FlyingWordsStatsFrame.cpp">
             <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
             <Form>FrFlyingWordsStats</Form>
             <FormType>dfm</FormType>
             <DesignClass>TFrame</DesignClass>
-            <DependentOn>FlyingWordsStatsFrame.h</DependentOn>
-            <BuildOrder>57</BuildOrder>
+            <DependentOn>core\forms\main\FlyingWordsStatsFrame.h</DependentOn>
+            <BuildOrder>70</BuildOrder>
         </CppCompile>
-        <CppCompile Include="GameEngine.cpp">
-            <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
-            <DependentOn>GameEngine.h</DependentOn>
-            <BuildOrder>51</BuildOrder>
+        <CppCompile Include="core\forms\main\Lessons2Frame.cpp">
+            <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
+            <Form>FrLessons2</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+            <DependentOn>core\forms\main\Lessons2Frame.h</DependentOn>
+            <BuildOrder>77</BuildOrder>
         </CppCompile>
-        <CppCompile Include="GameScoreThread.cpp">
-            <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
-            <DependentOn>GameScoreThread.h</DependentOn>
-            <BuildOrder>59</BuildOrder>
+        <CppCompile Include="core\forms\main\MainForm.cpp">
+            <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
+            <Form>FMain</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>core\forms\main\MainForm.h</DependentOn>
+            <BuildOrder>74</BuildOrder>
         </CppCompile>
-        <CppCompile Include="GameStatistics.cpp">
-            <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
-            <DependentOn>GameStatistics.h</DependentOn>
-            <BuildOrder>60</BuildOrder>
+        <CppCompile Include="core\forms\main\MainFrame.cpp">
+            <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
+            <Form>FrMain</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+            <DependentOn>core\forms\main\MainFrame.h</DependentOn>
+            <BuildOrder>75</BuildOrder>
         </CppCompile>
-        <CppCompile Include="GameThread.cpp">
-            <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
-            <DependentOn>GameThread.h</DependentOn>
-            <BuildOrder>55</BuildOrder>
+        <CppCompile Include="core\forms\main\PracticeFrame.cpp">
+            <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
+            <Form>FrPractice</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+            <DependentOn>core\forms\main\PracticeFrame.h</DependentOn>
+            <BuildOrder>76</BuildOrder>
         </CppCompile>
-        <CppCompile Include="GeneratedTextFrame.cpp">
+        <CppCompile Include="core\forms\main\TypingStatsFrame.cpp">
+            <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
+            <Form>FrTypingStats</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+            <DependentOn>core\forms\main\TypingStatsFrame.h</DependentOn>
+            <BuildOrder>71</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\forms\main\TypingTextFrame.cpp">
+            <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
+            <Form>FrTypingText</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+            <DependentOn>core\forms\main\TypingTextFrame.h</DependentOn>
+            <BuildOrder>72</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\forms\practice\ColorButton.cpp">
+            <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
+            <DependentOn>core\forms\practice\ColorButton.h</DependentOn>
+            <BuildOrder>72</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\forms\practice\CustomTextFrame.cpp">
+            <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
+            <Form>FrCustomText</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+            <DependentOn>core\forms\practice\CustomTextFrame.h</DependentOn>
+            <BuildOrder>73</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\forms\practice\ExternalSourcesFrame.cpp">
+            <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
+            <Form>FrExternalSources</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+            <DependentOn>core\forms\practice\ExternalSourcesFrame.h</DependentOn>
+            <BuildOrder>74</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\forms\practice\GeneratedTextFrame.cpp">
             <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
             <Form>FrGeneratedText</Form>
             <FormType>dfm</FormType>
             <DesignClass>TFrame</DesignClass>
-            <DependentOn>GeneratedTextFrame.h</DependentOn>
-            <BuildOrder>27</BuildOrder>
+            <DependentOn>core\forms\practice\GeneratedTextFrame.h</DependentOn>
+            <BuildOrder>75</BuildOrder>
         </CppCompile>
-        <CppCompile Include="IGameDisplay.cpp">
-            <VirtualFolder>{4BFADF1C-F038-4685-8422-706F34C58511}</VirtualFolder>
-            <DependentOn>IGameDisplay.h</DependentOn>
-            <BuildOrder>56</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="IMultiItemDisplay.cpp">
-            <VirtualFolder>{4BFADF1C-F038-4685-8422-706F34C58511}</VirtualFolder>
-            <DependentOn>IMultiItemDisplay.h</DependentOn>
-            <BuildOrder>53</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="ISettings.cpp">
-            <VirtualFolder>{6D6A1B94-904B-4CFC-BA2B-E48D16DDAD0E}</VirtualFolder>
-            <DependentOn>ISettings.h</DependentOn>
-            <BuildOrder>33</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="ISingleItemDisplay.cpp">
-            <VirtualFolder>{4BFADF1C-F038-4685-8422-706F34C58511}</VirtualFolder>
-            <DependentOn>ISingleItemDisplay.h</DependentOn>
-            <BuildOrder>61</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="KeyboardFrame.cpp">
+        <CppCompile Include="core\forms\practice\KeyboardFrame.cpp">
             <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
             <Form>FrKeyboard</Form>
             <FormType>dfm</FormType>
             <DesignClass>TFrame</DesignClass>
-            <DependentOn>KeyboardFrame.h</DependentOn>
+            <DependentOn>core\forms\practice\KeyboardFrame.h</DependentOn>
             <BuildOrder>76</BuildOrder>
         </CppCompile>
-        <CppCompile Include="KeyStatistics.cpp">
-            <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
-            <DependentOn>KeyStatistics.h</DependentOn>
-            <BuildOrder>34</BuildOrder>
+        <None Include="core\forms\practice\OptionsFrame.cpp">
+            <Exclude>True</Exclude>
+            <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
+            <Form>FrOptions</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+            <DependentOn>core\forms\practice\OptionsFrame.h</DependentOn>
+            <BuildOrder>79</BuildOrder>
+        </None>
+        <None Include="Core\forms\practice\PracticeForm.cpp">
+            <Exclude>True</Exclude>
+            <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
+            <CreateIndex>2</CreateIndex>
+            <Form>FPractice</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>Core\forms\practice\PracticeForm.h</DependentOn>
+            <BuildOrder>79</BuildOrder>
+        </None>
+        <CppCompile Include="core\forms\practice\PracticeSourceForm.cpp">
+            <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
+            <Form>FPracticeSource</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>core\forms\practice\PracticeSourceForm.h</DependentOn>
+            <BuildOrder>77</BuildOrder>
         </CppCompile>
-        <CppCompile Include="KeystrokeProcessorThread.cpp">
+        <CppCompile Include="core\forms\preferences\PreferencesForm.cpp">
+            <VirtualFolder>{B49A349D-1438-45E5-B4FD-36C3DF2C665B}</VirtualFolder>
+            <Form>FPreferences</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>core\forms\preferences\PreferencesForm.h</DependentOn>
+            <BuildOrder>77</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\forms\profile\AchievementsForm.cpp">
+            <VirtualFolder>{2E918AF9-752D-48F9-8019-B9A9EEE106C8}</VirtualFolder>
+            <Form>FAchievements</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>core\forms\profile\AchievementsForm.h</DependentOn>
+            <BuildOrder>76</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\forms\profile\ProfileForm.cpp">
+            <VirtualFolder>{2E918AF9-752D-48F9-8019-B9A9EEE106C8}</VirtualFolder>
+            <Form>FProfile</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>core\forms\profile\ProfileForm.h</DependentOn>
+            <BuildOrder>77</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\game\FlyingWord.cpp">
             <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
-            <DependentOn>KeystrokeProcessorThread.h</DependentOn>
-            <BuildOrder>58</BuildOrder>
+            <DependentOn>core\game\FlyingWord.h</DependentOn>
+            <BuildOrder>70</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\game\GameEngine.cpp">
+            <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
+            <DependentOn>core\game\GameEngine.h</DependentOn>
+            <BuildOrder>71</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\game\GameScoreThread.cpp">
+            <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
+            <DependentOn>core\game\GameScoreThread.h</DependentOn>
+            <BuildOrder>72</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\game\GameStatistics.cpp">
+            <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
+            <DependentOn>core\game\GameStatistics.h</DependentOn>
+            <BuildOrder>73</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\game\GameThread.cpp">
+            <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
+            <DependentOn>core\game\GameThread.h</DependentOn>
+            <BuildOrder>74</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\game\KeystrokeProcessorThread.cpp">
+            <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
+            <DependentOn>core\game\KeystrokeProcessorThread.h</DependentOn>
+            <BuildOrder>75</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\game\Limit.cpp">
+            <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
+            <DependentOn>core\game\Limit.h</DependentOn>
+            <BuildOrder>76</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\game\Position.cpp">
+            <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
+            <DependentOn>core\game\Position.h</DependentOn>
+            <BuildOrder>77</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Core\models\Books.cpp">
+            <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
+            <DependentOn>Core\models\Books.h</DependentOn>
+            <BuildOrder>79</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\models\Dictionary.cpp">
+            <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
+            <DependentOn>core\models\Dictionary.h</DependentOn>
+            <BuildOrder>73</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\models\DictionaryEntry.cpp">
+            <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
+            <DependentOn>core\models\DictionaryEntry.h</DependentOn>
+            <BuildOrder>74</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\models\KeyStatistics.cpp">
+            <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
+            <DependentOn>core\models\KeyStatistics.h</DependentOn>
+            <BuildOrder>75</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\models\TextSource.cpp">
+            <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
+            <DependentOn>core\models\TextSource.h</DependentOn>
+            <BuildOrder>76</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\models\User.cpp">
+            <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
+            <DependentOn>core\models\User.h</DependentOn>
+            <BuildOrder>77</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\services\AuthenticationService.cpp">
+            <VirtualFolder>{26BC7E46-ECBD-4AA7-B03E-17DAA77318AD}</VirtualFolder>
+            <DependentOn>core\services\AuthenticationService.h</DependentOn>
+            <BuildOrder>74</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\services\Logger.cpp">
+            <VirtualFolder>{26BC7E46-ECBD-4AA7-B03E-17DAA77318AD}</VirtualFolder>
+            <DependentOn>core\services\Logger.h</DependentOn>
+            <BuildOrder>75</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\services\Parser.cpp">
+            <VirtualFolder>{26BC7E46-ECBD-4AA7-B03E-17DAA77318AD}</VirtualFolder>
+            <DependentOn>core\services\Parser.h</DependentOn>
+            <BuildOrder>76</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\services\Random.cpp">
+            <VirtualFolder>{26BC7E46-ECBD-4AA7-B03E-17DAA77318AD}</VirtualFolder>
+            <DependentOn>core\services\Random.h</DependentOn>
+            <BuildOrder>77</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\session\MainSession.cpp">
+            <VirtualFolder>{893884F7-72F0-483F-8A49-6A63980DD6D7}</VirtualFolder>
+            <DependentOn>core\session\MainSession.h</DependentOn>
+            <BuildOrder>75</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\session\Session.cpp">
+            <VirtualFolder>{893884F7-72F0-483F-8A49-6A63980DD6D7}</VirtualFolder>
+            <DependentOn>core\session\Session.h</DependentOn>
+            <BuildOrder>76</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\session\TypingSession.cpp">
+            <VirtualFolder>{893884F7-72F0-483F-8A49-6A63980DD6D7}</VirtualFolder>
+            <DependentOn>core\session\TypingSession.h</DependentOn>
+            <BuildOrder>77</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\settings\AppSettings.cpp">
+            <VirtualFolder>{6D6A1B94-904B-4CFC-BA2B-E48D16DDAD0E}</VirtualFolder>
+            <DependentOn>core\settings\AppSettings.h</DependentOn>
+            <BuildOrder>75</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\settings\ISettings.cpp">
+            <VirtualFolder>{6D6A1B94-904B-4CFC-BA2B-E48D16DDAD0E}</VirtualFolder>
+            <DependentOn>core\settings\ISettings.h</DependentOn>
+            <BuildOrder>76</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\settings\TypingSettings.cpp">
+            <VirtualFolder>{6D6A1B94-904B-4CFC-BA2B-E48D16DDAD0E}</VirtualFolder>
+            <DependentOn>core\settings\TypingSettings.h</DependentOn>
+            <BuildOrder>77</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\utils\CryptoUtils.cpp">
+            <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
+            <DependentOn>core\utils\CryptoUtils.h</DependentOn>
+            <BuildOrder>72</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\utils\EnumUtils.cpp">
+            <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
+            <DependentOn>core\utils\EnumUtils.h</DependentOn>
+            <BuildOrder>73</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\utils\FileUtils.cpp">
+            <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
+            <DependentOn>core\utils\FileUtils.h</DependentOn>
+            <BuildOrder>74</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\utils\TextUtils.cpp">
+            <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
+            <DependentOn>core\utils\TextUtils.h</DependentOn>
+            <BuildOrder>75</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\utils\TimeManager.cpp">
+            <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
+            <DependentOn>core\utils\TimeManager.h</DependentOn>
+            <BuildOrder>76</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\utils\UIUtils.cpp">
+            <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
+            <DependentOn>core\utils\UIUtils.h</DependentOn>
+            <BuildOrder>77</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\view\Factory.cpp">
+            <VirtualFolder>{4BFADF1C-F038-4685-8422-706F34C58511}</VirtualFolder>
+            <DependentOn>core\view\Factory.h</DependentOn>
+            <BuildOrder>74</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\view\IGameDisplay.cpp">
+            <VirtualFolder>{4BFADF1C-F038-4685-8422-706F34C58511}</VirtualFolder>
+            <DependentOn>core\view\IGameDisplay.h</DependentOn>
+            <BuildOrder>75</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\view\IMultiItemDisplay.cpp">
+            <VirtualFolder>{4BFADF1C-F038-4685-8422-706F34C58511}</VirtualFolder>
+            <DependentOn>core\view\IMultiItemDisplay.h</DependentOn>
+            <BuildOrder>76</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\view\ISingleItemDisplay.cpp">
+            <VirtualFolder>{4BFADF1C-F038-4685-8422-706F34C58511}</VirtualFolder>
+            <DependentOn>core\view\ISingleItemDisplay.h</DependentOn>
+            <BuildOrder>77</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\web service\TextCasingSOAP.cpp">
+            <VirtualFolder>{E4DA7E9B-DBC6-4FED-A59E-0602460A3378}</VirtualFolder>
+            <DependentOn>core\web service\TextCasingSOAP.h</DependentOn>
+            <BuildOrder>76</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="core\web service\TextServiceSOAP.cpp">
+            <VirtualFolder>{E4DA7E9B-DBC6-4FED-A59E-0602460A3378}</VirtualFolder>
+            <DependentOn>core\web service\TextServiceSOAP.h</DependentOn>
+            <BuildOrder>77</BuildOrder>
         </CppCompile>
         <CppCompile Include="KeyType.cpp">
             <BuildOrder>0</BuildOrder>
@@ -373,237 +589,41 @@
             <BuildOrder>1</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>
-        <CppCompile Include="LessonResultsForm.cpp">
-            <VirtualFolder>{E0097B50-4B62-4563-BB1D-2B1764BFCDE4}</VirtualFolder>
-            <Form>FLessonResults</Form>
-            <FormType>dfm</FormType>
-            <DependentOn>LessonResultsForm.h</DependentOn>
-            <BuildOrder>68</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="Lessons2Frame.cpp">
-            <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
-            <Form>FrLessons2</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TFrame</DesignClass>
-            <DependentOn>Lessons2Frame.h</DependentOn>
-            <BuildOrder>65</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="LessonsForm.cpp">
-            <VirtualFolder>{E0097B50-4B62-4563-BB1D-2B1764BFCDE4}</VirtualFolder>
-            <Form>FLessons</Form>
-            <FormType>dfm</FormType>
-            <DependentOn>LessonsForm.h</DependentOn>
-            <BuildOrder>62</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="LessonsFrame.cpp">
-            <VirtualFolder>{E0097B50-4B62-4563-BB1D-2B1764BFCDE4}</VirtualFolder>
-            <Form>FrLessons</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TFrame</DesignClass>
-            <DependentOn>LessonsFrame.h</DependentOn>
-            <BuildOrder>64</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="Limit.cpp">
-            <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
-            <DependentOn>Limit.h</DependentOn>
-            <BuildOrder>57</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="Logger.cpp">
-            <VirtualFolder>{26BC7E46-ECBD-4AA7-B03E-17DAA77318AD}</VirtualFolder>
-            <DependentOn>Logger.h</DependentOn>
-            <BuildOrder>35</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="LoginFrame.cpp">
-            <VirtualFolder>{F6B7C7E8-2F86-4A67-B4A3-6E99C1D2C773}</VirtualFolder>
-            <Form>FrLogin</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TFrame</DesignClass>
-            <DependentOn>LoginFrame.h</DependentOn>
-            <BuildOrder>37</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="LogsForm.cpp">
-            <VirtualFolder>{CB158F19-0D21-4CE8-838A-4B41C5711017}</VirtualFolder>
-            <Form>FLogs</Form>
-            <FormType>dfm</FormType>
-            <DependentOn>LogsForm.h</DependentOn>
-            <BuildOrder>74</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="MainForm.cpp">
-            <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
-            <Form>FMain</Form>
-            <FormType>dfm</FormType>
-            <DependentOn>MainForm.h</DependentOn>
-            <BuildOrder>2</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="MainFrame.cpp">
-            <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
-            <Form>FrMain</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TFrame</DesignClass>
-            <DependentOn>MainFrame.h</DependentOn>
-            <BuildOrder>26</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="MainSession.cpp">
-            <VirtualFolder>{893884F7-72F0-483F-8A49-6A63980DD6D7}</VirtualFolder>
-            <DependentOn>MainSession.h</DependentOn>
-            <BuildOrder>30</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="Parser.cpp">
-            <VirtualFolder>{26BC7E46-ECBD-4AA7-B03E-17DAA77318AD}</VirtualFolder>
-            <DependentOn>Parser.h</DependentOn>
-            <BuildOrder>34</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="Position.cpp">
-            <VirtualFolder>{8FD859FE-69F3-4938-8F63-0FFC19E975BE}</VirtualFolder>
-            <DependentOn>Position.h</DependentOn>
-            <BuildOrder>50</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="PracticeFrame.cpp">
-            <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
-            <Form>FrPractice</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TFrame</DesignClass>
-            <DependentOn>PracticeFrame.h</DependentOn>
-            <BuildOrder>25</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="PracticeSourceForm.cpp">
-            <VirtualFolder>{78CB0057-7BC4-4B83-9609-C573EB0EAF04}</VirtualFolder>
-            <Form>FPracticeSource</Form>
-            <FormType>dfm</FormType>
-            <DependentOn>PracticeSourceForm.h</DependentOn>
-            <BuildOrder>12</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="PreferencesForm.cpp">
-            <VirtualFolder>{B49A349D-1438-45E5-B4FD-36C3DF2C665B}</VirtualFolder>
-            <Form>FPreferences</Form>
-            <FormType>dfm</FormType>
-            <DependentOn>PreferencesForm.h</DependentOn>
-            <BuildOrder>39</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="ProfileForm.cpp">
-            <VirtualFolder>{2E918AF9-752D-48F9-8019-B9A9EEE106C8}</VirtualFolder>
-            <Form>FProfile</Form>
-            <FormType>dfm</FormType>
-            <DependentOn>ProfileForm.h</DependentOn>
-            <BuildOrder>67</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="Random.cpp">
-            <VirtualFolder>{26BC7E46-ECBD-4AA7-B03E-17DAA77318AD}</VirtualFolder>
-            <DependentOn>Random.h</DependentOn>
-            <BuildOrder>54</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="RegisterFrame.cpp">
-            <VirtualFolder>{F6B7C7E8-2F86-4A67-B4A3-6E99C1D2C773}</VirtualFolder>
-            <Form>FrRegister</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TFrame</DesignClass>
-            <DependentOn>RegisterFrame.h</DependentOn>
-            <BuildOrder>38</BuildOrder>
-        </CppCompile>
         <DelphiCompile Include="reinit.pas">
             <BuildOrder>40</BuildOrder>
         </DelphiCompile>
-        <CppCompile Include="Session.cpp">
-            <VirtualFolder>{893884F7-72F0-483F-8A49-6A63980DD6D7}</VirtualFolder>
-            <DependentOn>Session.h</DependentOn>
-            <BuildOrder>31</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="StackTrace.cpp">
-            <VirtualFolder>{C9B9CF94-D644-46A8-AFE2-4CDDCCC37F87}</VirtualFolder>
-            <DependentOn>StackTrace.h</DependentOn>
-            <BuildOrder>34</BuildOrder>
-        </CppCompile>
         <LibFiles Include="Test\GeneratorLib.lib" Condition="'$(Platform)'=='Win32'">
             <BuildOrder>68</BuildOrder>
             <IgnorePath>true</IgnorePath>
         </LibFiles>
-        <CppCompile Include="TextCasingSOAP.cpp">
-            <VirtualFolder>{E4DA7E9B-DBC6-4FED-A59E-0602460A3378}</VirtualFolder>
-            <DependentOn>TextCasingSOAP.h</DependentOn>
-            <BuildOrder>75</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="TextServiceSOAP.cpp">
-            <VirtualFolder>{E4DA7E9B-DBC6-4FED-A59E-0602460A3378}</VirtualFolder>
-            <DependentOn>TextServiceSOAP.h</DependentOn>
-            <BuildOrder>77</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="TextSource.cpp">
-            <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
-            <DependentOn>TextSource.h</DependentOn>
-            <BuildOrder>4</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="TextUtils.cpp">
-            <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
-            <DependentOn>TextUtils.h</DependentOn>
-            <BuildOrder>3</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="TimeManager.cpp">
-            <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
-            <DependentOn>TimeManager.h</DependentOn>
-            <BuildOrder>34</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="TypingSession.cpp">
-            <VirtualFolder>{893884F7-72F0-483F-8A49-6A63980DD6D7}</VirtualFolder>
-            <DependentOn>TypingSession.h</DependentOn>
-            <BuildOrder>9</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="TypingSettings.cpp">
-            <VirtualFolder>{6D6A1B94-904B-4CFC-BA2B-E48D16DDAD0E}</VirtualFolder>
-            <DependentOn>TypingSettings.h</DependentOn>
-            <BuildOrder>41</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="TypingStatsFrame.cpp">
-            <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
-            <Form>FrTypingStats</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TFrame</DesignClass>
-            <DependentOn>TypingStatsFrame.h</DependentOn>
-            <BuildOrder>66</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="TypingTextFrame.cpp">
-            <VirtualFolder>{84360D3D-4874-46E9-88EE-445E3FC0314D}</VirtualFolder>
-            <Form>FrTypingText</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TFrame</DesignClass>
-            <DependentOn>TypingTextFrame.h</DependentOn>
-            <BuildOrder>66</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="UIUtils.cpp">
-            <VirtualFolder>{CE54C44E-A3BA-434A-8509-1E40452898D3}</VirtualFolder>
-            <DependentOn>UIUtils.h</DependentOn>
-            <BuildOrder>24</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="User.cpp">
-            <VirtualFolder>{4BAA1710-5749-48D2-B3F3-197353059E4E}</VirtualFolder>
-            <DependentOn>User.h</DependentOn>
-            <BuildOrder>10</BuildOrder>
-        </CppCompile>
-        <FormResources Include="MainForm.dfm"/>
-        <FormResources Include="LogsForm.dfm"/>
-        <FormResources Include="LoginFrame.dfm"/>
-        <FormResources Include="MainFrame.dfm"/>
-        <FormResources Include="PracticeFrame.dfm"/>
-        <FormResources Include="LessonsFrame.dfm"/>
-        <FormResources Include="LessonsForm.dfm"/>
-        <FormResources Include="Lessons2Frame.dfm"/>
-        <FormResources Include="LessonResultsForm.dfm"/>
-        <FormResources Include="PracticeSourceForm.dfm"/>
-        <FormResources Include="TypingTextFrame.dfm"/>
-        <FormResources Include="TypingStatsFrame.dfm"/>
-        <FormResources Include="RegisterFrame.dfm"/>
-        <FormResources Include="ProfileForm.dfm"/>
-        <FormResources Include="PreferencesForm.dfm"/>
-        <FormResources Include="CustomTextFrame.dfm"/>
-        <FormResources Include="CoursesFrame.dfm"/>
-        <FormResources Include="ConverterForm.dfm"/>
-        <FormResources Include="DataModule.dfm"/>
-        <FormResources Include="AchievementsForm.dfm"/>
-        <FormResources Include="AuthenticationForm.dfm"/>
-        <FormResources Include="GeneratedTextFrame.dfm"/>
-        <FormResources Include="KeyboardFrame.dfm"/>
-        <FormResources Include="ExternalSourcesFrame.dfm"/>
-        <FormResources Include="FlyingWordsStatsFrame.dfm"/>
-        <FormResources Include="FlyingWordsFrame.dfm"/>
+        <FormResources Include="core\forms\converter\ConverterForm.dfm"/>
+        <FormResources Include="core\forms\authentication\RegisterFrame.dfm"/>
+        <FormResources Include="core\forms\authentication\LoginFrame.dfm"/>
+        <FormResources Include="core\forms\authentication\AuthenticationForm.dfm"/>
+        <FormResources Include="core\forms\logs\LogsForm.dfm"/>
+        <FormResources Include="core\forms\lessons\LessonsFrame.dfm"/>
+        <FormResources Include="core\forms\lessons\LessonResultsForm.dfm"/>
+        <FormResources Include="core\forms\lessons\CoursesFrame.dfm"/>
+        <FormResources Include="Core\dal\DataModule.dfm"/>
+        <FormResources Include="core\forms\practice\PracticeSourceForm.dfm"/>
+        <FormResources Include="core\forms\practice\OptionsFrame.dfm"/>
+        <FormResources Include="core\forms\practice\KeyboardFrame.dfm"/>
+        <FormResources Include="core\forms\practice\GeneratedTextFrame.dfm"/>
+        <FormResources Include="core\forms\practice\ExternalSourcesFrame.dfm"/>
+        <FormResources Include="core\forms\profile\ProfileForm.dfm"/>
+        <FormResources Include="core\forms\profile\AchievementsForm.dfm"/>
+        <FormResources Include="core\forms\preferences\PreferencesForm.dfm"/>
+        <FormResources Include="core\forms\main\MainFrame.dfm"/>
+        <FormResources Include="core\forms\main\MainForm.dfm"/>
+        <FormResources Include="core\forms\main\Lessons2Frame.dfm"/>
+        <FormResources Include="core\forms\main\FlyingWordsStatsFrame.dfm"/>
+        <FormResources Include="core\forms\main\FlyingWordsFrame.dfm"/>
+        <FormResources Include="core\forms\practice\CustomTextFrame.dfm"/>
+        <FormResources Include="core\forms\main\TypingTextFrame.dfm"/>
+        <FormResources Include="core\forms\main\TypingStatsFrame.dfm"/>
+        <FormResources Include="core\forms\main\PracticeFrame.dfm"/>
+        <FormResources Include="Core\forms\lessons\LessonsForm.dfm"/>
+        <FormResources Include="Core\forms\practice\PracticeForm.dfm"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -633,7 +653,7 @@
                 <Folders/>
                 <VFOLDERS>
                     <VFOLDER ID="{19CAE9E1-B7D4-4FA8-AF59-D5CA7D8D5042}" name="Achievements"/>
-                    <VFOLDER ID="{8FB63F96-DB9B-44EE-BA3E-3A48525DE697}" name="Data"/>
+                    <VFOLDER ID="{8FB63F96-DB9B-44EE-BA3E-3A48525DE697}" name="DAL"/>
                     <VFOLDER ID="{C9B9CF94-D644-46A8-AFE2-4CDDCCC37F87}" name="Exceptions"/>
                     <VFOLDER ID="{E8DD405D-5871-4098-BE73-2A4F48743690}" name="Forms">
                         <VFOLDER ID="{F6B7C7E8-2F86-4A67-B4A3-6E99C1D2C773}" name="Authentication"/>
@@ -700,7 +720,36 @@
                     <RDP_Source_Files Name="Item27">ExternalSourcesFrame.dfm</RDP_Source_Files>
                     <RDP_Source_Files Name="Item28">FlyingWordsStatsFrame.dfm</RDP_Source_Files>
                     <RDP_Source_Files Name="Item29">FlyingWordsFrame.dfm</RDP_Source_Files>
-                    <RDP_Source_Files Name="Item30">Win32\Debug\KeyType.drc</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item30">core\data\DataModule.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item31">core\forms\converter\ConverterForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item32">core\forms\authentication\RegisterFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item33">core\forms\authentication\LoginFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item34">core\forms\authentication\AuthenticationForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item35">core\forms\logs\LogsForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item36">core\forms\lessons\LessonsFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item37">core\forms\lessons\LessonResultsForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item38">core\forms\lessons\CoursesFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item39">Core\dal\DataModule.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item40">core\forms\practice\PracticeSourceForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item41">core\forms\practice\OptionsFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item42">core\forms\practice\KeyboardFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item43">core\forms\practice\GeneratedTextFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item44">core\forms\practice\ExternalSourcesFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item45">core\forms\profile\ProfileForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item46">core\forms\profile\AchievementsForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item47">core\forms\preferences\PreferencesForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item48">core\forms\main\MainFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item49">core\forms\main\MainForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item50">core\forms\main\Lessons2Frame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item51">core\forms\main\FlyingWordsStatsFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item52">core\forms\main\FlyingWordsFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item53">core\forms\practice\CustomTextFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item54">core\forms\main\TypingTextFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item55">core\forms\main\TypingStatsFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item56">core\forms\main\PracticeFrame.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item57">Core\forms\lessons\LessonsForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item58">Core\forms\practice\PracticeForm.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item59">Win32\Debug\KeyType.drc</RDP_Source_Files>
                 </RDP_Source_Files>
             </CPlusPlusBuilder.Personality>
             <Deployment Version="4">

@@ -59,12 +59,12 @@
         <AllPackageLibs>rtl.lib;vcl.lib;LockBox3CR.lib;soaprtl.lib;dbrtl.lib;xmlrtl.lib;inet.lib;FireDACCommonDriver.lib;FireDACCommon.lib</AllPackageLibs>
         <_TCHARMapping>wchar_t</_TCHARMapping>
         <Multithreaded>true</Multithreaded>
-        <ILINK_LibraryPath>..\;$(BDSLIB)\$(PLATFORM)\debug;$(BDS)\source\dunit\src;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <ILINK_LibraryPath>..\core\models\;..\core\web service\;..\core\session\;..\core\services\;..\core\exceptions\;..\core\utils\;..\core\settings\;..\core\achievements\;..\;$(BDSLIB)\$(PLATFORM)\debug;$(BDS)\source\dunit\src;$(ILINK_LibraryPath)</ILINK_LibraryPath>
         <UsingDelphiRTL>true</UsingDelphiRTL>
         <DCC_UnitSearchPath>$(BDS)\Source\DUnit\src;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <DCC_DcuOutput>.</DCC_DcuOutput>
         <DCC_Define>_DEBUG;DUNIT_GUI;$(DCC_Define)</DCC_Define>
-        <IncludePath>..\;$(IncludePath)</IncludePath>
+        <IncludePath>..\core\models\;..\core\web service\;..\core\session\;..\core\services\;..\core\exceptions\;..\core\utils\;..\core\settings\;..\core\achievements\;..\;$(IncludePath)</IncludePath>
         <SanitizedProjectName>KeyTypeTests</SanitizedProjectName>
         <ILINK_GenerateDRC>True</ILINK_GenerateDRC>
     </PropertyGroup>
@@ -120,57 +120,77 @@
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
     </PropertyGroup>
     <ItemGroup>
-        <CppCompile Include="..\AchievementsHeader.cpp">
-            <DependentOn>..\AchievementsHeader.h</DependentOn>
-            <BuildOrder>19</BuildOrder>
+        <CppCompile Include="..\core\achievements\Achievement.cpp">
+            <DependentOn>..\core\achievements\Achievement.h</DependentOn>
+            <BuildOrder>26</BuildOrder>
         </CppCompile>
-        <CppCompile Include="..\AchievementsRecord.cpp">
-            <DependentOn>..\AchievementsRecord.h</DependentOn>
-            <BuildOrder>18</BuildOrder>
+        <CppCompile Include="..\core\achievements\AchievementsHeader.cpp">
+            <DependentOn>..\core\achievements\AchievementsHeader.h</DependentOn>
+            <BuildOrder>25</BuildOrder>
         </CppCompile>
-        <CppCompile Include="..\AchievementsUtils.cpp">
-            <DependentOn>..\AchievementsUtils.h</DependentOn>
-            <BuildOrder>17</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="..\AppSettings.cpp">
-            <DependentOn>..\AppSettings.h</DependentOn>
-            <BuildOrder>22</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="..\CryptoUtils.cpp">
-            <DependentOn>..\CryptoUtils.h</DependentOn>
-            <BuildOrder>20</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="..\EDirNotFoundException.cpp">
-            <DependentOn>..\EDirNotFoundException.h</DependentOn>
-            <BuildOrder>12</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="..\EFileNotFoundException.cpp">
-            <DependentOn>..\EFileNotFoundException.h</DependentOn>
+        <CppCompile Include="..\core\achievements\AchievementsRecord.cpp">
+            <DependentOn>..\core\achievements\AchievementsRecord.h</DependentOn>
             <BuildOrder>24</BuildOrder>
         </CppCompile>
-        <CppCompile Include="..\EInvalidArgumentException.cpp">
-            <DependentOn>..\EInvalidArgumentException.h</DependentOn>
-            <BuildOrder>11</BuildOrder>
+        <CppCompile Include="..\core\achievements\AchievementsUtils.cpp">
+            <DependentOn>..\core\achievements\AchievementsUtils.h</DependentOn>
+            <BuildOrder>23</BuildOrder>
         </CppCompile>
-        <CppCompile Include="..\EIOException.cpp">
-            <DependentOn>..\EIOException.h</DependentOn>
-            <BuildOrder>13</BuildOrder>
+        <CppCompile Include="..\core\exceptions\EDirNotFoundException.cpp">
+            <DependentOn>..\core\exceptions\EDirNotFoundException.h</DependentOn>
+            <BuildOrder>30</BuildOrder>
         </CppCompile>
-        <CppCompile Include="..\FileUtils.cpp">
-            <DependentOn>..\FileUtils.h</DependentOn>
-            <BuildOrder>7</BuildOrder>
+        <CppCompile Include="..\core\exceptions\EFileNotFoundException.cpp">
+            <DependentOn>..\core\exceptions\EFileNotFoundException.h</DependentOn>
+            <BuildOrder>29</BuildOrder>
         </CppCompile>
-        <CppCompile Include="..\Logger.cpp">
-            <DependentOn>..\Logger.h</DependentOn>
-            <BuildOrder>9</BuildOrder>
+        <CppCompile Include="..\core\exceptions\EInvalidArgumentException.cpp">
+            <DependentOn>..\core\exceptions\EInvalidArgumentException.h</DependentOn>
+            <BuildOrder>28</BuildOrder>
         </CppCompile>
-        <CppCompile Include="..\MainSession.cpp">
-            <DependentOn>..\MainSession.h</DependentOn>
-            <BuildOrder>21</BuildOrder>
+        <CppCompile Include="..\core\exceptions\EIOException.cpp">
+            <DependentOn>..\core\exceptions\EIOException.h</DependentOn>
+            <BuildOrder>27</BuildOrder>
         </CppCompile>
-        <CppCompile Include="..\Random.cpp">
-            <DependentOn>..\Random.h</DependentOn>
-            <BuildOrder>15</BuildOrder>
+        <CppCompile Include="..\core\models\User.cpp">
+            <DependentOn>..\core\models\User.h</DependentOn>
+            <BuildOrder>27</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\core\services\Logger.cpp">
+            <DependentOn>..\core\services\Logger.h</DependentOn>
+            <BuildOrder>27</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\core\services\Random.cpp">
+            <DependentOn>..\core\services\Random.h</DependentOn>
+            <BuildOrder>27</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\core\session\MainSession.cpp">
+            <DependentOn>..\core\session\MainSession.h</DependentOn>
+            <BuildOrder>27</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\core\settings\AppSettings.cpp">
+            <DependentOn>..\core\settings\AppSettings.h</DependentOn>
+            <BuildOrder>27</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\core\utils\CryptoUtils.cpp">
+            <DependentOn>..\core\utils\CryptoUtils.h</DependentOn>
+            <BuildOrder>28</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\core\utils\FileUtils.cpp">
+            <DependentOn>..\core\utils\FileUtils.h</DependentOn>
+            <BuildOrder>27</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\core\utils\TextUtils.cpp">
+            <DependentOn>..\core\utils\TextUtils.h</DependentOn>
+            <BuildOrder>27</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\core\utils\TimeManager.cpp">
+            <DependentOn>..\core\utils\TimeManager.h</DependentOn>
+            <BuildOrder>27</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\core\web service\TextCasingSOAP.cpp">
+            <DependentOn>..\core\web service\TextCasingSOAP.h</DependentOn>
+            <BuildOrder>27</BuildOrder>
         </CppCompile>
         <LibFiles Include="GeneratorLib.lib" Condition="'$(Platform)'=='Win32'">
             <BuildOrder>23</BuildOrder>
@@ -210,18 +230,6 @@
         <CppCompile Include="UnitTestLogger.cpp">
             <DependentOn>UnitTestLogger.h</DependentOn>
             <BuildOrder>7</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="..\TextCasingSOAP.cpp">
-            <DependentOn>..\TextCasingSOAP.h</DependentOn>
-            <BuildOrder>25</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="..\TextUtils.cpp">
-            <DependentOn>..\TextUtils.h</DependentOn>
-            <BuildOrder>1</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="..\TimeManager.cpp">
-            <DependentOn>..\TimeManager.h</DependentOn>
-            <BuildOrder>10</BuildOrder>
         </CppCompile>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>

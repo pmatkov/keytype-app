@@ -65,8 +65,8 @@
         <UWP_CppLogo44>$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_44.png</UWP_CppLogo44>
         <UWP_CppLogo150>$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_150.png</UWP_CppLogo150>
         <SanitizedProjectName>Server</SanitizedProjectName>
-        <IncludePath>..\;KeyType\Server\;$(IncludePath)</IncludePath>
-        <ILINK_LibraryPath>..\;KeyType\Server\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <IncludePath>..\Core\web service\;..\Core\utils\;..\Core\exceptions\;..\core\services\;..\;KeyType\Server\;$(IncludePath)</IncludePath>
+        <ILINK_LibraryPath>..\Core\web service\;..\Core\utils\;..\Core\exceptions\;..\core\services\;..\;KeyType\Server\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
         <ILINK_GenerateDRC>True</ILINK_GenerateDRC>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
@@ -126,29 +126,41 @@
         <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
     </PropertyGroup>
     <ItemGroup>
-        <CppCompile Include="..\CryptoUtils.cpp">
-            <DependentOn>..\CryptoUtils.h</DependentOn>
-            <BuildOrder>13</BuildOrder>
+        <CppCompile Include="..\Core\exceptions\EFileNotFoundException.cpp">
+            <DependentOn>..\Core\exceptions\EFileNotFoundException.h</DependentOn>
+            <BuildOrder>15</BuildOrder>
         </CppCompile>
-        <CppCompile Include="..\EFileNotFoundException.cpp">
-            <DependentOn>..\EFileNotFoundException.h</DependentOn>
-            <BuildOrder>11</BuildOrder>
+        <CppCompile Include="..\Core\exceptions\EIOException.cpp">
+            <DependentOn>..\Core\exceptions\EIOException.h</DependentOn>
+            <BuildOrder>16</BuildOrder>
         </CppCompile>
-        <CppCompile Include="..\EIOException.cpp">
-            <DependentOn>..\EIOException.h</DependentOn>
-            <BuildOrder>12</BuildOrder>
+        <CppCompile Include="..\Core\exceptions\ENullPointerException.cpp">
+            <DependentOn>..\Core\exceptions\ENullPointerException.h</DependentOn>
+            <BuildOrder>17</BuildOrder>
         </CppCompile>
-        <CppCompile Include="..\ENullPointerException.cpp">
-            <DependentOn>..\ENullPointerException.h</DependentOn>
-            <BuildOrder>9</BuildOrder>
+        <CppCompile Include="..\Core\services\Random.cpp">
+            <DependentOn>..\Core\services\Random.h</DependentOn>
+            <BuildOrder>15</BuildOrder>
         </CppCompile>
-        <CppCompile Include="..\FileUtils.cpp">
-            <DependentOn>..\FileUtils.h</DependentOn>
-            <BuildOrder>9</BuildOrder>
+        <CppCompile Include="..\Core\utils\CryptoUtils.cpp">
+            <DependentOn>..\Core\utils\CryptoUtils.h</DependentOn>
+            <BuildOrder>15</BuildOrder>
         </CppCompile>
-        <CppCompile Include="..\Random.cpp">
-            <DependentOn>..\Random.h</DependentOn>
-            <BuildOrder>7</BuildOrder>
+        <CppCompile Include="..\core\utils\FileUtils.cpp">
+            <DependentOn>..\core\utils\FileUtils.h</DependentOn>
+            <BuildOrder>16</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\core\utils\TextUtils.cpp">
+            <DependentOn>..\core\utils\TextUtils.h</DependentOn>
+            <BuildOrder>17</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\Core\utils\TimeManager.cpp">
+            <DependentOn>..\Core\utils\TimeManager.h</DependentOn>
+            <BuildOrder>18</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\Core\web service\TextCasingSOAP.cpp">
+            <DependentOn>..\Core\web service\TextCasingSOAP.h</DependentOn>
+            <BuildOrder>15</BuildOrder>
         </CppCompile>
         <CppCompile Include="DataModule.cpp">
             <Form>DataModule2</Form>
@@ -162,7 +174,6 @@
             <IgnorePath>true</IgnorePath>
         </LibFiles>
         <CppCompile Include="Logger.cpp">
-            <VirtualFolder>{BD3D95E9-80FE-4BF6-A057-898531B145E7}</VirtualFolder>
             <DependentOn>Logger.h</DependentOn>
             <BuildOrder>4</BuildOrder>
         </CppCompile>
@@ -179,14 +190,6 @@
             <BuildOrder>1</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>
-        <CppCompile Include="..\TextUtils.cpp">
-            <DependentOn>..\TextUtils.h</DependentOn>
-            <BuildOrder>10</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="..\TimeManager.cpp">
-            <DependentOn>..\TimeManager.h</DependentOn>
-            <BuildOrder>6</BuildOrder>
-        </CppCompile>
         <FormResources Include="ServerForm.dfm"/>
         <FormResources Include="DataModule.dfm"/>
         <BuildConfiguration Include="Base">
@@ -215,15 +218,12 @@
                 <Source>
                     <Source Name="MainSource">Server.cpp</Source>
                 </Source>
-                <VFOLDERS>
-                    <VFOLDER ID="{BD3D95E9-80FE-4BF6-A057-898531B145E7}" name="Services"/>
-                </VFOLDERS>
+                <VFOLDERS/>
                 <Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\bcboffice2k280.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\bcbofficexp280.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dcloffice2k280.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dclofficexp280.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Program Files (x86)\FastReports\LibD28\dclfrxtee28.bpl">FastReport VCL Tee Components</Excluded_Packages>
                 </Excluded_Packages>
             </CPlusPlusBuilder.Personality>
             <Deployment Version="4">

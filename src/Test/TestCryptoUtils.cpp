@@ -118,9 +118,9 @@ void __fastcall TTestCryptoUtils::TeststringEncryptionAES()
 
 void __fastcall TTestCryptoUtils::TestgenerateRSAKeys()
 {
-	bool resultOk = CryptoUtils::generateRSAKeys(FileUtils::createAbsolutePath("Keys", false));
+	bool resultOk = CryptoUtils::generateRSAKeys(FileUtils::createProjectSubDirPath("Keys"));
 
-    LOGGER_LOG("Keys " + UnicodeString(resultOk ? "were" : "were not") + "generated");
+	LOGGER_LOG("Keys " + UnicodeString(resultOk ? "were" : "were not") + "generated");
 
     CheckEquals(true, resultOk);
 }
@@ -131,8 +131,8 @@ void __fastcall TTestCryptoUtils::TeststringEncryptionRSA() {
     std::unique_ptr<TCodec> codec = CryptoUtils::createRSACodec(cryptLib.get());
     std::unique_ptr<TSignatory> signatory = CryptoUtils::createSignatory(codec.get());
 
-    UnicodeString pubKeyPath = FileUtils::createAbsolutePath("Keys\\pub_key.bin", true);
-    UnicodeString prvKeyPath = FileUtils::createAbsolutePath("Keys\\prv_key.bin", true);
+	UnicodeString pubKeyPath = FileUtils::createProjectSubDirPath("Keys") + "pub_key.bin";
+	UnicodeString prvKeyPath = FileUtils::createProjectSubDirPath("Keys") + "prv_key.bin";
 	UnicodeString inputString = "2";
 
 	UnicodeString encrytpedString = CryptoUtils::encryptStringRSA(codec.get(), signatory.get(), pubKeyPath, inputString);
@@ -149,8 +149,8 @@ void __fastcall TTestCryptoUtils::TestdigitalSignatureString() {
     std::unique_ptr<TCodec> codec = CryptoUtils::createRSACodec(cryptLib.get());
     std::unique_ptr<TSignatory> signatory = CryptoUtils::createSignatory(codec.get());
 
-    UnicodeString pubKeyPath = FileUtils::createAbsolutePath("Keys\\pub_key.bin", true);
-    UnicodeString prvKeyPath = FileUtils::createAbsolutePath("Keys\\prv_key.bin", true);
+	UnicodeString pubKeyPath = FileUtils::createProjectSubDirPath("Keys") + "pub_key.bin";
+	UnicodeString prvKeyPath = FileUtils::createProjectSubDirPath("Keys") + "prv_key.bin";
 	UnicodeString inputString = "digital signature";
     UnicodeString invalidtring = "digitalsignature";
 
@@ -180,8 +180,8 @@ void __fastcall TTestCryptoUtils::TestB64Encoding() {
 
 void __fastcall TTestCryptoUtils::TesttokenAuthentication() {
 
-    UnicodeString pubKeyPath = FileUtils::createAbsolutePath("Keys\\pub_key.bin", true);
-    UnicodeString prvKeyPath = FileUtils::createAbsolutePath("Keys\\prv_key.bin", true);
+	UnicodeString pubKeyPath = FileUtils::createProjectSubDirPath("Keys") + "pub_key.bin";
+	UnicodeString prvKeyPath = FileUtils::createProjectSubDirPath("Keys") + "prv_key.bin";
 
     UnicodeString token = CryptoUtils::createToken(prvKeyPath, "thomas", "regular");
     LOGGER_LOG("Token: " + token);

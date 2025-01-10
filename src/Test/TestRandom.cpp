@@ -24,6 +24,7 @@ class TTestRandom : public TTestCase
 
 void __fastcall TTestRandom::SetUp()
 {
+	LOGGER_CLEAR_LOG();
 	LOGGER_LOG("Starting test...");
 
 }

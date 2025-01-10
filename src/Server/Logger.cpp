@@ -11,9 +11,10 @@
 #include <System.DateUtils.hpp>
 
 #include "Logger.h"
-#include "FileUtils.h"
 
+#include "FileUtils.h"
 #include "TimeManager.h"
+#include "EIOException.h"
 
 #define LOG_PREFIX "server_"
 #define DATE_FORMAT "yyyy-mm-dd"
@@ -118,11 +119,22 @@ void Logger::log(LogLevel level, const UnicodeString& message, const char* funct
 
 void Logger::writeToFile() {
 
-    if (!enableLogging) {
+	if (!enableLogging) {
         return;
-    }
+	}
 
-    UnicodeString path = FileUtils::createAbsolutePath("Server\\Log\\" + UnicodeString(LOG_PREFIX) + TimeManager::getCurrentDate() + ".log", true);
+	UnicodeString dirPath = FileUtils::createProjectSubDirPath("Server") + "Log";
+
+	if (!DirectoryExists(dirPath)) {
+		try {
+		   FileUtils::createDirectory(dirPath);
+		}
+		catch (EIOException &ex) {
+			LOGGER(LogLevel::Fatal, ex.getMessage());
+		}
+	}
+
+	UnicodeString path = dirPath + UnicodeString(LOG_PREFIX) + TimeManager::getCurrentDate() + ".log";
 
     std::unique_ptr<TStreamWriter> writer;
 

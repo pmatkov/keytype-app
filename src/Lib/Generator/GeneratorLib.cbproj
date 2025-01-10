@@ -52,7 +52,7 @@
         <SanitizedProjectName>GeneratorLib</SanitizedProjectName>
         <_TCHARMapping>char</_TCHARMapping>
         <Multithreaded>true</Multithreaded>
-        <IncludePath>..\SOAP Server\;..\..\;$(IncludePath)</IncludePath>
+        <IncludePath>..\..\Core\services\;..\SOAP Server\;..\..\;$(IncludePath)</IncludePath>
         <ILINK_GenerateDRC>True</ILINK_GenerateDRC>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
@@ -87,12 +87,17 @@
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
         <VerInfo_Locale>1050</VerInfo_Locale>
+        <TLIB_PageSize>32</TLIB_PageSize>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <Defines>NDEBUG;$(Defines)</Defines>
         <TASM_Debugging>None</TASM_Debugging>
     </PropertyGroup>
     <ItemGroup>
+        <CppCompile Include="..\..\Core\services\Random.cpp">
+            <DependentOn>..\..\Core\services\Random.h</DependentOn>
+            <BuildOrder>3</BuildOrder>
+        </CppCompile>
         <CppCompile Include="Generator.cpp">
             <DependentOn>Generator.h</DependentOn>
             <BuildOrder>0</BuildOrder>
@@ -100,10 +105,6 @@
         <CppCompile Include="TextService.cpp">
             <DependentOn>TextService.h</DependentOn>
             <BuildOrder>2</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="..\..\Random.cpp">
-            <DependentOn>..\..\Random.h</DependentOn>
-            <BuildOrder>1</BuildOrder>
         </CppCompile>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>

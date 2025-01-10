@@ -61,8 +61,8 @@
         <UsingDelphiRTL>true</UsingDelphiRTL>
         <Icon_MainIcon>$(BDS)\bin\cbuilder_PROJECTICON.ico</Icon_MainIcon>
         <Icns_MainIcns>$(BDS)\bin\cbuilder_PROJECTICNS.icns</Icns_MainIcns>
-        <IncludePath>..\..\;KeyType\Lib\ISAPI\;$(IncludePath)</IncludePath>
-        <ILINK_LibraryPath>..\..\;KeyType\Lib\ISAPI\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <IncludePath>..\..\Core\services\;..\..\;KeyType\Lib\ISAPI\;$(IncludePath)</IncludePath>
+        <ILINK_LibraryPath>..\..\Core\services\;..\..\;KeyType\Lib\ISAPI\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
         <SanitizedProjectName>SOAPServer</SanitizedProjectName>
         <AllPackageLibs>vcl.lib;rtl.lib;soaprtl.lib;dbrtl.lib;xmlrtl.lib;inet.lib;soapserver.lib</AllPackageLibs>
         <ILINK_GenerateDRC>True</ILINK_GenerateDRC>
@@ -116,6 +116,10 @@
         <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
     </PropertyGroup>
     <ItemGroup>
+        <CppCompile Include="..\..\Core\services\Random.cpp">
+            <DependentOn>..\..\Core\services\Random.h</DependentOn>
+            <BuildOrder>5</BuildOrder>
+        </CppCompile>
         <CppCompile Include="SOAPServer.cpp">
             <BuildOrder>0</BuildOrder>
         </CppCompile>
@@ -133,10 +137,6 @@
             <DesignClass>TWebModule</DesignClass>
             <DependentOn>WebModule.h</DependentOn>
             <BuildOrder>1</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="..\..\Random.cpp">
-            <DependentOn>..\..\Random.h</DependentOn>
-            <BuildOrder>4</BuildOrder>
         </CppCompile>
         <FormResources Include="WebModule.dfm"/>
         <BuildConfiguration Include="Base">

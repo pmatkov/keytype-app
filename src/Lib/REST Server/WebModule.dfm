@@ -40,8 +40,8 @@ object WebModule1: TWebModule1
       'Password=12345'
       'Server=127.0.0.1'
       'DriverID=MySQL')
-    Left = 159
-    Top = 81
+    Left = 111
+    Top = 49
   end
   object TKeyMapping: TFDTable
     IndexFieldNames = 'id'
@@ -77,5 +77,12 @@ object WebModule1: TWebModule1
     DataSet = TKeyMapping
     Left = 264
     Top = 126
+  end
+  object FDPhysMySQLDriverLink: TFDPhysMySQLDriverLink
+    VendorLib = 
+      'C:\Users\surf3r\OneDrive\Documents\Embarcadero\Studio\Projects\K' +
+      'eyType\src\Db\libmariadb.dll'
+    Left = 56
+    Top = 136
   end
 end

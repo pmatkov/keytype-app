@@ -9,32 +9,34 @@
 #pragma hdrstop
 
 //---------------------------------------------------------------------------
-USEFORM("MainForm.cpp", FMain);
-USEFORM("LogsForm.cpp", FLogs);
-USEFORM("LoginFrame.cpp", FrLogin); /* TFrame: File Type */
-USEFORM("MainFrame.cpp", FrMain); /* TFrame: File Type */
-USEFORM("PracticeFrame.cpp", FrPractice); /* TFrame: File Type */
-USEFORM("LessonsFrame.cpp", FrLessons); /* TFrame: File Type */
-USEFORM("LessonsForm.cpp", FLessons);
-USEFORM("Lessons2Frame.cpp", FrLessons2); /* TFrame: File Type */
-USEFORM("LessonResultsForm.cpp", FLessonResults);
-USEFORM("PracticeSourceForm.cpp", FPracticeSource);
-USEFORM("TypingTextFrame.cpp", FrTypingText); /* TFrame: File Type */
-USEFORM("TypingStatsFrame.cpp", FrTypingStats); /* TFrame: File Type */
-USEFORM("RegisterFrame.cpp", FrRegister); /* TFrame: File Type */
-USEFORM("ProfileForm.cpp", FProfile);
-USEFORM("PreferencesForm.cpp", FPreferences);
-USEFORM("CustomTextFrame.cpp", FrCustomText); /* TFrame: File Type */
-USEFORM("CoursesFrame.cpp", FrCourses); /* TFrame: File Type */
-USEFORM("ConverterForm.cpp", FConverter);
-USEFORM("DataModule.cpp", DataModule1); /* TDataModule: File Type */
-USEFORM("AchievementsForm.cpp", FAchievements);
-USEFORM("AuthenticationForm.cpp", FAuthentication);
-USEFORM("GeneratedTextFrame.cpp", FrGeneratedText); /* TFrame: File Type */
-USEFORM("KeyboardFrame.cpp", FrKeyboard); /* TFrame: File Type */
-USEFORM("ExternalSourcesFrame.cpp", FrExternalSources); /* TFrame: File Type */
-USEFORM("FlyingWordsStatsFrame.cpp", FrFlyingWordsStats); /* TFrame: File Type */
-USEFORM("FlyingWordsFrame.cpp", FrFlyingWords); /* TFrame: File Type */
+USEFORM("core\forms\converter\ConverterForm.cpp", FConverter);
+USEFORM("core\forms\authentication\RegisterFrame.cpp", FrRegister); /* TFrame: File Type */
+USEFORM("core\forms\authentication\LoginFrame.cpp", FrLogin); /* TFrame: File Type */
+USEFORM("core\forms\authentication\AuthenticationForm.cpp", FAuthentication);
+USEFORM("core\forms\logs\LogsForm.cpp", FLogs);
+USEFORM("core\forms\lessons\LessonsFrame.cpp", FrLessons); /* TFrame: File Type */
+USEFORM("core\forms\lessons\LessonResultsForm.cpp", FLessonResults);
+USEFORM("core\forms\lessons\CoursesFrame.cpp", FrCourses); /* TFrame: File Type */
+USEFORM("Core\dal\DataModule.cpp", DataModule1); /* TDataModule: File Type */
+USEFORM("core\forms\practice\PracticeSourceForm.cpp", FPracticeSource);
+USEFORM("core\forms\practice\OptionsFrame.cpp", FrOptions); /* TFrame: File Type */
+USEFORM("core\forms\practice\KeyboardFrame.cpp", FrKeyboard); /* TFrame: File Type */
+USEFORM("core\forms\practice\GeneratedTextFrame.cpp", FrGeneratedText); /* TFrame: File Type */
+USEFORM("core\forms\practice\ExternalSourcesFrame.cpp", FrExternalSources); /* TFrame: File Type */
+USEFORM("core\forms\profile\ProfileForm.cpp", FProfile);
+USEFORM("core\forms\profile\AchievementsForm.cpp", FAchievements);
+USEFORM("core\forms\preferences\PreferencesForm.cpp", FPreferences);
+USEFORM("core\forms\main\MainFrame.cpp", FrMain); /* TFrame: File Type */
+USEFORM("core\forms\main\MainForm.cpp", FMain);
+USEFORM("core\forms\main\Lessons2Frame.cpp", FrLessons2); /* TFrame: File Type */
+USEFORM("core\forms\main\FlyingWordsStatsFrame.cpp", FrFlyingWordsStats); /* TFrame: File Type */
+USEFORM("core\forms\main\FlyingWordsFrame.cpp", FrFlyingWords); /* TFrame: File Type */
+USEFORM("core\forms\practice\CustomTextFrame.cpp", FrCustomText); /* TFrame: File Type */
+USEFORM("core\forms\main\TypingTextFrame.cpp", FrTypingText); /* TFrame: File Type */
+USEFORM("core\forms\main\TypingStatsFrame.cpp", FrTypingStats); /* TFrame: File Type */
+USEFORM("core\forms\main\PracticeFrame.cpp", FrPractice); /* TFrame: File Type */
+USEFORM("Core\forms\lessons\LessonsForm.cpp", FLessons);
+USEFORM("Core\forms\practice\PracticeForm.cpp", FPractice);
 //---------------------------------------------------------------------------
 #include "MainForm.h"
 #include "PracticeSourceForm.h"
@@ -72,7 +74,9 @@ int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 
 			//  main form
 			Application->CreateForm(__classid(TFMain), &FMain);
-            FMain->Position = poScreenCenter;
+		Application->CreateForm(__classid(TDataModule1), &DataModule1);
+		Application->CreateForm(__classid(TFLessons), &FLessons);
+		FMain->Position = poScreenCenter;
 
             FMain->setMainSession(std::move(mainSession));
             FMain->setDataModule(DataModule1.get());

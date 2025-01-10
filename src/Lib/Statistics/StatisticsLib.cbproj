@@ -61,8 +61,8 @@
         <Multithreaded>true</Multithreaded>
         <ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
         <_TCHARMapping>wchar_t</_TCHARMapping>
-        <IncludePath>..\..\;..\;KeyType\DLL\;$(IncludePath)</IncludePath>
-        <ILINK_LibraryPath>..\..\;..\;KeyType\DLL\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <IncludePath>..\..\Core\models\;..\..\;..\;KeyType\DLL\;$(IncludePath)</IncludePath>
+        <ILINK_LibraryPath>..\..\Core\models\;..\..\;..\;KeyType\DLL\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
         <SanitizedProjectName>StatisticsLib</SanitizedProjectName>
         <ILINK_GenerateDRC>True</ILINK_GenerateDRC>
     </PropertyGroup>
@@ -121,6 +121,10 @@
         <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
     </PropertyGroup>
     <ItemGroup>
+        <CppCompile Include="..\..\Core\models\KeyStatistics.cpp">
+            <DependentOn>..\..\Core\models\KeyStatistics.h</DependentOn>
+            <BuildOrder>5</BuildOrder>
+        </CppCompile>
         <CppCompile Include="StatisticsForm.cpp">
             <Form>FStatistics</Form>
             <FormType>dfm</FormType>
@@ -137,10 +141,6 @@
         <CppCompile Include="UserStatistics.cpp">
             <DependentOn>UserStatistics.h</DependentOn>
             <BuildOrder>2</BuildOrder>
-        </CppCompile>
-        <CppCompile Include="..\..\KeyStatistics.cpp">
-            <DependentOn>..\..\KeyStatistics.h</DependentOn>
-            <BuildOrder>4</BuildOrder>
         </CppCompile>
         <FormResources Include="StatisticsForm.dfm"/>
         <BuildConfiguration Include="Base">

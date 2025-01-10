@@ -39,7 +39,7 @@ void __fastcall TTestTextUtils::SetUp() {
     LOGGER_CLEAR_LOG();
 	LOGGER_LOG("Starting test...");
 
-	}
+}
 
 void __fastcall TTestTextUtils::TearDown() {
 

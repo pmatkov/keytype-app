@@ -16,14 +16,16 @@ public:
 	  virtual void __fastcall TearDown();
   
 __published:
-	  void __fastcall TestcreateAbsolutePath();
-	  void __fastcall TesttraverseUpDirTree();
+	  void __fastcall TestgetProjectDirPath();
+	  void __fastcall TestcreateProjectSubDirPath();
+	  void __fastcall TestcreateStepUpDirPath();
 
 };
 
 
 void __fastcall TTestFileUtils::SetUp()
 {
+	LOGGER_CLEAR_LOG();
 	LOGGER_LOG("Starting test...");
 }
 
@@ -33,27 +35,36 @@ void __fastcall TTestFileUtils::TearDown()
     LOGGER_DISPLAY_LOG();
 }
 
-void __fastcall TTestFileUtils::TestcreateAbsolutePath()
-{
-	UnicodeString dirName = "Data";
-	UnicodeString testPath = "C:\\Users\\surf3r\\OneDrive\\Documents\\Embarcadero\\Studio\\Projects\\KeyType\\Data\\";
 
-	LOGGER_LOG("Expected: " + testPath + "Result: " + FileUtils::createAbsolutePath(dirName, false));
-	CheckEquals(testPath, FileUtils::createAbsolutePath(dirName, false), "Not the same path");
+void __fastcall TTestFileUtils::TestgetProjectDirPath()
+{
+	UnicodeString testPath = "C:\\Users\\surf3r\\OneDrive\\Documents\\Embarcadero\\Studio\\Projects\\KeyType\\";
+	UnicodeString resultPath = FileUtils::getProjectDirPath(4);
+
+	LOGGER_LOG("Expected: " + testPath);
+	LOGGER_LOG("Result: " + resultPath);
+	CheckEquals(testPath, resultPath, "Not the same path");
 }
 
-void __fastcall TTestFileUtils::TesttraverseUpDirTree()
+void __fastcall TTestFileUtils::TestcreateProjectSubDirPath()
 {
-	UnicodeString startingPath = "C:\\Program Files\\Test\\.";
-	int level = 2;
+	UnicodeString testPath = "C:\\Users\\surf3r\\OneDrive\\Documents\\Embarcadero\\Studio\\Projects\\KeyType\\Data\\";
+	UnicodeString resultPath = FileUtils::createProjectSubDirPath("Data", 4);
 
-    LOGGER_LOG("Starting path: " + startingPath + "New path (-" + IntToStr(level) + "): " + startingPath);
-	startingPath = FileUtils::traverseUpDirTree(startingPath, level);
+	LOGGER_LOG("Expected: " + testPath);
+	LOGGER_LOG("Result: " + resultPath);
+	CheckEquals(testPath, resultPath, "Not the same path");
+}
 
-    UnicodeString testPath = "C:\\Users\\surf3r\\OneDrive\\Documents\\Embarcadero\\Studio\\Projects\\KeyType\\Archiver\\Win32\\Debug";
+void __fastcall TTestFileUtils::TestcreateStepUpDirPath()
+{
 
-    LOGGER_LOG("Test path: " + testPath + "Result: " + FileUtils::createAbsolutePath("Archiver", false) + "Win32\\Debug");
-    CheckEquals(testPath, FileUtils::createAbsolutePath("Archiver", false) + "Win32\\Debug", "Not the same path");
+	UnicodeString testPath = "C:\\Users\\surf3r\\OneDrive\\Documents\\Embarcadero\\Studio\\Projects\\Data\\..\\";
+	UnicodeString resultPath = FileUtils::createStepUpDirPath("C:\\Users\\surf3r\\OneDrive\\Documents\\Embarcadero\\Studio\\Projects\\Data", 1);
+
+	LOGGER_LOG("Expected: " + testPath);
+	LOGGER_LOG("Result: " + resultPath);
+	CheckEquals(testPath, resultPath, "Not the same path");
 
 }
 

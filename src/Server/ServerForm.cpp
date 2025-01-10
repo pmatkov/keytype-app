@@ -26,28 +26,28 @@ void TFServer::setDataModule(TDataModule2 *_dataModule) {
 
 void __fastcall TFServer::DMConnectionEstablished(TObject *Sender)
 {
-    LTCPConnectionStatus->Caption = "connection established";
+	LTCPServerStatus->Caption = "connection established";
 }
 
 void __fastcall TFServer::DMConnectionClosed(TObject *Sender)
 {
-    LTCPConnectionStatus->Caption = "connection closed";
+	LTCPServerStatus->Caption = "connection closed";
 }
 
 void __fastcall TFServer::BtTCPServerClick(TObject *Sender)
 {
-    if (BtTCPServer->Caption == "Start TCP Server") {
+	if (BtTCPServer->Caption == "Start TCP server") {
 
-    	BtTCPServer->Caption = "Stop TCP Server";
+		BtTCPServer->Caption = "Stop TCP Server";
         dataModule->IdTCPServer->Active = true;
-        LTCPConnectionStatus->Caption = "waiting for connection..";
+		LTCPServerStatus->Caption = "waiting for connection..";
 
     }
     else if (BtTCPServer->Caption == "Stop TCP Server") {
 
     	BtTCPServer->Caption = "Start TCP Server";
         dataModule->IdTCPServer->Active = false;
-        LTCPConnectionStatus->Caption = "";
+		LTCPServerStatus->Caption = "";
 
     }
 }
